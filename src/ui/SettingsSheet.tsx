@@ -149,7 +149,7 @@ export function SettingsSheet({ onClose, onPickOnMap }: { onClose: () => void; o
         </section>
 
         <section className="about muted tiny">
-          VectorScope · personal aviation radar. Traffic data © adsb.lol contributors (ODbL 1.0). Map © OpenFreeMap, OpenMapTiles,
+          VectorScope {__APP_VERSION__} · personal aviation radar. Traffic data © adsb.lol contributors (ODbL 1.0). Map © OpenFreeMap, OpenMapTiles,
           OpenStreetMap contributors. Photos © planespotters.net photographers.
         </section>
       </div>

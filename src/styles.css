@@ -1300,3 +1300,9 @@ input[type='range'] {
   border-color: rgba(85, 189, 235, 0.5);
   color: var(--accent);
 }
+
+.banner-meta {
+  margin-top: 4px;
+  font-size: 10px;
+  color: var(--text-3);
+}

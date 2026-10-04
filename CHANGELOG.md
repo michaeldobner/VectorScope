@@ -4,6 +4,14 @@ All notable changes to VectorScope. [Deutsch](CHANGELOG.de.md)
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.1.5 (2026-10-04)
+
+### Fixed
+* **Reliable deploys:** the Pages deploy now waits for GitHub's own branch build and always publishes last, so the unbuilt source can no longer replace the app.
+
+### Improved
+* Version number in the error banner and in Settings, plus the active data route and error kind.
+
 ## 0.1.4 (2026-10-04)
 
 ### Improved

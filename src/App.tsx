@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { fetchSearch } from './data/feed';
+import { currentRouteLabel, fetchSearch } from './data/feed';
 import type { Aircraft } from './data/types';
 import { MapView } from './map/MapView';
 import * as f from './lib/format';
@@ -392,6 +392,9 @@ function ErrorBanner({ onSettings }: { onSettings: () => void }) {
           : st.error.kind === 'rate'
             ? 'adsb.lol is rate limiting requests. Retrying more slowly.'
             : `Data source unavailable (${st.error.message}).`}
+        <div className="banner-meta mono">
+          v{__APP_VERSION__} · {currentRouteLabel()} · {st.error.kind}
+        </div>
       </div>
       <div className="btn-row">
         {cors && (

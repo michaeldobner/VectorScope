@@ -4,6 +4,14 @@ Alle wesentlichen Änderungen an VectorScope. [English](CHANGELOG.md)
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.1.5 (2026-10-04)
+
+### Behoben
+* **Zuverlässige Veröffentlichung:** Der Pages-Deploy wartet jetzt auf GitHubs eigenen Branch-Build und veröffentlicht immer zuletzt. Der ungebaute Quellcode kann die App nicht mehr ersetzen.
+
+### Verbessert
+* Versionsnummer im Fehlerbanner und in den Einstellungen, dazu der aktive Datenweg und die Fehlerart.
+
 ## 0.1.4 (2026-10-04)
 
 ### Verbessert
