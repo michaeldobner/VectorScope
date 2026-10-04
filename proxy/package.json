@@ -1,0 +1,6 @@
+{
+  "name": "vectorscope-proxy",
+  "private": true,
+  "type": "module",
+  "description": "CORS proxy for adsb.lol used by the VectorScope web app"
+}
