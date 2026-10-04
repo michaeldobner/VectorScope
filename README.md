@@ -1,80 +1,111 @@
-# VectorScope
+<div align="center">
 
-Personal live aviation radar: what is flying above you right now.
-Runs as a web app on GitHub Pages and installs on iPhone and iPad via "Add to Home Screen".
+# ◇ VectorScope
 
-![Target design, iPad landscape](docs/design/target-ipad-landscape.png)
+**A personal live aviation radar for iPhone and iPad.**
 
-## Features
+Open it and see at once what is flying above you: which aircraft will pass overhead next, where to look, and which of them are worth a second glance.
 
-| View | What it does |
+[**▶ Open VectorScope**](https://michaeldobner.github.io/-VectorScope/) · [Deutsch](README.de.md) · [Documentation](docs/en/README.md) · [Changelog](CHANGELOG.md)
+
+[![Tests](https://github.com/michaeldobner/-VectorScope/actions/workflows/tests.yml/badge.svg)](https://github.com/michaeldobner/-VectorScope/actions/workflows/tests.yml)
+[![Deploy](https://github.com/michaeldobner/-VectorScope/actions/workflows/deploy.yml/badge.svg)](https://github.com/michaeldobner/-VectorScope/actions/workflows/deploy.yml)
+
+<img src="docs/images/iphone-radar.jpg" width="230" alt="Radar view on iPhone with range rings around your position">&nbsp;&nbsp;
+<img src="docs/images/iphone-overhead.jpg" width="230" alt="Overhead list with countdown and viewing direction">&nbsp;&nbsp;
+<img src="docs/images/iphone-score.jpg" width="230" alt="Aircraft inspector with interest score and reasons">
+
+</div>
+
+## Why VectorScope
+
+Flight trackers show you the whole world, in colour, with ads. VectorScope does the opposite: it answers one question very well. **What is flying over me right now?** It defines "overhead" by the angle at which you would actually see an aircraft in the sky, counts down to the moment it passes, and tells you in which direction to look. A calm, data-dense interface in deep graphite uses colour only where it means something: grey for regular traffic, ice blue for interesting aircraft, cobalt for your watchlist, amber and red for real events. No ads, no account, no tracking.
+
+## Highlights
+
+| | |
 |---|---|
-| **Radar** | Map around your location with range rings. Aircraft are grey by default; colour only means something: Ice Blue = interesting, Cobalt with ring = watchlist, Amber = event, Red = emergency. |
-| **Overhead** | What is above you now and what will pass over you in the next 10 minutes: countdown, miss distance, compass direction and elevation angle to look at. |
-| **Inspector** | Telemetry, route (where published), relative geometry, interest score with reasons, photo (planespotters.net). |
-| **Notable now** | Military and emergency traffic in Europe, ranked by interest score. |
-| **Interesting nearby** | Ranked list within your radius. |
-| **Watchlist** | Callsign prefixes (FORTE, RCH, NATO), type codes (C17, B52), registrations, ICAO hex. In-app alert when a match enters your radius. |
+| **Overhead now** | What is above you and what will pass over you in the next ten minutes: countdown, miss distance, compass direction and elevation angle |
+| **Live radar** | Aircraft around your position with subtle range rings, smooth motion between updates, track history and a projected path for the selected aircraft |
+| **Aircraft inspector** | Telemetry, route where published, position relative to you, aircraft photo, links to ADS-B Exchange, adsb.lol and Flightradar24 |
+| **Interest score** | Every aircraft is rated from 0 to 100 with transparent reasons: military, role (tanker, AEW&C, ISR, bomber), rare type, age, emergency squawk, watchlist |
+| **Notable now** | Military and emergency traffic across Europe, ranked like a terminal |
+| **Watchlist** | Callsign prefixes (FORTE, RCH, NATO), type codes (C17, B52), registrations, ICAO addresses, with an alert when a match enters your radius |
+| **Colour with meaning** | 90 % of the map stays grey, so the eye finds the interesting aircraft on its own |
+| **Made for Apple devices** | iPhone and iPad in portrait and landscape, installs to the Home Screen, respects notch and home indicator, works in Split View |
+| **Private by design** | Location and watchlist stay on your device. Queries use coordinates rounded to about 1 km |
+| **Metric and German number format** | 10.670 m, 889 km/h, ±0,0 m/s. Feet and knots with one tap |
 
-"Overhead" is defined by elevation angle, not by a fixed radius (zenith ≥ 70°, overhead ≥ 45°, approaching when the closest point of approach within 10 minutes reaches ≥ 45°).
+## How to use
 
-Units are metric with German number formatting (10.670 m, 889 km/h). Switch to ft/kt in Settings.
+1. Open VectorScope and allow access to your location, or set a location in **Settings**.
+2. Pick a radius: 5, 10, 25, 50, 100 or 200 km.
+3. Look at **Overhead**: the list starts with what is above you now, followed by what is about to arrive.
+4. Tap an aircraft for the inspector. "Look S at 58° elevation" means: face south and look about two thirds of the way up.
+5. Add callsigns or types you care about to the **Watchlist**.
 
-## Data sources
+Full guide: [User guide](docs/en/user-guide.md).
 
-| Source | Use | Licence |
-|---|---|---|
-| [adsb.lol](https://adsb.lol) | Live positions, military list, route lookup | ODbL 1.0, attribution |
-| [OpenFreeMap](https://openfreemap.org) | Vector basemap | OpenMapTiles / OSM |
-| [planespotters.net](https://www.planespotters.net) | Aircraft photos | Photographer credit and link |
+## Install on iPhone or iPad
 
-Personal, non-commercial use. No account, no tracking, no ads.
+1. Open **https://michaeldobner.github.io/-VectorScope/** in **Safari**.
+2. Tap **Share**, then **Add to Home Screen**.
+3. Open VectorScope from the Home Screen and set your location there. Safari and the installed app keep separate storage.
 
-## Privacy
+## Documentation
 
-Location, watchlist and settings are stored only in the browser's localStorage on your device.
-Requests to adsb.lol use coordinates rounded to about 1 km. Nothing personal is stored in this repository.
+| Document | Contents |
+|---|---|
+| [User guide](docs/en/user-guide.md) | Views, controls, watchlist, settings, units, alerts |
+| [Calculations](docs/en/calculations.md) | Overhead definition, elevation angle, closest point of approach, interest score |
+| [Data sources](docs/en/data-sources.md) | adsb.lol, OpenFreeMap, planespotters.net, what ADS-B delivers and what it does not |
+| [Design](docs/en/design.md) | Design brief, colour tokens, typography, map style, layouts |
+| [Architecture](docs/en/architecture.md) | Modules, data flow, state, rendering |
+| [Development](docs/en/development.md) | Local setup, tests, screenshots, conventions |
+| [Deployment](docs/en/deployment.md) | GitHub Pages, CORS proxy on Vercel, troubleshooting |
+| [Privacy and legal](docs/en/privacy-and-legal.md) | Location handling, licences, attribution, legal notes |
 
-## Data access and the proxy
-
-adsb.lol does not send CORS headers on its `/v2` endpoints, so browsers may block direct requests.
-The app tries direct access first and falls back to a proxy if one is configured.
-
-**Proxy setup (free, about 5 minutes):**
-
-1. Sign in at [vercel.com](https://vercel.com) with GitHub, "Add New Project", import this repository.
-2. Set **Root Directory** to `proxy`. Framework preset: Other. Deploy.
-3. Optional environment variables: `ALLOWED_ORIGIN` = `https://michaeldobner.github.io`, `PROXY_TOKEN` = any secret string.
-4. In the app: Settings, Data source, paste the Vercel URL (and the token).
-
-The proxy only forwards a whitelist of read-only adsb.lol paths. Cloudflare Workers are not recommended: adsb.lol currently answers them with HTTP 429.
-
-## Install on iPhone / iPad
-
-Open the Pages URL in Safari, tap Share, "Add to Home Screen". The app starts full screen, supports portrait and landscape and respects notch and home indicator.
-Set your location inside the installed app (Safari and the home screen app keep separate storage).
-
-## Development
+## Quick start for developers
 
 ```bash
 npm install
-npm run dev        # local dev server
-npm test           # geo and overhead unit tests
+npm run dev        # local server at http://localhost:5173/
+npm test           # unit tests for geometry and overhead logic
 npm run build      # production build into dist/
 ```
 
-Useful URL flags: `?demo` (synthetic traffic), `?lat=50.11&lon=8.68` (fixed location).
+`?demo` shows synthetic traffic, `?lat=50.11&lon=8.68` fixes the location. Every push to `main` is tested and deployed to GitHub Pages.
 
-Pushing to `main` deploys to GitHub Pages via `.github/workflows/deploy.yml`.
-
-## Structure
+## Folder structure
 
 ```
-src/geo      distance, bearing, elevation, closest point of approach (tested)
-src/data     adsb.lol client, demo traffic, classification catalogue, interest score
-src/state    settings (localStorage), live traffic store, watchlist matching
-src/map      MapLibre view, air-navigation basemap style, aircraft glyphs
-src/ui       inspector, lists, settings, layout hooks, design tokens
-proxy        optional Vercel CORS proxy
-docs/design  design brief and target mock-up
+VectorScope/
+├─ index.html              entry page, iOS web app meta tags
+├─ public/
+│  ├─ manifest.webmanifest install as an app
+│  ├─ sw.js                offline app shell
+│  └─ icons/               app icons
+├─ src/
+│  ├─ main.tsx             start, fonts, service worker
+│  ├─ App.tsx              layouts, top bar, search, bottom sheet, alerts
+│  ├─ styles.css           design tokens and all layouts
+│  ├─ geo/                 distance, bearing, elevation, closest approach (tested)
+│  ├─ data/                adsb.lol client, demo traffic, catalogue, interest score
+│  ├─ state/               settings, live traffic store, watchlist matching
+│  ├─ map/                 MapLibre view, basemap style, aircraft glyphs
+│  ├─ lib/                 number and unit formatting
+│  └─ ui/                  inspector, lists, settings, layout hooks, tokens
+├─ proxy/                  optional CORS proxy for Vercel
+├─ docs/                   documentation (en, de, images)
+└─ .github/workflows/      tests and GitHub Pages deployment
 ```
+
+## Data and credits
+
+Traffic data © [adsb.lol](https://adsb.lol) contributors, licensed under ODbL 1.0. Map © [OpenFreeMap](https://openfreemap.org), © OpenMapTiles, © OpenStreetMap contributors. Aircraft photos © the photographers at [planespotters.net](https://www.planespotters.net). VectorScope is a personal, non-commercial project and is not affiliated with any of these services.
+
+## Version
+
+Current version: **0.1.0**. See the [changelog](CHANGELOG.md).
+
+Created by Michael Dobner. Licensed under the [MIT licence](LICENSE).
