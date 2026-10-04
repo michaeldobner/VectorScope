@@ -110,7 +110,7 @@ Bewusste Korrekturen gegenüber dem Zielbild:
 
 | Zielbild | Umsetzung | Grund |
 |---|---|---|
-| Normale Flugzeuge `#AAB4BE` | `#7F8A96` | In der Helligkeit zu nah an Ice Blue, besonders bei kleinen Symbolen und im Sonnenlicht |
+| Normale Flugzeuge `#AAB4BE` | Weiß `#E5E5EA` auf neutralem Graphit | Graublau lag zu nah an Ice Blue, Weiß auf neutralem Grund hebt sich klar vom Akzent ab |
 | Viele orange Flugzeuge auf der Karte | Amber nur für echte Ereignisse | Amber verliert seine Bedeutung, wenn ein Drittel des Himmels orange ist |
 | Karte zeigt bei 50 km halb Deutschland | Karte rahmt den gewählten Radius ein | Die Kernfrage ist, was über dir ist |
 | Gemischte deutsche und englische Beschriftung | Englische Oberfläche, deutsches Zahlenformat | Die Sprache der Luftfahrt ist Englisch |

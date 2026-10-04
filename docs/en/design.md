@@ -110,7 +110,7 @@ Corrections to the design target, made deliberately:
 
 | Target | Implementation | Reason |
 |---|---|---|
-| Regular aircraft `#AAB4BE` | `#7F8A96` | Too close to Ice Blue in brightness, especially on small icons and in sunlight |
+| Regular aircraft `#AAB4BE` | White `#E5E5EA` on neutral graphite | Grey-blue was too close to Ice Blue; white on a neutral background stays clearly apart from the accent |
 | Many orange aircraft on the map | Amber only for real events | Amber loses its meaning if a third of the sky is orange |
 | Map shows half of Germany at 50 km | Map frames the chosen radius | The core question is what is above you |
 | Mixed German and English labels | English interface, German number format | Aviation language is English |
