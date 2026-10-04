@@ -4,6 +4,11 @@ All notable changes to VectorScope. [Deutsch](CHANGELOG.de.md)
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.2.1 (2026-10-04)
+
+### Fixed
+* **Bottom sheet stuck halfway on iPhone:** when the content under the finger changed during a swipe, iOS never delivered the end of the gesture. The sheet now listens on the touched element itself.
+
 ## 0.2.0 (2026-10-04)
 
 Tested for the first time with real live data, the real map and real touch gestures, in a test lab on GitHub Actions.

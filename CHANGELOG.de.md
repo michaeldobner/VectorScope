@@ -4,6 +4,11 @@ Alle wesentlichen Änderungen an VectorScope. [English](CHANGELOG.md)
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.2.1 (2026-10-04)
+
+### Behoben
+* **Panel blieb auf dem iPhone auf halber Höhe hängen:** Änderte sich der Inhalt unter dem Finger während des Wischens, meldete iOS das Ende der Geste nie. Das Panel hört jetzt direkt am berührten Element mit.
+
 ## 0.2.0 (2026-10-04)
 
 Erstmals mit echten Live-Daten, der echten Karte und echten Touch-Gesten getestet, in einem Testlabor auf GitHub Actions.

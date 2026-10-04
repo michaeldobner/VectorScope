@@ -40,6 +40,18 @@ if (callsigns.length) {
   }
 }
 await grab('openfreemap-tilejson', 'https://tiles.openfreemap.org/planet');
+// Candidate sources for routes, airlines and aircraft details
+for (const cs of ['EXS95LV', ...callsigns.slice(0, 3).map((c) => c.callsign)]) {
+  await grab(`hexdb-route-${cs}`, `https://hexdb.io/api/v1/route/icao/${cs}`, { headers: { Origin: 'https://michaeldobner.github.io' } });
+  await grab(`adsbdb-callsign-${cs}`, `https://api.adsbdb.com/v0/callsign/${cs}`);
+}
+await grab('hexdb-airport-EGNM', 'https://hexdb.io/api/v1/airport/icao/EGNM', { headers: { Origin: 'https://michaeldobner.github.io' } });
+await grab('adsbdb-airline-EXS', 'https://api.adsbdb.com/v0/airline/EXS');
+await grab('hexdb-aircraft', 'https://hexdb.io/api/v1/aircraft/4CA7B5', { headers: { Origin: 'https://michaeldobner.github.io' } });
+try {
+  const hexes = JSON.parse(point).ac.slice(0, 3).map((a) => a.hex);
+  for (const h of hexes) await grab(`adsbdb-aircraft-${h}`, `https://api.adsbdb.com/v0/aircraft/${h}`);
+} catch {}
 
 // Screenshots of the real app with live data
 const browser = await chromium.launch();

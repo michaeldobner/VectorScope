@@ -421,15 +421,47 @@ function BottomSheet({ state, onState, children }: { state: SheetState; onState:
       mode = 'idle';
       setDy(0);
     };
-    el.addEventListener('touchstart', onStart, { passive: true });
-    el.addEventListener('touchmove', onMove, { passive: false });
-    el.addEventListener('touchend', onEnd);
-    el.addEventListener('touchcancel', onEnd);
+    // iOS keeps sending touchmove/touchend to the element the finger first touched, even after
+    // React removed it from the page, and those events then no longer bubble. So the listeners
+    // go on that element itself (plus window as a fallback).
+    let target: EventTarget | null = null;
+    let moveSeen = 0;
+    const onMoveOnce = (e: Event) => {
+      // Both listeners can see the same event while the element is attached; handle it once.
+      if (e.timeStamp === moveSeen) return;
+      moveSeen = e.timeStamp;
+      onMove(e as TouchEvent);
+    };
+    const onStartWrapped = (e: TouchEvent) => {
+      onStart(e);
+      target = e.target;
+      if (target) {
+        target.addEventListener('touchmove', onMoveOnce, { passive: false });
+        target.addEventListener('touchend', onEndWrapped);
+        target.addEventListener('touchcancel', onEndWrapped);
+      }
+      window.addEventListener('touchmove', onMoveOnce, { passive: false });
+      window.addEventListener('touchend', onEndWrapped);
+      window.addEventListener('touchcancel', onEndWrapped);
+    };
+    let ended = false;
+    const onEndWrapped = () => {
+      if (ended) return;
+      ended = true;
+      for (const t of [target, window]) {
+        if (!t) continue;
+        t.removeEventListener('touchmove', onMoveOnce);
+        t.removeEventListener('touchend', onEndWrapped);
+        t.removeEventListener('touchcancel', onEndWrapped);
+      }
+      target = null;
+      onEnd();
+      queueMicrotask(() => (ended = false));
+    };
+    el.addEventListener('touchstart', onStartWrapped, { passive: true });
     return () => {
-      el.removeEventListener('touchstart', onStart);
-      el.removeEventListener('touchmove', onMove);
-      el.removeEventListener('touchend', onEnd);
-      el.removeEventListener('touchcancel', onEnd);
+      el.removeEventListener('touchstart', onStartWrapped);
+      onEndWrapped();
     };
   }, [onState]);
 

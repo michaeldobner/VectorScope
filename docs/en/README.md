@@ -29,7 +29,7 @@ This documentation describes VectorScope completely: how to use it, how it calcu
 | Hosting | GitHub Pages, optional proxy on Vercel |
 | Privacy | No account, no server-side storage, location only on the device |
 | Address | https://michaeldobner.github.io/VectorScope/ |
-| Version | 0.2.0 |
+| Version | 0.2.1 |
 
 <p>
 <img src="../images/iphone-radar.jpg" width="200" alt="Radar on iPhone">&nbsp;
