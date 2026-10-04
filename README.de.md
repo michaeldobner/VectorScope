@@ -6,10 +6,12 @@
 
 Öffnen und sofort sehen, was über dir fliegt: welches Flugzeug als nächstes über dich hinwegzieht, wohin du schauen musst und welche Maschinen einen zweiten Blick wert sind.
 
-[**▶ VectorScope öffnen**](https://michaeldobner.github.io/-VectorScope/) · [English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md)
+<h3><a href="https://michaeldobner.github.io/VectorScope/">michaeldobner.github.io/VectorScope</a></h3>
 
-[![Tests](https://github.com/michaeldobner/-VectorScope/actions/workflows/tests.yml/badge.svg)](https://github.com/michaeldobner/-VectorScope/actions/workflows/tests.yml)
-[![Deploy](https://github.com/michaeldobner/-VectorScope/actions/workflows/deploy.yml/badge.svg)](https://github.com/michaeldobner/-VectorScope/actions/workflows/deploy.yml)
+[**▶ VectorScope öffnen**](https://michaeldobner.github.io/VectorScope/) · [English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md)
+
+[![Tests](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml)
+[![Deploy](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml)
 
 <img src="docs/images/iphone-radar.jpg" width="230" alt="Radaransicht auf dem iPhone mit Distanzringen um den eigenen Standort">&nbsp;&nbsp;
 <img src="docs/images/iphone-overhead.jpg" width="230" alt="Overhead-Liste mit Countdown und Blickrichtung">&nbsp;&nbsp;
@@ -48,7 +50,7 @@ Ausführliche Anleitung: [Bedienung](docs/de/bedienung.md).
 
 ## Installation auf iPhone oder iPad
 
-1. **https://michaeldobner.github.io/-VectorScope/** in **Safari** öffnen.
+1. **https://michaeldobner.github.io/VectorScope/** in **Safari** öffnen.
 2. **Teilen** antippen, dann **Zum Home-Bildschirm**.
 3. VectorScope vom Home-Bildschirm aus öffnen und dort den Standort festlegen. Safari und die installierte App haben getrennte Speicher.
 

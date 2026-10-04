@@ -6,10 +6,12 @@
 
 Open it and see at once what is flying above you: which aircraft will pass overhead next, where to look, and which of them are worth a second glance.
 
-[**▶ Open VectorScope**](https://michaeldobner.github.io/-VectorScope/) · [Deutsch](README.de.md) · [Documentation](docs/en/README.md) · [Changelog](CHANGELOG.md)
+<h3><a href="https://michaeldobner.github.io/VectorScope/">michaeldobner.github.io/VectorScope</a></h3>
 
-[![Tests](https://github.com/michaeldobner/-VectorScope/actions/workflows/tests.yml/badge.svg)](https://github.com/michaeldobner/-VectorScope/actions/workflows/tests.yml)
-[![Deploy](https://github.com/michaeldobner/-VectorScope/actions/workflows/deploy.yml/badge.svg)](https://github.com/michaeldobner/-VectorScope/actions/workflows/deploy.yml)
+[**▶ Open VectorScope**](https://michaeldobner.github.io/VectorScope/) · [Deutsch](README.de.md) · [Documentation](docs/en/README.md) · [Changelog](CHANGELOG.md)
+
+[![Tests](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml)
+[![Deploy](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml)
 
 <img src="docs/images/iphone-radar.jpg" width="230" alt="Radar view on iPhone with range rings around your position">&nbsp;&nbsp;
 <img src="docs/images/iphone-overhead.jpg" width="230" alt="Overhead list with countdown and viewing direction">&nbsp;&nbsp;
@@ -48,7 +50,7 @@ Full guide: [User guide](docs/en/user-guide.md).
 
 ## Install on iPhone or iPad
 
-1. Open **https://michaeldobner.github.io/-VectorScope/** in **Safari**.
+1. Open **https://michaeldobner.github.io/VectorScope/** in **Safari**.
 2. Tap **Share**, then **Add to Home Screen**.
 3. Open VectorScope from the Home Screen and set your location there. Safari and the installed app keep separate storage.
 

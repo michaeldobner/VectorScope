@@ -28,7 +28,7 @@ This documentation describes VectorScope completely: how to use it, how it calcu
 | Technology | React 18, TypeScript, Vite, MapLibre GL, Vitest |
 | Hosting | GitHub Pages, optional proxy on Vercel |
 | Privacy | No account, no server-side storage, location only on the device |
-| Address | https://michaeldobner.github.io/-VectorScope/ |
+| Address | https://michaeldobner.github.io/VectorScope/ |
 | Version | 0.1.0 |
 
 <p>

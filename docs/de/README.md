@@ -28,7 +28,7 @@ Diese Dokumentation beschreibt VectorScope vollständig: die Bedienung, die Bere
 | Technik | React 18, TypeScript, Vite, MapLibre GL, Vitest |
 | Hosting | GitHub Pages, optionaler Proxy auf Vercel |
 | Datenschutz | Kein Konto, keine Speicherung auf Servern, Standort nur auf dem Gerät |
-| Adresse | https://michaeldobner.github.io/-VectorScope/ |
+| Adresse | https://michaeldobner.github.io/VectorScope/ |
 | Version | 0.1.0 |
 
 <p>

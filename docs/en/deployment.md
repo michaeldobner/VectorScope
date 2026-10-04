@@ -4,7 +4,7 @@
 
 | | |
 |---|---|
-| Address | **https://michaeldobner.github.io/-VectorScope/** |
+| Address | **https://michaeldobner.github.io/VectorScope/** |
 | Hosting | GitHub Pages, built by GitHub Actions |
 | Trigger | Every push to `main`, or manually under Actions > Deploy to GitHub Pages > Run workflow |
 | Build | `npm ci`, `npm test`, `npm run build`, upload of `dist/` |
@@ -68,6 +68,7 @@ Page requests go to the network first, so a new version is used on the next star
 | Problem | Solution |
 |---|---|
 | Deploy job fails with "Ensure GitHub Pages has been enabled" | Settings > Pages > Source: GitHub Actions, then run the workflow again |
+| Page is blank or shows the README | Pages is set to "Deploy from a branch" and publishes the unbuilt source. Settings > Pages > Source: GitHub Actions |
 | Banner "Your browser blocked direct access to adsb.lol (CORS)" | Set up the proxy and enter its address in Settings |
 | Banner "adsb.lol is rate limiting requests" | VectorScope slows down by itself. Raise the refresh interval to 10 or 20 s |
 | Status stays CONNECTING | Check the network, check the proxy address, open the proxy address with `/v2/mil` in Safari |
