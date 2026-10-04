@@ -9,7 +9,7 @@
 > No gaming aesthetics. No cyberpunk. No military cosplay. No unnecessary decoration.
 > It should feel like a professional intelligence instrument that happens to be beautiful.
 
-Visual DNA: **`#0B0F14` + `#EDF2F6` + `#55BDEB`**
+Visual DNA: **`#0E0E10` + `#F5F5F7` + `#55BDEB`**: neutral graphite like Apple Maps, white text and aircraft, ice blue as the only accent. Chosen on 2026-10-04 after comparing three themes on the live map; `?theme=ice` and `?theme=night` remain available for comparison.
 
 VectorScope sits between three worlds: Apple for calm and precision, professional intelligence terminals for information density, and modern aviation displays for the functional language. It deliberately avoids green military radar, cyberpunk neon, a black hacker look, colourful flight tracker icons and heavy glass effects. Dark first: the map and the signals work better on a dark surface and the product reads as a situation display.
 
@@ -21,18 +21,18 @@ VectorScope sits between three worlds: Apple for calm and precision, professiona
 
 | Role | Name | Hex |
 |---|---|---|
-| Main background | Deep Graphite | `#0B0F14` |
-| Panels | Graphite Blue | `#111821` |
-| Raised panels | Slate | `#17212B` |
-| Lines and borders | Steel | `#25313D` |
-| Primary text | Off White | `#EDF2F6` |
-| Secondary text | Cool Grey | `#8F9BA8` |
-| Tertiary text | | `#5E6A77` |
+| Main background | Graphite | `#0E0E10` |
+| Panels | Graphite Panel | `#1C1C1E` |
+| Raised panels | Graphite Raised | `#2C2C2E` |
+| Lines and borders | Graphite Line | `#38383A` |
+| Primary text | Off White | `#F5F5F7` |
+| Secondary text | Grey | `#A1A1A6` |
+| Tertiary text | | `#6E6E73` |
 | Primary accent | Ice Blue | `#55BDEB` |
 | Selected, active | Bright Ice | `#7DD3FC` |
 | Watchlist | Cobalt | `#4C7DFF` |
-| Warning, event | Amber | `#E9A23B` |
-| Critical, emergency | Signal Red | `#E55757` |
+| Warning, event | Amber | `#FF9F0A` |
+| Critical, emergency | Signal Red | `#FF453A` |
 
 Tokens live in `src/styles.css` as CSS custom properties and in `src/ui/tokens.ts` for the map. Blue is used only for information and interaction, never as decoration.
 
@@ -47,7 +47,7 @@ Tokens live in `src/styles.css` as CSS custom properties and in `src/ui/tokens.t
 
 | Meaning | Colour | Second channel |
 |---|---|---|
-| Regular | `#7F8A96` | Small icon, label only from zoom 9.5 |
+| Regular | `#E5E5EA` | Small icon, label only from zoom 9.5 |
 | Interesting | Ice Blue | Larger icon, label with altitude, trail of the last five minutes |
 | Watchlist | Cobalt | Thin ring around the icon |
 | Event | Amber | Label |
@@ -72,10 +72,10 @@ An air navigation display, not a road map.
 
 | Layer | Style |
 |---|---|
-| Land | `#0E141A` |
-| Water | `#122030`, slightly lighter and bluish |
+| Land | `#1D1D20` |
+| Water | `#13202C`, slightly bluish |
 | Built-up areas | Barely visible from zoom 8 |
-| Country borders | Hairline `#2A3744` |
+| Country borders | Fine line `#55555A` |
 | State borders | Dashed, very faint, from zoom 5 |
 | Motorways | From zoom 9 only |
 | Airports | Ring with ICAO code from zoom 6 (international) or 8.5 (all), aerodrome area and runways from zoom 8 to 9 |

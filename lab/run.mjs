@@ -108,7 +108,7 @@ const pick = (p) =>
   await ctx.close();
 }
 // Theme comparison on the real map, same aircraft selected
-for (const theme of ['ice', 'graphite', 'night']) {
+for (const theme of ['graphite']) {
   const ctx = await browser.newContext({ viewport: { width: 393, height: 852 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true });
   const p = await ctx.newPage();
   await p.goto(`http://localhost:4173/?shot&theme=${theme}&lat=${LAT}&lon=${LON}`);

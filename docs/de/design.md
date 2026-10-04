@@ -9,7 +9,7 @@
 > No gaming aesthetics. No cyberpunk. No military cosplay. No unnecessary decoration.
 > It should feel like a professional intelligence instrument that happens to be beautiful.
 
-Visuelle DNA: **`#0B0F14` + `#EDF2F6` + `#55BDEB`**
+Visuelle DNA: **`#0E0E10` + `#F5F5F7` + `#55BDEB`**: neutrales Graphit wie Apple Maps, weiße Schrift und Flugzeuge, Ice Blue als einziger Akzent. Gewählt am 04.10.2026 nach dem Vergleich dreier Farbschemata auf der Live-Karte. `?theme=ice` und `?theme=night` bleiben zum Vergleich verfügbar.
 
 VectorScope bewegt sich zwischen drei Welten: Apple für Ruhe und Präzision, professionelle Intelligence-Terminals für Informationsdichte und moderne Avionik-Displays für die funktionale Sprache. Bewusst vermieden werden grünes Militärradar, Cyberpunk-Neon, schwarzer Hacker-Look, bunte Flugtracker-Symbole und schwere Glaseffekte. Dark first: Karte und Signale wirken auf dunklem Grund besser, und das Produkt liest sich wie ein Lagebild.
 
@@ -21,18 +21,18 @@ VectorScope bewegt sich zwischen drei Welten: Apple für Ruhe und Präzision, pr
 
 | Rolle | Name | Hex |
 |---|---|---|
-| Haupthintergrund | Deep Graphite | `#0B0F14` |
-| Panels | Graphite Blue | `#111821` |
-| Erhöhte Panels | Slate | `#17212B` |
-| Linien und Rahmen | Steel | `#25313D` |
-| Haupttext | Off White | `#EDF2F6` |
-| Sekundärtext | Cool Grey | `#8F9BA8` |
-| Tertiärtext | | `#5E6A77` |
+| Haupthintergrund | Graphite | `#0E0E10` |
+| Panels | Graphite Panel | `#1C1C1E` |
+| Erhöhte Panels | Graphite Raised | `#2C2C2E` |
+| Linien und Rahmen | Graphite Line | `#38383A` |
+| Haupttext | Off White | `#F5F5F7` |
+| Sekundärtext | Grau | `#A1A1A6` |
+| Tertiärtext | | `#6E6E73` |
 | Primärakzent | Ice Blue | `#55BDEB` |
 | Ausgewählt, aktiv | Bright Ice | `#7DD3FC` |
 | Watchlist | Cobalt | `#4C7DFF` |
-| Warnung, Ereignis | Amber | `#E9A23B` |
-| Kritisch, Notfall | Signal Red | `#E55757` |
+| Warnung, Ereignis | Amber | `#FF9F0A` |
+| Kritisch, Notfall | Signal Red | `#FF453A` |
 
 Die Tokens liegen in `src/styles.css` als CSS-Variablen und in `src/ui/tokens.ts` für die Karte. Blau dient nur der Information und Interaktion, nie der Dekoration.
 
@@ -47,7 +47,7 @@ Die Tokens liegen in `src/styles.css` als CSS-Variablen und in `src/ui/tokens.ts
 
 | Bedeutung | Farbe | Zweiter Kanal |
 |---|---|---|
-| Normal | `#7F8A96` | Kleines Symbol, Beschriftung erst ab Zoomstufe 9,5 |
+| Normal | `#E5E5EA` | Kleines Symbol, Beschriftung erst ab Zoomstufe 9,5 |
 | Interessant | Ice Blue | Größeres Symbol, Beschriftung mit Höhe, Spur der letzten fünf Minuten |
 | Watchlist | Cobalt | Feiner Ring um das Symbol |
 | Ereignis | Amber | Beschriftung |
@@ -72,10 +72,10 @@ Ein Air Navigation Display, keine Straßenkarte.
 
 | Ebene | Stil |
 |---|---|
-| Land | `#0E141A` |
-| Wasser | `#122030`, etwas heller und bläulich |
+| Land | `#1D1D20` |
+| Wasser | `#13202C`, leicht bläulich |
 | Bebaute Flächen | Ab Zoomstufe 8 kaum sichtbar |
-| Staatsgrenzen | Haarlinie `#2A3744` |
+| Staatsgrenzen | Feine Linie `#55555A` |
 | Landesgrenzen | Gestrichelt, sehr schwach, ab Zoomstufe 5 |
 | Autobahnen | Erst ab Zoomstufe 9 |
 | Flughäfen | Ring mit ICAO-Code ab Zoomstufe 6 (international) oder 8,5 (alle), Flugplatzfläche und Pisten ab Zoomstufe 8 bis 9 |

@@ -4,6 +4,11 @@ All notable changes to VectorScope. [Deutsch](CHANGELOG.de.md)
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.2.3 (2026-10-04)
+
+### Design
+* **New default colour scheme Graphite:** neutral dark grey like Apple Maps, white text and white aircraft, ice blue `#55BDEB` as the only accent, cobalt for the watchlist. Chosen after comparing three themes on the live map. `?theme=ice` and `?theme=night` remain available.
+
 ## 0.2.2 (2026-10-04)
 
 ### Fixed

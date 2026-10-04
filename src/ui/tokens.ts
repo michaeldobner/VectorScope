@@ -1,5 +1,5 @@
 // Colour tokens. Colour is used to communicate meaning, not to decorate.
-// Three candidate themes can be compared with ?theme=ice|graphite|night (saved per device).
+// Default: graphite with ice blue. Alternatives for comparison: ?theme=ice|night (saved per device).
 // The CSS custom properties in styles.css are set from the active theme at start.
 
 type Theme = {
@@ -70,7 +70,7 @@ const ice: Theme = {
   mapAirportLabel: '#8FB8D0',
 };
 
-/** Neutral dark grey like Apple Maps: no colour tint, white text, one blue accent. */
+/** Neutral dark grey like Apple Maps, white text and aircraft, ice blue as the only accent. */
 const graphite: Theme = {
   bg: '#0E0E10',
   panel: '#1C1C1E',
@@ -79,14 +79,14 @@ const graphite: Theme = {
   text: '#F5F5F7',
   textSecondary: '#A1A1A6',
   textTertiary: '#6E6E73',
-  accent: '#0A84FF',
-  active: '#64D2FF',
-  info: '#0A84FF',
+  accent: '#55BDEB',
+  active: '#7DD3FC',
+  info: '#4C7DFF',
   warning: '#FF9F0A',
   critical: '#FF453A',
   acStandard: '#E5E5EA',
-  acInteresting: '#0A84FF',
-  acWatch: '#BF5AF2',
+  acInteresting: '#55BDEB',
+  acWatch: '#4C7DFF',
   acEvent: '#FF9F0A',
   acEmergency: '#FF453A',
   mapLand: '#1D1D20',
@@ -102,7 +102,7 @@ const graphite: Theme = {
   mapCityLabel: '#F2F2F7',
   mapTownLabel: '#C7C7CC',
   mapVillageLabel: '#8E8E93',
-  mapAirportLabel: '#64D2FF',
+  mapAirportLabel: '#8CCDEB',
 };
 
 /** Deep night chart with warm aircraft, the classic look of air traffic displays. */
@@ -147,15 +147,15 @@ function pickTheme(): ThemeName {
   try {
     const q = new URLSearchParams(location.search).get('theme');
     if (q && q in THEMES) {
-      localStorage.setItem('vectorscope.theme', q);
+      localStorage.setItem('vectorscope.theme.v2', q);
       return q as ThemeName;
     }
-    const saved = localStorage.getItem('vectorscope.theme');
+    const saved = localStorage.getItem('vectorscope.theme.v2');
     if (saved && saved in THEMES) return saved as ThemeName;
   } catch {
     /* storage unavailable */
   }
-  return 'ice';
+  return 'graphite';
 }
 
 export const THEME_NAME: ThemeName = pickTheme();

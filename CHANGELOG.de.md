@@ -4,6 +4,11 @@ Alle wesentlichen Änderungen an VectorScope. [English](CHANGELOG.md)
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.2.3 (2026-10-04)
+
+### Design
+* **Neues Standard-Farbschema Graphite:** neutrales Dunkelgrau wie Apple Maps, weiße Schrift und weiße Flugzeuge, Ice Blue `#55BDEB` als einziger Akzent, Kobalt für die Watchlist. Gewählt nach dem Vergleich dreier Farbschemata auf der Live-Karte. `?theme=ice` und `?theme=night` bleiben verfügbar.
+
 ## 0.2.2 (2026-10-04)
 
 ### Behoben
