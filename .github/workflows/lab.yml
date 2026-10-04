@@ -1,0 +1,42 @@
+name: Lab
+
+# Test lab with real internet: real API responses and screenshots of the app with live data.
+# Results are pushed to the branch "lab-results".
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['src/**', 'lab/**', 'proxy/**', '.github/workflows/lab.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lab
+  cancel-in-progress: true
+
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm install --no-save playwright@1.56.1 && npx playwright install --with-deps chromium
+      - name: Run lab
+        run: |
+          npx vite preview --port 4173 --strictPort &
+          sleep 3
+          node lab/run.mjs || true
+      - name: Publish results to branch lab-results
+        run: |
+          cd lab-out
+          git init -q
+          git checkout -q -b lab-results
+          git add -A
+          git -c user.name=lab -c user.email=lab@users.noreply.github.com commit -q -m "Lab results ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" lab-results
