@@ -89,6 +89,22 @@ export function useSettings(): Settings {
 // URL overrides, handy for testing: ?demo, ?lat=..&lon=..
 const params = new URLSearchParams(location.search);
 if (params.has('demo')) state = { ...state, feedMode: 'demo' };
+// One-tap setup: ?proxy=https://… (and optionally &token=…) is saved permanently, then removed from the address.
+if (params.has('proxy')) {
+  const proxyUrl = (params.get('proxy') ?? '').trim().replace(/\/+$/, '');
+  if (/^https:\/\//.test(proxyUrl)) {
+    state = { ...state, proxyUrl, proxyToken: params.get('token') ?? state.proxyToken, feedMode: 'auto' };
+    try {
+      localStorage.setItem(KEY, JSON.stringify(state));
+    } catch {
+      /* ignore */
+    }
+  }
+  params.delete('proxy');
+  params.delete('token');
+  const rest = params.toString();
+  history.replaceState(null, '', location.pathname + (rest ? `?${rest}` : '') + location.hash);
+}
 if (params.has('lat') && params.has('lon')) {
   state = {
     ...state,

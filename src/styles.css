@@ -347,6 +347,7 @@ button {
   flex-wrap: wrap;
 }
 .btn-row button,
+.btn-row .btn,
 .pick-hint button,
 .watch-add button,
 .coords button {
@@ -1290,4 +1291,12 @@ input[type='range'] {
 }
 .cpa b {
   color: var(--text);
+}
+
+.btn-row .btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  border-color: rgba(85, 189, 235, 0.5);
+  color: var(--accent);
 }

@@ -4,6 +4,13 @@ Alle wesentlichen Änderungen an VectorScope. [English](CHANGELOG.md)
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.1.2 (2026-10-04)
+
+### Verbessert
+* **Proxy mit einem Tipp einrichten:** Wird VectorScope mit `?proxy=https://…` (optional `&token=…`) geöffnet, speichert die App den Proxy dauerhaft und bereinigt die Adresse.
+* Das CORS-Banner erklärt die Ursache in klaren Worten und verlinkt die Anleitung.
+* Deploy-Button für den Vercel-Proxy in der Dokumentation.
+
 ## 0.1.1 (2026-10-04)
 
 ### Verbessert

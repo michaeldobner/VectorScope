@@ -53,6 +53,7 @@ Ausführliche Anleitung: [Bedienung](docs/de/bedienung.md).
 1. **https://michaeldobner.github.io/VectorScope/** in **Safari** öffnen.
 2. **Teilen** antippen, dann **Zum Home-Bildschirm**.
 3. VectorScope vom Home-Bildschirm aus öffnen und dort den Standort festlegen. Safari und die installierte App haben getrennte Speicher.
+4. **Live-Daten:** Browser dürfen adsb.lol nicht direkt lesen. Einmalig den kostenlosen Proxy einrichten (drei Minuten, [Deploy-Button und Einrichtungslink](docs/de/deployment.md#cors-proxy-auf-vercel)). Bis dahin zeigt **Demo** simulierten Verkehr.
 
 ## Dokumentation
 
@@ -108,6 +109,6 @@ Verkehrsdaten © Mitwirkende von [adsb.lol](https://adsb.lol), lizenziert unter 
 
 ## Version
 
-Aktuelle Version: **0.1.1**. Siehe [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.1.2**. Siehe [Changelog](CHANGELOG.de.md).
 
 Erstellt von Michael Dobner. Lizenziert unter der [MIT-Lizenz](LICENSE).

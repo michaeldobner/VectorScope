@@ -29,23 +29,39 @@ Schlägt der Deploy-Schritt mit „Ensure GitHub Pages has been enabled“ fehl,
 
 ## CORS-Proxy auf Vercel
 
-adsb.lol sendet bei den `/v2`-Endpunkten keine CORS-Header. Blockiert der Browser direkte Anfragen, zeigt VectorScope ein Banner und braucht einen Proxy. Der Proxy in `proxy/` läuft kostenlos im Hobby-Tarif von Vercel.
+Browser erlauben einer Webseite nur dann, Daten von einem anderen Server zu lesen, wenn dieser Server das ausdrücklich zulässt (CORS, eine Sicherheitsregel jedes Browsers, keine Safari-Einstellung). adsb.lol lässt das bei den `/v2`-Endpunkten nicht zu, deshalb zeigt VectorScope das Banner „adsb.lol does not allow direct access from browsers“. Die Lösung ist ein kleiner Vermittler, der die Daten auf dem Server abruft und die Erlaubnis ergänzt: der Proxy in `proxy/`, kostenlos im Hobby-Tarif von Vercel. Ohne einen solchen Vermittler funktioniert derzeit keine kostenlose Flugdaten-API im Browser: OpenSky, adsb.fi und avioadsb senden ebenfalls keine CORS-Header, airplanes.live bedient nur eigene Empfänger.
 
-### Einrichtung
+### Einrichtung in drei Minuten
+
+**Variante A: Deploy-Button (am schnellsten)**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmichaeldobner%2FVectorScope&root-directory=proxy&project-name=vectorscope-proxy&repository-name=vectorscope-proxy)
+
+1. Button antippen und bei Vercel mit GitHub anmelden.
+2. Vercel legt eine Kopie des Repositorys namens `vectorscope-proxy` an und veröffentlicht nur den Ordner `proxy`. Mit **Create** und dann **Deploy** bestätigen.
+3. Erscheint „Congratulations“, die Adresse kopieren, zum Beispiel `https://vectorscope-proxy.vercel.app`.
+
+**Variante B: dieses Repository importieren**
 
 1. Bei [vercel.com](https://vercel.com) mit GitHub anmelden.
 2. **Add New** > **Project**, dieses Repository importieren.
 3. **Root Directory:** `proxy`. **Framework Preset:** Other. Deploy.
-4. Optionale Umgebungsvariablen unter Settings > Environment Variables:
+
+**Dann VectorScope mit einem Tipp verbinden.** Diese Adresse auf iPhone oder iPad öffnen und dabei die Proxy-Adresse durch deine ersetzen:
+
+```
+https://michaeldobner.github.io/VectorScope/?proxy=https://vectorscope-proxy.vercel.app
+```
+
+VectorScope speichert den Proxy dauerhaft und entfernt den Parameter aus der Adresse. Das auch in der installierten App vom Home-Bildschirm tun oder dort die Adresse unter **Settings** > **Data source** eintragen. Safari und die installierte App haben getrennte Speicher.
+
+**Optionale Umgebungsvariablen** (Vercel > Project > Settings > Environment Variables, danach erneut deployen):
 
 | Variable | Wert | Zweck |
 |---|---|---|
 | `ALLOWED_ORIGIN` | `https://michaeldobner.github.io` | Nur diese Seite darf den Proxy aus dem Browser nutzen |
-| `PROXY_TOKEN` | beliebige lange Zufallszeichenkette | Anfragen ohne dieses Token werden abgelehnt |
+| `PROXY_TOKEN` | beliebige lange Zufallszeichenkette | Anfragen ohne dieses Token werden abgelehnt. `&token=…` an den Einrichtungslink anhängen |
 | `CONTACT` | E-Mail-Adresse oder URL | Kontaktangabe im User-Agent, um die adsb.lol bittet |
-
-5. Nach Änderungen an den Variablen erneut deployen.
-6. In VectorScope: **Settings** > **Data source**: Vercel-Adresse (zum Beispiel `https://vectorscope-proxy.vercel.app`) und Token eintragen, **Auto** belassen oder **Proxy** wählen.
 
 ### Was der Proxy tut
 
@@ -69,7 +85,7 @@ Seitenaufrufe gehen zuerst ins Netz, eine neue Version wird also beim nächsten 
 |---|---|
 | Deploy-Schritt scheitert mit „Ensure GitHub Pages has been enabled“ | Settings > Pages > Source: GitHub Actions, dann den Workflow erneut starten |
 | Seite bleibt leer oder zeigt die README | Pages steht auf „Deploy from a branch“ und veröffentlicht den ungebauten Quellcode. Settings > Pages > Source: GitHub Actions |
-| Banner „Your browser blocked direct access to adsb.lol (CORS)“ | Proxy einrichten und seine Adresse in den Einstellungen eintragen |
+| Banner „adsb.lol does not allow direct access from browsers (CORS)“ | Proxy einrichten und den Einrichtungslink öffnen, siehe oben |
 | Banner „adsb.lol is rate limiting requests“ | VectorScope bremst selbst ab. Das Intervall auf 10 oder 20 s erhöhen |
 | Status bleibt CONNECTING | Netz prüfen, Proxy-Adresse prüfen, die Proxy-Adresse mit `/v2/mil` in Safari öffnen |
 | Standort wird nicht verwendet | In der installierten App den Standort bei der Abfrage erlauben oder iOS-Einstellungen > Datenschutz > Ortungsdienste > Safari-Websites. Alternativ einen festen Standort in den Einstellungen festlegen |

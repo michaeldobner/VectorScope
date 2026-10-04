@@ -29,23 +29,39 @@ If the deploy job fails with "Ensure GitHub Pages has been enabled", step 2 is m
 
 ## CORS proxy on Vercel
 
-adsb.lol does not send CORS headers on its `/v2` endpoints. If the browser blocks direct requests, VectorScope shows a banner and needs a proxy. The proxy in `proxy/` runs free on Vercel's hobby plan.
+Browsers only let a website read data from another server if that server explicitly allows it (CORS, a security rule of every browser, not a Safari setting). adsb.lol does not allow it on its `/v2` endpoints, so VectorScope shows the banner "adsb.lol does not allow direct access from browsers". The fix is a small relay that fetches the data server-side and adds the permission: the proxy in `proxy/`, free on Vercel's hobby plan. No free flight data API without such a relay currently works from a browser: OpenSky, adsb.fi and avioadsb send no CORS headers either, airplanes.live only serves its feeders.
 
-### Setup
+### Setup in three minutes
+
+**Option A: deploy button (fastest)**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmichaeldobner%2FVectorScope&root-directory=proxy&project-name=vectorscope-proxy&repository-name=vectorscope-proxy)
+
+1. Tap the button and sign in to Vercel with GitHub.
+2. Vercel creates a copy of the repository named `vectorscope-proxy` and deploys only the `proxy` folder. Confirm with **Create**, then **Deploy**.
+3. When it shows "Congratulations", copy the address, for example `https://vectorscope-proxy.vercel.app`.
+
+**Option B: import this repository**
 
 1. Sign in at [vercel.com](https://vercel.com) with GitHub.
 2. **Add New** > **Project**, import this repository.
 3. **Root Directory:** `proxy`. **Framework Preset:** Other. Deploy.
-4. Optional environment variables under Settings > Environment Variables:
+
+**Then connect VectorScope with one tap.** Open this address on the iPhone or iPad, replacing the proxy address with yours:
+
+```
+https://michaeldobner.github.io/VectorScope/?proxy=https://vectorscope-proxy.vercel.app
+```
+
+VectorScope saves the proxy permanently and removes the parameter from the address. Do this inside the installed Home Screen app as well, or enter the address there under **Settings** > **Data source**. Safari and the installed app keep separate storage.
+
+**Optional environment variables** (Vercel > Project > Settings > Environment Variables, then redeploy):
 
 | Variable | Value | Purpose |
 |---|---|---|
 | `ALLOWED_ORIGIN` | `https://michaeldobner.github.io` | Only this site may use the proxy from a browser |
-| `PROXY_TOKEN` | any long random string | Requests without this token are rejected |
+| `PROXY_TOKEN` | any long random string | Requests without this token are rejected. Add `&token=…` to the setup link |
 | `CONTACT` | e-mail address or URL | Contact in the User-Agent that adsb.lol asks for |
-
-5. Redeploy after changing variables.
-6. In VectorScope: **Settings** > **Data source**: paste the Vercel address (for example `https://vectorscope-proxy.vercel.app`) and the token, keep **Auto** or choose **Proxy**.
 
 ### What the proxy does
 
@@ -69,7 +85,7 @@ Page requests go to the network first, so a new version is used on the next star
 |---|---|
 | Deploy job fails with "Ensure GitHub Pages has been enabled" | Settings > Pages > Source: GitHub Actions, then run the workflow again |
 | Page is blank or shows the README | Pages is set to "Deploy from a branch" and publishes the unbuilt source. Settings > Pages > Source: GitHub Actions |
-| Banner "Your browser blocked direct access to adsb.lol (CORS)" | Set up the proxy and enter its address in Settings |
+| Banner "adsb.lol does not allow direct access from browsers (CORS)" | Set up the proxy and open the one-tap link, see above |
 | Banner "adsb.lol is rate limiting requests" | VectorScope slows down by itself. Raise the refresh interval to 10 or 20 s |
 | Status stays CONNECTING | Check the network, check the proxy address, open the proxy address with `/v2/mil` in Safari |
 | Location is not used | Inside the installed app: allow location when asked, or iOS Settings > Privacy > Location Services > Safari Websites. Or set a fixed location in Settings |

@@ -10,6 +10,8 @@ import { AirspaceNow, NearbyList, NotableList, OverheadList, WatchlistPanel } fr
 import { RADIUS_STEPS, SettingsSheet, setRadius } from './ui/SettingsSheet';
 import { useLayout, useTick } from './ui/useLayout';
 
+const PROXY_HELP = 'https://github.com/michaeldobner/VectorScope/blob/main/docs/en/deployment.md#cors-proxy-on-vercel';
+
 type Tab = 'nearby' | 'overhead' | 'notable' | 'watch';
 const TABS: { id: Tab; label: string }[] = [
   { id: 'overhead', label: 'Overhead' },
@@ -386,12 +388,17 @@ function ErrorBanner({ onSettings }: { onSettings: () => void }) {
     <div className="error-banner">
       <div>
         {cors
-          ? 'Your browser blocked direct access to adsb.lol (CORS). Add your proxy URL in Settings, or try the demo.'
+          ? 'adsb.lol does not allow direct access from browsers (CORS). Set up the free proxy once, or try the demo.'
           : st.error.kind === 'rate'
             ? 'adsb.lol is rate limiting requests. Retrying more slowly.'
             : `Data source unavailable (${st.error.message}).`}
       </div>
       <div className="btn-row">
+        {cors && (
+          <a className="btn" href={PROXY_HELP} target="_blank" rel="noreferrer">
+            How to fix
+          </a>
+        )}
         <button onClick={onSettings}>Settings</button>
         <button
           onClick={() => {

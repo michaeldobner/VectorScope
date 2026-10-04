@@ -53,6 +53,7 @@ Full guide: [User guide](docs/en/user-guide.md).
 1. Open **https://michaeldobner.github.io/VectorScope/** in **Safari**.
 2. Tap **Share**, then **Add to Home Screen**.
 3. Open VectorScope from the Home Screen and set your location there. Safari and the installed app keep separate storage.
+4. **Live data:** browsers may not read adsb.lol directly. Set up the free proxy once (three minutes, [deploy button and one-tap link](docs/en/deployment.md#cors-proxy-on-vercel)). Until then, **Demo** shows simulated traffic.
 
 ## Documentation
 
@@ -108,6 +109,6 @@ Traffic data © [adsb.lol](https://adsb.lol) contributors, licensed under ODbL 1
 
 ## Version
 
-Current version: **0.1.1**. See the [changelog](CHANGELOG.md).
+Current version: **0.1.2**. See the [changelog](CHANGELOG.md).
 
 Created by Michael Dobner. Licensed under the [MIT licence](LICENSE).
