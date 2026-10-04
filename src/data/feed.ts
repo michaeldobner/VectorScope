@@ -3,7 +3,22 @@ import { demoNotable, demoSnapshot } from './demo';
 import type { FeedResult } from './types';
 import { getSettings } from '../state/settings';
 
-export type Transport = 'direct' | 'proxy' | 'demo';
+export type Transport = 'direct' | 'proxy' | 'relay' | 'demo';
+
+/**
+ * Own proxy address built into the app. When set, nobody has to enter anything in Settings.
+ * A proxy entered in Settings still takes precedence.
+ */
+export const BUILTIN_PROXY = '';
+
+/**
+ * Free public relays that need no account. adsb.lol does not allow direct browser access,
+ * so in "auto" mode these are tried when no own proxy is available. Best effort only.
+ */
+const RELAYS: { name: string; wrap: (url: string) => string }[] = [
+  { name: 'allorigins', wrap: (u) => `https://api.allorigins.win/raw?disableCache=true&url=${encodeURIComponent(u)}` },
+  { name: 'codetabs', wrap: (u) => `https://api.codetabs.com/v1/proxy/?quest=${encodeURIComponent(u)}` },
+];
 
 export class FeedError extends Error {
   constructor(
@@ -15,56 +30,113 @@ export class FeedError extends Error {
   }
 }
 
-// In "auto" mode we remember which transport worked so we do not retry a CORS failure every poll.
-let autoTransport: Transport | null = null;
+// In "auto" mode we remember which route worked so we do not probe every poll.
+let autoRoute: { transport: Transport; relay?: number } | null = null;
 
 function proxyBase(): string | null {
-  const url = getSettings().proxyUrl.trim().replace(/\/+$/, '');
+  const url = (getSettings().proxyUrl.trim() || BUILTIN_PROXY).replace(/\/+$/, '');
   return url || null;
 }
 
 export function currentTransport(): Transport {
   const s = getSettings();
-  if (s.feedMode === 'demo') return 'demo';
-  if (s.feedMode === 'direct') return 'direct';
-  if (s.feedMode === 'proxy') return 'proxy';
-  return autoTransport ?? 'direct';
+  if (s.feedMode !== 'auto') return s.feedMode;
+  return autoRoute?.transport ?? 'direct';
+}
+
+/** Name of the active route for the status display. */
+export function currentRouteLabel(): string {
+  const t = currentTransport();
+  if (t === 'relay' && autoRoute?.relay != null) return `relay (${RELAYS[autoRoute.relay].name})`;
+  return t;
 }
 
 async function request(path: string, init?: RequestInit): Promise<unknown> {
   const s = getSettings();
-  const tryOnce = async (t: Transport) => {
-    const base = t === 'proxy' ? proxyBase() : ADSBLOL_BASE;
-    if (!base) throw new FeedError('No proxy configured', 'config');
+  const isGet = !init?.method || init.method === 'GET';
+
+  const tryOnce = async (t: Transport, relay?: number) => {
+    let url: string;
+    if (t === 'proxy') {
+      const base = proxyBase();
+      if (!base) throw new FeedError('No proxy configured', 'config');
+      url = base + path;
+    } else if (t === 'relay') {
+      if (!isGet || relay == null) throw new FeedError('Relay only supports GET', 'config');
+      url = RELAYS[relay].wrap(`${ADSBLOL_BASE}${path}${path.includes('?') ? '&' : '?'}_=${Date.now()}`);
+    } else url = ADSBLOL_BASE + path;
+
     const headers: Record<string, string> = { Accept: 'application/json' };
     if (t === 'proxy' && s.proxyToken) headers['X-VS-Token'] = s.proxyToken;
     if (init?.body) headers['Content-Type'] = 'application/json';
     let res: Response;
     try {
-      res = await fetch(base + path, { ...init, headers, cache: 'no-store' });
+      res = await fetch(url, t === 'relay' ? { cache: 'no-store' } : { ...init, headers, cache: 'no-store' });
     } catch (e) {
       // A CORS rejection surfaces as a TypeError without status.
       throw new FeedError(String(e), t === 'direct' ? 'cors' : 'network');
     }
     if (res.status === 429) throw new FeedError('Rate limited', 'rate', 429);
     if (!res.ok) throw new FeedError(`HTTP ${res.status}`, 'http', res.status);
-    return res.json();
+    try {
+      return await res.json();
+    } catch {
+      throw new FeedError('Invalid response', 'network');
+    }
   };
 
-  if (s.feedMode !== 'auto') return tryOnce(s.feedMode as Transport);
-  if (autoTransport) return tryOnce(autoTransport);
+  if (s.feedMode !== 'auto') {
+    if (s.feedMode === 'relay') return tryAllRelays(tryOnce);
+    return tryOnce(s.feedMode as Transport);
+  }
+
+  if (autoRoute) {
+    try {
+      return await tryOnce(autoRoute.transport, autoRoute.relay);
+    } catch (e) {
+      if (e instanceof FeedError && e.kind === 'rate') throw e;
+      autoRoute = null; // route broke, probe again below
+    }
+  }
+
+  // Probe: own proxy, direct, then public relays.
+  let lastError: unknown = null;
+  if (proxyBase()) {
+    try {
+      const r = await tryOnce('proxy');
+      autoRoute = { transport: 'proxy' };
+      return r;
+    } catch (e) {
+      lastError = e;
+    }
+  }
   try {
     const r = await tryOnce('direct');
-    autoTransport = 'direct';
+    autoRoute = { transport: 'direct' };
     return r;
   } catch (e) {
-    if (e instanceof FeedError && (e.kind === 'cors' || e.status === 403) && proxyBase()) {
-      const r = await tryOnce('proxy');
-      autoTransport = 'proxy';
-      return r;
-    }
-    throw e;
+    lastError = lastError ?? e;
+    if (!isGet) throw e;
   }
+  try {
+    return await tryAllRelays(tryOnce);
+  } catch {
+    throw lastError instanceof FeedError ? lastError : new FeedError(String(lastError), 'network');
+  }
+}
+
+async function tryAllRelays(tryOnce: (t: Transport, relay?: number) => Promise<unknown>): Promise<unknown> {
+  let err: unknown = null;
+  for (let i = 0; i < RELAYS.length; i++) {
+    try {
+      const r = await tryOnce('relay', i);
+      if (getSettings().feedMode === 'auto') autoRoute = { transport: 'relay', relay: i };
+      return r;
+    } catch (e) {
+      err = e;
+    }
+  }
+  throw err;
 }
 
 /** Round coordinates so the exact location never leaves the device (about 1 km). */

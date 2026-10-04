@@ -4,6 +4,13 @@ All notable changes to VectorScope. [Deutsch](CHANGELOG.de.md)
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.1.3 (2026-10-04)
+
+### Improved
+* **Live data without setup:** if adsb.lol blocks the browser and no own proxy is set, VectorScope automatically tries free public relays (allorigins, codetabs). No account needed. Best effort: if they are slow or down, the own proxy remains the reliable option.
+* `BUILTIN_PROXY` in `src/data/feed.ts`: an own proxy address can be built into the app, so nothing has to be entered in Settings.
+* Settings show the active data route.
+
 ## 0.1.2 (2026-10-04)
 
 ### Improved

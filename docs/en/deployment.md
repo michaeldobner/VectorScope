@@ -31,6 +31,10 @@ If the deploy job fails with "Ensure GitHub Pages has been enabled", step 2 is m
 
 Browsers only let a website read data from another server if that server explicitly allows it (CORS, a security rule of every browser, not a Safari setting). adsb.lol does not allow it on its `/v2` endpoints, so VectorScope shows the banner "adsb.lol does not allow direct access from browsers". The fix is a small relay that fetches the data server-side and adds the permission: the proxy in `proxy/`, free on Vercel's hobby plan. No free flight data API without such a relay currently works from a browser: OpenSky, adsb.fi and avioadsb send no CORS headers either, airplanes.live only serves its feeders.
 
+### Without setup: public relays
+
+In **Auto** mode VectorScope first tries your own proxy, then adsb.lol directly, then the free public relays allorigins and codetabs. They need no account. They are not under your control and can be slow or unavailable, and they see the rounded coordinates of your queries. For reliable everyday use, set up your own proxy.
+
 ### Setup in three minutes
 
 **Option A: deploy button (fastest)**

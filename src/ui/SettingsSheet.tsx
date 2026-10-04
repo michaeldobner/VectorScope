@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { currentRouteLabel } from '../data/feed';
 import { updateSettings, useSettings, type FeedMode } from '../state/settings';
 import { enableGps, pinLocation, refreshNow, rescore, useTraffic } from '../state/traffic';
 
@@ -109,14 +110,14 @@ export function SettingsSheet({ onClose, onPickOnMap }: { onClose: () => void; o
         <section>
           <h4>Data source</h4>
           <div className="seg">
-            {(['auto', 'direct', 'proxy', 'demo'] as FeedMode[]).map((m) => (
+            {(['auto', 'direct', 'proxy', 'relay', 'demo'] as FeedMode[]).map((m) => (
               <button key={m} className={s.feedMode === m ? 'on' : ''} onClick={() => setFeed(m)}>
                 {m}
               </button>
             ))}
           </div>
           <p className="muted tiny">
-            Auto tries adsb.lol directly and falls back to your proxy if the browser blocks the request. Status: <span className="mono">{st.transport}</span>
+            Auto tries your proxy, then adsb.lol directly, then free public relays. Active route: <span className="mono">{currentRouteLabel()}</span>
             {st.error && <span className="critical"> · {st.error.kind}: {st.error.message}</span>}
           </p>
           <input

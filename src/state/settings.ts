@@ -2,7 +2,7 @@ import { useSyncExternalStore } from 'react';
 
 // Everything personal (location, watchlist, proxy) lives only in this device's localStorage.
 
-export type FeedMode = 'auto' | 'direct' | 'proxy' | 'demo';
+export type FeedMode = 'auto' | 'direct' | 'proxy' | 'relay' | 'demo';
 export type Units = 'metric' | 'aviation';
 export type WatchKind = 'hex' | 'registration' | 'callsign' | 'type';
 
