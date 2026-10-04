@@ -487,6 +487,8 @@ function ErrorBanner({ onSettings }: { onSettings: () => void }) {
   const st = useTraffic();
   const s = useSettings();
   if (st.status !== 'error' || !st.error || s.feedMode === 'demo') return null;
+  // A short rate limit while data is still fresh is handled silently by the backoff.
+  if (st.error.kind === 'rate' && st.lastUpdate && Date.now() - st.lastUpdate < 90_000) return null;
   const cors = st.error.kind === 'cors';
   return (
     <div className="error-banner">
