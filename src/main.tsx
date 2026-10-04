@@ -10,6 +10,7 @@ import { App } from './App';
 import { startTraffic } from './state/traffic';
 
 startTraffic();
+document.getElementById('boot')?.remove();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

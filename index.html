@@ -15,9 +15,39 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <style>
+      html, body { background: #0B0F14; color: #EDF2F6; margin: 0; }
+      #boot { position: fixed; inset: 0; display: grid; place-items: center; padding: 24px;
+        font: 14px/1.5 -apple-system, system-ui, sans-serif; text-align: center; color: #8F9BA8; }
+      #boot b { color: #EDF2F6; display: block; font-size: 16px; margin-bottom: 8px; }
+      #boot code { color: #E9A23B; font-size: 12px; word-break: break-word; }
+    </style>
   </head>
   <body>
+    <div id="boot"><div><b>◇ VectorScope</b>Starting …</div></div>
     <div id="root"></div>
+    <script>
+      // Boot diagnostics: if the app has not rendered after a few seconds, say why instead of a black screen.
+      (function () {
+        var errors = [];
+        window.addEventListener('error', function (e) {
+          errors.push((e.message || (e.target && (e.target.src || e.target.href)) || 'load error') + '');
+        }, true);
+        window.addEventListener('unhandledrejection', function (e) { errors.push(String(e.reason)); });
+        setTimeout(function () {
+          var root = document.getElementById('root');
+          var boot = document.getElementById('boot');
+          if (!boot || (root && root.children.length)) return;
+          var raw = !!document.querySelector('script[src$="main.tsx"]');
+          boot.innerHTML = '<div><b>◇ VectorScope did not start</b>' +
+            (raw
+              ? 'This is the unbuilt source code. In the repository set Settings › Pages › Source to “GitHub Actions” and run the deploy workflow.'
+              : 'The app failed to load. Close the page completely and open it again.') +
+            (errors.length ? '<br><br><code>' + errors.slice(0, 3).join('<br>').replace(/</g, '&lt;') + '</code>' : '') +
+            '</div>';
+        }, 6000);
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

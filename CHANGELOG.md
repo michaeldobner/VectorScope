@@ -4,6 +4,12 @@ All notable changes to VectorScope. [Deutsch](CHANGELOG.de.md)
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.1.1 (2026-10-04)
+
+### Improved
+* **Start diagnostics:** if VectorScope has not started after six seconds, it shows the reason and the first error messages instead of a black screen. If GitHub Pages serves the unbuilt source code, it says how to fix the Pages setting.
+* The app background is graphite from the very first frame, before scripts load.
+
 ## 0.1.0 (2026-10-04)
 
 First public version.
