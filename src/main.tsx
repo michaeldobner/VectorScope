@@ -7,8 +7,10 @@ import '@fontsource/ibm-plex-mono/400.css';
 import '@fontsource/ibm-plex-mono/500.css';
 import './styles.css';
 import { App } from './App';
+import { applyThemeToCss } from './ui/tokens';
 import { getTraffic, select, selectExternal, startTraffic } from './state/traffic';
 
+applyThemeToCss();
 startTraffic();
 // Test hook for the lab and debugging.
 (window as unknown as { __vs: unknown }).__vs = { getTraffic, select, selectExternal };

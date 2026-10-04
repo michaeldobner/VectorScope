@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { compassPoint } from '../geo/geo';
 import type { RouteInfo } from '../data/adsblol';
 import { fetchPhoto, fetchRoute, type Photo } from '../data/feed';
+import { airlineFor, lookupAircraft, type AircraftInfo } from '../data/enrich';
 import { typeDisplayName } from '../data/score';
 import * as f from '../lib/format';
 import { updateSettings, useSettings, type WatchEntry } from '../state/settings';
@@ -17,6 +18,8 @@ export function Inspector({ t, onClose }: { t: Tracked; onClose?: () => void }) 
   const { ac, assessment: a, sky } = t;
   const [route, setRoute] = useState<RouteInfo | null | undefined>(undefined);
   const [photo, setPhoto] = useState<Photo | null>(null);
+  const [info, setInfo] = useState<AircraftInfo | null>(null);
+  const [airline, setAirline] = useState<string | null>(null);
 
   useEffect(() => {
     let alive = true;
@@ -28,6 +31,10 @@ export function Inspector({ t, onClose }: { t: Tracked; onClose?: () => void }) 
         .catch(() => alive && setRoute(null));
     } else setRoute(null);
     fetchPhoto(ac.hex).then((p) => alive && setPhoto(p));
+    setInfo(null);
+    setAirline(null);
+    lookupAircraft(ac.hex).then((i) => alive && setInfo(i));
+    airlineFor(ac.callsign).then((n) => alive && setAirline(n));
     return () => {
       alive = false;
     };
@@ -70,8 +77,8 @@ export function Inspector({ t, onClose }: { t: Tracked; onClose?: () => void }) 
             ✕
           </button>
         </div>
-        <div className="insp-sub">{ac.operator ?? route?.airline ?? a.unit ?? 'Unknown operator'}</div>
-        <div className="insp-type">{typeDisplayName(ac) ?? 'Unknown type'}</div>
+        <div className="insp-sub">{ac.operator ?? route?.airline ?? airline ?? info?.owner ?? a.unit ?? 'Operator unknown'}</div>
+        <div className="insp-type">{typeDisplayName(ac) ?? (info?.type ? `${info.manufacturer ?? ''} ${info.type}`.trim() : 'Type unknown')}</div>
       </header>
 
       {a.squawkNote && (

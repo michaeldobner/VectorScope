@@ -1,5 +1,5 @@
-import { ADSBLOL_BASE, parseAdsbdbRoute, parseV2, type RouteInfo } from './adsblol';
-import { distanceM } from '../geo/geo';
+import { ADSBLOL_BASE, parseV2, type RouteInfo } from './adsblol';
+import { lookupRoute } from './enrich';
 import { demoNotable, demoSnapshot } from './demo';
 import type { FeedResult } from './types';
 import { getSettings } from '../state/settings';
@@ -202,34 +202,10 @@ export async function fetchSearch(query: string): Promise<FeedResult> {
   return parseV2(await request(path));
 }
 
-const routeCache = new Map<string, { at: number; route: RouteInfo | null }>();
-
-/**
- * Departure and destination from adsbdb.com (CORS enabled, no key). adsb.lol's routeset
- * currently answers with empty responses, so it is not used.
- * A route is only accepted if the aircraft is plausibly on the way between both airports.
- */
+/** Departure and destination, see enrich.ts. */
 export async function fetchRoute(callsign: string, lat: number, lon: number): Promise<RouteInfo | null> {
-  const key = callsign.trim().toUpperCase();
-  const hit = routeCache.get(key);
-  let route: RouteInfo | null;
-  if (hit && Date.now() - hit.at < 30 * 60_000) route = hit.route;
-  else {
-    if (currentTransport() === 'demo') return null;
-    try {
-      const res = await fetch(`https://api.adsbdb.com/v0/callsign/${encodeURIComponent(key)}`);
-      route = res.ok ? parseAdsbdbRoute(await res.json()) : null;
-    } catch {
-      route = null;
-    }
-    routeCache.set(key, { at: Date.now(), route });
-  }
-  if (!route) return null;
-  const { origin: o, destination: d } = route;
-  if (o.lat == null || o.lon == null || d.lat == null || d.lon == null) return route;
-  const direct = distanceM({ lat: o.lat, lon: o.lon }, { lat: d.lat, lon: d.lon });
-  const via = distanceM({ lat: o.lat, lon: o.lon }, { lat, lon }) + distanceM({ lat, lon }, { lat: d.lat, lon: d.lon });
-  return via <= direct * 1.25 + 300_000 ? route : null;
+  if (currentTransport() === 'demo') return null;
+  return lookupRoute(callsign, lat, lon);
 }
 
 export interface Photo {

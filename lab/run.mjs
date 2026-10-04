@@ -107,6 +107,18 @@ const pick = (p) =>
   [...new Set(errs)].slice(0, 10).forEach((e) => log.push('  ' + e));
   await ctx.close();
 }
+// Theme comparison on the real map, same aircraft selected
+for (const theme of ['ice', 'graphite', 'night']) {
+  const ctx = await browser.newContext({ viewport: { width: 393, height: 852 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true });
+  const p = await ctx.newPage();
+  await p.goto(`http://localhost:4173/?shot&theme=${theme}&lat=${LAT}&lon=${LON}`);
+  await p.waitForTimeout(9000);
+  await shot(p, `theme-${theme}-1-map`);
+  await pick(p);
+  await p.waitForTimeout(5000);
+  await shot(p, `theme-${theme}-2-inspector`);
+  await ctx.close();
+}
 await browser.close();
 fs.writeFileSync(`${OUT}/log.txt`, log.join('\n') + '\n');
 console.log(log.join('\n'));

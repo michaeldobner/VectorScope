@@ -185,3 +185,28 @@ export function matchCallsignPrefix(callsign: string | null) {
   }
   return null;
 }
+
+/** Readable names for common airliner and business jet type codes. */
+export const COMMON_TYPES: Record<string, string> = {
+  A19N: 'Airbus A319neo', A20N: 'Airbus A320neo', A21N: 'Airbus A321neo', A318: 'Airbus A318', A319: 'Airbus A319',
+  A320: 'Airbus A320', A321: 'Airbus A321', A332: 'Airbus A330-200', A333: 'Airbus A330-300', A338: 'Airbus A330-800neo',
+  A339: 'Airbus A330-900neo', A343: 'Airbus A340-300', A346: 'Airbus A340-600', A359: 'Airbus A350-900', A35K: 'Airbus A350-1000',
+  A388: 'Airbus A380-800', BCS1: 'Airbus A220-100', BCS3: 'Airbus A220-300', B712: 'Boeing 717', B733: 'Boeing 737-300',
+  B734: 'Boeing 737-400', B735: 'Boeing 737-500', B736: 'Boeing 737-600', B737: 'Boeing 737-700', B738: 'Boeing 737-800',
+  B739: 'Boeing 737-900', B37M: 'Boeing 737 MAX 7', B38M: 'Boeing 737 MAX 8', B39M: 'Boeing 737 MAX 9', B3XM: 'Boeing 737 MAX 10',
+  B744: 'Boeing 747-400', B748: 'Boeing 747-8', B752: 'Boeing 757-200', B753: 'Boeing 757-300', B762: 'Boeing 767-200',
+  B763: 'Boeing 767-300', B764: 'Boeing 767-400', B772: 'Boeing 777-200', B77L: 'Boeing 777-200LR', B773: 'Boeing 777-300',
+  B77W: 'Boeing 777-300ER', B778: 'Boeing 777-8', B779: 'Boeing 777-9', B788: 'Boeing 787-8', B789: 'Boeing 787-9',
+  B78X: 'Boeing 787-10', E170: 'Embraer 170', E175: 'Embraer 175', E190: 'Embraer 190', E195: 'Embraer 195',
+  E290: 'Embraer E190-E2', E295: 'Embraer E195-E2', CRJ7: 'Bombardier CRJ700', CRJ9: 'Bombardier CRJ900', CRJX: 'Bombardier CRJ1000',
+  AT72: 'ATR 72', AT75: 'ATR 72-500', AT76: 'ATR 72-600', AT45: 'ATR 42-500', DH8D: 'De Havilland Dash 8-400',
+  MD11: 'McDonnell Douglas MD-11', A306: 'Airbus A300-600', SB20: 'Saab 2000', SF34: 'Saab 340', DO28: 'Dornier 28',
+  C25A: 'Cessna Citation CJ2', C25B: 'Cessna Citation CJ3', C25C: 'Cessna Citation CJ4', C56X: 'Cessna Citation Excel',
+  C68A: 'Cessna Citation Latitude', C700: 'Cessna Citation Longitude', CL35: 'Bombardier Challenger 350', CL60: 'Bombardier Challenger 600',
+  GLEX: 'Bombardier Global Express', GL5T: 'Bombardier Global 5000', GL7T: 'Bombardier Global 7500', GLF5: 'Gulfstream G550',
+  GLF6: 'Gulfstream G650', G280: 'Gulfstream G280', F2TH: 'Dassault Falcon 2000', F900: 'Dassault Falcon 900', FA7X: 'Dassault Falcon 7X',
+  FA8X: 'Dassault Falcon 8X', E55P: 'Embraer Phenom 300', E50P: 'Embraer Phenom 100', PC12: 'Pilatus PC-12', PC24: 'Pilatus PC-24',
+  C172: 'Cessna 172', C182: 'Cessna 182', SR22: 'Cirrus SR22', DA42: 'Diamond DA42', DA40: 'Diamond DA40', EC35: 'Airbus H135',
+  EC45: 'Airbus H145', EC30: 'Airbus H130', EC55: 'Airbus H155', AS50: 'Airbus H125', A139: 'Leonardo AW139', A169: 'Leonardo AW169',
+  BK17: 'Kawasaki BK117', R44: 'Robinson R44', NH90: 'NH90',
+};

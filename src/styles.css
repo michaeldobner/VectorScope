@@ -250,7 +250,7 @@ button {
   flex: 1;
   min-height: 0;
   min-width: 0;
-  background: #0e141a;
+  background: var(--bg);
 }
 .map {
   /* MapLibre forces position: relative on its container, so size it explicitly. */
@@ -260,7 +260,7 @@ button {
   height: 100%;
 }
 .maplibregl-ctrl-attrib {
-  background: rgba(11, 15, 20, 0.7) !important;
+  background: color-mix(in srgb, var(--bg) 70%, transparent) !important;
   color: var(--text-3) !important;
   font-size: 10px !important;
 }
@@ -337,7 +337,7 @@ button {
   font-size: 13px;
 }
 .error-banner {
-  border-color: rgba(233, 162, 59, 0.45);
+  border-color: color-mix(in srgb, var(--warning) 45%, transparent);
   flex-wrap: wrap;
 }
 
@@ -567,7 +567,7 @@ button {
 .chip.state-zenith,
 .chip.state-overhead {
   color: var(--accent);
-  border-color: rgba(85, 189, 235, 0.5);
+  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
 }
 .chip.state-approaching {
   color: var(--text);
@@ -771,12 +771,12 @@ button {
   font-size: 13px;
 }
 .banner.critical {
-  border-color: rgba(229, 87, 87, 0.5);
-  background: rgba(229, 87, 87, 0.08);
+  border-color: color-mix(in srgb, var(--critical) 50%, transparent);
+  background: color-mix(in srgb, var(--critical) 8%, transparent);
 }
 .banner.warning {
-  border-color: rgba(233, 162, 59, 0.5);
-  background: rgba(233, 162, 59, 0.08);
+  border-color: color-mix(in srgb, var(--warning) 50%, transparent);
+  background: color-mix(in srgb, var(--warning) 8%, transparent);
 }
 .photo {
   display: block;
@@ -1301,7 +1301,7 @@ input[type='range'] {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  border-color: rgba(85, 189, 235, 0.5);
+  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
   color: var(--accent);
 }
 

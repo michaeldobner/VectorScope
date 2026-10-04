@@ -4,6 +4,16 @@ Alle wesentlichen Änderungen an VectorScope. [English](CHANGELOG.md)
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.2.2 (2026-10-04)
+
+### Behoben
+* **Routen für deutlich mehr Flüge:** Routendatenbanken veralten unterschiedlich, deshalb werden adsbdb und hexdb gefragt, und der Abschnitt, der am Flugzeug vorbeiführt, gewinnt. Beispiel: EXS95LV über Nürnberg zeigte keine Route, weil adsbdb noch Madeira nach Bristol aus der Vorsaison hatte. Jetzt erscheint Mytilene nach Birmingham von hexdb.
+
+### Verbessert
+* Airline aus dem Callsign (EXS ergibt Jet2.com), Halter und Typ aus der Flugzeugdatenbank, wenn die Live-Daten nichts liefern.
+* Lesbare Typnamen für rund 120 gängige Flugzeuge, zum Beispiel Boeing 737-800 statt B738.
+* Drei Farbschemata zum Vergleich: `?theme=ice` (bisher), `?theme=graphite` (neutral wie Apple Maps), `?theme=night` (warme Flugzeuge auf tiefer Nachtkarte). Die Wahl wird pro Gerät gespeichert.
+
 ## 0.2.1 (2026-10-04)
 
 ### Behoben

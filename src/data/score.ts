@@ -1,4 +1,4 @@
-import { GOVERNMENT_OPERATOR, ROLE_LABEL, TYPE_CATALOG, matchCallsignPrefix, type RoleClass } from './catalog';
+import { COMMON_TYPES, GOVERNMENT_OPERATOR, ROLE_LABEL, TYPE_CATALOG, matchCallsignPrefix, type RoleClass } from './catalog';
 import { DB_FLAG, type Aircraft } from './types';
 
 /** Colour meaning on the map. Order matters: later wins only if more important. */
@@ -120,5 +120,5 @@ export function assess(ac: Aircraft, onWatchlist: boolean, nowYear = new Date().
 export function typeDisplayName(ac: Aircraft): string | null {
   const cat = ac.typeCode ? TYPE_CATALOG[ac.typeCode] : undefined;
   if (cat?.name && cat.rarity > 0) return cat.name;
-  return ac.typeName ?? cat?.name ?? ac.typeCode;
+  return ac.typeName ?? cat?.name ?? (ac.typeCode ? COMMON_TYPES[ac.typeCode] : undefined) ?? ac.typeCode;
 }
