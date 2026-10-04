@@ -11,8 +11,9 @@ permissions:
   id-token: write
   actions: read
 
+# Own queue: GitHub's branch build uses the group "pages", sharing it would make both wait for each other.
 concurrency:
-  group: pages
+  group: vectorscope-deploy
   cancel-in-progress: true
 
 jobs:
@@ -44,11 +45,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          for i in $(seq 1 36); do
-            pending=$(gh api "repos/${{ github.repository }}/actions/runs?head_sha=${{ github.sha }}&per_page=50" \
+          for i in $(seq 1 48); do
+            pending=$(gh api "repos/${{ github.repository }}/actions/runs?per_page=30" \
               --jq '[.workflow_runs[] | select(.path | startswith("dynamic/pages")) | select(.status != "completed")] | length' || echo 0)
             if [ "$pending" = "0" ]; then echo "No branch build running"; break; fi
-            echo "Branch build still running, waiting ($i)"; sleep 5
+            echo "Branch build still running or queued, waiting ($i)"; sleep 5
           done
       - id: deployment
         uses: actions/deploy-pages@v4
