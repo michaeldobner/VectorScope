@@ -21,17 +21,21 @@ export const C = {
   acEvent: '#E9A23B',
   acEmergency: '#E55757',
 
-  // Basemap
-  mapLand: '#0E141A',
-  mapWater: '#122030',
-  mapUrban: '#121A22',
-  mapBorder: '#2A3744',
-  mapBorderFaint: '#1C2630',
-  mapRoad: '#18222C',
-  mapAerodrome: '#141D26',
-  mapRunway: '#3A4856',
-  mapCountryLabel: '#3E4A57',
-  mapCityLabel: '#6B7783',
+  // Basemap: dark aviation chart, but every place name readable
+  mapLand: '#111921',
+  mapWater: '#13222F',
+  mapUrban: '#16202A',
+  mapBorder: '#3A4958',
+  mapBorderFaint: '#26323E',
+  mapRoad: '#1E2A36',
+  mapMotorway: '#2A3846',
+  mapAerodrome: '#18232E',
+  mapRunway: '#4A5A6A',
+  mapCountryLabel: '#6F7C89',
+  mapCityLabel: '#C9D3DC',
+  mapTownLabel: '#9AA7B3',
+  mapVillageLabel: '#6F7C89',
+  mapAirportLabel: '#8FB8D0',
 } as const;
 
 export const TONE_COLOR = {

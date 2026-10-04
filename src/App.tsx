@@ -27,7 +27,7 @@ export function App() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [pickMode, setPickMode] = useState(false);
   const [recenter, setRecenter] = useState(0);
-  const [sheet, setSheet] = useState<'peek' | 'half' | 'full'>('peek');
+  const [sheet, setSheet] = useState<SheetState>('peek');
   const selected = selectedTracked(st);
 
   // Phone: opening an aircraft raises the sheet so the inspector is readable.
@@ -36,7 +36,8 @@ export function App() {
   }, [selected?.ac.hex]);
 
   const padding = useMemo(() => {
-    if (layout === 'phone-portrait') return { top: 70, right: 20, bottom: sheet === 'peek' ? 190 : 120, left: 20 };
+    if (layout === 'phone-portrait')
+      return { top: 70, right: 64, bottom: sheet === 'peek' ? 190 : sheet === 'half' ? Math.round(window.innerHeight * 0.52) + 20 : 120, left: 20 };
     return { top: 56, right: 24, bottom: 24, left: 24 };
   }, [layout, sheet]);
 
@@ -293,27 +294,35 @@ function Search() {
 function MapControls({ onRecenter }: { onRecenter: () => void }) {
   const s = useSettings();
   return (
-    <div className="map-controls">
-      <div className="seg radius">
-        {RADIUS_STEPS.map((r) => (
-          <button key={r} className={s.radiusKm === r ? 'on' : ''} onClick={() => setRadius(r)}>
-            {r}
-          </button>
-        ))}
-        <span className="unit">KM</span>
+    <>
+      <div className="map-controls">
+        <div className="seg radius">
+          {RADIUS_STEPS.map((r) => (
+            <button key={r} className={s.radiusKm === r ? 'on' : ''} onClick={() => setRadius(r)}>
+              {r}
+            </button>
+          ))}
+          <span className="unit">KM</span>
+        </div>
       </div>
-      <button className="icon-btn round" onClick={onRecenter} aria-label="Recenter">
-        ◎
-      </button>
-      <button
-        className={`icon-btn round ${s.onlyInteresting ? 'on' : ''}`}
-        onClick={() => updateSettings({ onlyInteresting: !s.onlyInteresting })}
-        aria-label="Only interesting"
-        title="Only interesting"
-      >
-        ◆
-      </button>
-    </div>
+      <div className="map-buttons">
+        <button className="map-btn" onClick={onRecenter} aria-label="My location" title="My location">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M21.3 2.7a1 1 0 0 0-1.1-.2L3.2 9.6a1 1 0 0 0 .1 1.9l7 2.2 2.2 7a1 1 0 0 0 1.9.1l7.1-17a1 1 0 0 0-.2-1.1z" />
+          </svg>
+        </button>
+        <button
+          className={`map-btn ${s.onlyInteresting ? 'on' : ''}`}
+          onClick={() => updateSettings({ onlyInteresting: !s.onlyInteresting })}
+          aria-label="Only interesting aircraft"
+          title="Only interesting aircraft"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+            <path d="M4 6h16M7 12h10M10 18h4" />
+          </svg>
+        </button>
+      </div>
+    </>
   );
 }
 
@@ -346,35 +355,98 @@ function Peek({ onOpen }: { onOpen: () => void }) {
   );
 }
 
-function BottomSheet({ state, onState, children }: { state: 'peek' | 'half' | 'full'; onState: (s: 'peek' | 'half' | 'full') => void; children: React.ReactNode }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const drag = useRef<{ y: number; t: number } | null>(null);
-  const [dy, setDy] = useState(0);
+type SheetState = 'peek' | 'half' | 'full';
+const SHEET_ORDER: SheetState[] = ['peek', 'half', 'full'];
 
-  const onDown = (e: React.PointerEvent) => {
-    drag.current = { y: e.clientY, t: Date.now() };
-    (e.target as HTMLElement).setPointerCapture(e.pointerId);
-  };
-  const onMove = (e: React.PointerEvent) => {
-    if (drag.current) setDy(e.clientY - drag.current.y);
-  };
-  const onUp = () => {
-    if (!drag.current) return;
-    const order: ('peek' | 'half' | 'full')[] = ['peek', 'half', 'full'];
-    const i = order.indexOf(state);
-    if (dy < -40) onState(order[Math.min(2, i + 1)]);
-    else if (dy > 40) onState(order[Math.max(0, i - 1)]);
-    else if (Math.abs(dy) < 5) onState(state === 'peek' ? 'half' : state === 'half' ? 'full' : 'half');
-    drag.current = null;
-    setDy(0);
+/**
+ * Bottom sheet that behaves like Apple Maps: drag it anywhere, flick it, it snaps.
+ * Below full height every vertical drag moves the sheet. At full height the content scrolls,
+ * and pulling down from the top of the content moves the sheet again.
+ */
+function BottomSheet({ state, onState, children }: { state: SheetState; onState: (s: SheetState) => void; children: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const body = useRef<HTMLDivElement>(null);
+  const [dy, setDy] = useState(0);
+  const stateRef = useRef(state);
+  stateRef.current = state;
+
+  useEffect(() => {
+    const el = ref.current!;
+    let startY = 0;
+    let startT = 0;
+    let lastY = 0;
+    let lastT = 0;
+    let mode: 'idle' | 'pending' | 'drag' | 'scroll' = 'idle';
+    let fromGrabber = false;
+
+    const onStart = (e: TouchEvent) => {
+      const t = e.touches[0];
+      startY = lastY = t.clientY;
+      startT = lastT = performance.now();
+      fromGrabber = !!(e.target as HTMLElement).closest('.grabber');
+      mode = 'pending';
+    };
+    const onMove = (e: TouchEvent) => {
+      if (mode === 'idle' || mode === 'scroll') return;
+      const y = e.touches[0].clientY;
+      const d = y - startY;
+      if (mode === 'pending') {
+        if (Math.abs(d) < 6) return;
+        const atTop = (body.current?.scrollTop ?? 0) <= 0;
+        const full = stateRef.current === 'full';
+        // At full height the content scrolls, unless the user pulls down from its top.
+        if (!fromGrabber && full && !(d > 0 && atTop)) {
+          mode = 'scroll';
+          return;
+        }
+        mode = 'drag';
+      }
+      e.preventDefault();
+      lastT = performance.now();
+      lastY = y;
+      setDy(Math.max(-window.innerHeight, d));
+    };
+    const onEnd = () => {
+      if (mode === 'drag') {
+        const d = lastY - startY;
+        const v = (lastY - startY) / Math.max(1, lastT - startT); // px per ms
+        const i = SHEET_ORDER.indexOf(stateRef.current);
+        let next = i;
+        if (d > 60 || v > 0.5) next = Math.max(0, i - (Math.abs(d) > 280 || v > 1.4 ? 2 : 1));
+        else if (d < -60 || v < -0.5) next = Math.min(2, i + (Math.abs(d) > 280 || v < -1.4 ? 2 : 1));
+        onState(SHEET_ORDER[next]);
+      } else if (mode === 'pending' && fromGrabber) {
+        onState(stateRef.current === 'peek' ? 'half' : stateRef.current === 'half' ? 'full' : 'half');
+      }
+      mode = 'idle';
+      setDy(0);
+    };
+    el.addEventListener('touchstart', onStart, { passive: true });
+    el.addEventListener('touchmove', onMove, { passive: false });
+    el.addEventListener('touchend', onEnd);
+    el.addEventListener('touchcancel', onEnd);
+    return () => {
+      el.removeEventListener('touchstart', onStart);
+      el.removeEventListener('touchmove', onMove);
+      el.removeEventListener('touchend', onEnd);
+      el.removeEventListener('touchcancel', onEnd);
+    };
+  }, [onState]);
+
+  // Mouse support for desktop browsers: click the grabber to cycle.
+  const onGrabberClick = (e: React.MouseEvent) => {
+    if ((e.nativeEvent as PointerEvent).pointerType === 'touch') return;
+    onState(state === 'peek' ? 'half' : state === 'half' ? 'full' : 'half');
   };
 
   return (
     <div ref={ref} className={`bottom-sheet bs-${state} ${dy ? 'dragging' : ''}`} style={dy ? { transform: `translateY(${dy}px)` } : undefined}>
-      <div className="grabber" onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp}>
+      <div className="grabber" onClick={onGrabberClick} aria-label="Resize panel">
         <i />
       </div>
-      <div className="bs-content">{children}</div>
+      <div ref={body} className="bs-content">
+        {children}
+      </div>
     </div>
   );
 }

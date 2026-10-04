@@ -15,6 +15,8 @@ const ALLOWED = [
   /^\/v2\/(callsign|reg|registration|type)\/[A-Za-z0-9-]{1,12}$/,
   /^\/api\/0\/routeset$/,
 ];
+const PHOTOS = /^\/photos\/hex\/([0-9a-fA-F]{6})$/;
+const CONTACT_UA = `VectorScope/0.1 (+https://github.com/michaeldobner/VectorScope; ${process.env.CONTACT || 'github.com/michaeldobner'})`;
 
 export default async function handler(req, res) {
   const origin = process.env.ALLOWED_ORIGIN || '*';
@@ -33,6 +35,20 @@ export default async function handler(req, res) {
   if (process.env.PROXY_TOKEN && req.headers['x-vs-token'] !== process.env.PROXY_TOKEN) {
     return res.status(401).json({ error: 'unauthorized' });
   }
+  // Aircraft photos from planespotters.net, which requires a contact URL in the User-Agent.
+  const photo = path.match(PHOTOS);
+  if (photo && req.method === 'GET') {
+    try {
+      const r = await fetch(`https://api.planespotters.net/pub/photos/hex/${photo[1].toLowerCase()}`, {
+        headers: { Accept: 'application/json', 'User-Agent': CONTACT_UA },
+      });
+      res.setHeader('Content-Type', 'application/json');
+      res.setHeader('Cache-Control', 'public, s-maxage=86400');
+      return res.status(r.status).send(await r.text());
+    } catch (e) {
+      return res.status(502).json({ error: 'upstream', detail: String(e) });
+    }
+  }
   if (!ALLOWED.some((re) => re.test(path))) return res.status(404).json({ error: 'not allowed' });
   if (path === '/api/0/routeset' ? req.method !== 'POST' : req.method !== 'GET') {
     return res.status(405).json({ error: 'method' });
@@ -44,7 +60,7 @@ export default async function handler(req, res) {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        'User-Agent': `VectorScope/0.1 (personal aviation radar; ${process.env.CONTACT || 'github.com/michaeldobner'})`,
+        'User-Agent': CONTACT_UA,
       },
       body: req.method === 'POST' ? JSON.stringify(req.body ?? {}) : undefined,
     });

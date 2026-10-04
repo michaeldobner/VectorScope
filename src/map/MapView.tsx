@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import { circleRing, destination, project } from '../geo/geo';
 import { altitudeShort, KT_TO_MPS } from '../lib/format';
 import { useSettings, getSettings } from '../state/settings';
-import { displayPosition, getTraffic, select, useTraffic, type Tracked } from '../state/traffic';
+import { displayPosition, getTraffic, select, selectedTracked, useTraffic, type Tracked } from '../state/traffic';
 import { C, TONE_COLOR } from '../ui/tokens';
 import { heliImage, planeImage } from './icons';
 import { FONT, FONT_BOLD, baseStyle } from './style';
@@ -276,7 +276,9 @@ export function MapView({ padding, pickMode, onPick, recenterSignal }: Props) {
     const feats: GeoJSON.Feature[] = [];
     const trails: GeoJSON.Feature[] = [];
     let selected: Tracked | undefined;
-    st.aircraft.forEach((t) => {
+    const all = [...st.aircraft.values()];
+    if (st.external && st.selected === st.external.ac.hex && !st.aircraft.has(st.external.ac.hex)) all.push(st.external);
+    all.forEach((t) => {
       const tone = t.assessment.tone;
       if (s.onlyInteresting && tone === 'standard' && st.selected !== t.ac.hex) return;
       const pos = displayPosition(t, now);
@@ -369,6 +371,21 @@ export function MapView({ padding, pickMode, onPick, recenterSignal }: Props) {
   useEffect(() => {
     if (ready.current) drawDynamic();
   }, [traffic.version, settings.onlyInteresting, settings.units]);
+
+  // Selecting an aircraft (map, lists, Notable, search) brings it into view above the panels.
+  useEffect(() => {
+    const map = mapRef.current;
+    const t = selectedTracked(getTraffic());
+    if (!map || !t) return;
+    const pos = displayPosition(t, Date.now());
+    const pt = map.project([pos.lon, pos.lat]);
+    const c = map.getContainer();
+    const pad = paddingRef.current;
+    const visible = pt.x > pad.left && pt.x < c.clientWidth - pad.right && pt.y > pad.top && pt.y < c.clientHeight - pad.bottom;
+    if (!visible) {
+      map.easeTo({ center: [pos.lon, pos.lat], padding: pad, zoom: Math.max(map.getZoom(), 7), duration: 900 });
+    }
+  }, [traffic.selected, padding.bottom]);
 
   useEffect(() => {
     const canvas = mapRef.current?.getCanvas();

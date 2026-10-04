@@ -52,26 +52,43 @@ export function parseV2(json: any): FeedResult {
   return { aircraft, now };
 }
 
-export interface RouteInfo {
-  callsign: string;
-  plausible: boolean;
-  airports: { icao: string | null; iata: string | null; name: string | null; location: string | null }[];
+export interface Airport {
+  icao: string | null;
+  iata: string | null;
+  name: string | null;
+  city: string | null;
+  country: string | null;
+  lat: number | null;
+  lon: number | null;
 }
 
-export function parseRoutes(json: any): RouteInfo[] {
-  if (!Array.isArray(json)) return [];
-  return json
-    .filter((r) => r && typeof r.callsign === 'string')
-    .map((r) => ({
-      callsign: r.callsign,
-      plausible: r.plausible !== false && r.airport_codes !== 'unknown',
-      airports: Array.isArray(r._airports)
-        ? r._airports.map((p: any) => ({
-            icao: str(p.icao),
-            iata: str(p.iata),
-            name: str(p.name),
-            location: str(p.location),
-          }))
-        : [],
-    }));
+export interface RouteInfo {
+  callsign: string;
+  airline: string | null;
+  origin: Airport;
+  destination: Airport;
+}
+
+function airport(a: any): Airport {
+  return {
+    icao: str(a?.icao_code),
+    iata: str(a?.iata_code),
+    name: str(a?.name),
+    city: str(a?.municipality),
+    country: str(a?.country_name),
+    lat: num(a?.latitude),
+    lon: num(a?.longitude),
+  };
+}
+
+/** Parse an adsbdb.com /v0/callsign response. */
+export function parseAdsbdbRoute(json: any): RouteInfo | null {
+  const r = json?.response?.flightroute;
+  if (!r || !r.origin || !r.destination) return null;
+  return {
+    callsign: str(r.callsign) ?? '',
+    airline: str(r.airline?.name),
+    origin: airport(r.origin),
+    destination: airport(r.destination),
+  };
 }

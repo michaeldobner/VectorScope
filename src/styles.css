@@ -1065,8 +1065,11 @@ button {
 }
 .layout-phone-portrait .map-controls {
   left: 8px;
-  right: 8px;
   top: 8px;
+}
+.layout-phone-portrait .map-buttons {
+  right: 8px;
+  top: 56px;
 }
 .layout-phone-portrait .seg button {
   min-width: 30px;
@@ -1103,7 +1106,7 @@ button {
 }
 .grabber {
   flex: none;
-  height: 22px;
+  height: 28px;
   display: grid;
   place-items: center;
   touch-action: none;
@@ -1118,12 +1121,13 @@ button {
 .bs-content {
   flex: 1;
   min-height: 0;
-  overflow-y: auto;
+  overflow-y: hidden;
   padding-bottom: var(--sab);
   -webkit-overflow-scrolling: touch;
 }
-.bs-peek .bs-content {
-  overflow: hidden;
+.bs-full .bs-content {
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .peek {
   padding: 0 16px 10px;
@@ -1305,4 +1309,103 @@ input[type='range'] {
   margin-top: 4px;
   font-size: 10px;
   color: var(--text-3);
+}
+
+/* Floating map buttons, top right like Apple Maps */
+.map-buttons {
+  position: absolute;
+  right: 12px;
+  top: 58px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+.map-btn {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+}
+.map-btn + .map-btn {
+  border-top: 1px solid var(--border);
+}
+.map-btn:active {
+  background: var(--raised);
+}
+.map-btn.on {
+  color: var(--bg);
+  background: var(--accent);
+}
+@media (hover: hover) {
+  .bs-content {
+    overflow-y: auto;
+  }
+}
+
+/* Inspector: sticky header, route card */
+.insp-head {
+  position: sticky;
+  top: -1px;
+  z-index: 2;
+  background: var(--bg);
+  margin: -16px -18px 0;
+  padding: 14px 18px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.right-col .insp-head,
+.side .insp-head {
+  background: var(--bg);
+}
+.route-card {
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+}
+.route-airline {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-bottom: 8px;
+}
+.route-card .route-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+.route-card .code {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--text);
+}
+.route-card .city {
+  font-size: 13px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.route-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  min-width: 70px;
+}
+.route-line i {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.ids {
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
 }

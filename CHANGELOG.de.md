@@ -4,6 +4,26 @@ Alle wesentlichen Änderungen an VectorScope. [English](CHANGELOG.md)
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.2.0 (2026-10-04)
+
+Erstmals mit echten Live-Daten, der echten Karte und echten Touch-Gesten getestet, in einem Testlabor auf GitHub Actions.
+
+### Neu
+* **Routen von adsbdb:** Airline, Start und Ziel mit Flughafencode, Stadt und Land als Routenkarte. Nur wenn das Flugzeug plausibel zwischen beiden Flughäfen unterwegs ist.
+* **Fotos der Flugzeuge** über den eigenen Proxy (planespotters verlangt eine Kontaktadresse, die Browser nicht senden können).
+* **Flugzeug antippen, die Karte folgt:** aus der Karte, den Listen, Notable now oder der Suche. Flugzeuge außerhalb deines Gebiets werden auf der Karte gezeichnet und live verfolgt.
+* **Standort-Taste** und Filter-Taste oben rechts wie in Apple Maps.
+
+### Verbessert
+* **Lesbare Karte:** Städte, Orte und Dörfer je nach Zoomstufe, Autobahnen ab Zoomstufe 6, Flughafennamen ab Zoomstufe 9.
+* **Panel unten wie in Apple Maps:** überall greifen, wischen, es rastet ein. Vom oberen Rand des Inhalts nach unten ziehen verkleinert es.
+* **Inspector:** feststehender Kopf, zuerst das Foto, dann Route, Telemetrie und Position relativ zu dir.
+* Notable now lädt nacheinander alle zwei Minuten, um unter dem Limit von adsb.lol zu bleiben.
+
+### Behoben
+* Routen erschienen nie: Der Routendienst von adsb.lol antwortet leer und blockiert Browser.
+* Fotos erschienen nie: planespotters blockiert Anfragen aus dem Browser.
+
 ## 0.1.5 (2026-10-04)
 
 ### Behoben

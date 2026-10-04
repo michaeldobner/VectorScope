@@ -1,4 +1,5 @@
-import { ADSBLOL_BASE, parseRoutes, parseV2, type RouteInfo } from './adsblol';
+import { ADSBLOL_BASE, parseAdsbdbRoute, parseV2, type RouteInfo } from './adsblol';
+import { distanceM } from '../geo/geo';
 import { demoNotable, demoSnapshot } from './demo';
 import type { FeedResult } from './types';
 import { getSettings } from '../state/settings';
@@ -155,7 +156,16 @@ export async function fetchNearby(lat: number, lon: number, radiusKm: number): P
 /** Military traffic worldwide plus emergencies, for NOTABLE NOW. */
 export async function fetchNotable(lat: number, lon: number): Promise<FeedResult> {
   if (currentTransport() === 'demo') return demoNotable(lat, lon);
-  const [mil, sq7700] = await Promise.allSettled([request('/v2/mil'), request('/v2/sqk/7700')]);
+  // Sequential, to stay below adsb.lol's rate limit.
+  const settle = async (path: string): Promise<PromiseSettledResult<unknown>> => {
+    try {
+      return { status: 'fulfilled', value: await request(path) };
+    } catch (reason) {
+      return { status: 'rejected', reason };
+    }
+  };
+  const mil = await settle('/v2/mil');
+  const sq7700 = await settle('/v2/sqk/7700');
   const out: FeedResult = { aircraft: [], now: Date.now() };
   for (const r of [mil, sq7700]) {
     if (r.status === 'fulfilled') {
@@ -166,6 +176,15 @@ export async function fetchNotable(lat: number, lon: number): Promise<FeedResult
   }
   if (mil.status === 'rejected' && sq7700.status === 'rejected') throw mil.reason;
   return out;
+}
+
+/** Live position of one aircraft, used to follow an aircraft outside the nearby feed. */
+export async function fetchHex(hex: string): Promise<FeedResult> {
+  if (currentTransport() === 'demo') {
+    const d = demoNotable(50, 8);
+    return { ...d, aircraft: d.aircraft.filter((a) => a.hex === hex) };
+  }
+  return parseV2(await request(`/v2/hex/${hex.toLowerCase()}`));
 }
 
 export async function fetchSearch(query: string): Promise<FeedResult> {
@@ -185,28 +204,32 @@ export async function fetchSearch(query: string): Promise<FeedResult> {
 
 const routeCache = new Map<string, { at: number; route: RouteInfo | null }>();
 
+/**
+ * Departure and destination from adsbdb.com (CORS enabled, no key). adsb.lol's routeset
+ * currently answers with empty responses, so it is not used.
+ * A route is only accepted if the aircraft is plausibly on the way between both airports.
+ */
 export async function fetchRoute(callsign: string, lat: number, lon: number): Promise<RouteInfo | null> {
   const key = callsign.trim().toUpperCase();
   const hit = routeCache.get(key);
-  if (hit && Date.now() - hit.at < 30 * 60_000) return hit.route;
-  if (currentTransport() === 'demo') return null;
-  // routeset sends CORS headers itself, so try directly first.
-  const body = JSON.stringify({ planes: [{ callsign: key, lat, lng: lon }] });
-  let json: unknown;
-  try {
-    const res = await fetch(`${ADSBLOL_BASE}/api/0/routeset`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body,
-    });
-    if (!res.ok) throw new Error(String(res.status));
-    json = await res.json();
-  } catch {
-    json = await request('/api/0/routeset', { method: 'POST', body });
+  let route: RouteInfo | null;
+  if (hit && Date.now() - hit.at < 30 * 60_000) route = hit.route;
+  else {
+    if (currentTransport() === 'demo') return null;
+    try {
+      const res = await fetch(`https://api.adsbdb.com/v0/callsign/${encodeURIComponent(key)}`);
+      route = res.ok ? parseAdsbdbRoute(await res.json()) : null;
+    } catch {
+      route = null;
+    }
+    routeCache.set(key, { at: Date.now(), route });
   }
-  const route = parseRoutes(json).find((r) => r.callsign.toUpperCase() === key) ?? null;
-  routeCache.set(key, { at: Date.now(), route });
-  return route;
+  if (!route) return null;
+  const { origin: o, destination: d } = route;
+  if (o.lat == null || o.lon == null || d.lat == null || d.lon == null) return route;
+  const direct = distanceM({ lat: o.lat, lon: o.lon }, { lat: d.lat, lon: d.lon });
+  const via = distanceM({ lat: o.lat, lon: o.lon }, { lat, lon }) + distanceM({ lat, lon }, { lat: d.lat, lon: d.lon });
+  return via <= direct * 1.25 + 300_000 ? route : null;
 }
 
 export interface Photo {
@@ -217,11 +240,13 @@ export interface Photo {
 
 const photoCache = new Map<string, Photo | null>();
 
-/** Aircraft photo from planespotters.net (attribution required, link back to the photo page). */
+/** Aircraft photo from planespotters.net through the proxy (attribution and link required). */
 export async function fetchPhoto(hex: string): Promise<Photo | null> {
   if (photoCache.has(hex)) return photoCache.get(hex)!;
+  const base = proxyBase();
+  if (!base || currentTransport() === 'demo') return null;
   try {
-    const res = await fetch(`https://api.planespotters.net/pub/photos/hex/${hex}`);
+    const res = await fetch(`${base}/photos/hex/${hex.toLowerCase()}`);
     const json = await res.json();
     const p = json?.photos?.[0];
     const photo = p ? { src: p.thumbnail_large?.src ?? p.thumbnail?.src, link: p.link, photographer: p.photographer } : null;

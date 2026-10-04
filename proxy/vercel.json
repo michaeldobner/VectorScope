@@ -1,5 +1,8 @@
 {
-  "rewrites": [{ "source": "/:path*", "destination": "/api/proxy?path=:path*" }],
+  "rewrites": [
+    { "source": "/", "destination": "/api/proxy" },
+    { "source": "/:path*", "destination": "/api/proxy?path=:path*" }
+  ],
   "functions": { "api/proxy.js": { "maxDuration": 10 } },
   "regions": ["fra1"]
 }

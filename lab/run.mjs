@@ -25,6 +25,7 @@ async function grab(name, url, init = {}) {
 
 const point = await grab('adsblol-point', `https://api.adsb.lol/v2/point/${LAT}/${LON}/60`);
 await grab('proxy-root', 'https://vectorscope-proxy.vercel.app/');
+await grab('proxy-photo', 'https://vectorscope-proxy.vercel.app/photos/hex/3c6444');
 await grab('proxy-point', `https://vectorscope-proxy.vercel.app/v2/point/${LAT}/${LON}/60`, { headers: { Origin: 'https://michaeldobner.github.io' } });
 let callsigns = [];
 try { callsigns = JSON.parse(point).ac.filter((a) => a.flight && a.lat).slice(0, 6).map((a) => ({ callsign: a.flight.trim(), lat: a.lat, lng: a.lon })); } catch {}
@@ -40,33 +41,58 @@ if (callsigns.length) {
 }
 await grab('openfreemap-tilejson', 'https://tiles.openfreemap.org/planet');
 
-// Screenshots of the real app
+// Screenshots of the real app with live data
 const browser = await chromium.launch();
-const shots = [
-  ['iphone', 393, 852, 3, true],
-  ['ipad-landscape', 1180, 820, 2, true],
-];
-for (const [name, w, h, dpr, mobile] of shots) {
-  const ctx = await browser.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: dpr, isMobile: mobile, hasTouch: true });
+async function newPage(w, h, dpr) {
+  const ctx = await browser.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: dpr, isMobile: w < 900, hasTouch: true });
   const p = await ctx.newPage();
   const errs = [];
   p.on('pageerror', (e) => errs.push('pageerror ' + e));
-  p.on('console', (m) => m.type() === 'error' && errs.push('console ' + m.text()));
-  p.on('requestfailed', (r) => errs.push('failed ' + r.url().slice(0, 120) + ' ' + r.failure()?.errorText));
+  p.on('requestfailed', (r) => errs.push('failed ' + r.url().slice(0, 110) + ' ' + r.failure()?.errorText));
+  p.on('response', (r) => r.status() >= 400 && errs.push(`HTTP ${r.status()} ${r.url().slice(0, 110)}`));
   await p.goto(`http://localhost:4173/?shot&lat=${LAT}&lon=${LON}`);
-  await p.waitForTimeout(12000);
+  await p.waitForTimeout(10000);
+  return { ctx, p, errs };
+}
+async function shot(p, name) {
   await freeze(p);
-  await p.screenshot({ path: `${OUT}/${name}-map.png` });
-  // Open the most interesting nearby aircraft
-  const row = p.locator('.peek-top, .right-col .row, .rows .row').first();
-  if (await row.count()) {
-    await row.click().catch(() => {});
-    await p.waitForTimeout(5000);
-    await freeze(p);
-    await p.screenshot({ path: `${OUT}/${name}-inspector.png` });
-  }
-  log.push(`${name}: status=${await p.locator('.status').innerText().catch(() => '?')} errors=${errs.length}`);
-  errs.slice(0, 15).forEach((e) => log.push('  ' + e));
+  await p.screenshot({ path: `${OUT}/${name}.png` });
+}
+const pick = (p) =>
+  p.evaluate(() => {
+    const st = window.__vs.getTraffic();
+    const list = [...st.aircraft.values()].sort((a, b) => b.assessment.score - a.assessment.score || a.sky.distM - b.sky.distM);
+    const withCall = list.find((t) => t.ac.callsign && !t.assessment.military) ?? list[0];
+    if (withCall) window.__vs.select(withCall.ac.hex);
+    return withCall ? `${withCall.ac.callsign} ${withCall.ac.typeCode}` : 'none';
+  });
+
+{
+  const { ctx, p, errs } = await newPage(393, 852, 3);
+  await shot(p, 'iphone-1-map');
+  log.push('iphone selected: ' + (await pick(p)));
+  await p.waitForTimeout(6000);
+  await shot(p, 'iphone-2-inspector');
+  await p.evaluate(() => window.__vs.select(null));
+  await p.locator('.peek-line').click().catch(() => {});
+  await p.locator('.tabs button', { hasText: 'Notable' }).click().catch(() => {});
+  await p.waitForTimeout(1500);
+  await shot(p, 'iphone-3-notable');
+  await p.locator('.notable li').first().click().catch(() => {});
+  await p.waitForTimeout(5000);
+  await shot(p, 'iphone-4-notable-selected');
+  log.push(`iphone: status=${await p.locator('.status').innerText().catch(() => '?')} errors=${errs.length}`);
+  [...new Set(errs)].slice(0, 20).forEach((e) => log.push('  ' + e));
+  await ctx.close();
+}
+{
+  const { ctx, p, errs } = await newPage(1180, 820, 2);
+  await shot(p, 'ipad-1-map');
+  log.push('ipad selected: ' + (await pick(p)));
+  await p.waitForTimeout(6000);
+  await shot(p, 'ipad-2-inspector');
+  log.push(`ipad: errors=${errs.length}`);
+  [...new Set(errs)].slice(0, 10).forEach((e) => log.push('  ' + e));
   await ctx.close();
 }
 await browser.close();

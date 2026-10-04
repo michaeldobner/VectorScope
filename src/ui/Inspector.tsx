@@ -70,7 +70,7 @@ export function Inspector({ t, onClose }: { t: Tracked; onClose?: () => void }) 
             ✕
           </button>
         </div>
-        <div className="insp-sub">{ac.operator ?? a.unit ?? 'Unknown operator'}</div>
+        <div className="insp-sub">{ac.operator ?? route?.airline ?? a.unit ?? 'Unknown operator'}</div>
         <div className="insp-type">{typeDisplayName(ac) ?? 'Unknown type'}</div>
       </header>
 
@@ -87,11 +87,29 @@ export function Inspector({ t, onClose }: { t: Tracked; onClose?: () => void }) 
         </a>
       )}
 
-      <section className="grid4">
-        <Field k="ICAO" v={ac.hex} mono />
-        <Field k="Reg" v={ac.registration ?? '·'} mono />
-        <Field k="Callsign" v={ac.callsign ?? '·'} mono />
-        <Field k="Type" v={ac.typeCode ?? '·'} mono />
+      <section className="route-card">
+        {a.military ? (
+          <div className="muted small">Route not published · military flights do not file public routes</div>
+        ) : route === undefined ? (
+          <div className="muted small">Looking up route …</div>
+        ) : route ? (
+          <>
+            {route.airline && <div className="route-airline">{route.airline}</div>}
+            <div className="route-row">
+              <Airport ap={route.origin} />
+              <div className="route-line">
+                <i />
+                <svg viewBox="0 0 64 64" width="16" height="16" fill="currentColor">
+                  <path d="M32 3 34.6 8 35.2 22 60 36.5 60 41 35.2 34 34.6 49.5 44 56.5 44 60 32 57.2 20 60 20 56.5 29.4 49.5 28.8 34 4 41 4 36.5 28.8 22 29.4 8Z" transform="rotate(90 32 32)" />
+                </svg>
+                <i />
+              </div>
+              <Airport ap={route.destination} right />
+            </div>
+          </>
+        ) : (
+          <div className="muted small">No route data for {ac.callsign ?? 'this flight'}</div>
+        )}
       </section>
 
       <section className="grid4 tele">
@@ -99,22 +117,6 @@ export function Inspector({ t, onClose }: { t: Tracked; onClose?: () => void }) 
         <Field k="Ground speed" v={f.speed(ac.gsKt, s.units)} big />
         <Field k="Track" v={f.heading(ac.track)} big />
         <Field k="Vert. speed" v={f.vrate(ac.vRateFpm, s.units)} big />
-      </section>
-
-      <section className="route">
-        {a.military ? (
-          <div className="muted small">ROUTE NOT PUBLISHED · military flights do not file public routes</div>
-        ) : route === undefined ? (
-          <div className="muted small">Looking up route …</div>
-        ) : route && route.plausible && route.airports.length >= 2 ? (
-          <div className="route-row">
-            <Airport label="From" ap={route.airports[0]} />
-            <span className="arrow">→</span>
-            <Airport label="To" ap={route.airports[route.airports.length - 1]} right />
-          </div>
-        ) : (
-          <div className="muted small">Route unknown</div>
-        )}
       </section>
 
       <section className="block">
@@ -142,6 +144,13 @@ export function Inspector({ t, onClose }: { t: Tracked; onClose?: () => void }) 
             {sky.cpa && sky.cpa.rangeRate > 0 ? 'Moving away from you' : 'No close approach expected'}
           </div>
         )}
+      </section>
+
+      <section className="grid4 ids">
+        <Field k="ICAO" v={ac.hex} mono />
+        <Field k="Reg" v={ac.registration ?? '·'} mono />
+        <Field k="Callsign" v={ac.callsign ?? '·'} mono />
+        <Field k="Type" v={ac.typeCode ?? '·'} mono />
       </section>
 
       <section className="score-card">
@@ -214,13 +223,12 @@ function Row({ k, v }: { k: string; v: string }) {
   );
 }
 
-function Airport({ label, ap, right }: { label: string; ap: RouteInfo['airports'][number]; right?: boolean }) {
+function Airport({ ap, right }: { ap: RouteInfo['origin']; right?: boolean }) {
   return (
     <div className={`airport ${right ? 'right' : ''}`}>
-      <div className="k">{label}</div>
-      <div className="v">
-        {ap.location ?? ap.name ?? ap.icao} <span className="mono muted">{ap.iata ?? ap.icao}</span>
-      </div>
+      <div className="code mono">{ap.iata ?? ap.icao ?? '···'}</div>
+      <div className="city">{ap.city ?? ap.name ?? ''}</div>
+      <div className="muted tiny">{ap.country ?? ''}</div>
     </div>
   );
 }

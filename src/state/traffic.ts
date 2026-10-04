@@ -1,7 +1,7 @@
 import { useSyncExternalStore } from 'react';
 import { distanceM, project, type LatLon } from '../geo/geo';
 import { skyGeometry, type SkyGeometry } from '../geo/overhead';
-import { FeedError, currentTransport, fetchNearby, fetchNotable, type Transport } from '../data/feed';
+import { FeedError, currentTransport, fetchHex, fetchNearby, fetchNotable, type Transport } from '../data/feed';
 import { assess, type Assessment } from '../data/score';
 import type { Aircraft } from '../data/types';
 import { FT_TO_M, FPM_TO_MPS, KT_TO_MPS } from '../lib/format';
@@ -249,6 +249,7 @@ async function poll() {
       transport: currentTransport(),
       alerts: [...newAlerts, ...state.alerts].slice(0, 5),
     });
+    await refreshExternal(observer);
   } catch (e) {
     const fe = e instanceof FeedError ? e : new FeedError(String(e), 'network');
     if (fe.kind === 'rate') backoff = Math.min(backoff * 2, 12);
@@ -256,6 +257,24 @@ async function poll() {
   } finally {
     inFlight = false;
     timer = window.setTimeout(poll, s.pollSec * 1000 * backoff);
+  }
+}
+
+/** Keep a selected aircraft outside the nearby feed live (search result, Notable now). */
+async function refreshExternal(observer: LatLon) {
+  const ext = state.external;
+  if (!ext || state.selected !== ext.ac.hex || state.aircraft.has(ext.ac.hex)) return;
+  try {
+    const res = await fetchHex(ext.ac.hex);
+    const ac = res.aircraft[0];
+    if (!ac) return;
+    const history = [...ext.history];
+    const last = history[history.length - 1];
+    if (!last || distanceM(last, ac) > 60) history.push({ lat: ac.lat, lon: ac.lon, t: ac.posTime });
+    const watch = watchMatch(ac, getSettings().watchlist) != null;
+    emit({ external: { ...ext, ac, history, watch, assessment: assess(ac, watch), sky: skyFor(ac, observer), computedAt: Date.now() } });
+  } catch {
+    /* keep last known position */
   }
 }
 
@@ -270,7 +289,7 @@ async function pollNotable() {
       /* keep the previous list */
     }
   }
-  notableTimer = window.setTimeout(pollNotable, 60_000);
+  notableTimer = window.setTimeout(pollNotable, 120_000);
 }
 
 export function refreshNow() {
