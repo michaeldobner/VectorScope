@@ -9,7 +9,7 @@ export type Transport = 'direct' | 'proxy' | 'relay' | 'demo';
  * Own proxy address built into the app. When set, nobody has to enter anything in Settings.
  * A proxy entered in Settings still takes precedence.
  */
-export const BUILTIN_PROXY = '';
+export const BUILTIN_PROXY = 'https://vectorscope-proxy.vercel.app';
 
 /**
  * Free public relays that need no account. adsb.lol does not allow direct browser access,

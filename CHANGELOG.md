@@ -4,6 +4,12 @@ All notable changes to VectorScope. [Deutsch](CHANGELOG.de.md)
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.1.4 (2026-10-04)
+
+### Improved
+* **Own proxy built in:** `https://vectorscope-proxy.vercel.app` is the default data route. Nothing has to be entered in Settings.
+* The proxy answers its start address with a short status message, so it can be checked in a browser.
+
 ## 0.1.3 (2026-10-04)
 
 ### Improved

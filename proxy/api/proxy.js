@@ -25,11 +25,14 @@ export default async function handler(req, res) {
   res.setHeader('Vary', 'Origin');
   if (req.method === 'OPTIONS') return res.status(204).end();
 
+  const path = '/' + String(req.query.path || '').replace(/^\/+/, '');
+  // Status page: opening the proxy address in a browser shows that it is running.
+  if (path === '/') {
+    return res.status(200).json({ ok: true, service: 'VectorScope proxy', upstream: UPSTREAM, test: '/v2/mil' });
+  }
   if (process.env.PROXY_TOKEN && req.headers['x-vs-token'] !== process.env.PROXY_TOKEN) {
     return res.status(401).json({ error: 'unauthorized' });
   }
-
-  const path = '/' + String(req.query.path || '').replace(/^\/+/, '');
   if (!ALLOWED.some((re) => re.test(path))) return res.status(404).json({ error: 'not allowed' });
   if (path === '/api/0/routeset' ? req.method !== 'POST' : req.method !== 'GET') {
     return res.status(405).json({ error: 'method' });
