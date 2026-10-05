@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## Unreleased
+
+### Added
+* Test lab checks OSINT source candidates (Bluesky, RSS, Mastodon, GDELT) for existence, activity and browser access (`lab/osint.mjs`).
+
 ## 0.3.0 (2026-10-05)
 
 ### Added

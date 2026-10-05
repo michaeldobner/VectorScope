@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## Unveröffentlicht
+
+### Neu
+* Das Test-Labor prüft OSINT-Quellkandidaten (Bluesky, RSS, Mastodon, GDELT) auf Existenz, Aktivität und Browserzugriff (`lab/osint.mjs`).
+
 ## 0.3.0 (2026-10-05)
 
 ### Neu
