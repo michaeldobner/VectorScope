@@ -31,7 +31,7 @@ Prozentwerte gibt es bewusst nicht. Eine Zahl wie „72 %“ würde eine Genauig
 1. Für jede Meldung sammelt INTEL ihre Merkmale: Orte, Callsigns, Flugzeugtypen und die Wörter aus Überschrift und Auszug. Häufige Wörter auf Englisch und Deutsch werden ignoriert, deutsche Ereigniswörter auf Englisch abgebildet (Pest zu plague, Drohne zu drone, Explosion zu explosion).
 2. Jedes Merkmal wird danach gewichtet, wie selten es unter allen aktuellen Meldungen ist. Ein Callsign wiegt am meisten, dann Orte, dann Typen und Wörter. Merkmale, die in mehr als 8 % aller Meldungen vorkommen, zählen nichts.
 3. Zwei Meldungen **verschiedener** Quellen innerhalb von 36 Stunden gehören zusammen, wenn ihre gemeinsamen Merkmale genug wiegen und mindestens ein gewöhnliches Wort darunter ist. Ein Ort allein reicht nicht, in der Ukraine passieren viele Stories.
-4. Gruppen werden verkettet: Passt A zu B und B zu C, sind alle drei eine Story.
+4. Eine Meldung kommt nur dann in eine Story, wenn sie zur **ersten** Meldung dieser Story passt, in einer größeren Story zusätzlich zu mindestens einer weiteren. Lose Ketten (A ähnlich B, B ähnlich C, C ähnlich D) wachsen dadurch nie zu einer Riesen-Story.
 
 Meldungen derselben Quelle verbinden sich nie direkt. Ein Kanal, der sich wiederholt, ist keine Bestätigung.
 

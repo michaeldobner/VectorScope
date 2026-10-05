@@ -1,5 +1,5 @@
 // Stories: items from different sources that report the same event, grouped by shared places,
-// callsigns, types and rare words within 36 hours. Each story gets a status from the tiers of its sources.
+// callsigns, types and rare words within 36 hours of the first report. Each story gets a status from the tiers of its sources.
 import { sourceById, type Tier } from './sources';
 import type { EnrichedItem } from './types';
 
@@ -58,8 +58,9 @@ export function keywords(item: EnrichedItem): Set<string> {
 
 const weight = (token: string, df: Map<string, number>, n: number) => {
   // Places and entities count more than words, rare tokens more than common ones.
+  // At least 200 documents are assumed, so a small set does not make every word look common.
   const base = token[0] === '@' ? 1.4 : token[0] === '#' ? 3 : token[0] === '%' ? 1.2 : 1;
-  return base * Math.log(1 + n / (df.get(token) ?? 1));
+  return base * Math.log(1 + Math.max(n, 200) / (df.get(token) ?? 1));
 };
 
 export function buildStories(items: EnrichedItem[]): Story[] {
@@ -68,37 +69,39 @@ export function buildStories(items: EnrichedItem[]): Story[] {
   const df = new Map<string, number>();
   for (const k of keys) for (const t of k) df.set(t, (df.get(t) ?? 0) + 1);
 
-  // Union find over pairs that share enough rare tokens. Items of the same source never link directly,
-  // a source repeating itself is not confirmation.
-  const parent = items.map((_, i) => i);
-  const find = (i: number): number => (parent[i] === i ? i : (parent[i] = find(parent[i])));
-  const order = items.map((_, i) => i).sort((a, b) => items[a].time - items[b].time);
-  for (let x = 0; x < order.length; x++) {
-    const a = order[x];
-    for (let y = x + 1; y < order.length; y++) {
-      const b = order[y];
-      if (items[b].time - items[a].time > WINDOW_MS) break;
-      if (items[a].sourceId === items[b].sourceId) continue;
-      let score = 0;
-      let words = 0;
-      for (const t of keys[a]) {
-        if (!keys[b].has(t)) continue;
-        const df1 = df.get(t) ?? 1;
-        // Tokens that appear everywhere say nothing.
-        if (df1 > Math.max(6, n * 0.08)) continue;
-        score += weight(t, df, n) / 2.5;
-        if (!/^[@#%]/.test(t)) words++;
-      }
-      if (score >= LINK_SCORE && words >= 1) parent[find(a)] = find(b);
+  const score = (a: number, b: number) => {
+    let sum = 0;
+    let words = 0;
+    for (const t of keys[a]) {
+      if (!keys[b].has(t)) continue;
+      // Tokens that appear everywhere say nothing.
+      if ((df.get(t) ?? 1) > Math.max(6, n * 0.08)) continue;
+      sum += weight(t, df, n) / 2.5;
+      if (!/^[@#%]/.test(t)) words++;
     }
-  }
+    return words >= 1 ? sum : 0;
+  };
 
-  const groups = new Map<number, EnrichedItem[]>();
-  items.forEach((it, i) => {
-    const r = find(i);
-    groups.set(r, [...(groups.get(r) ?? []), it]);
-  });
-  return [...groups.values()].map(toStory);
+  // Chronological, seed based grouping: a report joins a story only if it matches the first report
+  // of that story (and, for larger stories, at least one more). Chaining A to B to C to everything is impossible.
+  // Reports of the same source never confirm each other.
+  const order = items.map((_, i) => i).sort((a, b) => items[a].time - items[b].time);
+  const groups: number[][] = [];
+  for (const i of order) {
+    let best: { g: number[]; s: number } | null = null;
+    for (const g of groups) {
+      const seed = g[0];
+      if (items[i].time - items[seed].time > WINDOW_MS) continue;
+      if (g.some((m) => items[m].sourceId === items[i].sourceId) && g.every((m) => items[m].sourceId === items[i].sourceId)) continue;
+      const s = score(i, seed);
+      if (s < LINK_SCORE) continue;
+      if (g.length > 1 && !g.slice(1).some((m) => score(i, m) >= LINK_SCORE * 0.6)) continue;
+      if (!best || s > best.s) best = { g, s };
+    }
+    if (best) best.g.push(i);
+    else groups.push([i]);
+  }
+  return groups.map((g) => toStory(g.map((i) => items[i])));
 }
 
 const RANK: Record<Tier, number> = { confirm: 3, press: 2, osint: 1, breaking: 0 };

@@ -137,3 +137,17 @@ export function extractEntities(text: string): Entities {
     places: findPlaces(text).map(({ place: { name, lat, lon, radiusKm } }) => ({ name, lat, lon, radiusKm })),
   };
 }
+
+/**
+ * Leading news media report everything, from book prizes to football. For INTEL their reports only count
+ * when they name a callsign or an aircraft type, or use a word of this security and crisis vocabulary.
+ */
+const CRISIS =
+  /(?<![\p{L}])(military|army|armed forces|troops|soldiers?|navy|naval|air ?force|fighter jets?|warplanes?|warships?|drones?|missiles?|rockets?|air ?strikes?|strikes? on|attacks?|attacked|explosions?|blasts?|shelling|war|invasion|ceasefire|terror\p{L}*|hostages?|evacuat\p{L}*|earthquake|tsunami|outbreak|plague|epidemic|pandemic|nuclear|airspace|shot down|intercept\p{L}*|coup|sabotage|cyber ?attack|nato|pentagon|bundeswehr|luftwaffe|marine|milit\p{L}*|armee|soldat\p{L}*|truppen|kampfjets?|drohnen?|raketen?|luftangriff\p{L}*|angriff\p{L}*|explosion\p{L}*|krieg\p{L}*|waffenruhe|anschlag\p{L}*|geisel\p{L}*|evakuier\p{L}*|erdbeben|ausbruch|pest|seuche|atom\p{L}*|luftraum|abgeschossen|abfangen|putsch|sabotage)(?![\p{L}])/iu;
+
+// German builds compounds (Drohnenangriff, Raketenbeschuss), so these stems count anywhere in a word.
+const CRISIS_DE = /(drohne|rakete|angriff|beschuss|explosion|krieg|anschlag|evakuier|soldat|truppe|kampfjet|militär|bundeswehr|luftwaffe|geisel|erdbeben|seuche|luftraum|abgeschossen|putsch|terror)/i;
+
+export function isCrisisRelated(text: string, entities: Entities): boolean {
+  return entities.callsigns.length > 0 || entities.types.length > 0 || CRISIS.test(text) || CRISIS_DE.test(text);
+}

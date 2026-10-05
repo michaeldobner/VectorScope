@@ -2,11 +2,11 @@
 import { useSyncExternalStore } from 'react';
 import type { Aircraft } from '../../../air/src/data/types';
 import { demoItems, demoLive } from '../data/demo';
-import { extractEntities, type Entities } from '../data/entities';
+import { extractEntities, isCrisisRelated, type Entities } from '../data/entities';
 import { loadCollected, loadLive, loadSource, mergeItems, pool, type SourceStatus } from '../data/feed';
 import { matchLive } from '../data/match';
 import { buildStories, type Story } from '../data/stories';
-import { SOURCES, type Category } from '../data/sources';
+import { SOURCES, sourceById, type Category } from '../data/sources';
 import type { EnrichedItem, Item } from '../data/types';
 
 const PREFS_KEY = 'vectorscope.intel.v1';
@@ -84,19 +84,26 @@ const emit = (patch: Partial<IntelState>) => {
 };
 
 export const getState = () => state;
+/** Unfiltered reports as loaded, for the test lab. */
+export const getRaw = () => rawItems;
 export const useIntel = () => useSyncExternalStore((l) => (listeners.add(l), () => listeners.delete(l)), getState);
 
 // Entities are computed once per item, matches whenever items or live aircraft change.
 const entityCache = new Map<string, Entities>();
 function enrich(items: Item[], live: Aircraft[], now: number): EnrichedItem[] {
-  return items.map((item) => {
+  const out: EnrichedItem[] = [];
+  for (const item of items) {
+    const text = `${item.title}\n${item.text}`;
     let entities = entityCache.get(item.id);
     if (!entities) {
-      entities = extractEntities(`${item.title}\n${item.text}`);
+      entities = extractEntities(text);
       entityCache.set(item.id, entities);
     }
-    return { ...item, entities, matches: matchLive(entities, live, item.time, now) };
-  });
+    // General news media count only with security and crisis topics, see isCrisisRelated.
+    if (sourceById(item.sourceId)?.category === 'news' && !isCrisisRelated(text, entities)) continue;
+    out.push({ ...item, entities, matches: matchLive(entities, live, item.time, now) });
+  }
+  return out;
 }
 
 let rawItems: Item[] = [];

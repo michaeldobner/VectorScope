@@ -8,11 +8,11 @@ import '@fontsource/ibm-plex-mono/500.css';
 import '../../shared/tokens.css';
 import './styles.css';
 import { App } from './App';
-import { getState, startIntel } from './state/store';
+import { getRaw, getState, startIntel } from './state/store';
 
 startIntel();
 // Test hook for the lab and the smoke test.
-(window as unknown as { __intel: unknown }).__intel = { getState };
+(window as unknown as { __intel: unknown }).__intel = { getState, getRaw };
 document.getElementById('boot')?.remove();
 
 createRoot(document.getElementById('root')!).render(

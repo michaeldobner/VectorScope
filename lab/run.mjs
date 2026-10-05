@@ -123,12 +123,17 @@ for (const [name, w, h, dpr] of [['iphone', 393, 852, 3], ['ipad', 1180, 820, 2]
     const st = window.__intel.getState();
     const sources = Object.entries(st.sources).map(([id, s]) => `${id}:${s.ok ? 'ok' : 'ERR ' + s.error}:${s.count}`);
     const strong = st.items.flatMap((i) => i.matches.filter((m) => m.kind !== 'type').map((m) => `${m.ac.callsign}/${m.ac.typeCode} ${m.kind} "${i.title.slice(0, 60)}"`));
-    return { items: st.items.length, live: st.live.length, sources, strong, firstHex: st.items.flatMap((i) => i.matches)[0]?.ac.hex ?? null };
+    const multi = st.stories.filter((s) => s.sources.length > 1).map((s) => `${s.status} ${s.sources.length}src ${s.items.length}rep "${s.lead.title.slice(0, 70)}"`);
+    return { items: st.items.length, live: st.live.length, sources, strong, multi, firstHex: st.items.flatMap((i) => i.matches)[0]?.ac.hex ?? null };
   });
   log.push(`intel ${name}: items=${info.items} live=${info.live} strong=${info.strong.length} errors=${errs.length}`);
   if (name === 'iphone') {
+    // Raw reports for offline tests of grouping and relevance.
+    const raw = await p.evaluate(() => window.__intel.getRaw());
+    fs.writeFileSync(`${OUT}/intel-items.json`, JSON.stringify(raw));
     info.sources.forEach((x) => log.push('  source ' + x));
     info.strong.slice(0, 10).forEach((x) => log.push('  match ' + x));
+    info.multi.slice(0, 40).forEach((x) => log.push('  story ' + x));
   }
   [...new Set(errs)].slice(0, 10).forEach((e) => log.push('  ' + e));
   if (name === 'ipad' && info.firstHex) {

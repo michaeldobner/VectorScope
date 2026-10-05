@@ -31,6 +31,8 @@ Auf Telegram sitzen die schnellen Eilmelder, die auch auf X vorn sind. Ein öffe
 
 ## Bestätigend: Leitmedien und Behörden
 
+Leitmedien berichten über alles. Ihre Meldungen zählen nur, wenn sie ein Callsign oder einen Flugzeugtyp nennen oder ein Wort aus einem Sicherheits- und Krisenwortschatz auf Englisch oder Deutsch verwenden (attack, drone, evacuation, plague, Drohnenangriff, Bundeswehr und weitere). Buchpreise und Fußball bleiben draußen.
+
 | Quelle | Feed | Neuester Beitrag bei der Prüfung |
 |---|---|---|
 | Tagesschau | ✓ | 1 h |

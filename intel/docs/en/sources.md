@@ -31,6 +31,8 @@ Telegram is the home of the fast newsrooms that are first on X as well. A public
 
 ## Confirming: leading news media and authorities
 
+Leading news media report everything. Their reports only count when they name a callsign or aircraft type or use a word of a security and crisis vocabulary in English or German (attack, drone, evacuation, plague, Drohnenangriff, Bundeswehr and others). Book prizes and football stay out.
+
 | Source | Feed | Newest post at check |
 |---|---|---|
 | Tagesschau | ✓ | 1 h |

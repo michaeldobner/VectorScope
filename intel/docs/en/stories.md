@@ -31,7 +31,7 @@ There are no percentages on purpose. A figure like "72 %" would suggest a precis
 1. For every report INTEL collects its tokens: places, callsigns, aircraft types and the words of headline and excerpt. Common words in English and German are ignored, German event words are mapped to English (Pest to plague, Drohne to drone, Explosion to explosion).
 2. Each token is weighted by how rare it is among all current reports. A callsign weighs most, then places, then types and words. Tokens that appear in more than 8 % of all reports count nothing.
 3. Two reports of **different** sources within 36 hours belong together when their shared tokens weigh enough and at least one ordinary word is among them. A place alone is not enough, many stories happen in Ukraine.
-4. Groups are joined transitively: if A matches B and B matches C, all three are one story.
+4. A report joins a story only if it matches the **first** report of that story, and in a larger story at least one more. Loose chains (A like B, B like C, C like D) therefore never grow into one giant story.
 
 Reports of the same source never link directly. A channel that repeats itself is not confirmation.
 

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { parseTelegram } from './telegram';
 import { buildStories, rankStories } from './stories';
-import { extractEntities } from './entities';
+import { extractEntities, isCrisisRelated } from './entities';
 import { demoItems } from './demo';
 import type { EnrichedItem, Item } from './types';
 
@@ -76,8 +76,36 @@ describe('stories', () => {
     expect(latest).toHaveLength(3);
   });
 
+  it('does not chain loosely related reports into one story', () => {
+    const r = (id: string, sourceId: string, h: number, title: string): Item => ({ id, sourceId, channel: 'rss', title, text: '', url: `https://x.org/${id}`, time: now - h * 3600_000 });
+    const list = enrich([
+      r('a', 'demo-fast-a', 5, 'Explosion at the port of Odesa after drone strike'),
+      r('b', 'demo-fast-b', 4, 'Drone strike causes explosion in Odesa port, fire on ships'),
+      r('c', 'demo-press', 3, 'Fire on ships in Rotterdam harbour, no drone involved'),
+      r('d', 'demo-confirm', 2, 'Rotterdam harbour fire under control'),
+      r('e', 'demo-osint', 1, 'Unrelated analysis of artillery production in Europe'),
+    ]);
+    const groups = buildStories(list).map((s) => s.items.map((i) => i.id).join(''));
+    expect(groups.sort()).toEqual(['ab', 'cd', 'e']);
+  });
+
   it('does not link two reports of the same source', () => {
     const one = (id: string, t: number): Item => ({ id, sourceId: 'demo-fast-a', channel: 'telegram', title: 'Explosion in Odesa port', text: '', url: `https://x.org/${id}`, time: t });
     expect(buildStories(enrich([one('a', now), one('b', now - 60_000)]))).toHaveLength(2);
+  });
+});
+
+describe('relevance of general news', () => {
+  const rel = (t: string) => isCrisisRelated(t, extractEntities(t));
+  it('keeps security and crisis topics in English and German', () => {
+    expect(rel('Passengers from Irkutsk checked for plague')).toBe(true);
+    expect(rel('Drohnenangriff auf Kiew')).toBe(true);
+    expect(rel('Bundeswehr verlegt Soldaten nach Litauen')).toBe(true);
+    expect(rel('NATO jets intercept bomber')).toBe(true);
+  });
+  it('drops culture, sport and podcasts', () => {
+    expect(rel('Frankfurter Buchmesse: Shida Bazyar erhält Deutschen Buchpreis 2026')).toBe(false);
+    expect(rel('11KM-Podcast: Machtpoker und Regierungspläne in Sachsen-Anhalt')).toBe(false);
+    expect(rel('Bayern gewinnt gegen Dortmund')).toBe(false);
   });
 });

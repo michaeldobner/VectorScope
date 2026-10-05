@@ -4,6 +4,12 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## Unveröffentlicht
+
+### Behoben
+* Stories verketten lose verwandte Meldungen nicht mehr zu einer Riesen-Story: Jede Meldung muss zur ersten Meldung ihrer Story passen.
+* Leitmedien zählen nur noch bei Sicherheits- und Krisenthemen, Kultur, Sport und Podcasts bleiben draußen.
+
 ## 0.2.0 (2026-10-05)
 
 ### Neu
