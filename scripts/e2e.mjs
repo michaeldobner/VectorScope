@@ -25,12 +25,18 @@ for (const [name, device] of DEVICES) {
   // Chromium cannot emulate the WebKit user agent features, only size, scale and touch matter here.
   const { defaultBrowserType: _ignored, ...options } = device;
   const context = await browser.newContext({ ...options, locale: 'de-DE' });
+  // Only the build itself is tested here. Third-party hosts (map tiles, fonts, data) are blocked,
+  // so the result never depends on the internet. Real data is the job of the test lab.
+  const origin = new URL(BASE).origin;
+  await context.route((url) => url.origin !== origin, (route) => route.abort());
   const page = await context.newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push(`pageerror: ${e.message}`));
   page.on('console', (m) => {
-    // WebGL may be missing in headless browsers. MapLibre reports that, the radar still works.
-    if (m.type() === 'error' && !/webgl|maplibre|Failed to load resource/i.test(m.text())) errors.push(`console: ${m.text()}`);
+    const text = m.text();
+    // Blocked third-party requests are reported differently by each engine. WebGL may be missing headless.
+    const external = (text.match(/https?:\/\/[^\s)]+/g) ?? []).some((u) => !u.startsWith(origin));
+    if (m.type() === 'error' && !external && !/webgl|maplibre|Failed to load resource/i.test(text)) errors.push(`console: ${text}`);
   });
   const before = failures.length;
   const check = (ok, what) => {
