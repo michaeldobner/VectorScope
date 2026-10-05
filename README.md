@@ -24,8 +24,8 @@ A collection of calm, precise modules under one roof. Each answers one question 
 
 | Module | Question | Status | Version |
 |---|---|---|---|
-| [**AIR**](air/README.md) · Airspace | What is flying above me right now, what passes over next, what is worth a look? | Live · [open](https://michaeldobner.github.io/VectorScope/air/) | 0.3.0 |
-| **INTEL** · Intelligence feed | What do verified OSINT sources and news report, and which live aircraft does it concern? | Planned, sources are being verified | |
+| [**AIR**](air/README.md) · Airspace | What is flying above me right now, what passes over next, what is worth a look? | Live · [open](https://michaeldobner.github.io/VectorScope/air/) | 0.3.1 |
+| [**INTEL**](intel/README.md) · Intelligence feed | What do verified OSINT sources and defence media report, and which aircraft in the air does it concern? | Live · [open](https://michaeldobner.github.io/VectorScope/intel/) | 0.1.0 |
 
 ## Why VectorScope
 
@@ -37,7 +37,7 @@ Flight trackers and news apps show you everything, in colour, with ads. VectorSc
 2. Tap **Share**, then **Add to Home Screen**.
 3. Open VectorScope from the Home Screen and pick a module.
 
-To open a module directly, add its own address to the Home Screen, for example **https://michaeldobner.github.io/VectorScope/air/**. Safari and the installed app keep separate storage, so set your location inside the installed app.
+To open a module directly, add its own address to the Home Screen: **https://michaeldobner.github.io/VectorScope/air/** or **https://michaeldobner.github.io/VectorScope/intel/**. Safari and the installed app keep separate storage, so set your location inside the installed app.
 
 ## Repository structure
 
@@ -47,6 +47,7 @@ VectorScope/
 ├─ modules.json            module registry, the single source of truth for versions
 ├─ shared/                 shared shell: tokens, hub styles, icons, fonts
 ├─ air/                    module AIR: live aviation radar
+├─ intel/                  module INTEL: verified OSINT feed with live match
 ├─ proxy/                  CORS proxy on Vercel, shared by all modules
 ├─ lab/                    test lab with real internet
 ├─ scripts/                build, local server, smoke test, release
@@ -66,6 +67,7 @@ Details: [Architecture](docs/en/architecture.md).
 | [Deployment](docs/en/deployment.md) | GitHub Pages, CORS proxy on Vercel, troubleshooting |
 | [Roadmap](docs/en/roadmap.md) | Next steps, ideas that need a server, deferred ideas |
 | [Module AIR](air/docs/en/README.md) | User guide, calculations, data sources, design, architecture |
+| [Module INTEL](intel/docs/en/README.md) | User guide, sources, matching, architecture |
 | [Shared shell](shared/README.md) | Tokens and hub |
 
 ## Quick start for developers
@@ -73,6 +75,7 @@ Details: [Architecture](docs/en/architecture.md).
 ```bash
 npm install
 npm run dev        # module AIR at http://localhost:5173/
+npm run dev:intel  # module INTEL at http://localhost:5173/
 npm test           # unit tests of all modules and repository checks
 npm run build      # hub and all modules into dist/
 npm run preview    # dist/ like GitHub Pages at http://localhost:4173/
@@ -82,10 +85,10 @@ Every push to `main` is tested and deployed to GitHub Pages.
 
 ## Data and credits
 
-Traffic data © [adsb.lol](https://adsb.lol) contributors, licensed under ODbL 1.0. Routes and aircraft data from [adsbdb](https://www.adsbdb.com) and [hexdb.io](https://hexdb.io). Map © [OpenFreeMap](https://openfreemap.org), © OpenMapTiles, © OpenStreetMap contributors. Aircraft photos © the photographers at [planespotters.net](https://www.planespotters.net). VectorScope is a personal, non-commercial project and is not affiliated with any of these services.
+Traffic data © [adsb.lol](https://adsb.lol) contributors, licensed under ODbL 1.0. Routes and aircraft data from [adsbdb](https://www.adsbdb.com) and [hexdb.io](https://hexdb.io). Map © [OpenFreeMap](https://openfreemap.org), © OpenMapTiles, © OpenStreetMap contributors. Aircraft photos © the photographers at [planespotters.net](https://www.planespotters.net). Headlines and excerpts in INTEL © their publishers, linked to the original. VectorScope is a personal, non-commercial project and is not affiliated with any of these services.
 
 ## Version
 
-Current version: **0.3.0**. See the [changelog](CHANGELOG.md).
+Current version: **0.4.0**. See the [changelog](CHANGELOG.md).
 
 Created by Michael Dobner. Licensed under the [MIT licence](LICENSE).

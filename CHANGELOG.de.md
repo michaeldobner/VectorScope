@@ -1,13 +1,16 @@
 # Changelog · VectorScope
 
-Änderungen an der Sammlung als Ganzes: Aufbau, Startseite, Build, Prüfungen, Workflows. Änderungen an einem Modul stehen in dessen eigenem Changelog: [AIR](air/CHANGELOG.de.md), [gemeinsame Hülle](shared/CHANGELOG.de.md). [English](CHANGELOG.md)
+Änderungen an der Sammlung als Ganzes: Aufbau, Startseite, Build, Prüfungen, Workflows. Änderungen an einem Modul stehen in dessen eigenem Changelog: [AIR](air/CHANGELOG.de.md), [INTEL](intel/CHANGELOG.de.md), [gemeinsame Hülle](shared/CHANGELOG.de.md). [English](CHANGELOG.md)
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
-## Unveröffentlicht
+## 0.4.0 (2026-10-05)
 
 ### Neu
-* Das Test-Labor prüft OSINT-Quellkandidaten (Bluesky, RSS, Mastodon, GDELT) auf Existenz, Aktivität und Browserzugriff (`lab/osint.mjs`).
+* **Modul INTEL 0.1.0:** geprüfter OSINT-Feed mit Live-Abgleich, verlinkt von der Startseite. Siehe [Changelog von INTEL](intel/CHANGELOG.de.md).
+* Proxy-Route `/feed/{id}` für die RSS-Feeds von INTEL, feste Liste, fünf Minuten zwischengespeichert.
+* Das Test-Labor prüft OSINT-Quellkandidaten (Bluesky, RSS, Mastodon, GDELT) auf Existenz, Aktivität und Browserzugriff (`lab/osint.mjs`) und öffnet INTEL mit Live-Daten.
+* Der Rauchtest deckt INTEL ab.
 
 ## 0.3.0 (2026-10-05)
 

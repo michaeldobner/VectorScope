@@ -21,6 +21,7 @@ npm run dev        # module AIR at http://localhost:5173/
 | Command | Purpose |
 |---|---|
 | `npm run dev` | Development server for AIR with hot reload |
+| `npm run dev:intel` | Development server for INTEL with hot reload |
 | `npm run typecheck` | TypeScript check of all modules |
 | `npm test` | Unit tests of all modules and repository checks |
 | `npm run build` | Type check, all modules, hub and shared files into `dist/` |
@@ -32,7 +33,7 @@ npm run dev        # module AIR at http://localhost:5173/
 
 ### Unit tests
 
-Every module keeps its tests next to the code (`air/src/**/*.test.ts`). `vitest.config.ts` collects them together with the repository checks.
+Every module keeps its tests next to the code (`air/src/**/*.test.ts`, `intel/src/**/*.test.ts`). `vitest.config.ts` collects them together with the repository checks.
 
 ### Repository checks
 
@@ -52,7 +53,7 @@ Every module keeps its tests next to the code (`air/src/**/*.test.ts`). `vitest.
 
 ### Smoke test on device sizes
 
-`scripts/e2e.mjs` opens the build with Playwright at the sizes of iPhone 15 portrait and landscape, iPhone SE and iPad Pro 11 landscape. It checks that the hub lists the modules, that AIR starts in demo mode with aircraft, that no page scrolls sideways and that no errors appear in the console. Screenshots go to `e2e-out/`.
+`scripts/e2e.mjs` opens the build with Playwright at the sizes of iPhone 15 portrait and landscape, iPhone SE and iPad Pro 11 landscape. It checks that the hub links every live module, that AIR starts in demo mode with aircraft, that INTEL shows items with live matches, that no page scrolls sideways and that no errors appear in the console. Screenshots go to `e2e-out/`.
 
 ```bash
 npm run build

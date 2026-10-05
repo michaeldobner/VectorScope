@@ -23,6 +23,7 @@ Then open `http://localhost:5173/`. Useful URL flags:
 | `?demo` | Synthetic traffic, no network access to adsb.lol |
 | `?lat=50.11&lon=8.68` | Fixed location, GPS off |
 | `?shot` | Keeps the WebGL buffer readable for automated screenshots |
+| `?hex=ae5420` | Selects and follows this aircraft, used by INTEL for live matches |
 
 Flags can be combined: `?demo&lat=48.35&lon=11.79`.
 

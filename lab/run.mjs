@@ -25,6 +25,7 @@ async function grab(name, url, init = {}) {
 
 const point = await grab('adsblol-point', `https://api.adsb.lol/v2/point/${LAT}/${LON}/60`);
 await grab('proxy-root', 'https://vectorscope-proxy.vercel.app/');
+await grab('proxy-feed-itamilradar', 'https://vectorscope-proxy.vercel.app/feed/itamilradar');
 await grab('proxy-photo', 'https://vectorscope-proxy.vercel.app/photos/hex/3c6444');
 await grab('proxy-point', `https://vectorscope-proxy.vercel.app/v2/point/${LAT}/${LON}/60`, { headers: { Origin: 'https://michaeldobner.github.io' } });
 let callsigns = [];
@@ -107,16 +108,35 @@ const pick = (p) =>
   [...new Set(errs)].slice(0, 10).forEach((e) => log.push('  ' + e));
   await ctx.close();
 }
-// Theme comparison on the real map, same aircraft selected
-for (const theme of ['graphite']) {
-  const ctx = await browser.newContext({ viewport: { width: 393, height: 852 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true });
+// INTEL with live data, then the deep link into AIR for the first live match
+for (const [name, w, h, dpr] of [['iphone', 393, 852, 3], ['ipad', 1180, 820, 2]]) {
+  const ctx = await browser.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: dpr, isMobile: w < 900, hasTouch: true });
   const p = await ctx.newPage();
-  await p.goto(`http://localhost:4173/air/?shot&theme=${theme}&lat=${LAT}&lon=${LON}`);
-  await p.waitForTimeout(9000);
-  await shot(p, `theme-${theme}-1-map`);
-  await pick(p);
-  await p.waitForTimeout(5000);
-  await shot(p, `theme-${theme}-2-inspector`);
+  const errs = [];
+  p.on('pageerror', (e) => errs.push('pageerror ' + e));
+  p.on('response', (r) => r.status() >= 400 && errs.push(`HTTP ${r.status()} ${r.url().slice(0, 110)}`));
+  await p.goto('http://localhost:4173/intel/');
+  await p.waitForFunction(() => window.__intel?.getState().updated, null, { timeout: 60000 }).catch(() => {});
+  await p.waitForTimeout(3000);
+  await p.screenshot({ path: `${OUT}/intel-${name}-1-feed.png` });
+  const info = await p.evaluate(() => {
+    const st = window.__intel.getState();
+    const sources = Object.entries(st.sources).map(([id, s]) => `${id}:${s.ok ? 'ok' : 'ERR ' + s.error}:${s.count}`);
+    const strong = st.items.flatMap((i) => i.matches.filter((m) => m.kind !== 'type').map((m) => `${m.ac.callsign}/${m.ac.typeCode} ${m.kind} "${i.title.slice(0, 60)}"`));
+    return { items: st.items.length, live: st.live.length, sources, strong, firstHex: st.items.flatMap((i) => i.matches)[0]?.ac.hex ?? null };
+  });
+  log.push(`intel ${name}: items=${info.items} live=${info.live} strong=${info.strong.length} errors=${errs.length}`);
+  if (name === 'iphone') {
+    info.sources.forEach((x) => log.push('  source ' + x));
+    info.strong.slice(0, 10).forEach((x) => log.push('  match ' + x));
+  }
+  [...new Set(errs)].slice(0, 10).forEach((e) => log.push('  ' + e));
+  if (name === 'ipad' && info.firstHex) {
+    await p.goto(`http://localhost:4173/air/?shot&hex=${info.firstHex}&lat=${LAT}&lon=${LON}`);
+    await p.waitForTimeout(10000);
+    await shot(p, 'intel-ipad-2-deeplink-air');
+    log.push('deep link selected: ' + (await p.evaluate(() => window.__vs.getTraffic().selected)));
+  }
   await ctx.close();
 }
 await browser.close();

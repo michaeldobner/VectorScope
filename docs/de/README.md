@@ -18,6 +18,7 @@ Diese Dokumentation beschreibt die VectorScope-Sammlung als Ganzes: wie das Repo
 | Modul | Dokumentation |
 |---|---|
 | AIR · Airspace | [Bedienung](../../air/docs/de/bedienung.md), [Berechnungen](../../air/docs/de/berechnungen.md), [Datenquellen](../../air/docs/de/datenquellen.md), [Design](../../air/docs/de/design.md), [Architektur](../../air/docs/de/architektur.md), [Entwicklung](../../air/docs/de/entwicklung.md), [Datenschutz und Recht](../../air/docs/de/datenschutz-und-recht.md) |
+| INTEL · Intelligence feed | [Bedienung](../../intel/docs/de/bedienung.md), [Quellen](../../intel/docs/de/quellen.md), [Abgleich](../../intel/docs/de/abgleich.md), [Architektur](../../intel/docs/de/architektur.md), [Datenschutz und Recht](../../intel/docs/de/datenschutz-und-recht.md) |
 | [Gemeinsame Hülle](../../shared/README.de.md) | Tokens, Stile der Startseite, Icons, Schriften |
 
 ## VectorScope auf einen Blick
@@ -25,9 +26,9 @@ Diese Dokumentation beschreibt die VectorScope-Sammlung als Ganzes: wie das Repo
 | | |
 |---|---|
 | Zweck | Persönliches Live-Lagebild, ein Modul pro Frage |
-| Module | AIR live, INTEL geplant |
+| Module | AIR live, INTEL live |
 | Plattform | Progressive Web Apps für iPhone und iPad, laufen in jedem modernen Browser |
 | Hosting | GitHub Pages, Proxy auf Vercel |
 | Datenschutz | Kein Konto, keine Speicherung auf Servern, Standort nur auf dem Gerät |
 | Adresse | https://michaeldobner.github.io/VectorScope/ |
-| Version | 0.3.0 |
+| Version | 0.4.0 |

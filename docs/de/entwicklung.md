@@ -21,6 +21,7 @@ npm run dev        # Modul AIR unter http://localhost:5173/
 | Befehl | Zweck |
 |---|---|
 | `npm run dev` | Entwicklungsserver für AIR mit Hot Reload |
+| `npm run dev:intel` | Entwicklungsserver für INTEL mit Hot Reload |
 | `npm run typecheck` | TypeScript-Prüfung aller Module |
 | `npm test` | Unit-Tests aller Module und Prüfungen des Repositorys |
 | `npm run build` | Typprüfung, alle Module, Startseite und gemeinsame Dateien nach `dist/` |
@@ -32,7 +33,7 @@ npm run dev        # Modul AIR unter http://localhost:5173/
 
 ### Unit-Tests
 
-Jedes Modul hält seine Tests neben dem Code (`air/src/**/*.test.ts`). `vitest.config.ts` sammelt sie zusammen mit den Prüfungen des Repositorys.
+Jedes Modul hält seine Tests neben dem Code (`air/src/**/*.test.ts`, `intel/src/**/*.test.ts`). `vitest.config.ts` sammelt sie zusammen mit den Prüfungen des Repositorys.
 
 ### Prüfungen des Repositorys
 
@@ -52,7 +53,7 @@ Jedes Modul hält seine Tests neben dem Code (`air/src/**/*.test.ts`). `vitest.c
 
 ### Rauchtest in Gerätegrößen
 
-`scripts/e2e.mjs` öffnet den Build mit Playwright in den Größen von iPhone 15 hoch und quer, iPhone SE und iPad Pro 11 quer. Er prüft, dass die Startseite die Module listet, dass AIR im Demo-Modus mit Flugzeugen startet, dass keine Seite seitlich scrollt und dass keine Fehler in der Konsole erscheinen. Screenshots landen in `e2e-out/`.
+`scripts/e2e.mjs` öffnet den Build mit Playwright in den Größen von iPhone 15 hoch und quer, iPhone SE und iPad Pro 11 quer. Er prüft, dass die Startseite jedes Live-Modul verlinkt, dass AIR im Demo-Modus mit Flugzeugen startet, dass INTEL Beiträge mit Live-Treffern zeigt, dass keine Seite seitlich scrollt und dass keine Fehler in der Konsole erscheinen. Screenshots landen in `e2e-out/`.
 
 ```bash
 npm run build

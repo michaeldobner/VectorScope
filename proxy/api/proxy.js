@@ -1,4 +1,4 @@
-// Minimal CORS proxy for adsb.lol, deployed as a Vercel serverless function.
+// Minimal CORS proxy for adsb.lol, planespotters.net and the RSS feeds of INTEL, deployed as a Vercel serverless function.
 // Only whitelisted read-only paths are forwarded, so this is not an open proxy.
 // Env vars (Vercel project settings):
 //   ALLOWED_ORIGIN  e.g. https://michaeldobner.github.io   (default "*")
@@ -16,6 +16,22 @@ const ALLOWED = [
   /^\/api\/0\/routeset$/,
 ];
 const PHOTOS = /^\/photos\/hex\/([0-9a-fA-F]{6})$/;
+// RSS feeds of the module INTEL, addressed by id. Must match intel/src/data/sources.ts (checked by a test).
+const FEEDS = {
+  itamilradar: 'https://www.itamilradar.com/feed/',
+  aviationist: 'https://theaviationist.com/feed/',
+  twz: 'https://www.twz.com/feed',
+  bellingcat: 'https://www.bellingcat.com/feed/',
+  defensenews: 'https://www.defensenews.com/arc/outboundfeeds/rss/?outputType=xml',
+  breakingdefense: 'https://breakingdefense.com/feed/',
+  navalnews: 'https://www.navalnews.com/feed/',
+  usni: 'https://news.usni.org/feed',
+  hartpunkt: 'https://www.hartpunkt.de/feed/',
+  augengeradeaus: 'https://augengeradeaus.net/feed/',
+  esut: 'https://esut.de/feed/',
+  dod: 'https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945&max=10',
+};
+const FEED = /^\/feed\/([a-z0-9-]{1,32})$/;
 const CONTACT_UA = `VectorScope/0.1 (+https://github.com/michaeldobner/VectorScope; ${process.env.CONTACT || 'github.com/michaeldobner'})`;
 
 export default async function handler(req, res) {
@@ -30,7 +46,7 @@ export default async function handler(req, res) {
   const path = '/' + String(req.query.path || '').replace(/^\/+/, '');
   // Status page: opening the proxy address in a browser shows that it is running.
   if (path === '/') {
-    return res.status(200).json({ ok: true, service: 'VectorScope proxy', upstream: UPSTREAM, test: '/v2/mil' });
+    return res.status(200).json({ ok: true, service: 'VectorScope proxy', upstream: UPSTREAM, test: '/v2/mil', feeds: Object.keys(FEEDS) });
   }
   if (process.env.PROXY_TOKEN && req.headers['x-vs-token'] !== process.env.PROXY_TOKEN) {
     return res.status(401).json({ error: 'unauthorized' });
@@ -44,6 +60,23 @@ export default async function handler(req, res) {
       });
       res.setHeader('Content-Type', 'application/json');
       res.setHeader('Cache-Control', 'public, s-maxage=86400');
+      return res.status(r.status).send(await r.text());
+    } catch (e) {
+      return res.status(502).json({ error: 'upstream', detail: String(e) });
+    }
+  }
+  // RSS feeds: fixed list, cached five minutes at the edge.
+  const feed = path.match(FEED);
+  if (feed && req.method === 'GET') {
+    const url = FEEDS[feed[1]];
+    if (!url) return res.status(404).json({ error: 'unknown feed' });
+    try {
+      const r = await fetch(url, {
+        headers: { Accept: 'application/rss+xml, application/atom+xml, application/xml, text/xml', 'User-Agent': CONTACT_UA },
+        redirect: 'follow',
+      });
+      res.setHeader('Content-Type', 'application/xml; charset=utf-8');
+      res.setHeader('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=900');
       return res.status(r.status).send(await r.text());
     } catch (e) {
       return res.status(502).json({ error: 'upstream', detail: String(e) });

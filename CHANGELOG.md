@@ -1,13 +1,16 @@
 # Changelog · VectorScope
 
-Changes to the collection as a whole: structure, hub, build, checks, workflows. Changes to a module are in its own changelog: [AIR](air/CHANGELOG.md), [shared shell](shared/CHANGELOG.md). [Deutsch](CHANGELOG.de.md)
+Changes to the collection as a whole: structure, hub, build, checks, workflows. Changes to a module are in its own changelog: [AIR](air/CHANGELOG.md), [INTEL](intel/CHANGELOG.md), [shared shell](shared/CHANGELOG.md). [Deutsch](CHANGELOG.de.md)
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
-## Unreleased
+## 0.4.0 (2026-10-05)
 
 ### Added
-* Test lab checks OSINT source candidates (Bluesky, RSS, Mastodon, GDELT) for existence, activity and browser access (`lab/osint.mjs`).
+* **Module INTEL 0.1.0:** verified OSINT feed with live match, linked from the hub. See the [changelog of INTEL](intel/CHANGELOG.md).
+* Proxy route `/feed/{id}` for the RSS feeds of INTEL, fixed list, cached five minutes.
+* Test lab checks OSINT source candidates (Bluesky, RSS, Mastodon, GDELT) for existence, activity and browser access (`lab/osint.mjs`), and opens INTEL with live data.
+* Smoke test covers INTEL.
 
 ## 0.3.0 (2026-10-05)
 

@@ -6,6 +6,7 @@
 |---|---|
 | Startseite | **https://michaeldobner.github.io/VectorScope/** |
 | Modul AIR | **https://michaeldobner.github.io/VectorScope/air/** |
+| Modul INTEL | **https://michaeldobner.github.io/VectorScope/intel/** |
 | Hosting | GitHub Pages, gebaut von GitHub Actions |
 | Auslöser | Jeder Push auf `main` oder von Hand unter Actions > Deploy to GitHub Pages > Run workflow |
 | Build | `npm ci`, `npm test`, `npm run build`, Upload von `dist/` |
@@ -22,7 +23,8 @@ dist/
 ├─ sw.js                   Service Worker der Startseite
 ├─ modules.json            Modulverzeichnis
 ├─ shared/                 tokens.css, hub.css, Icons, Schriften
-└─ air/                    Modul AIR, gebaut von Vite
+├─ air/                    Modul AIR, gebaut von Vite
+└─ intel/                  Modul INTEL, gebaut von Vite
 ```
 
 `npm run build` baut zuerst jedes Modul in seinen eigenen Ordner und ergänzt danach mit `scripts/build.mjs` die Startseite. Der Build bricht ab, wenn ein Modul fehlt, das in `modules.json` als `live` eingetragen ist.
@@ -48,7 +50,7 @@ Bleibt die Source auf **Deploy from a branch**, veröffentlicht GitHub bei jedem
 
 ## CORS-Proxy auf Vercel
 
-Browser lassen eine Website Daten eines anderen Servers nur lesen, wenn dieser Server das ausdrücklich erlaubt (CORS, eine Sicherheitsregel jedes Browsers, keine Safari-Einstellung). adsb.lol erlaubt das auf seinen `/v2`-Endpunkten nicht, und planespotters.net verlangt eine Kontaktangabe, die ein Browser nicht senden kann. Die Lösung ist ein kleiner Vermittler, der die Daten auf dem Server abholt und die Erlaubnis ergänzt: der Proxy in `proxy/`, kostenlos im Hobby-Tarif von Vercel.
+Browser lassen eine Website Daten eines anderen Servers nur lesen, wenn dieser Server das ausdrücklich erlaubt (CORS, eine Sicherheitsregel jedes Browsers, keine Safari-Einstellung). adsb.lol erlaubt das auf seinen `/v2`-Endpunkten nicht, planespotters.net verlangt eine Kontaktangabe, die ein Browser nicht senden kann, und die meisten Nachrichtenseiten erlauben dem Browser keinen Zugriff auf ihre RSS-Feeds. Die Lösung ist ein kleiner Vermittler, der die Daten auf dem Server abholt und die Erlaubnis ergänzt: der Proxy in `proxy/`, kostenlos im Hobby-Tarif von Vercel.
 
 Der Proxy dieses Projekts läuft unter `https://vectorscope-proxy.vercel.app` und ist fest in der App hinterlegt. Auf den Geräten muss nichts eingetragen werden. Unter der Hauptadresse antwortet eine Statusseite.
 
@@ -88,10 +90,10 @@ Das Modul speichert den Proxy dauerhaft und entfernt den Parameter aus der Adres
 
 ### Was der Proxy tut
 
-* Leitet nur lesende Pfade weiter: `/v2/point`, `/v2/closest`, `/v2/lat/…/lon/…/dist/…`, `/v2/mil`, `/v2/ladd`, `/v2/pia`, `/v2/sqk`, `/v2/squawk`, `/v2/hex`, `/v2/icao`, `/v2/callsign`, `/v2/reg`, `/v2/registration`, `/v2/type`, `POST /api/0/routeset` und `/photos/hex/{hex}` für planespotters.net. Alles andere erhält 404, es ist also kein offener Proxy.
+* Leitet nur lesende Pfade weiter: `/v2/point`, `/v2/closest`, `/v2/lat/…/lon/…/dist/…`, `/v2/mil`, `/v2/ladd`, `/v2/pia`, `/v2/sqk`, `/v2/squawk`, `/v2/hex`, `/v2/icao`, `/v2/callsign`, `/v2/reg`, `/v2/registration`, `/v2/type`, `POST /api/0/routeset`, `/photos/hex/{hex}` für planespotters.net und `/feed/{id}` für die feste Liste der RSS-Feeds von INTEL. Alles andere erhält 404, es ist also kein offener Proxy.
 * Sendet einen User-Agent mit Kontaktangabe.
 * Ergänzt `Access-Control-Allow-Origin` und beantwortet Preflight-Anfragen.
-* Hält GET-Antworten zwei Sekunden im Edge-Cache von Vercel, damit mehrere Geräte die Last auf adsb.lol nicht vervielfachen.
+* Hält GET-Antworten zwei Sekunden im Edge-Cache von Vercel, damit mehrere Geräte die Last auf adsb.lol nicht vervielfachen. RSS-Feeds fünf Minuten.
 * Läuft in Frankfurt (`fra1`).
 
 ### Warum nicht Cloudflare Workers
@@ -106,6 +108,7 @@ Jeder Teil der Sammlung hat einen eigenen Service Worker mit eigenem Bereich und
 |---|---|---|---|
 | Startseite | `sw.js` | `/VectorScope/` | `vectorscope-hub-v1`, nur Startseite und `shared/` |
 | AIR | `air/sw.js` | `/VectorScope/air/` | `vectorscope-air-v1` |
+| INTEL | `intel/sw.js` | `/VectorScope/intel/` | `vectorscope-intel-v1` |
 
 Der engere Bereich gewinnt, jedes Modul steuert also nur seinen eigenen Ordner. Seitenaufrufe gehen zuerst ins Netz, eine neue Version wird deshalb beim nächsten Start verwendet. Gebaute JavaScript- und CSS-Dateien tragen einen Inhalts-Hash im Namen, alte und neue Dateien werden nie gemischt. Ohne Netz startet die zuletzt geladene Version.
 

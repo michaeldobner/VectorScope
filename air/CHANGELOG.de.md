@@ -4,6 +4,11 @@ Alle wesentlichen Änderungen am Modul AIR. [English](CHANGELOG.md) · [Changelo
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.3.1 (2026-10-05)
+
+### Neu
+* **Direkter Link** `?hex=ae5420` wählt dieses Flugzeug aus und verfolgt es, genutzt von INTEL, um einen Live-Treffer zu öffnen.
+
 ## 0.3.0 (2026-10-05)
 
 ### Geändert

@@ -9,13 +9,14 @@ VectorScope grows module by module. Everything runs on GitHub Pages and the exis
 | Step | Module | Contents | Status |
 |---|---|---|---|
 | 1 | Collection | Repository as a collection: hub, `shared/`, module AIR in `air/`, release script, repository checks, smoke test on device sizes | Done in 0.3.0 |
-| 2 | INTEL | Compile and verify the source list: Bluesky, Mastodon, RSS and GDELT, each source checked for existence, activity and machine readability | In progress |
+| 2 | INTEL | Compile and verify the source list: Bluesky, Mastodon, RSS and GDELT, each source checked for existence, activity and machine readability | Done, 14 sources |
+| 3 | INTEL | Stage A: feed of the verified sources, recognition of callsigns, types and places, live match with military aircraft, deep link into AIR | Done in INTEL 0.1.0 |
 
 ## Next
 
 | Module | Contents |
 |---|---|
-| INTEL, stage A | Feed of verified sources, fetched on demand through the proxy. Recognition of callsigns, registrations, aircraft types and places in posts. Matching with live aircraft from AIR, for example a post about an RCH callsign that is currently in the air |
+| INTEL | Map of the places named in the last 24 hours together with the matched aircraft. Second check of GDELT. Registrations and ICAO addresses in posts |
 | AIR | Compass mode with the motion sensor of the device, area watch with polygons |
 
 ## Later, needs a server

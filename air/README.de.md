@@ -110,6 +110,6 @@ Verkehrsdaten © Mitwirkende von [adsb.lol](https://adsb.lol), lizenziert unter 
 
 ## Version
 
-Aktuelle Version: **0.3.0**. Siehe [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.3.1**. Siehe [Changelog](CHANGELOG.de.md).
 
 Erstellt von Michael Dobner. Lizenziert unter der [MIT-Lizenz](../LICENSE).

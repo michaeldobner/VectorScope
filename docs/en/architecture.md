@@ -22,6 +22,7 @@ VectorScope/
 │  ├─ index.html, vite.config.ts, public/, src/
 │  ├─ docs/en, docs/de     module documentation
 │  └─ README, CHANGELOG    own version
+├─ intel/                  module INTEL: verified OSINT feed with live match (React, TypeScript)
 ├─ proxy/                  CORS proxy on Vercel, shared by all modules
 ├─ lab/                    test lab with real internet (GitHub Actions)
 ├─ scripts/
@@ -40,7 +41,7 @@ VectorScope/
 | Code | Folder | Status | Technology | Question |
 |---|---|---|---|---|
 | AIR | `air/` | Live | React 18, TypeScript, Vite, MapLibre GL | What is flying above me right now? |
-| INTEL | `intel/` | Planned | to be decided | What do verified sources report, and which aircraft does it concern? |
+| INTEL | `intel/` | Live | React 18, TypeScript, Vite | What do verified sources report, and which aircraft in the air does it concern? |
 
 `modules.json` is the single source of truth. The hub links every module with status `live`, the build fails if such a module is missing, and the repository checks compare every stated version with the registry.
 
@@ -60,7 +61,7 @@ VectorScope/
 
 | File | Contents | Used by |
 |---|---|---|
-| `tokens.css` | Colour tokens of the Graphite theme: surfaces, text, accent, signal colours, aircraft tones, radii | Hub, AIR |
+| `tokens.css` | Colour tokens of the Graphite theme: surfaces, text, accent, signal colours, aircraft tones, radii | Hub, AIR, INTEL |
 | `hub.css` | Layout of the hub | Hub |
 | `icons/` | App icons of the collection | Hub |
 | `fonts/` | Inter 400 and 600 for the hub | Hub |
@@ -73,10 +74,11 @@ AIR imports `tokens.css` at build time and overrides the colour variables at run
 npm run build
  ├─ tsc --noEmit                         type check of all TypeScript
  ├─ vite build --config air/vite.config.ts   air/ → dist/air/
+ ├─ vite build --config intel/vite.config.ts intel/ → dist/intel/
  └─ node scripts/build.mjs               index.html, manifest, sw.js, modules.json, shared/ → dist/
 ```
 
-One `package.json` in the root holds the dependencies and scripts of all modules. Vitest finds the tests of all modules and the repository checks (`vitest.config.ts`).
+One `package.json` in the root holds the dependencies and scripts of all modules. INTEL reuses the callsign catalogue, the aircraft parser and the distance calculation of AIR by importing them from `air/src/`. Vitest finds the tests of all modules and the repository checks (`vitest.config.ts`).
 
 ## Addresses and storage
 
@@ -84,6 +86,7 @@ One `package.json` in the root holds the dependencies and scripts of all modules
 |---|---|---|---|
 | Hub | `/VectorScope/` | `/VectorScope/` | `vectorscope-hub-v1` |
 | AIR | `/VectorScope/air/` | `/VectorScope/air/` | `vectorscope-air-v1` |
+| INTEL | `/VectorScope/intel/` | `/VectorScope/intel/` | `vectorscope-intel-v1` |
 
 All parts share one origin (`michaeldobner.github.io`), so `localStorage` is shared. That is why every key carries the prefix `vectorscope.` and a module name where needed. The hub service worker only answers requests for the hub and `shared/`, everything else goes to the network or to the worker of the module.
 
@@ -95,7 +98,8 @@ iPhone / iPad (Safari, installed web app)
      ├─ AIR ── vectorscope-proxy.vercel.app ── adsb.lol, planespotters.net
      │    ├─ adsbdb.com, hexdb.io ............. routes, airlines, aircraft data
      │    └─ OpenFreeMap ...................... basemap
-     └─ INTEL (planned) ── same proxy ──────── verified OSINT and news sources
+     └─ INTEL ── public.api.bsky.app ......... Bluesky posts, directly
+          └─ same proxy ...................... RSS feeds (/feed/{id}), military aircraft (/v2/mil)
 ```
 
 There is no own backend. The proxy only forwards a whitelist of read-only paths and stores nothing. Details: [Deployment](deployment.md#cors-proxy-on-vercel).

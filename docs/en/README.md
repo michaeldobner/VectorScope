@@ -18,6 +18,7 @@ This documentation describes the VectorScope collection as a whole: how the repo
 | Module | Documentation |
 |---|---|
 | AIR · Airspace | [User guide](../../air/docs/en/user-guide.md), [Calculations](../../air/docs/en/calculations.md), [Data sources](../../air/docs/en/data-sources.md), [Design](../../air/docs/en/design.md), [Architecture](../../air/docs/en/architecture.md), [Development](../../air/docs/en/development.md), [Privacy and legal](../../air/docs/en/privacy-and-legal.md) |
+| INTEL · Intelligence feed | [User guide](../../intel/docs/en/user-guide.md), [Sources](../../intel/docs/en/sources.md), [Matching](../../intel/docs/en/matching.md), [Architecture](../../intel/docs/en/architecture.md), [Privacy and legal](../../intel/docs/en/privacy-and-legal.md) |
 | [Shared shell](../../shared/README.md) | Tokens, hub styles, icons, fonts |
 
 ## VectorScope at a glance
@@ -25,9 +26,9 @@ This documentation describes the VectorScope collection as a whole: how the repo
 | | |
 |---|---|
 | Purpose | Personal live situational awareness, one module per question |
-| Modules | AIR live, INTEL planned |
+| Modules | AIR live, INTEL live |
 | Platform | Progressive web apps for iPhone and iPad, run in every modern browser |
 | Hosting | GitHub Pages, proxy on Vercel |
 | Privacy | No account, no server-side storage, location only on the device |
 | Address | https://michaeldobner.github.io/VectorScope/ |
-| Version | 0.3.0 |
+| Version | 0.4.0 |

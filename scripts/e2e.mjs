@@ -15,6 +15,7 @@ const DEVICES = [
 ];
 // Demo mode with a fixed location: no network to data sources needed, no GPS prompt.
 const AIR = 'air/?demo&lat=50.11&lon=8.68';
+const INTEL = 'intel/?demo';
 
 mkdirSync(OUT, { recursive: true });
 const browser = await (ENGINE === 'webkit' ? webkit : chromium).launch();
@@ -38,9 +39,7 @@ for (const [name, device] of DEVICES) {
 
   // Hub
   await page.goto(BASE);
-  const live = await page.locator('a.module[href="./air/"]').count();
-  check(live === 1, 'hub does not link AIR');
-  check(await page.locator('.module.planned').count() >= 1, 'hub shows no planned module');
+  for (const id of ['air', 'intel']) check((await page.locator(`a.module[href="./${id}/"]`).count()) === 1, `hub does not link ${id}`);
   check(await noSideScroll(page), 'hub scrolls sideways');
   await page.screenshot({ path: `${OUT}/${ENGINE}-${name}-hub.png` });
 
@@ -56,6 +55,18 @@ for (const [name, device] of DEVICES) {
   check((await page.locator('a.brand').getAttribute('href')) === '../', 'AIR logo does not lead back to the hub');
   await page.waitForTimeout(800);
   await page.screenshot({ path: `${OUT}/${ENGINE}-${name}-air.png` });
+
+  // INTEL in demo mode
+  await page.goto(BASE + INTEL);
+  const items = await page
+    .waitForFunction(() => document.querySelectorAll('.item').length > 0, null, { timeout: 15000 })
+    .then(() => true)
+    .catch(() => false);
+  check(items, 'INTEL shows no items in demo mode');
+  check((await page.locator('.live-row').count()) > 0, 'INTEL shows no live match in demo mode');
+  check(await noSideScroll(page), 'INTEL scrolls sideways');
+  check((await page.locator('a.brand').getAttribute('href')) === '../', 'INTEL logo does not lead back to the hub');
+  await page.screenshot({ path: `${OUT}/${ENGINE}-${name}-intel.png` });
 
   for (const e of errors) failures.push(`${ENGINE} ${name}: ${e}`);
   console.log(`${failures.length > before ? '✗' : '✓'} ${ENGINE} ${name}`);

@@ -4,6 +4,11 @@ All notable changes to module AIR. [Deutsch](CHANGELOG.de.md) · [Changelog of t
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.3.1 (2026-10-05)
+
+### Added
+* **Deep link** `?hex=ae5420` selects and follows this aircraft, used by INTEL to open a live match.
+
 ## 0.3.0 (2026-10-05)
 
 ### Changed

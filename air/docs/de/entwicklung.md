@@ -23,6 +23,7 @@ Dann `http://localhost:5173/` öffnen. Nützliche URL-Parameter:
 | `?demo` | Simulierter Verkehr, kein Netzzugriff auf adsb.lol |
 | `?lat=50.11&lon=8.68` | Fester Standort, GPS aus |
 | `?shot` | Hält den WebGL-Puffer für automatische Screenshots lesbar |
+| `?hex=ae5420` | Wählt dieses Flugzeug aus und verfolgt es, genutzt von INTEL für Live-Treffer |
 
 Parameter lassen sich kombinieren: `?demo&lat=48.35&lon=11.79`.
 

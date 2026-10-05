@@ -6,6 +6,7 @@
 |---|---|
 | Hub | **https://michaeldobner.github.io/VectorScope/** |
 | Module AIR | **https://michaeldobner.github.io/VectorScope/air/** |
+| Module INTEL | **https://michaeldobner.github.io/VectorScope/intel/** |
 | Hosting | GitHub Pages, built by GitHub Actions |
 | Trigger | Every push to `main`, or manually under Actions > Deploy to GitHub Pages > Run workflow |
 | Build | `npm ci`, `npm test`, `npm run build`, upload of `dist/` |
@@ -22,7 +23,8 @@ dist/
 ├─ sw.js                   hub service worker
 ├─ modules.json            module registry
 ├─ shared/                 tokens.css, hub.css, icons, fonts
-└─ air/                    module AIR, built by Vite
+├─ air/                    module AIR, built by Vite
+└─ intel/                  module INTEL, built by Vite
 ```
 
 `npm run build` first builds each module into its own folder and then adds the hub with `scripts/build.mjs`. The build stops if a module marked `live` in `modules.json` is missing.
@@ -48,7 +50,7 @@ If the source stays on **Deploy from a branch**, GitHub additionally publishes t
 
 ## CORS proxy on Vercel
 
-Browsers only let a website read data from another server if that server explicitly allows it (CORS, a security rule of every browser, not a Safari setting). adsb.lol does not allow it on its `/v2` endpoints, and planespotters.net asks for a contact address that a browser cannot send. The fix is a small relay that fetches the data server-side and adds the permission: the proxy in `proxy/`, free on Vercel's hobby plan.
+Browsers only let a website read data from another server if that server explicitly allows it (CORS, a security rule of every browser, not a Safari setting). adsb.lol does not allow it on its `/v2` endpoints, planespotters.net asks for a contact address that a browser cannot send, and most news sites do not allow browser access to their RSS feeds. The fix is a small relay that fetches the data server-side and adds the permission: the proxy in `proxy/`, free on Vercel's hobby plan.
 
 The proxy of this project runs at `https://vectorscope-proxy.vercel.app` and is built into the app. Nothing needs to be entered on the devices. Its status page answers at the root address.
 
@@ -88,10 +90,10 @@ The module saves the proxy permanently and removes the parameter from the addres
 
 ### What the proxy does
 
-* Forwards only read-only paths: `/v2/point`, `/v2/closest`, `/v2/lat/…/lon/…/dist/…`, `/v2/mil`, `/v2/ladd`, `/v2/pia`, `/v2/sqk`, `/v2/squawk`, `/v2/hex`, `/v2/icao`, `/v2/callsign`, `/v2/reg`, `/v2/registration`, `/v2/type`, `POST /api/0/routeset` and `/photos/hex/{hex}` for planespotters.net. Everything else gets 404, so it is not an open proxy.
+* Forwards only read-only paths: `/v2/point`, `/v2/closest`, `/v2/lat/…/lon/…/dist/…`, `/v2/mil`, `/v2/ladd`, `/v2/pia`, `/v2/sqk`, `/v2/squawk`, `/v2/hex`, `/v2/icao`, `/v2/callsign`, `/v2/reg`, `/v2/registration`, `/v2/type`, `POST /api/0/routeset`, `/photos/hex/{hex}` for planespotters.net and `/feed/{id}` for the fixed list of RSS feeds of INTEL. Everything else gets 404, so it is not an open proxy.
 * Sends a User-Agent with contact information.
 * Adds `Access-Control-Allow-Origin` and answers preflight requests.
-* Caches GET responses for two seconds at Vercel's edge, so several devices do not multiply the load on adsb.lol.
+* Caches GET responses for two seconds at Vercel's edge, so several devices do not multiply the load on adsb.lol. RSS feeds for five minutes.
 * Runs in Frankfurt (`fra1`).
 
 ### Why not Cloudflare Workers
@@ -106,6 +108,7 @@ Every part of the collection has its own service worker with its own scope and c
 |---|---|---|---|
 | Hub | `sw.js` | `/VectorScope/` | `vectorscope-hub-v1`, only hub and `shared/` |
 | AIR | `air/sw.js` | `/VectorScope/air/` | `vectorscope-air-v1` |
+| INTEL | `intel/sw.js` | `/VectorScope/intel/` | `vectorscope-intel-v1` |
 
 The narrower scope wins, so each module controls only its own folder. Page requests go to the network first, so a new version is used on the next start. Built JavaScript and CSS files have content hashes in their names, so old and new files are never mixed. Without network the last loaded version starts.
 
