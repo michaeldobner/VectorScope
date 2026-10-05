@@ -4,6 +4,7 @@ import type { Aircraft } from '../../../air/src/data/types';
 import { authorFeedUrl, parseAuthorFeed } from './bluesky';
 import { parseFeed } from './rss';
 import { parseTelegram } from './telegram';
+import { API_URL, VIA_PROXY, parseEmsc, parseFaa, parseGdacs, parseNws, parseUsgs } from './physical';
 import type { Source } from './sources';
 import { urlKey } from './text';
 import type { Item } from './types';
@@ -59,13 +60,36 @@ async function loadTelegram(source: Source, opt: LoadOptions): Promise<Item[]> {
   return parseTelegram(await getText(url), source.id);
 }
 
+async function loadApi(source: Source, opt: LoadOptions): Promise<Item[]> {
+  const api = source.api!;
+  const url = !opt.direct && VIA_PROXY.includes(api) ? `${PROXY}/feed/${api}` : API_URL[api];
+  const text = await getText(url);
+  switch (api) {
+    case 'usgs':
+      return parseUsgs(JSON.parse(text), source.id);
+    case 'emsc':
+      return parseEmsc(JSON.parse(text), source.id);
+    case 'nws':
+      return parseNws(JSON.parse(text), source.id);
+    case 'gdacs':
+      return parseGdacs(text, source.id);
+    case 'faa':
+      return parseFaa(text, source.id, Date.now());
+  }
+}
+
 async function loadBluesky(source: Source): Promise<Item[]> {
   return parseAuthorFeed(JSON.parse(await getText(authorFeedUrl(source.bluesky!))), source.id);
 }
 
 /** Both channels of one source. Fails only if every channel fails. */
 export async function loadSource(source: Source, opt: LoadOptions = {}): Promise<{ items: Item[]; status: SourceStatus }> {
-  const jobs = [source.rss && loadRss(source, opt), source.telegram && loadTelegram(source, opt), source.bluesky && loadBluesky(source)].filter(Boolean) as Promise<Item[]>[];
+  const jobs = [
+    source.rss && loadRss(source, opt),
+    source.telegram && loadTelegram(source, opt),
+    source.bluesky && loadBluesky(source),
+    source.api && loadApi(source, opt),
+  ].filter(Boolean) as Promise<Item[]>[];
   const results = await Promise.allSettled(jobs);
   const items = results.flatMap((r) => (r.status === 'fulfilled' ? r.value : []));
   const errors = results.filter((r) => r.status === 'rejected').map((r) => String((r as PromiseRejectedResult).reason?.message ?? r));

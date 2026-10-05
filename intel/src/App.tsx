@@ -1,7 +1,7 @@
 import { Suspense, lazy, useMemo, useState } from 'react';
 import type { Aircraft } from '../../air/src/data/types';
 import { isStrong } from './data/match';
-import { CATEGORY_LABEL, SOURCES, TIER_LABEL, sourceById, type Category, type Tier } from './data/sources';
+import { REGION_LABEL, SOURCES, TIER_LABEL, sourceById, type Category, type Region, type Tier } from './data/sources';
 import { independentCount, rankStories, type Status, type Story } from './data/stories';
 import type { EnrichedItem, Match } from './data/types';
 import { refreshFeed, refreshLive, setPrefs, useIntel, type Filter, type IntelState, type Pulse } from './state/store';
@@ -13,7 +13,11 @@ const IntelMap = lazy(() => import('./ui/IntelMap'));
 
 type Tab = 'main' | 'live' | 'more';
 const HOUR = 3600_000;
-const tierOf = (i: EnrichedItem): Tier => sourceById(i.sourceId)?.tier ?? 'breaking';
+const tierOf = (i: EnrichedItem): Tier => sourceById(i.sourceId)?.tier ?? 'early';
+const TIER_ORDER: Tier[] = ['physical', 'primary', 'early', 'osint', 'specialist', 'perspective', 'confirming'];
+/** Class label in the language of the interface: English, or German when DE is on. */
+const tierLabel = (t: Tier, german: boolean) => TIER_LABEL[t][german ? 'de' : 'en'];
+const pct = (x: number) => `${Math.round(x * 100)} %`;
 const sourceName = (id: string) => sourceById(id)?.name ?? 'Demo';
 
 export function App() {
@@ -95,7 +99,9 @@ function itemPasses(i: EnrichedItem, st: IntelState): boolean {
   if (place && !i.entities.places.some((p) => p.name === place)) return false;
   if (filter === 'all') return true;
   if (filter === 'live') return i.matches.some(isStrong);
-  return (sourceById(i.sourceId)?.category ?? null) === filter;
+  const src = sourceById(i.sourceId);
+  const chip = FILTERS.find((f) => f.key === filter);
+  return !!src && !!chip?.test?.(src.region, src.category);
 }
 
 /** Aircraft with a strong match, each once, with the newest item that names it. */
@@ -132,15 +138,25 @@ function TopBar({ st }: { st: IntelState }) {
   );
 }
 
-const FILTERS: Filter[] = ['all', 'live', 'breaking', 'aviation', 'osint', 'naval', 'defence', 'dach', 'news', 'official'];
+/** Filter chips: regions first, then topics. */
+const FILTERS: { key: Filter; label: string; test?: (r: Region, c: Category) => boolean }[] = [
+  { key: 'all', label: 'All' },
+  { key: 'live', label: 'Live match' },
+  ...(['russia', 'ukraine', 'mideast', 'dach', 'usa'] as Region[]).map((r) => ({ key: `r:${r}`, label: REGION_LABEL[r], test: (reg: Region) => reg === r })),
+  { key: 'c:aviation', label: 'Aviation', test: (_r: Region, c: Category) => c === 'aviation' },
+  { key: 'c:military', label: 'Military', test: (_r: Region, c: Category) => c === 'military' || c === 'defence' || c === 'naval' },
+  { key: 'c:disaster', label: 'Disaster', test: (_r: Region, c: Category) => c === 'disaster' || c === 'infrastructure' },
+  { key: 'c:osint', label: 'OSINT', test: (_r: Region, c: Category) => c === 'osint' },
+  { key: 'c:news', label: 'News', test: (_r: Region, c: Category) => c === 'news' || c === 'politics' },
+];
 
 function Filters({ st }: { st: IntelState }) {
   const liveCount = st.stories.filter((s) => s.items.some((i) => i.matches.some(isStrong))).length;
   return (
     <div className="filters" role="toolbar" aria-label="Filter">
       {FILTERS.map((f) => (
-        <button key={f} className={`chip ${st.prefs.filter === f ? 'on' : ''} ${f === 'live' ? 'chip-live' : ''}`} onClick={() => setPrefs({ filter: f })}>
-          {f === 'all' ? 'All' : f === 'live' ? `Live match${liveCount ? ` ${liveCount}` : ''}` : CATEGORY_LABEL[f as Category]}
+        <button key={f.key} className={`chip ${st.prefs.filter === f.key ? 'on' : ''} ${f.key === 'live' ? 'chip-live' : ''}`} onClick={() => setPrefs({ filter: f.key })}>
+          {f.key === 'live' && liveCount ? `${f.label} ${liveCount}` : f.label}
         </button>
       ))}
       {st.prefs.place && (
@@ -175,7 +191,7 @@ export function pulsePasses(s: Story, pulse: Pulse, now: number): boolean {
 function Pulse({ st }: { st: IntelState }) {
   const now = Date.now();
   const lastHour = st.items.filter((i) => now - i.time < HOUR);
-  const unverified = lastHour.filter((i) => tierOf(i) === 'breaking').length;
+  const unverified = lastHour.filter((i) => tierOf(i) === 'early' || tierOf(i) === 'perspective').length;
   const developing = st.stories.filter((s) => pulsePasses(s, 'developing', now)).length;
   const tile = (key: Exclude<Pulse, null>, n: number, text: string) => (
     <button className={st.prefs.pulse === key ? 'on' : ''} onClick={() => setPrefs({ pulse: st.prefs.pulse === key ? null : key })} aria-pressed={st.prefs.pulse === key}>
@@ -225,10 +241,10 @@ function StoriesView({ stories: all, st }: { stories: Story[]; st: IntelState })
 const STATUS_LABEL: Record<Status, string> = { observed: 'Observed', signal: 'Signal', emerging: 'Emerging', reported: 'Reported', confirmed: 'Confirmed' };
 const STATUS_HINT: Record<Status, string> = {
   observed: 'seen by the VectorScope sensor in live flight data, nobody reported it yet',
-  signal: 'one unverified source',
-  emerging: 'several unverified sources',
+  signal: 'one early or partisan source',
+  emerging: 'several early or partisan sources',
   reported: 'specialist or OSINT source',
-  confirmed: 'authority or leading news medium',
+  confirmed: 'primary source or leading news medium',
 };
 
 function StoryCard({ story, st }: { story: Story; st: IntelState }) {
@@ -239,7 +255,8 @@ function StoryCard({ story, st }: { story: Story; st: IntelState }) {
   const isNew = !st.demo && st.newSince > 0 && story.last > st.newSince;
   const strong = uniqueMatches(story.items.flatMap((i) => i.matches.filter(isStrong)));
   const entities = mergeEntities(story.items);
-  const tiers = (['sensor', 'breaking', 'osint', 'press', 'confirm'] as Tier[]).filter((t) => story.tiers[t]);
+  const tiers = TIER_ORDER.filter((t) => story.tiers[t]);
+  const german = st.prefs.german;
   return (
     <li className={`item story status-${story.status} ${strong.length ? 'has-live' : ''}`}>
       <div className="item-meta">
@@ -248,6 +265,9 @@ function StoryCard({ story, st }: { story: Story; st: IntelState }) {
           {STATUS_LABEL[story.status]}
         </span>
         <span className="src">{n > 1 ? `${n} sources` : sourceName(lead.sourceId)}</span>
+        <span className="conf" title="Event confidence from the classes and trust of the independent sources">
+          {pct(story.confidence)}
+        </span>
         <span className="age">{age(story.last)}</span>
       </div>
       <a className="item-title" href={lead.url} target={lead.channel === 'sensor' ? undefined : '_blank'} rel="noopener noreferrer">
@@ -260,7 +280,7 @@ function StoryCard({ story, st }: { story: Story; st: IntelState }) {
           <div className="ladder">
             {tiers.map((t) => (
               <span key={t} className={`tier t-${t}`}>
-                {story.tiers[t]} {TIER_LABEL[t].toLowerCase()}
+                {story.tiers[t]} {tierLabel(t, german).toLowerCase()}
               </span>
             ))}
             {story.echoes.length > 0 && (
@@ -383,6 +403,7 @@ const CHANNEL_LABEL = { bluesky: 'Bluesky', rss: 'RSS', telegram: 'Telegram', se
 
 function ItemCard({ item, isNew }: { item: EnrichedItem; isNew: boolean }) {
   const tr = useTr();
+  const german = useIntel().prefs.german;
   const src = sourceById(item.sourceId);
   const strong = item.matches.filter(isStrong);
   const weak = item.matches.filter((m) => !isStrong(m));
@@ -392,7 +413,7 @@ function ItemCard({ item, isNew }: { item: EnrichedItem; isNew: boolean }) {
       <div className="item-meta">
         {isNew && <span className="new-dot" aria-label="new" />}
         <span className="src">{src?.name ?? 'Demo'}</span>
-        {src && <span className={`tier t-${src.tier}`}>{TIER_LABEL[src.tier]}</span>}
+        {src && <span className={`tier t-${src.tier}`}>{tierLabel(src.tier, german)}</span>}
         <span className="sep">·</span>
         <span>{CHANNEL_LABEL[item.channel]}</span>
         <span className="age">{age(item.time)}</span>
@@ -547,10 +568,16 @@ function SourcesPanel({ st }: { st: IntelState }) {
           return (
             <li key={s.id}>
               <span className={`dot ${!status ? '' : status.ok ? 'ok' : 'err'}`} />
-              <a href={s.site} target="_blank" rel="noopener noreferrer">
-                {s.name}
-              </a>
-              <span className={`tier t-${s.tier}`}>{TIER_LABEL[s.tier]}</span>
+              <span className="src-name">
+                <a href={s.site} target="_blank" rel="noopener noreferrer">
+                  {s.name}
+                </a>
+                <span className="src-meta">
+                  {REGION_LABEL[s.region]} · trust {s.trust}
+                  {s.perspective ? ` · ${s.perspective}` : ''}
+                </span>
+              </span>
+              <span className={`tier t-${s.tier}`}>{tierLabel(s.tier, st.prefs.german)}</span>
               <span className="n">{status?.newest ? age(status.newest) : status && !status.ok ? 'error' : ''}</span>
             </li>
           );

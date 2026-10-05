@@ -30,9 +30,13 @@ Rund 45 Typen mit ihren üblichen Schreibweisen und Namen. Jeder trägt die ICAO
 
 Russische und iranische Typen (Tu-95, Su-34, A-50, Shahed) werden erkannt und angezeigt, senden aber kein ADS-B und werden nie abgeglichen. Gewöhnliche Wörter sind geschützt: Die Erkennung unterscheidet Groß- und Kleinschreibung, eine „tornado warning“ ist also kein Tornado, „Typhoon“ zählt nur als „Typhoon FGR4“ als Eurofighter, und „Atlas“ ist nicht der A400M.
 
+### Russisch und Ukrainisch
+
+Meldungen auf Russisch und Ukrainisch werden im Original abgeglichen. Orte sind mit ihren grammatischen Endungen bekannt (Воронеж, Воронеже, Воронежской), Ereigniswörter werden über ihren Stamm auf Englisch abgebildet (взрыв zu explosion, беспилотник und БПЛА zu drone, пожар zu fire). So finden eine russische Incident-Meldung und ein englischer Artikel in einer Story zusammen.
+
 ### Orte
 
-Rund 100 Orte auf Englisch und Deutsch mit einem repräsentativen Punkt und einem Gebietsradius: Meere und Regionen (Baltic Sea, Ostsee, Black Sea, Schwarzes Meer, GIUK Gap), Länder, Städte und Flugplätze (Ramstein, Geilenkirchen, Rzeszów, Sigonella, Al Udeid). Namen werden an Wortgrenzen erkannt, „Iranian“ zählt also als Iran, aber nicht doppelt. Nennt ein Text mehrere Orte, steht der genaueste vorn.
+Rund 150 Orte auf Englisch, Deutsch und Russisch mit einem repräsentativen Punkt und einem Gebietsradius: Meere und Regionen (Baltic Sea, Ostsee, Black Sea, Schwarzes Meer, GIUK Gap), Länder, Städte und Flugplätze (Ramstein, Geilenkirchen, Rzeszów, Sigonella, Al Udeid). Namen werden an Wortgrenzen erkannt, „Iranian“ zählt also als Iran, aber nicht doppelt. Nennt ein Text mehrere Orte, steht der genaueste vorn.
 
 ## Live-Abgleich
 

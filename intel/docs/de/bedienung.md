@@ -17,13 +17,15 @@ Die Standardansicht. Meldungen verschiedener Quellen über dasselbe Ereignis bil
 
 | Auf der Karte | Bedeutung |
 |---|---|
-| **SIGNAL** grau | Eine ungeprüfte Quelle, zum Beispiel ein einzelner Telegram-Kanal |
-| **EMERGING** blau gestrichelt | Mehrere ungeprüfte Quellen |
+| **OBSERVED** hellblau | Nur Messsysteme haben es gesehen: Erdbeben, ADS-B-Aktivität, Squawk 7700 |
+| **SIGNAL** grau | Eine frühe oder parteiische Quelle, zum Beispiel ein einzelner Telegram-Kanal |
+| **EMERGING** blau gestrichelt | Mehrere frühe oder parteiische Quellen |
 | **REPORTED** blau | Eine OSINT- oder Fachquelle hat berichtet |
-| **CONFIRMED** weiß | Ein Leitmedium oder eine Behörde hat berichtet |
-| Zeitachse | Jede Meldung als Punkt: hohl grau ungeprüft, blau OSINT oder Fachmedium, weiß bestätigend |
-| `2 unverified · 1 specialist` | Wie viele Quellen je Stufe |
-| `⏱ RAGE X 1 h 6 min ahead of Tagesschau` | Wie weit die erste ungeprüfte Meldung vor der ersten bestätigenden lag |
+| **CONFIRMED** weiß | Eine Primärquelle (Behörde, Militär, Gouverneur) oder ein Leitmedium hat berichtet |
+| `87 %` | Event Confidence, wie sicher das Ereignis ist, siehe [Stories](stories.md#event-confidence) |
+| Zeitachse | Jede Meldung als Punkt, Form und Farbe nach Klasse |
+| `1 early · 1 perspective · 1 primary` | Wie viele unabhängige Quellen je Klasse, mit DE auf Deutsch (früh, parteiisch, primär) |
+| `⏱ Baza 42 min ahead of BBC` | Wie weit die erste schnelle Meldung vor der ersten bestätigenden lag |
 | Show reports in order | Jede Meldung mit Zeit und Quelle, wie die Story entstanden ist |
 
 Ein hellblaues Quadrat auf der Zeitachse und der Status **OBSERVED** kommen vom VectorScope-Sensor, siehe [Sensor und Karte](sensor.md). „1 echo“ markiert eine Quelle, die nur eine frühere Meldung abgeschrieben hat.
@@ -64,7 +66,8 @@ Ein Tipp auf eine Zeile öffnet AIR mit diesem Flugzeug ausgewählt und auf der 
 |---|---|
 | All | Alles, das Neueste zuerst |
 | Live match | Nur Beiträge mit blauer LIVE-Zeile, die Zahl zeigt wie viele |
-| Breaking, Aviation, OSINT, Naval, Defence, DACH, News, Official | Meldungen der Quellen dieser Kategorie, siehe [Quellen](quellen.md) |
+| Russia, Ukraine, Middle East, DACH, USA | Meldungen von Quellen aus dieser Region |
+| Aviation, Military, Disaster, OSINT, News | Meldungen von Quellen zu diesem Thema, siehe [Quellen](quellen.md) |
 | `◎ Ort ✕` | Nur Beiträge, die diesen Ort nennen. ✕ entfernt den Filter |
 
 Der gewählte Filter bleibt auf dem Gerät gespeichert.

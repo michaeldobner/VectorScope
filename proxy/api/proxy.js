@@ -37,10 +37,52 @@ const FEEDS = {
   dw: 'https://rss.dw.com/rdf/rss-en-top',
   bbc: 'https://feeds.bbci.co.uk/news/world/rss.xml',
   aljazeera: 'https://www.aljazeera.com/xml/rss/all.xml',
+  // Machine readable sources without browser access
+  gdacs: 'https://www.gdacs.org/xml/rss.xml',
+  faa: 'https://nasstatus.faa.gov/api/airport-status-information',
 };
 const FEED = /^\/feed\/([a-z0-9-]{1,32})$/;
 // Public Telegram channels of INTEL, read from the web preview t.me/s/{channel}. Fixed list, not an open proxy.
-const TELEGRAM = ['osintdefender', 'rageintel', 'warmonitors', 'insiderpaper', 'ClashReport', 'bazabazon', 'mash', 'shot_shot', 'ENews112', 'astrapress', 'ostorozhno_novosti', 'ostorozhno_moskva', 'news_sirena', 'rybar', 'wargonzo', 'dva_majors', 'favt_info', 'mchs_official', 'sledcom_press', 'vvgladkov', 'opershtab23', 'Khinshtein', 'AVBogomaz', 'gusev_36', 'razvozhaev', 'mos_sobyanin', 'meduzalive', 'mediazzzona', 'currenttime', 'agentstvonews', 'thebell_io', 'kpszsu', 'idfofficial', 'netblocks', 'DeepStateUA', 'nexta_tv', 'liveuamap', 'Middle_East_Spectator', 'abualiexpress', 'iranintl_en', 'timesofisrael', 'AJENews_Official', 'AuroraIntel', 'BNONews'];
+const TELEGRAM = [
+  'favt_info',
+  'mchs_official',
+  'sledcom_press',
+  'vvgladkov',
+  'AVBogomaz',
+  'gusev_36',
+  'razvozhaev',
+  'opershtab23',
+  'mos_sobyanin',
+  'kpszsu',
+  'idfofficial',
+  'bazabazon',
+  'mash',
+  'shot_shot',
+  'ENews112',
+  'astrapress',
+  'ostorozhno_novosti',
+  'ostorozhno_moskva',
+  'news_sirena',
+  'nexta_tv',
+  'osintdefender',
+  'rageintel',
+  'warmonitors',
+  'insiderpaper',
+  'ClashReport',
+  'liveuamap',
+  'DeepStateUA',
+  'netblocks',
+  'mediazzzona',
+  'agentstvonews',
+  'thebell_io',
+  'rybar',
+  'wargonzo',
+  'dva_majors',
+  'Middle_East_Spectator',
+  'abualiexpress',
+  'meduzalive',
+  'currenttime',
+];
 const TG = /^\/tg\/([A-Za-z0-9_]{4,32})$/;
 const CONTACT_UA = `VectorScope/0.1 (+https://github.com/michaeldobner/VectorScope; ${process.env.CONTACT || 'github.com/michaeldobner'})`;
 

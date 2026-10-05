@@ -22,7 +22,8 @@ Fast Telegram newsrooms report first, specialist media explain, leading media co
 | | |
 |---|---|
 | **Stories** | Reports from different sources about the same event become one card with status Signal, Emerging, Reported or Confirmed, a time axis of all reports and the lead time of the first unverified report |
-| **24 verified sources in four tiers** | Telegram newsrooms (OSINTdefender, RAGE X, War Monitor, Insider Paper, Clash Report), OSINT researchers, specialist media and confirming media (Tagesschau, Deutschlandfunk, DW, BBC, Al Jazeera). Each checked in the test lab |
+| **62 verified sources in seven classes** | Physical (USGS, EMSC, GDACS), primary (Rosaviatsiya, MChS, governors, Ukrainian Air Force, IDF, NWS, FAA), early (Baza, Mash, SHOT, 112, ASTRA, OSINTdefender), OSINT, specialist, perspective (Rybar, WarGonzo, Middle East Spectator) and confirming (Tagesschau, BBC, Meduza). Each checked in the test lab, each with region, language, trust and perspective |
+| **Event confidence** | Every story gets a percentage from the classes and trust of its independent sources, separate from the trust of a single source |
 | **Probe collector** | For one week a collector on GitHub Actions keeps every report every 15 minutes, so nothing scrolls away while the app is closed |
 | **VectorScope Sensor** | INTEL becomes a source itself: tankers, AWACS, reconnaissance and bombers flying together, and every squawk 7700, become reports that join the stories |
 | **Echo detector** | A channel that copies another one word for word does not count as a source |
@@ -70,6 +71,6 @@ npm test               # unit tests of all modules and repository checks
 
 ## Version
 
-Current version: **0.3.0**. See the [changelog](CHANGELOG.md).
+Current version: **0.4.0**. See the [changelog](CHANGELOG.md).
 
 Created by Michael Dobner. Licensed under the [MIT licence](../LICENSE).

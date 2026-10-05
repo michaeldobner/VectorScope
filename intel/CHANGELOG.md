@@ -4,6 +4,22 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.4.0 (2026-10-05)
+
+### Added
+* **38 more sources**, 62 in total: Russian incident channels (Baza, Mash, SHOT, 112, ASTRA, Ostorozhno), Russian authorities and governors (Rosaviatsiya, MChS, Investigative Committee, Belgorod, Bryansk, Voronezh, Sevastopol, Krasnodar, Moscow), Russian independent media (Meduza, Mediazona, Current Time, Agentstvo, The Bell), partisan military channels (Rybar, WarGonzo, Dva Mayora), Ukrainian Air Force, DeepState, IDF, Middle East Spectator, Abu Ali Express, NEXTA, Liveuamap, NetBlocks.
+* **Measuring systems:** earthquakes from USGS and EMSC, alerts from GDACS, extreme weather from the US National Weather Service, ground stops from the FAA. Their reports carry coordinates.
+* **Seven classes** instead of four: Physical, Primary, Early, OSINT, Specialist, Perspective (German: Parteiisch) and Confirming. Every source with region, language, trust and perspective.
+* **Event confidence** per story from class and trust of its independent sources.
+* **Russian and Ukrainian** places and event words are recognised in the original.
+* Filters by region (Russia, Ukraine, Middle East, DACH, USA) and topic.
+
+### Changed
+* A primary source confirms a story like a leading medium.
+
+### Fixed
+* Translation: lines that Google leaves untranslated in a batch are translated on their own.
+
 ## 0.3.0 (2026-10-05)
 
 ### Added

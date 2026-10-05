@@ -58,7 +58,7 @@ describe('stories', () => {
   it('keeps unrelated reports apart', () => {
     expect(byTitle('explosion reported in the port of Odesa').items).toHaveLength(1);
     expect(byTitle('Eurofighter nach Rumänien').items).toHaveLength(1);
-    expect(stories).toHaveLength(6);
+    expect(stories).toHaveLength(8);
   });
 
   it('derives the status from the tiers of the sources', () => {
@@ -78,8 +78,8 @@ describe('stories', () => {
 
   it('lists stories with several sources as developing', () => {
     const { developing, latest } = rankStories(stories, now);
-    expect(developing.map((s) => s.items.length)).toEqual([3, 2, 2]);
-    expect(latest).toHaveLength(3);
+    expect(developing.map((s) => s.items.length)).toEqual([4, 3, 2, 2]);
+    expect(latest).toHaveLength(4);
   });
 
   it('does not chain loosely related reports into one story', () => {

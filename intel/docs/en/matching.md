@@ -30,9 +30,13 @@ About 45 types with their usual spellings and names. Each carries the ICAO type 
 
 Russian and Iranian types (Tu-95, Su-34, A-50, Shahed) are recognised and shown, but they do not broadcast ADS-B and are never matched. Ordinary words are protected: recognition is case sensitive, so a "tornado warning" is not a Tornado, "Typhoon" counts as the Eurofighter only as "Typhoon FGR4", and "Atlas" is not the A400M.
 
+### Russian and Ukrainian
+
+Reports in Russian and Ukrainian are matched in the original. Places are known with their grammatical endings (Воронеж, Воронеже, Воронежской), event words are mapped to English by their stem (взрыв to explosion, беспилотник and БПЛА to drone, пожар to fire), so a Russian incident report and an English article meet in one story.
+
 ### Places
 
-About 100 places in English and German with a representative point and an area radius: seas and regions (Baltic Sea, Ostsee, Black Sea, Schwarzes Meer, GIUK Gap), countries, cities and air bases (Ramstein, Geilenkirchen, Rzeszów, Sigonella, Al Udeid). Names are matched on word boundaries, so "Iranian" counts as Iran but not twice. When a text names several places, the most specific one comes first.
+About 150 places in English, German and Russian with a representative point and an area radius: seas and regions (Baltic Sea, Ostsee, Black Sea, Schwarzes Meer, GIUK Gap), countries, cities and air bases (Ramstein, Geilenkirchen, Rzeszów, Sigonella, Al Udeid). Names are matched on word boundaries, so "Iranian" counts as Iran but not twice. When a text names several places, the most specific one comes first.
 
 ## Live match
 

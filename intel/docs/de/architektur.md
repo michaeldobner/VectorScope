@@ -28,6 +28,7 @@ intel/src/
 │  ├─ telegram.ts        Beiträge eines Kanals aus der Webansicht t.me/s
 │  ├─ stories.ts         Bündelung zu Stories, Echo-Detektor, Status, Vorsprung
 │  ├─ sensor.ts          eigene Beobachtungen: Luftaktivität, Squawk 7700
+│  ├─ physical.ts        USGS, EMSC, GDACS, NWS, FAA
 │  ├─ text.ts            HTML zu Text, Entities, URL-Schlüssel für Duplikate
 │  ├─ feed.ts            Laden mit Ausweichweg, Zusammenführen, Live-Flugzeuge
 │  ├─ entities.ts        Callsigns und Flugzeugtypen
@@ -71,6 +72,7 @@ Der Service Worker `public/sw.js` mit dem Speicher `vectorscope-intel-v1` hält 
 | `data/rss.test.ts` | RSS mit CDATA und Entities, Atom, WordPress-Fußzeilen, Gedankenstriche, Bluesky, Zusammenführen, Altersgrenze |
 | `data/entities.test.ts` | Callsigns, Fehltreffer, Typen, Orte auf Englisch und Deutsch, Wortgrenzen, Regeln des Live-Abgleichs |
 | `data/sources.test.ts` | Eindeutige Quellen, Proxy-Listen gleich Quellenliste, derselbe Proxy wie AIR |
+| `data/physical.test.ts` | Erdbeben, GDACS, NWS, FAA, Koordinaten als Ort, Event Confidence, der Voronezh-Fall auf Russisch |
 | `data/sensor.test.ts` | Gebiet eines Punkts, Aktivitätsgruppen, Notfälle mit Airline, Sensor in Stories, Echo-Detektor |
 | `tests/translate.test.ts` | Google-Antwort, Pakete, Reihenfolge, Ausweichweg je Text |
 | `data/stories.test.ts` | Telegram-Webansicht, Bündelung, Status, Vorsprung, Reihenfolge, keine Selbstbestätigung |

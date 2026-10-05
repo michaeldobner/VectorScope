@@ -17,13 +17,15 @@ The default view. Reports from different sources about the same event are one ca
 
 | On the card | Meaning |
 |---|---|
-| **SIGNAL** grey | One unverified source, for example a single Telegram channel |
-| **EMERGING** dashed blue | Several unverified sources |
+| **OBSERVED** light blue | Only measuring systems saw it: earthquake, ADS-B activity, squawk 7700 |
+| **SIGNAL** grey | One early or partisan source, for example a single Telegram channel |
+| **EMERGING** dashed blue | Several early or partisan sources |
 | **REPORTED** blue | An OSINT or specialist source reported it |
-| **CONFIRMED** white | A leading news medium or an authority reported it |
-| Time axis | Every report as a dot: hollow grey unverified, blue OSINT or specialist, white confirming |
-| `2 unverified · 1 specialist` | How many sources per tier |
-| `⏱ RAGE X 1 h 6 min ahead of Tagesschau` | How far the first unverified report came before the first confirming one |
+| **CONFIRMED** white | A primary source (authority, military, governor) or a leading medium reported it |
+| `87 %` | Event confidence, how sure the event is, see [Stories](stories.md#event-confidence) |
+| Time axis | Every report as a dot, shape and colour by class |
+| `1 early · 1 perspective · 1 primary` | How many independent sources per class |
+| `⏱ Baza 42 min ahead of BBC` | How far the first fast report came before the first confirming one |
 | Show reports in order | Every report with time and source, how the story came about |
 
 A light blue square on the time axis and the status **OBSERVED** come from the VectorScope sensor, see [Sensor and map](sensor.md). "1 echo" marks a source that only copied an earlier report.
@@ -64,7 +66,8 @@ A tap on a row opens AIR with this aircraft selected and followed on the map. En
 |---|---|
 | All | Everything, newest first |
 | Live match | Only posts with a blue LIVE row, the number shows how many |
-| Breaking, Aviation, OSINT, Naval, Defence, DACH, News, Official | Reports of sources in this category, see [Sources](sources.md) |
+| Russia, Ukraine, Middle East, DACH, USA | Reports of sources from this region |
+| Aviation, Military, Disaster, OSINT, News | Reports of sources on this topic, see [Sources](sources.md) |
 | `◎ Place ✕` | Only posts that name this place. ✕ removes the filter |
 
 The chosen filter is remembered on the device.

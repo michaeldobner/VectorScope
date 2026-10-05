@@ -2,96 +2,177 @@
 
 [Deutsche Version](../de/quellen.md) · [Overview](README.md)
 
-INTEL reads a fixed list of 24 sources in four tiers, from fast and unverified to confirming. Quality over quantity: every source was checked in the test lab with real internet on 2026-10-05 before it was added. The list lives in `src/data/sources.ts`, the tiers are explained in [Stories](stories.md).
+INTEL reads 62 sources in seven classes, from Russia, Ukraine, the Middle East, Europe, Germany and the USA plus global sensors. Quality over quantity: every source was checked in the test lab with real internet before it was added. The list lives in `src/data/sources.ts`.
+
+## Class and trust
+
+Every source has two fixed properties:
+
+* **Class:** what kind of origin its reports have. It says nothing about whether a single report is true.
+* **Trust** from 0 to 100: how reliable the source is in general.
+
+How sure a single event is, is a third value, the **event confidence** of a story. It is calculated from the classes and trust of all independent sources that report the event, see [Stories](stories.md). A partisan channel with trust 40 can be the first of a story that ends at 90 % once a governor and a leading medium follow.
+
+| Class | Weight | Meaning |
+|---|---|---|
+| **Physical** | 0.6 | Measuring systems: seismometers, satellites, ADS-B. They measure, they do not report. |
+| **Primary** | 0.7 | The originator itself: authorities, military, governors, airports. |
+| **Early** | 0.3 | Very fast newsrooms and incident channels, often minutes after an event, without verification. |
+| **OSINT** | 0.4 | Open source researchers with a track record. |
+| **Specialist** | 0.45 | Specialist media with an editorial process. |
+| **Perspective** | 0.2 | Fast, but clearly partisan. Valuable as an early signal, weak as confirmation. |
+| **Confirming** | 0.55 | Leading news media, the journalistic second confirmation. |
+
+In German the class Perspective is called **Parteiisch**.
+
+## Physical
+
+Measuring systems: seismometers, satellites, ADS-B. They measure, they do not report.
+
+| Source | Region | Language | Trust | Perspective | Channel |
+|---|---|---|---|---|---|
+| USGS Earthquakes | Global | English | 97 |  | API |
+| EMSC Earthquakes | Global | English | 95 |  | API |
+| GDACS | Global | English | 92 |  | API |
+
+## Primary
+
+The originator itself: authorities, military, governors, airports.
+
+| Source | Region | Language | Trust | Perspective | Channel |
+|---|---|---|---|---|---|
+| US National Weather Service | USA | English | 95 |  | API |
+| FAA Airport Status | USA | English | 95 |  | API |
+| Rosaviatsiya | Russia | Russian | 90 | Russian official | Telegram `favt_info` |
+| MChS Russia | Russia | Russian | 85 | Russian official | Telegram `mchs_official` |
+| Investigative Committee | Russia | Russian | 75 | Russian official | Telegram `sledcom_press` |
+| Governor Belgorod | Russia | Russian | 80 | Russian official | Telegram `vvgladkov` |
+| Governor Bryansk | Russia | Russian | 78 | Russian official | Telegram `AVBogomaz` |
+| Governor Voronezh | Russia | Russian | 80 | Russian official | Telegram `gusev_36` |
+| Governor Sevastopol | Russia | Russian | 78 | Russian official | Telegram `razvozhaev` |
+| Krasnodar Operations HQ | Russia | Russian | 80 | Russian official | Telegram `opershtab23` |
+| Mayor of Moscow | Russia | Russian | 80 | Russian official | Telegram `mos_sobyanin` |
+| Ukrainian Air Force | Ukraine | Ukrainian | 85 | Ukrainian official | Telegram `kpszsu` |
+| IDF | Middle East | English | 82 | Israeli official | Telegram `idfofficial` |
+| US DoD News | USA | English | 88 | US official | RSS |
+
+## Early
+
+Very fast newsrooms and incident channels, often minutes after an event, without verification.
+
+| Source | Region | Language | Trust | Perspective | Channel |
+|---|---|---|---|---|---|
+| Baza | Russia | Russian | 62 |  | Telegram `bazabazon` |
+| Mash | Russia | Russian | 55 |  | Telegram `mash` |
+| SHOT | Russia | Russian | 55 |  | Telegram `shot_shot` |
+| 112 | Russia | Russian | 55 |  | Telegram `ENews112` |
+| ASTRA | Russia | Russian | 65 | independent Russian | Telegram `astrapress` |
+| Ostorozhno, novosti | Russia | Russian | 62 |  | Telegram `ostorozhno_novosti` |
+| Ostorozhno, Moskva | Russia | Russian | 58 |  | Telegram `ostorozhno_moskva` |
+| Sirena | Russia | Russian | 58 | independent Russian | Telegram `news_sirena` |
+| NEXTA | Europe | Russian | 55 | Belarusian opposition | Telegram `nexta_tv` |
+| OSINTdefender | Global | English | 58 |  | Telegram `osintdefender` |
+| RAGE X | Global | English | 55 |  | Telegram `rageintel` |
+| War Monitor | Global | English | 50 |  | Telegram `warmonitors` |
+| Insider Paper | Global | English | 55 |  | Telegram `insiderpaper` |
+| Clash Report | Global | English | 50 |  | Telegram `ClashReport` |
+| Liveuamap | Global | English | 68 |  | Telegram `liveuamap` |
+
+## OSINT
+
+Open source researchers with a track record.
+
+| Source | Region | Language | Trust | Perspective | Channel |
+|---|---|---|---|---|---|
+| ItaMilRadar | Europe | English | 78 |  | Bluesky, RSS |
+| Bellingcat | Global | English | 88 |  | Bluesky, RSS |
+| ISW | Global | English | 78 |  | Bluesky |
+| Jakub Janovsky (Oryx) | Ukraine | English | 80 |  | Bluesky |
+| DeepState | Ukraine | Ukrainian | 75 | Ukrainian | Telegram `DeepStateUA` |
+| NetBlocks | Global | English | 88 |  | Telegram `netblocks` |
+
+## Specialist
+
+Specialist media with an editorial process.
+
+| Source | Region | Language | Trust | Perspective | Channel |
+|---|---|---|---|---|---|
+| The Aviationist | Global | English | 80 |  | Bluesky, RSS |
+| The War Zone | Global | English | 80 |  | RSS |
+| Defense News | Global | English | 82 |  | Bluesky, RSS |
+| Breaking Defense | Global | English | 82 |  | Bluesky, RSS |
+| Naval News | Global | English | 82 |  | RSS |
+| USNI News | USA | English | 85 |  | RSS |
+| hartpunkt | DACH | German | 82 |  | Bluesky, RSS |
+| Augen geradeaus! | DACH | German | 85 |  | Bluesky, RSS |
+| ESUT | DACH | German | 78 |  | RSS |
+| Mediazona | Russia | Russian | 80 | independent Russian | Telegram `mediazzzona` |
+| Agentstvo | Russia | Russian | 78 | independent Russian | Telegram `agentstvonews` |
+| The Bell | Russia | Russian | 78 | independent Russian | Telegram `thebell_io` |
+
+## Perspective
+
+Fast, but clearly partisan. Valuable as an early signal, weak as confirmation.
+
+| Source | Region | Language | Trust | Perspective | Channel |
+|---|---|---|---|---|---|
+| Rybar | Russia | Russian | 45 | pro-Russian | Telegram `rybar` |
+| WarGonzo | Russia | Russian | 40 | pro-Russian | Telegram `wargonzo` |
+| Dva Mayora | Russia | Russian | 40 | pro-Russian | Telegram `dva_majors` |
+| Middle East Spectator | Middle East | English | 40 | Iran and resistance aligned | Telegram `Middle_East_Spectator` |
+| Abu Ali Express | Middle East | Hebrew | 50 | Israeli | Telegram `abualiexpress` |
+
+## Confirming
+
+Leading news media, the journalistic second confirmation.
+
+| Source | Region | Language | Trust | Perspective | Channel |
+|---|---|---|---|---|---|
+| Tagesschau | DACH | German | 90 |  | RSS |
+| Deutschlandfunk | DACH | German | 90 |  | RSS |
+| DW | Europe | English | 86 |  | RSS |
+| BBC World | Global | English | 88 |  | RSS |
+| Al Jazeera | Middle East | English | 75 | Qatari state funded | RSS |
+| Meduza | Russia | Russian | 82 | independent Russian | Telegram `meduzalive` |
+| Current Time | Russia | Russian | 78 | US funded, independent of Moscow | Telegram `currenttime` |
 
 ## The check
 
-The script `lab/osint.mjs` runs in the test lab on GitHub Actions and checks every candidate:
-
-| Question | How |
-|---|---|
-| Does the account exist, and is it the official one? | Bluesky account search, profile with followers and number of posts |
-| Is it active? | Age of the newest post, share of own posts among the last five (reposts do not count) |
-| Can a machine read it? | RSS: HTTP status, number of items, newest date. Bluesky and Mastodon: public API. Telegram: web preview `t.me/s/{channel}`, number of posts, posts per day |
-| Can a browser read it directly? | `Access-Control-Allow-Origin` header |
-
-The result is pushed to the branch `lab-results` as `osint.md` and `osint.json`.
-
-## Breaking: Telegram newsrooms, unverified
-
-| Channel | Subscribers | Posts per day | Newest post at check |
-|---|---|---|---|
-| OSINTdefender (`osintdefender`) | 6.400 | 10 | 4 h |
-| RAGE X (`rageintel`) | 20.300 | 42 | 1 h |
-| War Monitor (`warmonitors`) | 151.000 | 24 | under 1 h |
-| Insider Paper (`insiderpaper`) | 108.000 | 55 | under 1 h |
-| Clash Report (`ClashReport`) | 110.000 | about 400 | 2 h |
-
-Telegram is the home of the fast newsrooms that are first on X as well. A public channel can be read without an account through its web preview. Only English channels are included.
-
-## Confirming: leading news media and authorities
-
-Leading news media report everything. Their reports only count when they name a callsign or aircraft type or use a word of a security and crisis vocabulary in English or German (attack, drone, evacuation, plague, Drohnenangriff, Bundeswehr and others). Book prizes and football stay out.
-
-| Source | Feed | Newest post at check |
-|---|---|---|
-| Tagesschau | ✓ | 1 h |
-| Deutschlandfunk | ✓ | under 1 h |
-| DW | ✓ | under 1 h |
-| BBC World | ✓ | under 1 h |
-| Al Jazeera | ✓ | 1 h |
-| US DoD News | ✓ | 2 d |
-
-## OSINT and specialist media
-
-| Source | Category | Bluesky | RSS | Newest post at check |
-|---|---|---|---|---|
-| ItaMilRadar | Aviation | itamilradar.com, 3.000 followers | ✓ | 1 h |
-| The Aviationist | Aviation | theaviationist.com, 6.300 | ✓ | under 1 h |
-| The War Zone | Aviation | | ✓ | 11 h |
-| Bellingcat | OSINT | bellingcat.com, 275.000 | ✓ | 1 h |
-| ISW | OSINT | thestudyofwar.bsky.social, 102.000 | | 11 h |
-| Jakub Janovsky (Oryx) | OSINT | rebel44cz.bsky.social, 30.000 | | 4 h |
-| Defense News | Defence | defensenews.bsky.social, 7.500 | ✓ | 1 h |
-| Breaking Defense | Defence | breakingdefense.com, 4.300 | ✓ | 3 d |
-| Naval News | Naval | | ✓ | 3 h |
-| USNI News | Naval | | ✓ | 2 d |
-| hartpunkt | DACH | hartpunkt.bsky.social, 1.000 | ✓ | under 1 h |
-| Augen geradeaus! | DACH | wiegold.de, 16.000 | ✓ | 3 h |
-| ESUT | DACH | | ✓ | 1 h |
-
-Naval News also has a Bluesky account (navalnews.com, 15.000 followers), but its feed answered with HTTP 400 in the live test. INTEL reads its RSS feed only.
+The script `lab/osint.mjs` runs in the test lab on GitHub Actions and checks every candidate: does the channel or feed exist, is it active (newest post, posts per day), can it be read without an account, also through the proxy, and in which script it writes. The result is pushed to the branch `lab-results` as `osint.md`.
 
 ## Rejected candidates
 
 | Candidate | Reason |
 |---|---|
-| OSINTdefender on Bluesky | Official account without posts, the active accounts are unofficial mirrors. Included through its Telegram channel instead |
-| Telegram: Faytuks News, BNO News, OSINT Updates, OSIntOps, Aurora Intel, Spectator Index | Silent for weeks to years on Telegram |
-| Telegram: warragex | 15 subscribers, not the channel of RAGE X |
-| Telegram: Disclose.tv | Two posts a day, sensational |
-| Telegram: NEXTA Live | Russian language |
-| Telegram: Visegrad24 | No public channel |
-| GeoConfirmed | Last post 11 days old |
-| Liveuamap | Last post 4 days old, no RSS |
-| OSINTtechnical, Intel Crab, Faytuks News, Tyler Rogoway, Michael Kofman, Aircraft Spots | Silent for months |
-| ELINT News | 20 posts in total |
-| Oryx | Blog feed almost two years old. Jakub Janovsky, one of the authors, is included instead |
-| Scramble, ISW website, NATO, Bundeswehr, Janes, Aviation Week, FlugRevue | No working feed (403, 404 or HTML) |
-| Mastodon | Only Bellingcat is active there, already included through Bluesky and RSS |
-| GDELT | Rate limited during the check, not decided yet |
+| Governor Kursk (`Khinshtein`) | No public channel |
+| Iran International English, Times of Israel on Telegram | Silent for years, or a placeholder channel |
+| Aurora Intel, BNO News, Faytuks News on Telegram | Silent for months |
+| OSINT Updates, OSIntOps, Spectator Index | Silent for weeks to years |
+| warragex | 15 subscribers, not the channel of RAGE X |
+| Visegrad24 | No public channel |
+| Disclose.tv | Two posts a day, sensational |
+| Al Jazeera English on Telegram | Same content as the Al Jazeera feed |
+| OSINTdefender on Bluesky | Official account without posts, included through Telegram |
+| GeoConfirmed, OSINTtechnical, Intel Crab, Tyler Rogoway, Michael Kofman, Aircraft Spots | Silent or nearly silent |
+| Scramble, ISW website, NATO, Bundeswehr, Janes, Aviation Week, FlugRevue | No working feed |
+| GDELT | Rate limited for shared servers like GitHub, again on 2026-10-05 |
+| NASA FIRMS | Needs a personal key, planned |
 
 ## Channels
 
 | Channel | Access | Interval |
 |---|---|---|
-| Telegram | Through the proxy route `/tg/{channel}`, cached one minute at the edge. Text posts only, media without text is skipped | Every five minutes |
-| Bluesky | Directly from the browser, `public.api.bsky.app` allows it. Own posts only, no replies, no reposts | Every five minutes |
-| RSS | Through the proxy route `/feed/{id}`, because most publishers do not allow browser access. Cached five minutes at the edge. If the proxy fails, INTEL tries the feed directly | Every five minutes |
+| Telegram | Through the proxy route `/tg/{channel}`, cached one minute at the edge. Text posts only | Every five minutes |
+| RSS | Through the proxy route `/feed/{id}`. If the proxy fails, INTEL tries the feed directly | Every five minutes |
+| Bluesky | Directly from the browser. Own posts only, no replies, no reposts | Every five minutes |
+| USGS, EMSC, NWS | Directly from the browser, they allow it | Every five minutes |
+| GDACS, FAA | Through the proxy route `/feed/{id}` | Every five minutes |
+
+Reports in Russian, Ukrainian and Hebrew are shown in their language or translated with **DE**. Places and event words in Russian and Ukrainian are recognised in the original, see [Matching](matching.md).
 
 ## Adding a source
 
 1. Add the candidate to `lab/osint.mjs` and let the lab check it.
-2. Add it to `SOURCES` in `src/data/sources.ts`.
+2. Add it to `SOURCES` in `src/data/sources.ts` with class, region, language, trust and, where it matters, perspective.
 3. For an RSS feed add the same id and address to `FEEDS` in `proxy/api/proxy.js`, for a Telegram channel its name to `TELEGRAM`. A test fails if the lists differ.
 4. Update this page in both languages.

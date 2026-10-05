@@ -2,12 +2,12 @@
 import { useSyncExternalStore } from 'react';
 import type { Aircraft } from '../../../air/src/data/types';
 import { demoItems, demoLive } from '../data/demo';
-import { extractEntities, isCrisisRelated, type Entities } from '../data/entities';
+import { entitiesOf, isCrisisRelated, type Entities } from '../data/entities';
 import { loadCollected, loadLive, loadSource, mergeItems, pool, type SourceStatus } from '../data/feed';
 import { matchLive } from '../data/match';
 import { detectAll } from '../data/sensor';
 import { buildStories, type Story } from '../data/stories';
-import { SOURCES, sourceById, type Category } from '../data/sources';
+import { SOURCES, sourceById } from '../data/sources';
 import type { EnrichedItem, Item } from '../data/types';
 
 const PREFS_KEY = 'vectorscope.intel.v1';
@@ -15,7 +15,8 @@ const CACHE_KEY = 'vectorscope.intel.cache.v1';
 const FEED_EVERY_MS = 5 * 60_000;
 const LIVE_EVERY_MS = 2 * 60_000;
 
-export type Filter = 'all' | 'live' | Category;
+/** all, live (strong live match), r:<region> or c:<category>. */
+export type Filter = string;
 export type View = 'stories' | 'wire' | 'map';
 /** Filter by one of the three pulse tiles above the stories. */
 export type Pulse = 'hour' | 'unverified' | 'developing' | null;
@@ -68,6 +69,8 @@ function writeJson(key: string, value: unknown) {
 
 const storedPrefs = readJson<Partial<Prefs>>(PREFS_KEY);
 const prefs: Prefs = { view: 'stories', pulse: null, german: false, filter: 'all', place: null, lastSeen: 0, ...storedPrefs };
+// Filters of earlier versions ("aviation", "breaking") become "all".
+if (!/^(all|live|[rc]:[a-z]+)$/.test(prefs.filter)) prefs.filter = 'all';
 
 let state: IntelState = {
   demo,
@@ -102,7 +105,7 @@ function enrich(items: Item[], live: Aircraft[], now: number): EnrichedItem[] {
     const text = `${item.title}\n${item.text}`;
     let entities = entityCache.get(item.id);
     if (!entities) {
-      entities = extractEntities(text);
+      entities = entitiesOf(item);
       entityCache.set(item.id, entities);
     }
     // General news media count only with security and crisis topics, see isCrisisRelated.
@@ -147,7 +150,8 @@ export async function refreshFeed() {
   const sources: Record<string, SourceStatus> = {};
   SOURCES.forEach((s, i) => (sources[s.id] = results[i].status));
   const known = new Set(SOURCES.map((s) => s.id));
-  const merged = mergeItems([...results.flatMap((r) => r.items), ...(collected?.items ?? []).filter((i) => known.has(i.sourceId))], now);
+  // Earlier reports stay: a channel shows only its last posts, and an item that scrolled out is still news.
+  const merged = mergeItems([...rawItems.filter((i) => known.has(i.sourceId)), ...results.flatMap((r) => r.items), ...(collected?.items ?? []).filter((i) => known.has(i.sourceId))], now);
   // Keep what we had if everything failed, for example offline.
   if (merged.length) rawItems = merged;
   writeJson(CACHE_KEY, { at: now, items: rawItems.slice(0, 300) });

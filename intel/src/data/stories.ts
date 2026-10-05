@@ -1,6 +1,6 @@
 // Stories: items from different sources that report the same event, grouped by shared places,
 // callsigns, types and rare words within 36 hours of the first report. Each story gets a status from the tiers of its sources.
-import { sourceById, type Tier } from './sources';
+import { sourceById, type Source, type Tier } from './sources';
 import type { EnrichedItem } from './types';
 
 export type Status = 'observed' | 'signal' | 'emerging' | 'reported' | 'confirmed';
@@ -17,6 +17,8 @@ export interface Story {
   status: Status;
   sources: string[];
   tiers: Record<Tier, number>;
+  /** Event confidence 0 to 1 from the independent sources, see eventConfidence. */
+  confidence: number;
   first: number;
   last: number;
   /** How long the first unverified report came before the first confirming one, in ms. */
@@ -38,6 +40,50 @@ const SYNONYM: Record<string, string> = {
   airstrikes: 'airstrike', drones: 'drone', missiles: 'missile', attacks: 'attack', killed: 'killed', dead: 'killed',
 };
 
+/**
+ * Russian and Ukrainian event stems mapped to English, so "Взрыв в Воронеже" and "Explosion in Voronezh" meet.
+ * Stems, because these languages bend every word (взрыв, взрыва, взрывом, взрывы).
+ */
+const STEMS: [RegExp, string][] = [
+  [/^(взрыв|вибух)/, 'explosion'],
+  [/^(пожар|возгоран|пожеж)/, 'fire'],
+  [/^(беспилот|бпла|дрон|бпла|бпл)/, 'drone'],
+  [/^(ракет)/, 'missile'],
+  [/^(атак|удар)/, 'attack'],
+  [/^(обстрел|обстріл)/, 'shelling'],
+  [/^(аэропорт|аеропорт)/, 'airport'],
+  [/^(ограничен|обмежен)/, 'restrictions'],
+  [/^(самолет|самолёт|літак)/, 'aircraft'],
+  [/^(вертолет|вертолёт|гелікоптер)/, 'helicopter'],
+  [/^(эвакуац|евакуац)/, 'evacuation'],
+  [/^(землетрясен|землетрус)/, 'earthquake'],
+  [/^(чум)/, 'plague'],
+  [/^(задержан|арест)/, 'arrest'],
+  [/^(погиб|убит|загинул)/, 'killed'],
+  [/^(ранен|пострадав|поранен)/, 'injured'],
+  [/^(тревог|тривог)/, 'alert'],
+  [/^(пво|сбит|збит|перехват)/, 'intercepted'],
+  [/^(нпз)/, 'refinery'],
+  [/^(авари)/, 'crash'],
+  [/^(теракт)/, 'terror'],
+  [/^(мобилизац)/, 'mobilization'],
+  [/^(флот)/, 'fleet'],
+  [/^(корабл)/, 'ship'],
+  [/^(танкер)/, 'tanker'],
+];
+
+const RU_STOP = new Set(
+  'что это для как при все его она они был была были будет также после около более уже году года может если или том так где только сообщили сообщает сообщил данным время сегодня ночью утром вечером области район района города город человек заявил заявили местные жители видео фото подписаться прислать новости срочно'.split(' '),
+);
+
+function normalise(raw: string): string {
+  if (/\p{Script=Cyrillic}/u.test(raw)) {
+    for (const [re, en] of STEMS) if (re.test(raw)) return en;
+    return RU_STOP.has(raw) ? '' : raw.slice(0, 6);
+  }
+  return SYNONYM[raw] ?? raw.replace(/(?<=\p{L}{3}[^s])s$/u, '');
+}
+
 const STOP = new Set(
   (
     'about after again against also amid among another around back been before being between both called could during each even every first from have having here into just last later like made make many more most much must near never news next only other over part said says some still such than that their them then there these they this those three through time today under until very were what when where which while will with within without would year years your ' +
@@ -53,12 +99,13 @@ const STOP = new Set(
  */
 export function keywords(item: EnrichedItem): Set<string> {
   const out = new Set<string>();
-  for (const p of item.entities.places) out.add(`@${p.name}`);
+  // A city or base (small area) is as specific as a word, a country or sea is not.
+  for (const p of item.entities.places) out.add(p.radiusKm <= 150 ? `@!${p.name}` : `@${p.name}`);
   for (const c of item.entities.callsigns) out.add(`#${c.callsign}`);
   for (const t of item.entities.types) out.add(`%${t.label}`);
   for (const raw of item.title.toLowerCase().match(/\p{L}[\p{L}\p{N}/-]{2,}/gu) ?? []) {
-    const w = SYNONYM[raw] ?? raw.replace(/(?<=\p{L}{3}[^s])s$/u, '');
-    if (!STOP.has(w) && !STOP.has(raw)) out.add(w);
+    const w = normalise(raw);
+    if (w && !STOP.has(w) && !STOP.has(raw)) out.add(w);
   }
   return out;
 }
@@ -84,7 +131,7 @@ export function buildStories(items: EnrichedItem[]): Story[] {
       // Tokens that appear in many reports (navy, pentagon, ukraine) say nothing about the event.
       if ((df.get(t) ?? 1) > Math.max(4, n * 0.025)) continue;
       sum += weight(t, df, n) / 2.5;
-      if (!/^[@#%]/.test(t)) words++;
+      if (!/^[@#%]/.test(t) || t.startsWith('@!')) words++;
     }
     // Two shared headline words, or a callsign plus one word.
     return words >= 2 || (words >= 1 && sum >= LINK_SCORE * 1.5) ? sum : 0;
@@ -112,7 +159,38 @@ export function buildStories(items: EnrichedItem[]): Story[] {
   return groups.map((g) => toStory(g.map((i) => items[i])));
 }
 
-const RANK: Record<Tier, number> = { confirm: 4, press: 3, osint: 2, breaking: 1, sensor: 0 };
+const RANK: Record<Tier, number> = { confirming: 6, primary: 5, specialist: 4, osint: 3, early: 2, perspective: 1, physical: 0 };
+
+/** How much one source of a class adds to the confidence of an event, before its trust is applied. */
+export const CLASS_WEIGHT: Record<Tier, number> = {
+  physical: 0.6,
+  primary: 0.7,
+  confirming: 0.55,
+  specialist: 0.45,
+  osint: 0.4,
+  early: 0.3,
+  perspective: 0.2,
+};
+
+/**
+ * Event confidence: every independent source lowers the chance that the event is not real by
+ * class weight times source trust. A second source of the same class counts 60 %, a third 36 %,
+ * because voices of one kind tend to repeat each other. Agreement across classes adds a bonus:
+ * 10 % of the remaining doubt for two classes, 25 % for three or more.
+ */
+export function eventConfidence(sources: Source[]): number {
+  const perClass = new Map<Tier, number>();
+  let doubt = 1;
+  for (const s of [...sources].sort((a, b) => b.trust - a.trust)) {
+    const k = perClass.get(s.tier) ?? 0;
+    perClass.set(s.tier, k + 1);
+    doubt *= 1 - CLASS_WEIGHT[s.tier] * (s.trust / 100) * 0.6 ** k;
+  }
+  let confidence = 1 - doubt;
+  if (perClass.size >= 3) confidence += (1 - confidence) * 0.25;
+  else if (perClass.size === 2) confidence += (1 - confidence) * 0.1;
+  return Math.min(0.99, confidence);
+}
 
 const wordsOf = (i: EnrichedItem) => new Set(`${i.title} ${i.text}`.toLowerCase().match(/\p{L}[\p{L}\p{N}]{2,}/gu) ?? []);
 
@@ -131,7 +209,7 @@ export function isEcho(a: EnrichedItem, b: EnrichedItem): boolean {
 
 function toStory(list: EnrichedItem[]): Story {
   const items = [...list].sort((a, b) => a.time - b.time);
-  const tierOf = (i: EnrichedItem) => sourceById(i.sourceId)?.tier ?? 'breaking';
+  const tierOf = (i: EnrichedItem): Tier => sourceById(i.sourceId)?.tier ?? 'early';
   // Echo detector: a later report of another source that copies an earlier one is not an independent source.
   const echoItems: string[] = [];
   items.forEach((b, j) => {
@@ -139,24 +217,27 @@ function toStory(list: EnrichedItem[]): Story {
   });
   const independent = items.filter((i) => !echoItems.includes(i.id));
   const sources = [...new Set(items.map((i) => i.sourceId))];
-  const independentSources = new Set(independent.map((i) => i.sourceId));
-  const echoes = sources.filter((s) => !independentSources.has(s));
-  const tiers: Record<Tier, number> = { sensor: 0, breaking: 0, osint: 0, press: 0, confirm: 0 };
-  for (const s of independentSources) tiers[sourceById(s)?.tier ?? 'breaking']++;
+  const independentSources = [...new Set(independent.map((i) => i.sourceId))];
+  const echoes = sources.filter((s) => !independentSources.includes(s));
+  const tiers: Record<Tier, number> = { physical: 0, primary: 0, early: 0, osint: 0, specialist: 0, perspective: 0, confirming: 0 };
+  const known = independentSources.map((id) => sourceById(id)).filter((s): s is Source => !!s);
+  for (const s of known) tiers[s.tier]++;
   const lead = [...independent].sort((a, b) => RANK[tierOf(b)] - RANK[tierOf(a)] || a.time - b.time)[0];
-  const reporters = independentSources.size - tiers.sensor;
-  const status: Status = tiers.confirm
-    ? 'confirmed'
-    : tiers.press || tiers.osint
-      ? 'reported'
-      : reporters >= 2
-        ? 'emerging'
-        : reporters === 1
-          ? 'signal'
-          : 'observed';
-  // Lead time: the first unverified report or own sensor observation against the first confirming or specialist one.
-  const firstFast = independent.find((i) => tierOf(i) === 'breaking' || tierOf(i) === 'sensor');
-  const firstSlow = independent.find((i) => tierOf(i) === 'confirm') ?? independent.find((i) => tierOf(i) === 'press');
+  const reporters = independentSources.length - tiers.physical;
+  const status: Status =
+    tiers.confirming || tiers.primary
+      ? 'confirmed'
+      : tiers.specialist || tiers.osint
+        ? 'reported'
+        : reporters >= 2
+          ? 'emerging'
+          : reporters === 1
+            ? 'signal'
+            : 'observed';
+  // Lead time: the first fast report or measurement against the first confirming or specialist one.
+  const fast = new Set<Tier>(['early', 'perspective', 'physical']);
+  const firstFast = independent.find((i) => fast.has(tierOf(i)));
+  const firstSlow = independent.find((i) => tierOf(i) === 'confirming') ?? independent.find((i) => tierOf(i) === 'specialist');
   const leadMs = firstFast && firstSlow && firstSlow.time > firstFast.time ? firstSlow.time - firstFast.time : null;
   return {
     id: items[0].id,
@@ -167,6 +248,7 @@ function toStory(list: EnrichedItem[]): Story {
     status,
     sources,
     tiers,
+    confidence: eventConfidence(known),
     first: items[0].time,
     last: items[items.length - 1].time,
     leadMs,

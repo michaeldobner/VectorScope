@@ -17,6 +17,11 @@ export interface Item {
   time: number;
   /** Epoch ms when the collector first saw it, if it came through the collector. */
   seen?: number;
+  /** Coordinates of the event, for physical sensors (earthquakes, disaster alerts). */
+  lat?: number;
+  lon?: number;
+  /** Name of the area at these coordinates, as the sensor names it. */
+  area?: string;
 }
 
 export interface Match {

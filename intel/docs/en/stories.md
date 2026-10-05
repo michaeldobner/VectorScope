@@ -4,29 +4,40 @@
 
 A single post says little. Five independent sources that report the same thing within an hour say a lot. INTEL therefore groups reports from different sources into **stories** and shows how far each story is confirmed. The logic is in `src/data/stories.ts`.
 
-## Tiers of the sources
+## Classes of the sources
 
-Every source has a tier that says how far its report carries.
+Every source belongs to one of seven classes, see [Sources](sources.md) for the full list:
 
-| Tier | Shown as | Sources | Meaning |
-|---|---|---|---|
-| Breaking | Unverified, hollow grey dot | Telegram newsrooms: OSINTdefender, RAGE X, War Monitor, Insider Paper, Clash Report | Fast, often minutes after an event, without verification |
-| OSINT | OSINT, blue dot | ItaMilRadar, Bellingcat, ISW, Jakub Janovsky | Open source researchers with a track record |
-| Specialist | Specialist, blue dot | The Aviationist, The War Zone, Defense News, Naval News, hartpunkt and others | Specialist media with an editorial process |
-| Confirming | Confirming, white dot | Tagesschau, Deutschlandfunk, DW, BBC, Al Jazeera, US DoD | Authorities and leading news media |
-| Sensor | Sensor, light blue square | VectorScope itself | Activity and emergencies seen in live flight data, see [Sensor and map](sensor.md) |
+| Class | Time axis | Examples |
+|---|---|---|
+| Physical | light blue square | USGS, EMSC, GDACS, VectorScope Sensor |
+| Primary | white dot with blue ring | Rosaviatsiya, MChS, governors, Ukrainian Air Force, IDF, NWS, FAA |
+| Early | hollow grey dot | Baza, Mash, SHOT, 112, ASTRA, OSINTdefender, RAGE X |
+| OSINT | blue dot | Bellingcat, ISW, DeepState, NetBlocks |
+| Specialist | blue dot | The Aviationist, The War Zone, Mediazona |
+| Perspective (DE: Parteiisch) | dashed grey dot | Rybar, WarGonzo, Dva Mayora, Middle East Spectator |
+| Confirming | white dot | Tagesschau, BBC, DW, Meduza, Current Time |
 
 ## Status of a story
 
 | Status | Condition |
 |---|---|
-| **Observed** | Only the VectorScope sensor saw it, nobody reported it yet |
-| **Signal** | One unverified source |
-| **Emerging** | Several unverified sources, nobody else yet |
+| **Observed** | Only measuring systems saw it, nobody reported it yet |
+| **Signal** | One early or partisan source |
+| **Emerging** | Several early or partisan sources, nobody else yet |
 | **Reported** | At least one OSINT or specialist source |
-| **Confirmed** | At least one confirming source |
+| **Confirmed** | At least one primary or confirming source |
 
-There are no percentages on purpose. A figure like "72 %" would suggest a precision that nothing measures yet. The status says exactly who reported, the numbers on the card say how many.
+## Event confidence
+
+Next to the status every card shows a percentage: how sure the event is. It is calculated from the independent sources of the story, echoes left out:
+
+1. Every source lowers the remaining doubt by its **class weight times its trust**. Weights: primary 0,7, physical 0,6, confirming 0,55, specialist 0,45, OSINT 0,4, early 0,3, perspective 0,2.
+2. A second source of the same class counts 60 %, a third 36 %: voices of one kind tend to repeat each other.
+3. Agreement across classes removes another 10 % of the remaining doubt for two classes, 25 % for three or more.
+4. The value never exceeds 99 %.
+
+Example: an incident channel reports an explosion in Voronezh (about 15 %), a partisan channel follows (about 30 %), the governor confirms (about 75 %), a leading medium reports (87 %). This exact case is a test in `data/physical.test.ts`. The weights are a starting point. After the probe week they are checked against how often each class was right.
 
 ## How reports are grouped
 
@@ -43,13 +54,14 @@ Telegram channels often copy each other. A later report of another source that s
 
 ## Lead time
 
-When a story has an unverified report and a later confirming or specialist one, the card shows how far the first was ahead, for example "RAGE X 1 h 6 min ahead of Tagesschau". This is the measurement the probe collector is about: are the fast channels really ahead, and by how much.
+When a story has an early, partisan or measured report and a later confirming or specialist one, the card shows how far the first was ahead, for example "RAGE X 1 h 6 min ahead of Tagesschau". This is the measurement the probe collector is about: are the fast channels really ahead, and by how much.
 
 ## Card
 
 | Element | Meaning |
 |---|---|
-| Status chip | Signal, Emerging, Reported, Confirmed |
+| Status chip | Observed, Signal, Emerging, Reported, Confirmed |
+| Percentage | Event confidence |
 | Headline | Of the most trustworthy report, the earliest at that tier |
 | Time axis | Every report as a dot from the first to the last, coloured by tier |
 | Ladder | How many sources per tier, and the lead time |

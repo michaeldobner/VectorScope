@@ -29,6 +29,13 @@ export function demoItems(now: number): Item[] {
     item('demo-fast-b', 0.4, 'Reports: C-17 Globemaster arrivals at Rzeszów, airspace restrictions', 'Demo item. Ramstein departures overnight.'),
     // One unverified channel: signal
     item('demo-fast-a', 0.15, 'Large explosion reported in the port of Odesa', 'Demo item. No official statement yet.'),
+    // The Voronezh case: Russian incident channel, partisan channel, governor, then a leading medium
+    item('demo-ru', 0.9, 'Взрыв и пожар на НПЗ в Воронеже после атаки БПЛА', 'Демо. Очевидцы сообщают о громком взрыве.'),
+    item('demo-side', 0.85, 'Атака беспилотников на Воронеж, горит НПЗ', 'Демо. По нашим данным, работает ПВО.'),
+    item('demo-primary', 0.75, 'Губернатор: в Воронеже отражена атака БПЛА, пожар на промышленном объекте', 'Демо. Пострадавших нет.'),
+    item('demo-confirm', 0.2, 'Drone attack causes fire at oil refinery in Voronezh', 'Demo item. Regional authorities report no casualties.', 'rss'),
+    // A physical measurement
+    { ...item('demo-quake', 0.5, 'Earthquake M6.1 near Izmir, Turkey', 'Demo item. Depth 12 km.', 'rss'), channel: 'sensor', lat: 38.4, lon: 27.1, area: 'Izmir, Turkey' },
     // German specialist press
     item('demo-de', 2.5, 'Luftwaffe verlegt Eurofighter nach Rumänien', 'Demo-Beitrag. Vier Eurofighter übernehmen das Air Policing am Schwarzen Meer.', 'rss'),
     item('demo-press', 30, 'Analysis: tanker activity over the Mediterranean', 'Demo item. Open source flight data shows a rise in KC-46 and A330 MRTT sorties over the past week.', 'rss'),

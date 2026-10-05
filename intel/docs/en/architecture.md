@@ -28,6 +28,7 @@ intel/src/
 │  ├─ telegram.ts        posts of a channel from the web preview t.me/s
 │  ├─ stories.ts         grouping into stories, echo detector, status, lead time
 │  ├─ sensor.ts          own observations: air activity, squawk 7700
+│  ├─ physical.ts        USGS, EMSC, GDACS, NWS, FAA
 │  ├─ text.ts            HTML to text, entities, URL key for deduplication
 │  ├─ feed.ts            loading with fallback, merging, live aircraft
 │  ├─ entities.ts        callsigns and aircraft types
@@ -71,6 +72,7 @@ Service worker `public/sw.js` with cache `vectorscope-intel-v1` keeps the app sh
 | `data/rss.test.ts` | RSS with CDATA and entities, Atom, WordPress footers, dashes, Bluesky parsing, merging, age limit |
 | `data/entities.test.ts` | Callsigns, false positives, types, places in English and German, word boundaries, live match rules |
 | `data/sources.test.ts` | Unique sources, proxy lists equal source list, same proxy as AIR |
+| `data/physical.test.ts` | Earthquakes, GDACS, NWS, FAA, coordinates as place, event confidence, the Voronezh case in Russian |
 | `data/sensor.test.ts` | Area of a point, activity groups, emergencies with airline, sensor in stories, echo detector |
 | `tests/translate.test.ts` | Google answer, chunks, order, fallback per text |
 | `data/stories.test.ts` | Telegram web preview, grouping, status, lead time, order, no self confirmation |

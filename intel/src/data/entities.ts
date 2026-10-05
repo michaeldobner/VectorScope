@@ -130,6 +130,15 @@ export function findTypes(text: string): TypeEntity[] {
   return TYPE_RE.filter((t) => t.re.test(text)).map(({ label, codes }) => ({ label, codes }));
 }
 
+/** Entities of an item: from its text, plus the coordinates a physical sensor gives. */
+export function entitiesOf(item: { title: string; text: string; lat?: number; lon?: number; area?: string }): Entities {
+  const e = extractEntities(`${item.title}\n${item.text}`);
+  if (item.lat != null && item.lon != null && Number.isFinite(item.lat) && Number.isFinite(item.lon)) {
+    e.places.unshift({ name: item.area ?? 'Event location', lat: item.lat, lon: item.lon, radiusKm: 100 });
+  }
+  return e;
+}
+
 export function extractEntities(text: string): Entities {
   return {
     callsigns: findCallsigns(text),
@@ -145,8 +154,8 @@ export function extractEntities(text: string): Entities {
 const CRISIS =
   /(?<![\p{L}])(military|army|armed forces|troops|soldiers?|navy|naval|air ?force|fighter jets?|warplanes?|warships?|drones?|missiles?|rockets?|air ?strikes?|strikes? on|attacks?|attacked|explosions?|blasts?|shelling|war|invasion|ceasefire|terror\p{L}*|hostages?|evacuat\p{L}*|earthquake|tsunami|outbreak|plague|epidemic|pandemic|nuclear|airspace|shot down|intercept\p{L}*|coup|sabotage|cyber ?attack|nato|pentagon|bundeswehr|luftwaffe|marine|milit\p{L}*|armee|soldat\p{L}*|truppen|kampfjets?|drohnen?|raketen?|luftangriff\p{L}*|angriff\p{L}*|explosion\p{L}*|krieg\p{L}*|waffenruhe|anschlag\p{L}*|geisel\p{L}*|evakuier\p{L}*|erdbeben|ausbruch|pest|seuche|atom\p{L}*|luftraum|abgeschossen|abfangen|putsch|sabotage)(?![\p{L}])/iu;
 
-// German builds compounds (Drohnenangriff, Raketenbeschuss), so these stems count anywhere in a word.
-const CRISIS_DE = /(drohne|rakete|angriff|beschuss|explosion|krieg|anschlag|evakuier|soldat|truppe|kampfjet|militär|bundeswehr|luftwaffe|geisel|erdbeben|seuche|luftraum|abgeschossen|putsch|terror)/i;
+// German builds compounds (Drohnenangriff, Raketenbeschuss), Russian bends words: these stems count anywhere in a word.
+const CRISIS_DE = /(drohne|rakete|angriff|beschuss|explosion|krieg|anschlag|evakuier|soldat|truppe|kampfjet|militär|bundeswehr|luftwaffe|geisel|erdbeben|seuche|luftraum|abgeschossen|putsch|terror|взрыв|пожар|беспилот|бпла|дрон|ракет|атак|обстрел|эвакуац|землетрясен|теракт|задержан|войн|военн|армия|армии|минобороны|аэропорт|ограничени|самолет|вертолет|чум|пво|сбит|мобилизац|фсб)/i;
 
 export function isCrisisRelated(text: string, entities: Entities): boolean {
   return entities.callsigns.length > 0 || entities.types.length > 0 || CRISIS.test(text) || CRISIS_DE.test(text);

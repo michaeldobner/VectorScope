@@ -4,6 +4,13 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.7.0 (2026-10-05)
+
+### Added
+* Proxy serves 38 Telegram channels and the GDACS and FAA feeds for INTEL.
+* Test lab checks Telegram candidates for language and machine readable sources.
+* Module INTEL 0.4.0, see its [changelog](intel/CHANGELOG.md).
+
 ## 0.6.0 (2026-10-05)
 
 ### Added

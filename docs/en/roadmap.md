@@ -14,6 +14,8 @@ VectorScope grows module by module. Everything runs on GitHub Pages and the exis
 | 4 | INTEL | Telegram newsrooms, confirming media, stories with status and lead time | Done in INTEL 0.2.0 |
 | 5 | INTEL | Probe collector for one week, then evaluation: volume, speed, lead time, noise per source. Decision on a permanent collector | Running until 12 October 2026 |
 | 6 | INTEL | Own sensor in live flight data, echo detector, situation map, German translation | Done in INTEL 0.3.0 |
+| 7 | INTEL | 62 sources in seven classes with region, language, trust and perspective, event confidence, Russian recognition, measuring systems | Done in INTEL 0.4.0 |
+| 8 | INTEL | Same depth for Ukraine, Middle East, USA and Europe, NASA FIRMS (needs a key), forward graph of Telegram reposts | Next |
 
 ## Next
 

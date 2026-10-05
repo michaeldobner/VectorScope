@@ -4,6 +4,13 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.7.0 (2026-10-05)
+
+### Neu
+* Der Proxy liefert 38 Telegram-Kanäle sowie die Feeds von GDACS und FAA für INTEL.
+* Das Test-Labor prüft Telegram-Kandidaten auch auf ihre Sprache und prüft maschinenlesbare Quellen.
+* Modul INTEL 0.4.0, siehe sein [Changelog](intel/CHANGELOG.de.md).
+
 ## 0.6.0 (2026-10-05)
 
 ### Neu

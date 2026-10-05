@@ -4,6 +4,19 @@
 
 INTEL does not only read what others report. It watches the live flight data itself and reports what it sees as the source **VectorScope Sensor**. The logic is in `src/data/sensor.ts`, the map in `src/ui/IntelMap.tsx`.
 
+## Measuring systems
+
+Besides its own sensor INTEL reads measuring systems and machine readable warnings (`src/data/physical.ts`):
+
+| Source | What | Filter |
+|---|---|---|
+| USGS, EMSC | Earthquakes worldwide | Magnitude 5 and more |
+| GDACS | Floods, cyclones, earthquakes, volcanoes, fires (UN and EU) | Orange and red alerts |
+| US National Weather Service | Tornado, hurricane, tsunami and similar warnings | Severity Extreme |
+| FAA | US airports | Ground stops |
+
+Their reports carry coordinates, so they appear on the map at the exact place and meet reports about the same event.
+
 ## Air activity
 
 Military aircraft from `/v2/mil` of adsb.lol are checked every two minutes. Aircraft of these roles count, by their ICAO type designator in the catalogue of AIR:

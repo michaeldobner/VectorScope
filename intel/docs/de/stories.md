@@ -4,29 +4,40 @@
 
 Ein einzelner Beitrag sagt wenig. Fünf unabhängige Quellen, die innerhalb einer Stunde dasselbe melden, sagen viel. INTEL bündelt deshalb Meldungen verschiedener Quellen zu **Stories** und zeigt, wie weit jede Story bestätigt ist. Die Logik steht in `src/data/stories.ts`.
 
-## Stufen der Quellen
+## Klassen der Quellen
 
-Jede Quelle hat eine Stufe, die sagt, wie weit ihre Meldung trägt.
+Jede Quelle gehört zu einer von sieben Klassen, die vollständige Liste steht unter [Quellen](quellen.md):
 
-| Stufe | Darstellung | Quellen | Bedeutung |
-|---|---|---|---|
-| Breaking | Unverified, hohler grauer Punkt | Telegram-Eilmelder: OSINTdefender, RAGE X, War Monitor, Insider Paper, Clash Report | Schnell, oft Minuten nach einem Ereignis, ohne Prüfung |
-| OSINT | OSINT, blauer Punkt | ItaMilRadar, Bellingcat, ISW, Jakub Janovsky | Open-Source-Rechercheure mit Erfahrung |
-| Fachmedium | Specialist, blauer Punkt | The Aviationist, The War Zone, Defense News, Naval News, hartpunkt und weitere | Fachmedien mit Redaktion |
-| Bestätigend | Confirming, weißer Punkt | Tagesschau, Deutschlandfunk, DW, BBC, Al Jazeera, US DoD | Behörden und Leitmedien |
-| Sensor | Sensor, hellblaues Quadrat | VectorScope selbst | Aktivität und Notfälle in den Live-Flugdaten, siehe [Sensor und Karte](sensor.md) |
+| Klasse | Zeitachse | Beispiele |
+|---|---|---|
+| Messung | hellblaues Quadrat | USGS, EMSC, GDACS, VectorScope Sensor |
+| Primär | weißer Punkt mit blauem Ring | Rosaviatsiya, MChS, Gouverneure, ukrainische Luftwaffe, IDF, NWS, FAA |
+| Früh | hohler grauer Punkt | Baza, Mash, SHOT, 112, ASTRA, OSINTdefender, RAGE X |
+| OSINT | blauer Punkt | Bellingcat, ISW, DeepState, NetBlocks |
+| Fachmedium | blauer Punkt | The Aviationist, The War Zone, Mediazona |
+| Parteiisch | gestrichelter grauer Punkt | Rybar, WarGonzo, Dva Mayora, Middle East Spectator |
+| Bestätigend | weißer Punkt | Tagesschau, BBC, DW, Meduza, Current Time |
 
 ## Status einer Story
 
 | Status | Bedingung |
 |---|---|
-| **Observed** | Nur der VectorScope-Sensor hat es gesehen, noch niemand hat berichtet |
-| **Signal** | Eine ungeprüfte Quelle |
-| **Emerging** | Mehrere ungeprüfte Quellen, sonst noch niemand |
+| **Observed** | Nur Messsysteme haben es gesehen, noch niemand hat berichtet |
+| **Signal** | Eine frühe oder parteiische Quelle |
+| **Emerging** | Mehrere frühe oder parteiische Quellen, sonst noch niemand |
 | **Reported** | Mindestens eine OSINT- oder Fachquelle |
-| **Confirmed** | Mindestens eine bestätigende Quelle |
+| **Confirmed** | Mindestens eine primäre oder bestätigende Quelle |
 
-Prozentwerte gibt es bewusst nicht. Eine Zahl wie „72 %“ würde eine Genauigkeit vortäuschen, die noch nichts misst. Der Status sagt genau, wer gemeldet hat, die Zahlen auf der Karte sagen wie viele.
+## Event Confidence
+
+Neben dem Status zeigt jede Karte einen Prozentwert: wie sicher das Ereignis ist. Er wird aus den unabhängigen Quellen der Story berechnet, Echos zählen nicht:
+
+1. Jede Quelle senkt den verbleibenden Zweifel um **Gewicht der Klasse mal Trust**. Gewichte: Primär 0,7, Messung 0,6, Bestätigend 0,55, Fachmedium 0,45, OSINT 0,4, Früh 0,3, Parteiisch 0,2.
+2. Eine zweite Quelle derselben Klasse zählt 60 %, eine dritte 36 %: Stimmen einer Art wiederholen sich gern.
+3. Übereinstimmung über Klassen hinweg nimmt weitere 10 % des verbleibenden Zweifels bei zwei Klassen, 25 % bei drei und mehr.
+4. Der Wert übersteigt nie 99 %.
+
+Beispiel: Ein Incident-Kanal meldet eine Explosion in Voronezh (rund 15 %), ein parteiischer Kanal zieht nach (rund 30 %), der Gouverneur bestätigt (rund 75 %), ein Leitmedium berichtet (87 %). Genau dieser Fall ist ein Test in `data/physical.test.ts`. Die Gewichte sind ein Startwert. Nach der Probewoche werden sie daran geprüft, wie oft jede Klasse richtig lag.
 
 ## Wie Meldungen gebündelt werden
 
@@ -43,13 +54,14 @@ Telegram-Kanäle schreiben oft voneinander ab. Eine spätere Meldung einer ander
 
 ## Vorsprung
 
-Hat eine Story eine ungeprüfte Meldung und eine spätere bestätigende oder Fachmeldung, zeigt die Karte, wie weit die erste vorn lag, zum Beispiel „RAGE X 1 h 6 min ahead of Tagesschau“. Genau das misst der Probe-Sammler: Sind die schnellen Kanäle wirklich vorn, und um wie viel.
+Hat eine Story eine frühe, parteiische oder gemessene Meldung und eine spätere bestätigende oder Fachmeldung, zeigt die Karte, wie weit die erste vorn lag, zum Beispiel „RAGE X 1 h 6 min ahead of Tagesschau“. Genau das misst der Probe-Sammler: Sind die schnellen Kanäle wirklich vorn, und um wie viel.
 
 ## Karte
 
 | Element | Bedeutung |
 |---|---|
-| Status-Chip | Signal, Emerging, Reported, Confirmed |
+| Status-Chip | Observed, Signal, Emerging, Reported, Confirmed |
+| Prozentwert | Event Confidence |
 | Überschrift | Von der vertrauenswürdigsten Meldung, auf dieser Stufe die früheste |
 | Zeitachse | Jede Meldung als Punkt von der ersten bis zur letzten, eingefärbt nach Stufe |
 | Leiter | Wie viele Quellen je Stufe, dazu der Vorsprung |

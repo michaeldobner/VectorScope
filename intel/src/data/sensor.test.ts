@@ -37,7 +37,7 @@ describe('sensor', () => {
     const baltic = stories.find((s) => s.items.some((i) => i.sourceId === 'sensor'))!;
     expect(baltic.items.map((i) => i.sourceId).sort()).toEqual(['demo-confirm', 'demo-osint', 'sensor']);
     expect(baltic.status).toBe('confirmed');
-    expect(baltic.tiers.sensor).toBe(1);
+    expect(baltic.tiers.physical).toBe(1);
   });
 
   it('a story seen only by the sensor is observed', () => {
