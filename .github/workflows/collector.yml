@@ -6,6 +6,10 @@ name: Collector
 on:
   schedule:
     - cron: '*/15 * * * *'
+  # Also right after a change to the collector, so new sources are collected at once.
+  push:
+    branches: [main]
+    paths: ['collector/**', 'intel/src/data/**', '.github/workflows/collector.yml']
   workflow_dispatch:
 
 permissions:

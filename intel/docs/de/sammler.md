@@ -8,7 +8,7 @@ INTEL lädt nur, solange es geöffnet ist, und ein Telegram-Kanal zeigt nur sein
 
 | | |
 |---|---|
-| Läuft | Alle 15 Minuten auf GitHub Actions (`.github/workflows/collector.yml`), praktisch alle 15 bis 30 Minuten, weil GitHub zeitgesteuerte Läufe verzögert |
+| Läuft | Alle 15 Minuten auf GitHub Actions (`.github/workflows/collector.yml`), praktisch alle 15 bis 30 Minuten, weil GitHub zeitgesteuerte Läufe verzögert. Außerdem direkt nach jeder Änderung am Sammler oder an den Quellen |
 | Bis | 12. Oktober 2026, danach tut der Workflow nichts mehr. `PROBE_UNTIL` im Workflow ändert das Datum |
 | Lädt | Jede Quelle von INTEL direkt bei den Herausgebern, auf einem Server ist kein Proxy nötig |
 | Behält | Jede Meldung der letzten 7 Tage mit dem Zeitpunkt, an dem er sie zuerst gesehen hat |
