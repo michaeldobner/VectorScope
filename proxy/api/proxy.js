@@ -1,4 +1,4 @@
-// Minimal CORS proxy for adsb.lol, planespotters.net and the RSS feeds of INTEL, deployed as a Vercel serverless function.
+// Minimal CORS proxy for adsb.lol, planespotters.net, the RSS feeds and Telegram channels of INTEL, deployed as a Vercel serverless function.
 // Only whitelisted read-only paths are forwarded, so this is not an open proxy.
 // Env vars (Vercel project settings):
 //   ALLOWED_ORIGIN  e.g. https://michaeldobner.github.io   (default "*")
@@ -32,6 +32,25 @@ const FEEDS = {
   dod: 'https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945&max=10',
 };
 const FEED = /^\/feed\/([a-z0-9-]{1,32})$/;
+// Public Telegram channels of INTEL, read from the web preview t.me/s/{channel}. Fixed list, not an open proxy.
+const TELEGRAM = [
+  'rageintel',
+  'osintdefender',
+  'ClashReport',
+  'FaytuksTelegram',
+  'OsintUpdates',
+  'Osintlatestnews',
+  'BNONews',
+  'warmonitors',
+  'AuroraIntel',
+  'visegrad24',
+  'spectatorindex',
+  'insiderpaper',
+  'disclosetv',
+  'nexta_live',
+  'warragex',
+];
+const TG = /^\/tg\/([A-Za-z0-9_]{4,32})$/;
 const CONTACT_UA = `VectorScope/0.1 (+https://github.com/michaeldobner/VectorScope; ${process.env.CONTACT || 'github.com/michaeldobner'})`;
 
 export default async function handler(req, res) {
@@ -46,7 +65,7 @@ export default async function handler(req, res) {
   const path = '/' + String(req.query.path || '').replace(/^\/+/, '');
   // Status page: opening the proxy address in a browser shows that it is running.
   if (path === '/') {
-    return res.status(200).json({ ok: true, service: 'VectorScope proxy', upstream: UPSTREAM, test: '/v2/mil', feeds: Object.keys(FEEDS) });
+    return res.status(200).json({ ok: true, service: 'VectorScope proxy', upstream: UPSTREAM, test: '/v2/mil', feeds: Object.keys(FEEDS), telegram: TELEGRAM });
   }
   if (process.env.PROXY_TOKEN && req.headers['x-vs-token'] !== process.env.PROXY_TOKEN) {
     return res.status(401).json({ error: 'unauthorized' });
@@ -77,6 +96,20 @@ export default async function handler(req, res) {
       });
       res.setHeader('Content-Type', 'application/xml; charset=utf-8');
       res.setHeader('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=900');
+      return res.status(r.status).send(await r.text());
+    } catch (e) {
+      return res.status(502).json({ error: 'upstream', detail: String(e) });
+    }
+  }
+  // Telegram web preview: fixed list of channels, cached one minute at the edge.
+  const tg = path.match(TG);
+  if (tg && req.method === 'GET') {
+    const channel = TELEGRAM.find((c) => c.toLowerCase() === tg[1].toLowerCase());
+    if (!channel) return res.status(404).json({ error: 'unknown channel' });
+    try {
+      const r = await fetch(`https://t.me/s/${channel}`, { headers: { Accept: 'text/html', 'User-Agent': CONTACT_UA }, redirect: 'follow' });
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=120');
       return res.status(r.status).send(await r.text());
     } catch (e) {
       return res.status(502).json({ error: 'upstream', detail: String(e) });

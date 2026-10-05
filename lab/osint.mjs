@@ -77,6 +77,12 @@ const FEEDS = [
   ['Aviation Week Defense', 'https://aviationweek.com/defense-space/rss.xml'],
   ['Airforce Technology', 'https://www.airforce-technology.com/feed/'],
   ['Janes', 'https://www.janes.com/feeds/news'],
+  ['Tagesschau', 'https://www.tagesschau.de/index~rss2.xml'],
+  ['Tagesschau Ausland', 'https://www.tagesschau.de/ausland/index~rss2.xml'],
+  ['DW English', 'https://rss.dw.com/rdf/rss-en-top'],
+  ['BBC World', 'https://feeds.bbci.co.uk/news/world/rss.xml'],
+  ['Al Jazeera', 'https://www.aljazeera.com/xml/rss/all.xml'],
+  ['Deutschlandfunk', 'https://www.deutschlandfunk.de/nachrichten-100.rss'],
 ];
 const feeds = [];
 for (const [name, url] of FEEDS) {
@@ -115,10 +121,36 @@ for (const q of GDELT_Q) {
   gdelt.push({ query: q, status: r.status, error: r.error, articles: arts.length, newestAgeH: ageH(iso), cors: r.cors, ms: r.ms, sample: arts.slice(0, 3).map((a) => `${a.domain}: ${a.title}`.slice(0, 120)) });
 }
 
-const result = { checkedAt: new Date().toISOString(), bluesky: blueskyHits, feeds, mastodon, gdelt };
+// Telegram channels: web preview t.me/s, directly and through the proxy (Vercel may be blocked by Telegram).
+const TELEGRAM = ['rageintel', 'osintdefender', 'ClashReport', 'FaytuksTelegram', 'OsintUpdates', 'Osintlatestnews', 'BNONews', 'warmonitors', 'AuroraIntel', 'visegrad24', 'spectatorindex', 'insiderpaper', 'disclosetv', 'nexta_live', 'warragex'];
+const telegram = [];
+for (const ch of TELEGRAM) {
+  const direct = await get(`https://t.me/s/${ch}`);
+  const proxied = await get(`https://vectorscope-proxy.vercel.app/tg/${ch}`);
+  const body = direct.body ?? '';
+  const title = plainTitle(body.match(/<meta property="og:title" content="([^"]*)"/)?.[1]);
+  const subs = body.match(/<span class="counter_value">([^<]+)<\/span>\s*<span class="counter_type">subscribers/)?.[1] ?? null;
+  const times = [...body.matchAll(/<time datetime="([^"]+)"/g)].map((m) => Date.parse(m[1])).filter((t) => !isNaN(t));
+  const posts = (body.match(/data-post="/g) ?? []).length;
+  const texts = (body.match(/class="tgme_widget_message_text js-message_text"/g) ?? []).length;
+  const span = times.length > 1 ? (Math.max(...times) - Math.min(...times)) / 36e5 : null;
+  const sample = [...body.matchAll(/class="tgme_widget_message_text js-message_text"[^>]*>([\s\S]{0,400}?)<\/div>/g)].slice(-3).map((m) => m[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 140));
+  telegram.push({
+    channel: ch, title, subs, status: direct.status, error: direct.error, posts, texts,
+    newestAgeH: times.length ? ageH(new Date(Math.max(...times)).toISOString()) : null,
+    postsPerDay: span ? Math.round((posts / span) * 24) : null,
+    proxyStatus: proxied.status, proxyPosts: (proxied.body?.match(/data-post="/g) ?? []).length, sample,
+  });
+}
+
+const result = { checkedAt: new Date().toISOString(), bluesky: blueskyHits, feeds, mastodon, gdelt, telegram };
 fs.writeFileSync(`${OUT}/osint.json`, JSON.stringify(result, null, 2));
 
 const cell = (v) => (v == null || v === '' ? '' : String(v).replace(/\|/g, '/'));
+function plainTitle(s) {
+  return (s ?? '').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+}
+
 const md = [
   `# OSINT source check ${result.checkedAt}`,
   '', '## Bluesky', '', '| Query | Handle | Name | Followers | Posts | Newest (h) | Own of last 5 | CORS |', '|---|---|---|---|---|---|---|---|',
@@ -127,8 +159,10 @@ const md = [
   ...feeds.map((f) => `| ${f.name} | ${f.status || cell(f.error)} | ${f.items} | ${cell(f.newestAgeH)} | ${cell(f.cors)} | ${cell(f.type)} | ${f.url} |`),
   '', '## Mastodon', '', '| Query | Host | Account | Followers | Posts | Newest (h) | CORS |', '|---|---|---|---|---|---|---|',
   ...mastodon.map((m) => `| ${m.query} | ${m.host} | ${cell(m.acct) || `none (HTTP ${m.status || m.error})`} | ${cell(m.followers)} | ${cell(m.posts)} | ${cell(m.lastPostAgeH)} | ${cell(m.cors)} |`),
+  '', '## Telegram', '', '| Channel | Title | Subscribers | HTTP | Posts on page | With text | Newest (h) | Posts per day | Proxy HTTP | Proxy posts | Latest |', '|---|---|---|---|---|---|---|---|---|---|---|',
+  ...telegram.map((t) => `| ${t.channel} | ${cell(t.title)} | ${cell(t.subs)} | ${t.status || cell(t.error)} | ${t.posts} | ${t.texts} | ${cell(t.newestAgeH)} | ${cell(t.postsPerDay)} | ${t.proxyStatus || ''} | ${t.proxyPosts} | ${cell(t.sample.at(-1))} |`),
   '', '## GDELT', '', '| Query | HTTP | Articles 24 h | Newest (h) | CORS | ms |', '|---|---|---|---|---|---|',
   ...gdelt.map((g) => `| ${g.query} | ${g.status || cell(g.error)} | ${g.articles} | ${cell(g.newestAgeH)} | ${cell(g.cors)} | ${g.ms} |`),
 ];
 fs.writeFileSync(`${OUT}/osint.md`, md.join('\n') + '\n');
-console.log(`OSINT check: ${blueskyHits.length} Bluesky accounts, ${feeds.filter((f) => f.isFeed).length}/${feeds.length} feeds, ${mastodon.filter((m) => m.acct).length} Mastodon accounts, GDELT ${gdelt.map((g) => g.articles).join('/')}`);
+console.log(`OSINT check: ${telegram.filter((t) => t.posts).length}/${telegram.length} Telegram channels, ${blueskyHits.length} Bluesky accounts, ${feeds.filter((f) => f.isFeed).length}/${feeds.length} feeds, ${mastodon.filter((m) => m.acct).length} Mastodon accounts, GDELT ${gdelt.map((g) => g.articles).join('/')}`);
