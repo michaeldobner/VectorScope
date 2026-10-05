@@ -4,6 +4,11 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.2.2 (2026-10-05)
+
+### Added
+* The version is shown at the end of Sources.
+
 ## 0.2.1 (2026-10-05)
 
 ### Fixed

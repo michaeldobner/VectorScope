@@ -508,6 +508,7 @@ function SourcesPanel({ st }: { st: IntelState }) {
       <p className="note">
         {st.collectedAt ? `Collector last ran ${ago(st.collectedAt)}. ` : ''}Headlines and short excerpts link to the original publisher. Live aircraft © adsb.lol contributors, ODbL.
       </p>
+      <p className="note version">VectorScope INTEL v{__APP_VERSION__}</p>
     </section>
   );
 }

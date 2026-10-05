@@ -75,6 +75,8 @@ Places named in the last 24 hours, sorted by how often. The bar shows the share.
 
 Every source with a status dot (blue: answered, red: failed), its channels and the age of its newest post. When a source fails, its error is kept for the next refresh, the other sources keep working.
 
+The version of INTEL is shown at the end of this panel.
+
 ## Updates
 
 The feed reloads every five minutes and the live aircraft every two minutes, as long as the app is open. On the next start the last loaded feed appears at once, also without network.

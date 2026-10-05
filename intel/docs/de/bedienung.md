@@ -75,6 +75,8 @@ Orte, die in den letzten 24 Stunden genannt wurden, sortiert nach Häufigkeit. D
 
 Jede Quelle mit Statuspunkt (blau: hat geantwortet, rot: fehlgeschlagen), ihren Kanälen und dem Alter ihres neuesten Beitrags. Fällt eine Quelle aus, arbeiten die anderen weiter.
 
+Am Ende dieses Bereichs steht die Version von INTEL.
+
 ## Aktualisierung
 
 Der Feed lädt alle fünf Minuten neu, die Live-Flugzeuge alle zwei Minuten, solange die App geöffnet ist. Beim nächsten Start erscheint der zuletzt geladene Feed sofort, auch ohne Netz.
