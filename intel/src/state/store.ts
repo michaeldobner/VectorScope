@@ -5,6 +5,7 @@ import { demoItems, demoLive } from '../data/demo';
 import { extractEntities, isCrisisRelated, type Entities } from '../data/entities';
 import { loadCollected, loadLive, loadSource, mergeItems, pool, type SourceStatus } from '../data/feed';
 import { matchLive } from '../data/match';
+import { detectAll } from '../data/sensor';
 import { buildStories, type Story } from '../data/stories';
 import { SOURCES, sourceById, type Category } from '../data/sources';
 import type { EnrichedItem, Item } from '../data/types';
@@ -15,10 +16,15 @@ const FEED_EVERY_MS = 5 * 60_000;
 const LIVE_EVERY_MS = 2 * 60_000;
 
 export type Filter = 'all' | 'live' | Category;
-export type View = 'stories' | 'wire';
+export type View = 'stories' | 'wire' | 'map';
+/** Filter by one of the three pulse tiles above the stories. */
+export type Pulse = 'hour' | 'unverified' | 'developing' | null;
 
 export interface Prefs {
   view: View;
+  pulse: Pulse;
+  /** Show headlines and excerpts in German. */
+  german: boolean;
   filter: Filter;
   /** Place name the list is narrowed to, or null. */
   place: string | null;
@@ -61,7 +67,7 @@ function writeJson(key: string, value: unknown) {
 }
 
 const storedPrefs = readJson<Partial<Prefs>>(PREFS_KEY);
-const prefs: Prefs = { view: 'stories', filter: 'all', place: null, lastSeen: 0, ...storedPrefs };
+const prefs: Prefs = { view: 'stories', pulse: null, german: false, filter: 'all', place: null, lastSeen: 0, ...storedPrefs };
 
 let state: IntelState = {
   demo,
@@ -108,9 +114,16 @@ function enrich(items: Item[], live: Aircraft[], now: number): EnrichedItem[] {
 
 let rawItems: Item[] = [];
 
-/** Items plus their stories, computed together so both always match. */
+// First time each sensor report was seen in this session, so a detection keeps its time across refreshes.
+const sensorFirstSeen = new Map<string, number>();
+
+/** Items plus own sensor reports plus their stories, computed together so everything always matches. */
 function derive(items: Item[], live: Aircraft[], now: number): Pick<IntelState, 'items' | 'stories'> {
-  const enriched = enrich(items, live, now);
+  const sensor = detectAll(live, now).map((i) => {
+    if (!sensorFirstSeen.has(i.id)) sensorFirstSeen.set(i.id, now);
+    return { ...i, time: sensorFirstSeen.get(i.id)! };
+  });
+  const enriched = enrich(sensor.length ? mergeItems([...items, ...sensor], now) : items, live, now);
   return { items: enriched, stories: buildStories(enriched) };
 }
 

@@ -14,11 +14,13 @@ Jede Quelle hat eine Stufe, die sagt, wie weit ihre Meldung trägt.
 | OSINT | OSINT, blauer Punkt | ItaMilRadar, Bellingcat, ISW, Jakub Janovsky | Open-Source-Rechercheure mit Erfahrung |
 | Fachmedium | Specialist, blauer Punkt | The Aviationist, The War Zone, Defense News, Naval News, hartpunkt und weitere | Fachmedien mit Redaktion |
 | Bestätigend | Confirming, weißer Punkt | Tagesschau, Deutschlandfunk, DW, BBC, Al Jazeera, US DoD | Behörden und Leitmedien |
+| Sensor | Sensor, hellblaues Quadrat | VectorScope selbst | Aktivität und Notfälle in den Live-Flugdaten, siehe [Sensor und Karte](sensor.md) |
 
 ## Status einer Story
 
 | Status | Bedingung |
 |---|---|
+| **Observed** | Nur der VectorScope-Sensor hat es gesehen, noch niemand hat berichtet |
 | **Signal** | Eine ungeprüfte Quelle |
 | **Emerging** | Mehrere ungeprüfte Quellen, sonst noch niemand |
 | **Reported** | Mindestens eine OSINT- oder Fachquelle |
@@ -34,6 +36,10 @@ Prozentwerte gibt es bewusst nicht. Eine Zahl wie „72 %“ würde eine Genauig
 4. Eine Meldung kommt nur dann in eine Story, wenn sie zur **ersten** Meldung dieser Story passt, in einer größeren Story zusätzlich zu mindestens einer weiteren. Lose Ketten (A ähnlich B, B ähnlich C, C ähnlich D) wachsen dadurch nie zu einer Riesen-Story.
 
 Meldungen derselben Quelle verbinden sich nie direkt. Ein Kanal, der sich wiederholt, ist keine Bestätigung.
+
+## Echo-Detektor
+
+Telegram-Kanäle schreiben oft voneinander ab. Eine spätere Meldung einer anderen Quelle, die mit einer früheren mindestens 60 % aller Wörter teilt, ist ein **Echo**: Sie bleibt in der Story, zählt aber nicht als Quelle, weder für den Status noch für die Zahl der Quellen. Die Karte zeigt „1 echo“, die Liste der Meldungen markiert die Kopie.
 
 ## Vorsprung
 

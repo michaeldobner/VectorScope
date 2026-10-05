@@ -71,11 +71,17 @@ for (const [name, device] of DEVICES) {
   check(items, 'INTEL shows no items in demo mode');
   check((await page.locator('.live-row').count()) > 0, 'INTEL shows no live match in demo mode');
   for (const status of ['signal', 'emerging', 'reported', 'confirmed']) check((await page.locator(`.status-chip.s-${status}`).count()) > 0, `INTEL shows no story with status ${status}`);
+  await page.locator('.pulse button').nth(1).click();
+  check((await page.locator('.status-chip.s-reported, .status-chip.s-confirmed').count()) === 0, 'INTEL tile "unverified" does not filter');
+  await page.locator('.pulse button').nth(1).click();
   await page.locator('.expand').first().click();
   check((await page.locator('.reports li').count()) >= 2, 'INTEL story does not open its reports');
   check(await noSideScroll(page), 'INTEL scrolls sideways');
   check((await page.locator('a.brand').getAttribute('href')) === '../', 'INTEL logo does not lead back to the hub');
   await page.screenshot({ path: `${OUT}/${ENGINE}-${name}-intel.png` });
+  await page.getByRole('button', { name: 'Map', exact: true }).click();
+  check(await page.locator('.intel-map').waitFor({ timeout: 10000 }).then(() => true).catch(() => false), 'INTEL map does not open');
+  await page.getByRole('button', { name: 'Stories', exact: true }).click();
 
   for (const e of errors) failures.push(`${ENGINE} ${name}: ${e}`);
   console.log(`${failures.length > before ? '✗' : '✓'} ${ENGINE} ${name}`);

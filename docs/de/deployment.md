@@ -91,7 +91,7 @@ Das Modul speichert den Proxy dauerhaft und entfernt den Parameter aus der Adres
 
 ### Was der Proxy tut
 
-* Leitet nur lesende Pfade weiter: `/v2/point`, `/v2/closest`, `/v2/lat/…/lon/…/dist/…`, `/v2/mil`, `/v2/ladd`, `/v2/pia`, `/v2/sqk`, `/v2/squawk`, `/v2/hex`, `/v2/icao`, `/v2/callsign`, `/v2/reg`, `/v2/registration`, `/v2/type`, `POST /api/0/routeset`, `/photos/hex/{hex}` für planespotters.net, `/feed/{id}` für die feste Liste der RSS-Feeds und `/tg/{kanal}` für die feste Liste der Telegram-Kanäle von INTEL. Alles andere erhält 404, es ist also kein offener Proxy.
+* Leitet nur lesende Pfade weiter: `/v2/point`, `/v2/closest`, `/v2/lat/…/lon/…/dist/…`, `/v2/mil`, `/v2/ladd`, `/v2/pia`, `/v2/sqk`, `/v2/squawk`, `/v2/hex`, `/v2/icao`, `/v2/callsign`, `/v2/reg`, `/v2/registration`, `/v2/type`, `POST /api/0/routeset`, `/photos/hex/{hex}` für planespotters.net, `/feed/{id}` für die feste Liste der RSS-Feeds, `/tg/{kanal}` für die feste Liste der Telegram-Kanäle von INTEL und `POST /translate` für dessen deutsche Übersetzungen über Google Translate. Alles andere erhält 404, es ist also kein offener Proxy.
 * Sendet einen User-Agent mit Kontaktangabe.
 * Ergänzt `Access-Control-Allow-Origin` und beantwortet Preflight-Anfragen.
 * Hält GET-Antworten zwei Sekunden im Edge-Cache von Vercel, damit mehrere Geräte die Last auf adsb.lol nicht vervielfachen. RSS-Feeds fünf Minuten.

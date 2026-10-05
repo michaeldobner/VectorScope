@@ -66,5 +66,7 @@ export function demoLive(): Aircraft[] {
     ac('ae01ce', 'LAGR223', 'K35R', 54.9, 15.8, 26000, 70),
     ac('ae07e1', 'RCH419', 'C17', 50.2, 21.6, 31000, 95),
     ac('3f4a21', 'GAF684', 'A400', 51.4, 9.7, 21000, 120),
+    ac('ae01d2', 'JAKE11', 'R135', 56.3, 19.4, 33000, 90),
+    { ...ac('400a1b', 'BAW2PD', 'B772', 46.9, 9.1, 9000, 200), dbFlags: 0, squawk: '7700', typeName: 'Boeing 777-200' },
   ];
 }

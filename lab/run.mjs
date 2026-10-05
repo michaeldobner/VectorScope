@@ -26,6 +26,7 @@ async function grab(name, url, init = {}) {
 const point = await grab('adsblol-point', `https://api.adsb.lol/v2/point/${LAT}/${LON}/60`);
 await grab('proxy-root', 'https://vectorscope-proxy.vercel.app/');
 await grab('proxy-feed-itamilradar', 'https://vectorscope-proxy.vercel.app/feed/itamilradar');
+await grab('proxy-translate', 'https://vectorscope-proxy.vercel.app/translate', { method: 'POST', headers: { 'Content-Type': 'application/json', Origin: 'https://michaeldobner.github.io' }, body: JSON.stringify({ texts: ['B-1B bombers make hasty departure from England', 'Russian drones crashed in Moldova on the morning of October 5.'], to: 'de' }) });
 await grab('proxy-photo', 'https://vectorscope-proxy.vercel.app/photos/hex/3c6444');
 await grab('proxy-point', `https://vectorscope-proxy.vercel.app/v2/point/${LAT}/${LON}/60`, { headers: { Origin: 'https://michaeldobner.github.io' } });
 let callsigns = [];
@@ -119,12 +120,25 @@ for (const [name, w, h, dpr] of [['iphone', 393, 852, 3], ['ipad', 1180, 820, 2]
   await p.waitForFunction(() => window.__intel?.getState().updated, null, { timeout: 60000 }).catch(() => {});
   await p.waitForTimeout(3000);
   await p.screenshot({ path: `${OUT}/intel-${name}-1-feed.png` });
+  if (name === 'iphone') {
+    await p.locator('.icon-btn.lang').click().catch(() => {});
+    await p.waitForTimeout(6000);
+    await p.screenshot({ path: `${OUT}/intel-${name}-3-german.png` });
+    await p.locator('.icon-btn.lang').click().catch(() => {});
+  }
+  if (name === 'ipad') {
+    await p.getByRole('button', { name: 'Map', exact: true }).click().catch(() => {});
+    await p.waitForTimeout(8000);
+    await p.screenshot({ path: `${OUT}/intel-${name}-3-map.png` });
+    await p.getByRole('button', { name: 'Stories', exact: true }).click().catch(() => {});
+  }
   const info = await p.evaluate(() => {
     const st = window.__intel.getState();
     const sources = Object.entries(st.sources).map(([id, s]) => `${id}:${s.ok ? 'ok' : 'ERR ' + s.error}:${s.count}`);
     const strong = st.items.flatMap((i) => i.matches.filter((m) => m.kind !== 'type').map((m) => `${m.ac.callsign}/${m.ac.typeCode} ${m.kind} "${i.title.slice(0, 60)}"`));
+    const sensor = st.items.filter((i) => i.sourceId === 'sensor').map((i) => i.title);
     const multi = st.stories.filter((s) => s.sources.length > 1).map((s) => `${s.status} ${s.sources.length}src ${s.items.length}rep "${s.lead.title.slice(0, 70)}"`);
-    return { items: st.items.length, live: st.live.length, sources, strong, multi, firstHex: st.items.flatMap((i) => i.matches)[0]?.ac.hex ?? null };
+    return { items: st.items.length, live: st.live.length, sources, strong, multi, sensor, firstHex: st.items.flatMap((i) => i.matches)[0]?.ac.hex ?? null };
   });
   log.push(`intel ${name}: items=${info.items} live=${info.live} strong=${info.strong.length} errors=${errs.length}`);
   if (name === 'iphone') {
@@ -134,6 +148,7 @@ for (const [name, w, h, dpr] of [['iphone', 393, 852, 3], ['ipad', 1180, 820, 2]
     info.sources.forEach((x) => log.push('  source ' + x));
     info.strong.slice(0, 10).forEach((x) => log.push('  match ' + x));
     info.multi.slice(0, 40).forEach((x) => log.push('  story ' + x));
+    info.sensor.forEach((x) => log.push('  sensor ' + x));
   }
   [...new Set(errs)].slice(0, 10).forEach((e) => log.push('  ' + e));
   if (name === 'ipad' && info.firstHex) {

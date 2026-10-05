@@ -8,8 +8,9 @@ export type Category = 'breaking' | 'aviation' | 'osint' | 'naval' | 'defence' |
  * How far a report of this source carries.
  * breaking: fast, unverified (Telegram newsrooms). osint: open source researchers.
  * press: specialist media with editorial process. confirm: authorities and leading news media.
+ * sensor: VectorScope itself, patterns detected in live flight data.
  */
-export type Tier = 'breaking' | 'osint' | 'press' | 'confirm';
+export type Tier = 'sensor' | 'breaking' | 'osint' | 'press' | 'confirm';
 
 export interface Source {
   id: string;
@@ -71,10 +72,21 @@ export const CATEGORY_LABEL: Record<Category, string> = {
 };
 
 export const TIER_LABEL: Record<Tier, string> = {
+  sensor: 'Sensor',
   breaking: 'Unverified',
   osint: 'OSINT',
   press: 'Specialist',
   confirm: 'Confirming',
+};
+
+/** VectorScope itself: activity and emergencies detected in live flight data (data/sensor.ts). */
+export const SENSOR_SOURCE: Source = {
+  id: 'sensor',
+  name: 'VectorScope Sensor',
+  category: 'aviation',
+  tier: 'sensor',
+  lang: 'en',
+  site: 'https://michaeldobner.github.io/VectorScope/air/',
 };
 
 /** Sources of the demo mode, so ?demo shows every status without pretending to quote a real outlet. */
@@ -87,4 +99,4 @@ export const DEMO_SOURCES: Source[] = [
   { id: 'demo-confirm', name: 'Demo Wire Service', category: 'news', tier: 'confirm', lang: 'en', site: 'https://example.org' },
 ];
 
-export const sourceById = (id: string) => SOURCES.find((s) => s.id === id) ?? DEMO_SOURCES.find((s) => s.id === id);
+export const sourceById = (id: string) => (id === 'sensor' ? SENSOR_SOURCE : (SOURCES.find((s) => s.id === id) ?? DEMO_SOURCES.find((s) => s.id === id)));

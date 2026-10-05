@@ -26,7 +26,8 @@ intel/src/
 │  ├─ rss.ts             RSS- und Atom-Parser ohne DOMParser
 │  ├─ bluesky.ts         eigene Beiträge eines Accounts aus der öffentlichen API
 │  ├─ telegram.ts        Beiträge eines Kanals aus der Webansicht t.me/s
-│  ├─ stories.ts         Bündelung zu Stories, Status, Vorsprung
+│  ├─ stories.ts         Bündelung zu Stories, Echo-Detektor, Status, Vorsprung
+│  ├─ sensor.ts          eigene Beobachtungen: Luftaktivität, Squawk 7700
 │  ├─ text.ts            HTML zu Text, Entities, URL-Schlüssel für Duplikate
 │  ├─ feed.ts            Laden mit Ausweichweg, Zusammenführen, Live-Flugzeuge
 │  ├─ entities.ts        Callsigns und Flugzeugtypen
@@ -35,7 +36,8 @@ intel/src/
 │  ├─ demo.ts            synthetische Beiträge und Flugzeuge
 │  └─ types.ts           Item, Match, EnrichedItem
 ├─ state/store.ts        Zustand, Abfragen, Zwischenspeicher, Einstellungen
-└─ ui/                   Formatierung, Layout-Hook
+├─ state/translate.ts    Deutsche Übersetzungen: Warteschlange, Pakete, Speicher auf dem Gerät
+└─ ui/                   Formatierung, Layout-Hook, IntelMap.tsx (Lagekarte, bei Bedarf geladen)
 ```
 
 INTEL nutzt den Callsign-Katalog, den Flugzeug-Parser und die Entfernungsberechnung von AIR (`air/src/data/catalog.ts`, `adsblol.ts`, `geo/geo.ts`). Beide Module erkennen deshalb dieselben Callsigns und rechnen Entfernungen gleich.
@@ -51,7 +53,7 @@ INTEL nutzt den Callsign-Katalog, den Flugzeug-Parser und die Entfernungsberechn
 
 ## Proxy-Routen
 
-`/feed/{id}` und `/tg/{kanal}` in `proxy/api/proxy.js` liefern nur die Feeds in `FEEDS` und die Kanäle in `TELEGRAM`, der Proxy ist also kein offener Proxy. Die Route sendet einen User-Agent mit Kontaktangabe und hält Antworten fünf Minuten im Edge-Cache von Vercel. Ein Test prüft, dass `FEEDS` und `TELEGRAM` zu den Quellen in `sources.ts` passen und dass INTEL und AIR denselben Proxy nutzen.
+`POST /translate` in `proxy/api/proxy.js` übersetzt bis zu 60 Texte mit je 600 Zeichen über Google Translate (`proxy/lib/translate.js`), zeilenweise zu wenigen Anfragen gebündelt. `/feed/{id}` und `/tg/{kanal}` liefern nur die Feeds in `FEEDS` und die Kanäle in `TELEGRAM`, der Proxy ist also kein offener Proxy. Die Route sendet einen User-Agent mit Kontaktangabe und hält Antworten fünf Minuten im Edge-Cache von Vercel. Ein Test prüft, dass `FEEDS` und `TELEGRAM` zu den Quellen in `sources.ts` passen und dass INTEL und AIR denselben Proxy nutzen.
 
 ## Speicher
 
@@ -69,6 +71,8 @@ Der Service Worker `public/sw.js` mit dem Speicher `vectorscope-intel-v1` hält 
 | `data/rss.test.ts` | RSS mit CDATA und Entities, Atom, WordPress-Fußzeilen, Gedankenstriche, Bluesky, Zusammenführen, Altersgrenze |
 | `data/entities.test.ts` | Callsigns, Fehltreffer, Typen, Orte auf Englisch und Deutsch, Wortgrenzen, Regeln des Live-Abgleichs |
 | `data/sources.test.ts` | Eindeutige Quellen, Proxy-Listen gleich Quellenliste, derselbe Proxy wie AIR |
+| `data/sensor.test.ts` | Gebiet eines Punkts, Aktivitätsgruppen, Notfälle mit Airline, Sensor in Stories, Echo-Detektor |
+| `tests/translate.test.ts` | Google-Antwort, Pakete, Reihenfolge, Ausweichweg je Text |
 | `data/stories.test.ts` | Telegram-Webansicht, Bündelung, Status, Vorsprung, Reihenfolge, keine Selbstbestätigung |
 
 Der Probe-Sammler `collector/collect.ts` nutzt dieselben Module in Node.js, siehe [Probe-Sammler](sammler.md).

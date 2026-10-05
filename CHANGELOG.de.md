@@ -4,6 +4,13 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.6.0 (2026-10-05)
+
+### Neu
+* Proxy-Route `POST /translate` für die deutschen Übersetzungen von INTEL (Google Translate, `proxy/lib/translate.js`).
+* Der Probe-Sammler hält auch die Beobachtungen des VectorScope-Sensors fest.
+* Modul INTEL 0.3.0, siehe sein [Changelog](intel/CHANGELOG.de.md).
+
 ## 0.5.0 (2026-10-05)
 
 ### Neu

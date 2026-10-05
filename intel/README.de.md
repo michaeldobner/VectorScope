@@ -24,6 +24,10 @@ Schnelle Telegram-Eilmelder melden zuerst, Fachmedien ordnen ein, Leitmedien bes
 | **Stories** | Meldungen verschiedener Quellen über dasselbe Ereignis werden eine Karte mit Status Signal, Emerging, Reported oder Confirmed, einer Zeitachse aller Meldungen und dem Vorsprung der ersten ungeprüften Meldung |
 | **24 geprüfte Quellen in vier Stufen** | Telegram-Eilmelder (OSINTdefender, RAGE X, War Monitor, Insider Paper, Clash Report), OSINT-Rechercheure, Fachmedien und bestätigende Medien (Tagesschau, Deutschlandfunk, DW, BBC, Al Jazeera). Jede im Test-Labor geprüft |
 | **Probe-Sammler** | Eine Woche lang hält ein Sammler auf GitHub Actions alle 15 Minuten jede Meldung fest, damit nichts verloren geht, während die App geschlossen ist |
+| **VectorScope Sensor** | INTEL wird selbst zur Quelle: Tanker, AWACS, Aufklärer und Bomber, die gemeinsam fliegen, und jeder Squawk 7700 werden Meldungen, die sich mit den Stories verbinden |
+| **Echo-Detektor** | Ein Kanal, der einen anderen wörtlich abschreibt, zählt nicht als Quelle |
+| **Lagekarte** | Stories als Kreise an ihren Orten, Militärflugzeuge, Notfälle, Linien von genannten Flugzeugen zu ihrer Story |
+| **Deutsch** | DE übersetzt jede Überschrift und jeden Auszug ins Deutsche |
 | **Wire** | Jede Meldung einzeln, die neueste zuerst, mit ihrer Stufe |
 | **Erkennung** | Militärische Callsigns (FORTE11, RCH419, NATO03), rund 45 Flugzeugtypen in mehreren Schreibweisen (KC-135, KC135R, Stratotanker), rund 100 Orte auf Englisch und Deutsch (Ostsee, Black Sea, Rzeszów, Ramstein) |
 | **Live-Treffer** | Callsign im Beitrag genannt und gerade in der Luft, oder Typ genannt und ein Flugzeug dieses Typs nahe dem genannten Ort. Hervorgehoben in Ice Blue, ein Tipp öffnet es in AIR |
@@ -46,7 +50,8 @@ Ausführliche Anleitung: [Bedienung](docs/de/bedienung.md).
 | Dokument | Inhalt |
 |---|---|
 | [Bedienung](docs/de/bedienung.md) | Ansichten, Filter, Live-Treffer, Orte, Quellen |
-| [Stories](docs/de/stories.md) | Stufen, Status, Bündelung, Vorsprung |
+| [Stories](docs/de/stories.md) | Stufen, Status, Bündelung, Echo-Detektor, Vorsprung |
+| [Sensor und Karte](docs/de/sensor.md) | Eigene Beobachtungen in den Live-Flugdaten, Lagekarte |
 | [Quellen](docs/de/quellen.md) | Die geprüften Quellen, wie sie geprüft wurden, verworfene Quellen und warum |
 | [Probe-Sammler](docs/de/sammler.md) | Eine Woche Sammeln auf GitHub Actions |
 | [Abgleich](docs/de/abgleich.md) | Erkennung von Callsigns, Typen und Orten, Regeln des Live-Treffers |
@@ -65,6 +70,6 @@ npm test               # Unit-Tests aller Module und Prüfungen des Repositorys
 
 ## Version
 
-Aktuelle Version: **0.2.2**. Siehe [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.3.0**. Siehe [Changelog](CHANGELOG.de.md).
 
 Erstellt von Michael Dobner. Lizenziert unter der [MIT-Lizenz](../LICENSE).

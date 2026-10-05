@@ -9,6 +9,7 @@
 | Bluesky-Beiträge | `public.api.bsky.app` | Den Handle der Quelle. Kein Konto, keine Anmeldung |
 | RSS-Feeds, Telegram-Kanäle | `vectorscope-proxy.vercel.app` | Die ID des Feeds oder den Namen des Kanals |
 | Gesammelte Meldungen | `raw.githubusercontent.com` | Nichts, die Datei ist für alle gleich |
+| Übersetzungen, nur mit DE | `vectorscope-proxy.vercel.app`, von dort Google Translate | Überschriften und Auszüge öffentlicher Meldungen, nichts Persönliches |
 | Live-Flugzeuge | `vectorscope-proxy.vercel.app` | Nichts Persönliches, `/v2/mil` ist für alle gleich |
 
 INTEL nutzt deinen Standort nicht. Es lädt keine Bilder, Herausgeber sehen also nur dann eine Anfrage, wenn du selbst einen Artikel öffnest.

@@ -6,14 +6,14 @@
 
 | Width | Layout |
 |---|---|
-| iPhone, iPad portrait, Split View | One column with the tabs **Stories**, **Wire**, **Live** and **Sources** (with Places) |
-| From 900 points, iPad landscape | Stories or Wire on the left, switch at the top, Live now, Places and Sources on the right |
+| iPhone, iPad portrait, Split View | One column with the tabs **Stories**, **Wire**, **Map**, **Live** and **Sources** (with Places) |
+| From 900 points, iPad landscape | Stories, Wire or Map on the left, switch at the top, Live now, Places and Sources on the right |
 
-The logo at the top left leads back to the VectorScope hub. The status shows **LIVE** when sources answered, **LOADING** while the first load runs, **OFFLINE** when nothing could be loaded and **DEMO** in demo mode. The round arrow reloads everything.
+The logo at the top left leads back to the VectorScope hub. **DE** shows every headline and excerpt in German, see [German](#german). The status shows **LIVE** when sources answered, **LOADING** while the first load runs, **OFFLINE** when nothing could be loaded and **DEMO** in demo mode. The round arrow reloads everything.
 
 ## Stories
 
-The default view. Reports from different sources about the same event are one card. At the top three numbers: reports of the last hour, how many of them are unverified, how many stories are developing.
+The default view. Reports from different sources about the same event are one card. At the top three tiles: reports of the last hour, how many of them are unverified, how many stories are developing. **Tapping a tile filters the stories** accordingly, tapping it again removes the filter.
 
 | On the card | Meaning |
 |---|---|
@@ -26,7 +26,13 @@ The default view. Reports from different sources about the same event are one ca
 | `⏱ RAGE X 1 h 6 min ahead of Tagesschau` | How far the first unverified report came before the first confirming one |
 | Show reports in order | Every report with time and source, how the story came about |
 
+A light blue square on the time axis and the status **OBSERVED** come from the VectorScope sensor, see [Sensor and map](sensor.md). "1 echo" marks a source that only copied an earlier report.
+
 **Developing** at the top lists stories with several sources from the last 12 hours, **Latest** below everything else. Details: [Stories](stories.md).
+
+## Map
+
+The situation on a map: circles for stories, dots for military aircraft, red for emergencies, dashed lines from named aircraft to their story. Details: [Sensor and map](sensor.md).
 
 ## Wire
 
@@ -76,6 +82,10 @@ Places named in the last 24 hours, sorted by how often. The bar shows the share.
 Every source with a status dot (blue: answered, red: failed), its channels and the age of its newest post. When a source fails, its error is kept for the next refresh, the other sources keep working.
 
 The version of INTEL is shown at the end of this panel.
+
+## German
+
+**DE** at the top right translates headlines and excerpts into German, including the reports of a story and the headlines under Live now. Only what is on screen is translated, every translation is kept on the device. German sources stay as they are. The translation comes from Google Translate through the proxy, without a key and without a guarantee: if it fails, the original text stays and INTEL tries again a minute later. Callsigns, types and places are always recognised in the original.
 
 ## Updates
 

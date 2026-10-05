@@ -6,14 +6,14 @@
 
 | Breite | Aufbau |
 |---|---|
-| iPhone, iPad hoch, Split View | Eine Spalte mit den Reitern **Stories**, **Wire**, **Live** und **Sources** (mit Places) |
-| Ab 900 Punkten, iPad quer | Links Stories oder Wire, oben umschaltbar, rechts Live now, Places und Sources |
+| iPhone, iPad hoch, Split View | Eine Spalte mit den Reitern **Stories**, **Wire**, **Map**, **Live** und **Sources** (mit Places) |
+| Ab 900 Punkten, iPad quer | Links Stories, Wire oder Map, oben umschaltbar, rechts Live now, Places und Sources |
 
-Das Logo oben links führt zurück zur VectorScope-Startseite. Der Status zeigt **LIVE**, wenn Quellen geantwortet haben, **LOADING** beim ersten Laden, **OFFLINE**, wenn nichts geladen werden konnte, und **DEMO** im Demo-Modus. Der runde Pfeil lädt alles neu.
+Das Logo oben links führt zurück zur VectorScope-Startseite. **DE** zeigt alle Überschriften und Auszüge auf Deutsch, siehe [Deutsch](#deutsch). Der Status zeigt **LIVE**, wenn Quellen geantwortet haben, **LOADING** beim ersten Laden, **OFFLINE**, wenn nichts geladen werden konnte, und **DEMO** im Demo-Modus. Der runde Pfeil lädt alles neu.
 
 ## Stories
 
-Die Standardansicht. Meldungen verschiedener Quellen über dasselbe Ereignis bilden eine Karte. Oben stehen drei Zahlen: Meldungen der letzten Stunde, wie viele davon ungeprüft sind, wie viele Stories sich entwickeln.
+Die Standardansicht. Meldungen verschiedener Quellen über dasselbe Ereignis bilden eine Karte. Oben stehen drei Kacheln: Meldungen der letzten Stunde, wie viele davon ungeprüft sind, wie viele Stories sich entwickeln. **Ein Tipp auf eine Kachel filtert die Stories** entsprechend, ein zweiter Tipp hebt den Filter auf.
 
 | Auf der Karte | Bedeutung |
 |---|---|
@@ -26,7 +26,13 @@ Die Standardansicht. Meldungen verschiedener Quellen über dasselbe Ereignis bil
 | `⏱ RAGE X 1 h 6 min ahead of Tagesschau` | Wie weit die erste ungeprüfte Meldung vor der ersten bestätigenden lag |
 | Show reports in order | Jede Meldung mit Zeit und Quelle, wie die Story entstanden ist |
 
+Ein hellblaues Quadrat auf der Zeitachse und der Status **OBSERVED** kommen vom VectorScope-Sensor, siehe [Sensor und Karte](sensor.md). „1 echo“ markiert eine Quelle, die nur eine frühere Meldung abgeschrieben hat.
+
 **Developing** oben listet Stories mit mehreren Quellen aus den letzten 12 Stunden, **Latest** darunter alles andere. Einzelheiten: [Stories](stories.md).
+
+## Map
+
+Die Lage auf einer Karte: Kreise für Stories, Punkte für Militärflugzeuge, rot für Notfälle, gestrichelte Linien von genannten Flugzeugen zu ihrer Story. Einzelheiten: [Sensor und Karte](sensor.md).
 
 ## Wire
 
@@ -76,6 +82,10 @@ Orte, die in den letzten 24 Stunden genannt wurden, sortiert nach Häufigkeit. D
 Jede Quelle mit Statuspunkt (blau: hat geantwortet, rot: fehlgeschlagen), ihren Kanälen und dem Alter ihres neuesten Beitrags. Fällt eine Quelle aus, arbeiten die anderen weiter.
 
 Am Ende dieses Bereichs steht die Version von INTEL.
+
+## Deutsch
+
+**DE** oben rechts übersetzt Überschriften und Auszüge ins Deutsche, auch die Meldungen einer Story und die Überschriften unter Live now. Übersetzt wird nur, was auf dem Bildschirm steht, jede Übersetzung bleibt auf dem Gerät gespeichert. Deutsche Quellen bleiben, wie sie sind. Die Übersetzung kommt von Google Translate über den Proxy, ohne Schlüssel und ohne Garantie: Klappt sie nicht, bleibt der Originaltext stehen, und INTEL versucht es eine Minute später erneut. Callsigns, Typen und Orte werden immer im Original erkannt.
 
 ## Aktualisierung
 

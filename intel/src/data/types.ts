@@ -6,7 +6,7 @@ export interface Item {
   /** Stable id: channel plus URL or post URI. */
   id: string;
   sourceId: string;
-  channel: 'bluesky' | 'rss' | 'telegram';
+  channel: 'bluesky' | 'rss' | 'telegram' | 'sensor';
   title: string;
   text: string;
   /** Link to the article, or to the post when it links nothing. */

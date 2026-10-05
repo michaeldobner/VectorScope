@@ -1,12 +1,15 @@
-import { useMemo, useState } from 'react';
+import { Suspense, lazy, useMemo, useState } from 'react';
 import type { Aircraft } from '../../air/src/data/types';
 import { isStrong } from './data/match';
 import { CATEGORY_LABEL, SOURCES, TIER_LABEL, sourceById, type Category, type Tier } from './data/sources';
-import { rankStories, type Status, type Story } from './data/stories';
+import { independentCount, rankStories, type Status, type Story } from './data/stories';
 import type { EnrichedItem, Match } from './data/types';
-import { refreshFeed, refreshLive, setPrefs, useIntel, type Filter, type IntelState } from './state/store';
+import { refreshFeed, refreshLive, setPrefs, useIntel, type Filter, type IntelState, type Pulse } from './state/store';
+import { TranslateContext, german, useTr, useTranslationVersion } from './state/translate';
 import { age, ago, altitude, clock, count, duration, km } from './ui/format';
 import { useWide } from './ui/useWide';
+
+const IntelMap = lazy(() => import('./ui/IntelMap'));
 
 type Tab = 'main' | 'live' | 'more';
 const HOUR = 3600_000;
@@ -20,9 +23,13 @@ export function App() {
   const view = st.prefs.view;
   const items = useMemo(() => st.items.filter((i) => itemPasses(i, st)), [st]);
   const stories = useMemo(() => st.stories.filter((s) => s.items.some((i) => itemPasses(i, st))), [st]);
+  // Re-render when translations arrive. The function hands out German text where it is known.
+  const trVersion = useTranslationVersion();
+  const tr = useMemo(() => (st.prefs.german ? german : (t: string) => t), [st.prefs.german, trVersion]);
 
   return (
-    <div className={`app ${wide ? 'wide' : 'narrow'}`}>
+    <TranslateContext.Provider value={tr}>
+    <div className={`app ${wide ? 'wide' : 'narrow'} view-${view}`}>
       <TopBar st={st} />
       {!wide && (
         <nav className="tabs" aria-label="Views">
@@ -31,6 +38,9 @@ export function App() {
           </button>
           <button className={tab === 'main' && view === 'wire' ? 'on' : ''} onClick={() => (setTab('main'), setPrefs({ view: 'wire' }))}>
             Wire
+          </button>
+          <button className={tab === 'main' && view === 'map' ? 'on' : ''} onClick={() => (setTab('main'), setPrefs({ view: 'map' }))}>
+            Map
           </button>
           <button className={tab === 'live' ? 'on' : ''} onClick={() => setTab('live')}>
             Live {liveMatches(st).length || ''}
@@ -51,10 +61,20 @@ export function App() {
                 <button className={view === 'wire' ? 'on' : ''} onClick={() => setPrefs({ view: 'wire' })}>
                   Wire
                 </button>
+                <button className={view === 'map' ? 'on' : ''} onClick={() => setPrefs({ view: 'map' })}>
+                  Map
+                </button>
               </div>
             )}
             <Filters st={st} />
-            {view === 'stories' ? <StoriesView stories={stories} st={st} /> : <WireList items={items} st={st} />}
+            {view === 'stories' && <StoriesView stories={stories} st={st} />}
+            {view === 'wire' && <WireList items={items} st={st} />}
+            {view === 'map' && (
+              <Suspense fallback={<div className="intel-map" />}>
+                <IntelMap stories={stories} live={st.live} />
+                <p className="note map-note">Circles: stories at the place most of their reports name, size by number of independent sources, white confirmed, blue reported or emerging, grey unverified. Dots: military aircraft, blue when a story names them, red squawk 7700. Tap a circle for its stories, a dot to open the aircraft in AIR.</p>
+              </Suspense>
+            )}
           </main>
         )}
         {(wide || tab !== 'main') && (
@@ -66,6 +86,7 @@ export function App() {
         )}
       </div>
     </div>
+    </TranslateContext.Provider>
   );
 }
 
@@ -98,6 +119,9 @@ function TopBar({ st }: { st: IntelState }) {
       <span className={`status status-${status.toLowerCase()}`}>
         <i /> {status}
       </span>
+      <button className={`icon-btn lang ${st.prefs.german ? 'on' : ''}`} onClick={() => setPrefs({ german: !st.prefs.german })} aria-pressed={st.prefs.german} aria-label="Translate to German" title="Translate to German">
+        DE
+      </button>
       <button className={`icon-btn ${st.loading ? 'spin' : ''}`} onClick={() => refreshLive().then(refreshFeed)} aria-label="Refresh">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
           <path d="M20 11a8 8 0 1 0-2.3 5.7" />
@@ -138,35 +162,44 @@ function Empty({ st }: { st: IntelState }) {
 
 /* Stories */
 
+const HOUR_MS = HOUR;
+
+/** Which stories a pulse tile stands for. */
+export function pulsePasses(s: Story, pulse: Pulse, now: number): boolean {
+  if (pulse === 'hour') return s.items.some((i) => now - i.time < HOUR_MS);
+  if (pulse === 'unverified') return s.status === 'signal' || s.status === 'emerging';
+  if (pulse === 'developing') return independentCount(s) >= 2 && now - s.last < 12 * HOUR_MS;
+  return true;
+}
+
 function Pulse({ st }: { st: IntelState }) {
   const now = Date.now();
   const lastHour = st.items.filter((i) => now - i.time < HOUR);
   const unverified = lastHour.filter((i) => tierOf(i) === 'breaking').length;
-  const developing = st.stories.filter((s) => s.sources.length >= 2 && now - s.last < 12 * HOUR).length;
+  const developing = st.stories.filter((s) => pulsePasses(s, 'developing', now)).length;
+  const tile = (key: Exclude<Pulse, null>, n: number, text: string) => (
+    <button className={st.prefs.pulse === key ? 'on' : ''} onClick={() => setPrefs({ pulse: st.prefs.pulse === key ? null : key })} aria-pressed={st.prefs.pulse === key}>
+      <b>{count(n)}</b>
+      <span>{text}</span>
+    </button>
+  );
   return (
     <div className="pulse" aria-label="Pulse">
-      <div>
-        <b>{count(lastHour.length)}</b>
-        <span>reports last hour</span>
-      </div>
-      <div>
-        <b>{count(unverified)}</b>
-        <span>of them unverified</span>
-      </div>
-      <div>
-        <b>{count(developing)}</b>
-        <span>developing stories</span>
-      </div>
+      {tile('hour', lastHour.length, 'reports last hour')}
+      {tile('unverified', unverified, 'of them unverified')}
+      {tile('developing', developing, 'developing stories')}
     </div>
   );
 }
 
-function StoriesView({ stories, st }: { stories: Story[]; st: IntelState }) {
+function StoriesView({ stories: all, st }: { stories: Story[]; st: IntelState }) {
+  const stories = useMemo(() => all.filter((s) => pulsePasses(s, st.prefs.pulse, Date.now())), [all, st.prefs.pulse]);
   const { developing, latest } = useMemo(() => rankStories(stories, Date.now()), [stories]);
-  if (!stories.length) return <Empty st={st} />;
+  if (!all.length) return <Empty st={st} />;
   return (
     <>
       <Pulse st={st} />
+      {!stories.length && <div className="empty">No story for this tile right now.</div>}
       {developing.length > 0 && (
         <section>
           <h2 className="section-title">Developing, several sources</h2>
@@ -177,20 +210,21 @@ function StoriesView({ stories, st }: { stories: Story[]; st: IntelState }) {
           </ol>
         </section>
       )}
-      <section>
+      {latest.length > 0 && <section>
         <h2 className="section-title">Latest</h2>
         <ol className="items">
           {latest.slice(0, 80).map((s) => (
             <StoryCard key={s.id} story={s} st={st} />
           ))}
         </ol>
-      </section>
+      </section>}
     </>
   );
 }
 
-const STATUS_LABEL: Record<Status, string> = { signal: 'Signal', emerging: 'Emerging', reported: 'Reported', confirmed: 'Confirmed' };
+const STATUS_LABEL: Record<Status, string> = { observed: 'Observed', signal: 'Signal', emerging: 'Emerging', reported: 'Reported', confirmed: 'Confirmed' };
 const STATUS_HINT: Record<Status, string> = {
+  observed: 'seen by the VectorScope sensor in live flight data, nobody reported it yet',
   signal: 'one unverified source',
   emerging: 'several unverified sources',
   reported: 'specialist or OSINT source',
@@ -199,11 +233,13 @@ const STATUS_HINT: Record<Status, string> = {
 
 function StoryCard({ story, st }: { story: Story; st: IntelState }) {
   const [open, setOpen] = useState(false);
+  const tr = useTr();
   const { lead } = story;
+  const n = independentCount(story);
   const isNew = !st.demo && st.newSince > 0 && story.last > st.newSince;
   const strong = uniqueMatches(story.items.flatMap((i) => i.matches.filter(isStrong)));
   const entities = mergeEntities(story.items);
-  const tiers = (['breaking', 'osint', 'press', 'confirm'] as Tier[]).filter((t) => story.tiers[t]);
+  const tiers = (['sensor', 'breaking', 'osint', 'press', 'confirm'] as Tier[]).filter((t) => story.tiers[t]);
   return (
     <li className={`item story status-${story.status} ${strong.length ? 'has-live' : ''}`}>
       <div className="item-meta">
@@ -211,13 +247,13 @@ function StoryCard({ story, st }: { story: Story; st: IntelState }) {
         <span className={`status-chip s-${story.status}`} title={STATUS_HINT[story.status]}>
           {STATUS_LABEL[story.status]}
         </span>
-        <span className="src">{story.sources.length > 1 ? `${story.sources.length} sources` : sourceName(lead.sourceId)}</span>
+        <span className="src">{n > 1 ? `${n} sources` : sourceName(lead.sourceId)}</span>
         <span className="age">{age(story.last)}</span>
       </div>
-      <a className="item-title" href={lead.url} target="_blank" rel="noopener noreferrer">
-        {lead.title}
+      <a className="item-title" href={lead.url} target={lead.channel === 'sensor' ? undefined : '_blank'} rel="noopener noreferrer">
+        {tr(lead.title, lead.sourceId)}
       </a>
-      {lead.text && story.sources.length === 1 && <p className="item-text">{lead.text}</p>}
+      {lead.text && story.sources.length === 1 && <p className="item-text">{tr(lead.text, lead.sourceId)}</p>}
       {story.sources.length > 1 && (
         <>
           <Timeline story={story} />
@@ -227,6 +263,11 @@ function StoryCard({ story, st }: { story: Story; st: IntelState }) {
                 {story.tiers[t]} {TIER_LABEL[t].toLowerCase()}
               </span>
             ))}
+            {story.echoes.length > 0 && (
+              <span className="tier echo" title="Copies an earlier report almost word for word, not counted as a source">
+                {story.echoes.length} echo{story.echoes.length > 1 ? 'es' : ''}
+              </span>
+            )}
             {story.leadMs && (
               <span className="leadtime">
                 {sourceName(story.leadFrom!)} {duration(story.leadMs)} ahead of {sourceName(story.leadTo!)}
@@ -272,9 +313,12 @@ function StoryCard({ story, st }: { story: Story; st: IntelState }) {
                 <li key={i.id}>
                   <span className="t">{clock(i.time)}</span>
                   <span className={`dot-tier t-${tierOf(i)}`} />
-                  <span className="who">{sourceName(i.sourceId)}</span>
-                  <a href={i.url} target="_blank" rel="noopener noreferrer">
-                    {i.title}
+                  <span className="who">
+                    {sourceName(i.sourceId)}
+                    {story.echoItems.includes(i.id) && <span className="echo-mark"> echo</span>}
+                  </span>
+                  <a href={i.url} target={i.channel === 'sensor' ? undefined : '_blank'} rel="noopener noreferrer">
+                    {tr(i.title, i.sourceId)}
                   </a>
                 </li>
               ))}
@@ -335,9 +379,10 @@ function WireList({ items, st }: { items: EnrichedItem[]; st: IntelState }) {
   );
 }
 
-const CHANNEL_LABEL = { bluesky: 'Bluesky', rss: 'RSS', telegram: 'Telegram' } as const;
+const CHANNEL_LABEL = { bluesky: 'Bluesky', rss: 'RSS', telegram: 'Telegram', sensor: 'ADS-B' } as const;
 
 function ItemCard({ item, isNew }: { item: EnrichedItem; isNew: boolean }) {
+  const tr = useTr();
   const src = sourceById(item.sourceId);
   const strong = item.matches.filter(isStrong);
   const weak = item.matches.filter((m) => !isStrong(m));
@@ -352,10 +397,10 @@ function ItemCard({ item, isNew }: { item: EnrichedItem; isNew: boolean }) {
         <span>{CHANNEL_LABEL[item.channel]}</span>
         <span className="age">{age(item.time)}</span>
       </div>
-      <a className="item-title" href={item.url} target="_blank" rel="noopener noreferrer">
-        {item.title}
+      <a className="item-title" href={item.url} target={item.channel === 'sensor' ? undefined : '_blank'} rel="noopener noreferrer">
+        {tr(item.title, item.sourceId)}
       </a>
-      {item.text && <p className="item-text">{item.text}</p>}
+      {item.text && <p className="item-text">{tr(item.text, item.sourceId)}</p>}
       {(callsigns.length > 0 || types.length > 0 || places.length > 0) && (
         <div className="entities">
           {callsigns.map((c) => (
@@ -428,13 +473,19 @@ function WeakSummary({ weak }: { weak: Match[] }) {
 /* Side panels */
 
 function LivePanel({ st }: { st: IntelState }) {
+  const tr = useTr();
   const list = liveMatches(st);
+  const military = st.live.filter((a) => a.dbFlags & 1).length;
+  const emergencies = st.live.filter((a) => a.squawk === '7700').length;
   return (
     <section className="panel">
       <h2 className="section-title">Live now</h2>
       <div className="live-summary">
-        <span className="big">{st.live.length ? count(st.live.length) : '·'}</span>
-        <span>military aircraft broadcasting worldwide{st.liveUpdated ? `, ${ago(st.liveUpdated)}` : ''}</span>
+        <span className="big">{st.live.length ? count(military) : '·'}</span>
+        <span>
+          military aircraft broadcasting worldwide{emergencies ? `, ${emergencies} squawking 7700` : ''}
+          {st.liveUpdated ? `, ${ago(st.liveUpdated)}` : ''}
+        </span>
       </div>
       {st.liveError && <div className="note">Live data unavailable: {st.liveError}</div>}
       {list.length ? (
@@ -442,7 +493,7 @@ function LivePanel({ st }: { st: IntelState }) {
           {list.map(({ match, item }) => (
             <li key={match.ac.hex}>
               <LiveRow m={match} />
-              <div className="live-src">{item.title}</div>
+              <div className="live-src">{tr(item.title, item.sourceId)}</div>
             </li>
           ))}
         </ul>
@@ -508,6 +559,7 @@ function SourcesPanel({ st }: { st: IntelState }) {
       <p className="note">
         {st.collectedAt ? `Collector last ran ${ago(st.collectedAt)}. ` : ''}Headlines and short excerpts link to the original publisher. Live aircraft © adsb.lol contributors, ODbL.
       </p>
+      {st.prefs.german && <p className="note">German translations by Google Translate (unofficial), cached on this device.</p>}
       <p className="note version">VectorScope INTEL v{__APP_VERSION__}</p>
     </section>
   );

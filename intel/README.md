@@ -24,6 +24,10 @@ Fast Telegram newsrooms report first, specialist media explain, leading media co
 | **Stories** | Reports from different sources about the same event become one card with status Signal, Emerging, Reported or Confirmed, a time axis of all reports and the lead time of the first unverified report |
 | **24 verified sources in four tiers** | Telegram newsrooms (OSINTdefender, RAGE X, War Monitor, Insider Paper, Clash Report), OSINT researchers, specialist media and confirming media (Tagesschau, Deutschlandfunk, DW, BBC, Al Jazeera). Each checked in the test lab |
 | **Probe collector** | For one week a collector on GitHub Actions keeps every report every 15 minutes, so nothing scrolls away while the app is closed |
+| **VectorScope Sensor** | INTEL becomes a source itself: tankers, AWACS, reconnaissance and bombers flying together, and every squawk 7700, become reports that join the stories |
+| **Echo detector** | A channel that copies another one word for word does not count as a source |
+| **Situation map** | Stories as circles at their places, military aircraft, emergencies, lines from named aircraft to their story |
+| **German** | DE translates every headline and excerpt into German |
 | **Wire** | Every report on its own, newest first, with its tier |
 | **Recognition** | Military callsigns (FORTE11, RCH419, NATO03), about 45 aircraft types in several spellings (KC-135, KC135R, Stratotanker), about 100 places in English and German (Ostsee, Black Sea, Rzeszów, Ramstein) |
 | **Live match** | Callsign named in the post and airborne now, or type named and an aircraft of that type near the named place. Highlighted in ice blue, one tap opens it in AIR |
@@ -46,7 +50,8 @@ Full guide: [User guide](docs/en/user-guide.md).
 | Document | Contents |
 |---|---|
 | [User guide](docs/en/user-guide.md) | Views, filters, live matches, places, sources |
-| [Stories](docs/en/stories.md) | Tiers, status, grouping, lead time |
+| [Stories](docs/en/stories.md) | Tiers, status, grouping, echo detector, lead time |
+| [Sensor and map](docs/en/sensor.md) | Own observations in live flight data, situation map |
 | [Sources](docs/en/sources.md) | The verified sources, how they were checked, sources that were rejected and why |
 | [Probe collector](docs/en/collector.md) | One week of collecting on GitHub Actions |
 | [Matching](docs/en/matching.md) | Recognition of callsigns, types and places, rules of the live match |
@@ -65,6 +70,6 @@ npm test               # unit tests of all modules and repository checks
 
 ## Version
 
-Current version: **0.2.2**. See the [changelog](CHANGELOG.md).
+Current version: **0.3.0**. See the [changelog](CHANGELOG.md).
 
 Created by Michael Dobner. Licensed under the [MIT licence](../LICENSE).

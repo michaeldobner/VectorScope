@@ -1,9 +1,11 @@
-// Minimal CORS proxy for adsb.lol, planespotters.net, the RSS feeds and Telegram channels of INTEL, deployed as a Vercel serverless function.
+// Minimal CORS proxy for adsb.lol, planespotters.net, the RSS feeds, Telegram channels and translations of INTEL, deployed as a Vercel serverless function.
 // Only whitelisted read-only paths are forwarded, so this is not an open proxy.
 // Env vars (Vercel project settings):
 //   ALLOWED_ORIGIN  e.g. https://michaeldobner.github.io   (default "*")
 //   PROXY_TOKEN     optional shared secret, sent by the app as X-VS-Token
 //   CONTACT         contact info for the User-Agent adsb.lol asks for
+
+import { translateAll } from '../lib/translate.js';
 
 const UPSTREAM = 'https://api.adsb.lol';
 const ALLOWED = [
@@ -71,6 +73,18 @@ export default async function handler(req, res) {
       return res.status(r.status).send(await r.text());
     } catch (e) {
       return res.status(502).json({ error: 'upstream', detail: String(e) });
+    }
+  }
+  // Translation for INTEL: POST {texts: [...], to: 'de'} answers {translations: [...]}. At most 60 texts of 600 characters.
+  if (path === '/translate' && req.method === 'POST') {
+    const texts = Array.isArray(req.body?.texts) ? req.body.texts.slice(0, 60).map((t) => String(t).slice(0, 600)) : [];
+    const to = req.body?.to === 'en' ? 'en' : 'de';
+    try {
+      const translations = texts.length ? await translateAll(texts, to) : [];
+      res.setHeader('Cache-Control', 'no-store');
+      return res.status(200).json({ translations });
+    } catch (e) {
+      return res.status(502).json({ error: 'translate', detail: String(e) });
     }
   }
   // RSS feeds: fixed list, cached five minutes at the edge.

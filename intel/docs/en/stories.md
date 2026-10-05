@@ -14,11 +14,13 @@ Every source has a tier that says how far its report carries.
 | OSINT | OSINT, blue dot | ItaMilRadar, Bellingcat, ISW, Jakub Janovsky | Open source researchers with a track record |
 | Specialist | Specialist, blue dot | The Aviationist, The War Zone, Defense News, Naval News, hartpunkt and others | Specialist media with an editorial process |
 | Confirming | Confirming, white dot | Tagesschau, Deutschlandfunk, DW, BBC, Al Jazeera, US DoD | Authorities and leading news media |
+| Sensor | Sensor, light blue square | VectorScope itself | Activity and emergencies seen in live flight data, see [Sensor and map](sensor.md) |
 
 ## Status of a story
 
 | Status | Condition |
 |---|---|
+| **Observed** | Only the VectorScope sensor saw it, nobody reported it yet |
 | **Signal** | One unverified source |
 | **Emerging** | Several unverified sources, nobody else yet |
 | **Reported** | At least one OSINT or specialist source |
@@ -34,6 +36,10 @@ There are no percentages on purpose. A figure like "72 %" would suggest a precis
 4. A report joins a story only if it matches the **first** report of that story, and in a larger story at least one more. Loose chains (A like B, B like C, C like D) therefore never grow into one giant story.
 
 Reports of the same source never link directly. A channel that repeats itself is not confirmation.
+
+## Echo detector
+
+Telegram channels often copy each other. A later report of another source that shares at least 60 % of all its words with an earlier report is an **echo**: it stays in the story, but it does not count as a source, neither for the status nor for the number of sources. The card shows "1 echo", the list of reports marks the copy.
 
 ## Lead time
 

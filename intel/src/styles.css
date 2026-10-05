@@ -539,15 +539,6 @@ a {
   gap: 8px;
   margin: 2px 0 14px;
 }
-.pulse div {
-  padding: 10px 12px;
-  border-radius: var(--radius-sm);
-  background: var(--panel);
-  border: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
 .pulse b {
   font-family: var(--mono);
   font-size: 20px;
@@ -737,4 +728,76 @@ section > .section-title {
   margin-top: 8px;
   font-family: var(--mono);
   font-size: 11.5px;
+}
+
+/* Pulse tiles filter the stories */
+.pulse button {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+.pulse button.on {
+  border-color: rgba(85, 189, 235, 0.6);
+  background: rgba(85, 189, 235, 0.1);
+}
+.pulse button.on b {
+  color: var(--accent);
+}
+
+/* Language switch */
+.icon-btn.lang {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--border);
+  width: auto;
+  padding: 0 9px;
+  height: 30px;
+}
+.icon-btn.lang.on {
+  color: var(--accent);
+  border-color: rgba(85, 189, 235, 0.55);
+  background: rgba(85, 189, 235, 0.1);
+}
+
+/* Echoes and sensor */
+.tier.echo {
+  border-style: dashed;
+}
+.echo-mark {
+  color: var(--text-3);
+  font-size: 11px;
+}
+.tier.t-sensor,
+.status-chip.s-observed {
+  color: var(--active);
+  border-color: rgba(125, 211, 252, 0.5);
+}
+.tl-dot.t-sensor,
+.dot-tier.t-sensor {
+  background: var(--bg);
+  border: 2px solid var(--active);
+  border-radius: 2px;
+}
+
+/* Situation map */
+.intel-map {
+  position: relative;
+  height: calc(100dvh - 230px - var(--sat));
+  min-height: 360px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #1d1d20;
+}
+.narrow .intel-map {
+  height: calc(100dvh - 190px - var(--sat) - var(--sab));
+}
+.map-note {
+  margin-top: 8px;
 }

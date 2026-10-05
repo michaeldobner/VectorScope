@@ -4,6 +4,15 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.3.0 (2026-10-05)
+
+### Added
+* **VectorScope Sensor:** air activity (tankers, AWACS, reconnaissance, bombers flying together) and every squawk 7700 become reports of their own and join the stories. New status Observed, lead time also from the sensor.
+* **Echo detector:** a report that copies an earlier one of another source counts as echo, not as source.
+* **Situation map:** view Map with stories, military aircraft, emergencies and lines from named aircraft to their story.
+* **German:** DE translates headlines and excerpts through Google Translate, cached on the device.
+* The three tiles above the stories filter on tap.
+
 ## 0.2.2 (2026-10-05)
 
 ### Added

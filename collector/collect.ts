@@ -6,9 +6,10 @@
 //   stats.json    one record per run: per source ok, items, new items, error
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { loadSource, mergeItems, pool } from '../intel/src/data/feed';
+import { itemKey, loadLive, loadSource, mergeItems, pool } from '../intel/src/data/feed';
+import { detectAll } from '../intel/src/data/sensor';
 import { SOURCES } from '../intel/src/data/sources';
-import { clip, urlKey } from '../intel/src/data/text';
+import { clip } from '../intel/src/data/text';
 import type { Item } from '../intel/src/data/types';
 
 const DIR = process.argv[2] ?? 'collector-data';
@@ -31,16 +32,20 @@ interface RunRecord {
 
 const archive = read<{ at: number; items: Item[] }>('archive.json', { at: 0, items: [] });
 const stats = read<{ runs: RunRecord[] }>('stats.json', { runs: [] });
-const seenBefore = new Map(archive.items.map((i) => [urlKey(i.url), i.seen ?? i.time]));
+const seenBefore = new Map(archive.items.map((i) => [itemKey(i), i.seen ?? i.time]));
 
 const results = await pool(SOURCES, 6, (s) => loadSource(s, { direct: true }));
+// Own sensor: activity and emergencies in live flight data, through the proxy like the app.
+const live = await loadLive().catch(() => []);
+const sensorItems = detectAll(live, now);
+results.push({ items: sensorItems, status: { ok: live.length > 0, newest: now, count: sensorItems.length } });
 const run: RunRecord = { at: now, ms: Date.now() - now, sources: {} };
 const fresh: Item[] = [];
-SOURCES.forEach((s, i) => {
+[...SOURCES, { id: 'sensor' }].forEach((s, i) => {
   const { items, status } = results[i];
   let count = 0;
   for (const item of items) {
-    if (!seenBefore.has(urlKey(item.url))) {
+    if (!seenBefore.has(itemKey(item))) {
       fresh.push({ ...item, seen: now });
       count++;
     }
@@ -49,7 +54,7 @@ SOURCES.forEach((s, i) => {
 });
 
 // Merge keeps the earliest time and the earliest "seen" of duplicates.
-const merged = mergeItems([...archive.items, ...results.flatMap((r) => r.items).map((i) => ({ ...i, seen: seenBefore.get(urlKey(i.url)) ?? now }))], now).filter(
+const merged = mergeItems([...archive.items, ...results.flatMap((r) => r.items).map((i) => ({ ...i, seen: seenBefore.get(itemKey(i)) ?? now }))], now).filter(
   (i) => now - i.time < 7 * DAY,
 );
 

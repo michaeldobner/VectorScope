@@ -91,6 +91,9 @@ export async function pool<T, R>(list: T[], limit: number, task: (t: T) => Promi
   return out;
 }
 
+/** Sensor reports have stable ids per area and day, everything else is the same story at the same URL. */
+export const itemKey = (item: Item) => (item.channel === 'sensor' ? item.id : urlKey(item.url));
+
 /**
  * One list, newest first. A Bluesky post that links an article of the same source is the same story:
  * the article stays (longer text), the post contributes its link and an earlier time if it was faster.
@@ -99,7 +102,7 @@ export function mergeItems(items: Item[], now: number): Item[] {
   const byKey = new Map<string, Item>();
   for (const item of items) {
     if (now - item.time > MAX_AGE_MS || item.time - now > 3600_000) continue;
-    const key = urlKey(item.url);
+    const key = itemKey(item);
     const prev = byKey.get(key);
     if (!prev) {
       byKey.set(key, item);

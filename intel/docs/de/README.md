@@ -8,6 +8,7 @@ Diese Dokumentation beschreibt das Modul INTEL: die Bedienung, welche Quellen es
 |---|---|---|
 | [Bedienung](bedienung.md) | Ansichten, Filter, Live-Treffer, Orte, Quellen, neue Beiträge | Alle |
 | [Stories](stories.md) | Stufen der Quellen, Status einer Story, Bündelung, Vorsprung | Alle |
+| [Sensor und Karte](sensor.md) | Eigene Beobachtungen in den Live-Flugdaten: Luftaktivität, Notfälle, Lagekarte | Alle |
 | [Quellen](quellen.md) | Die 24 geprüften Quellen, die Prüfung, verworfene Kandidaten | Alle |
 | [Abgleich](abgleich.md) | Erkennung von Callsigns, Typen und Orten, Regeln und Grenzen des Live-Abgleichs | Alle, Entwicklung |
 | [Architektur](architektur.md) | Module, Datenfluss, Proxy-Routen, Speicher, Tests | Entwicklung |
@@ -19,10 +20,10 @@ Diese Dokumentation beschreibt das Modul INTEL: die Bedienung, welche Quellen es
 | | |
 |---|---|
 | Zweck | Geprüfte OSINT- und Verteidigungsnachrichten, abgeglichen mit Flugzeugen, die gerade in der Luft sind |
-| Ansichten | Stories, Wire, Live now, Places, Sources |
+| Ansichten | Stories, Wire, Map, Live now, Places, Sources |
 | Quellen | 24 in vier Stufen, von Telegram, Bluesky und RSS |
 | Live-Daten | Militärflugzeuge von adsb.lol (ODbL), alle zwei Minuten |
 | Aktualisierung | Feed alle fünf Minuten, solange die App geöffnet ist |
-| Sprache | Englische Oberfläche, Beiträge in ihrer Originalsprache (Englisch, Deutsch) |
+| Sprache | Englische Oberfläche, Meldungen in ihrer Originalsprache oder mit **DE** ins Deutsche übersetzt |
 | Adresse | https://michaeldobner.github.io/VectorScope/intel/ |
-| Version | 0.2.2 |
+| Version | 0.3.0 |

@@ -4,6 +4,13 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.6.0 (2026-10-05)
+
+### Added
+* Proxy route `POST /translate` for the German translations of INTEL (Google Translate, `proxy/lib/translate.js`).
+* The probe collector also records the observations of the VectorScope sensor.
+* Module INTEL 0.3.0, see its [changelog](intel/CHANGELOG.md).
+
 ## 0.5.0 (2026-10-05)
 
 ### Added

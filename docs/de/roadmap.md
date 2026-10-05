@@ -13,6 +13,7 @@ VectorScope wächst Modul für Modul. Alles läuft auf GitHub Pages und dem vorh
 | 3 | INTEL | Stufe A: Feed der geprüften Quellen, Erkennung von Callsigns, Typen und Orten, Live-Abgleich mit Militärflugzeugen, direkter Sprung nach AIR | Erledigt in INTEL 0.1.0 |
 | 4 | INTEL | Telegram-Eilmelder, bestätigende Medien, Stories mit Status und Vorsprung | Erledigt in INTEL 0.2.0 |
 | 5 | INTEL | Probe-Sammler für eine Woche, danach Auswertung: Menge, Tempo, Vorsprung, Lärm je Quelle. Entscheidung über einen dauerhaften Sammler | Läuft bis 12. Oktober 2026 |
+| 6 | INTEL | Eigener Sensor in den Live-Flugdaten, Echo-Detektor, Lagekarte, deutsche Übersetzung | Erledigt in INTEL 0.3.0 |
 
 ## Als Nächstes
 

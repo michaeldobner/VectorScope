@@ -3,11 +3,15 @@
 import { sourceById, type Tier } from './sources';
 import type { EnrichedItem } from './types';
 
-export type Status = 'signal' | 'emerging' | 'reported' | 'confirmed';
+export type Status = 'observed' | 'signal' | 'emerging' | 'reported' | 'confirmed';
 
 export interface Story {
   id: string;
   items: EnrichedItem[];
+  /** Sources whose report copies an earlier report of another source almost word for word. They do not count as confirmation. */
+  echoes: string[];
+  /** Item ids of the copies. */
+  echoItems: string[];
   /** The item whose headline represents the story: highest tier, then earliest. */
   lead: EnrichedItem;
   status: Status;
@@ -108,28 +112,57 @@ export function buildStories(items: EnrichedItem[]): Story[] {
   return groups.map((g) => toStory(g.map((i) => items[i])));
 }
 
-const RANK: Record<Tier, number> = { confirm: 3, press: 2, osint: 1, breaking: 0 };
+const RANK: Record<Tier, number> = { confirm: 4, press: 3, osint: 2, breaking: 1, sensor: 0 };
+
+const wordsOf = (i: EnrichedItem) => new Set(`${i.title} ${i.text}`.toLowerCase().match(/\p{L}[\p{L}\p{N}]{2,}/gu) ?? []);
+
+/**
+ * True if `b` repeats `a` almost word for word: at least 60 % of all their words are shared.
+ * A longer article that only contains the words of a short post is not a copy, it adds its own.
+ */
+export function isEcho(a: EnrichedItem, b: EnrichedItem): boolean {
+  const wa = wordsOf(a);
+  const wb = wordsOf(b);
+  if (Math.min(wa.size, wb.size) < 6) return false;
+  let shared = 0;
+  for (const w of wa) if (wb.has(w)) shared++;
+  return shared / (wa.size + wb.size - shared) >= 0.6;
+}
 
 function toStory(list: EnrichedItem[]): Story {
   const items = [...list].sort((a, b) => a.time - b.time);
-  const tiers: Record<Tier, number> = { breaking: 0, osint: 0, press: 0, confirm: 0 };
-  const sources = [...new Set(items.map((i) => i.sourceId))];
-  for (const s of sources) tiers[sourceById(s)?.tier ?? 'breaking']++;
   const tierOf = (i: EnrichedItem) => sourceById(i.sourceId)?.tier ?? 'breaking';
-  const lead = [...items].sort((a, b) => RANK[tierOf(b)] - RANK[tierOf(a)] || a.time - b.time)[0];
+  // Echo detector: a later report of another source that copies an earlier one is not an independent source.
+  const echoItems: string[] = [];
+  items.forEach((b, j) => {
+    if (items.slice(0, j).some((a) => a.sourceId !== b.sourceId && !echoItems.includes(a.id) && isEcho(a, b))) echoItems.push(b.id);
+  });
+  const independent = items.filter((i) => !echoItems.includes(i.id));
+  const sources = [...new Set(items.map((i) => i.sourceId))];
+  const independentSources = new Set(independent.map((i) => i.sourceId));
+  const echoes = sources.filter((s) => !independentSources.has(s));
+  const tiers: Record<Tier, number> = { sensor: 0, breaking: 0, osint: 0, press: 0, confirm: 0 };
+  for (const s of independentSources) tiers[sourceById(s)?.tier ?? 'breaking']++;
+  const lead = [...independent].sort((a, b) => RANK[tierOf(b)] - RANK[tierOf(a)] || a.time - b.time)[0];
+  const reporters = independentSources.size - tiers.sensor;
   const status: Status = tiers.confirm
     ? 'confirmed'
     : tiers.press || tiers.osint
       ? 'reported'
-      : sources.length >= 2
+      : reporters >= 2
         ? 'emerging'
-        : 'signal';
-  const firstFast = items.find((i) => tierOf(i) === 'breaking');
-  const firstSlow = items.find((i) => tierOf(i) === 'confirm') ?? items.find((i) => tierOf(i) === 'press');
+        : reporters === 1
+          ? 'signal'
+          : 'observed';
+  // Lead time: the first unverified report or own sensor observation against the first confirming or specialist one.
+  const firstFast = independent.find((i) => tierOf(i) === 'breaking' || tierOf(i) === 'sensor');
+  const firstSlow = independent.find((i) => tierOf(i) === 'confirm') ?? independent.find((i) => tierOf(i) === 'press');
   const leadMs = firstFast && firstSlow && firstSlow.time > firstFast.time ? firstSlow.time - firstFast.time : null;
   return {
     id: items[0].id,
     items,
+    echoes,
+    echoItems,
     lead,
     status,
     sources,
@@ -145,9 +178,12 @@ function toStory(list: EnrichedItem[]): Story {
 /** Developing first: several sources and active in the last 12 hours, most sources first. Then everything by time. */
 export function rankStories(stories: Story[], now: number): { developing: Story[]; latest: Story[] } {
   const developing = stories
-    .filter((s) => s.sources.length >= 2 && now - s.last < 12 * 3600_000)
-    .sort((a, b) => b.sources.length - a.sources.length || b.last - a.last);
+    .filter((s) => independentCount(s) >= 2 && now - s.last < 12 * 3600_000)
+    .sort((a, b) => independentCount(b) - independentCount(a) || b.last - a.last);
   const ids = new Set(developing.map((s) => s.id));
   const latest = stories.filter((s) => !ids.has(s.id)).sort((a, b) => b.last - a.last);
   return { developing, latest };
 }
+
+/** Sources that reported on their own: echoes left out. */
+export const independentCount = (s: Story) => s.sources.length - s.echoes.length;

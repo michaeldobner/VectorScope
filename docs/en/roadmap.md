@@ -13,6 +13,7 @@ VectorScope grows module by module. Everything runs on GitHub Pages and the exis
 | 3 | INTEL | Stage A: feed of the verified sources, recognition of callsigns, types and places, live match with military aircraft, deep link into AIR | Done in INTEL 0.1.0 |
 | 4 | INTEL | Telegram newsrooms, confirming media, stories with status and lead time | Done in INTEL 0.2.0 |
 | 5 | INTEL | Probe collector for one week, then evaluation: volume, speed, lead time, noise per source. Decision on a permanent collector | Running until 12 October 2026 |
+| 6 | INTEL | Own sensor in live flight data, echo detector, situation map, German translation | Done in INTEL 0.3.0 |
 
 ## Next
 
