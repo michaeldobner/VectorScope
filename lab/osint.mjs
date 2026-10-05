@@ -122,7 +122,7 @@ for (const q of GDELT_Q) {
 }
 
 // Telegram channels: web preview t.me/s, directly and through the proxy (Vercel may be blocked by Telegram).
-const TELEGRAM = ['bazabazon', 'mash', 'shot_shot', 'ENews112', 'astrapress', 'ostorozhno_novosti', 'ostorozhno_moskva', 'news_sirena', 'rybar', 'wargonzo', 'dva_majors', 'favt_info', 'mchs_official', 'sledcom_press', 'vvgladkov', 'opershtab23', 'Khinshtein', 'AVBogomaz', 'gusev_36', 'razvozhaev', 'mos_sobyanin', 'meduzalive', 'mediazzzona', 'currenttime', 'agentstvonews', 'thebell_io', 'kpszsu', 'idfofficial', 'netblocks', 'DeepStateUA', 'nexta_tv', 'liveuamap', 'Middle_East_Spectator', 'abualiexpress', 'iranintl_en', 'timesofisrael', 'AJENews_Official', 'AuroraIntel', 'BNONews'];
+const TELEGRAM = ['rybar', 'rybar_in_english', 'rybar_mena', 'rybar_africa', 'rybarde', 'evropar', 'caucasar', 'rybar_latam', 'rybar_pacific', 'balkanar', 'rybar_stan', 'rybar_by'];
 const telegram = [];
 for (const ch of TELEGRAM) {
   const direct = await get(`https://t.me/s/${ch}`);
