@@ -4,11 +4,13 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
-## Unveröffentlicht
+## 0.2.1 (2026-10-05)
 
 ### Behoben
 * Stories verketten lose verwandte Meldungen nicht mehr zu einer Riesen-Story: Jede Meldung muss zur ersten Meldung ihrer Story passen.
 * Leitmedien zählen nur noch bei Sicherheits- und Krisenthemen, Kultur, Sport und Podcasts bleiben draußen.
+* Die Bündelung nutzt nur Wörter der Überschrift und braucht zwei gemeinsame spezielle Wörter. Geprüft an 439 echten Meldungen: Rund vier von fünf Stories mit mehreren Quellen stimmen.
+* Überschriften ohne „#BREAKING“-Vorsatz und nicht mehr abgeschnitten nach Abkürzungen wie „USS Harry S.“.
 
 ## 0.2.0 (2026-10-05)
 

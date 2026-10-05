@@ -28,9 +28,9 @@ Prozentwerte gibt es bewusst nicht. Eine Zahl wie „72 %“ würde eine Genauig
 
 ## Wie Meldungen gebündelt werden
 
-1. Für jede Meldung sammelt INTEL ihre Merkmale: Orte, Callsigns, Flugzeugtypen und die Wörter aus Überschrift und Auszug. Häufige Wörter auf Englisch und Deutsch werden ignoriert, deutsche Ereigniswörter auf Englisch abgebildet (Pest zu plague, Drohne zu drone, Explosion zu explosion).
-2. Jedes Merkmal wird danach gewichtet, wie selten es unter allen aktuellen Meldungen ist. Ein Callsign wiegt am meisten, dann Orte, dann Typen und Wörter. Merkmale, die in mehr als 8 % aller Meldungen vorkommen, zählen nichts.
-3. Zwei Meldungen **verschiedener** Quellen innerhalb von 36 Stunden gehören zusammen, wenn ihre gemeinsamen Merkmale genug wiegen und mindestens ein gewöhnliches Wort darunter ist. Ein Ort allein reicht nicht, in der Ukraine passieren viele Stories.
+1. Für jede Meldung sammelt INTEL ihre Merkmale: Orte, Callsigns und Flugzeugtypen aus Überschrift und Auszug, Wörter nur aus der Überschrift, weil Überschriften sagen, was passiert ist, und Auszüge voller Floskeln sind. Häufige Wörter auf Englisch und Deutsch werden ignoriert, deutsche Ereigniswörter auf Englisch abgebildet (Pest zu plague, Drohne zu drone, Explosion zu explosion).
+2. Jedes Merkmal wird danach gewichtet, wie selten es unter allen aktuellen Meldungen ist. Ein Callsign wiegt am meisten, dann Orte, dann Typen und Wörter. Merkmale, die in mehr als 2,5 % aller Meldungen vorkommen (navy, pentagon, ukraine), zählen nichts, ebenso allgemeine Wörter wie week, president oder government.
+3. Zwei Meldungen **verschiedener** Quellen innerhalb von 36 Stunden gehören zusammen, wenn ihre gemeinsamen Merkmale genug wiegen und mindestens zwei Wörter der Überschrift darunter sind, oder ein Wort zusammen mit einem Callsign. Ein Ort allein reicht nie.
 4. Eine Meldung kommt nur dann in eine Story, wenn sie zur **ersten** Meldung dieser Story passt, in einer größeren Story zusätzlich zu mindestens einer weiteren. Lose Ketten (A ähnlich B, B ähnlich C, C ähnlich D) wachsen dadurch nie zu einer Riesen-Story.
 
 Meldungen derselben Quelle verbinden sich nie direkt. Ein Kanal, der sich wiederholt, ist keine Bestätigung.
@@ -53,6 +53,10 @@ Hat eine Story eine ungeprüfte Meldung und eine spätere bestätigende oder Fac
 ## Reihenfolge
 
 Oben **Developing**: Stories mit mehreren Quellen und Aktivität in den letzten 12 Stunden, die meisten Quellen zuerst. Darunter **Latest**: alles andere, das Neueste zuerst. Die drei Zahlen darüber zeigen die Meldungen der letzten Stunde, wie viele davon ungeprüft sind und wie viele Stories sich entwickeln.
+
+## Qualität an echten Daten
+
+Geprüft an 439 echten Meldungen vom 05.10.2026: Von 36 Stories mit mehreren Quellen stimmten rund vier von fünf, zum Beispiel der Abzug der B-1-Bomber aus RAF Fairford (zuerst Insider Paper auf Telegram, dann The War Zone, ItaMilRadar, bestätigt von der BBC) oder IRIS-T SLM für die Fregatten F125 (hartpunkt, Naval News, The War Zone). Die falschen teilen zwei spezielle Wörter, ohne dasselbe Ereignis zu sein, etwa zwei verschiedene Angriffe auf Boote.
 
 ## Grenzen
 

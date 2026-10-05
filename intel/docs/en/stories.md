@@ -28,9 +28,9 @@ There are no percentages on purpose. A figure like "72 %" would suggest a precis
 
 ## How reports are grouped
 
-1. For every report INTEL collects its tokens: places, callsigns, aircraft types and the words of headline and excerpt. Common words in English and German are ignored, German event words are mapped to English (Pest to plague, Drohne to drone, Explosion to explosion).
-2. Each token is weighted by how rare it is among all current reports. A callsign weighs most, then places, then types and words. Tokens that appear in more than 8 % of all reports count nothing.
-3. Two reports of **different** sources within 36 hours belong together when their shared tokens weigh enough and at least one ordinary word is among them. A place alone is not enough, many stories happen in Ukraine.
+1. For every report INTEL collects its tokens: places, callsigns and aircraft types from headline and excerpt, words from the headline only, because headlines say what happened and excerpts are full of boilerplate. Common words in English and German are ignored, German event words are mapped to English (Pest to plague, Drohne to drone, Explosion to explosion).
+2. Each token is weighted by how rare it is among all current reports. A callsign weighs most, then places, then types and words. Tokens that appear in more than 2,5 % of all reports (navy, pentagon, ukraine) count nothing, nor do generic words like week, president or government.
+3. Two reports of **different** sources within 36 hours belong together when their shared tokens weigh enough and at least two headline words are among them, or one word together with a callsign. A place alone is never enough.
 4. A report joins a story only if it matches the **first** report of that story, and in a larger story at least one more. Loose chains (A like B, B like C, C like D) therefore never grow into one giant story.
 
 Reports of the same source never link directly. A channel that repeats itself is not confirmation.
@@ -53,6 +53,10 @@ When a story has an unverified report and a later confirming or specialist one, 
 ## Order
 
 **Developing** at the top: stories with several sources and activity in the last 12 hours, the most sources first. Below **Latest**: everything else, newest first. The three numbers above show reports of the last hour, how many of them are unverified, and how many stories are developing.
+
+## Quality on real data
+
+Checked on 439 real reports of 2026-10-05: of 36 stories with several sources about four in five were right, for example B-1 bombers leaving RAF Fairford (Insider Paper on Telegram first, then The War Zone, ItaMilRadar, confirmed by the BBC) or the F125 frigates getting IRIS-T SLM (hartpunkt, Naval News, The War Zone). The wrong ones share two specific words without being the same event, like two different strikes on boats.
 
 ## Limits
 

@@ -21,7 +21,7 @@ export function parseAuthorFeed(json: any, sourceId: string): Item[] {
     if (!Number.isFinite(time)) continue;
     const external = post.embed?.external ?? post.embed?.media?.external;
     const text = plainText(record.text);
-    const title = external?.title ? plainText(external.title) : firstSentence(text);
+    const title = external?.title ? plainText(external.title) : firstSentence(text.replace(/^\s*#?(?:breaking|new|update|just in)\b[\s:!-]*/i, ''));
     const body = external?.title ? text || plainText(external.description ?? '') : text.slice(title.length).trim();
     out.push({
       id: `bsky:${post.uri}`,
@@ -38,6 +38,7 @@ export function parseAuthorFeed(json: any, sourceId: string): Item[] {
 }
 
 function firstSentence(text: string): string {
-  const m = text.match(/^(.{20,200}?[.!?])(\s|$)/);
+  // Not after a single capital letter (USS Harry S. Truman, U.K.).
+  const m = text.match(/^(.{20,200}?(?<![\s.][A-Z])[.!?])(\s|$)/);
   return m ? m[1] : clip(text, 200);
 }

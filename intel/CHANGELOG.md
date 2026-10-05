@@ -4,11 +4,13 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
-## Unreleased
+## 0.2.1 (2026-10-05)
 
 ### Fixed
 * Stories no longer chain loosely related reports into one giant story: every report must match the first report of its story.
 * Leading news media only count with security and crisis topics, culture, sport and podcasts are left out.
+* Grouping uses headline words only and needs two shared specific words. Checked on 439 real reports: about four in five stories with several sources are right.
+* Headlines without "#BREAKING" prefixes and no longer cut after abbreviations like "USS Harry S.".
 
 ## 0.2.0 (2026-10-05)
 

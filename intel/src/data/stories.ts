@@ -22,7 +22,7 @@ export interface Story {
 }
 
 const WINDOW_MS = 36 * 3600_000;
-const LINK_SCORE = 2.6;
+const LINK_SCORE = 3.4;
 
 // German event words mapped to English, so "Pest" and "plague" meet.
 const SYNONYM: Record<string, string> = {
@@ -38,18 +38,21 @@ const STOP = new Set(
   (
     'about after again against also amid among another around back been before being between both called could during each even every first from have having here into just last later like made make many more most much must near never news next only other over part said says some still such than that their them then there these they this those three through time today under until very were what when where which while will with within without would year years your ' +
     'aber alle allem allen aller alles also andere anderen auch auf aus bei beim bereits bevor bis bisher dabei damit dann darf darum dass davon dazu dem den denen der des deshalb dessen die dies diese diesem diesen dieser dieses doch dort durch eine einem einen einer eines einige erst etwa etwas euro fall gegen gibt habe haben hatte heute hier ihre ihren immer jahr jahre jahren jetzt kann kein keine können laut lassen machen mehr meisten mit nach nicht noch nun nur oder ohne rund schon sehr seien sein seine seit sich sind soll sollen sowie über unter viele vom von vor wegen weil weiter weitere wenn werden wieder wird wurde wurden zum zur zwei zwischen ' +
-    'breaking update report reports reported according official officials video footage photo photos watch read first latest sources source new says said'
+    'breaking update updated report reports reported according official officials video footage photo photos watch read first latest sources source new says said ' +
+    'week weeks month recent recently aboard following amid could might plans white house president government minister ministry military forces defense defence analysis inside behind'
   ).split(' '),
 );
 
-/** Keywords of an item: entities plus rare looking words, normalised across English and German. */
+/**
+ * Keywords of an item, normalised across English and German. Words come from the headline only:
+ * excerpts are long and full of boilerplate, headlines say what happened. Entities come from both.
+ */
 export function keywords(item: EnrichedItem): Set<string> {
   const out = new Set<string>();
   for (const p of item.entities.places) out.add(`@${p.name}`);
   for (const c of item.entities.callsigns) out.add(`#${c.callsign}`);
   for (const t of item.entities.types) out.add(`%${t.label}`);
-  const text = `${item.title} ${item.text.slice(0, 240)}`.toLowerCase();
-  for (const raw of text.match(/\p{L}[\p{L}\p{N}-]{3,}/gu) ?? []) {
+  for (const raw of item.title.toLowerCase().match(/\p{L}[\p{L}\p{N}/-]{2,}/gu) ?? []) {
     const w = SYNONYM[raw] ?? raw.replace(/(?<=\p{L}{3}[^s])s$/u, '');
     if (!STOP.has(w) && !STOP.has(raw)) out.add(w);
   }
@@ -74,12 +77,13 @@ export function buildStories(items: EnrichedItem[]): Story[] {
     let words = 0;
     for (const t of keys[a]) {
       if (!keys[b].has(t)) continue;
-      // Tokens that appear everywhere say nothing.
-      if ((df.get(t) ?? 1) > Math.max(6, n * 0.08)) continue;
+      // Tokens that appear in many reports (navy, pentagon, ukraine) say nothing about the event.
+      if ((df.get(t) ?? 1) > Math.max(4, n * 0.025)) continue;
       sum += weight(t, df, n) / 2.5;
       if (!/^[@#%]/.test(t)) words++;
     }
-    return words >= 1 ? sum : 0;
+    // Two shared headline words, or a callsign plus one word.
+    return words >= 2 || (words >= 1 && sum >= LINK_SCORE * 1.5) ? sum : 0;
   };
 
   // Chronological, seed based grouping: a report joins a story only if it matches the first report

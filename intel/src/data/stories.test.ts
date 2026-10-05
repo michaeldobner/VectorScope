@@ -24,6 +24,12 @@ const TG = `
 </div></div>`;
 
 describe('Telegram', () => {
+  it('cleans breaking prefixes and does not cut sentences at abbreviations', () => {
+    const page = (t: string) => `<div class="tgme_widget_message js-widget_message" data-post="x/1"><div class="tgme_widget_message_text js-message_text">${t}</div><time datetime="2026-10-05T18:00:00+00:00"></time></div>`;
+    expect(parseTelegram(page('#BREAKING Initial reports of an oil tanker attacked near Hormuz.'), 'x')[0].title).toBe('Initial reports of an oil tanker attacked near Hormuz.');
+    expect(parseTelegram(page('The aircraft carrier USS Harry S. Truman will undergo a long overhaul. More soon.'), 'x')[0].title).toBe('The aircraft carrier USS Harry S. Truman will undergo a long overhaul.');
+  });
+
   it('reads text posts, skips media without text and quoted replies', () => {
     const items = parseTelegram(TG, 'rageintel');
     expect(items.map((i) => i.url)).toEqual(['https://t.me/rageintel/101', 'https://t.me/rageintel/103']);

@@ -20,7 +20,7 @@ function innerDiv(html: string, from: number): string {
 function cleanHeadline(s: string): string {
   return s
     .replace(/[\p{Extended_Pictographic}\p{Regional_Indicator}\uFE0F\u200D]/gu, '')
-    .replace(/^\s*(?:breaking|urgent|update|just in|eilmeldung)\s*[:!-]\s*/i, '')
+    .replace(/^\s*#?(?:breaking|urgent|update|just in|flash|eilmeldung)\b[\s:!-]*/i, '')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -28,7 +28,8 @@ function cleanHeadline(s: string): string {
 function splitHeadline(text: string): { title: string; rest: string } {
   const lines = text.split('\n').map((l) => cleanHeadline(l)).filter(Boolean);
   const first = lines[0] ?? '';
-  const sentence = first.match(/^(.{25,220}?[.!?])(\s|$)/)?.[1];
+  // A sentence ends at . ! ? but not after a single capital letter (USS Harry S. Truman, U.K.).
+  const sentence = first.match(/^(.{25,220}?(?<![\s.][A-Z])[.!?])(\s|$)/)?.[1];
   const title = sentence ?? clip(first, 220);
   const rest = [first.slice(title.length).trim(), ...lines.slice(1)].filter(Boolean).join(' ');
   return { title, rest };
