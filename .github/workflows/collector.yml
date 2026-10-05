@@ -1,0 +1,58 @@
+name: Collector
+
+# Probe collector for INTEL: every 15 minutes for one week, then it stops by itself.
+# Gathers every source with the time it was first seen and publishes the data as a single commit
+# on the branch "collector-data", which INTEL reads in the browser.
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collector
+  cancel-in-progress: false
+
+env:
+  # Last day of the probe (UTC). After it the workflow does nothing.
+  PROBE_UNTIL: '20261012'
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Probe period
+        id: gate
+        run: |
+          if [ "$(date -u +%Y%m%d)" -gt "$PROBE_UNTIL" ]; then echo "Probe finished on $PROBE_UNTIL"; echo "run=no" >> "$GITHUB_OUTPUT"; else echo "run=yes" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'yes'
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.run == 'yes'
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+        if: steps.gate.outputs.run == 'yes'
+      - name: Previous data
+        if: steps.gate.outputs.run == 'yes'
+        run: |
+          mkdir -p data
+          if git fetch --depth=1 origin collector-data; then
+            for f in archive.json stats.json; do git show "FETCH_HEAD:$f" > "data/$f" 2>/dev/null || rm -f "data/$f"; done
+          fi
+      - name: Collect
+        if: steps.gate.outputs.run == 'yes'
+        run: npx tsx collector/collect.ts data
+      - name: Publish to branch collector-data
+        if: steps.gate.outputs.run == 'yes'
+        run: |
+          cd data
+          git init -q
+          git checkout -q -b collector-data
+          git add -A
+          git -c user.name=collector -c user.email=collector@users.noreply.github.com commit -q -m "Collector $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" collector-data

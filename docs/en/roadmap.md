@@ -11,6 +11,8 @@ VectorScope grows module by module. Everything runs on GitHub Pages and the exis
 | 1 | Collection | Repository as a collection: hub, `shared/`, module AIR in `air/`, release script, repository checks, smoke test on device sizes | Done in 0.3.0 |
 | 2 | INTEL | Compile and verify the source list: Bluesky, Mastodon, RSS and GDELT, each source checked for existence, activity and machine readability | Done, 14 sources |
 | 3 | INTEL | Stage A: feed of the verified sources, recognition of callsigns, types and places, live match with military aircraft, deep link into AIR | Done in INTEL 0.1.0 |
+| 4 | INTEL | Telegram newsrooms, confirming media, stories with status and lead time | Done in INTEL 0.2.0 |
+| 5 | INTEL | Probe collector for one week, then evaluation: volume, speed, lead time, noise per source. Decision on a permanent collector | Running until 12 October 2026 |
 
 ## Next
 

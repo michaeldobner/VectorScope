@@ -8,21 +8,23 @@
 
 [**▶ VectorScope Intel öffnen**](https://michaeldobner.github.io/VectorScope/intel/) · [English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md)
 
-<img src="docs/images/iphone-feed.png" width="230" alt="Feed auf dem iPhone mit einem Beitrag über eine Drohne, die gerade in der Luft ist">&nbsp;&nbsp;
-<img src="docs/images/ipad-landscape.png" width="480" alt="iPad quer: links der Feed, rechts Live-Treffer, Orte und Quellen">
+<img src="docs/images/iphone-feed.png" width="230" alt="Stories auf dem iPhone: eine Story aus drei Quellen mit Status, Zeitachse, Vorsprung und Live-Treffer">&nbsp;&nbsp;
+<img src="docs/images/ipad-landscape.png" width="480" alt="iPad quer: links die Stories, rechts Live-Treffer, Orte und Quellen">
 
 </div>
 
 ## Warum INTEL
 
-OSINT-Accounts und Fachmedien melden, was in der Luft passiert, oft vor allen anderen. Flugdaten zeigen, wer gerade fliegt. INTEL bringt beides zusammen: Es liest eine kurze Liste geprüfter Quellen, erkennt in jedem Beitrag Callsigns, Flugzeugtypen und Orte und gleicht sie mit den Militärflugzeugen ab, die in diesem Moment senden. Erscheint ein Artikel über eine RQ-4 über dem Schwarzen Meer, während FORTE11 dort kreist, zeigt INTEL das, und ein Tipp öffnet das Flugzeug in AIR.
+Schnelle Telegram-Eilmelder melden zuerst, Fachmedien ordnen ein, Leitmedien bestätigen. Flugdaten zeigen, wer gerade fliegt. INTEL bringt alles zusammen: Es bündelt Meldungen verschiedener Quellen über dasselbe Ereignis zu **Stories**, zeigt, wie weit jede Story bestätigt ist und wie weit die schnellen Kanäle vorn lagen. Außerdem Es liest eine kurze Liste geprüfter Quellen, erkennt in jedem Beitrag Callsigns, Flugzeugtypen und Orte und gleicht sie mit den Militärflugzeugen ab, die in diesem Moment senden. Erscheint ein Artikel über eine RQ-4 über dem Schwarzen Meer, während FORTE11 dort kreist, zeigt INTEL das, und ein Tipp öffnet das Flugzeug in AIR.
 
 ## Highlights
 
 | | |
 |---|---|
-| **14 geprüfte Quellen** | ItaMilRadar, The Aviationist, The War Zone, Bellingcat, ISW, Defense News, Naval News, hartpunkt, Augen geradeaus! und weitere. Jede im Test-Labor geprüft auf Existenz, Aktivität und maschinelle Lesbarkeit |
-| **Bluesky und RSS in einer Liste** | Ein Beitrag, der auf einen Artikel verlinkt, ist dieselbe Meldung: Sie erscheint einmal, mit beiden Links |
+| **Stories** | Meldungen verschiedener Quellen über dasselbe Ereignis werden eine Karte mit Status Signal, Emerging, Reported oder Confirmed, einer Zeitachse aller Meldungen und dem Vorsprung der ersten ungeprüften Meldung |
+| **24 geprüfte Quellen in vier Stufen** | Telegram-Eilmelder (OSINTdefender, RAGE X, War Monitor, Insider Paper, Clash Report), OSINT-Rechercheure, Fachmedien und bestätigende Medien (Tagesschau, Deutschlandfunk, DW, BBC, Al Jazeera). Jede im Test-Labor geprüft |
+| **Probe-Sammler** | Eine Woche lang hält ein Sammler auf GitHub Actions alle 15 Minuten jede Meldung fest, damit nichts verloren geht, während die App geschlossen ist |
+| **Wire** | Jede Meldung einzeln, die neueste zuerst, mit ihrer Stufe |
 | **Erkennung** | Militärische Callsigns (FORTE11, RCH419, NATO03), rund 45 Flugzeugtypen in mehreren Schreibweisen (KC-135, KC135R, Stratotanker), rund 100 Orte auf Englisch und Deutsch (Ostsee, Black Sea, Rzeszów, Ramstein) |
 | **Live-Treffer** | Callsign im Beitrag genannt und gerade in der Luft, oder Typ genannt und ein Flugzeug dieses Typs nahe dem genannten Ort. Hervorgehoben in Ice Blue, ein Tipp öffnet es in AIR |
 | **Orte** | Welche Orte in den letzten 24 Stunden genannt wurden, ein Tipp filtert den Feed |
@@ -31,10 +33,11 @@ OSINT-Accounts und Fachmedien melden, was in der Luft passiert, oft vor allen an
 
 ## Bedienung
 
-1. INTEL öffnen. Der Feed lädt alle Quellen, die neuesten zuerst. Neue Beiträge seit dem letzten Besuch tragen einen blauen Punkt.
-2. Nach **Live match**, **Aviation**, **OSINT**, **Naval**, **Defence**, **DACH** oder **Official** filtern.
-3. Eine blaue **LIVE**-Zeile bedeutet: Dieses Flugzeug ist gerade in der Luft, und der Beitrag nennt es oder seinen Typ nahe seiner Position. Antippen öffnet das Flugzeug in AIR.
-4. Einen Ort antippen zeigt nur Beiträge, die ihn nennen.
+1. INTEL öffnen. **Stories** zeigt oben Stories mit mehreren Quellen, darunter alles andere. Neue Meldungen seit dem letzten Besuch tragen einen blauen Punkt.
+2. **Show reports in order** antippen zeigt, wie eine Story entstanden ist. **Wire** zeigt jede Meldung einzeln.
+3. Nach **Live match**, **Breaking**, **Aviation**, **OSINT**, **Naval**, **Defence**, **DACH**, **News** oder **Official** filtern.
+4. Eine blaue **LIVE**-Zeile bedeutet: Dieses Flugzeug ist gerade in der Luft, und der Beitrag nennt es oder seinen Typ nahe seiner Position. Antippen öffnet das Flugzeug in AIR.
+5. Einen Ort antippen zeigt nur Meldungen, die ihn nennen.
 
 Ausführliche Anleitung: [Bedienung](docs/de/bedienung.md).
 
@@ -43,7 +46,9 @@ Ausführliche Anleitung: [Bedienung](docs/de/bedienung.md).
 | Dokument | Inhalt |
 |---|---|
 | [Bedienung](docs/de/bedienung.md) | Ansichten, Filter, Live-Treffer, Orte, Quellen |
+| [Stories](docs/de/stories.md) | Stufen, Status, Bündelung, Vorsprung |
 | [Quellen](docs/de/quellen.md) | Die geprüften Quellen, wie sie geprüft wurden, verworfene Quellen und warum |
+| [Probe-Sammler](docs/de/sammler.md) | Eine Woche Sammeln auf GitHub Actions |
 | [Abgleich](docs/de/abgleich.md) | Erkennung von Callsigns, Typen und Orten, Regeln des Live-Treffers |
 | [Architektur](docs/de/architektur.md) | Module, Datenfluss, Proxy-Route, Speicher |
 | [Datenschutz und Recht](docs/de/datenschutz-und-recht.md) | Was von wo geladen wird, Auszüge und Links, Lizenzen |
@@ -60,6 +65,6 @@ npm test               # Unit-Tests aller Module und Prüfungen des Repositorys
 
 ## Version
 
-Aktuelle Version: **0.1.1**. Siehe [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.2.0**. Siehe [Changelog](CHANGELOG.de.md).
 
 Erstellt von Michael Dobner. Lizenziert unter der [MIT-Lizenz](../LICENSE).

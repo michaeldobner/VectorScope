@@ -25,6 +25,7 @@ VectorScope/
 ├─ intel/                  module INTEL: verified OSINT feed with live match (React, TypeScript)
 ├─ proxy/                  CORS proxy on Vercel, shared by all modules
 ├─ lab/                    test lab with real internet (GitHub Actions)
+├─ collector/              probe collector for INTEL (GitHub Actions, one week)
 ├─ scripts/
 │  ├─ build.mjs            adds hub and shared files to dist/
 │  ├─ serve.mjs            serves dist/ like GitHub Pages
@@ -33,7 +34,7 @@ VectorScope/
 │  └─ versions.mjs         every place that states a version
 ├─ tests/release.test.ts   repository checks
 ├─ docs/en, docs/de        documentation of the collection
-└─ .github/workflows/      tests, e2e, deploy, lab
+└─ .github/workflows/      tests, e2e, deploy, lab, collector
 ```
 
 ## Modules
@@ -99,7 +100,8 @@ iPhone / iPad (Safari, installed web app)
      │    ├─ adsbdb.com, hexdb.io ............. routes, airlines, aircraft data
      │    └─ OpenFreeMap ...................... basemap
      └─ INTEL ── public.api.bsky.app ......... Bluesky posts, directly
-          └─ same proxy ...................... RSS feeds (/feed/{id}), military aircraft (/v2/mil)
+          ├─ same proxy ...................... RSS feeds (/feed/{id}), Telegram (/tg/{channel}), military aircraft (/v2/mil)
+          └─ raw.githubusercontent.com ....... reports of the probe collector
 ```
 
 There is no own backend. The proxy only forwards a whitelist of read-only paths and stores nothing. Details: [Deployment](deployment.md#cors-proxy-on-vercel).

@@ -7,7 +7,8 @@
 | Anfrage | An | Enthält |
 |---|---|---|
 | Bluesky-Beiträge | `public.api.bsky.app` | Den Handle der Quelle. Kein Konto, keine Anmeldung |
-| RSS-Feeds | `vectorscope-proxy.vercel.app` | Die ID des Feeds |
+| RSS-Feeds, Telegram-Kanäle | `vectorscope-proxy.vercel.app` | Die ID des Feeds oder den Namen des Kanals |
+| Gesammelte Meldungen | `raw.githubusercontent.com` | Nichts, die Datei ist für alle gleich |
 | Live-Flugzeuge | `vectorscope-proxy.vercel.app` | Nichts Persönliches, `/v2/mil` ist für alle gleich |
 
 INTEL nutzt deinen Standort nicht. Es lädt keine Bilder, Herausgeber sehen also nur dann eine Anfrage, wenn du selbst einen Artikel öffnest.
@@ -15,6 +16,10 @@ INTEL nutzt deinen Standort nicht. Es lädt keine Bilder, Herausgeber sehen also
 ## Was auf dem Gerät bleibt
 
 Filter, Ortsfilter, der Zeitpunkt des zuletzt gesehenen Eintrags und die letzten 300 Einträge, im `localStorage` von `michaeldobner.github.io`. Das Löschen der Websitedaten in Safari entfernt alles.
+
+## Probe-Sammler
+
+Der Sammler speichert öffentliche Meldungen der Quellen mit dem Zeitpunkt, an dem er sie zuerst gesehen hat, im Branch `collector-data` des öffentlichen Repositorys, höchstens 7 Tage lang. Über die Nutzerin oder den Nutzer speichert er nichts.
 
 ## Inhalte Dritter
 
@@ -26,4 +31,4 @@ Live-Flugzeuge © Mitwirkende von adsb.lol, lizenziert unter ODbL 1.0. Bluesky-B
 
 ## Einordnung
 
-Ein Live-Treffer ist ein Hinweis, dass ein Beitrag und ein Flugzeug zusammengehören könnten, keine Bestätigung. INTEL leitet keine Einsätze, Missionen oder Muster ab und zeigt nur, was Quellen veröffentlichen und Flugzeuge öffentlich senden.
+Ein Live-Treffer ist ein Hinweis, dass ein Beitrag und ein Flugzeug zusammengehören könnten, keine Bestätigung. Meldungen der Stufe Breaking sind ungeprüft und so gekennzeichnet, eine Story ist nur so verlässlich wie ihre Quellen. INTEL leitet keine Einsätze, Missionen oder Muster ab und zeigt nur, was Quellen veröffentlichen und Flugzeuge öffentlich senden.

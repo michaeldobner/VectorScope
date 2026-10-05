@@ -7,9 +7,11 @@ Diese Dokumentation beschreibt das Modul INTEL: die Bedienung, welche Quellen es
 | Dokument | Inhalt | Zielgruppe |
 |---|---|---|
 | [Bedienung](bedienung.md) | Ansichten, Filter, Live-Treffer, Orte, Quellen, neue Beiträge | Alle |
-| [Quellen](quellen.md) | Die 14 geprüften Quellen, die Prüfung, verworfene Kandidaten | Alle |
+| [Stories](stories.md) | Stufen der Quellen, Status einer Story, Bündelung, Vorsprung | Alle |
+| [Quellen](quellen.md) | Die 24 geprüften Quellen, die Prüfung, verworfene Kandidaten | Alle |
 | [Abgleich](abgleich.md) | Erkennung von Callsigns, Typen und Orten, Regeln und Grenzen des Live-Abgleichs | Alle, Entwicklung |
-| [Architektur](architektur.md) | Module, Datenfluss, Proxy-Route, Speicher, Tests | Entwicklung |
+| [Architektur](architektur.md) | Module, Datenfluss, Proxy-Routen, Speicher, Tests | Entwicklung |
+| [Probe-Sammler](sammler.md) | Eine Woche Sammeln auf GitHub Actions, Dateien, Auswertung | Alle, Entwicklung |
 | [Datenschutz und Recht](datenschutz-und-recht.md) | Anfragen, Speicherung, Auszüge und Links, Lizenzen | Alle |
 
 ## INTEL auf einen Blick
@@ -17,10 +19,10 @@ Diese Dokumentation beschreibt das Modul INTEL: die Bedienung, welche Quellen es
 | | |
 |---|---|
 | Zweck | Geprüfte OSINT- und Verteidigungsnachrichten, abgeglichen mit Flugzeugen, die gerade in der Luft sind |
-| Ansichten | Feed, Live now, Places, Sources |
-| Quellen | 14, von Bluesky und RSS |
+| Ansichten | Stories, Wire, Live now, Places, Sources |
+| Quellen | 24 in vier Stufen, von Telegram, Bluesky und RSS |
 | Live-Daten | Militärflugzeuge von adsb.lol (ODbL), alle zwei Minuten |
 | Aktualisierung | Feed alle fünf Minuten, solange die App geöffnet ist |
 | Sprache | Englische Oberfläche, Beiträge in ihrer Originalsprache (Englisch, Deutsch) |
 | Adresse | https://michaeldobner.github.io/VectorScope/intel/ |
-| Version | 0.1.1 |
+| Version | 0.2.0 |

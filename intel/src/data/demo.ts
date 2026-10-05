@@ -6,22 +6,32 @@ import type { Item } from './types';
 const H = 3600_000;
 
 export function demoItems(now: number): Item[] {
-  const item = (n: number, ageH: number, title: string, text: string): Item => ({
-    id: `demo:${n}`,
-    sourceId: 'demo',
-    channel: n % 2 ? 'rss' : 'bluesky',
+  let n = 0;
+  const item = (sourceId: string, ageH: number, title: string, text: string, channel: Item['channel'] = 'telegram'): Item => ({
+    id: `demo:${++n}`,
+    sourceId,
+    channel,
     title,
     text,
     url: `https://example.org/demo/${n}`,
     time: now - ageH * H,
   });
   return [
-    item(1, 0.3, 'RQ-4 Global Hawk FORTE11 on a long orbit over the Black Sea', 'Demo item. The drone took off from Sigonella in the morning and has been flying racetracks off the coast of Romania for several hours.'),
-    item(2, 1.2, 'NATO AWACS monitoring the Baltic Sea', 'Demo item. An E-3A from Geilenkirchen is airborne over the Baltic, supported by a KC-135 tanker from Mildenhall.'),
-    item(3, 2.5, 'Luftwaffe verlegt Eurofighter nach Rumänien', 'Demo-Beitrag. Vier Eurofighter des Taktischen Luftwaffengeschwaders 71 übernehmen das Air Policing am Schwarzen Meer.'),
-    item(4, 5, 'C-17 transports seen at Rzeszów', 'Demo item. Several C-17 Globemaster flights from Ramstein arrived in Poland during the night.'),
-    item(5, 9, 'Naval exercise in the North Sea', 'Demo item. Frigates of four navies train anti submarine warfare, supported by a P-8 Poseidon.'),
-    item(6, 30, 'Analysis: tanker activity over the Mediterranean', 'Demo item. Open source flight data shows a rise in KC-46 and A330 MRTT sorties over the past week.'),
+    // Signal first on Telegram, then the specialist press: a reported story with lead time
+    item('demo-fast-a', 1.4, 'RQ-4 drone FORTE11 orbiting over the Black Sea off Crimea', 'Demo item. Third racetrack today, south of Sevastopol.'),
+    item('demo-fast-b', 1.1, 'FORTE11 Global Hawk again over the Black Sea', 'Demo item. Took off from Sigonella this morning.'),
+    item('demo-press', 0.3, 'RQ-4 Global Hawk FORTE11 on a long orbit over the Black Sea', 'Demo item. The drone took off from Sigonella in the morning and has been flying racetracks off the coast of Romania for several hours.', 'rss'),
+    // OSINT and a wire service: confirmed
+    item('demo-osint', 2.2, 'NATO AWACS and KC-135 tanker active over the Baltic Sea', 'Demo item. An E-3A from Geilenkirchen is airborne, supported by a KC-135 from Mildenhall.', 'bluesky'),
+    item('demo-confirm', 1.0, 'NATO confirms AWACS patrol over the Baltic Sea', 'Demo item. The alliance says the E-3 mission is routine air policing support.', 'rss'),
+    // Two unverified channels: emerging
+    item('demo-fast-a', 0.6, 'Airspace near Rzeszów partly closed, several C-17 transports inbound', 'Demo item. Unconfirmed reports of a NOTAM.'),
+    item('demo-fast-b', 0.4, 'Reports: C-17 Globemaster arrivals at Rzeszów, airspace restrictions', 'Demo item. Ramstein departures overnight.'),
+    // One unverified channel: signal
+    item('demo-fast-a', 0.15, 'Large explosion reported in the port of Odesa', 'Demo item. No official statement yet.'),
+    // German specialist press
+    item('demo-de', 2.5, 'Luftwaffe verlegt Eurofighter nach Rumänien', 'Demo-Beitrag. Vier Eurofighter übernehmen das Air Policing am Schwarzen Meer.', 'rss'),
+    item('demo-press', 30, 'Analysis: tanker activity over the Mediterranean', 'Demo item. Open source flight data shows a rise in KC-46 and A330 MRTT sorties over the past week.', 'rss'),
   ];
 }
 

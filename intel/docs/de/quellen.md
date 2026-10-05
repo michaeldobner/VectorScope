@@ -2,7 +2,7 @@
 
 [English version](../en/sources.md) · [Übersicht](README.md)
 
-INTEL liest eine kurze, feste Liste von Quellen. Qualität vor Menge: Jede Quelle wurde am 05.10.2026 im Test-Labor mit echtem Internet geprüft, bevor sie aufgenommen wurde. Die Liste steht in `src/data/sources.ts`.
+INTEL liest eine feste Liste von 24 Quellen in vier Stufen, von schnell und ungeprüft bis bestätigend. Qualität vor Menge: Jede Quelle wurde am 05.10.2026 im Test-Labor mit echtem Internet geprüft, bevor sie aufgenommen wurde. Die Liste steht in `src/data/sources.ts`, die Stufen erklärt [Stories](stories.md).
 
 ## Die Prüfung
 
@@ -12,12 +12,35 @@ Das Skript `lab/osint.mjs` läuft im Test-Labor auf GitHub Actions und prüft je
 |---|---|
 | Gibt es den Account, und ist es der offizielle? | Accountsuche bei Bluesky, Profil mit Followern und Zahl der Beiträge |
 | Ist er aktiv? | Alter des neuesten Beitrags, Anteil eigener Beiträge unter den letzten fünf (Reposts zählen nicht) |
-| Kann eine Maschine ihn lesen? | RSS: HTTP-Status, Zahl der Einträge, neuestes Datum. Bluesky und Mastodon: öffentliche API |
+| Kann eine Maschine ihn lesen? | RSS: HTTP-Status, Zahl der Einträge, neuestes Datum. Bluesky und Mastodon: öffentliche API. Telegram: Webansicht `t.me/s/{kanal}`, Zahl der Beiträge, Beiträge pro Tag |
 | Kann ein Browser ihn direkt lesen? | Header `Access-Control-Allow-Origin` |
 
 Das Ergebnis landet im Branch `lab-results` als `osint.md` und `osint.json`.
 
-## Geprüfte Quellen
+## Breaking: Telegram-Eilmelder, ungeprüft
+
+| Kanal | Abonnenten | Beiträge pro Tag | Neuester Beitrag bei der Prüfung |
+|---|---|---|---|
+| OSINTdefender (`osintdefender`) | 6.400 | 10 | 4 h |
+| RAGE X (`rageintel`) | 20.300 | 42 | 1 h |
+| War Monitor (`warmonitors`) | 151.000 | 24 | unter 1 h |
+| Insider Paper (`insiderpaper`) | 108.000 | 55 | unter 1 h |
+| Clash Report (`ClashReport`) | 110.000 | rund 400 | 2 h |
+
+Auf Telegram sitzen die schnellen Eilmelder, die auch auf X vorn sind. Ein öffentlicher Kanal lässt sich ohne Konto über seine Webansicht lesen. Aufgenommen sind nur englischsprachige Kanäle.
+
+## Bestätigend: Leitmedien und Behörden
+
+| Quelle | Feed | Neuester Beitrag bei der Prüfung |
+|---|---|---|
+| Tagesschau | ✓ | 1 h |
+| Deutschlandfunk | ✓ | unter 1 h |
+| DW | ✓ | unter 1 h |
+| BBC World | ✓ | unter 1 h |
+| Al Jazeera | ✓ | 1 h |
+| US DoD News | ✓ | 2 d |
+
+## OSINT und Fachmedien
 
 | Quelle | Kategorie | Bluesky | RSS | Neuester Beitrag bei der Prüfung |
 |---|---|---|---|---|
@@ -34,7 +57,6 @@ Das Ergebnis landet im Branch `lab-results` als `osint.md` und `osint.json`.
 | hartpunkt | DACH | hartpunkt.bsky.social, 1.000 | ✓ | unter 1 h |
 | Augen geradeaus! | DACH | wiegold.de, 16.000 | ✓ | 3 h |
 | ESUT | DACH | | ✓ | 1 h |
-| US DoD News | Official | | ✓ | 2 d |
 
 Naval News hat auch einen Bluesky-Account (navalnews.com, 15.000 Follower), dessen Feed im Live-Test aber mit HTTP 400 antwortete. INTEL liest nur den RSS-Feed.
 
@@ -42,7 +64,12 @@ Naval News hat auch einen Bluesky-Account (navalnews.com, 15.000 Follower), dess
 
 | Kandidat | Grund |
 |---|---|
-| OSINTdefender | Offizieller Bluesky-Account ohne Beiträge, die aktiven Accounts sind inoffizielle Spiegel. Der Telegram-Kanal schreibt unter anderem Namen |
+| OSINTdefender auf Bluesky | Offizieller Account ohne Beiträge, die aktiven Accounts sind inoffizielle Spiegel. Stattdessen über seinen Telegram-Kanal aufgenommen |
+| Telegram: Faytuks News, BNO News, OSINT Updates, OSIntOps, Aurora Intel, Spectator Index | Seit Wochen bis Jahren still auf Telegram |
+| Telegram: warragex | 15 Abonnenten, nicht der Kanal von RAGE X |
+| Telegram: Disclose.tv | Zwei Beiträge am Tag, reißerisch |
+| Telegram: NEXTA Live | Russischsprachig |
+| Telegram: Visegrad24 | Kein öffentlicher Kanal |
 | GeoConfirmed | Letzter Beitrag 11 Tage alt |
 | Liveuamap | Letzter Beitrag 4 Tage alt, kein RSS |
 | OSINTtechnical, Intel Crab, Faytuks News, Tyler Rogoway, Michael Kofman, Aircraft Spots | Seit Monaten still |
@@ -56,6 +83,7 @@ Naval News hat auch einen Bluesky-Account (navalnews.com, 15.000 Follower), dess
 
 | Kanal | Zugriff | Intervall |
 |---|---|---|
+| Telegram | Über die Proxy-Route `/tg/{kanal}`, eine Minute im Edge-Cache. Nur Textbeiträge, Medien ohne Text werden übersprungen | Alle fünf Minuten |
 | Bluesky | Direkt aus dem Browser, `public.api.bsky.app` erlaubt das. Nur eigene Beiträge, keine Antworten, keine Reposts | Alle fünf Minuten |
 | RSS | Über die Proxy-Route `/feed/{id}`, weil die meisten Herausgeber den Browserzugriff nicht erlauben. Fünf Minuten im Edge-Cache. Fällt der Proxy aus, versucht INTEL den Feed direkt | Alle fünf Minuten |
 
@@ -63,5 +91,5 @@ Naval News hat auch einen Bluesky-Account (navalnews.com, 15.000 Follower), dess
 
 1. Den Kandidaten in `lab/osint.mjs` aufnehmen und vom Labor prüfen lassen.
 2. In `SOURCES` in `src/data/sources.ts` eintragen.
-3. Für einen RSS-Feed dieselbe ID und Adresse in `FEEDS` in `proxy/api/proxy.js` eintragen. Ein Test schlägt fehl, wenn beide Listen abweichen.
+3. Für einen RSS-Feed dieselbe ID und Adresse in `FEEDS` in `proxy/api/proxy.js` eintragen, für einen Telegram-Kanal seinen Namen in `TELEGRAM`. Ein Test schlägt fehl, wenn die Listen abweichen.
 4. Diese Seite in beiden Sprachen aktualisieren.

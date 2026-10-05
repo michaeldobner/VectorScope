@@ -7,9 +7,11 @@ This documentation describes module INTEL: how to use it, which sources it reads
 | Document | Contents | Audience |
 |---|---|---|
 | [User guide](user-guide.md) | Views, filters, live matches, places, sources, new posts | Everyone |
-| [Sources](sources.md) | The 14 verified sources, the check, rejected candidates | Everyone |
+| [Stories](stories.md) | Tiers of the sources, status of a story, grouping, lead time | Everyone |
+| [Sources](sources.md) | The 24 verified sources, the check, rejected candidates | Everyone |
 | [Matching](matching.md) | Recognition of callsigns, types and places, rules and limits of the live match | Everyone, development |
-| [Architecture](architecture.md) | Modules, data flow, proxy route, storage, tests | Development |
+| [Architecture](architecture.md) | Modules, data flow, proxy routes, storage, tests | Development |
+| [Probe collector](collector.md) | One week of collecting on GitHub Actions, files, evaluation | Everyone, development |
 | [Privacy and legal](privacy-and-legal.md) | Requests, storage, excerpts and links, licences | Everyone |
 
 ## INTEL at a glance
@@ -17,10 +19,10 @@ This documentation describes module INTEL: how to use it, which sources it reads
 | | |
 |---|---|
 | Purpose | Verified OSINT and defence news, matched to aircraft in the air right now |
-| Views | Feed, Live now, Places, Sources |
-| Sources | 14, from Bluesky and RSS |
+| Views | Stories, Wire, Live now, Places, Sources |
+| Sources | 24 in four tiers, from Telegram, Bluesky and RSS |
 | Live data | Military aircraft from adsb.lol (ODbL), every two minutes |
 | Refresh | Feed every five minutes while the app is open |
 | Language | English interface, posts in their original language (English, German) |
 | Address | https://michaeldobner.github.io/VectorScope/intel/ |
-| Version | 0.1.1 |
+| Version | 0.2.0 |

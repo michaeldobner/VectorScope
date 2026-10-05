@@ -4,6 +4,14 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.5.0 (2026-10-05)
+
+### Neu
+* **Probe-Sammler** (`collector/collect.ts`, Workflow `collector.yml`): alle 15 Minuten für eine Woche, Daten im Branch `collector-data`.
+* Proxy-Route `/tg/{kanal}` für die Telegram-Kanäle von INTEL, fünf weitere RSS-Feeds für die bestätigenden Quellen.
+* Das Test-Labor prüft Telegram-Kanäle und Bestätigungsfeeds.
+* Modul INTEL 0.2.0 mit Stories, siehe sein [Changelog](intel/CHANGELOG.de.md).
+
 ## 0.4.0 (2026-10-05)
 
 ### Neu

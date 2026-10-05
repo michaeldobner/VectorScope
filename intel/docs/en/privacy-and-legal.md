@@ -7,7 +7,8 @@
 | Request | To | Contains |
 |---|---|---|
 | Bluesky posts | `public.api.bsky.app` | The handle of the source. No account, no login |
-| RSS feeds | `vectorscope-proxy.vercel.app` | The id of the feed |
+| RSS feeds, Telegram channels | `vectorscope-proxy.vercel.app` | The id of the feed or the name of the channel |
+| Collected reports | `raw.githubusercontent.com` | Nothing, the file is the same for everyone |
 | Live aircraft | `vectorscope-proxy.vercel.app` | Nothing personal, `/v2/mil` is the same for everyone |
 
 INTEL does not use your location. It loads no images, so publishers only see a request when you open an article yourself.
@@ -15,6 +16,10 @@ INTEL does not use your location. It loads no images, so publishers only see a r
 ## What stays on the device
 
 Filter, place filter, the time of the last seen item and the last 300 items, in the `localStorage` of `michaeldobner.github.io`. Deleting the website data in Safari removes everything.
+
+## Probe collector
+
+The collector stores public reports of the sources with the time it first saw them on the branch `collector-data` of the public repository, for at most 7 days. It stores nothing about the user.
 
 ## Content of third parties
 
@@ -26,4 +31,4 @@ Live aircraft © adsb.lol contributors, licensed under ODbL 1.0. Bluesky posts t
 
 ## Interpretation
 
-A live match is a hint that a post and an aircraft might belong together, not a confirmation. INTEL does not derive operations, missions or patterns and shows only what sources publish and aircraft broadcast publicly.
+A live match is a hint that a post and an aircraft might belong together, not a confirmation. Reports of the tier Breaking are unverified and marked as such, a story is only as reliable as its sources. INTEL does not derive operations, missions or patterns and shows only what sources publish and aircraft broadcast publicly.

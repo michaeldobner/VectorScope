@@ -16,16 +16,20 @@ export function decodeEntities(s: string): string {
   });
 }
 
-/** HTML fragment to one line of plain text. Dashes used as punctuation become commas. */
-export function plainText(html: string): string {
+/** HTML fragment to plain text. With keepLines, line breaks survive, otherwise everything becomes one line. */
+export function plainText(html: string, keepLines = false): string {
   const strip = (s: string) => s.replace(/<(script|style)[\s\S]*?<\/\1>/gi, ' ').replace(/<\/?[a-zA-Z][^>]*>/g, ' ');
   // Twice: some feeds escape their HTML, which only becomes markup after decoding.
   const text = strip(decodeEntities(strip(html.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1'))));
-  return text
-    .replace(/\s*\u2014\s*/g, ', ')
-    .replace(/\s+\u2013\s+/g, ', ')
-    .replace(/\u2013/g, '-')
-    .replace(/\s+/g, ' ')
+  const punct = text
+    .replace(/[^\S\n]*\u2014[^\S\n]*/g, ', ')
+    .replace(/[^\S\n]+\u2013[^\S\n]+/g, ', ')
+    .replace(/\u2013/g, '-');
+  if (!keepLines) return punct.replace(/\s+/g, ' ').trim();
+  return punct
+    .replace(/[^\S\n]+/g, ' ')
+    .replace(/ *\n */g, '\n')
+    .replace(/\n{2,}/g, '\n')
     .trim();
 }
 

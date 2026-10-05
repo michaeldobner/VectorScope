@@ -70,6 +70,9 @@ for (const [name, device] of DEVICES) {
     .catch(() => false);
   check(items, 'INTEL shows no items in demo mode');
   check((await page.locator('.live-row').count()) > 0, 'INTEL shows no live match in demo mode');
+  for (const status of ['signal', 'emerging', 'reported', 'confirmed']) check((await page.locator(`.status-chip.s-${status}`).count()) > 0, `INTEL shows no story with status ${status}`);
+  await page.locator('.expand').first().click();
+  check((await page.locator('.reports li').count()) >= 2, 'INTEL story does not open its reports');
   check(await noSideScroll(page), 'INTEL scrolls sideways');
   check((await page.locator('a.brand').getAttribute('href')) === '../', 'INTEL logo does not lead back to the hub');
   await page.screenshot({ path: `${OUT}/${ENGINE}-${name}-intel.png` });

@@ -30,26 +30,15 @@ const FEEDS = {
   augengeradeaus: 'https://augengeradeaus.net/feed/',
   esut: 'https://esut.de/feed/',
   dod: 'https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945&max=10',
+  tagesschau: 'https://www.tagesschau.de/index~rss2.xml',
+  dlf: 'https://www.deutschlandfunk.de/nachrichten-100.rss',
+  dw: 'https://rss.dw.com/rdf/rss-en-top',
+  bbc: 'https://feeds.bbci.co.uk/news/world/rss.xml',
+  aljazeera: 'https://www.aljazeera.com/xml/rss/all.xml',
 };
 const FEED = /^\/feed\/([a-z0-9-]{1,32})$/;
 // Public Telegram channels of INTEL, read from the web preview t.me/s/{channel}. Fixed list, not an open proxy.
-const TELEGRAM = [
-  'rageintel',
-  'osintdefender',
-  'ClashReport',
-  'FaytuksTelegram',
-  'OsintUpdates',
-  'Osintlatestnews',
-  'BNONews',
-  'warmonitors',
-  'AuroraIntel',
-  'visegrad24',
-  'spectatorindex',
-  'insiderpaper',
-  'disclosetv',
-  'nexta_live',
-  'warragex',
-];
+const TELEGRAM = ['osintdefender', 'rageintel', 'warmonitors', 'insiderpaper', 'ClashReport'];
 const TG = /^\/tg\/([A-Za-z0-9_]{4,32})$/;
 const CONTACT_UA = `VectorScope/0.1 (+https://github.com/michaeldobner/VectorScope; ${process.env.CONTACT || 'github.com/michaeldobner'})`;
 

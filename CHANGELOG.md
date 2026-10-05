@@ -4,6 +4,14 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.5.0 (2026-10-05)
+
+### Added
+* **Probe collector** (`collector/collect.ts`, workflow `collector.yml`): every 15 minutes for one week, data on the branch `collector-data`.
+* Proxy route `/tg/{channel}` for the Telegram channels of INTEL, five more RSS feeds for the confirming sources.
+* Test lab checks Telegram channels and confirmation feeds.
+* Module INTEL 0.2.0 with stories, see its [changelog](intel/CHANGELOG.md).
+
 ## 0.4.0 (2026-10-05)
 
 ### Added

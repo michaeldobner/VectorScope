@@ -3,6 +3,7 @@ import { parseV2 } from '../../../air/src/data/adsblol';
 import type { Aircraft } from '../../../air/src/data/types';
 import { authorFeedUrl, parseAuthorFeed } from './bluesky';
 import { parseFeed } from './rss';
+import { parseTelegram } from './telegram';
 import type { Source } from './sources';
 import { urlKey } from './text';
 import type { Item } from './types';
@@ -21,13 +22,26 @@ export interface SourceStatus {
   error?: string;
 }
 
+// Browsers send their own User-Agent. In Node.js (collector, lab) publishers get a contact address.
+const NODE_HEADERS: Record<string, string> =
+  typeof window === 'undefined' ? { 'User-Agent': 'VectorScope-collector/0.1 (+https://github.com/michaeldobner/VectorScope)' } : {};
+
 async function getText(url: string): Promise<string> {
-  const r = await fetch(url, { signal: AbortSignal.timeout(TIMEOUT_MS) });
+  const r = await fetch(url, { headers: NODE_HEADERS, signal: AbortSignal.timeout(TIMEOUT_MS) });
   if (!r.ok) throw new Error(`HTTP ${r.status}`);
   return r.text();
 }
 
-async function loadRss(source: Source): Promise<Item[]> {
+/**
+ * direct: fetch the publishers themselves, used by the collector on GitHub Actions where browsers rules do not apply.
+ * Otherwise RSS and Telegram go through the proxy, Bluesky always directly.
+ */
+export interface LoadOptions {
+  direct?: boolean;
+}
+
+async function loadRss(source: Source, opt: LoadOptions): Promise<Item[]> {
+  if (opt.direct) return parseFeed(await getText(source.rss!), source.id);
   try {
     return parseFeed(await getText(`${PROXY}/feed/${source.id}`), source.id);
   } catch (proxyError) {
@@ -40,13 +54,18 @@ async function loadRss(source: Source): Promise<Item[]> {
   }
 }
 
+async function loadTelegram(source: Source, opt: LoadOptions): Promise<Item[]> {
+  const url = opt.direct ? `https://t.me/s/${source.telegram}` : `${PROXY}/tg/${source.telegram}`;
+  return parseTelegram(await getText(url), source.id);
+}
+
 async function loadBluesky(source: Source): Promise<Item[]> {
   return parseAuthorFeed(JSON.parse(await getText(authorFeedUrl(source.bluesky!))), source.id);
 }
 
 /** Both channels of one source. Fails only if every channel fails. */
-export async function loadSource(source: Source): Promise<{ items: Item[]; status: SourceStatus }> {
-  const jobs = [source.rss && loadRss(source), source.bluesky && loadBluesky(source)].filter(Boolean) as Promise<Item[]>[];
+export async function loadSource(source: Source, opt: LoadOptions = {}): Promise<{ items: Item[]; status: SourceStatus }> {
+  const jobs = [source.rss && loadRss(source, opt), source.telegram && loadTelegram(source, opt), source.bluesky && loadBluesky(source)].filter(Boolean) as Promise<Item[]>[];
   const results = await Promise.allSettled(jobs);
   const items = results.flatMap((r) => (r.status === 'fulfilled' ? r.value : []));
   const errors = results.filter((r) => r.status === 'rejected').map((r) => String((r as PromiseRejectedResult).reason?.message ?? r));
@@ -88,12 +107,21 @@ export function mergeItems(items: Item[], now: number): Item[] {
     }
     const rss = prev.channel === 'rss' ? prev : item.channel === 'rss' ? item : prev;
     const post = prev.channel === 'bluesky' ? prev : item.channel === 'bluesky' ? item : undefined;
-    byKey.set(key, { ...rss, postUrl: rss.postUrl ?? post?.postUrl, time: Math.min(prev.time, item.time) });
+    const seen = Math.min(prev.seen ?? Infinity, item.seen ?? Infinity);
+    byKey.set(key, { ...rss, postUrl: rss.postUrl ?? post?.postUrl, time: Math.min(prev.time, item.time), ...(Number.isFinite(seen) ? { seen } : {}) });
   }
   return [...byKey.values()].sort((a, b) => b.time - a.time);
 }
 
 /** Military aircraft broadcasting right now, worldwide. */
+/** Items gathered by the collector on GitHub Actions (collector/collect.ts), last 72 hours. */
+export const COLLECTOR_URL = 'https://raw.githubusercontent.com/michaeldobner/VectorScope/collector-data/latest.json';
+
+export async function loadCollected(): Promise<{ at: number; items: Item[] }> {
+  const json = JSON.parse(await getText(COLLECTOR_URL));
+  return { at: Number(json.at) || 0, items: Array.isArray(json.items) ? json.items : [] };
+}
+
 export async function loadLive(): Promise<Aircraft[]> {
   const json = JSON.parse(await getText(`${PROXY}/v2/mil`));
   return parseV2(json).aircraft;

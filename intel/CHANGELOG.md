@@ -4,6 +4,19 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.2.0 (2026-10-05)
+
+### Added
+* **Stories:** reports from different sources about the same event become one card with status Signal, Emerging, Reported or Confirmed, a time axis and the lead time of the first unverified report. Every report of a story in order on tap.
+* **Telegram newsrooms** as tier Breaking, read through the proxy: OSINTdefender, RAGE X, War Monitor, Insider Paper, Clash Report.
+* **Confirming sources:** Tagesschau, Deutschlandfunk, DW, BBC World, Al Jazeera.
+* **Tiers** for every source: Unverified, OSINT, Specialist, Confirming.
+* **Probe collector** on GitHub Actions for one week, INTEL merges its reports.
+* Pulse: reports of the last hour, unverified share, developing stories.
+
+### Changed
+* The flat feed is now the view **Wire**, Stories is the default.
+
 ## 0.1.1 (2026-10-05)
 
 ### Fixed

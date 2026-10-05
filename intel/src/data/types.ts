@@ -6,7 +6,7 @@ export interface Item {
   /** Stable id: channel plus URL or post URI. */
   id: string;
   sourceId: string;
-  channel: 'bluesky' | 'rss';
+  channel: 'bluesky' | 'rss' | 'telegram';
   title: string;
   text: string;
   /** Link to the article, or to the post when it links nothing. */
@@ -15,6 +15,8 @@ export interface Item {
   postUrl?: string;
   /** Epoch ms of publication. */
   time: number;
+  /** Epoch ms when the collector first saw it, if it came through the collector. */
+  seen?: number;
 }
 
 export interface Match {

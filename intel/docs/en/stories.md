@@ -1,0 +1,61 @@
+# Stories
+
+[Deutsche Version](../de/stories.md) · [Overview](README.md)
+
+A single post says little. Five independent sources that report the same thing within an hour say a lot. INTEL therefore groups reports from different sources into **stories** and shows how far each story is confirmed. The logic is in `src/data/stories.ts`.
+
+## Tiers of the sources
+
+Every source has a tier that says how far its report carries.
+
+| Tier | Shown as | Sources | Meaning |
+|---|---|---|---|
+| Breaking | Unverified, hollow grey dot | Telegram newsrooms: OSINTdefender, RAGE X, War Monitor, Insider Paper, Clash Report | Fast, often minutes after an event, without verification |
+| OSINT | OSINT, blue dot | ItaMilRadar, Bellingcat, ISW, Jakub Janovsky | Open source researchers with a track record |
+| Specialist | Specialist, blue dot | The Aviationist, The War Zone, Defense News, Naval News, hartpunkt and others | Specialist media with an editorial process |
+| Confirming | Confirming, white dot | Tagesschau, Deutschlandfunk, DW, BBC, Al Jazeera, US DoD | Authorities and leading news media |
+
+## Status of a story
+
+| Status | Condition |
+|---|---|
+| **Signal** | One unverified source |
+| **Emerging** | Several unverified sources, nobody else yet |
+| **Reported** | At least one OSINT or specialist source |
+| **Confirmed** | At least one confirming source |
+
+There are no percentages on purpose. A figure like "72 %" would suggest a precision that nothing measures yet. The status says exactly who reported, the numbers on the card say how many.
+
+## How reports are grouped
+
+1. For every report INTEL collects its tokens: places, callsigns, aircraft types and the words of headline and excerpt. Common words in English and German are ignored, German event words are mapped to English (Pest to plague, Drohne to drone, Explosion to explosion).
+2. Each token is weighted by how rare it is among all current reports. A callsign weighs most, then places, then types and words. Tokens that appear in more than 8 % of all reports count nothing.
+3. Two reports of **different** sources within 36 hours belong together when their shared tokens weigh enough and at least one ordinary word is among them. A place alone is not enough, many stories happen in Ukraine.
+4. Groups are joined transitively: if A matches B and B matches C, all three are one story.
+
+Reports of the same source never link directly. A channel that repeats itself is not confirmation.
+
+## Lead time
+
+When a story has an unverified report and a later confirming or specialist one, the card shows how far the first was ahead, for example "RAGE X 1 h 6 min ahead of Tagesschau". This is the measurement the probe collector is about: are the fast channels really ahead, and by how much.
+
+## Card
+
+| Element | Meaning |
+|---|---|
+| Status chip | Signal, Emerging, Reported, Confirmed |
+| Headline | Of the most trustworthy report, the earliest at that tier |
+| Time axis | Every report as a dot from the first to the last, coloured by tier |
+| Ladder | How many sources per tier, and the lead time |
+| Chips, LIVE rows | Entities and live matches of all reports of the story |
+| Show reports in order | Every report with time, source and link: how the story came about |
+
+## Order
+
+**Developing** at the top: stories with several sources and activity in the last 12 hours, the most sources first. Below **Latest**: everything else, newest first. The three numbers above show reports of the last hour, how many of them are unverified, and how many stories are developing.
+
+## Limits
+
+* Grouping reads headline and excerpt, not the full article. Two reports about the same event in completely different words stay apart.
+* Translation is limited to a list of event words. A German and an English report meet mostly through places, callsigns and types.
+* A confirmed story is confirmed by a source, not by INTEL. Leading media also err.

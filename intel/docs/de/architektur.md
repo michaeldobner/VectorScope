@@ -8,6 +8,8 @@ INTEL ist das Modul INTEL der VectorScope-Sammlung: eine React Single Page Appli
 iPhone / iPad
  └─ INTEL (statische Dateien von GitHub Pages)
      ├─ public.api.bsky.app ......................... Bluesky-Beiträge, direkt
+     ├─ vectorscope-proxy.vercel.app/tg/{kanal} ..... Telegram-Kanäle, eine Minute zwischengespeichert
+     ├─ raw.githubusercontent.com ................... Meldungen des Probe-Sammlers, Branch collector-data
      ├─ vectorscope-proxy.vercel.app/feed/{id} ...... RSS-Feeds, fünf Minuten zwischengespeichert
      └─ vectorscope-proxy.vercel.app/v2/mil ......... Live-Militärflugzeuge von adsb.lol
 ```
@@ -17,12 +19,14 @@ iPhone / iPad
 ```
 intel/src/
 ├─ main.tsx              Start: Schriften, gemeinsame Tokens, Store, Service Worker
-├─ App.tsx               Kopfleiste, Reiter, Filter, Feed, Live now, Places, Sources
+├─ App.tsx               Kopfleiste, Reiter, Filter, Stories, Wire, Live now, Places, Sources
 ├─ styles.css            Layout und Komponenten, Farben aus shared/tokens.css
 ├─ data/
 │  ├─ sources.ts         die geprüften Quellen
 │  ├─ rss.ts             RSS- und Atom-Parser ohne DOMParser
 │  ├─ bluesky.ts         eigene Beiträge eines Accounts aus der öffentlichen API
+│  ├─ telegram.ts        Beiträge eines Kanals aus der Webansicht t.me/s
+│  ├─ stories.ts         Bündelung zu Stories, Status, Vorsprung
 │  ├─ text.ts            HTML zu Text, Entities, URL-Schlüssel für Duplikate
 │  ├─ feed.ts            Laden mit Ausweichweg, Zusammenführen, Live-Flugzeuge
 │  ├─ entities.ts        Callsigns und Flugzeugtypen
@@ -39,15 +43,15 @@ INTEL nutzt den Callsign-Katalog, den Flugzeug-Parser und die Entfernungsberechn
 ## Datenfluss
 
 1. Beim Start erscheint sofort der zuletzt gespeicherte Feed.
-2. Die Live-Militärflugzeuge werden geladen, danach alle Quellen, jeweils vier gleichzeitig.
+2. Die Live-Militärflugzeuge werden geladen, danach alle Quellen, jeweils vier gleichzeitig, zusammen mit den Meldungen des Probe-Sammlers.
 3. Jede Quelle lädt ihre Kanäle parallel. RSS geht über den Proxy und weicht auf eine direkte Anfrage aus. Eine Quelle fällt nur aus, wenn alle ihre Kanäle ausfallen.
 4. Alle Einträge werden zusammengeführt: Duplikate nach URL (ein Beitrag und der Artikel, auf den er verlinkt) werden ein Eintrag, Einträge älter als 14 Tage fallen weg.
-5. Die Entities werden einmal pro Eintrag erkannt, die Treffer neu berechnet, sobald sich Einträge oder Live-Flugzeuge ändern.
+5. Die Entities werden einmal pro Eintrag erkannt, Treffer und Stories neu berechnet, sobald sich Einträge oder Live-Flugzeuge ändern.
 6. Der Feed lädt alle fünf Minuten neu, die Live-Flugzeuge alle zwei Minuten, nur solange die Seite sichtbar ist.
 
-## Proxy-Route
+## Proxy-Routen
 
-`/feed/{id}` in `proxy/api/proxy.js` liefert nur die Feeds seiner festen Liste `FEEDS`, es ist also kein offener Proxy. Die Route sendet einen User-Agent mit Kontaktangabe und hält Antworten fünf Minuten im Edge-Cache von Vercel. Ein Test prüft, dass `FEEDS` und die RSS-Adressen in `sources.ts` identisch sind und dass INTEL und AIR denselben Proxy nutzen.
+`/feed/{id}` und `/tg/{kanal}` in `proxy/api/proxy.js` liefern nur die Feeds in `FEEDS` und die Kanäle in `TELEGRAM`, der Proxy ist also kein offener Proxy. Die Route sendet einen User-Agent mit Kontaktangabe und hält Antworten fünf Minuten im Edge-Cache von Vercel. Ein Test prüft, dass `FEEDS` und `TELEGRAM` zu den Quellen in `sources.ts` passen und dass INTEL und AIR denselben Proxy nutzen.
 
 ## Speicher
 
@@ -64,6 +68,9 @@ Der Service Worker `public/sw.js` mit dem Speicher `vectorscope-intel-v1` hält 
 |---|---|
 | `data/rss.test.ts` | RSS mit CDATA und Entities, Atom, WordPress-Fußzeilen, Gedankenstriche, Bluesky, Zusammenführen, Altersgrenze |
 | `data/entities.test.ts` | Callsigns, Fehltreffer, Typen, Orte auf Englisch und Deutsch, Wortgrenzen, Regeln des Live-Abgleichs |
-| `data/sources.test.ts` | Eindeutige Quellen, Proxy-Liste gleich Quellenliste, derselbe Proxy wie AIR |
+| `data/sources.test.ts` | Eindeutige Quellen, Proxy-Listen gleich Quellenliste, derselbe Proxy wie AIR |
+| `data/stories.test.ts` | Telegram-Webansicht, Bündelung, Status, Vorsprung, Reihenfolge, keine Selbstbestätigung |
+
+Der Probe-Sammler `collector/collect.ts` nutzt dieselben Module in Node.js, siehe [Probe-Sammler](sammler.md).
 
 Der Rauchtest öffnet INTEL im Demo-Modus in vier Gerätegrößen, das Test-Labor öffnet es mit Live-Daten und folgt dem ersten Live-Treffer nach AIR.

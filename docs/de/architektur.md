@@ -25,6 +25,7 @@ VectorScope/
 ├─ intel/                  Modul INTEL: geprüfter OSINT-Feed mit Live-Abgleich (React, TypeScript)
 ├─ proxy/                  CORS-Proxy auf Vercel, für alle Module
 ├─ lab/                    Test-Labor mit echtem Internet (GitHub Actions)
+├─ collector/              Probe-Sammler für INTEL (GitHub Actions, eine Woche)
 ├─ scripts/
 │  ├─ build.mjs            ergänzt Startseite und gemeinsame Dateien in dist/
 │  ├─ serve.mjs            liefert dist/ aus wie GitHub Pages
@@ -33,7 +34,7 @@ VectorScope/
 │  └─ versions.mjs         alle Stellen, an denen eine Version steht
 ├─ tests/release.test.ts   Prüfungen des Repositorys
 ├─ docs/en, docs/de        Dokumentation der Sammlung
-└─ .github/workflows/      Tests, E2E, Deploy, Labor
+└─ .github/workflows/      Tests, E2E, Deploy, Labor, Sammler
 ```
 
 ## Module
@@ -99,7 +100,8 @@ iPhone / iPad (Safari, installierte Web-App)
      │    ├─ adsbdb.com, hexdb.io ............. Routen, Airlines, Flugzeugdaten
      │    └─ OpenFreeMap ...................... Grundkarte
      └─ INTEL ── public.api.bsky.app ......... Bluesky-Beiträge, direkt
-          └─ derselbe Proxy .................. RSS-Feeds (/feed/{id}), Militärflugzeuge (/v2/mil)
+          ├─ derselbe Proxy .................. RSS-Feeds (/feed/{id}), Telegram (/tg/{kanal}), Militärflugzeuge (/v2/mil)
+          └─ raw.githubusercontent.com ....... Meldungen des Probe-Sammlers
 ```
 
 Es gibt kein eigenes Backend. Der Proxy leitet nur eine Whitelist lesender Pfade weiter und speichert nichts. Einzelheiten: [Deployment](deployment.md#cors-proxy-auf-vercel).

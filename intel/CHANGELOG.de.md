@@ -4,6 +4,19 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.2.0 (2026-10-05)
+
+### Neu
+* **Stories:** Meldungen verschiedener Quellen über dasselbe Ereignis werden eine Karte mit Status Signal, Emerging, Reported oder Confirmed, einer Zeitachse und dem Vorsprung der ersten ungeprüften Meldung. Jede Meldung einer Story auf Tipp in zeitlicher Reihenfolge.
+* **Telegram-Eilmelder** als Stufe Breaking, über den Proxy gelesen: OSINTdefender, RAGE X, War Monitor, Insider Paper, Clash Report.
+* **Bestätigende Quellen:** Tagesschau, Deutschlandfunk, DW, BBC World, Al Jazeera.
+* **Stufen** für jede Quelle: Unverified, OSINT, Specialist, Confirming.
+* **Probe-Sammler** auf GitHub Actions für eine Woche, INTEL führt seine Meldungen zusammen.
+* Puls: Meldungen der letzten Stunde, Anteil ungeprüft, sich entwickelnde Stories.
+
+### Geändert
+* Der flache Feed ist jetzt die Ansicht **Wire**, Stories ist die Standardansicht.
+
 ## 0.1.1 (2026-10-05)
 
 ### Behoben

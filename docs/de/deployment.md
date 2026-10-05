@@ -46,6 +46,7 @@ Bleibt die Source auf **Deploy from a branch**, veröffentlicht GitHub bei jedem
 | `.github/workflows/tests.yml` | Jedem Push und Pull Request | Typprüfung, Unit-Tests und Prüfungen des Repositorys, Build |
 | `.github/workflows/deploy.yml` | Push auf `main`, von Hand | Tests, Build, Upload, Veröffentlichung auf Pages |
 | `.github/workflows/e2e.yml` | Jedem Push und Pull Request | Rauchtest in iPhone- und iPad-Größen mit Chromium und WebKit, Screenshots als Artefakt |
+| `.github/workflows/collector.yml` | Alle 15 Minuten bis 12. Oktober 2026, von Hand | Probe-Sammler für INTEL, Daten im Branch `collector-data`, siehe [Probe-Sammler](../../intel/docs/de/sammler.md) |
 | `.github/workflows/lab.yml` | Push auf `main` mit Änderungen an Modulen, Labor oder Proxy, von Hand | Test-Labor mit echtem Internet: echte API-Antworten und Screenshots mit Live-Daten, Ergebnisse im Branch `lab-results` |
 
 ## CORS-Proxy auf Vercel
@@ -90,7 +91,7 @@ Das Modul speichert den Proxy dauerhaft und entfernt den Parameter aus der Adres
 
 ### Was der Proxy tut
 
-* Leitet nur lesende Pfade weiter: `/v2/point`, `/v2/closest`, `/v2/lat/…/lon/…/dist/…`, `/v2/mil`, `/v2/ladd`, `/v2/pia`, `/v2/sqk`, `/v2/squawk`, `/v2/hex`, `/v2/icao`, `/v2/callsign`, `/v2/reg`, `/v2/registration`, `/v2/type`, `POST /api/0/routeset`, `/photos/hex/{hex}` für planespotters.net und `/feed/{id}` für die feste Liste der RSS-Feeds von INTEL. Alles andere erhält 404, es ist also kein offener Proxy.
+* Leitet nur lesende Pfade weiter: `/v2/point`, `/v2/closest`, `/v2/lat/…/lon/…/dist/…`, `/v2/mil`, `/v2/ladd`, `/v2/pia`, `/v2/sqk`, `/v2/squawk`, `/v2/hex`, `/v2/icao`, `/v2/callsign`, `/v2/reg`, `/v2/registration`, `/v2/type`, `POST /api/0/routeset`, `/photos/hex/{hex}` für planespotters.net, `/feed/{id}` für die feste Liste der RSS-Feeds und `/tg/{kanal}` für die feste Liste der Telegram-Kanäle von INTEL. Alles andere erhält 404, es ist also kein offener Proxy.
 * Sendet einen User-Agent mit Kontaktangabe.
 * Ergänzt `Access-Control-Allow-Origin` und beantwortet Preflight-Anfragen.
 * Hält GET-Antworten zwei Sekunden im Edge-Cache von Vercel, damit mehrere Geräte die Last auf adsb.lol nicht vervielfachen. RSS-Feeds fünf Minuten.
