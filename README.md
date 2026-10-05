@@ -25,7 +25,7 @@ A collection of calm, precise modules under one roof. Each answers one question 
 | Module | Question | Status | Version |
 |---|---|---|---|
 | [**AIR**](air/README.md) · Airspace | What is flying above me right now, what passes over next, what is worth a look? | Live · [open](https://michaeldobner.github.io/VectorScope/air/) | 0.3.1 |
-| [**INTEL**](intel/README.md) · Intelligence feed | What do verified OSINT sources and defence media report, and which aircraft in the air does it concern? | Live · [open](https://michaeldobner.github.io/VectorScope/intel/) | 0.1.0 |
+| [**INTEL**](intel/README.md) · Intelligence feed | What do verified OSINT sources and defence media report, and which aircraft in the air does it concern? | Live · [open](https://michaeldobner.github.io/VectorScope/intel/) | 0.1.1 |
 
 ## Why VectorScope
 

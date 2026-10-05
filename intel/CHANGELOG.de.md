@@ -4,6 +4,12 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.1.1 (2026-10-05)
+
+### Behoben
+* Endungen wie „… mehr…“ oder „Read more“ werden aus den Auszügen entfernt.
+* Naval News wird nur noch über RSS gelesen, sein Bluesky-Feed antwortete mit einem Fehler.
+
 ## 0.1.0 (2026-10-05)
 
 Erste Version.

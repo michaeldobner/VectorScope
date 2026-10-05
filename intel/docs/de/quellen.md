@@ -29,12 +29,14 @@ Das Ergebnis landet im Branch `lab-results` als `osint.md` und `osint.json`.
 | Jakub Janovsky (Oryx) | OSINT | rebel44cz.bsky.social, 30.000 | | 4 h |
 | Defense News | Defence | defensenews.bsky.social, 7.500 | ✓ | 1 h |
 | Breaking Defense | Defence | breakingdefense.com, 4.300 | ✓ | 3 d |
-| Naval News | Naval | navalnews.com, 15.000 | ✓ | 3 h |
+| Naval News | Naval | | ✓ | 3 h |
 | USNI News | Naval | | ✓ | 2 d |
 | hartpunkt | DACH | hartpunkt.bsky.social, 1.000 | ✓ | unter 1 h |
 | Augen geradeaus! | DACH | wiegold.de, 16.000 | ✓ | 3 h |
 | ESUT | DACH | | ✓ | 1 h |
 | US DoD News | Official | | ✓ | 2 d |
+
+Naval News hat auch einen Bluesky-Account (navalnews.com, 15.000 Follower), dessen Feed im Live-Test aber mit HTTP 400 antwortete. INTEL liest nur den RSS-Feed.
 
 ## Verworfene Kandidaten
 

@@ -28,7 +28,12 @@ export function parseFeed(xml: string, sourceId: string): Item[] {
     const body = cdata(tag(block, 'description') ?? tag(block, 'summary') ?? tag(block, 'content:encoded') ?? tag(block, 'content')) ?? '';
     let text = plainText(body);
     // WordPress appends "The post … appeared first on …".
-    text = text.replace(/\s*The post .{0,300}? appeared first on .{0,120}?\.?$/i, '').replace(/\s*\[…\]$|\s*\[\.\.\.\]$/, ' …');
+    text = text
+      .replace(/\s*The post .{0,300}? appeared first on .{0,120}?\.?$/i, '')
+      // "… mehr…", "Read more", "[…]" at the end: the link is the headline anyway.
+      .replace(/\s*(?:\.\.\.|…)?\s*(?:mehr|weiterlesen|read more|continue reading)\s*(?:\.\.\.|…|»|›)?\s*$/i, ' …')
+      .replace(/\s*\[(?:…|\.\.\.)\]$/, ' …')
+      .replace(/(?:\s*…)+$/, ' …');
     items.push({ id: `rss:${link}`, sourceId, channel: 'rss', title: clip(title, 220), text: clip(text, 420), url: link, time });
   }
   return items;

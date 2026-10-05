@@ -25,7 +25,7 @@ export const SOURCES: Source[] = [
   { id: 'janovsky', name: 'Jakub Janovsky (Oryx)', category: 'osint', lang: 'en', bluesky: 'rebel44cz.bsky.social', site: 'https://bsky.app/profile/rebel44cz.bsky.social' },
   { id: 'defensenews', name: 'Defense News', category: 'defence', lang: 'en', bluesky: 'defensenews.bsky.social', rss: 'https://www.defensenews.com/arc/outboundfeeds/rss/?outputType=xml', site: 'https://www.defensenews.com' },
   { id: 'breakingdefense', name: 'Breaking Defense', category: 'defence', lang: 'en', bluesky: 'breakingdefense.com', rss: 'https://breakingdefense.com/feed/', site: 'https://breakingdefense.com' },
-  { id: 'navalnews', name: 'Naval News', category: 'naval', lang: 'en', bluesky: 'navalnews.com', rss: 'https://www.navalnews.com/feed/', site: 'https://www.navalnews.com' },
+  { id: 'navalnews', name: 'Naval News', category: 'naval', lang: 'en', rss: 'https://www.navalnews.com/feed/', site: 'https://www.navalnews.com' },
   { id: 'usni', name: 'USNI News', category: 'naval', lang: 'en', rss: 'https://news.usni.org/feed', site: 'https://news.usni.org' },
   { id: 'hartpunkt', name: 'hartpunkt', category: 'dach', lang: 'de', bluesky: 'hartpunkt.bsky.social', rss: 'https://www.hartpunkt.de/feed/', site: 'https://www.hartpunkt.de' },
   { id: 'augengeradeaus', name: 'Augen geradeaus!', category: 'dach', lang: 'de', bluesky: 'wiegold.de', rss: 'https://augengeradeaus.net/feed/', site: 'https://augengeradeaus.net' },

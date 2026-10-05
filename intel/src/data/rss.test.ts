@@ -45,6 +45,13 @@ describe('RSS and Atom', () => {
     expect(plainText('A&mdash;B 2020&ndash;2024')).toBe('A, B 2020-2024');
   });
 
+  it('removes "mehr" and "read more" endings', () => {
+    const feed = (d: string) => `<rss><channel><item><title>T</title><link>https://x.org/a</link><pubDate>Sun, 05 Oct 2026 08:00:00 +0000</pubDate><description>${d}</description></item></channel></rss>`;
+    expect(parseFeed(feed('Früher, als das ... mehr...'), 'x')[0].text).toBe('Früher, als das …');
+    expect(parseFeed(feed('Some text [&#8230;]'), 'x')[0].text).toBe('Some text …');
+    expect(parseFeed(feed('Some text. Read more »'), 'x')[0].text).toBe('Some text. …');
+  });
+
   it('parses Atom entries and picks the alternate link', () => {
     const [entry] = parseFeed(ATOM, 'ex');
     expect(entry.url).toBe('https://blog.example.org/a');

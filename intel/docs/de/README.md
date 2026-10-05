@@ -23,4 +23,4 @@ Diese Dokumentation beschreibt das Modul INTEL: die Bedienung, welche Quellen es
 | Aktualisierung | Feed alle fünf Minuten, solange die App geöffnet ist |
 | Sprache | Englische Oberfläche, Beiträge in ihrer Originalsprache (Englisch, Deutsch) |
 | Adresse | https://michaeldobner.github.io/VectorScope/intel/ |
-| Version | 0.1.0 |
+| Version | 0.1.1 |
