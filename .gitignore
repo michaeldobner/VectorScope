@@ -2,3 +2,5 @@ node_modules
 dist
 .vercel
 *.log
+e2e-out
+lab-out

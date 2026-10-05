@@ -66,7 +66,7 @@ Positions older than 60 seconds are discarded.
 
 ### Rate limits and access
 
-adsb.lol uses dynamic rate limits and announces that API keys for feeders will be required in the future. VectorScope reacts to HTTP 429 by doubling the interval up to twelve times the base value and only polls while the app is visible. Its `/v2` endpoints send no CORS headers, so browsers may block direct requests. In that case the [proxy](deployment.md#cors-proxy-on-vercel) is needed.
+adsb.lol uses dynamic rate limits and announces that API keys for feeders will be required in the future. VectorScope reacts to HTTP 429 by doubling the interval up to twelve times the base value and only polls while the app is visible. Its `/v2` endpoints send no CORS headers, so browsers may block direct requests. In that case the [proxy](../../../docs/en/deployment.md#cors-proxy-on-vercel) is needed.
 
 ## What ADS-B provides and what it does not
 

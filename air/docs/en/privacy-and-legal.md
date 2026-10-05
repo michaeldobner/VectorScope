@@ -23,7 +23,7 @@ VectorScope is built so that your location is never stored on a server.
 
 | Component | Licence | Attribution in the app |
 |---|---|---|
-| VectorScope source code | MIT, see [LICENSE](../../LICENSE) | |
+| VectorScope source code | MIT, see [LICENSE](../../../LICENSE) | |
 | Traffic data from adsb.lol | Open Database Licence 1.0 | Map attribution and Settings |
 | Basemap OpenFreeMap, OpenMapTiles, OpenStreetMap | OpenMapTiles licence, ODbL for OSM data | Map attribution |
 | Aircraft photos | Copyright of the photographers, planespotters.net terms | Photographer name and link on every photo |

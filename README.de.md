@@ -2,113 +2,90 @@
 
 # ◇ VectorScope
 
-**Ein persönliches Live-Luftlagebild für iPhone und iPad.**
+**Ein persönliches Live-Lagebild für iPhone und iPad.**
 
-Öffnen und sofort sehen, was über dir fliegt: welches Flugzeug als nächstes über dich hinwegzieht, wohin du schauen musst und welche Maschinen einen zweiten Blick wert sind.
+Eine Sammlung ruhiger, präziser Module unter einem Dach. Jedes beantwortet eine Frage zu dem, was um dich herum passiert, in einer gemeinsamen Designsprache: tiefes Graphit, Ice Blue, Farbe nur dort, wo sie etwas bedeutet.
 
 <h3><a href="https://michaeldobner.github.io/VectorScope/">michaeldobner.github.io/VectorScope</a></h3>
 
 [**▶ VectorScope öffnen**](https://michaeldobner.github.io/VectorScope/) · [English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md)
 
 [![Tests](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml)
+[![E2E](https://github.com/michaeldobner/VectorScope/actions/workflows/e2e.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/e2e.yml)
 [![Deploy](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml)
 
-<img src="docs/images/iphone-radar.jpg" width="230" alt="Radaransicht auf dem iPhone mit Distanzringen um den eigenen Standort">&nbsp;&nbsp;
-<img src="docs/images/iphone-overhead.jpg" width="230" alt="Overhead-Liste mit Countdown und Blickrichtung">&nbsp;&nbsp;
-<img src="docs/images/iphone-score.jpg" width="230" alt="Aircraft Inspector mit Interest Score und Begründungen">
+<img src="air/docs/images/iphone-radar.jpg" width="230" alt="Modul AIR: Radaransicht auf dem iPhone mit Distanzringen um den eigenen Standort">&nbsp;&nbsp;
+<img src="air/docs/images/iphone-overhead.jpg" width="230" alt="Modul AIR: Overhead-Liste mit Countdown und Blickrichtung">&nbsp;&nbsp;
+<img src="air/docs/images/iphone-score.jpg" width="230" alt="Modul AIR: Aircraft Inspector mit Interest Score und Begründungen">
 
 </div>
 
+## Module
+
+| Modul | Frage | Status | Version |
+|---|---|---|---|
+| [**AIR**](air/README.de.md) · Airspace | Was fliegt gerade über mir, was kommt als nächstes, was ist einen Blick wert? | Live · [öffnen](https://michaeldobner.github.io/VectorScope/air/) | 0.3.0 |
+| **INTEL** · Intelligence feed | Was melden geprüfte OSINT-Quellen und Nachrichten, und welches Live-Flugzeug betrifft es? | Geplant, Quellen werden geprüft | |
+
 ## Warum VectorScope
 
-Flugtracker zeigen die ganze Welt, bunt und mit Werbung. VectorScope macht das Gegenteil und beantwortet eine Frage sehr gut: **Was fliegt gerade über mir?** Die App definiert „über mir“ über den Winkel, unter dem du ein Flugzeug tatsächlich am Himmel sehen würdest, zählt bis zum Überflug herunter und sagt dir, in welche Richtung du schauen musst. Eine ruhige, informationsdichte Oberfläche in tiefem Graphit setzt Farbe nur dort ein, wo sie etwas bedeutet: Grau für normalen Verkehr, Ice Blue für interessante Flugzeuge, Kobalt für deine Watchlist, Amber und Rot für echte Ereignisse. Keine Werbung, kein Konto, kein Tracking.
-
-## Highlights
-
-| | |
-|---|---|
-| **Overhead jetzt** | Was über dir ist und was in den nächsten zehn Minuten über dich hinwegfliegt: Countdown, Vorbeiflug-Abstand, Himmelsrichtung und Elevationswinkel |
-| **Live-Radar** | Flugzeuge rund um deinen Standort mit dezenten Distanzringen, flüssiger Bewegung zwischen den Aktualisierungen, Flugspur und vorausberechnetem Kurs für das ausgewählte Flugzeug |
-| **Aircraft Inspector** | Telemetrie, Route soweit veröffentlicht, Position relativ zu dir, Foto des Flugzeugs, Links zu ADS-B Exchange, adsb.lol und Flightradar24 |
-| **Interest Score** | Jedes Flugzeug erhält einen Wert von 0 bis 100 mit nachvollziehbaren Gründen: Militär, Rolle (Tanker, AEW&C, ISR, Bomber), seltener Typ, Alter, Notfall-Squawk, Watchlist |
-| **Notable now** | Militär- und Notfallverkehr in ganz Europa, gerankt wie in einem Terminal |
-| **Watchlist** | Callsign-Präfixe (FORTE, RCH, NATO), Typcodes (C17, B52), Kennzeichen und ICAO-Adressen, mit Hinweis, sobald ein Treffer in deinen Radius kommt |
-| **Farbe mit Bedeutung** | 90 % der Karte bleiben grau, damit das Auge die interessanten Flugzeuge von selbst findet |
-| **Für Apple-Geräte gemacht** | iPhone und iPad hoch und quer, Installation auf dem Home-Bildschirm, berücksichtigt Notch und Home-Indikator, funktioniert in Split View |
-| **Datenschutz von Anfang an** | Standort und Watchlist bleiben auf deinem Gerät. Abfragen nutzen auf etwa 1 km gerundete Koordinaten |
-| **Metrisch und deutsches Zahlenformat** | 10.670 m, 889 km/h, ±0,0 m/s. Fuß und Knoten mit einem Tipp |
-
-## Bedienung
-
-1. VectorScope öffnen und den Standortzugriff erlauben oder in den **Einstellungen** einen Standort festlegen.
-2. Radius wählen: 5, 10, 25, 50, 100 oder 200 km.
-3. Auf **Overhead** schauen: Die Liste beginnt mit dem, was gerade über dir ist, gefolgt von dem, was gleich kommt.
-4. Ein Flugzeug antippen öffnet den Inspector. „Look S at 58° elevation“ bedeutet: nach Süden drehen und etwa zwei Drittel nach oben schauen.
-5. Callsigns oder Typen, die dich interessieren, zur **Watchlist** hinzufügen.
-
-Ausführliche Anleitung: [Bedienung](docs/de/bedienung.md).
+Flugtracker und Nachrichten-Apps zeigen alles, bunt und mit Werbung. VectorScope macht das Gegenteil: Jedes Modul beantwortet eine Frage sehr gut, und alle Module sehen gleich aus und verhalten sich gleich. Keine Werbung, kein Konto, kein Tracking. Alles läuft als Web-App auf GitHub Pages, persönliche Daten bleiben auf deinem Gerät.
 
 ## Installation auf iPhone oder iPad
 
 1. **https://michaeldobner.github.io/VectorScope/** in **Safari** öffnen.
 2. **Teilen** antippen, dann **Zum Home-Bildschirm**.
-3. VectorScope vom Home-Bildschirm aus öffnen und dort den Standort festlegen. Safari und die installierte App haben getrennte Speicher.
-4. **Live-Daten:** Browser dürfen adsb.lol nicht direkt lesen. Einmalig den kostenlosen Proxy einrichten (drei Minuten, [Deploy-Button und Einrichtungslink](docs/de/deployment.md#cors-proxy-auf-vercel)). Bis dahin zeigt **Demo** simulierten Verkehr.
+3. VectorScope vom Home-Bildschirm aus öffnen und ein Modul wählen.
+
+Um ein Modul direkt zu öffnen, seine eigene Adresse zum Home-Bildschirm hinzufügen, zum Beispiel **https://michaeldobner.github.io/VectorScope/air/**. Safari und die installierte App haben getrennte Speicher, den Standort deshalb in der installierten App festlegen.
+
+## Aufbau des Repositorys
+
+```
+VectorScope/
+├─ index.html              Startseite: Liste der Module
+├─ modules.json            Modulverzeichnis, maßgebliche Quelle für Versionen
+├─ shared/                 gemeinsame Hülle: Tokens, Stile der Startseite, Icons, Schriften
+├─ air/                    Modul AIR: Live-Luftlagebild
+├─ proxy/                  CORS-Proxy auf Vercel, für alle Module
+├─ lab/                    Test-Labor mit echtem Internet
+├─ scripts/                Build, lokaler Server, Rauchtest, Release
+├─ tests/                  Prüfungen des Repositorys
+├─ docs/                   Dokumentation der Sammlung (en, de)
+└─ .github/workflows/      Tests, E2E, Deploy, Labor
+```
+
+Einzelheiten: [Architektur](docs/de/architektur.md).
 
 ## Dokumentation
 
 | Dokument | Inhalt |
 |---|---|
-| [Bedienung](docs/de/bedienung.md) | Ansichten, Steuerung, Watchlist, Einstellungen, Einheiten, Hinweise |
-| [Berechnungen](docs/de/berechnungen.md) | Definition von „Overhead“, Elevationswinkel, Closest Point of Approach, Interest Score |
-| [Datenquellen](docs/de/datenquellen.md) | adsb.lol, OpenFreeMap, planespotters.net, was ADS-B liefert und was nicht |
-| [Design](docs/de/design.md) | Design-Briefing, Farb-Tokens, Typografie, Kartenstil, Layouts |
-| [Architektur](docs/de/architektur.md) | Module, Datenfluss, Zustand, Darstellung |
-| [Entwicklung](docs/de/entwicklung.md) | Lokale Umgebung, Tests, Screenshots, Konventionen |
+| [Architektur](docs/de/architektur.md) | Aufbau des Repositorys, Modulverzeichnis, gemeinsame Hülle, Build, Service Worker |
+| [Entwicklung](docs/de/entwicklung.md) | Einrichtung, Skripte, Prüfungen, Rauchtest, Test-Labor, Releases, Modul hinzufügen |
 | [Deployment](docs/de/deployment.md) | GitHub Pages, CORS-Proxy auf Vercel, Fehlerbehebung |
-| [Datenschutz und Recht](docs/de/datenschutz-und-recht.md) | Umgang mit dem Standort, Lizenzen, Quellenangaben, rechtliche Hinweise |
+| [Roadmap](docs/de/roadmap.md) | Nächste Schritte, Ideen mit Serverbedarf, zurückgestellte Ideen |
+| [Modul AIR](air/docs/de/README.md) | Bedienung, Berechnungen, Datenquellen, Design, Architektur |
+| [Gemeinsame Hülle](shared/README.de.md) | Tokens und Startseite |
 
 ## Schnellstart für Entwickler
 
 ```bash
 npm install
-npm run dev        # lokaler Server unter http://localhost:5173/
-npm test           # Unit-Tests für Geometrie und Overhead-Logik
-npm run build      # Produktions-Build nach dist/
+npm run dev        # Modul AIR unter http://localhost:5173/
+npm test           # Unit-Tests aller Module und Prüfungen des Repositorys
+npm run build      # Startseite und alle Module nach dist/
+npm run preview    # dist/ wie GitHub Pages unter http://localhost:4173/
 ```
 
-`?demo` zeigt simulierten Verkehr, `?lat=50.11&lon=8.68` legt den Standort fest. Jeder Push auf `main` wird getestet und auf GitHub Pages veröffentlicht.
-
-## Ordnerstruktur
-
-```
-VectorScope/
-├─ index.html              Einstiegsseite, iOS-Web-App-Angaben
-├─ public/
-│  ├─ manifest.webmanifest Installation als App
-│  ├─ sw.js                Offline-App-Hülle
-│  └─ icons/               App-Icons
-├─ src/
-│  ├─ main.tsx             Start, Schriften, Service Worker
-│  ├─ App.tsx              Layouts, Kopfleiste, Suche, Bottom Sheet, Hinweise
-│  ├─ styles.css           Design-Tokens und alle Layouts
-│  ├─ geo/                 Distanz, Peilung, Elevation, Closest Approach (getestet)
-│  ├─ data/                adsb.lol-Client, Demo-Verkehr, Katalog, Interest Score
-│  ├─ state/               Einstellungen, Live-Verkehr, Watchlist-Abgleich
-│  ├─ map/                 MapLibre-Ansicht, Kartenstil, Flugzeugsymbole
-│  ├─ lib/                 Zahlen- und Einheitenformat
-│  └─ ui/                  Inspector, Listen, Einstellungen, Layout-Hooks, Tokens
-├─ proxy/                  optionaler CORS-Proxy für Vercel
-├─ docs/                   Dokumentation (en, de, Bilder)
-└─ .github/workflows/      Tests und Veröffentlichung auf GitHub Pages
-```
+Jeder Push auf `main` wird getestet und auf GitHub Pages veröffentlicht.
 
 ## Daten und Quellen
 
-Verkehrsdaten © Mitwirkende von [adsb.lol](https://adsb.lol), lizenziert unter ODbL 1.0. Karte © [OpenFreeMap](https://openfreemap.org), © OpenMapTiles, © OpenStreetMap-Mitwirkende. Flugzeugfotos © die Fotografinnen und Fotografen von [planespotters.net](https://www.planespotters.net). VectorScope ist ein persönliches, nichtkommerzielles Projekt und steht in keiner Verbindung zu diesen Diensten.
+Verkehrsdaten © Mitwirkende von [adsb.lol](https://adsb.lol), lizenziert unter ODbL 1.0. Routen und Flugzeugdaten von [adsbdb](https://www.adsbdb.com) und [hexdb.io](https://hexdb.io). Karte © [OpenFreeMap](https://openfreemap.org), © OpenMapTiles, © OpenStreetMap-Mitwirkende. Flugzeugfotos © die Fotografinnen und Fotografen von [planespotters.net](https://www.planespotters.net). VectorScope ist ein persönliches, nichtkommerzielles Projekt und steht in keiner Verbindung zu diesen Diensten.
 
 ## Version
 
-Aktuelle Version: **0.2.3**. Siehe [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.3.0**. Siehe [Changelog](CHANGELOG.de.md).
 
 Erstellt von Michael Dobner. Lizenziert unter der [MIT-Lizenz](LICENSE).

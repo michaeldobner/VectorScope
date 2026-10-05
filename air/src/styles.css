@@ -3,25 +3,7 @@
    colour used exclusively to communicate meaning. Dark-first by design. */
 
 :root {
-  --bg: #0b0f14;
-  --panel: #111821;
-  --raised: #17212b;
-  --border: #25313d;
-  --text: #edf2f6;
-  --text-2: #8f9ba8;
-  --text-3: #5e6a77;
-  --accent: #55bdeb;
-  --active: #7dd3fc;
-  --info: #4c7dff;
-  --warning: #e9a23b;
-  --critical: #e55757;
-
-  --tone-standard: #7f8a96;
-  --tone-interesting: #55bdeb;
-  --tone-watch: #4c7dff;
-  --tone-event: #e9a23b;
-  --tone-emergency: #e55757;
-
+  /* Colour tokens: shared/tokens.css, themes at runtime: ui/tokens.ts */
   --ui: 'Inter', system-ui, -apple-system, sans-serif;
   --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
 
@@ -122,6 +104,8 @@ button {
   z-index: 20;
 }
 .brand {
+  color: inherit;
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 8px;

@@ -23,7 +23,7 @@ VectorScope ist so gebaut, dass dein Standort nie auf einem Server gespeichert w
 
 | Bestandteil | Lizenz | Quellenangabe in der App |
 |---|---|---|
-| Quellcode von VectorScope | MIT, siehe [LICENSE](../../LICENSE) | |
+| Quellcode von VectorScope | MIT, siehe [LICENSE](../../../LICENSE) | |
 | Verkehrsdaten von adsb.lol | Open Database Licence 1.0 | Kartenvermerk und Einstellungen |
 | Grundkarte OpenFreeMap, OpenMapTiles, OpenStreetMap | OpenMapTiles-Lizenz, ODbL für OSM-Daten | Kartenvermerk |
 | Fotos der Flugzeuge | Urheberrecht der Fotografinnen und Fotografen, Bedingungen von planespotters.net | Name und Link an jedem Foto |

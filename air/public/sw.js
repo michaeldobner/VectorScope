@@ -1,5 +1,5 @@
 // App shell cache. Live data (adsb.lol, tiles, photos) always goes to the network.
-const CACHE = 'vectorscope-v1';
+const CACHE = 'vectorscope-air-v1';
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(['./', './index.html', './manifest.webmanifest'])));
@@ -8,7 +8,7 @@ self.addEventListener('install', (e) => {
 
 self.addEventListener('activate', (e) => {
   e.waitUntil(
-    caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim()),
+    caches.keys().then((keys) => Promise.all(keys.filter((k) => k.startsWith('vectorscope-air-') && k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim()),
   );
 });
 

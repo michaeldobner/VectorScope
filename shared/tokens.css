@@ -1,0 +1,29 @@
+/* VectorScope · shared design tokens
+   Graphite with ice blue. One source for the hub and every module.
+   Modules may override the colour variables at runtime (air: src/ui/tokens.ts). */
+
+:root {
+  --bg: #0e0e10;
+  --panel: #1c1c1e;
+  --raised: #2c2c2e;
+  --border: #38383a;
+  --text: #f5f5f7;
+  --text-2: #a1a1a6;
+  --text-3: #6e6e73;
+  --accent: #55bdeb;
+  --active: #7dd3fc;
+  --info: #4c7dff;
+  --warning: #ff9f0a;
+  --critical: #ff453a;
+
+  --tone-standard: #e5e5ea;
+  --tone-interesting: #55bdeb;
+  --tone-watch: #4c7dff;
+  --tone-event: #ff9f0a;
+  --tone-emergency: #ff453a;
+
+  --radius: 14px;
+  --radius-sm: 8px;
+
+  color-scheme: dark;
+}

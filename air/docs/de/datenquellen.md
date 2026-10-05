@@ -66,7 +66,7 @@ Positionen, die älter als 60 Sekunden sind, werden verworfen.
 
 ### Grenzen und Zugang
 
-adsb.lol nutzt dynamische Anfragegrenzen und kündigt an, künftig API-Schlüssel für Empfängerbetreiber zu verlangen. VectorScope reagiert auf HTTP 429, indem es das Intervall verdoppelt, bis zum Zwölffachen des Grundwerts, und fragt nur bei sichtbarer App ab. Die `/v2`-Endpunkte senden keine CORS-Header, Browser können direkte Anfragen deshalb blockieren. Dann wird der [Proxy](deployment.md#cors-proxy-auf-vercel) benötigt.
+adsb.lol nutzt dynamische Anfragegrenzen und kündigt an, künftig API-Schlüssel für Empfängerbetreiber zu verlangen. VectorScope reagiert auf HTTP 429, indem es das Intervall verdoppelt, bis zum Zwölffachen des Grundwerts, und fragt nur bei sichtbarer App ab. Die `/v2`-Endpunkte senden keine CORS-Header, Browser können direkte Anfragen deshalb blockieren. Dann wird der [Proxy](../../../docs/de/deployment.md#cors-proxy-auf-vercel) benötigt.
 
 ## Was ADS-B liefert und was nicht
 

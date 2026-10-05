@@ -62,7 +62,7 @@ async function newPage(w, h, dpr) {
   p.on('pageerror', (e) => errs.push('pageerror ' + e));
   p.on('requestfailed', (r) => errs.push('failed ' + r.url().slice(0, 110) + ' ' + r.failure()?.errorText));
   p.on('response', (r) => r.status() >= 400 && errs.push(`HTTP ${r.status()} ${r.url().slice(0, 110)}`));
-  await p.goto(`http://localhost:4173/?shot&lat=${LAT}&lon=${LON}`);
+  await p.goto(`http://localhost:4173/air/?shot&lat=${LAT}&lon=${LON}`);
   await p.waitForTimeout(10000);
   return { ctx, p, errs };
 }
@@ -111,7 +111,7 @@ const pick = (p) =>
 for (const theme of ['graphite']) {
   const ctx = await browser.newContext({ viewport: { width: 393, height: 852 }, deviceScaleFactor: 3, isMobile: true, hasTouch: true });
   const p = await ctx.newPage();
-  await p.goto(`http://localhost:4173/?shot&theme=${theme}&lat=${LAT}&lon=${LON}`);
+  await p.goto(`http://localhost:4173/air/?shot&theme=${theme}&lat=${LAT}&lon=${LON}`);
   await p.waitForTimeout(9000);
   await shot(p, `theme-${theme}-1-map`);
   await pick(p);

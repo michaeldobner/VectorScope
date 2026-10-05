@@ -197,10 +197,10 @@ function TopBar({ onSettings }: { onSettings: () => void }) {
   const status = s.feedMode === 'demo' ? 'DEMO' : st.status === 'error' && stale ? 'OFFLINE' : stale ? 'CONNECTING' : 'LIVE';
   return (
     <header className="topbar">
-      <div className="brand">
+      <a className="brand" href="../" aria-label="VectorScope home">
         <span className="logo">◇</span>
         <span>VectorScope</span>
-      </div>
+      </a>
       <Search />
       <span className={`status status-${status.toLowerCase()}`}>
         <i /> {status}

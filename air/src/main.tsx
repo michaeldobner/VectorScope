@@ -5,6 +5,7 @@ import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
 import '@fontsource/ibm-plex-mono/400.css';
 import '@fontsource/ibm-plex-mono/500.css';
+import '../../shared/tokens.css';
 import './styles.css';
 import { App } from './App';
 import { applyThemeToCss } from './ui/tokens';

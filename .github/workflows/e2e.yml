@@ -1,0 +1,37 @@
+name: E2E
+
+# Smoke test on iPhone and iPad sizes against the production build, in Chromium and in WebKit (Safari's engine).
+on:
+  push:
+  pull_request:
+
+jobs:
+  e2e:
+    name: Smoke test (${{ matrix.browser }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, webkit]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps ${{ matrix.browser }}
+      - run: npm run build
+      - name: Smoke test
+        env:
+          E2E_BROWSER: ${{ matrix.browser }}
+        run: |
+          node scripts/serve.mjs 4173 &
+          sleep 2
+          npm run e2e
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: screenshots-${{ matrix.browser }}
+          path: e2e-out
+          retention-days: 14

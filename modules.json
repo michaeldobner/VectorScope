@@ -1,0 +1,31 @@
+{
+  "name": "VectorScope",
+  "version": "0.3.0",
+  "shared": { "version": "1.0.0" },
+  "modules": [
+    {
+      "id": "air",
+      "code": "AIR",
+      "name": "Airspace",
+      "status": "live",
+      "version": "0.3.0",
+      "path": "air/",
+      "description": {
+        "en": "Live aviation radar: what is flying above you, what passes over next, what is worth a look.",
+        "de": "Live-Luftlagebild: was über dir fliegt, was als nächstes kommt, was einen Blick wert ist."
+      }
+    },
+    {
+      "id": "intel",
+      "code": "INTEL",
+      "name": "Intelligence feed",
+      "status": "planned",
+      "version": null,
+      "path": "intel/",
+      "description": {
+        "en": "OSINT posts and news from verified sources, matched to live aircraft.",
+        "de": "OSINT-Beiträge und Nachrichten aus geprüften Quellen, abgeglichen mit Live-Flugzeugen."
+      }
+    }
+  ]
+}

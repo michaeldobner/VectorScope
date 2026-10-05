@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>VectorScope</title>
-    <meta name="description" content="Personal live aviation radar: what is flying above you right now." />
-    <meta name="theme-color" content="#0B0F14" />
+    <meta name="description" content="VectorScope: personal live situational awareness. Airspace now, intelligence feed next." />
+    <meta name="theme-color" content="#0E0E10" />
     <meta name="color-scheme" content="dark" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -13,41 +13,46 @@
     <meta name="apple-mobile-web-app-title" content="VectorScope" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="manifest" href="./manifest.webmanifest" />
-    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
-    <style>
-      html, body { background: #0B0F14; color: #EDF2F6; margin: 0; }
-      #boot { position: fixed; inset: 0; display: grid; place-items: center; padding: 24px;
-        font: 14px/1.5 -apple-system, system-ui, sans-serif; text-align: center; color: #8F9BA8; }
-      #boot b { color: #EDF2F6; display: block; font-size: 16px; margin-bottom: 8px; }
-      #boot code { color: #E9A23B; font-size: 12px; word-break: break-word; }
-    </style>
+    <link rel="icon" href="./shared/icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./shared/icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="./shared/tokens.css" />
+    <link rel="stylesheet" href="./shared/hub.css" />
   </head>
   <body>
-    <div id="boot"><div><b>◇ VectorScope</b>Starting …</div></div>
-    <div id="root"></div>
+    <main class="hub">
+      <header class="hub-head">
+        <h1><span>◇</span>VectorScope</h1>
+        <p>Personal live situational awareness.</p>
+      </header>
+
+      <section>
+        <h2 class="section-title">Modules</h2>
+        <div class="modules">
+          <a class="module live" href="./air/" data-module="air">
+            <div class="module-top"><span class="module-code">AIR</span><span class="badge live">Live</span></div>
+            <div class="module-name">Airspace</div>
+            <div class="module-text">Live aviation radar: what is flying above you, what passes over next, what is worth a look.</div>
+            <div class="module-meta" data-version="air">v0.3.0</div>
+          </a>
+          <div class="module planned" data-module="intel">
+            <div class="module-top"><span class="module-code">INTEL</span><span class="badge">Planned</span></div>
+            <div class="module-name">Intelligence feed</div>
+            <div class="module-text">OSINT posts and news from verified sources, matched to live aircraft.</div>
+            <div class="module-meta">In preparation</div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="hub-foot">
+        <span data-version="collection">VectorScope v0.3.0</span>
+        <a href="https://github.com/michaeldobner/VectorScope">Source and documentation</a>
+        <span>Personal, non-commercial project</span>
+      </footer>
+    </main>
     <script>
-      // Boot diagnostics: if the app has not rendered after a few seconds, say why instead of a black screen.
-      (function () {
-        var errors = [];
-        window.addEventListener('error', function (e) {
-          errors.push((e.message || (e.target && (e.target.src || e.target.href)) || 'load error') + '');
-        }, true);
-        window.addEventListener('unhandledrejection', function (e) { errors.push(String(e.reason)); });
-        setTimeout(function () {
-          var root = document.getElementById('root');
-          var boot = document.getElementById('boot');
-          if (!boot || (root && root.children.length)) return;
-          var raw = !!document.querySelector('script[src$="main.tsx"]');
-          boot.innerHTML = '<div><b>◇ VectorScope did not start</b>' +
-            (raw
-              ? 'This is the unbuilt source code. In the repository set Settings › Pages › Source to “GitHub Actions” and run the deploy workflow.'
-              : 'The app failed to load. Close the page completely and open it again.') +
-            (errors.length ? '<br><br><code>' + errors.slice(0, 3).join('<br>').replace(/</g, '&lt;') + '</code>' : '') +
-            '</div>';
-        }, 6000);
-      })();
+      if ('serviceWorker' in navigator && location.protocol === 'https:') {
+        navigator.serviceWorker.register('./sw.js').catch(function () {});
+      }
     </script>
-    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
