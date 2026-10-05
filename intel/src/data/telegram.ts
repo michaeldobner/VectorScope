@@ -27,6 +27,8 @@ function cleanHeadline(s: string): string {
 
 function splitHeadline(text: string): { title: string; rest: string } {
   const lines = text.split('\n').map((l) => cleanHeadline(l)).filter(Boolean);
+  // A short label line ("Аэропорт СОЧИ") says little alone: the next line belongs to the headline.
+  if (lines.length > 1 && lines[0].length < 40 && !/[.!?:]$/.test(lines[0])) lines.splice(0, 2, `${lines[0]}: ${lines[1]}`);
   const first = lines[0] ?? '';
   // A sentence ends at . ! ? but not after a single capital letter (USS Harry S. Truman, U.K.).
   const sentence = first.match(/^(.{25,220}?(?<![\s.][A-Z])[.!?])(\s|$)/)?.[1];

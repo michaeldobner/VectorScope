@@ -4,6 +4,11 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.4.1 (2026-10-05)
+
+### Behoben
+* Russische Bündelung an 1.067 echten Meldungen geprüft: Ein Ort zählt nicht mehr zusätzlich als Wort, Gouverneure und Behörden zählen nur bei Krisenthemen, häufige russische Wörter werden ignoriert, kurze Kennzeilen von Rosaviatsiya nehmen die nächste Zeile mit in die Überschrift.
+
 ## 0.4.0 (2026-10-05)
 
 ### Neu

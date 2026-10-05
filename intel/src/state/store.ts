@@ -97,6 +97,16 @@ export const getState = () => state;
 export const getRaw = () => rawItems;
 export const useIntel = () => useSyncExternalStore((l) => (listeners.add(l), () => listeners.delete(l)), getState);
 
+/**
+ * General news media and authorities with broad remits (governors, mayors, the Investigative Committee) count
+ * only with security and crisis topics: no book prizes, no greetings for Teachers' Day.
+ */
+function relevant(item: Item, text: string, entities: Entities): boolean {
+  const src = sourceById(item.sourceId);
+  const broad = src?.category === 'news' || (src?.tier === 'primary' && src.category === 'general');
+  return !broad || isCrisisRelated(text, entities);
+}
+
 // Entities are computed once per item, matches whenever items or live aircraft change.
 const entityCache = new Map<string, Entities>();
 function enrich(items: Item[], live: Aircraft[], now: number): EnrichedItem[] {
@@ -108,8 +118,7 @@ function enrich(items: Item[], live: Aircraft[], now: number): EnrichedItem[] {
       entities = entitiesOf(item);
       entityCache.set(item.id, entities);
     }
-    // General news media count only with security and crisis topics, see isCrisisRelated.
-    if (sourceById(item.sourceId)?.category === 'news' && !isCrisisRelated(text, entities)) continue;
+    if (!relevant(item, text, entities)) continue;
     out.push({ ...item, entities, matches: matchLive(entities, live, item.time, now) });
   }
   return out;

@@ -73,13 +73,16 @@ const STEMS: [RegExp, string][] = [
 ];
 
 const RU_STOP = new Set(
-  'что это для как при все его она они был была были будет также после около более уже году года может если или том так где только сообщили сообщает сообщил данным время сегодня ночью утром вечером области район района города город человек заявил заявили местные жители видео фото подписаться прислать новости срочно'.split(' '),
+  ('что это для как при все его она они был была были будет также после около более уже году года может если или том так где только сообщили сообщает сообщил данным время сегодня ночью утром вечером области район района города город человек заявил заявили местные жители видео фото подписаться прислать новости срочно ' +
+    'девушк мужчин женщин подрос челове жители россия россиян вчера теперь работа праздн поздра учител днём днем сводка сводки фронто утро вечер новост главно рассказ стало станет ' +
+    'десятк тысяч сотни двое двух трёх троих первый января феврал марта апреля мая июня июля августа сентяб октябр ноября декабр делюсь резуль знамен сегодн неделю недели месяц президе правит минист').split(' '),
 );
 
 function normalise(raw: string): string {
   if (/\p{Script=Cyrillic}/u.test(raw)) {
     for (const [re, en] of STEMS) if (re.test(raw)) return en;
-    return RU_STOP.has(raw) ? '' : raw.slice(0, 6);
+    const stem = raw.slice(0, 6);
+    return RU_STOP.has(raw) || RU_STOP.has(stem) ? '' : stem;
   }
   return SYNONYM[raw] ?? raw.replace(/(?<=\p{L}{3}[^s])s$/u, '');
 }
@@ -103,7 +106,10 @@ export function keywords(item: EnrichedItem): Set<string> {
   for (const p of item.entities.places) out.add(p.radiusKm <= 150 ? `@!${p.name}` : `@${p.name}`);
   for (const c of item.entities.callsigns) out.add(`#${c.callsign}`);
   for (const t of item.entities.types) out.add(`%${t.label}`);
+  const placeWords = new Set(item.entities.places.flatMap((p) => (p.matched ?? '').split(/\s+/)));
   for (const raw of item.title.toLowerCase().match(/\p{L}[\p{L}\p{N}/-]{2,}/gu) ?? []) {
+    // A place is counted once, as place, not again as word.
+    if (placeWords.has(raw)) continue;
     const w = normalise(raw);
     if (w && !STOP.has(w) && !STOP.has(raw)) out.add(w);
   }

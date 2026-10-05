@@ -16,6 +16,8 @@ export interface TypeEntity {
 }
 export interface PlaceEntity {
   name: string;
+  /** The words of the text that named the place, so they are not counted again as words. */
+  matched?: string;
   lat: number;
   lon: number;
   radiusKm: number;
@@ -143,7 +145,7 @@ export function extractEntities(text: string): Entities {
   return {
     callsigns: findCallsigns(text),
     types: findTypes(text),
-    places: findPlaces(text).map(({ place: { name, lat, lon, radiusKm } }) => ({ name, lat, lon, radiusKm })),
+    places: findPlaces(text).map(({ place: { name, lat, lon, radiusKm }, text: matched }) => ({ name, lat, lon, radiusKm, matched: matched.toLowerCase() })),
   };
 }
 

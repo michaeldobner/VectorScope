@@ -4,6 +4,11 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.4.1 (2026-10-05)
+
+### Fixed
+* Russian grouping checked on 1.067 real reports: a place is no longer counted again as word, governors and authorities only count with crisis topics, common Russian words are ignored, short Rosaviatsiya label lines take the next line into the headline.
+
 ## 0.4.0 (2026-10-05)
 
 ### Added
