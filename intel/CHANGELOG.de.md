@@ -4,6 +4,18 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.5.0 (2026-10-05)
+
+### Neu
+* **Rybar-Netzwerk:** elf Kanäle (russischer Hauptkanal, Englisch, Deutsch, Nahost, Europa, Balkan, Kaukasus, Asien, Zentralasien, Afrika, Lateinamerika). Kanäle eines Netzwerks zählen als eine Quelle.
+
+### Geändert
+* Die deutsche Übersetzung läuft direkt vom Gerät zu Google, der Proxy ist nur noch Ersatz. Wenn Google ablehnt, pausiert die App und versucht es später erneut, statt aufzugeben.
+* Nicht erreichbare Quellen zeigen ihren Fehler rot in der Quellenliste.
+
+### Behoben
+* Übersetzungen, die unverändert zurückkommen, gelten nicht mehr als fertig und werden erneut versucht.
+
 ## 0.4.1 (2026-10-05)
 
 ### Behoben

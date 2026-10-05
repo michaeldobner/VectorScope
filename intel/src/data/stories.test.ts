@@ -95,6 +95,18 @@ describe('stories', () => {
     expect(groups.sort()).toEqual(['ab', 'cd', 'e']);
   });
 
+  it('counts the channels of one network as one source', () => {
+    const r = (id: string, sourceId: string, title: string): Item => ({ id, sourceId, channel: 'telegram', title, text: '', url: `https://x.org/${id}`, time: now - 3600_000 });
+    const net = buildStories(enrich([r('a', 'rybar', 'Взрыв на нефтебазе в Туапсе после атаки беспилотников'), r('b', 'rybar-europe', 'Атака беспилотников на нефтебазу в Туапсе, взрыв')]));
+    expect(net).toHaveLength(1);
+    expect(net[0].independent).toBe(1);
+    expect(net[0].status).toBe('signal');
+    const mixed = buildStories(enrich([r('a', 'rybar', 'Взрыв на нефтебазе в Туапсе после атаки беспилотников'), r('b', 'rybar-europe', 'Атака беспилотников на нефтебазу в Туапсе, взрыв'), r('c', 'baza', 'Беспилотники атаковали нефтебазу в Туапсе, слышен взрыв')]));
+    const story = mixed.find((s) => s.items.length > 1)!;
+    expect(story.independent).toBe(2);
+    expect(story.echoes).toContain('rybar-europe');
+  });
+
   it('does not link two reports of the same source', () => {
     const one = (id: string, t: number): Item => ({ id, sourceId: 'demo-fast-a', channel: 'telegram', title: 'Explosion in Odesa port', text: '', url: `https://x.org/${id}`, time: t });
     expect(buildStories(enrich([one('a', now), one('b', now - 60_000)]))).toHaveLength(2);

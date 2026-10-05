@@ -82,13 +82,13 @@ Orte, die in den letzten 24 Stunden genannt wurden, sortiert nach Häufigkeit. D
 
 ## Sources
 
-Jede Quelle mit Statuspunkt (blau: hat geantwortet, rot: fehlgeschlagen), ihren Kanälen und dem Alter ihres neuesten Beitrags. Fällt eine Quelle aus, arbeiten die anderen weiter.
+Jede Quelle mit Statuspunkt (blau: hat geantwortet, rot: fehlgeschlagen), ihren Kanälen und dem Alter ihres neuesten Beitrags. Fällt eine Quelle aus, zeigt die Zeile ihren Fehler rot an, etwa den HTTP-Status, und die anderen arbeiten weiter.
 
 Am Ende dieses Bereichs steht die Version von INTEL.
 
 ## Deutsch
 
-**DE** oben rechts übersetzt Überschriften und Auszüge ins Deutsche, auch die Meldungen einer Story und die Überschriften unter Live now. Übersetzt wird nur, was auf dem Bildschirm steht, jede Übersetzung bleibt auf dem Gerät gespeichert. Deutsche Quellen bleiben, wie sie sind. Die Übersetzung kommt von Google Translate über den Proxy, ohne Schlüssel und ohne Garantie: Klappt sie nicht, bleibt der Originaltext stehen, und INTEL versucht es eine Minute später erneut. Callsigns, Typen und Orte werden immer im Original erkannt.
+**DE** oben rechts übersetzt Überschriften und Auszüge ins Deutsche, auch die Meldungen einer Story und die Überschriften unter Live now. Übersetzt wird nur, was auf dem Bildschirm steht, jede Übersetzung bleibt auf dem Gerät gespeichert. Deutsche Quellen bleiben, wie sie sind. Die Übersetzung kommt von Google Translate, direkt vom Gerät und nur ersatzweise über den Proxy, ohne Schlüssel und ohne Garantie: Lehnt Google ab, bleibt der Originaltext stehen, und INTEL versucht es später erneut, mit jedem Mal etwas länger Pause bis zu fünf Minuten. Callsigns, Typen und Orte werden immer im Original erkannt.
 
 ## Aktualisierung
 

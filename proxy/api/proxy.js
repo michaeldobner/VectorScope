@@ -76,6 +76,16 @@ const TELEGRAM = [
   'agentstvonews',
   'thebell_io',
   'rybar',
+  'rybar_in_english',
+  'rybarde',
+  'rybar_mena',
+  'evropar',
+  'balkanar',
+  'caucasar',
+  'rybar_pacific',
+  'rybar_stan',
+  'rybar_africa',
+  'rybar_latam',
   'wargonzo',
   'dva_majors',
   'Middle_East_Spectator',
@@ -121,13 +131,10 @@ export default async function handler(req, res) {
   if (path === '/translate' && req.method === 'POST') {
     const texts = Array.isArray(req.body?.texts) ? req.body.texts.slice(0, 60).map((t) => String(t).slice(0, 600)) : [];
     const to = req.body?.to === 'en' ? 'en' : 'de';
-    try {
-      const translations = texts.length ? await translateAll(texts, to) : [];
-      res.setHeader('Cache-Control', 'no-store');
-      return res.status(200).json({ translations });
-    } catch (e) {
-      return res.status(502).json({ error: 'translate', detail: String(e) });
-    }
+    // Texts that Google refused come back as null, the app tries them again later.
+    const translations = texts.length ? await translateAll(texts, to) : [];
+    res.setHeader('Cache-Control', 'no-store');
+    return res.status(200).json({ translations });
   }
   // RSS feeds: fixed list, cached five minutes at the edge.
   const feed = path.match(FEED);

@@ -1,16 +1,15 @@
 // Translation route of the proxy, with a fake Google endpoint.
 import { describe, expect, it } from 'vitest';
-// @ts-expect-error plain JavaScript module without types
 import { chunk, parseGoogle, translateAll } from '../proxy/lib/translate.js';
 
-const fakeGoogle = (mode: 'lines' | 'merge' | 'lazy') => async (url: string) => {
-  const q = decodeURIComponent(new URL(url).searchParams.get('q')!);
+const fakeGoogle = (mode: 'lines' | 'merge' | 'lazy') => (async (url: string | URL | Request) => {
+  const q = decodeURIComponent(new URL(String(url)).searchParams.get('q')!);
   // lazy: like Google sometimes, the second line of a batch comes back untranslated.
   const lines = q.split('\n').map((l, i) => (mode === 'lazy' && i === 1 ? l : `DE(${l})`));
   // Google returns sentences as segments, line breaks stay inside the segments.
   const text = mode === 'merge' ? lines.join(' ') : lines.join('\n');
   return { ok: true, json: async () => [[[text, q, null, null]], null, 'en'] } as unknown as Response;
-};
+}) as typeof fetch;
 
 describe('translation', () => {
   it('parses the segments of a Google answer', () => {
@@ -31,6 +30,11 @@ describe('translation', () => {
 
   it('asks again for lines that came back untranslated', async () => {
     expect(await translateAll(['First text', 'Second text', 'Third text'], 'de', fakeGoogle('lazy'))).toEqual(['DE(First text)', 'DE(Second text)', 'DE(Third text)']);
+  });
+
+  it('returns null for texts Google refused instead of failing everything', async () => {
+    const refusing = (async () => ({ ok: false, status: 429, json: async () => null }) as unknown as Response) as typeof fetch;
+    expect(await translateAll(['One', 'Two'], 'de', refusing)).toEqual([null, null]);
   });
 
   it('falls back to one request per text when Google merges lines', async () => {

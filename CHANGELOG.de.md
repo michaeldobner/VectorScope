@@ -4,6 +4,16 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.8.0 (2026-10-05)
+
+### Neu
+* Der Proxy liefert zehn weitere Rybar-Kanäle, insgesamt 48 Telegram-Kanäle.
+* Das Testlabor macht eine QA-Runde: jede Quelle dreimal, ein Telegram-Stoß, Übersetzungsblöcke und ein Durchlauf in WebKit (Safari-Engine) mit Deutsch an.
+* Modul INTEL 0.5.0, siehe sein [Changelog](intel/CHANGELOG.de.md).
+
+### Behoben
+* Die Übersetzung im Proxy liefert, was Google übersetzt hat, und lässt den Rest leer, statt den ganzen Block scheitern zu lassen, zwei Anfragen gleichzeitig.
+
 ## 0.7.0 (2026-10-05)
 
 ### Neu

@@ -4,6 +4,16 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.8.0 (2026-10-05)
+
+### Added
+* Proxy serves ten more Rybar channels, 48 Telegram channels in total.
+* Test lab runs a QA pass: every source three times, a Telegram burst, translation batches and a pass in WebKit (Safari engine) with German on.
+* Module INTEL 0.5.0, see its [changelog](intel/CHANGELOG.md).
+
+### Fixed
+* Proxy translation returns what Google translated and leaves the rest empty instead of failing the whole batch, two requests at a time.
+
 ## 0.7.0 (2026-10-05)
 
 ### Added

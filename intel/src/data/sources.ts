@@ -24,6 +24,8 @@ export interface Source {
   trust: number;
   /** Whose view the source represents, where that matters (official Russian, pro-Russian, Iran aligned …). */
   perspective?: string;
+  /** Channels of one network (Rybar and its regional channels) count as one source for confirmation. */
+  network?: string;
   /** Bluesky handle, read directly from the public Bluesky API. */
   bluesky?: string;
   /** RSS or Atom feed, read through the proxy route /feed/{id}. */
@@ -94,7 +96,18 @@ export const SOURCES: Source[] = [
   { id: 'agentstvo', name: 'Agentstvo', tier: 'specialist', category: 'politics', region: 'russia', lang: 'ru', trust: 78, perspective: 'independent Russian', ...tg('agentstvonews') },
   { id: 'thebell', name: 'The Bell', tier: 'specialist', category: 'politics', region: 'russia', lang: 'ru', trust: 78, perspective: 'independent Russian', ...tg('thebell_io') },
   // Perspective: fast, clearly partisan
-  { id: 'rybar', name: 'Rybar', tier: 'perspective', category: 'military', region: 'russia', lang: 'ru', trust: 45, perspective: 'pro-Russian', ...tg('rybar') },
+  // Rybar: one network of channels, counted as one source
+  { id: 'rybar', name: 'Rybar', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'russia', lang: 'ru', ...tg('rybar') },
+  { id: 'rybar-en', name: 'Rybar in English', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'russia', lang: 'en', ...tg('rybar_in_english') },
+  { id: 'rybar-de', name: 'Rybar DE', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'dach', lang: 'de', ...tg('rybarde') },
+  { id: 'rybar-mena', name: 'Rybar Orientar (Middle East)', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'mideast', lang: 'ru', ...tg('rybar_mena') },
+  { id: 'rybar-europe', name: 'Rybar Evropar (Europe)', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'europe', lang: 'ru', ...tg('evropar') },
+  { id: 'rybar-balkans', name: 'Rybar Balkanar (Balkans)', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'europe', lang: 'ru', ...tg('balkanar') },
+  { id: 'rybar-caucasus', name: 'Rybar Kavkazar (Caucasus)', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'russia', lang: 'ru', ...tg('caucasar') },
+  { id: 'rybar-asia', name: 'Rybar Aziatar (Asia)', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'global', lang: 'ru', ...tg('rybar_pacific') },
+  { id: 'rybar-turan', name: 'Rybar Turanar (Central Asia)', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'global', lang: 'ru', ...tg('rybar_stan') },
+  { id: 'rybar-africa', name: 'Rybar Afrikar (Africa)', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'global', lang: 'ru', ...tg('rybar_africa') },
+  { id: 'rybar-latam', name: 'Rybar Latinar (Latin America)', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'global', lang: 'ru', ...tg('rybar_latam') },
   { id: 'wargonzo', name: 'WarGonzo', tier: 'perspective', category: 'military', region: 'russia', lang: 'ru', trust: 40, perspective: 'pro-Russian', ...tg('wargonzo') },
   { id: 'dvamajora', name: 'Dva Mayora', tier: 'perspective', category: 'military', region: 'russia', lang: 'ru', trust: 40, perspective: 'pro-Russian', ...tg('dva_majors') },
   { id: 'mes', name: 'Middle East Spectator', tier: 'perspective', category: 'military', region: 'mideast', lang: 'en', trust: 40, perspective: 'Iran and resistance aligned', ...tg('Middle_East_Spectator') },
@@ -168,5 +181,8 @@ export const DEMO_SOURCES: Source[] = [
   { id: 'demo-quake', name: 'Demo Seismometer', tier: 'physical', category: 'disaster', region: 'global', lang: 'en', trust: 95, site: 'https://example.org' },
   { id: 'demo-side', name: 'Demo Partisan Channel', tier: 'perspective', category: 'military', region: 'russia', lang: 'ru', trust: 40, perspective: 'Demo partisan', site: 'https://example.org' },
 ];
+
+/** Key under which a source counts as independent: its network, or itself. */
+export const independenceKey = (id: string) => sourceById(id)?.network ?? id;
 
 export const sourceById = (id: string) => (id === 'sensor' ? SENSOR_SOURCE : (SOURCES.find((s) => s.id === id) ?? DEMO_SOURCES.find((s) => s.id === id)));

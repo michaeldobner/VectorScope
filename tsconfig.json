@@ -27,6 +27,7 @@
     "intel/src",
     "intel/vite.config.ts",
     "tests",
-    "vitest.config.ts"
+    "vitest.config.ts",
+    "proxy/lib/*.d.ts"
   ]
 }

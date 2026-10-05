@@ -845,3 +845,7 @@ section > .section-title {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.src-meta.err {
+  color: var(--critical);
+}

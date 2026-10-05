@@ -1,6 +1,6 @@
 // Stories: items from different sources that report the same event, grouped by shared places,
 // callsigns, types and rare words within 36 hours of the first report. Each story gets a status from the tiers of its sources.
-import { sourceById, type Source, type Tier } from './sources';
+import { independenceKey, sourceById, type Source, type Tier } from './sources';
 import type { EnrichedItem } from './types';
 
 export type Status = 'observed' | 'signal' | 'emerging' | 'reported' | 'confirmed';
@@ -8,8 +8,13 @@ export type Status = 'observed' | 'signal' | 'emerging' | 'reported' | 'confirme
 export interface Story {
   id: string;
   items: EnrichedItem[];
-  /** Sources whose report copies an earlier report of another source almost word for word. They do not count as confirmation. */
+  /**
+   * Sources that do not count as confirmation: their report copies an earlier one almost word for word,
+   * or another channel of the same network (Rybar) already reported.
+   */
   echoes: string[];
+  /** Number of independent sources: echoes left out, a network counted once. */
+  independent: number;
   /** Item ids of the copies. */
   echoItems: string[];
   /** The item whose headline represents the story: highest tier, then earliest. */
@@ -153,7 +158,9 @@ export function buildStories(items: EnrichedItem[]): Story[] {
     for (const g of groups) {
       const seed = g[0];
       if (items[i].time - items[seed].time > WINDOW_MS) continue;
-      if (g.some((m) => items[m].sourceId === items[i].sourceId) && g.every((m) => items[m].sourceId === items[i].sourceId)) continue;
+      // A source repeating itself is not a story of several sources. Channels of one network may group,
+      // so a later independent report finds them all, but toStory counts the network once.
+      if (g.every((m) => items[m].sourceId === items[i].sourceId)) continue;
       const s = score(i, seed);
       if (s < LINK_SCORE) continue;
       if (g.length > 1 && !g.slice(1).some((m) => score(i, m) >= LINK_SCORE * 0.6)) continue;
@@ -223,7 +230,10 @@ function toStory(list: EnrichedItem[]): Story {
   });
   const independent = items.filter((i) => !echoItems.includes(i.id));
   const sources = [...new Set(items.map((i) => i.sourceId))];
-  const independentSources = [...new Set(independent.map((i) => i.sourceId))];
+  // One representative per network: the channel that reported first.
+  const byKey = new Map<string, string>();
+  for (const i of independent) if (!byKey.has(independenceKey(i.sourceId))) byKey.set(independenceKey(i.sourceId), i.sourceId);
+  const independentSources = [...byKey.values()];
   const echoes = sources.filter((s) => !independentSources.includes(s));
   const tiers: Record<Tier, number> = { physical: 0, primary: 0, early: 0, osint: 0, specialist: 0, perspective: 0, confirming: 0 };
   const known = independentSources.map((id) => sourceById(id)).filter((s): s is Source => !!s);
@@ -250,6 +260,7 @@ function toStory(list: EnrichedItem[]): Story {
     items,
     echoes,
     echoItems,
+    independent: independentSources.length,
     lead,
     status,
     sources,
@@ -274,4 +285,4 @@ export function rankStories(stories: Story[], now: number): { developing: Story[
 }
 
 /** Sources that reported on their own: echoes left out. */
-export const independentCount = (s: Story) => s.sources.length - s.echoes.length;
+export const independentCount = (s: Story) => s.independent;

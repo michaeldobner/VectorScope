@@ -39,16 +39,37 @@ async function google(text, to, fetchImpl) {
  * Translates every text into `to`. Line breaks inside a text become spaces, so one line is one text.
  * If Google merges or splits lines, the chunk is translated text by text instead.
  */
+/**
+ * Translates every text into `to`. Line breaks inside a text become spaces, so one line is one text.
+ * At most two requests run at a time, Google limits the rate per address. A chunk that still fails
+ * yields null for its texts, so the caller can try them again later instead of losing the whole batch.
+ */
 export async function translateAll(texts, to = 'de', fetchImpl = fetch) {
   const clean = texts.map((t) => String(t).replace(/\s*\n\s*/g, ' ').trim());
-  // Chunks in parallel: the serverless function has ten seconds.
-  const parts = await Promise.all(
-    chunk(clean).map(async (part) => {
-      const lines = (await google(part.join('\n'), to, fetchImpl)).split('\n').map((l) => l.trim());
-      if (lines.length !== part.length) return Promise.all(part.map((t) => google(t, to, fetchImpl)));
-      // Google sometimes leaves single lines of a batch untouched. Those are asked again on their own.
-      return Promise.all(part.map((t, i) => (lines[i] === t && /\p{L}{3}/u.test(t) ? google(t, to, fetchImpl).catch(() => t) : lines[i])));
-    }),
-  );
-  return parts.flat();
+  const chunks = chunk(clean);
+  const results = new Array(chunks.length);
+  let next = 0;
+  const worker = async () => {
+    while (next < chunks.length) {
+      const k = next++;
+      const part = chunks[k];
+      try {
+        const lines = (await google(part.join('\n'), to, fetchImpl)).split('\n').map((l) => l.trim());
+        if (lines.length !== part.length) {
+          results[k] = [];
+          for (const t of part) results[k].push(await google(t, to, fetchImpl).catch(() => null));
+        } else {
+          // Google sometimes leaves single lines of a batch untouched. Those are asked again on their own.
+          results[k] = [];
+          for (let i = 0; i < part.length; i++) {
+            results[k].push(lines[i] === part[i] && /\p{L}{3}/u.test(part[i]) ? await google(part[i], to, fetchImpl).catch(() => null) : lines[i]);
+          }
+        }
+      } catch {
+        results[k] = part.map(() => null);
+      }
+    }
+  };
+  await Promise.all([worker(), worker()]);
+  return results.flat();
 }

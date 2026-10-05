@@ -50,7 +50,7 @@ Meldungen derselben Quelle verbinden sich nie direkt. Ein Kanal, der sich wieder
 
 ## Echo-Detektor
 
-Telegram-Kanäle schreiben oft voneinander ab. Eine spätere Meldung einer anderen Quelle, die mit einer früheren mindestens 60 % aller Wörter teilt, ist ein **Echo**: Sie bleibt in der Story, zählt aber nicht als Quelle, weder für den Status noch für die Zahl der Quellen. Die Karte zeigt „1 echo“, die Liste der Meldungen markiert die Kopie.
+Telegram-Kanäle schreiben oft voneinander ab. Eine spätere Meldung einer anderen Quelle, die mit einer früheren mindestens 60 % aller Wörter teilt, ist ein **Echo**: Sie bleibt in der Story, zählt aber nicht als Quelle, weder für den Status noch für die Zahl der Quellen. Die Karte zeigt „1 echo“, die Liste der Meldungen markiert die Kopie. Kanäle eines Netzwerks, etwa die elf Rybar-Kanäle, zählen ebenfalls nur einmal: Der erste zählt, die anderen erscheinen als Echo.
 
 ## Vorsprung
 

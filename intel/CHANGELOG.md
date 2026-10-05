@@ -4,6 +4,18 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.5.0 (2026-10-05)
+
+### Added
+* **Rybar network:** eleven channels (Russian main channel, English, German, Middle East, Europe, Balkans, Caucasus, Asia, Central Asia, Africa, Latin America). Channels of one network count as one source.
+
+### Changed
+* German translation runs straight from the device to Google, the proxy is only the fallback. When Google refuses, the app pauses and retries later instead of giving up.
+* Sources that cannot be reached show their error in red in the source list.
+
+### Fixed
+* Translations that came back unchanged are no longer kept as final, they are retried.
+
 ## 0.4.1 (2026-10-05)
 
 ### Fixed

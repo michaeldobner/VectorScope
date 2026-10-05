@@ -284,7 +284,7 @@ function StoryCard({ story, st }: { story: Story; st: IntelState }) {
               </span>
             ))}
             {story.echoes.length > 0 && (
-              <span className="tier echo" title="Copies an earlier report almost word for word, not counted as a source">
+              <span className="tier echo" title="Copies an earlier report, or another channel of the same network reported first. Not counted as a source">
                 {story.echoes.length} echo{story.echoes.length > 1 ? 'es' : ''}
               </span>
             )}
@@ -572,9 +572,10 @@ function SourcesPanel({ st }: { st: IntelState }) {
                 <a href={s.site} target="_blank" rel="noopener noreferrer">
                   {s.name}
                 </a>
-                <span className="src-meta">
-                  {REGION_LABEL[s.region]} · trust {s.trust}
-                  {s.perspective ? ` · ${s.perspective}` : ''}
+                <span className={`src-meta ${status && !status.ok ? 'err' : ''}`}>
+                  {status && !status.ok
+                    ? `Not reachable: ${status.error ?? 'unknown error'}`
+                    : `${REGION_LABEL[s.region]} · trust ${s.trust}${s.perspective ? ` · ${s.perspective}` : ''}${s.network ? ` · network ${s.network}` : ''}`}
                 </span>
               </span>
               <span className={`tier t-${s.tier}`}>{tierLabel(s.tier, st.prefs.german)}</span>

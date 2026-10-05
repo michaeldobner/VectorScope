@@ -82,13 +82,13 @@ Places named in the last 24 hours, sorted by how often. The bar shows the share.
 
 ## Sources
 
-Every source with a status dot (blue: answered, red: failed), its channels and the age of its newest post. When a source fails, its error is kept for the next refresh, the other sources keep working.
+Every source with a status dot (blue: answered, red: failed), its channels and the age of its newest post. When a source fails, the line shows its error in red, for example the HTTP status, and the other sources keep working.
 
 The version of INTEL is shown at the end of this panel.
 
 ## German
 
-**DE** at the top right translates headlines and excerpts into German, including the reports of a story and the headlines under Live now. Only what is on screen is translated, every translation is kept on the device. German sources stay as they are. The translation comes from Google Translate through the proxy, without a key and without a guarantee: if it fails, the original text stays and INTEL tries again a minute later. Callsigns, types and places are always recognised in the original.
+**DE** at the top right translates headlines and excerpts into German, including the reports of a story and the headlines under Live now. Only what is on screen is translated, every translation is kept on the device. German sources stay as they are. The translation comes from Google Translate, straight from the device and through the proxy only as a fallback, without a key and without a guarantee: if Google refuses, the original text stays and INTEL tries again later, waiting longer each time up to five minutes. Callsigns, types and places are always recognised in the original.
 
 ## Updates
 

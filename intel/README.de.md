@@ -22,7 +22,7 @@ Schnelle Telegram-Eilmelder melden zuerst, Fachmedien ordnen ein, Leitmedien bes
 | | |
 |---|---|
 | **Stories** | Meldungen verschiedener Quellen über dasselbe Ereignis werden eine Karte mit Status Signal, Emerging, Reported oder Confirmed, einer Zeitachse aller Meldungen und dem Vorsprung der ersten ungeprüften Meldung |
-| **62 geprüfte Quellen in sieben Klassen** | Messung (USGS, EMSC, GDACS), primär (Rosaviatsiya, MChS, Gouverneure, ukrainische Luftwaffe, IDF, NWS, FAA), früh (Baza, Mash, SHOT, 112, ASTRA, OSINTdefender), OSINT, Fachmedium, parteiisch (Rybar, WarGonzo, Middle East Spectator) und bestätigend (Tagesschau, BBC, Meduza). Jede im Test-Labor geprüft, jede mit Region, Sprache, Trust und Perspektive |
+| **72 geprüfte Quellen in sieben Klassen** | Messung (USGS, EMSC, GDACS), primär (Rosaviatsiya, MChS, Gouverneure, ukrainische Luftwaffe, IDF, NWS, FAA), früh (Baza, Mash, SHOT, 112, ASTRA, OSINTdefender), OSINT, Fachmedium, parteiisch (Rybar, WarGonzo, Middle East Spectator) und bestätigend (Tagesschau, BBC, Meduza). Jede im Test-Labor geprüft, jede mit Region, Sprache, Trust und Perspektive |
 | **Event Confidence** | Jede Story erhält einen Prozentwert aus Klassen und Trust ihrer unabhängigen Quellen, getrennt vom Trust einer einzelnen Quelle |
 | **Probe-Sammler** | Eine Woche lang hält ein Sammler auf GitHub Actions alle 15 Minuten jede Meldung fest, damit nichts verloren geht, während die App geschlossen ist |
 | **VectorScope Sensor** | INTEL wird selbst zur Quelle: Tanker, AWACS, Aufklärer und Bomber, die gemeinsam fliegen, und jeder Squawk 7700 werden Meldungen, die sich mit den Stories verbinden |
@@ -71,6 +71,6 @@ npm test               # Unit-Tests aller Module und Prüfungen des Repositorys
 
 ## Version
 
-Aktuelle Version: **0.4.1**. Siehe [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.5.0**. Siehe [Changelog](CHANGELOG.de.md).
 
 Erstellt von Michael Dobner. Lizenziert unter der [MIT-Lizenz](../LICENSE).

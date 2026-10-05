@@ -1,6 +1,6 @@
 // Test lab, runs in GitHub Actions with real internet: records real API responses and
 // takes screenshots of the built app at iPhone and iPad size with live data and the real map.
-import { chromium } from 'playwright';
+import { chromium, webkit } from 'playwright';
 import fs from 'node:fs';
 
 const OUT = 'lab-out';
@@ -159,6 +159,32 @@ for (const [name, w, h, dpr] of [['iphone', 393, 852, 3], ['ipad', 1180, 820, 2]
   }
   await ctx.close();
 }
+// INTEL in WebKit, the engine of Safari: which sources fail there, and does DE translate?
+{
+  const wk = await webkit.launch();
+  const ctx = await wk.newContext({ viewport: { width: 393, height: 852 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
+  const p = await ctx.newPage();
+  const errs = [];
+  p.on('pageerror', (e) => errs.push('pageerror ' + e));
+  p.on('response', (r) => r.status() >= 400 && errs.push(`HTTP ${r.status()} ${r.url().slice(0, 100)}`));
+  p.on('requestfailed', (r) => errs.push(`failed ${r.url().slice(0, 100)} ${r.failure()?.errorText}`));
+  await p.goto('http://localhost:4173/intel/');
+  await p.waitForFunction(() => window.__intel?.getState().updated && Object.keys(window.__intel.getState().sources).length > 50, null, { timeout: 90000 }).catch(() => {});
+  const bad = await p.evaluate(() => Object.entries(window.__intel.getState().sources).filter(([, s]) => !s.ok).map(([id, s]) => `${id}: ${s.error}`));
+  log.push(`webkit intel: ${bad.length} sources not ok`);
+  bad.forEach((b) => log.push('  webkit ERR ' + b));
+  const before = await p.$$eval('.item-title', (els) => els.slice(0, 30).map((e) => e.textContent));
+  await p.locator('.icon-btn.lang').click().catch(() => {});
+  await p.waitForTimeout(20000);
+  const after = await p.$$eval('.item-title', (els) => els.slice(0, 30).map((e) => e.textContent));
+  const changed = after.filter((t, i) => t !== before[i]).length;
+  const cyrillicLeft = after.filter((t) => /[\u0400-\u04FF]{4}/.test(t ?? '')).length;
+  log.push(`webkit DE: ${changed}/${after.length} headlines changed, ${cyrillicLeft} still Cyrillic`);
+  await p.screenshot({ path: `${OUT}/intel-webkit-german.png` });
+  [...new Set(errs)].slice(0, 15).forEach((e) => log.push('  webkit ' + e));
+  await wk.close();
+}
+
 await browser.close();
 fs.writeFileSync(`${OUT}/log.txt`, log.join('\n') + '\n');
 console.log(log.join('\n'));

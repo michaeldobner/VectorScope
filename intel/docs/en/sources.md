@@ -2,7 +2,7 @@
 
 [Deutsche Version](../de/quellen.md) · [Overview](README.md)
 
-INTEL reads 62 sources in seven classes, from Russia, Ukraine, the Middle East, Europe, Germany and the USA plus global sensors. Quality over quantity: every source was checked in the test lab with real internet before it was added. The list lives in `src/data/sources.ts`.
+INTEL reads 72 sources in seven classes, from Russia, Ukraine, the Middle East, Europe, Germany and the USA plus global sensors. Quality over quantity: every source was checked in the test lab with real internet before it was added. The list lives in `src/data/sources.ts`.
 
 ## Class and trust
 
@@ -117,10 +117,22 @@ Fast, but clearly partisan. Valuable as an early signal, weak as confirmation.
 | Source | Region | Language | Trust | Perspective | Channel |
 |---|---|---|---|---|---|
 | Rybar | Russia | Russian | 45 | pro-Russian | Telegram `rybar` |
+| Rybar in English | Russia | English | 45 | pro-Russian, network Rybar | Telegram `rybar_in_english` |
+| Rybar DE | DACH | German | 45 | pro-Russian, network Rybar | Telegram `rybarde` |
+| Rybar Orientar | Middle East | Russian | 45 | pro-Russian, network Rybar | Telegram `rybar_mena` |
+| Rybar Evropar | Europe | Russian | 45 | pro-Russian, network Rybar | Telegram `evropar` |
+| Rybar Balkanar | Europe | Russian | 45 | pro-Russian, network Rybar | Telegram `balkanar` |
+| Rybar Kavkazar | Russia | Russian | 45 | pro-Russian, network Rybar | Telegram `caucasar` |
+| Rybar Aziatar | Global | Russian | 45 | pro-Russian, network Rybar | Telegram `rybar_pacific` |
+| Rybar Turanar | Global | Russian | 45 | pro-Russian, network Rybar | Telegram `rybar_stan` |
+| Rybar Afrikar | Global | Russian | 45 | pro-Russian, network Rybar | Telegram `rybar_africa` |
+| Rybar Latinar | Global | Russian | 45 | pro-Russian, network Rybar | Telegram `rybar_latam` |
 | WarGonzo | Russia | Russian | 40 | pro-Russian | Telegram `wargonzo` |
 | Dva Mayora | Russia | Russian | 40 | pro-Russian | Telegram `dva_majors` |
 | Middle East Spectator | Middle East | English | 40 | Iran and resistance aligned | Telegram `Middle_East_Spectator` |
 | Abu Ali Express | Middle East | Hebrew | 50 | Israeli | Telegram `abualiexpress` |
+
+**Networks.** Rybar runs eleven channels for its regions. They are one editorial team, so INTEL counts them as **one** source: in a story the channel that reported first counts, the others are listed as echoes. Two Rybar channels alone never make a story of several sources.
 
 ## Confirming
 
