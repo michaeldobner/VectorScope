@@ -3,11 +3,12 @@ import { describe, expect, it } from 'vitest';
 // @ts-expect-error plain JavaScript module without types
 import { chunk, parseGoogle, translateAll } from '../proxy/lib/translate.js';
 
-const fakeGoogle = (mode: 'lines' | 'merge') => async (url: string) => {
+const fakeGoogle = (mode: 'lines' | 'merge' | 'lazy') => async (url: string) => {
   const q = decodeURIComponent(new URL(url).searchParams.get('q')!);
-  const lines = q.split('\n').map((l) => `DE(${l})`);
+  // lazy: like Google sometimes, the second line of a batch comes back untranslated.
+  const lines = q.split('\n').map((l, i) => (mode === 'lazy' && i === 1 ? l : `DE(${l})`));
   // Google returns sentences as segments, line breaks stay inside the segments.
-  const text = mode === 'lines' ? lines.join('\n') : lines.join(' ');
+  const text = mode === 'merge' ? lines.join(' ') : lines.join('\n');
   return { ok: true, json: async () => [[[text, q, null, null]], null, 'en'] } as unknown as Response;
 };
 
@@ -26,6 +27,10 @@ describe('translation', () => {
 
   it('keeps the order and one translation per text', async () => {
     expect(await translateAll(['One', 'Two\nlines', 'Three'], 'de', fakeGoogle('lines'))).toEqual(['DE(One)', 'DE(Two lines)', 'DE(Three)']);
+  });
+
+  it('asks again for lines that came back untranslated', async () => {
+    expect(await translateAll(['First text', 'Second text', 'Third text'], 'de', fakeGoogle('lazy'))).toEqual(['DE(First text)', 'DE(Second text)', 'DE(Third text)']);
   });
 
   it('falls back to one request per text when Google merges lines', async () => {

@@ -19,10 +19,11 @@ describe('sources', () => {
     expect(feeds).toEqual(expected);
   });
 
-  it('the proxy serves exactly the Telegram channels of the sources', () => {
+  it('the proxy serves every Telegram channel of the sources', () => {
     const proxy = read('../../../proxy/api/proxy.js');
     const list = proxy.match(/const TELEGRAM = \[([^\]]*)\]/)![1].match(/'([^']+)'/g)!.map((s) => s.slice(1, -1));
-    expect(list.sort()).toEqual(SOURCES.filter((s) => s.telegram).map((s) => s.telegram!).sort());
+    // While candidates are checked in the lab the proxy may list more channels than INTEL uses.
+    for (const s of SOURCES.filter((s) => s.telegram)) expect(list, s.id).toContain(s.telegram);
   });
 
   it('uses the same proxy as AIR', () => {

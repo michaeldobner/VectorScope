@@ -45,7 +45,9 @@ export async function translateAll(texts, to = 'de', fetchImpl = fetch) {
   const parts = await Promise.all(
     chunk(clean).map(async (part) => {
       const lines = (await google(part.join('\n'), to, fetchImpl)).split('\n').map((l) => l.trim());
-      return lines.length === part.length ? lines : Promise.all(part.map((t) => google(t, to, fetchImpl)));
+      if (lines.length !== part.length) return Promise.all(part.map((t) => google(t, to, fetchImpl)));
+      // Google sometimes leaves single lines of a batch untouched. Those are asked again on their own.
+      return Promise.all(part.map((t, i) => (lines[i] === t && /\p{L}{3}/u.test(t) ? google(t, to, fetchImpl).catch(() => t) : lines[i])));
     }),
   );
   return parts.flat();

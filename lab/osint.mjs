@@ -23,7 +23,7 @@ async function get(url, accept) {
 }
 
 // Bluesky: search by name, then read the newest post of each hit.
-const BLUESKY = [
+const BLUESKY = process.env.LAB_SKIP_BLUESKY ? [] : [
   'The Aviationist', 'The War Zone', 'ItaMilRadar', 'Aircraft Spots', 'Gerjon', 'Scramble',
   'Bellingcat', 'Oryx', 'GeoConfirmed', 'Institute for the Study of War', 'Liveuamap',
   'USNI News', 'Naval News', 'Breaking Defense', 'Defense News',
@@ -122,7 +122,7 @@ for (const q of GDELT_Q) {
 }
 
 // Telegram channels: web preview t.me/s, directly and through the proxy (Vercel may be blocked by Telegram).
-const TELEGRAM = ['rageintel', 'osintdefender', 'ClashReport', 'FaytuksTelegram', 'OsintUpdates', 'Osintlatestnews', 'BNONews', 'warmonitors', 'AuroraIntel', 'visegrad24', 'spectatorindex', 'insiderpaper', 'disclosetv', 'nexta_live', 'warragex'];
+const TELEGRAM = ['bazabazon', 'mash', 'shot_shot', 'ENews112', 'astrapress', 'ostorozhno_novosti', 'ostorozhno_moskva', 'news_sirena', 'rybar', 'wargonzo', 'dva_majors', 'favt_info', 'mchs_official', 'sledcom_press', 'vvgladkov', 'opershtab23', 'Khinshtein', 'AVBogomaz', 'gusev_36', 'razvozhaev', 'mos_sobyanin', 'meduzalive', 'mediazzzona', 'currenttime', 'agentstvonews', 'thebell_io', 'kpszsu', 'idfofficial', 'netblocks', 'DeepStateUA', 'nexta_tv', 'liveuamap', 'Middle_East_Spectator', 'abualiexpress', 'iranintl_en', 'timesofisrael', 'AJENews_Official', 'AuroraIntel', 'BNONews'];
 const telegram = [];
 for (const ch of TELEGRAM) {
   const direct = await get(`https://t.me/s/${ch}`);
@@ -135,15 +135,36 @@ for (const ch of TELEGRAM) {
   const texts = (body.match(/class="tgme_widget_message_text js-message_text"/g) ?? []).length;
   const span = times.length > 1 ? (Math.max(...times) - Math.min(...times)) / 36e5 : null;
   const sample = [...body.matchAll(/class="tgme_widget_message_text js-message_text"[^>]*>([\s\S]{0,400}?)<\/div>/g)].slice(-3).map((m) => m[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 140));
+  const textAll = [...body.matchAll(/class="tgme_widget_message_text js-message_text"[^>]*>([\s\S]{0,600}?)<\/div>/g)].map((m) => m[1]).join(' ');
+  const letters = textAll.replace(/<[^>]+>/g, '').match(/\p{L}/gu) ?? [];
+  const cyr = letters.filter((c) => /\p{Script=Cyrillic}/u.test(c)).length;
+  const heb = letters.filter((c) => /\p{Script=Hebrew}/u.test(c)).length;
+  const lang = !letters.length ? '' : cyr / letters.length > 0.5 ? 'ru/uk' : heb / letters.length > 0.5 ? 'he' : 'latin';
   telegram.push({
-    channel: ch, title, subs, status: direct.status, error: direct.error, posts, texts,
+    channel: ch, title, subs, lang, status: direct.status, error: direct.error, posts, texts,
     newestAgeH: times.length ? ageH(new Date(Math.max(...times)).toISOString()) : null,
     postsPerDay: span ? Math.round((posts / span) * 24) : null,
     proxyStatus: proxied.status, proxyPosts: (proxied.body?.match(/data-post="/g) ?? []).length, sample,
   });
 }
 
-const result = { checkedAt: new Date().toISOString(), bluesky: blueskyHits, feeds, mastodon, gdelt, telegram };
+// Machine readable physical and primary sources: keep a sample of each answer for the parsers.
+const MACHINE = [
+  ['usgs', 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson'],
+  ['emsc', 'https://www.seismicportal.eu/fdsnws/event/1/query?limit=20&format=json&minmag=4.5&orderby=time'],
+  ['gdacs', 'https://www.gdacs.org/xml/rss.xml'],
+  ['faa', 'https://nasstatus.faa.gov/api/airport-status-information'],
+  ['nws', 'https://api.weather.gov/alerts/active?severity=Extreme,Severe&status=actual&message_type=alert'],
+  ['gdelt', 'https://api.gdeltproject.org/api/v2/doc/doc?query=(explosion%20OR%20drone%20OR%20missile)&mode=artlist&format=json&maxrecords=20&timespan=2h&sort=datedesc'],
+];
+const machine = [];
+for (const [name, url] of MACHINE) {
+  const r = await get(url, name === 'nws' ? 'application/geo+json' : undefined);
+  fs.writeFileSync(`${OUT}/machine-${name}.txt`, `HTTP ${r.status} CORS ${r.cors}\n\n${(r.body ?? r.error ?? '').slice(0, 60000)}`);
+  machine.push({ name, status: r.status, error: r.error, cors: r.cors, bytes: r.body?.length ?? 0, ms: r.ms });
+}
+
+const result = { checkedAt: new Date().toISOString(), bluesky: blueskyHits, feeds, mastodon, gdelt, telegram, machine };
 fs.writeFileSync(`${OUT}/osint.json`, JSON.stringify(result, null, 2));
 
 const cell = (v) => (v == null || v === '' ? '' : String(v).replace(/\|/g, '/'));
@@ -159,8 +180,10 @@ const md = [
   ...feeds.map((f) => `| ${f.name} | ${f.status || cell(f.error)} | ${f.items} | ${cell(f.newestAgeH)} | ${cell(f.cors)} | ${cell(f.type)} | ${f.url} |`),
   '', '## Mastodon', '', '| Query | Host | Account | Followers | Posts | Newest (h) | CORS |', '|---|---|---|---|---|---|---|',
   ...mastodon.map((m) => `| ${m.query} | ${m.host} | ${cell(m.acct) || `none (HTTP ${m.status || m.error})`} | ${cell(m.followers)} | ${cell(m.posts)} | ${cell(m.lastPostAgeH)} | ${cell(m.cors)} |`),
-  '', '## Telegram', '', '| Channel | Title | Subscribers | HTTP | Posts on page | With text | Newest (h) | Posts per day | Proxy HTTP | Proxy posts | Latest |', '|---|---|---|---|---|---|---|---|---|---|---|',
-  ...telegram.map((t) => `| ${t.channel} | ${cell(t.title)} | ${cell(t.subs)} | ${t.status || cell(t.error)} | ${t.posts} | ${t.texts} | ${cell(t.newestAgeH)} | ${cell(t.postsPerDay)} | ${t.proxyStatus || ''} | ${t.proxyPosts} | ${cell(t.sample.at(-1))} |`),
+  '', '## Telegram', '', '| Channel | Title | Subscribers | Lang | HTTP | Posts on page | With text | Newest (h) | Posts per day | Proxy HTTP | Proxy posts | Latest |', '|---|---|---|---|---|---|---|---|---|---|---|---|',
+  ...telegram.map((t) => `| ${t.channel} | ${cell(t.title)} | ${cell(t.subs)} | ${t.lang} | ${t.status || cell(t.error)} | ${t.posts} | ${t.texts} | ${cell(t.newestAgeH)} | ${cell(t.postsPerDay)} | ${t.proxyStatus || ''} | ${t.proxyPosts} | ${cell(t.sample.at(-1))} |`),
+  '', '## Machine sources', '', '| Name | HTTP | CORS | Bytes | ms |', '|---|---|---|---|---|',
+  ...machine.map((m) => `| ${m.name} | ${m.status || cell(m.error)} | ${cell(m.cors)} | ${m.bytes} | ${m.ms} |`),
   '', '## GDELT', '', '| Query | HTTP | Articles 24 h | Newest (h) | CORS | ms |', '|---|---|---|---|---|---|',
   ...gdelt.map((g) => `| ${g.query} | ${g.status || cell(g.error)} | ${g.articles} | ${cell(g.newestAgeH)} | ${cell(g.cors)} | ${g.ms} |`),
 ];
