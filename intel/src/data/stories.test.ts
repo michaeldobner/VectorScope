@@ -28,6 +28,7 @@ describe('Telegram', () => {
     const page = (t: string) => `<div class="tgme_widget_message js-widget_message" data-post="x/1"><div class="tgme_widget_message_text js-message_text">${t}</div><time datetime="2026-10-05T18:00:00+00:00"></time></div>`;
     expect(parseTelegram(page('#BREAKING Initial reports of an oil tanker attacked near Hormuz.'), 'x')[0].title).toBe('Initial reports of an oil tanker attacked near Hormuz.');
     expect(parseTelegram(page('The aircraft carrier USS Harry S. Truman will undergo a long overhaul. More soon.'), 'x')[0].title).toBe('The aircraft carrier USS Harry S. Truman will undergo a long overhaul.');
+    expect(parseTelegram(page('Trump:<br/>Iran will not get a nuclear weapon.'), 'x')[0].title).toBe('Trump: Iran will not get a nuclear weapon.');
   });
 
   it('reads text posts, skips media without text and quoted replies', () => {

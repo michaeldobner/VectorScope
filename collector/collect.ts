@@ -1,4 +1,4 @@
-// Probe collector: runs every 15 minutes on GitHub Actions for one week (workflow collector.yml).
+// Probe collector: one round, run every 10 minutes on GitHub Actions until the end of the probe (workflow collector.yml).
 // Loads every source of INTEL directly, keeps what it has seen with the time it first saw it,
 // and writes three files into the folder given as argument (published on the branch collector-data):
 //   archive.json  every item of the last 7 days, for the evaluation
@@ -30,9 +30,12 @@ interface RunRecord {
   sources: Record<string, { ok: boolean; items: number; fresh: number; error?: string }>;
 }
 
-const archive = read<{ at: number; items: Item[] }>('archive.json', { at: 0, items: [] });
+// keys: every item key ever seen with the time it was first seen. Items merged into another one
+// (a Bluesky post into its article) or older than the archive stay known, so they never count as new again.
+const archive = read<{ at: number; items: Item[]; keys?: Record<string, number> }>('archive.json', { at: 0, items: [] });
 const stats = read<{ runs: RunRecord[] }>('stats.json', { runs: [] });
-const seenBefore = new Map(archive.items.map((i) => [itemKey(i), i.seen ?? i.time]));
+const seenBefore = new Map<string, number>(Object.entries(archive.keys ?? {}));
+for (const i of archive.items) if (!seenBefore.has(itemKey(i))) seenBefore.set(itemKey(i), i.seen ?? i.time);
 
 const results = await pool(SOURCES, 6, (s) => loadSource(s, { direct: true }));
 // Own sensor: activity and emergencies in live flight data, through the proxy like the app.
@@ -45,10 +48,12 @@ const fresh: Item[] = [];
   const { items, status } = results[i];
   let count = 0;
   for (const item of items) {
-    if (!seenBefore.has(itemKey(item))) {
-      fresh.push({ ...item, seen: now });
-      count++;
-    }
+    if (seenBefore.has(itemKey(item))) continue;
+    seenBefore.set(itemKey(item), now);
+    // An old article that a feed still lists is not news.
+    if (now - item.time > DAY) continue;
+    fresh.push({ ...item, seen: now });
+    count++;
   }
   run.sources[s.id] = { ok: status.ok, items: status.count, fresh: count, ...(status.error ? { error: status.error } : {}) };
 });
@@ -59,7 +64,8 @@ const merged = mergeItems([...archive.items, ...results.flatMap((r) => r.items).
 );
 
 mkdirSync(DIR, { recursive: true });
-writeFileSync(join(DIR, 'archive.json'), JSON.stringify({ at: now, items: merged }));
+const keys = Object.fromEntries([...seenBefore].filter(([, seen]) => now - seen < 30 * DAY));
+writeFileSync(join(DIR, 'archive.json'), JSON.stringify({ at: now, items: merged, keys }));
 const latest = merged
   .filter((i) => now - i.time < 3 * DAY)
   .slice(0, 1500)

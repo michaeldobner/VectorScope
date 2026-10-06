@@ -4,6 +4,12 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.5.1 (2026-10-06)
+
+### Behoben
+* Telegram-Beiträge, die mit einer Sprecherzeile beginnen („Trump:“), nehmen das Zitat in die Überschrift.
+* Ostorozhno, novosti und Ostorozhno, Moskva zählen als ein Netzwerk.
+
 ## 0.5.0 (2026-10-05)
 
 ### Neu

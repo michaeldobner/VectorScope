@@ -1,11 +1,13 @@
 name: Collector
 
-# Probe collector for INTEL: every 15 minutes for one week, then it stops by itself.
-# Gathers every source with the time it was first seen and publishes the data as a single commit
-# on the branch "collector-data", which INTEL reads in the browser.
+# Probe collector for INTEL until PROBE_UNTIL, then it stops by itself.
+# GitHub starts scheduled runs only every few hours on a quiet repository, so one run collects
+# every 10 minutes for almost six hours. The hourly schedule queues the next run, which starts
+# when the current one ends. Each round publishes the data as a single commit on the branch
+# "collector-data", which INTEL reads in the browser.
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '0 * * * *'
   # Also right after a change to the collector, so new sources are collected at once.
   push:
     branches: [main]
@@ -17,16 +19,20 @@ permissions:
 
 concurrency:
   group: collector
-  cancel-in-progress: false
+  # A push brings new code: it replaces the running collection at once. Schedules wait in line.
+  cancel-in-progress: ${{ github.event_name == 'push' }}
 
 env:
   # Last day of the probe (UTC). After it the workflow does nothing.
   PROBE_UNTIL: '20261012'
+  # Minutes between two rounds and how long one run keeps collecting.
+  EVERY_MIN: 10
+  RUN_MIN: 340
 
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 355
     steps:
       - name: Probe period
         id: gate
@@ -48,15 +54,29 @@ jobs:
           if git fetch --depth=1 origin collector-data; then
             for f in archive.json stats.json; do git show "FETCH_HEAD:$f" > "data/$f" 2>/dev/null || rm -f "data/$f"; done
           fi
-      - name: Collect
+      - name: Collect and publish every round
         if: steps.gate.outputs.run == 'yes'
-        run: npx tsx collector/collect.ts data
-      - name: Publish to branch collector-data
-        if: steps.gate.outputs.run == 'yes'
+        env:
+          PUSH_URL: https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git
         run: |
-          cd data
-          git init -q
-          git checkout -q -b collector-data
-          git add -A
-          git -c user.name=collector -c user.email=collector@users.noreply.github.com commit -q -m "Collector $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" collector-data
+          end=$(( $(date +%s) + RUN_MIN * 60 ))
+          while :; do
+            start=$(date +%s)
+            if npx tsx collector/collect.ts data; then
+              (
+                cd data
+                rm -rf .git
+                git init -q
+                git checkout -q -b collector-data
+                git add -A
+                git -c user.name=collector -c user.email=collector@users.noreply.github.com commit -q -m "Collector $(date -u +%Y-%m-%dT%H:%MZ)"
+                git push -q -f "$PUSH_URL" collector-data
+              ) || echo "Publishing failed, next round tries again"
+            else
+              echo "Round failed, next round tries again"
+            fi
+            [ "$(date -u +%Y%m%d)" -gt "$PROBE_UNTIL" ] && break
+            next=$(( start + EVERY_MIN * 60 ))
+            [ "$next" -ge "$end" ] && break
+            sleep $(( next - $(date +%s) > 0 ? next - $(date +%s) : 0 ))
+          done

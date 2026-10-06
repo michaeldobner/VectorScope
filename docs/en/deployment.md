@@ -46,7 +46,7 @@ If the source stays on **Deploy from a branch**, GitHub additionally publishes t
 | `.github/workflows/tests.yml` | Every push and pull request | Type check, unit tests and repository checks, build |
 | `.github/workflows/deploy.yml` | Push to `main`, manual | Tests, build, upload, deploy to Pages |
 | `.github/workflows/e2e.yml` | Every push and pull request | Smoke test on iPhone and iPad sizes in Chromium and WebKit, screenshots as artifact |
-| `.github/workflows/collector.yml` | Every 15 minutes until 12 October 2026, manual | Probe collector for INTEL, data on the branch `collector-data`, see [Probe collector](../../intel/docs/en/collector.md) |
+| `.github/workflows/collector.yml` | Every 10 minutes until 12 October 2026, manual | Probe collector for INTEL, data on the branch `collector-data`, see [Probe collector](../../intel/docs/en/collector.md) |
 | `.github/workflows/lab.yml` | Push to `main` with changes to modules, lab or proxy, manual | Test lab with real internet: real API responses and screenshots with live data, results on the branch `lab-results` |
 
 ## CORS proxy on Vercel

@@ -8,10 +8,10 @@ INTEL only loads while it is open, and a Telegram channel shows only its last 20
 
 | | |
 |---|---|
-| Runs | Every 15 minutes on GitHub Actions (`.github/workflows/collector.yml`), in practice every 15 to 30 minutes because GitHub delays scheduled runs. Also right after every change to the collector or the sources |
+| Runs | Every 10 minutes on GitHub Actions (`.github/workflows/collector.yml`). GitHub starts scheduled runs on a quiet repository only every few hours, so one run keeps collecting for almost six hours and the hourly schedule queues the next. A change to the collector or the sources replaces the running collection at once |
 | Until | 12 October 2026, then the workflow does nothing. `PROBE_UNTIL` in the workflow changes the date |
 | Loads | Every source of INTEL directly from the publishers, no proxy needed on a server |
-| Keeps | Every report of the last 7 days with the time it was first seen |
+| Keeps | Every report of the last 7 days with the time it was first seen, plus the key of every report ever seen, so a report never counts as new twice |
 | Publishes | Branch `collector-data` as a single commit, so the repository does not grow |
 | Costs | Nothing. GitHub Actions minutes are free for public repositories |
 
@@ -23,7 +23,7 @@ The script is `collector/collect.ts`. It uses the same loaders, parsers and merg
 |---|---|---|
 | `latest.json` | Reports of the last 72 hours, excerpts shortened | INTEL in the browser |
 | `archive.json` | Every report of the last 7 days | Evaluation |
-| `stats.json` | One record per run: per source ok, number of reports, new reports, error | Evaluation |
+| `stats.json` | One record per round: per source ok, number of reports, new reports of the last 24 hours, error | Evaluation |
 
 ## In the app
 
@@ -39,6 +39,8 @@ The evaluation answers:
 * Did the collector catch the events that were seen first on X?
 
 Based on that it is decided whether INTEL gets a permanent collector, and which sources stay.
+
+`npx tsx collector/eval.ts <folder> [days]` reads `archive.json` from a folder and prints what INTEL would have shown: reports per class, stories with several independent sources, lead times and the first reporters.
 
 ## Starting and stopping
 

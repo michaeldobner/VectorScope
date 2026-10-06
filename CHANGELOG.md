@@ -4,6 +4,17 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.8.1 (2026-10-06)
+
+### Changed
+* Probe collector collects every 10 minutes in long runs, because GitHub started the 15 minute schedule only every few hours.
+
+### Fixed
+* Probe collector counts a report as new only once and only if it is less than a day old.
+
+### Added
+* `collector/eval.ts` evaluates the collected reports.
+
 ## 0.8.0 (2026-10-05)
 
 ### Added

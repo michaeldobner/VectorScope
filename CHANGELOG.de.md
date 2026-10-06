@@ -4,6 +4,17 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.8.1 (2026-10-06)
+
+### Geändert
+* Der Probe-Sammler sammelt alle 10 Minuten in langen Läufen, weil GitHub den 15-Minuten-Zeitplan nur alle paar Stunden gestartet hat.
+
+### Behoben
+* Der Probe-Sammler zählt eine Meldung nur einmal als neu und nur, wenn sie jünger als einen Tag ist.
+
+### Neu
+* `collector/eval.ts` wertet die gesammelten Meldungen aus.
+
 ## 0.8.0 (2026-10-05)
 
 ### Neu

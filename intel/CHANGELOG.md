@@ -4,6 +4,12 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.5.1 (2026-10-06)
+
+### Fixed
+* Telegram posts that start with a speaker line ("Trump:") take the quote into the headline.
+* Ostorozhno, novosti and Ostorozhno, Moskva count as one network.
+
 ## 0.5.0 (2026-10-05)
 
 ### Added
