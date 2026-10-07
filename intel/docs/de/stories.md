@@ -39,6 +39,12 @@ Neben dem Status zeigt jede Karte einen Prozentwert: wie sicher das Ereignis ist
 
 Beispiel: Ein Incident-Kanal meldet eine Explosion in Voronezh (rund 15 %), ein parteiischer Kanal zieht nach (rund 30 %), der Gouverneur bestätigt (rund 75 %), ein Leitmedium berichtet (87 %). Genau dieser Fall ist ein Test in `data/physical.test.ts`. Die Gewichte sind ein Startwert. Nach der Probewoche werden sie daran geprüft, wie oft jede Klasse richtig lag.
 
+## Was zählt
+
+Quellen mit breitem Themenfeld zählen nur bei Sicherheits- und Krisenthemen (Angriffe, Explosionen, Brände, Unfälle, Militär, Festnahmen wegen Landesverrat und Ähnliches): allgemeine Nachrichtenmedien, Behörden mit allgemeinen Aufgaben wie Gouverneure und die russischen Ereigniskanäle Baza, Mash, SHOT, 112, ASTRA, Ostorozhno und Sirena. Ohne diesen Filter bildeten die russischen Kanäle Stories mehrerer Quellen über Promis und Betrug. Geprüft an einem Tag des Probe-Sammlers: 180 von 326 Beiträgen dieser Kanäle fielen weg, die Stories über Angriffe und Brände blieben.
+
+Die Drohnen- und Raketenspuren der ukrainischen Luftwaffe (mehrere Hundert am Tag) sind Live-Verfolgung, keine Ereignisse. Sie bleiben aus den Stories heraus und haben eine eigene Kachel, siehe [Bedienung](bedienung.md). Starts strategischer Bomber und die Morgenbilanz bleiben normale Meldungen.
+
 ## Wie Meldungen gebündelt werden
 
 1. Für jede Meldung sammelt INTEL ihre Merkmale: Orte, Callsigns und Flugzeugtypen aus Überschrift und Auszug, Wörter nur aus der Überschrift, weil Überschriften sagen, was passiert ist, und Auszüge voller Floskeln sind. Häufige Wörter auf Englisch und Deutsch werden ignoriert, deutsche Ereigniswörter auf Englisch abgebildet (Pest zu plague, Drohne zu drone, Explosion zu explosion).

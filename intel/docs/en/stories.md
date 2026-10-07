@@ -39,6 +39,12 @@ Next to the status every card shows a percentage: how sure the event is. It is c
 
 Example: an incident channel reports an explosion in Voronezh (about 15 %), a partisan channel follows (about 30 %), the governor confirms (about 75 %), a leading medium reports (87 %). This exact case is a test in `data/physical.test.ts`. The weights are a starting point. After the probe week they are checked against how often each class was right.
 
+## What counts
+
+Sources with a broad remit count only with security and crisis topics (attacks, explosions, fires, accidents, military, arrests for treason and the like): general news media, authorities with general duties such as governors, and the Russian incident channels Baza, Mash, SHOT, 112, ASTRA, Ostorozhno and Sirena. Without this filter the Russian channels formed stories of several sources about celebrities and fraud. Checked on one day of the probe collector: 180 of 326 posts of these channels dropped out, the stories about attacks and fires stayed.
+
+The drone and missile tracks of the Ukrainian Air Force (several hundred a day) are live tracking, not events. They are kept out of the stories and have their own tile, see the [user guide](user-guide.md). Takeoffs of strategic bombers and the morning summary stay ordinary reports.
+
 ## How reports are grouped
 
 1. For every report INTEL collects its tokens: places, callsigns and aircraft types from headline and excerpt, words from the headline only, because headlines say what happened and excerpts are full of boilerplate. Common words in English and German are ignored, German event words are mapped to English (Pest to plague, Drohne to drone, Explosion to explosion).

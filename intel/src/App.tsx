@@ -185,6 +185,7 @@ export function pulsePasses(s: Story, pulse: Pulse, now: number): boolean {
   if (pulse === 'hour') return s.items.some((i) => now - i.time < HOUR_MS);
   if (pulse === 'unverified') return s.status === 'signal' || s.status === 'emerging';
   if (pulse === 'developing') return independentCount(s) >= 2 && now - s.last < 12 * HOUR_MS;
+  if (pulse === 'alerts') return false;
   return true;
 }
 
@@ -193,6 +194,7 @@ function Pulse({ st }: { st: IntelState }) {
   const lastHour = st.items.filter((i) => now - i.time < HOUR);
   const unverified = lastHour.filter((i) => tierOf(i) === 'early' || tierOf(i) === 'perspective').length;
   const developing = st.stories.filter((s) => pulsePasses(s, 'developing', now)).length;
+  const alerts = st.alerts.filter((i) => now - i.time < HOUR).length;
   const tile = (key: Exclude<Pulse, null>, n: number, text: string) => (
     <button className={st.prefs.pulse === key ? 'on' : ''} onClick={() => setPrefs({ pulse: st.prefs.pulse === key ? null : key })} aria-pressed={st.prefs.pulse === key}>
       <b>{count(n)}</b>
@@ -204,6 +206,7 @@ function Pulse({ st }: { st: IntelState }) {
       {tile('hour', lastHour.length, 'reports last hour')}
       {tile('unverified', unverified, 'of them unverified')}
       {tile('developing', developing, 'developing stories')}
+      {tile('alerts', alerts, 'air alerts Ukraine, last hour')}
     </div>
   );
 }
@@ -215,7 +218,8 @@ function StoriesView({ stories: all, st }: { stories: Story[]; st: IntelState })
   return (
     <>
       <Pulse st={st} />
-      {!stories.length && <div className="empty">No story for this tile right now.</div>}
+      {st.prefs.pulse === 'alerts' && <AlertsList st={st} />}
+      {!stories.length && st.prefs.pulse !== 'alerts' && <div className="empty">No story for this tile right now.</div>}
       {developing.length > 0 && (
         <section>
           <h2 className="section-title">Developing, several sources</h2>
@@ -235,6 +239,30 @@ function StoriesView({ stories: all, st }: { stories: Story[]; st: IntelState })
         </ol>
       </section>}
     </>
+  );
+}
+
+/** Drone and missile tracks of the Ukrainian Air Force, last 6 hours, newest first. */
+function AlertsList({ st }: { st: IntelState }) {
+  const tr = useTr();
+  const now = Date.now();
+  const recent = st.alerts.filter((i) => now - i.time < 6 * HOUR).sort((a, b) => b.time - a.time);
+  return (
+    <section>
+      <h2 className="section-title">Air alerts Ukraine, last 6 hours</h2>
+      {!recent.length && <div className="empty">No air alert in the last 6 hours.</div>}
+      <ol className="items alerts">
+        {recent.slice(0, 150).map((i) => (
+          <li key={i.id} className="alert">
+            <span className="age">{clock(i.time)}</span>
+            <a href={i.url} target="_blank" rel="noopener noreferrer">
+              {tr(i.text ? `${i.title} ${i.text}` : i.title, i.sourceId)}
+            </a>
+          </li>
+        ))}
+      </ol>
+      <p className="hint">Live tracking by the {sourceName('kpszsu')}. Tracks are not events, they do not form stories.</p>
+    </section>
   );
 }
 

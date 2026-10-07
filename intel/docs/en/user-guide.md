@@ -13,7 +13,7 @@ The logo at the top left leads back to the VectorScope hub. **DE** shows every h
 
 ## Stories
 
-The default view. Reports from different sources about the same event are one card. At the top three tiles: reports of the last hour, how many of them are unverified, how many stories are developing. **Tapping a tile filters the stories** accordingly, tapping it again removes the filter.
+The default view. Reports from different sources about the same event are one card. At the top four tiles: reports of the last hour, how many of them are unverified, how many stories are developing, and the air alerts of the Ukrainian Air Force in the last hour. **Tapping a tile filters the stories** accordingly, tapping it again removes the filter. The air alerts tile shows the drone and missile tracks of the last 6 hours instead, one line each.
 
 | On the card | Meaning |
 |---|---|

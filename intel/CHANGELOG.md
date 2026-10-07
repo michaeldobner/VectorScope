@@ -4,6 +4,14 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.6.0 (2026-10-07)
+
+### Added
+* **Air alerts tile:** the drone and missile tracks of the Ukrainian Air Force have their own tile and list instead of flooding the stories.
+
+### Changed
+* Russian incident channels (Baza, Mash, SHOT, 112, ASTRA, Ostorozhno, Sirena) count only with security and crisis topics, like general news media.
+
 ## 0.5.1 (2026-10-06)
 
 ### Fixed

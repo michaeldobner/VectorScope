@@ -4,6 +4,14 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.6.0 (2026-10-07)
+
+### Neu
+* **Kachel Luftalarme:** Die Drohnen- und Raketenspuren der ukrainischen Luftwaffe haben eine eigene Kachel und Liste, statt die Stories zu fluten.
+
+### Geändert
+* Russische Ereigniskanäle (Baza, Mash, SHOT, 112, ASTRA, Ostorozhno, Sirena) zählen nur noch bei Sicherheits- und Krisenthemen, wie allgemeine Nachrichtenmedien.
+
 ## 0.5.1 (2026-10-06)
 
 ### Behoben

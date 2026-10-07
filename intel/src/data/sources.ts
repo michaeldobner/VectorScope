@@ -183,6 +183,14 @@ export const DEMO_SOURCES: Source[] = [
 ];
 
 /** Key under which a source counts as independent: its network, or itself. */
+/**
+ * Sources with a broad remit, whose reports count only with security and crisis topics: general news media,
+ * authorities with general duties (governors, mayors, the Investigative Committee) and the Russian
+ * incident channels, which mix attacks and fires with celebrities and fraud.
+ */
+export const isBroad = (s: Source | undefined) =>
+  !!s && (s.category === 'news' || (s.category === 'general' && (s.tier === 'primary' || (s.tier === 'early' && s.region === 'russia'))));
+
 export const independenceKey = (id: string) => sourceById(id)?.network ?? id;
 
 export const sourceById = (id: string) => (id === 'sensor' ? SENSOR_SOURCE : (SOURCES.find((s) => s.id === id) ?? DEMO_SOURCES.find((s) => s.id === id)));

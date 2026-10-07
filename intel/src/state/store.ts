@@ -7,7 +7,8 @@ import { loadCollected, loadLive, loadSource, mergeItems, pool, type SourceStatu
 import { matchLive } from '../data/match';
 import { detectAll } from '../data/sensor';
 import { buildStories, type Story } from '../data/stories';
-import { SOURCES, sourceById } from '../data/sources';
+import { SOURCES, isBroad, sourceById } from '../data/sources';
+import { isAirTrack } from '../data/alerts';
 import type { EnrichedItem, Item } from '../data/types';
 
 const PREFS_KEY = 'vectorscope.intel.v1';
@@ -18,8 +19,8 @@ const LIVE_EVERY_MS = 2 * 60_000;
 /** all, live (strong live match), r:<region> or c:<category>. */
 export type Filter = string;
 export type View = 'stories' | 'wire' | 'map';
-/** Filter by one of the three pulse tiles above the stories. */
-export type Pulse = 'hour' | 'unverified' | 'developing' | null;
+/** Filter by one of the pulse tiles above the stories. */
+export type Pulse = 'hour' | 'unverified' | 'developing' | 'alerts' | null;
 
 export interface Prefs {
   view: View;
@@ -37,6 +38,8 @@ export interface IntelState {
   demo: boolean;
   items: EnrichedItem[];
   stories: Story[];
+  /** Air alerts: drone and missile tracks of the Ukrainian Air Force, newest first, kept out of the stories. */
+  alerts: EnrichedItem[];
   live: Aircraft[];
   /** Time of the last collector run whose data was merged, null if none could be loaded. */
   collectedAt: number | null;
@@ -76,6 +79,7 @@ let state: IntelState = {
   demo,
   items: [],
   stories: [],
+  alerts: [],
   live: [],
   collectedAt: null,
   sources: {},
@@ -97,14 +101,9 @@ export const getState = () => state;
 export const getRaw = () => rawItems;
 export const useIntel = () => useSyncExternalStore((l) => (listeners.add(l), () => listeners.delete(l)), getState);
 
-/**
- * General news media and authorities with broad remits (governors, mayors, the Investigative Committee) count
- * only with security and crisis topics: no book prizes, no greetings for Teachers' Day.
- */
+/** Sources with a broad remit count only with security and crisis topics: no book prizes, no celebrities. */
 function relevant(item: Item, text: string, entities: Entities): boolean {
-  const src = sourceById(item.sourceId);
-  const broad = src?.category === 'news' || (src?.tier === 'primary' && src.category === 'general');
-  return !broad || isCrisisRelated(text, entities);
+  return !isBroad(sourceById(item.sourceId)) || isCrisisRelated(text, entities);
 }
 
 // Entities are computed once per item, matches whenever items or live aircraft change.
@@ -130,13 +129,14 @@ let rawItems: Item[] = [];
 const sensorFirstSeen = new Map<string, number>();
 
 /** Items plus own sensor reports plus their stories, computed together so everything always matches. */
-function derive(items: Item[], live: Aircraft[], now: number): Pick<IntelState, 'items' | 'stories'> {
+function derive(items: Item[], live: Aircraft[], now: number): Pick<IntelState, 'items' | 'stories' | 'alerts'> {
   const sensor = detectAll(live, now).map((i) => {
     if (!sensorFirstSeen.has(i.id)) sensorFirstSeen.set(i.id, now);
     return { ...i, time: sensorFirstSeen.get(i.id)! };
   });
-  const enriched = enrich(sensor.length ? mergeItems([...items, ...sensor], now) : items, live, now);
-  return { items: enriched, stories: buildStories(enriched) };
+  const all = enrich(sensor.length ? mergeItems([...items, ...sensor], now) : items, live, now);
+  const enriched = all.filter((i) => !isAirTrack(i));
+  return { items: enriched, stories: buildStories(enriched), alerts: all.filter(isAirTrack) };
 }
 
 export function setPrefs(patch: Partial<Prefs>) {

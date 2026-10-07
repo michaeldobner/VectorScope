@@ -13,7 +13,7 @@ Das Logo oben links führt zurück zur VectorScope-Startseite. **DE** zeigt alle
 
 ## Stories
 
-Die Standardansicht. Meldungen verschiedener Quellen über dasselbe Ereignis bilden eine Karte. Oben stehen drei Kacheln: Meldungen der letzten Stunde, wie viele davon ungeprüft sind, wie viele Stories sich entwickeln. **Ein Tipp auf eine Kachel filtert die Stories** entsprechend, ein zweiter Tipp hebt den Filter auf.
+Die Standardansicht. Meldungen verschiedener Quellen über dasselbe Ereignis bilden eine Karte. Oben stehen vier Kacheln: Meldungen der letzten Stunde, wie viele davon ungeprüft sind, wie viele Stories sich entwickeln und die Luftalarme der ukrainischen Luftwaffe der letzten Stunde. **Ein Tipp auf eine Kachel filtert die Stories** entsprechend, ein zweiter Tipp hebt den Filter auf. Die Kachel Luftalarme zeigt stattdessen die Drohnen- und Raketenspuren der letzten 6 Stunden, eine Zeile je Spur.
 
 | Auf der Karte | Bedeutung |
 |---|---|

@@ -71,6 +71,6 @@ npm test               # Unit-Tests aller Module und Prüfungen des Repositorys
 
 ## Version
 
-Aktuelle Version: **0.5.1**. Siehe [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.6.0**. Siehe [Changelog](CHANGELOG.de.md).
 
 Erstellt von Michael Dobner. Lizenziert unter der [MIT-Lizenz](../LICENSE).
