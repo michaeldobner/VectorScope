@@ -21,7 +21,7 @@ Ein Container mit fehlschlagendem Healthcheck erscheint auf der Statusseite und 
 
 | Adresse | Inhalt |
 |---|---|
-| `https://vectorscope.mdobner.duckdns.org/` | Startseite, `/air/`, `/intel/` |
+| `https://vectorscope.duckdns.org/` | Startseite, `/air/`, `/intel/` |
 | `/proxy/...` | Dieselben Routen wie der Proxy auf Vercel (adsb.lol, Feeds, Telegram, Übersetzung, Fotos) |
 | `/data/latest.json` | Meldungen der letzten 72 Stunden, gelesen von INTEL unter dieser Adresse |
 | `/api/health` | Zustand für die Statusseite, siehe unten |
@@ -59,9 +59,9 @@ Schritte nach Stand Coolify 4. Menünamen können je nach Version leicht abweich
 
 1. **GitHub-Token für das Rohdaten-Archiv** (optional, empfohlen). Auf GitHub: Settings > Developer settings > Fine-grained personal access tokens > Generate new token. Repository access: nur `michaeldobner/VectorScope`. Permissions: Contents, Read and write. Ablauf: bis nach der Probe, z. B. 1. März 2027. Token kopieren, er wird nur einmal angezeigt.
 2. **Neue Ressource.** Im Coolify-Projekt: New resource > Public repository, `https://github.com/michaeldobner/VectorScope`, Branch `main`. Build pack: Docker Compose, Datei `/docker-compose.yaml`.
-3. **Domain.** Beim Dienst `vectorscope-web`: Domain `https://vectorscope.mdobner.duckdns.org:8080`. Der Port sagt Coolify, dass der Container auf 8080 lauscht, die Adresse selbst bleibt ohne Port. Die anderen Dienste bekommen keine Domain.
+3. **Domain.** Beim Dienst `vectorscope-web`: Domain `https://vectorscope.duckdns.org:8080`. Der Port sagt Coolify, dass der Container auf 8080 lauscht, die Adresse selbst bleibt ohne Port. Die anderen Dienste bekommen keine Domain.
 4. **Umgebungsvariablen.** `SERVICE_PASSWORD_POSTGRES` erzeugt Coolify selbst. `RAW_PUSH_URL` als Secret anlegen: `https://x-access-token:<Token>@github.com/michaeldobner/VectorScope.git`. Optional: `ALLOWED_ORIGIN`, wenn die Adresse abweicht, `CONTACT` für den User-Agent.
-5. **Deploy.** Der Build dauert einige Minuten (Typprüfung und Build aller Module). Danach `https://vectorscope.mdobner.duckdns.org/api/health` öffnen.
+5. **Deploy.** Der Build dauert einige Minuten (Typprüfung und Build aller Module). Danach `https://vectorscope.duckdns.org/api/health` öffnen.
 6. **Erste Runde.** Beim ersten Start übernimmt der Sammler `archive.json`, `stats.json` und `raw-state.json` des GitHub-Sammlers, damit keine Meldung zweimal als neu zählt, und checkt den Branch `collector-raw` aus. Nach 10 bis 15 Minuten ist `collector.age_min` klein und `raw_push` meldet `pushed`.
 
 ## Umstieg von GitHub

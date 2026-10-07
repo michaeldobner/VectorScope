@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.11.1 (2026-10-07)
+
+### Changed
+* Own server: address is `vectorscope.duckdns.org`, an own DuckDNS domain.
+
 ## 0.11.0 (2026-10-07)
 
 ### Added

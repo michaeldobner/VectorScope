@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.11.1 (2026-10-07)
+
+### Geändert
+* Eigener Server: Die Adresse ist `vectorscope.duckdns.org`, eine eigene DuckDNS-Domain.
+
 ## 0.11.0 (2026-10-07)
 
 ### Neu

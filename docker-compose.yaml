@@ -18,7 +18,7 @@ services:
       - DATA_DIR=/data
       - CONTACT=${CONTACT:-github.com/michaeldobner}
       # The app on this address calls its own /proxy, so the proxy answers browsers of this address only.
-      - ALLOWED_ORIGIN=${ALLOWED_ORIGIN:-https://vectorscope.mdobner.duckdns.org}
+      - ALLOWED_ORIGIN=${ALLOWED_ORIGIN:-https://vectorscope.duckdns.org}
     volumes:
       - vectorscope-data:/data
     expose:
