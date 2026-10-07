@@ -170,7 +170,7 @@ COPY (SELECT * EXCLUDE (text) FROM read_json_auto('parsed/reports.jsonl.gz')) TO
 
 ### 1. Keep collecting after the probe
 
-The workflow stops on `PROBE_UNTIL` (12 October 2026). To keep the archive growing, move the date in `.github/workflows/collector.yml`. GitHub Actions is free for public repositories. The 6 hour runs restart every hour by schedule, gaps show in `health.json`.
+The workflow stops on `PROBE_UNTIL` (31 January 2027, moved from 12 October 2026). To keep the archive growing beyond that, move the date in `.github/workflows/collector.yml`. GitHub Actions is free for public repositories. The 6 hour runs restart every hour by schedule, gaps show in `health.json`.
 
 ### 2. Move to a server
 

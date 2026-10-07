@@ -4,6 +4,15 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.10.0 (2026-10-07)
+
+### Changed
+* Probe collector and raw archive run until 31 January 2027 instead of 12 October 2026.
+
+### Added
+* Proxy serves Rybar Tactical and Rybar America, 50 Telegram channels in total. The test lab checks both.
+* Module INTEL 0.7.0, see its [changelog](intel/CHANGELOG.md).
+
 ## 0.9.2 (2026-10-07)
 
 ### Fixed

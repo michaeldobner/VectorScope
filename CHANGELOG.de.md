@@ -4,6 +4,15 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.10.0 (2026-10-07)
+
+### Geändert
+* Probe-Sammler und Rohdaten-Archiv laufen bis 31. Januar 2027 statt bis 12. Oktober 2026.
+
+### Neu
+* Der Proxy liefert Rybar Tactical und Rybar America, insgesamt 50 Telegram-Kanäle. Das Test-Labor prüft beide.
+* Modul INTEL 0.7.0, siehe sein [Changelog](intel/CHANGELOG.de.md).
+
 ## 0.9.2 (2026-10-07)
 
 ### Behoben

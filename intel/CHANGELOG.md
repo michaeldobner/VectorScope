@@ -4,6 +4,11 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.7.0 (2026-10-07)
+
+### Added
+* Rybar Tactical and Rybar America, found through the forward graph of the raw archive. The Rybar network has thirteen channels, 74 sources in total.
+
 ## 0.6.0 (2026-10-07)
 
 ### Added

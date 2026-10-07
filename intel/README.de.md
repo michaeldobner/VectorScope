@@ -22,9 +22,9 @@ Schnelle Telegram-Eilmelder melden zuerst, Fachmedien ordnen ein, Leitmedien bes
 | | |
 |---|---|
 | **Stories** | Meldungen verschiedener Quellen über dasselbe Ereignis werden eine Karte mit Status Signal, Emerging, Reported oder Confirmed, einer Zeitachse aller Meldungen und dem Vorsprung der ersten ungeprüften Meldung |
-| **72 geprüfte Quellen in sieben Klassen** | Messung (USGS, EMSC, GDACS), primär (Rosaviatsiya, MChS, Gouverneure, ukrainische Luftwaffe, IDF, NWS, FAA), früh (Baza, Mash, SHOT, 112, ASTRA, OSINTdefender), OSINT, Fachmedium, parteiisch (Rybar, WarGonzo, Middle East Spectator) und bestätigend (Tagesschau, BBC, Meduza). Jede im Test-Labor geprüft, jede mit Region, Sprache, Trust und Perspektive |
+| **74 geprüfte Quellen in sieben Klassen** | Messung (USGS, EMSC, GDACS), primär (Rosaviatsiya, MChS, Gouverneure, ukrainische Luftwaffe, IDF, NWS, FAA), früh (Baza, Mash, SHOT, 112, ASTRA, OSINTdefender), OSINT, Fachmedium, parteiisch (Rybar, WarGonzo, Middle East Spectator) und bestätigend (Tagesschau, BBC, Meduza). Jede im Test-Labor geprüft, jede mit Region, Sprache, Trust und Perspektive |
 | **Event Confidence** | Jede Story erhält einen Prozentwert aus Klassen und Trust ihrer unabhängigen Quellen, getrennt vom Trust einer einzelnen Quelle |
-| **Probe-Sammler** | Eine Woche lang hält ein Sammler auf GitHub Actions alle 15 Minuten jede Meldung fest, damit nichts verloren geht, während die App geschlossen ist |
+| **Probe-Sammler** | Bis Ende Januar 2027 hält ein Sammler auf GitHub Actions alle 10 Minuten jede Meldung fest, damit nichts verloren geht, während die App geschlossen ist, und baut ein Rohdaten-Archiv für Auswertungen auf |
 | **VectorScope Sensor** | INTEL wird selbst zur Quelle: Tanker, AWACS, Aufklärer und Bomber, die gemeinsam fliegen, und jeder Squawk 7700 werden Meldungen, die sich mit den Stories verbinden |
 | **Echo-Detektor** | Ein Kanal, der einen anderen wörtlich abschreibt, zählt nicht als Quelle |
 | **Lagekarte** | Stories als Kreise an ihren Orten, Militärflugzeuge, Notfälle, Linien von genannten Flugzeugen zu ihrer Story |
@@ -54,7 +54,7 @@ Ausführliche Anleitung: [Bedienung](docs/de/bedienung.md).
 | [Stories](docs/de/stories.md) | Stufen, Status, Bündelung, Echo-Detektor, Vorsprung |
 | [Sensor und Karte](docs/de/sensor.md) | Eigene Beobachtungen in den Live-Flugdaten, Lagekarte |
 | [Quellen](docs/de/quellen.md) | Die geprüften Quellen, wie sie geprüft wurden, verworfene Quellen und warum |
-| [Probe-Sammler](docs/de/sammler.md) | Eine Woche Sammeln auf GitHub Actions |
+| [Probe-Sammler](docs/de/sammler.md) | Sammeln auf GitHub Actions bis Ende Januar 2027 |
 | [Abgleich](docs/de/abgleich.md) | Erkennung von Callsigns, Typen und Orten, Regeln des Live-Treffers |
 | [Architektur](docs/de/architektur.md) | Module, Datenfluss, Proxy-Route, Speicher |
 | [Datenschutz und Recht](docs/de/datenschutz-und-recht.md) | Was von wo geladen wird, Auszüge und Links, Lizenzen |
@@ -71,6 +71,6 @@ npm test               # Unit-Tests aller Module und Prüfungen des Repositorys
 
 ## Version
 
-Aktuelle Version: **0.6.0**. Siehe [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.7.0**. Siehe [Changelog](CHANGELOG.de.md).
 
 Erstellt von Michael Dobner. Lizenziert unter der [MIT-Lizenz](../LICENSE).
