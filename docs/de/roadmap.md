@@ -12,7 +12,7 @@ VectorScope wächst Modul für Modul. Alles läuft auf GitHub Pages und dem vorh
 | 2 | INTEL | Quellenliste erstellen und prüfen: Bluesky, Mastodon, RSS und GDELT, jede Quelle geprüft auf Existenz, Aktivität und maschinelle Lesbarkeit | Erledigt, 14 Quellen |
 | 3 | INTEL | Stufe A: Feed der geprüften Quellen, Erkennung von Callsigns, Typen und Orten, Live-Abgleich mit Militärflugzeugen, direkter Sprung nach AIR | Erledigt in INTEL 0.1.0 |
 | 4 | INTEL | Telegram-Eilmelder, bestätigende Medien, Stories mit Status und Vorsprung | Erledigt in INTEL 0.2.0 |
-| 5 | INTEL | Probe-Sammler für eine Woche, danach Auswertung: Menge, Tempo, Vorsprung, Lärm je Quelle. Entscheidung über einen dauerhaften Sammler | Läuft bis 12. Oktober 2026 |
+| 5 | INTEL | Probe-Sammler mit Rohdaten-Archiv, Auswertung: Menge, Tempo, Vorsprung, Lärm je Quelle, Weiterleitungs-Graph. Entscheidung über einen dauerhaften Sammler auf einem Server | Läuft bis 31. Januar 2027 |
 | 6 | INTEL | Eigener Sensor in den Live-Flugdaten, Echo-Detektor, Lagekarte, deutsche Übersetzung | Erledigt in INTEL 0.3.0 |
 | 7 | INTEL | 62 Quellen in sieben Klassen mit Region, Sprache, Trust und Perspektive, Event Confidence, russische Erkennung, Messsysteme | Erledigt in INTEL 0.4.0 |
 | 8 | INTEL | Dieselbe Tiefe für Ukraine, Nahost, USA und Europa, NASA FIRMS (braucht einen Schlüssel), Forward Graph der Telegram-Weiterleitungen | Als Nächstes |

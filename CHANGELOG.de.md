@@ -4,6 +4,25 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.10.0 (2026-10-07)
+
+### Geändert
+* Probe-Sammler und Rohdaten-Archiv laufen bis 31. Januar 2027 statt bis 12. Oktober 2026.
+
+### Neu
+* Der Proxy liefert Rybar Tactical und Rybar America, insgesamt 50 Telegram-Kanäle. Das Test-Labor prüft beide.
+* Modul INTEL 0.7.0, siehe sein [Changelog](intel/CHANGELOG.de.md).
+
+## 0.9.2 (2026-10-07)
+
+### Behoben
+* Rohdaten-Archiv: Der Rundendatensatz zählt den eigenen Sensor auch bei den gefragten Quellen mit, wie schon bei denen mit Antwort.
+
+## 0.9.1 (2026-10-07)
+
+### Behoben
+* Rohdaten-Archiv: Telegram-Beiträge gelten nicht mehr als geändert wegen des signierten Aufruf-Tokens, der Reaktionen oder ihrer Position auf der Seite, Bluesky-Beiträge nicht wegen Zählern in zitierten Beiträgen. Antworten von Telegram-Beiträgen werden erkannt, Bluesky-Reposts gelten nicht als Parsing-Problem.
+
 ## 0.9.0 (2026-10-07)
 
 ### Neu

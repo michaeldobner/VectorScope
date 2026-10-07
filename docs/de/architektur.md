@@ -25,7 +25,7 @@ VectorScope/
 ├─ intel/                  Modul INTEL: geprüfter OSINT-Feed mit Live-Abgleich (React, TypeScript)
 ├─ proxy/                  CORS-Proxy auf Vercel, für alle Module
 ├─ lab/                    Test-Labor mit echtem Internet (GitHub Actions)
-├─ collector/              Probe-Sammler für INTEL (GitHub Actions, eine Woche)
+├─ collector/              Probe-Sammler und Rohdaten-Archiv für INTEL (GitHub Actions)
 ├─ scripts/
 │  ├─ build.mjs            ergänzt Startseite und gemeinsame Dateien in dist/
 │  ├─ serve.mjs            liefert dist/ aus wie GitHub Pages

@@ -56,7 +56,7 @@ Reports of the same source never link directly. A channel that repeats itself is
 
 ## Echo detector
 
-Telegram channels often copy each other. A later report of another source that shares at least 60 % of all its words with an earlier report is an **echo**: it stays in the story, but it does not count as a source, neither for the status nor for the number of sources. The card shows "1 echo", the list of reports marks the copy. Channels of one network, such as the eleven Rybar channels, count once as well: the first one counts, the others are shown as echoes.
+Telegram channels often copy each other. A later report of another source that shares at least 60 % of all its words with an earlier report is an **echo**: it stays in the story, but it does not count as a source, neither for the status nor for the number of sources. The card shows "1 echo", the list of reports marks the copy. Channels of one network, such as the thirteen Rybar channels, count once as well: the first one counts, the others are shown as echoes.
 
 ## Lead time
 

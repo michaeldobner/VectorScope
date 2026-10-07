@@ -2,14 +2,14 @@
 
 [English version](../en/collector.md) · [Übersicht](README.md)
 
-INTEL lädt nur, solange es geöffnet ist, und ein Telegram-Kanal zeigt nur seine letzten rund 20 Beiträge. Fleißige Kanäle wie Clash Report posten mehr als 300 Mal am Tag, das meiste würde also nie gesehen. Der Probe-Sammler schließt diese Lücke für eine Woche, kostenlos, und beantwortet die Frage, ob sich ein dauerhafter Sammler lohnt.
+INTEL lädt nur, solange es geöffnet ist, und ein Telegram-Kanal zeigt nur seine letzten rund 20 Beiträge. Fleißige Kanäle wie Clash Report posten mehr als 300 Mal am Tag, das meiste würde also nie gesehen. Der Probe-Sammler schließt diese Lücke kostenlos bis Ende Januar 2027, lässt das Rohdaten-Archiv wachsen und beantwortet die Frage, ob sich ein dauerhafter Sammler auf einem Server lohnt.
 
 ## Was er tut
 
 | | |
 |---|---|
 | Läuft | Alle 10 Minuten auf GitHub Actions (`.github/workflows/collector.yml`). GitHub startet zeitgesteuerte Läufe bei einem ruhigen Repository nur alle paar Stunden, deshalb sammelt ein Lauf fast sechs Stunden lang, und der stündliche Zeitplan reiht den nächsten ein. Eine Änderung am Sammler oder an den Quellen ersetzt die laufende Sammlung sofort |
-| Bis | 12. Oktober 2026, danach tut der Workflow nichts mehr. `PROBE_UNTIL` im Workflow ändert das Datum |
+| Bis | 31. Januar 2027, danach tut der Workflow nichts mehr. `PROBE_UNTIL` im Workflow ändert das Datum |
 | Lädt | Jede Quelle von INTEL direkt bei den Herausgebern, auf einem Server ist kein Proxy nötig |
 | Behält | Jede Meldung der letzten 7 Tage mit dem Zeitpunkt, an dem er sie zuerst gesehen hat, dazu den Schlüssel jeder je gesehenen Meldung, damit keine Meldung zweimal als neu zählt |
 | Veröffentlicht | Branch `collector-data` als einzelner Commit, das Repository wächst also nicht |

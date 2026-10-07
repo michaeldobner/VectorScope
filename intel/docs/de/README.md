@@ -9,10 +9,10 @@ Diese Dokumentation beschreibt das Modul INTEL: die Bedienung, welche Quellen es
 | [Bedienung](bedienung.md) | Ansichten, Filter, Live-Treffer, Orte, Quellen, neue Beiträge | Alle |
 | [Stories](stories.md) | Stufen der Quellen, Status einer Story, Bündelung, Vorsprung | Alle |
 | [Sensor und Karte](sensor.md) | Eigene Beobachtungen in den Live-Flugdaten: Luftaktivität, Notfälle, Lagekarte | Alle |
-| [Quellen](quellen.md) | Die 72 geprüften Quellen, die Prüfung, verworfene Kandidaten | Alle |
+| [Quellen](quellen.md) | Die 74 geprüften Quellen, die Prüfung, verworfene Kandidaten | Alle |
 | [Abgleich](abgleich.md) | Erkennung von Callsigns, Typen und Orten, Regeln und Grenzen des Live-Abgleichs | Alle, Entwicklung |
 | [Architektur](architektur.md) | Module, Datenfluss, Proxy-Routen, Speicher, Tests | Entwicklung |
-| [Probe-Sammler](sammler.md) | Eine Woche Sammeln auf GitHub Actions, Dateien, Auswertung | Alle, Entwicklung |
+| [Probe-Sammler](sammler.md) | Sammeln auf GitHub Actions bis Ende Januar 2027, Dateien, Auswertung | Alle, Entwicklung |
 | [Rohdaten](rohdaten.md) | Das Rohdaten-Archiv: Aufbau, Datensatzformat, Parsing, Prüfungen, Analyse mit DuckDB und Gephi, wie es weitergeht | Entwicklung, Analyse |
 | [Datenschutz und Recht](datenschutz-und-recht.md) | Anfragen, Speicherung, Auszüge und Links, Lizenzen | Alle |
 
@@ -22,9 +22,9 @@ Diese Dokumentation beschreibt das Modul INTEL: die Bedienung, welche Quellen es
 |---|---|
 | Zweck | Geprüfte OSINT- und Verteidigungsnachrichten, abgeglichen mit Flugzeugen, die gerade in der Luft sind |
 | Ansichten | Stories, Wire, Map, Live now, Places, Sources |
-| Quellen | 72 in sieben Klassen, von Telegram, Bluesky, RSS und Messsystemen |
+| Quellen | 74 in sieben Klassen, von Telegram, Bluesky, RSS und Messsystemen |
 | Live-Daten | Militärflugzeuge von adsb.lol (ODbL), alle zwei Minuten |
 | Aktualisierung | Feed alle fünf Minuten, solange die App geöffnet ist |
 | Sprache | Englische Oberfläche, Meldungen in ihrer Originalsprache oder mit **DE** ins Deutsche übersetzt |
 | Adresse | https://michaeldobner.github.io/VectorScope/intel/ |
-| Version | 0.6.0 |
+| Version | 0.7.0 |

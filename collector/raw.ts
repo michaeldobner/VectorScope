@@ -80,7 +80,7 @@ export const sha1 = (s: string) => createHash('sha1').update(s).digest('hex').sl
 const collapse = (s: string) => s.replace(/\s+/g, ' ').trim();
 
 /**
- * What decides whether a unit changed. Counters (views, likes) and signed image links change all the time
+ * What decides whether a unit changed. Counters (views, reactions, likes), signed tokens and image links change all the time
  * and are left out, so a post counts as changed only when its content does.
  */
 function fingerprint(kind: RawResponse['kind'], body: string): string {
@@ -88,22 +88,26 @@ function fingerprint(kind: RawResponse['kind'], body: string): string {
     return sha1(
       collapse(
         body
+          // data-view is a signed token with the time of the request, different on every request.
+          .replace(/\sdata-view="[^"]*"/g, '')
           .replace(/<span class="tgme_widget_message_views">[^<]*<\/span>/g, '')
+          .replace(/<span class="tgme_reaction[^"]*">[\s\S]*?<\/span>/g, '')
           .replace(/https?:\/\/cdn\d*\.(?:telesco\.pe|cdn-telegram\.org)\/[^"')\s]+/g, '')
           .replace(/https?:\/\/[^"')\s]*telegram-cdn[^"')\s]*/g, ''),
       ),
     );
   if (kind === 'bluesky') {
     try {
-      const entry = JSON.parse(body);
-      const { likeCount, repostCount, replyCount, quoteCount, bookmarkCount, viewer, indexedAt, author, ...post } = entry.post ?? {};
-      return sha1(JSON.stringify({ ...entry, post: { ...post, author: { did: author?.did, handle: author?.handle } } }));
+      // Counters and the viewer state sit in the post and in every quoted post.
+      return sha1(JSON.stringify(JSON.parse(body), (k, v) => (BSKY_VOLATILE.has(k) ? undefined : k === 'avatar' ? undefined : v)));
     } catch {
       return sha1(body);
     }
   }
   return sha1(collapse(body.replace(/<Update_Time>[^<]*<\/Update_Time>/g, '')));
 }
+
+const BSKY_VOLATILE = new Set(['likeCount', 'repostCount', 'replyCount', 'quoteCount', 'bookmarkCount', 'viewer', 'indexedAt']);
 
 const xmlUnits = (body: string) => body.match(/<item[\s>][\s\S]*?<\/item>/gi) ?? body.match(/<entry[\s>][\s\S]*?<\/entry>/gi) ?? [];
 const xmlKey = (block: string) => {
@@ -117,7 +121,17 @@ export function splitUnits(r: Pick<RawResponse, 'sourceId' | 'kind' | 'api' | 'b
   const unit = (key: string, b: string): Unit => ({ key, body: b, hash: fingerprint(r.kind, b) });
   if (r.kind === 'telegram') {
     const starts = [...body.matchAll(/<div class="tgme_widget_message [^"]*"[^>]*data-post="([^"]+)"/g)];
-    return starts.map((m, i) => unit(`tg:${m[1]}`, body.slice(m.index, starts[i + 1]?.index ?? body.length).replace(/\s*<\/section>[\s\S]*$/, '')));
+    // A post ends where the next begins. Its end looks the same whether it is in the middle or the last on the page.
+    return starts.map((m, i) =>
+      unit(
+        `tg:${m[1]}`,
+        body
+          .slice(m.index, starts[i + 1]?.index ?? body.length)
+          .replace(/\s*<\/section>[\s\S]*$/, '')
+          .replace(/\s*<div class="tgme_widget_message_wrap[^"]*">\s*$/, '')
+          .trimEnd(),
+      ),
+    );
   }
   if (r.kind === 'rss' || r.api === 'gdacs') {
     const prefix = r.api ?? `rss:${r.sourceId}`;
@@ -193,8 +207,9 @@ export interface TelegramMeta {
 const tmeTarget = (href: string) => href.match(/^https?:\/\/t\.me\/(?:s\/)?([A-Za-z0-9_]+(?:\/\d+)?)/)?.[1];
 
 export function telegramMeta(block: string): TelegramMeta {
-  const fwd = block.match(/class="tgme_widget_message_forwarded_from_name"(?:\s+href="([^"]+)")?[^>]*>([\s\S]*?)<\/(?:a|span)>/);
-  const reply = block.match(/class="tgme_widget_message_reply"\s+href="([^"]+)"/);
+  // Telegram adds classes like "user-color-default", so the class attribute is matched by its start.
+  const fwd = block.match(/class="tgme_widget_message_forwarded_from_name[^"]*"(?:\s+href="([^"]+)")?[^>]*>([\s\S]*?)<\/(?:a|span)>/);
+  const reply = block.match(/class="tgme_widget_message_reply[^"]*"\s+href="([^"]+)"/);
   const viewsRaw = block.match(/<span class="tgme_widget_message_views">([^<]+)<\/span>/)?.[1];
   const metaAt = block.indexOf('tgme_widget_message_meta');
   const textAt = block.indexOf('js-message_text');

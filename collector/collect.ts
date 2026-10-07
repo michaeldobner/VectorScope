@@ -90,7 +90,7 @@ if (RAW_DIR) {
     const legacy = writeLegacy(RAW_DIR, archive.items, now);
     if (legacy) console.log(`Raw archive starts, ${archive.items.length} earlier reports kept in ${legacy}`);
   }
-  const raw = writeRawRound({ rawDir: RAW_DIR, stateFile, at: now, ms: Date.now() - now, responses, sensorItems, sources: SOURCES.length, ok });
+  const raw = writeRawRound({ rawDir: RAW_DIR, stateFile, at: now, ms: Date.now() - now, responses, sensorItems, sources: Object.keys(run.sources).length, ok });
   console.log(`Raw ${raw.file}: ${raw.round.units} units, ${raw.round.fresh} new, ${raw.round.changed} changed`);
 }
 

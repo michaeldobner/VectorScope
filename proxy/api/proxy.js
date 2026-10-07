@@ -86,6 +86,8 @@ const TELEGRAM = [
   'rybar_stan',
   'rybar_africa',
   'rybar_latam',
+  'rybar_tactical',
+  'rybar_america',
   'wargonzo',
   'dva_majors',
   'Middle_East_Spectator',

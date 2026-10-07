@@ -2,7 +2,7 @@
 
 [English version](../en/sources.md) · [Übersicht](README.md)
 
-INTEL liest 72 Quellen in sieben Klassen, aus Russland, der Ukraine, Nahost, Europa, Deutschland und den USA sowie globale Sensoren. Qualität vor Menge: Jede Quelle wurde im Test-Labor mit echtem Internet geprüft, bevor sie aufgenommen wurde. Die Liste steht in `src/data/sources.ts`.
+INTEL liest 74 Quellen in sieben Klassen, aus Russland, der Ukraine, Nahost, Europa, Deutschland und den USA sowie globale Sensoren. Qualität vor Menge: Jede Quelle wurde im Test-Labor mit echtem Internet geprüft, bevor sie aufgenommen wurde. Die Liste steht in `src/data/sources.ts`.
 
 ## Klasse und Trust
 
@@ -125,12 +125,14 @@ Schnell, aber klar interessengeleitet. Wertvoll als frühes Signal, schwach als 
 | Rybar Turanar | Global | Russisch | 45 | pro-Russian, Netzwerk Rybar | Telegram `rybar_stan` |
 | Rybar Afrikar | Global | Russisch | 45 | pro-Russian, Netzwerk Rybar | Telegram `rybar_africa` |
 | Rybar Latinar | Global | Russisch | 45 | pro-Russian, Netzwerk Rybar | Telegram `rybar_latam` |
+| Rybar Tactical | Ukraine | Russisch | 45 | pro-Russian, Netzwerk Rybar | Telegram `rybar_tactical` |
+| Rybar America | USA | Russisch | 45 | pro-Russian, Netzwerk Rybar | Telegram `rybar_america` |
 | WarGonzo | Russland | Russisch | 40 | pro-Russian | Telegram `wargonzo` |
 | Dva Mayora | Russland | Russisch | 40 | pro-Russian | Telegram `dva_majors` |
 | Middle East Spectator | Nahost | Englisch | 40 | Iran and resistance aligned | Telegram `Middle_East_Spectator` |
 | Abu Ali Express | Nahost | Hebräisch | 50 | Israeli | Telegram `abualiexpress` |
 
-**Netzwerke.** Rybar betreibt elf Kanäle für seine Regionen. Dahinter steht eine Redaktion, deshalb zählt INTEL sie als **eine** Quelle: In einer Story zählt der Kanal, der zuerst gemeldet hat, die anderen stehen als Echo dabei. Zwei Rybar-Kanäle allein ergeben nie eine Story mehrerer Quellen.
+**Netzwerke.** Rybar betreibt dreizehn Kanäle für seine Regionen und Themen. Zwei davon, Tactical und America, wurden über den Weiterleitungs-Graphen des Rohdaten-Archivs gefunden. Dahinter steht eine Redaktion, deshalb zählt INTEL sie als **eine** Quelle: In einer Story zählt der Kanal, der zuerst gemeldet hat, die anderen stehen als Echo dabei. Zwei Rybar-Kanäle allein ergeben nie eine Story mehrerer Quellen.
 
 ## Bestätigend
 

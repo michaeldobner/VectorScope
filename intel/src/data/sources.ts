@@ -108,6 +108,8 @@ export const SOURCES: Source[] = [
   { id: 'rybar-turan', name: 'Rybar Turanar (Central Asia)', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'global', lang: 'ru', ...tg('rybar_stan') },
   { id: 'rybar-africa', name: 'Rybar Afrikar (Africa)', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'global', lang: 'ru', ...tg('rybar_africa') },
   { id: 'rybar-latam', name: 'Rybar Latinar (Latin America)', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'global', lang: 'ru', ...tg('rybar_latam') },
+  { id: 'rybar-tactical', name: 'Rybar Tactical', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'ukraine', lang: 'ru', ...tg('rybar_tactical') },
+  { id: 'rybar-america', name: 'Rybar America', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'usa', lang: 'ru', ...tg('rybar_america') },
   { id: 'wargonzo', name: 'WarGonzo', tier: 'perspective', category: 'military', region: 'russia', lang: 'ru', trust: 40, perspective: 'pro-Russian', ...tg('wargonzo') },
   { id: 'dvamajora', name: 'Dva Mayora', tier: 'perspective', category: 'military', region: 'russia', lang: 'ru', trust: 40, perspective: 'pro-Russian', ...tg('dva_majors') },
   { id: 'mes', name: 'Middle East Spectator', tier: 'perspective', category: 'military', region: 'mideast', lang: 'en', trust: 40, perspective: 'Iran and resistance aligned', ...tg('Middle_East_Spectator') },

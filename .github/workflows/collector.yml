@@ -25,7 +25,7 @@ concurrency:
 
 env:
   # Last day of the probe (UTC). After it the workflow does nothing.
-  PROBE_UNTIL: '20261012'
+  PROBE_UNTIL: '20270131'
   # Minutes between two rounds and how long one run keeps collecting.
   EVERY_MIN: 10
   RUN_MIN: 340

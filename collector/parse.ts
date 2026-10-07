@@ -65,9 +65,10 @@ export function parseArchive(dir: string): { reports: Report[]; problems: { key:
   const urls = new Set<string>();
   for (const [key, { first, last, versions }] of units) {
     const items = parseUnit(last);
-    // A Telegram post without text (only a picture) or an earthquake below the threshold is no report, not a problem.
+    // A Telegram post without text (only a picture), a Bluesky repost or an earthquake below the threshold
+    // is no report, not a problem.
     if (!items.length) {
-      if (last.kind === 'rss' || last.kind === 'bluesky') problems.push({ key, src: last.src, v: last.v, round: last.round });
+      if (last.kind === 'rss' || (last.kind === 'bluesky' && !key.includes(':repost:'))) problems.push({ key, src: last.src, v: last.v, round: last.round });
       continue;
     }
     const meta = last.kind === 'telegram' ? telegramMeta(last.body) : undefined;

@@ -2,14 +2,14 @@
 
 [Deutsche Version](../de/sammler.md) · [Overview](README.md)
 
-INTEL only loads while it is open, and a Telegram channel shows only its last 20 or so posts. Busy channels like Clash Report post more than 300 times a day, so most of it would never be seen. The probe collector closes that gap for one week, at no cost, and answers the question whether a permanent collector is worth it.
+INTEL only loads while it is open, and a Telegram channel shows only its last 20 or so posts. Busy channels like Clash Report post more than 300 times a day, so most of it would never be seen. The probe collector closes that gap at no cost until the end of January 2027, keeps the raw archive growing and answers the question whether a permanent collector on a server is worth it.
 
 ## What it does
 
 | | |
 |---|---|
 | Runs | Every 10 minutes on GitHub Actions (`.github/workflows/collector.yml`). GitHub starts scheduled runs on a quiet repository only every few hours, so one run keeps collecting for almost six hours and the hourly schedule queues the next. A change to the collector or the sources replaces the running collection at once |
-| Until | 12 October 2026, then the workflow does nothing. `PROBE_UNTIL` in the workflow changes the date |
+| Until | 31 January 2027, then the workflow does nothing. `PROBE_UNTIL` in the workflow changes the date |
 | Loads | Every source of INTEL directly from the publishers, no proxy needed on a server |
 | Keeps | Every report of the last 7 days with the time it was first seen, plus the key of every report ever seen, so a report never counts as new twice |
 | Publishes | Branch `collector-data` as a single commit, so the repository does not grow |
@@ -33,7 +33,7 @@ Next to it the branch `collector-raw` keeps every answer of every source for goo
 
 On every refresh INTEL loads `latest.json` from `raw.githubusercontent.com` in addition to the live sources and merges both. Reports that scrolled out of a channel while the app was closed are therefore there. Under Sources the card shows when the collector last ran.
 
-## Evaluation after one week
+## Evaluation
 
 The evaluation answers:
 

@@ -83,7 +83,7 @@ Every line of a round file is one JSON object. The field `t` says what it is.
 
 ### When a unit counts as changed
 
-The fingerprint leaves out what changes without the content changing: view counters and signed image links in Telegram, likes, reposts and avatars in Bluesky, the update time of the FAA document. An edited Telegram post or a revised earthquake magnitude is a new version. Views are therefore stored with each version, not every round.
+The fingerprint leaves out what changes without the content changing: in Telegram the view counter, the reactions, the signed token `data-view` that is new on every request and signed image links; in Bluesky likes, reposts, quotes and avatars, also of quoted posts; the update time of the FAA document. Checked on two real rounds: without these rules 758 of 1,552 units counted as changed, with them only the real changes (an FAA status, a GDACS cyclone update). An edited Telegram post or a revised earthquake magnitude is a new version. Views are therefore stored with each version, not every round.
 
 ### State and guarantees
 
@@ -109,7 +109,7 @@ npx tsx collector/parse.ts ../vs-raw parsed
 | `firstSeen`, `lastChanged`, `versions` | First time seen, time of the newest version, number of versions |
 | `telegram` | `forwardedFrom` (channel/post or name), `replyTo`, `views`, `edited`, `links`, `mentions`, `media` |
 
-`parsed/problems.jsonl.gz` lists RSS and Bluesky units that did not parse. Telegram posts without text and earthquakes below magnitude 5 are no problem, they are simply no report.
+`parsed/problems.jsonl.gz` lists RSS and Bluesky units that did not parse. Telegram posts without text, Bluesky reposts and earthquakes below magnitude 5 are no problem, they are simply no report.
 
 A better parser means: change `intel/src/data/*.ts`, run `parse.ts` again, done. The raw archive stays as it is.
 
@@ -170,7 +170,7 @@ COPY (SELECT * EXCLUDE (text) FROM read_json_auto('parsed/reports.jsonl.gz')) TO
 
 ### 1. Keep collecting after the probe
 
-The workflow stops on `PROBE_UNTIL` (12 October 2026). To keep the archive growing, move the date in `.github/workflows/collector.yml`. GitHub Actions is free for public repositories. The 6 hour runs restart every hour by schedule, gaps show in `health.json`.
+The workflow stops on `PROBE_UNTIL` (31 January 2027, moved from 12 October 2026). To keep the archive growing beyond that, move the date in `.github/workflows/collector.yml`. GitHub Actions is free for public repositories. The 6 hour runs restart every hour by schedule, gaps show in `health.json`.
 
 ### 2. Move to a server
 
