@@ -28,6 +28,7 @@
     "intel/vite.config.ts",
     "tests",
     "vitest.config.ts",
-    "proxy/lib/*.d.ts"
+    "proxy/lib/*.d.ts",
+    "collector"
   ]
 }

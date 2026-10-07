@@ -13,6 +13,7 @@ Diese Dokumentation beschreibt das Modul INTEL: die Bedienung, welche Quellen es
 | [Abgleich](abgleich.md) | Erkennung von Callsigns, Typen und Orten, Regeln und Grenzen des Live-Abgleichs | Alle, Entwicklung |
 | [Architektur](architektur.md) | Module, Datenfluss, Proxy-Routen, Speicher, Tests | Entwicklung |
 | [Probe-Sammler](sammler.md) | Eine Woche Sammeln auf GitHub Actions, Dateien, Auswertung | Alle, Entwicklung |
+| [Rohdaten](rohdaten.md) | Das Rohdaten-Archiv: Aufbau, Datensatzformat, Parsing, Prüfungen, Analyse mit DuckDB und Gephi, wie es weitergeht | Entwicklung, Analyse |
 | [Datenschutz und Recht](datenschutz-und-recht.md) | Anfragen, Speicherung, Auszüge und Links, Lizenzen | Alle |
 
 ## INTEL auf einen Blick

@@ -77,6 +77,6 @@ Der Service Worker `public/sw.js` mit dem Speicher `vectorscope-intel-v1` hält 
 | `tests/translate.test.ts` | Google-Antwort, Pakete, Reihenfolge, Ausweichweg je Text |
 | `data/stories.test.ts` | Telegram-Webansicht, Bündelung, Status, Vorsprung, Reihenfolge, keine Selbstbestätigung |
 
-Der Probe-Sammler `collector/collect.ts` nutzt dieselben Module in Node.js, siehe [Probe-Sammler](sammler.md).
+Der Probe-Sammler `collector/collect.ts` nutzt dieselben Module in Node.js, siehe [Probe-Sammler](sammler.md). Über `LoadOptions.onRaw` bekommt er jede Antwort unverändert und legt sie im Rohdaten-Archiv ab, siehe [Rohdaten](rohdaten.md).
 
 Der Rauchtest öffnet INTEL im Demo-Modus in vier Gerätegrößen, das Test-Labor öffnet es mit Live-Daten und folgt dem ersten Live-Treffer nach AIR.

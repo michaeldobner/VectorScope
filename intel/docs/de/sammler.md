@@ -23,7 +23,11 @@ Das Skript ist `collector/collect.ts`. Es nutzt dieselben Lade-, Lese- und Zusam
 |---|---|---|
 | `latest.json` | Meldungen der letzten 72 Stunden, Auszüge gekürzt | INTEL im Browser |
 | `archive.json` | Jede Meldung der letzten 7 Tage | Auswertung |
-| `stats.json` | Ein Eintrag pro Runde: je Quelle ok, Zahl der Meldungen, neue Meldungen der letzten 24 Stunden, Fehler | Auswertung |
+| `stats.json` | Ein Eintrag pro Runde: je Quelle ok, Zahl der Meldungen, neue Meldungen der letzten 24 Stunden, Fehler | Auswertung, Prüfungen |
+| `health.json` | Prüfungen nach jeder Runde: ausgefallene und stille Quellen, Lücken, Meldungen, die eine Annahme verletzen | Überwachung |
+| `raw-state.json` | Welche Roh-Einheiten bekannt sind, mit Fingerabdruck und Version | Sammler |
+
+Daneben behält der Branch `collector-raw` jede Antwort jeder Quelle dauerhaft, eine Datei pro Runde. Aufbau, Format und Auswertung: [Rohdaten](rohdaten.md).
 
 ## In der App
 

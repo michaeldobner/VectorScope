@@ -77,6 +77,6 @@ Service worker `public/sw.js` with cache `vectorscope-intel-v1` keeps the app sh
 | `tests/translate.test.ts` | Google answer, chunks, order, fallback per text |
 | `data/stories.test.ts` | Telegram web preview, grouping, status, lead time, order, no self confirmation |
 
-The probe collector `collector/collect.ts` uses the same modules in Node.js, see [Probe collector](collector.md).
+The probe collector `collector/collect.ts` uses the same modules in Node.js, see [Probe collector](collector.md). Through `LoadOptions.onRaw` it receives every answer unchanged and keeps it in the raw archive, see [Raw data](raw-data.md).
 
 The smoke test opens INTEL in demo mode on four device sizes, the test lab opens it with live data and follows the first live match into AIR.

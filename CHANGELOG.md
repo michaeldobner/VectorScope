@@ -4,6 +4,13 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.9.0 (2026-10-07)
+
+### Added
+* **Raw archive:** the probe collector keeps every answer of every source as it came, split into units (one post, one item, one event), new or changed units only, one file per round on the branch `collector-raw`. The reports collected since 30 September are kept once as well. See [Raw data](intel/docs/en/raw-data.md).
+* `collector/parse.ts` turns the raw archive back into reports with the parsers of INTEL, including forwards, replies, views and links of Telegram posts.
+* Checks after every round in `health.json` and in the summary of the run: failing and silent sources, gaps, reports that break an assumption.
+
 ## 0.8.1 (2026-10-06)
 
 ### Changed

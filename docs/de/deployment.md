@@ -46,7 +46,7 @@ Bleibt die Source auf **Deploy from a branch**, veröffentlicht GitHub bei jedem
 | `.github/workflows/tests.yml` | Jedem Push und Pull Request | Typprüfung, Unit-Tests und Prüfungen des Repositorys, Build |
 | `.github/workflows/deploy.yml` | Push auf `main`, von Hand | Tests, Build, Upload, Veröffentlichung auf Pages |
 | `.github/workflows/e2e.yml` | Jedem Push und Pull Request | Rauchtest in iPhone- und iPad-Größen mit Chromium und WebKit, Screenshots als Artefakt |
-| `.github/workflows/collector.yml` | Alle 10 Minuten bis 12. Oktober 2026, von Hand | Probe-Sammler für INTEL, Daten im Branch `collector-data`, siehe [Probe-Sammler](../../intel/docs/de/sammler.md) |
+| `.github/workflows/collector.yml` | Alle 10 Minuten bis 12. Oktober 2026, von Hand | Probe-Sammler für INTEL, aktuelle Daten im Branch `collector-data`, Rohdaten-Archiv in `collector-raw`, siehe [Rohdaten](../../intel/docs/de/rohdaten.md) und [Probe-Sammler](../../intel/docs/de/sammler.md) |
 | `.github/workflows/lab.yml` | Push auf `main` mit Änderungen an Modulen, Labor oder Proxy, von Hand | Test-Labor mit echtem Internet: echte API-Antworten und Screenshots mit Live-Daten, Ergebnisse im Branch `lab-results` |
 
 ## CORS-Proxy auf Vercel

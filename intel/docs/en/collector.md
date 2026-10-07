@@ -23,7 +23,11 @@ The script is `collector/collect.ts`. It uses the same loaders, parsers and merg
 |---|---|---|
 | `latest.json` | Reports of the last 72 hours, excerpts shortened | INTEL in the browser |
 | `archive.json` | Every report of the last 7 days | Evaluation |
-| `stats.json` | One record per round: per source ok, number of reports, new reports of the last 24 hours, error | Evaluation |
+| `stats.json` | One record per round: per source ok, number of reports, new reports of the last 24 hours, error | Evaluation, checks |
+| `health.json` | Checks after every round: failing and silent sources, gaps, reports that break an assumption | Monitoring |
+| `raw-state.json` | Which raw units are known, with fingerprint and version | Collector |
+
+Next to it the branch `collector-raw` keeps every answer of every source for good, one file per round. Structure, format and analysis: [Raw data](raw-data.md).
 
 ## In the app
 

@@ -4,6 +4,13 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.9.0 (2026-10-07)
+
+### Neu
+* **Rohdaten-Archiv:** Der Probe-Sammler behält jede Antwort jeder Quelle so, wie sie kam, zerlegt in Einheiten (ein Beitrag, ein Eintrag, ein Ereignis), nur neue oder geänderte, eine Datei pro Runde im Branch `collector-raw`. Die seit 30. September gesammelten Meldungen werden einmalig mit abgelegt. Siehe [Rohdaten](intel/docs/de/rohdaten.md).
+* `collector/parse.ts` macht aus dem Rohdaten-Archiv wieder Meldungen, mit den Parsern von INTEL, einschließlich Weiterleitungen, Antworten, Aufrufen und Links von Telegram-Beiträgen.
+* Prüfungen nach jeder Runde in `health.json` und in der Zusammenfassung des Laufs: ausgefallene und stille Quellen, Lücken, Meldungen, die eine Annahme verletzen.
+
 ## 0.8.1 (2026-10-06)
 
 ### Geändert

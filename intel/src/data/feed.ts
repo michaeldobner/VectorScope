@@ -27,28 +27,60 @@ export interface SourceStatus {
 const NODE_HEADERS: Record<string, string> =
   typeof window === 'undefined' ? { 'User-Agent': 'VectorScope-collector/0.1 (+https://github.com/michaeldobner/VectorScope)' } : {};
 
-async function getText(url: string): Promise<string> {
-  const r = await fetch(url, { headers: NODE_HEADERS, signal: AbortSignal.timeout(TIMEOUT_MS) });
-  if (!r.ok) throw new Error(`HTTP ${r.status}`);
-  return r.text();
+/** One answer of a publisher exactly as it came, handed to the collector for the raw archive. */
+export interface RawResponse {
+  sourceId: string;
+  kind: 'rss' | 'telegram' | 'bluesky' | 'api';
+  /** For kind api: usgs, emsc, gdacs, nws or faa. */
+  api?: string;
+  url: string;
+  /** Epoch ms when the request started. */
+  at: number;
+  ms: number;
+  /** HTTP status, null if no answer came (network error, timeout). */
+  status: number | null;
+  /** Body of a successful answer. */
+  body?: string;
+  error?: string;
 }
 
 /**
  * direct: fetch the publishers themselves, used by the collector on GitHub Actions where browsers rules do not apply.
  * Otherwise RSS and Telegram go through the proxy, Bluesky always directly.
+ * onRaw: receives every answer unchanged, used by the collector to keep the raw data.
  */
 export interface LoadOptions {
   direct?: boolean;
+  onRaw?: (r: RawResponse) => void;
+}
+
+type RawMeta = Pick<RawResponse, 'sourceId' | 'kind' | 'api'>;
+
+async function getText(url: string, opt: LoadOptions = {}, meta?: RawMeta): Promise<string> {
+  const at = Date.now();
+  let status: number | null = null;
+  try {
+    const r = await fetch(url, { headers: NODE_HEADERS, signal: AbortSignal.timeout(TIMEOUT_MS) });
+    status = r.status;
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const body = await r.text();
+    if (meta) opt.onRaw?.({ ...meta, url, at, ms: Date.now() - at, status, body });
+    return body;
+  } catch (e) {
+    if (meta) opt.onRaw?.({ ...meta, url, at, ms: Date.now() - at, status, error: String((e as Error)?.message ?? e) });
+    throw e;
+  }
 }
 
 async function loadRss(source: Source, opt: LoadOptions): Promise<Item[]> {
-  if (opt.direct) return parseFeed(await getText(source.rss!), source.id);
+  const meta: RawMeta = { sourceId: source.id, kind: 'rss' };
+  if (opt.direct) return parseFeed(await getText(source.rss!, opt, meta), source.id);
   try {
-    return parseFeed(await getText(`${PROXY}/feed/${source.id}`), source.id);
+    return parseFeed(await getText(`${PROXY}/feed/${source.id}`, opt, meta), source.id);
   } catch (proxyError) {
     // Some feeds allow browser access themselves, try them directly before giving up.
     try {
-      return parseFeed(await getText(source.rss!), source.id);
+      return parseFeed(await getText(source.rss!, opt, meta), source.id);
     } catch {
       throw proxyError;
     }
@@ -57,13 +89,13 @@ async function loadRss(source: Source, opt: LoadOptions): Promise<Item[]> {
 
 async function loadTelegram(source: Source, opt: LoadOptions): Promise<Item[]> {
   const url = opt.direct ? `https://t.me/s/${source.telegram}` : `${PROXY}/tg/${source.telegram}`;
-  return parseTelegram(await getText(url), source.id);
+  return parseTelegram(await getText(url, opt, { sourceId: source.id, kind: 'telegram' }), source.id);
 }
 
 async function loadApi(source: Source, opt: LoadOptions): Promise<Item[]> {
   const api = source.api!;
   const url = !opt.direct && VIA_PROXY.includes(api) ? `${PROXY}/feed/${api}` : API_URL[api];
-  const text = await getText(url);
+  const text = await getText(url, opt, { sourceId: source.id, kind: 'api', api });
   switch (api) {
     case 'usgs':
       return parseUsgs(JSON.parse(text), source.id);
@@ -78,8 +110,8 @@ async function loadApi(source: Source, opt: LoadOptions): Promise<Item[]> {
   }
 }
 
-async function loadBluesky(source: Source): Promise<Item[]> {
-  return parseAuthorFeed(JSON.parse(await getText(authorFeedUrl(source.bluesky!))), source.id);
+async function loadBluesky(source: Source, opt: LoadOptions): Promise<Item[]> {
+  return parseAuthorFeed(JSON.parse(await getText(authorFeedUrl(source.bluesky!), opt, { sourceId: source.id, kind: 'bluesky' })), source.id);
 }
 
 /** Both channels of one source. Fails only if every channel fails. */
@@ -87,7 +119,7 @@ export async function loadSource(source: Source, opt: LoadOptions = {}): Promise
   const jobs = [
     source.rss && loadRss(source, opt),
     source.telegram && loadTelegram(source, opt),
-    source.bluesky && loadBluesky(source),
+    source.bluesky && loadBluesky(source, opt),
     source.api && loadApi(source, opt),
   ].filter(Boolean) as Promise<Item[]>[];
   const results = await Promise.allSettled(jobs);

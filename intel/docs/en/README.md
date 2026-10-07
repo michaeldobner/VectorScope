@@ -13,6 +13,7 @@ This documentation describes module INTEL: how to use it, which sources it reads
 | [Matching](matching.md) | Recognition of callsigns, types and places, rules and limits of the live match | Everyone, development |
 | [Architecture](architecture.md) | Modules, data flow, proxy routes, storage, tests | Development |
 | [Probe collector](collector.md) | One week of collecting on GitHub Actions, files, evaluation | Everyone, development |
+| [Raw data](raw-data.md) | The raw archive: structure, record format, parsing, checks, analysis with DuckDB and Gephi, how to continue | Development, analysis |
 | [Privacy and legal](privacy-and-legal.md) | Requests, storage, excerpts and links, licences | Everyone |
 
 ## INTEL at a glance
