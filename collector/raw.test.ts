@@ -19,7 +19,7 @@ const post = (id: number, text: string, views = '1.2K', extra = '') => `
   </div>
 </div></div>`;
 const page = (...posts: string[]) => `<html><body><section class="tgme_channel_history js-message_history">${posts.join('')}</section></body></html>`;
-const FWD = '<div class="tgme_widget_message_forwarded_from accent_color">Forwarded from <a class="tgme_widget_message_forwarded_from_name" href="https://t.me/rybar/555"><span dir="auto">Рыбарь</span></a></div><a class="tgme_widget_message_reply" href="https://t.me/bazabazon/40"></a>';
+const FWD = '<div class="tgme_widget_message_forwarded_from accent_color">Forwarded from <a class="tgme_widget_message_forwarded_from_name" href="https://t.me/rybar/555"><span dir="auto">Рыбарь</span></a></div><a class="tgme_widget_message_reply user-color-default" href="https://t.me/bazabazon/40"></a>';
 
 const tg = (body: string, at: number): RawResponse => ({ sourceId: 'baza', kind: 'telegram', url: 'https://t.me/s/bazabazon', at, ms: 300, status: 200, body });
 
@@ -31,6 +31,13 @@ describe('raw units', () => {
     expect(b[0].hash).toBe(a[0].hash);
     expect(b[1].hash).not.toBe(a[1].hash);
     expect(a[1].body).not.toContain('</section>');
+  });
+
+  it('ignores the signed view token, reactions and the position on the page', () => {
+    const p = (view: string, reaction: string) => post(41, 'Взрыв на нефтебазе в Туапсе.', '1K', `<span class="tgme_reaction"><i class="emoji"><b>🙏</b></i>${reaction}</span>`).replace('data-view="x"', `data-view="${view}"`);
+    const last = splitUnits(tg(page(p('abc', '154')), 0))[0];
+    const middle = splitUnits(tg(page(p('def', '190'), post(42, 'Пожар в порту.')), 0))[0];
+    expect(middle.hash).toBe(last.hash);
   });
 
   it('splits RSS by item with guid or link as key', () => {

@@ -83,7 +83,7 @@ Jede Zeile einer Rundendatei ist ein JSON-Objekt. Das Feld `t` sagt, was es ist.
 
 ### Wann eine Einheit als geändert gilt
 
-Der Fingerabdruck lässt weg, was sich ändert, ohne dass sich der Inhalt ändert: Aufrufzähler und signierte Bildlinks bei Telegram, Likes, Reposts und Profilbilder bei Bluesky, die Aktualisierungszeit des FAA-Dokuments. Ein bearbeiteter Telegram-Beitrag oder eine korrigierte Erdbebenstärke ist eine neue Version. Aufrufe werden deshalb mit jeder Version gespeichert, nicht jede Runde.
+Der Fingerabdruck lässt weg, was sich ändert, ohne dass sich der Inhalt ändert: bei Telegram der Aufrufzähler, die Reaktionen, das signierte Token `data-view`, das bei jeder Anfrage neu ist, und signierte Bildlinks; bei Bluesky Likes, Reposts, Zitate und Profilbilder, auch von zitierten Beiträgen; die Aktualisierungszeit des FAA-Dokuments. Geprüft an zwei echten Runden: Ohne diese Regeln galten 758 von 1.552 Einheiten als geändert, mit ihnen nur die echten Änderungen (ein FAA-Status, ein GDACS-Update zu einem Wirbelsturm). Ein bearbeiteter Telegram-Beitrag oder eine korrigierte Erdbebenstärke ist eine neue Version. Aufrufe werden deshalb mit jeder Version gespeichert, nicht jede Runde.
 
 ### Zustand und Zusicherungen
 
@@ -109,7 +109,7 @@ npx tsx collector/parse.ts ../vs-raw parsed
 | `firstSeen`, `lastChanged`, `versions` | Erstes Sehen, Zeitpunkt der neuesten Version, Zahl der Versionen |
 | `telegram` | `forwardedFrom` (Kanal/Beitrag oder Name), `replyTo`, `views`, `edited`, `links`, `mentions`, `media` |
 
-`parsed/problems.jsonl.gz` listet RSS- und Bluesky-Einheiten, die sich nicht zerlegen ließen. Telegram-Beiträge ohne Text und Erdbeben unter Stärke 5 sind kein Problem, sie sind einfach keine Meldung.
+`parsed/problems.jsonl.gz` listet RSS- und Bluesky-Einheiten, die sich nicht zerlegen ließen. Telegram-Beiträge ohne Text, Bluesky-Reposts und Erdbeben unter Stärke 5 sind kein Problem, sie sind einfach keine Meldung.
 
 Ein besserer Parser heißt: `intel/src/data/*.ts` ändern, `parse.ts` erneut laufen lassen, fertig. Das Rohdaten-Archiv bleibt, wie es ist.
 

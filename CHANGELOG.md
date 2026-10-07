@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.9.1 (2026-10-07)
+
+### Fixed
+* Raw archive: Telegram posts no longer count as changed because of the signed view token, reactions or their position on the page, Bluesky posts not because of counters in quoted posts. Replies of Telegram posts are recognised, Bluesky reposts are not reported as parsing problems.
+
 ## 0.9.0 (2026-10-07)
 
 ### Added

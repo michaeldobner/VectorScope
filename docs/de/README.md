@@ -31,4 +31,4 @@ Diese Dokumentation beschreibt die VectorScope-Sammlung als Ganzes: wie das Repo
 | Hosting | GitHub Pages, Proxy auf Vercel |
 | Datenschutz | Kein Konto, keine Speicherung auf Servern, Standort nur auf dem Gerät |
 | Adresse | https://michaeldobner.github.io/VectorScope/ |
-| Version | 0.9.0 |
+| Version | 0.9.1 |

@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.9.1 (2026-10-07)
+
+### Behoben
+* Rohdaten-Archiv: Telegram-Beiträge gelten nicht mehr als geändert wegen des signierten Aufruf-Tokens, der Reaktionen oder ihrer Position auf der Seite, Bluesky-Beiträge nicht wegen Zählern in zitierten Beiträgen. Antworten von Telegram-Beiträgen werden erkannt, Bluesky-Reposts gelten nicht als Parsing-Problem.
+
 ## 0.9.0 (2026-10-07)
 
 ### Neu
