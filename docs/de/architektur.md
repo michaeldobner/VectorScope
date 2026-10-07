@@ -25,7 +25,9 @@ VectorScope/
 ├─ intel/                  Modul INTEL: geprüfter OSINT-Feed mit Live-Abgleich (React, TypeScript)
 ├─ proxy/                  CORS-Proxy auf Vercel, für alle Module
 ├─ lab/                    Test-Labor mit echtem Internet (GitHub Actions)
-├─ collector/              Probe-Sammler und Rohdaten-Archiv für INTEL (GitHub Actions)
+├─ collector/              Probe-Sammler und Rohdaten-Archiv für INTEL (GitHub Actions, eigener Server)
+├─ server/                 Webserver, Sammler-Schleife und Image für den eigenen Server, siehe server.md
+├─ docker-compose.yaml     der Stack für Coolify
 ├─ scripts/
 │  ├─ build.mjs            ergänzt Startseite und gemeinsame Dateien in dist/
 │  ├─ serve.mjs            liefert dist/ aus wie GitHub Pages

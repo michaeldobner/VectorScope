@@ -7,11 +7,14 @@
 //
 // On the very first start the data of the GitHub Actions collector is taken over (SEED_FROM), so no
 // report counts as new twice and the raw archive continues where the branch collector-raw ends.
-// Env: DATA_DIR (/data), EVERY_MIN (10), SEED_FROM, DATABASE_URL, VECTORSCOPE_PROXY.
+// With RAW_PUSH_URL every round file also goes to the branch collector-raw (server/raw-git.mjs):
+// one continuous archive, with a copy off the server.
+// Env: DATA_DIR (/data), EVERY_MIN (10), SEED_FROM, DATABASE_URL, VECTORSCOPE_PROXY, RAW_PUSH_URL, RAW_SUFFIX.
 import { spawn } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { prepareRawRepo, pushRaw, quiet } from './raw-git.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dataDir = process.env.DATA_DIR ?? '/data';
@@ -50,6 +53,20 @@ function round() {
   });
 }
 
+const pushUrl = process.env.RAW_PUSH_URL;
+let rawPush = pushUrl ? 'not yet' : 'off';
+function pushRound() {
+  if (!pushUrl) return;
+  try {
+    if (!existsSync(join(rawDir, '.git')) && !prepareRawRepo(rawDir, pushUrl)) return (rawPush = 'branch not reachable');
+    rawPush = pushRaw(rawDir, pushUrl);
+  } catch (e) {
+    // The round files stay on the server and go out with the next push.
+    rawPush = 'failed';
+    console.log(`Raw push failed, next round tries again: ${quiet(e.stderr ?? e.message)}`);
+  }
+}
+
 function writeHeartbeat(exit) {
   let ok = 0;
   let total = 0;
@@ -64,13 +81,16 @@ function writeHeartbeat(exit) {
   } catch {
     // A round that failed before writing leaves the counts at zero, the exit code tells why.
   }
-  writeFileSync(join(dataDir, 'heartbeat.json'), JSON.stringify({ at: Date.now(), exit, ok, total, items }));
+  writeFileSync(join(dataDir, 'heartbeat.json'), JSON.stringify({ at: Date.now(), exit, ok, total, items, rawPush }));
 }
 
 await seed();
+// Before the first round, so the round files land in the checkout of the branch.
+if (pushUrl) prepareRawRepo(rawDir, pushUrl);
 for (;;) {
   const start = Date.now();
   const exit = await round();
+  if (exit === 0 || exit === 2) pushRound();
   // Exit 2: round collected and written, only the database failed. The heartbeat stays fresh,
   // the status page sees the database itself.
   if (exit === 0 || exit === 2) writeHeartbeat(exit);

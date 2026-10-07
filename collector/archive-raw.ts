@@ -14,10 +14,14 @@ const DAY = 24 * 3600_000;
 type State = Record<string, [string, number, number]>;
 
 export const roundId = (at: number) => new Date(at).toISOString().slice(0, 16) + 'Z';
-/** raw/2026/10/08/2110.jsonl.gz, UTC. */
+/**
+ * raw/2026/10/08/2110.jsonl.gz, UTC. RAW_SUFFIX names the collector when several write into one archive
+ * (the own server writes 2110-srv.jsonl.gz), so two rounds in the same minute never collide.
+ */
+const suffix = () => (process.env.RAW_SUFFIX ? `-${process.env.RAW_SUFFIX.replace(/[^a-z0-9]/gi, '')}` : '');
 export const roundPath = (at: number) => {
   const iso = new Date(at).toISOString();
-  return `raw/${iso.slice(0, 4)}/${iso.slice(5, 7)}/${iso.slice(8, 10)}/${iso.slice(11, 13)}${iso.slice(14, 16)}.jsonl.gz`;
+  return `raw/${iso.slice(0, 4)}/${iso.slice(5, 7)}/${iso.slice(8, 10)}/${iso.slice(11, 13)}${iso.slice(14, 16)}${suffix()}.jsonl.gz`;
 };
 
 export const toJsonl = (records: RawRecord[]) => gzipSync(records.map((r) => JSON.stringify(r)).join('\n') + '\n');
@@ -116,7 +120,7 @@ export function writeRawRound(opts: {
  * so the history since the probe began is not lost.
  */
 export function writeLegacy(rawDir: string, items: Item[], at: number): string | null {
-  const file = join(rawDir, 'raw', 'legacy', `archive-${new Date(at).toISOString().slice(0, 10)}.jsonl.gz`);
+  const file = join(rawDir, 'raw', 'legacy', `archive-${new Date(at).toISOString().slice(0, 10)}${suffix()}.jsonl.gz`);
   if (!items.length) return null;
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(file, toJsonl(items.map((item): LegacyRecord => ({ t: 'legacy', item }))));

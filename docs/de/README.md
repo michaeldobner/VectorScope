@@ -11,6 +11,7 @@ Diese Dokumentation beschreibt die VectorScope-Sammlung als Ganzes: wie das Repo
 | [Architektur](architektur.md) | Aufbau des Repositorys, Modulverzeichnis, gemeinsame Hülle, Build, Adressen, Bereiche der Service Worker, Speicher | Entwicklung |
 | [Entwicklung](entwicklung.md) | Einrichtung, Skripte, Unit-Tests, Prüfungen des Repositorys, Rauchtest, Test-Labor, Releases, Modul hinzufügen, Konventionen | Entwicklung |
 | [Deployment](deployment.md) | GitHub Pages, CORS-Proxy auf Vercel, Updates auf den Geräten, Fehlerbehebung | Betrieb |
+| [Eigener Server](server.md) | App, Proxy, Sammler, Datenbank und Rohdaten-Archiv auf einem eigenen Server mit Coolify, Einrichtung, Umstieg, Betrieb | Betrieb |
 | [Roadmap](roadmap.md) | Was als Nächstes kommt, was einen Server braucht, was zurückgestellt ist | Alle |
 
 ## Module
@@ -31,4 +32,4 @@ Diese Dokumentation beschreibt die VectorScope-Sammlung als Ganzes: wie das Repo
 | Hosting | GitHub Pages, Proxy auf Vercel |
 | Datenschutz | Kein Konto, keine Speicherung auf Servern, Standort nur auf dem Gerät |
 | Adresse | https://michaeldobner.github.io/VectorScope/ |
-| Version | 0.10.0 |
+| Version | 0.11.0 |

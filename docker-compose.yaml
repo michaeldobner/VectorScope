@@ -4,6 +4,9 @@
 #   vectorscope-db         PostgreSQL, reachable only inside this stack
 #   vectorscope-backup     daily dump of the database to /var/backups/vectorscope on the host
 # Coolify generates SERVICE_PASSWORD_POSTGRES on the first deploy and keeps it.
+# RAW_PUSH_URL (optional, secret in Coolify): https://x-access-token:<token>@github.com/michaeldobner/VectorScope.git
+#   with a fine-grained token that may write contents of this repository. Then every round file also goes
+#   to the branch collector-raw: one continuous archive with a copy off the server.
 services:
   vectorscope-web:
     build:
@@ -14,6 +17,8 @@ services:
       - DATABASE_URL=postgres://vectorscope:${SERVICE_PASSWORD_POSTGRES}@vectorscope-db:5432/vectorscope
       - DATA_DIR=/data
       - CONTACT=${CONTACT:-github.com/michaeldobner}
+      # The app on this address calls its own /proxy, so the proxy answers browsers of this address only.
+      - ALLOWED_ORIGIN=${ALLOWED_ORIGIN:-https://vectorscope.mdobner.duckdns.org}
     volumes:
       - vectorscope-data:/data
     expose:
@@ -39,6 +44,9 @@ services:
       - DATA_DIR=/data
       - EVERY_MIN=10
       - VECTORSCOPE_PROXY=http://vectorscope-web:8080/proxy
+      # Round files of the server are named HHMM-srv.jsonl.gz, so they never collide with the GitHub collector.
+      - RAW_SUFFIX=srv
+      - RAW_PUSH_URL=${RAW_PUSH_URL:-}
     volumes:
       - vectorscope-data:/data
     depends_on:
@@ -78,6 +86,7 @@ services:
       - PGPASSWORD=${SERVICE_PASSWORD_POSTGRES}
       - PGDATABASE=vectorscope
     # One dump right after start, then every 24 hours. Dumps older than 7 days are removed.
+    # The raw archive is copied as well: its files never change, so only new ones are added.
     # The host folder is outside Docker, so the restic backup of the server can include it.
     entrypoint:
       - sh
@@ -87,10 +96,12 @@ services:
           f=/backup/vectorscope-$$(date +%Y%m%d-%H%M).sql.gz
           if pg_dump --no-owner | gzip > "$$f.tmp"; then mv "$$f.tmp" "$$f"; echo "backup $$f"; else rm -f "$$f.tmp"; echo "backup failed"; fi
           find /backup -name 'vectorscope-*.sql.gz' -mtime +7 -delete
+          if [ -d /data/raw/raw ]; then mkdir -p /backup/raw && cp -rn /data/raw/raw/. /backup/raw/ && echo "raw archive copied"; fi
           sleep 86400
         done
     volumes:
       - /var/backups/vectorscope:/backup
+      - vectorscope-data:/data:ro
     depends_on:
       vectorscope-db:
         condition: service_healthy

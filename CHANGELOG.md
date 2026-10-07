@@ -4,6 +4,16 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.11.0 (2026-10-07)
+
+### Added
+* **Own server:** `docker-compose.yaml` for Coolify with web server (app, proxy, collector data, `/api/health`, `/api/reports`), collector every 10 minutes, PostgreSQL 16 and a daily backup of database and raw archive to the host. Docker healthchecks and the service names the status page expects. The app uses the own proxy and collector data when it runs on the own address, GitHub Pages stays unchanged. See [Own server](docs/en/server.md).
+* The collector on the server pushes every round file to the branch `collector-raw` (`RAW_PUSH_URL`), named `HHMM-srv.jsonl.gz`.
+
+### Changed
+* The collector on GitHub Actions puts its commits on top when the server pushed to `collector-raw` in between, instead of failing until the end of its run.
+* `collector/parse.ts` counts versions by distinct content, so a unit stored by two collectors is one version.
+
 ## 0.10.0 (2026-10-07)
 
 ### Changed

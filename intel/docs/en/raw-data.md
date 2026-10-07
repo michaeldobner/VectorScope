@@ -174,7 +174,7 @@ The workflow stops on `PROBE_UNTIL` (31 January 2027, moved from 12 October 2026
 
 ### 2. Move to a server
 
-When the probe pays off, a small server (about 5 to 10 euros a month) takes over. The archive moves with it unchanged:
+The stack for an own server with Coolify is ready, see [Own server](../../../docs/en/server.md): the collector there writes round files named `HHMM-srv.jsonl.gz` and pushes them to the same branch. The general steps, for any server:
 
 1. Clone the branch `collector-raw` onto the server, copy `raw-state.json` from `collector-data`.
 2. Run `npx tsx collector/collect.ts <data> <raw>` every minute or every few minutes by cron or a systemd timer. The script does not depend on GitHub.

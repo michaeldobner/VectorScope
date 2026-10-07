@@ -119,6 +119,7 @@ async function health(res) {
         sources: beat.total,
         items: beat.items,
         exit: beat.exit,
+        raw_push: beat.rawPush ?? 'off',
       }
     : null;
   let dbState = { ok: false };

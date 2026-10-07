@@ -103,7 +103,9 @@ for (const w of health.warnings) console.log(`WARN ${w}`);
 // the files above are written already and the next round writes the reports again.
 if (process.env.DATABASE_URL) {
   try {
-    const db = await storeRound(process.env.DATABASE_URL, { run, items: merged, seen: (i) => seenBefore.get(itemKey(i)) ?? i.seen ?? now });
+    // The reports the sources show right now: new ones are added, changed ones updated. The 7 day archive is in the database already.
+    const roundItems = results.flatMap((r) => r.items);
+    const db = await storeRound(process.env.DATABASE_URL, { run, items: roundItems, seen: (i) => seenBefore.get(itemKey(i)) ?? i.seen ?? now });
     console.log(`Database: ${db.reports} reports written`);
   } catch (e) {
     console.log(`WARN database not written: ${e instanceof Error ? e.message : String(e)}`);

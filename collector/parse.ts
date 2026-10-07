@@ -45,25 +45,27 @@ export function* readRecords(file: string): Generator<RawRecord> {
 
 /** All reports in the raw archive. Units of the same key are versions of one report. */
 export function parseArchive(dir: string): { reports: Report[]; problems: { key: string; src: string; v: number; round: string }[] } {
-  const units = new Map<string, { first: UnitRecord; last: UnitRecord; versions: number }>();
+  // Versions are distinct fingerprints: a unit stored twice (two collectors, a repeated round) is one version.
+  const units = new Map<string, { first: UnitRecord; last: UnitRecord; hashes: Set<string> }>();
   const legacy: Item[] = [];
   for (const file of rawFiles(dir)) {
     for (const r of readRecords(file)) {
       if (r.t === 'legacy') legacy.push(r.item);
       if (r.t !== 'unit') continue;
       const u = units.get(r.key);
-      if (!u) units.set(r.key, { first: r, last: r, versions: 1 });
+      if (!u) units.set(r.key, { first: r, last: r, hashes: new Set([r.hash]) });
       else {
         if (r.at < u.first.at) u.first = r;
         if (r.at >= u.last.at) u.last = r;
-        u.versions++;
+        u.hashes.add(r.hash);
       }
     }
   }
   const reports: Report[] = [];
   const problems: { key: string; src: string; v: number; round: string }[] = [];
   const urls = new Set<string>();
-  for (const [key, { first, last, versions }] of units) {
+  for (const [key, { first, last, hashes }] of units) {
+    const versions = hashes.size;
     const items = parseUnit(last);
     // A Telegram post without text (only a picture), a Bluesky repost or an earthquake below the threshold
     // is no report, not a problem.

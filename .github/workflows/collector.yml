@@ -63,6 +63,7 @@ jobs:
           # Only the latest commit and no file contents: the archive is never downloaded, new files are added on top.
           if git clone -q --depth 1 --filter=blob:none --sparse --branch collector-raw "$PUSH_URL" raw; then
             echo "Raw archive found"
+            git -C raw update-ref refs/vectorscope/pushed HEAD
           else
             rm -rf raw && mkdir raw && cd raw
             git init -q && git checkout -q -b collector-raw
@@ -87,7 +88,16 @@ jobs:
                 cd raw
                 git add --sparse -A
                 git -c user.name=collector -c user.email=collector@users.noreply.github.com commit -q -m "Raw $(date -u +%Y-%m-%dT%H:%MZ)"
-                git push -q "$PUSH_URL" HEAD:collector-raw
+                # The own server pushes to the same branch: on a rejected push, put the own commits on top of
+                # its newest commit (only new files, never a conflict) and push again.
+                if ! git push -q "$PUSH_URL" HEAD:collector-raw; then
+                  git fetch -q --depth 1 --filter=blob:none "$PUSH_URL" collector-raw
+                  base=refs/vectorscope/pushed
+                  git rev-parse -q --verify "$base" >/dev/null || base=$(git rev-list --max-parents=0 HEAD | tail -1)
+                  git -c user.name=collector -c user.email=collector@users.noreply.github.com rebase -q --onto FETCH_HEAD "$base" || { git rebase --abort; false; }
+                  git push -q "$PUSH_URL" HEAD:collector-raw
+                fi
+                git update-ref refs/vectorscope/pushed HEAD
               ); then
                 cp data/raw-state.json state-pushed.json
               else

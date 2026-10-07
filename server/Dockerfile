@@ -8,6 +8,8 @@ COPY . .
 RUN npm run build
 
 FROM node:22-bookworm-slim
+# git pushes the raw archive to the branch collector-raw (server/raw-git.mjs).
+RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates && rm -rf /var/lib/apt/lists/*
 ENV NODE_ENV=production PORT=8080 DATA_DIR=/data
 WORKDIR /app
 # node_modules keeps tsx, which runs collector/collect.ts in the collector container.

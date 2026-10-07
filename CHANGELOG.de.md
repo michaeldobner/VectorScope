@@ -4,6 +4,16 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.11.0 (2026-10-07)
+
+### Neu
+* **Eigener Server:** `docker-compose.yaml` für Coolify mit Webserver (App, Proxy, Sammlerdaten, `/api/health`, `/api/reports`), Sammler alle 10 Minuten, PostgreSQL 16 und täglicher Sicherung von Datenbank und Rohdaten-Archiv auf den Host. Docker-Healthchecks und die Dienstnamen, die die Statusseite erwartet. Die App nutzt eigenen Proxy und eigene Sammlerdaten, wenn sie unter der eigenen Adresse läuft, GitHub Pages bleibt unverändert. Siehe [Eigener Server](docs/de/server.md).
+* Der Sammler auf dem Server pusht jede Rundendatei in den Branch `collector-raw` (`RAW_PUSH_URL`), mit dem Namen `HHMM-srv.jsonl.gz`.
+
+### Geändert
+* Der Sammler auf GitHub Actions setzt seine Commits obendrauf, wenn der Server zwischendurch nach `collector-raw` gepusht hat, statt bis zum Ende seines Laufs zu scheitern.
+* `collector/parse.ts` zählt Versionen nach unterschiedlichem Inhalt, eine von zwei Sammlern gespeicherte Einheit ist eine Version.
+
 ## 0.10.0 (2026-10-07)
 
 ### Geändert

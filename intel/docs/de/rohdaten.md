@@ -174,7 +174,7 @@ Der Workflow endet am `PROBE_UNTIL` (31. Januar 2027, verlängert vom 12. Oktobe
 
 ### 2. Umzug auf einen Server
 
-Lohnt sich die Probe, übernimmt ein kleiner Server (etwa 5 bis 10 Euro im Monat). Das Archiv zieht unverändert mit:
+Der Stack für einen eigenen Server mit Coolify steht bereit, siehe [Eigener Server](../../../docs/de/server.md): Der Sammler dort schreibt Rundendateien mit dem Namen `HHMM-srv.jsonl.gz` und pusht sie in denselben Branch. Die allgemeinen Schritte, für jeden Server:
 
 1. Den Branch `collector-raw` auf den Server klonen, `raw-state.json` aus `collector-data` kopieren.
 2. `npx tsx collector/collect.ts <Daten> <Roh>` jede Minute oder alle paar Minuten per Cron oder systemd-Timer starten. Das Skript hängt nicht an GitHub.

@@ -11,6 +11,7 @@ This documentation describes the VectorScope collection as a whole: how the repo
 | [Architecture](architecture.md) | Repository structure, module registry, shared shell, build, addresses, service worker scopes, storage | Development |
 | [Development](development.md) | Setup, scripts, unit tests, repository checks, smoke test, test lab, releases, adding a module, conventions | Development |
 | [Deployment](deployment.md) | GitHub Pages, CORS proxy on Vercel, updates on devices, troubleshooting | Operations |
+| [Own server](server.md) | App, proxy, collector, database and raw archive on an own server with Coolify, setup, switching over, operations | Operations |
 | [Roadmap](roadmap.md) | What is next, what needs a server, what is deferred | Everyone |
 
 ## Modules
@@ -31,4 +32,4 @@ This documentation describes the VectorScope collection as a whole: how the repo
 | Hosting | GitHub Pages, proxy on Vercel |
 | Privacy | No account, no server-side storage, location only on the device |
 | Address | https://michaeldobner.github.io/VectorScope/ |
-| Version | 0.10.0 |
+| Version | 0.11.0 |
