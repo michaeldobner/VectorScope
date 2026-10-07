@@ -1,5 +1,6 @@
-// Probe collector: one round, run every 10 minutes on GitHub Actions (workflow collector.yml).
-// Loads every source of INTEL directly, keeps what it has seen with the time it first saw it.
+// Collector: one round. Runs every 10 minutes, on the own server (server/collector-loop.mjs) and as a probe
+// on GitHub Actions (workflow collector.yml). Loads every source of INTEL directly, keeps what it has seen
+// with the time it first saw it. With DATABASE_URL set it also writes the round into PostgreSQL (store.ts).
 //
 //   npx tsx collector/collect.ts <data folder> [raw folder]
 //
@@ -16,6 +17,7 @@ import { join } from 'node:path';
 import { itemKey, loadLive, loadSource, mergeItems, pool, type RawResponse } from '../intel/src/data/feed';
 import { writeLegacy, writeRawRound } from './archive-raw';
 import { checkHealth, healthMarkdown, type RunRecord } from './checks';
+import { storeRound } from './store';
 import { detectAll } from '../intel/src/data/sensor';
 import { SOURCES } from '../intel/src/data/sources';
 import { clip } from '../intel/src/data/text';
@@ -96,6 +98,18 @@ const health = checkHealth(stats.runs, results.flatMap((r) => r.items), now);
 writeFileSync(join(DIR, 'health.json'), JSON.stringify(health));
 if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, healthMarkdown(health));
 for (const w of health.warnings) console.log(`WARN ${w}`);
+
+// Database on the own server: every report and round for good. A failure here never loses the round,
+// the files above are written already and the next round writes the reports again.
+if (process.env.DATABASE_URL) {
+  try {
+    const db = await storeRound(process.env.DATABASE_URL, { run, items: merged, seen: (i) => seenBefore.get(itemKey(i)) ?? i.seen ?? now });
+    console.log(`Database: ${db.reports} reports written`);
+  } catch (e) {
+    console.log(`WARN database not written: ${e instanceof Error ? e.message : String(e)}`);
+    process.exitCode = 2;
+  }
+}
 
 console.log(`Collected ${merged.length} items, ${fresh.length} new, ${ok}/${SOURCES.length} sources ok`);
 for (const [id, s] of Object.entries(run.sources)) console.log(`  ${s.ok ? 'ok ' : 'ERR'} ${id.padEnd(16)} ${String(s.items).padStart(4)} items ${String(s.fresh).padStart(4)} new ${s.error ?? ''}`);

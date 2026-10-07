@@ -1,0 +1,100 @@
+# VectorScope on the own server, deployed by Coolify (docs/en/server.md).
+#   vectorscope-web        app, proxy, collector data and API on port 8080. Domain set in Coolify.
+#   vectorscope-collector  one collector round every 10 minutes, writes files and the database
+#   vectorscope-db         PostgreSQL, reachable only inside this stack
+#   vectorscope-backup     daily dump of the database to /var/backups/vectorscope on the host
+# Coolify generates SERVICE_PASSWORD_POSTGRES on the first deploy and keeps it.
+services:
+  vectorscope-web:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    restart: unless-stopped
+    environment:
+      - DATABASE_URL=postgres://vectorscope:${SERVICE_PASSWORD_POSTGRES}@vectorscope-db:5432/vectorscope
+      - DATA_DIR=/data
+      - CONTACT=${CONTACT:-github.com/michaeldobner}
+    volumes:
+      - vectorscope-data:/data
+    expose:
+      - "8080"
+    depends_on:
+      vectorscope-db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8080/healthz').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+  vectorscope-collector:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    restart: unless-stopped
+    command: ["node", "server/collector-loop.mjs"]
+    environment:
+      - DATABASE_URL=postgres://vectorscope:${SERVICE_PASSWORD_POSTGRES}@vectorscope-db:5432/vectorscope
+      - DATA_DIR=/data
+      - EVERY_MIN=10
+      - VECTORSCOPE_PROXY=http://vectorscope-web:8080/proxy
+    volumes:
+      - vectorscope-data:/data
+    depends_on:
+      vectorscope-db:
+        condition: service_healthy
+      vectorscope-web:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "node", "server/collector-health.mjs"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      # The first round, including taking over the GitHub data, runs before the check counts.
+      start_period: 15m
+
+  vectorscope-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=vectorscope
+      - POSTGRES_PASSWORD=${SERVICE_PASSWORD_POSTGRES}
+      - POSTGRES_DB=vectorscope
+    volumes:
+      - vectorscope-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vectorscope -d vectorscope"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  vectorscope-backup:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      - PGHOST=vectorscope-db
+      - PGUSER=vectorscope
+      - PGPASSWORD=${SERVICE_PASSWORD_POSTGRES}
+      - PGDATABASE=vectorscope
+    # One dump right after start, then every 24 hours. Dumps older than 7 days are removed.
+    # The host folder is outside Docker, so the restic backup of the server can include it.
+    entrypoint:
+      - sh
+      - -c
+      - |
+        while true; do
+          f=/backup/vectorscope-$$(date +%Y%m%d-%H%M).sql.gz
+          if pg_dump --no-owner | gzip > "$$f.tmp"; then mv "$$f.tmp" "$$f"; echo "backup $$f"; else rm -f "$$f.tmp"; echo "backup failed"; fi
+          find /backup -name 'vectorscope-*.sql.gz' -mtime +7 -delete
+          sleep 86400
+        done
+    volumes:
+      - /var/backups/vectorscope:/backup
+    depends_on:
+      vectorscope-db:
+        condition: service_healthy
+
+volumes:
+  vectorscope-data:
+  vectorscope-pg:

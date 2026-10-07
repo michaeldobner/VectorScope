@@ -6,11 +6,14 @@ import { getSettings } from '../state/settings';
 
 export type Transport = 'direct' | 'proxy' | 'relay' | 'demo';
 
+/** Served by the own server (server/), not by GitHub Pages or a local preview: the proxy runs under /proxy there. */
+const ON_SERVER = typeof location !== 'undefined' && !/(^|\.)github\.io$|^localhost$|^127\.0\.0\.1$/.test(location.hostname);
+
 /**
  * Own proxy address built into the app. When set, nobody has to enter anything in Settings.
  * A proxy entered in Settings still takes precedence.
  */
-export const BUILTIN_PROXY = 'https://vectorscope-proxy.vercel.app';
+export const BUILTIN_PROXY = ON_SERVER ? `${location.origin}/proxy` : 'https://vectorscope-proxy.vercel.app';
 
 /**
  * Free public relays that need no account. adsb.lol does not allow direct browser access,

@@ -10,7 +10,11 @@ import { urlKey } from './text';
 import type { Item } from './types';
 
 /** Same proxy as AIR (air/src/data/feed.ts), a repository check keeps both equal. */
-export const PROXY = 'https://vectorscope-proxy.vercel.app';
+/** Served by the own server (server/), not by GitHub Pages or a local preview: proxy and collector data live there. */
+const ON_SERVER = typeof location !== 'undefined' && !/(^|\.)github\.io$|^localhost$|^127\.0\.0\.1$/.test(location.hostname);
+// The collector on the server reaches the proxy inside the Docker network (VECTORSCOPE_PROXY).
+const NODE_PROXY = typeof process !== 'undefined' ? process.env?.VECTORSCOPE_PROXY : undefined;
+export const PROXY = NODE_PROXY || (ON_SERVER ? `${location.origin}/proxy` : 'https://vectorscope-proxy.vercel.app');
 /** Items older than this are dropped. */
 export const MAX_AGE_MS = 14 * 24 * 3600_000;
 const TIMEOUT_MS = 15_000;
@@ -172,15 +176,17 @@ export function mergeItems(items: Item[], now: number): Item[] {
   return [...byKey.values()].sort((a, b) => b.time - a.time);
 }
 
-/** Military aircraft broadcasting right now, worldwide. */
-/** Items gathered by the collector on GitHub Actions (collector/collect.ts), last 72 hours. */
-export const COLLECTOR_URL = 'https://raw.githubusercontent.com/michaeldobner/VectorScope/collector-data/latest.json';
+/** Items gathered by the collector (collector/collect.ts), last 72 hours: from the own server, else from GitHub Actions. */
+export const COLLECTOR_URL = ON_SERVER
+  ? `${location.origin}/data/latest.json`
+  : 'https://raw.githubusercontent.com/michaeldobner/VectorScope/collector-data/latest.json';
 
 export async function loadCollected(): Promise<{ at: number; items: Item[] }> {
   const json = JSON.parse(await getText(COLLECTOR_URL));
   return { at: Number(json.at) || 0, items: Array.isArray(json.items) ? json.items : [] };
 }
 
+/** Military aircraft broadcasting right now, worldwide. */
 export async function loadLive(): Promise<Aircraft[]> {
   const json = JSON.parse(await getText(`${PROXY}/v2/mil`));
   return parseV2(json).aircraft;

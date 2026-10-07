@@ -30,6 +30,11 @@ describe('sources', () => {
   });
 
   it('uses the same proxy as AIR', () => {
-    expect(read('../../../air/src/data/feed.ts')).toContain(`BUILTIN_PROXY = '${PROXY}'`);
+    const air = read('../../../air/src/data/feed.ts');
+    expect(air).toContain(`: '${PROXY}'`);
+    // Same rule for the own server, where both use /proxy on their own address.
+    const onServer = (text: string) => text.split('\n').find((l) => l.startsWith('const ON_SERVER'));
+    expect(onServer(air)).toBeDefined();
+    expect(onServer(air)).toBe(onServer(read('./feed.ts')));
   });
 });
