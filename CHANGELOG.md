@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.9.2 (2026-10-07)
+
+### Fixed
+* Raw archive: the round record counts the own sensor among the sources asked, as it already did among those that answered.
+
 ## 0.9.1 (2026-10-07)
 
 ### Fixed

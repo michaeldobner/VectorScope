@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.9.2 (2026-10-07)
+
+### Behoben
+* Rohdaten-Archiv: Der Rundendatensatz zählt den eigenen Sensor auch bei den gefragten Quellen mit, wie schon bei denen mit Antwort.
+
 ## 0.9.1 (2026-10-07)
 
 ### Behoben
