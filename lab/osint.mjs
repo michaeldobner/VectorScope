@@ -54,36 +54,47 @@ for (const q of BLUESKY) {
 }
 
 // RSS and Atom feeds.
+// Candidates for the politics lens (INTEL 0.8.0): Germany, EU, USA, international. Verified sources stay in sources.ts.
 const FEEDS = [
-  ['The Aviationist', 'https://theaviationist.com/feed/'],
-  ['The War Zone', 'https://www.twz.com/feed'],
-  ['ItaMilRadar', 'https://www.itamilradar.com/feed/'],
-  ['Scramble', 'https://www.scramble.nl/military-news?format=feed&type=rss'],
-  ['Bellingcat', 'https://www.bellingcat.com/feed/'],
-  ['Oryx', 'https://www.oryxspioenkop.com/feeds/posts/default?alt=rss'],
-  ['ISW', 'https://www.understandingwar.org/feeds.xml'],
-  ['ISW (alt)', 'https://understandingwar.org/feed/'],
-  ['USNI News', 'https://news.usni.org/feed'],
-  ['Naval News', 'https://www.navalnews.com/feed/'],
-  ['Breaking Defense', 'https://breakingdefense.com/feed/'],
-  ['Defense News', 'https://www.defensenews.com/arc/outboundfeeds/rss/?outputType=xml'],
-  ['Augen geradeaus!', 'https://augengeradeaus.net/feed/'],
-  ['hartpunkt', 'https://www.hartpunkt.de/feed/'],
-  ['ESUT', 'https://esut.de/feed/'],
+  ['Bundesregierung', 'https://www.bundesregierung.de/service/rss/breg-de/1151244/feed.xml'],
+  ['Bundesregierung (alt)', 'https://www.bundesregierung.de/breg-de/service/rss'],
+  ['Bundestag hib', 'https://www.bundestag.de/static/appdata/includes/rss/hib.rss'],
+  ['Bundestag Presse', 'https://www.bundestag.de/static/appdata/includes/rss/pressemitteilungen.rss'],
+  ['Bundestag Aktuell', 'https://www.bundestag.de/static/appdata/includes/rss/aktuellethemen.rss'],
+  ['Auswaertiges Amt', 'https://www.auswaertiges-amt.de/SiteGlobals/Functions/RSSFeed/DE/RSSNewsfeed/RSS_Newsfeed_Pressemitteilungen.xml'],
+  ['Auswaertiges Amt (alt)', 'https://www.auswaertiges-amt.de/de/service/rss'],
+  ['BMVg', 'https://www.bmvg.de/service/rss/de/11204/feed'],
+  ['BVerfG', 'https://www.bundesverfassungsgericht.de/SiteGlobals/Functions/RSSFeed/DE/RSSNewsfeed/RSS_Newsfeed.xml'],
+  ['Tagesschau Inland', 'https://www.tagesschau.de/inland/index~rss2.xml'],
+  ['Spiegel Politik', 'https://www.spiegel.de/politik/index.rss'],
+  ['Zeit Politik', 'https://newsfeed.zeit.de/politik/index'],
+  ['FAZ Politik', 'https://www.faz.net/rss/aktuell/politik/'],
+  ['SZ Politik', 'https://rss.sueddeutsche.de/rss/Politik'],
+  ['Handelsblatt Politik', 'https://www.handelsblatt.com/contentexport/feed/politik'],
+  ['EU Commission', 'https://ec.europa.eu/commission/presscorner/api/rss?language=en'],
+  ['EU Commission (alt)', 'https://ec.europa.eu/commission/presscorner/home/en/rss'],
+  ['European Parliament', 'https://www.europarl.europa.eu/rss/doc/press-releases/en.xml'],
+  ['EU Council', 'https://www.consilium.europa.eu/en/rss/pressreleases.ashx'],
+  ['Politico Europe', 'https://www.politico.eu/feed/'],
+  ['Euractiv', 'https://www.euractiv.com/feed/'],
+  ['EUobserver', 'https://euobserver.com/rss.xml'],
+  ['White House', 'https://www.whitehouse.gov/feed/'],
+  ['White House actions', 'https://www.whitehouse.gov/presidential-actions/feed/'],
+  ['White House news', 'https://www.whitehouse.gov/news/feed/'],
+  ['Federal Register presidential', 'https://www.federalregister.gov/api/v1/documents.rss?conditions%5Btype%5D%5B%5D=PRESDOCU'],
+  ['Trump Truth archive', 'https://trumpstruth.org/feed'],
+  ['Truth Social RSS', 'https://truthsocial.com/@realDonaldTrump.rss'],
+  ['Politico US', 'https://rss.politico.com/politics-news.xml'],
+  ['The Hill', 'https://thehill.com/homenews/feed/'],
+  ['Axios', 'https://api.axios.com/feed/'],
+  ['NPR Politics', 'https://feeds.npr.org/1014/rss.xml'],
+  ['AP Politics', 'https://apnews.com/politics.rss'],
+  ['Kremlin', 'http://en.kremlin.ru/events/president/news/feed'],
+  ['President of Ukraine', 'https://www.president.gov.ua/en/rss/news'],
+  ['UN Press', 'https://press.un.org/en/rss.xml'],
+  ['UN News', 'https://news.un.org/feed/subscribe/en/news/all/rss.xml'],
   ['NATO News', 'https://www.nato.int/cps/rss/en/natohq/rssFeed.xsl/rssFeed.xml'],
-  ['US DoD News', 'https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945&max=10'],
-  ['Bundeswehr', 'https://www.bundeswehr.de/service/rss/de/517054/feed'],
-  ['FlugRevue', 'https://www.flugrevue.de/feed/'],
-  ['Aviation Week Defense', 'https://aviationweek.com/defense-space/rss.xml'],
-  ['Airforce Technology', 'https://www.airforce-technology.com/feed/'],
-  ['Janes', 'https://www.janes.com/feeds/news'],
-  ['Tagesschau', 'https://www.tagesschau.de/index~rss2.xml'],
-  ['Tagesschau Ausland', 'https://www.tagesschau.de/ausland/index~rss2.xml'],
-  ['DW English', 'https://rss.dw.com/rdf/rss-en-top'],
-  ['BBC World', 'https://feeds.bbci.co.uk/news/world/rss.xml'],
-  ['Al Jazeera', 'https://www.aljazeera.com/xml/rss/all.xml'],
-  ['Deutschlandfunk', 'https://www.deutschlandfunk.de/nachrichten-100.rss'],
-];
+]
 const feeds = [];
 for (const [name, url] of FEEDS) {
   const r = await get(url, 'application/rss+xml, application/atom+xml, application/xml, text/xml');
@@ -91,7 +102,10 @@ for (const [name, url] of FEEDS) {
   const items = (body.match(/<item[\s>]/g) ?? []).length + (body.match(/<entry[\s>]/g) ?? []).length;
   const dates = [...body.matchAll(/<(?:pubDate|updated|published|dc:date)>([^<]+)</g)].map((m) => Date.parse(m[1].trim())).filter((d) => !isNaN(d));
   const newest = dates.length ? new Date(Math.max(...dates)).toISOString() : null;
-  feeds.push({ name, url, status: r.status, error: r.error, items, newestAgeH: ageH(newest), cors: r.cors, type: r.type?.split(';')[0], isFeed: items > 0 });
+  const firstItem = body.match(/<(item|entry)[\s>][\s\S]*?<\/\1>/)?.[0] ?? '';
+  const latest = plainTitle(firstItem.match(/<title[^>]*>([\s\S]*?)<\/title>/)?.[1]?.replace(/<!\[CDATA\[|\]\]>/g, ''));
+  const perDay = dates.length > 1 ? Math.round((dates.length / Math.max((Math.max(...dates) - Math.min(...dates)) / 864e5, 1 / 24))) : null;
+  feeds.push({ name, url, status: r.status, error: r.error, items, newestAgeH: ageH(newest), perDay, cors: r.cors, type: r.type?.split(';')[0], isFeed: items > 0, latest });
 }
 
 // Mastodon: account search on two large instances (no login).
@@ -122,7 +136,7 @@ for (const q of GDELT_Q) {
 }
 
 // Telegram channels: web preview t.me/s, directly and through the proxy (Vercel may be blocked by Telegram).
-const TELEGRAM = ['rybar', 'rybar_in_english', 'rybar_mena', 'rybar_africa', 'rybarde', 'evropar', 'caucasar', 'rybar_latam', 'rybar_pacific', 'balkanar', 'rybar_stan', 'rybar_tactical', 'rybar_america'];
+const TELEGRAM = ['V_Zelenskiy_official', 'Bundeskanzler', 'bundesregierung', 'whitehouse', 'realDonaldTrump', 'Kremlin_ru', 'MID_Russia', 'peskov_info', 'ukraine_now'];
 const telegram = [];
 for (const ch of TELEGRAM) {
   const direct = await get(`https://t.me/s/${ch}`);
@@ -155,6 +169,7 @@ const MACHINE = [
   ['gdacs', 'https://www.gdacs.org/xml/rss.xml'],
   ['faa', 'https://nasstatus.faa.gov/api/airport-status-information'],
   ['nws', 'https://api.weather.gov/alerts/active?severity=Extreme,Severe&status=actual&message_type=alert'],
+  ['truthsocial-api', 'https://truthsocial.com/api/v1/accounts/107780257626128497/statuses?exclude_replies=true&limit=5'],
   ['gdelt', 'https://api.gdeltproject.org/api/v2/doc/doc?query=(explosion%20OR%20drone%20OR%20missile)&mode=artlist&format=json&maxrecords=20&timespan=2h&sort=datedesc'],
 ];
 const machine = [];
@@ -176,8 +191,8 @@ const md = [
   `# OSINT source check ${result.checkedAt}`,
   '', '## Bluesky', '', '| Query | Handle | Name | Followers | Posts | Newest (h) | Own of last 5 | CORS |', '|---|---|---|---|---|---|---|---|',
   ...blueskyHits.map((b) => `| ${cell(b.query)} | ${cell(b.handle)} | ${cell(b.name)} | ${cell(b.followers)} | ${cell(b.posts)} | ${cell(b.lastPostAgeH)} | ${b.ownOfLast5} | ${cell(b.cors)} |`),
-  '', '## Feeds', '', '| Name | HTTP | Items | Newest (h) | CORS | Type | URL |', '|---|---|---|---|---|---|---|',
-  ...feeds.map((f) => `| ${f.name} | ${f.status || cell(f.error)} | ${f.items} | ${cell(f.newestAgeH)} | ${cell(f.cors)} | ${cell(f.type)} | ${f.url} |`),
+  '', '## Feeds', '', '| Name | HTTP | Items | Newest (h) | Per day | CORS | Type | Latest | URL |', '|---|---|---|---|---|---|---|---|---|',
+  ...feeds.map((f) => `| ${f.name} | ${f.status || cell(f.error)} | ${f.items} | ${cell(f.newestAgeH)} | ${cell(f.perDay)} | ${cell(f.cors)} | ${cell(f.type)} | ${cell(f.latest?.slice(0, 90))} | ${f.url} |`),
   '', '## Mastodon', '', '| Query | Host | Account | Followers | Posts | Newest (h) | CORS |', '|---|---|---|---|---|---|---|',
   ...mastodon.map((m) => `| ${m.query} | ${m.host} | ${cell(m.acct) || `none (HTTP ${m.status || m.error})`} | ${cell(m.followers)} | ${cell(m.posts)} | ${cell(m.lastPostAgeH)} | ${cell(m.cors)} |`),
   '', '## Telegram', '', '| Channel | Title | Subscribers | Lang | HTTP | Posts on page | With text | Newest (h) | Posts per day | Proxy HTTP | Proxy posts | Latest |', '|---|---|---|---|---|---|---|---|---|---|---|---|',
