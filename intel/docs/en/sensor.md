@@ -68,3 +68,5 @@ The view **Map** shows the situation on the basemap of AIR:
 | Dashed line | From a named aircraft to the place of its story |
 
 Tapping a circle shows its stories, tapping a dot opens the aircraft in AIR. Filters and tiles apply to the map as well. The place chip at the start of the filter row (◎ name ✕) or **All** removes the place filter again.
+
+In the politics lens the map shows capitals instead of places: a circle for the stories that name actors of the capital, a line between two capitals whose actors one story names (Washington and Moscow for a phone call, Brussels and Moscow for sanctions), thicker for more stories. Aircraft are hidden there. A tap on a capital filters the stories by its actors.

@@ -11,6 +11,26 @@
 
 The logo at the top left leads back to the VectorScope hub. **DE** shows every headline and excerpt in German, see [German](#german). The status shows **LIVE** when sources answered, **LOADING** while the first load runs, **OFFLINE** when nothing could be loaded and **DEMO** in demo mode. The round arrow reloads everything.
 
+## Lenses: Security and Politics
+
+Below the top bar a switch chooses the lens. Stories, Wire and Map stay the same views, they show the reports of the lens.
+
+| Lens | Shows | Tiles |
+|---|---|---|
+| ⚔ **Security** | Attacks, military, incidents, disasters, air activity, as before | Reports last hour, of them unverified, developing stories, air alerts Ukraine |
+| 🏛 **Politics** | Governments, parliaments, elections, laws, diplomacy, sanctions, tariffs | Original statements of 24 h, decisions and rulings of 24 h, developing stories, the loudest actor of the last 6 hours |
+
+In the politics lens:
+
+* **Actors** instead of places: Trump, White House, Merz, Bundesregierung, Bundestag, von der Leyen, EU Commission, EU, Putin, Kremlin, Zelensky, NATO, Macron, Starmer, Xi Jinping, Netanyahu, Erdoğan, Khamenei. They appear as chips (◉) on a story. A tap filters by the actor, the chip at the start of the filter row (◉ name ✕) or **All** removes it again.
+* **In the original:** if an actor speaks in the own words (Trump on Truth Social, the White House, the Bundestag, the EU Commission, the Kremlin, Zelensky), the story shows the statement on top with source and time. Below it you see who picked it up and when.
+* **Signal** (chip at the start of the filter row): only stories with an original statement or at least two independent sources. A tap switches to **Everything**.
+* **Map:** capitals as circles for the stories that name their actors, lines between two capitals whose actors one story names, thicker for more stories. A tap on a capital filters by its actors.
+
+**Bridges:** a story can be linked to a story of the other lens that names the same actor or the same city on the same day, for example a sanctions package and a tanker attack. The card then shows "🏛 Politics linked: …" or "⚔ Security linked: …", a tap switches the lens and filters by what both share.
+
+The app remembers the lens. Switching starts the new lens without filters.
+
 ## Stories
 
 The default view. Reports from different sources about the same event are one card. At the top four tiles: reports of the last hour, how many of them are unverified, how many stories are developing, and the air alerts of the Ukrainian Air Force in the last hour. **Tapping a tile filters the stories** accordingly, tapping it again removes the filter. The air alerts tile shows the drone and missile tracks of the last 6 hours instead, one line each.

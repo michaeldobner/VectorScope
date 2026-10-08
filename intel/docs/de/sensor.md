@@ -68,3 +68,5 @@ Die Ansicht **Map** zeigt die Lage auf der Grundkarte von AIR:
 | Gestrichelte Linie | Von einem genannten Flugzeug zum Ort seiner Story |
 
 Ein Tipp auf einen Kreis zeigt seine Stories, ein Tipp auf einen Punkt öffnet das Flugzeug in AIR. Filter und Kacheln gelten auch für die Karte. Die Ort-Schaltfläche am Anfang der Filterleiste (◎ Name ✕) oder **All** hebt den Ort-Filter wieder auf.
+
+In der Politik-Linse zeigt die Karte Hauptstädte statt Orte: einen Kreis für die Stories, die Akteure der Hauptstadt nennen, eine Linie zwischen zwei Hauptstädten, deren Akteure eine Story nennt (Washington und Moskau bei einem Telefonat, Brüssel und Moskau bei Sanktionen), dicker bei mehr Stories. Flugzeuge sind dort ausgeblendet. Ein Tipp auf eine Hauptstadt filtert die Stories nach ihren Akteuren.

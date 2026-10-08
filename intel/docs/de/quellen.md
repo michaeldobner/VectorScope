@@ -2,7 +2,7 @@
 
 [English version](../en/sources.md) · [Übersicht](README.md)
 
-INTEL liest 74 Quellen in sieben Klassen, aus Russland, der Ukraine, Nahost, Europa, Deutschland und den USA sowie globale Sensoren. Qualität vor Menge: Jede Quelle wurde im Test-Labor mit echtem Internet geprüft, bevor sie aufgenommen wurde. Die Liste steht in `src/data/sources.ts`.
+INTEL liest 94 Quellen in sieben Klassen, aus Russland, der Ukraine, Nahost, Europa, Deutschland und den USA sowie globale Sensoren. Qualität vor Menge: Jede Quelle wurde im Test-Labor mit echtem Internet geprüft, bevor sie aufgenommen wurde. Die Liste steht in `src/data/sources.ts`.
 
 ## Klasse und Trust
 
@@ -147,6 +147,35 @@ Leitmedien, die journalistische zweite Bestätigung.
 | Al Jazeera | Nahost | Englisch | 75 | Qatari state funded | RSS |
 | Meduza | Russland | Russisch | 82 | independent Russian | Telegram `meduzalive` |
 | Current Time | Russland | Russisch | 78 | US funded, independent of Moscow | Telegram `currenttime` |
+
+## Politik
+
+Quellen der Politik-Linse (seit INTEL 0.8.0). Eigene Stimmen von Akteuren zählen als primär, sie erscheinen als „Im Original“. Kategorie Politik: In der Sicherheits-Linse zählen sie nur bei Sicherheits- und Krisenthemen.
+
+| Quelle | Region | Sprache | Trust | Klasse | Hinweis | Kanal |
+|---|---|---|---|---|---|---|
+| Trump (Truth Social) | USA | Englisch | 85 | Primär, eigene Stimme | Über das Archiv trumpstruth.org, Truth Social selbst sperrt automatische Abrufe | RSS |
+| White House | USA | Englisch | 88 | Primär, eigene Stimme | News, Netzwerk Weißes Haus | RSS |
+| White House, presidential actions | USA | Englisch | 92 | Primär, eigene Stimme | Erlasse und Proklamationen, Netzwerk Weißes Haus | RSS |
+| Bundestag | DACH | Deutsch | 92 | Primär, eigene Stimme | Aktuelle Themen, Netzwerk Bundestag | RSS |
+| Bundestag, heute im bundestag | DACH | Deutsch | 92 | Primär, eigene Stimme | Ausschüsse, Anfragen, Netzwerk Bundestag | RSS |
+| European Commission | Europa | Englisch | 90 | Primär, eigene Stimme | Press Corner | RSS |
+| Council of the EU | Europa | Englisch | 90 | Primär, eigene Stimme | Pressemitteilungen | RSS |
+| Kremlin | Russland | Englisch | 75 | Primär, eigene Stimme | Russische Regierung | RSS |
+| Russisches Außenministerium | Russland | Russisch | 70 | Primär | Russische Regierung | Telegram `MID_Russia` |
+| Selenskyj | Ukraine | Ukrainisch | 80 | Primär, eigene Stimme | Ukrainische Regierung | Telegram `V_Zelenskiy_official` |
+| UN Press | Global | Englisch | 88 | Primär | Sitzungsberichte | RSS |
+| Tagesschau Inland | DACH | Deutsch | 90 | Bestätigend | | RSS |
+| Spiegel Politik | DACH | Deutsch | 85 | Bestätigend | | RSS |
+| Zeit Politik | DACH | Deutsch | 85 | Bestätigend | | RSS |
+| FAZ Politik | DACH | Deutsch | 85 | Bestätigend | | RSS |
+| NPR Politics | USA | Englisch | 86 | Bestätigend | | RSS |
+| Handelsblatt Politik | DACH | Deutsch | 82 | Fachmedium | | RSS |
+| Politico Europe | Europa | Englisch | 82 | Fachmedium | | RSS |
+| Politico | USA | Englisch | 82 | Fachmedium | | RSS |
+| Axios | USA | Englisch | 80 | Fachmedium | | RSS |
+
+Geprüft im Test-Labor am 8. Oktober 2026. Verworfen: Bundesregierung und Euractiv (HTTP 403 für automatische Abrufe), Auswärtiges Amt, Verteidigungsministerium, Bundesverfassungsgericht und NATO (kein funktionierender Feed, 404), Truth Social direkt, AP und die Website des ukrainischen Präsidenten (HTTP 403), Europäisches Parlament (HTTP 202 ohne Inhalt), EUobserver (Feed eingestellt, 410), Süddeutsche Zeitung (funktioniert, weggelassen, weil vier deutsche bestätigende Quellen reichen), The Hill (rund 160 Beiträge am Tag, zu laut), Federal Register (dieselben Dokumente wie das Weiße Haus, zwei Tage später), Telegram-Kanäle von Bundeskanzler, Bundesregierung, Kreml, Peskow und Trump (kein öffentlicher Kanal).
 
 ## Die Prüfung
 

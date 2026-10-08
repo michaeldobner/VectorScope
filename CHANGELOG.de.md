@@ -4,6 +4,13 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.13.0 (2026-10-08)
+
+### Neu
+* Der Proxy liefert die Feeds und Telegram-Kanäle der 20 Politik-Quellen, insgesamt 52 Telegram-Kanäle.
+* Das Test-Labor prüft Kandidaten für die Politik-Linse und zeigt pro Feed Einträge pro Tag und die neueste Überschrift.
+* Modul INTEL 0.8.0, siehe sein [Changelog](intel/CHANGELOG.de.md).
+
 ## 0.12.0 (2026-10-08)
 
 ### Neu

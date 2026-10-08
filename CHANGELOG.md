@@ -4,6 +4,13 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.13.0 (2026-10-08)
+
+### Added
+* Proxy serves the feeds and Telegram channels of the 20 politics sources, 52 Telegram channels in total.
+* Test lab checks candidates for the politics lens and shows items per day and the latest headline of every feed.
+* Module INTEL 0.8.0, see its [changelog](intel/CHANGELOG.md).
+
 ## 0.12.0 (2026-10-08)
 
 ### Added

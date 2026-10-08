@@ -4,6 +4,17 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.8.0 (2026-10-08)
+
+### Added
+* **Politics lens:** a switch between Security and Politics above the views. Politics shows governments, parliaments, elections, laws, diplomacy, sanctions and tariffs.
+* **Actors:** 18 people and institutions (Trump, White House, Merz, Bundestag, von der Leyen, EU Commission, Putin, Kremlin, Zelensky, NATO and more) recognised in English, German, Russian and Ukrainian, as chips and as a filter.
+* **In the original:** a statement in the own words of an actor stands on top of its story.
+* Politics tiles: original statements and decisions of 24 hours, developing stories, the loudest actor of 6 hours. A **Signal** chip shows only stories with an original statement or two independent sources.
+* **Map of capitals:** in the politics lens capitals with lines between two capitals whose actors one story names.
+* **Bridges** between the lenses: a story shows a linked story of the other lens with the same actor or city on the same day.
+* **20 politics sources:** Trump (Truth Social, through trumpstruth.org), White House, Bundestag, European Commission, Council of the EU, Kremlin, Russian Foreign Ministry, Zelensky, UN Press, Tagesschau Inland, Spiegel, Zeit, FAZ, NPR, Handelsblatt, Politico Europe, Politico, Axios. 94 sources in total.
+
 ## 0.7.1 (2026-10-08)
 
 ### Fixed

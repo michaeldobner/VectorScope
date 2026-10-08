@@ -2,7 +2,7 @@
 
 [Deutsche Version](../de/quellen.md) · [Overview](README.md)
 
-INTEL reads 74 sources in seven classes, from Russia, Ukraine, the Middle East, Europe, Germany and the USA plus global sensors. Quality over quantity: every source was checked in the test lab with real internet before it was added. The list lives in `src/data/sources.ts`.
+INTEL reads 94 sources in seven classes, from Russia, Ukraine, the Middle East, Europe, Germany and the USA plus global sensors. Quality over quantity: every source was checked in the test lab with real internet before it was added. The list lives in `src/data/sources.ts`.
 
 ## Class and trust
 
@@ -149,6 +149,35 @@ Leading news media, the journalistic second confirmation.
 | Al Jazeera | Middle East | English | 75 | Qatari state funded | RSS |
 | Meduza | Russia | Russian | 82 | independent Russian | Telegram `meduzalive` |
 | Current Time | Russia | Russian | 78 | US funded, independent of Moscow | Telegram `currenttime` |
+
+## Politics
+
+Sources of the politics lens (since INTEL 0.8.0). Own voices of actors count as primary, they appear as "In the original". Category politics: in the security lens they count only with security and crisis topics.
+
+| Source | Region | Language | Trust | Class | Note | Channel |
+|---|---|---|---|---|---|---|
+| Trump (Truth Social) | USA | English | 85 | Primary, own voice | Through the archive trumpstruth.org, Truth Social itself blocks automated access | RSS |
+| White House | USA | English | 88 | Primary, own voice | News, network White House | RSS |
+| White House, presidential actions | USA | English | 92 | Primary, own voice | Executive orders and proclamations, network White House | RSS |
+| Bundestag | DACH | German | 92 | Primary, own voice | Current topics, network Bundestag | RSS |
+| Bundestag, heute im bundestag | DACH | German | 92 | Primary, own voice | Committees, inquiries, network Bundestag | RSS |
+| European Commission | Europe | English | 90 | Primary, own voice | Press corner | RSS |
+| Council of the EU | Europe | English | 90 | Primary, own voice | Press releases | RSS |
+| Kremlin | Russia | English | 75 | Primary, own voice | Russian government | RSS |
+| Russian Foreign Ministry | Russia | Russian | 70 | Primary | Russian government | Telegram `MID_Russia` |
+| Zelensky | Ukraine | Ukrainian | 80 | Primary, own voice | Ukrainian government | Telegram `V_Zelenskiy_official` |
+| UN Press | Global | English | 88 | Primary | Meetings coverage | RSS |
+| Tagesschau Inland | DACH | German | 90 | Confirming | | RSS |
+| Spiegel Politik | DACH | German | 85 | Confirming | | RSS |
+| Zeit Politik | DACH | German | 85 | Confirming | | RSS |
+| FAZ Politik | DACH | German | 85 | Confirming | | RSS |
+| NPR Politics | USA | English | 86 | Confirming | | RSS |
+| Handelsblatt Politik | DACH | German | 82 | Specialist | | RSS |
+| Politico Europe | Europe | English | 82 | Specialist | | RSS |
+| Politico | USA | English | 82 | Specialist | | RSS |
+| Axios | USA | English | 80 | Specialist | | RSS |
+
+Checked in the test lab on 8 October 2026. Rejected: Bundesregierung and Euractiv (HTTP 403 for automated requests), Auswärtiges Amt, Federal Ministry of Defence, Federal Constitutional Court and NATO (no working feed, 404), Truth Social directly, AP and the President of Ukraine website (HTTP 403), European Parliament (HTTP 202 without content), EUobserver (feed ended, 410), Süddeutsche Zeitung (works, left out because four German confirming sources are enough), The Hill (about 160 posts a day, too loud), Federal Register (same documents as the White House, two days later), Telegram channels of the Bundeskanzler, the Bundesregierung, the Kremlin, Peskov and Trump (no public channel).
 
 ## The check
 

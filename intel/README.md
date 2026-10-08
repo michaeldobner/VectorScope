@@ -22,7 +22,8 @@ Fast Telegram newsrooms report first, specialist media explain, leading media co
 | | |
 |---|---|
 | **Stories** | Reports from different sources about the same event become one card with status Signal, Emerging, Reported or Confirmed, a time axis of all reports and the lead time of the first unverified report |
-| **74 verified sources in seven classes** | Physical (USGS, EMSC, GDACS), primary (Rosaviatsiya, MChS, governors, Ukrainian Air Force, IDF, NWS, FAA), early (Baza, Mash, SHOT, 112, ASTRA, OSINTdefender), OSINT, specialist, perspective (Rybar, WarGonzo, Middle East Spectator) and confirming (Tagesschau, BBC, Meduza). Each checked in the test lab, each with region, language, trust and perspective |
+| **94 verified sources in seven classes** | Physical (USGS, EMSC, GDACS), primary (Rosaviatsiya, MChS, governors, Ukrainian Air Force, IDF, NWS, FAA), early (Baza, Mash, SHOT, 112, ASTRA, OSINTdefender), OSINT, specialist, perspective (Rybar, WarGonzo, Middle East Spectator) and confirming (Tagesschau, BBC, Meduza). Each checked in the test lab, each with region, language, trust and perspective |
+| **Politics lens** | A switch between Security and Politics. Politics shows governments, parliaments, laws and diplomacy, with actors (Trump, Bundestag, Kremlin …) instead of places, the original statement on top of a story, tiles for original statements and decisions, a map of capitals with lines between them, and bridges to stories of the security lens |
 | **Event confidence** | Every story gets a percentage from the classes and trust of its independent sources, separate from the trust of a single source |
 | **Probe collector** | Until the end of January 2027 a collector on GitHub Actions keeps every report every 10 minutes, so nothing scrolls away while the app is closed, and builds a raw archive for analysis |
 | **VectorScope Sensor** | INTEL becomes a source itself: tankers, AWACS, reconnaissance and bombers flying together, and every squawk 7700, become reports that join the stories |
@@ -71,6 +72,6 @@ npm test               # unit tests of all modules and repository checks
 
 ## Version
 
-Current version: **0.7.1**. See the [changelog](CHANGELOG.md).
+Current version: **0.8.0**. See the [changelog](CHANGELOG.md).
 
 Created by Michael Dobner. Licensed under the [MIT licence](../LICENSE).

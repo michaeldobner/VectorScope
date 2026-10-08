@@ -1,9 +1,12 @@
 import { Suspense, lazy, useMemo, useState } from 'react';
 import type { Aircraft } from '../../air/src/data/types';
+import { CAPITALS, DECISION, actorById, capitalsOf, type CapitalId } from './data/actors';
+import { bridgesFor } from './data/bridges';
+import { storyInLens } from './data/lens';
 import { isStrong } from './data/match';
 import { REGION_LABEL, SOURCES, TIER_LABEL, sourceById, type Category, type Region, type Tier } from './data/sources';
 import { independentCount, rankStories, type Status, type Story } from './data/stories';
-import type { EnrichedItem, Match } from './data/types';
+import type { EnrichedItem, Lens, Match } from './data/types';
 import { refreshFeed, refreshLive, setPrefs, useIntel, type Filter, type IntelState, type Pulse } from './state/store';
 import { TranslateContext, german, useTr, useTranslationVersion } from './state/translate';
 import { age, ago, altitude, clock, count, duration, km } from './ui/format';
@@ -25,8 +28,15 @@ export function App() {
   const wide = useWide();
   const [tab, setTab] = useState<Tab>('main');
   const view = st.prefs.view;
+  const lens = st.prefs.lens;
   const items = useMemo(() => st.items.filter((i) => itemPasses(i, st)), [st]);
-  const stories = useMemo(() => st.stories.filter((s) => s.items.some((i) => itemPasses(i, st))), [st]);
+  const stories = useMemo(
+    () =>
+      st.stories.filter(
+        (s) => inLens(s, lens) && s.items.some((i) => itemPasses(i, st)) && (lens !== 'politics' || !st.prefs.signal || isSignal(s)),
+      ),
+    [st, lens],
+  );
   // Re-render when translations arrive. The function hands out German text where it is known.
   const trVersion = useTranslationVersion();
   const tr = useMemo(() => (st.prefs.german ? german : (t: string) => t), [st.prefs.german, trVersion]);
@@ -35,6 +45,7 @@ export function App() {
     <TranslateContext.Provider value={tr}>
     <div className={`app ${wide ? 'wide' : 'narrow'} view-${view}`}>
       <TopBar st={st} />
+      <LensSwitch st={st} />
       {!wide && (
         <nav className="tabs" aria-label="Views">
           <button className={tab === 'main' && view === 'stories' ? 'on' : ''} onClick={() => (setTab('main'), setPrefs({ view: 'stories' }))}>
@@ -75,8 +86,12 @@ export function App() {
             {view === 'wire' && <WireList items={items} st={st} />}
             {view === 'map' && (
               <Suspense fallback={<div className="intel-map" />}>
-                <IntelMap stories={stories} live={st.live} />
-                <p className="note map-note">Circles: stories at the place most of their reports name, size by number of independent sources, white confirmed, blue reported or emerging, grey unverified. Dots: military aircraft, blue when a story names them, red squawk 7700. Tap a circle for its stories, a dot to open the aircraft in AIR.</p>
+                <IntelMap stories={stories} live={st.live} lens={lens} />
+                <p className="note map-note">
+                  {lens === 'politics'
+                    ? 'Circles: capitals, size by the stories that name their actors, white when one of them is confirmed. Lines: stories that name actors of two capitals, thicker for more stories. Tap a capital for its stories.'
+                    : 'Circles: stories at the place most of their reports name, size by number of independent sources, white confirmed, blue reported or emerging, grey unverified. Dots: military aircraft, blue when a story names them, red squawk 7700. Tap a circle for its stories, a dot to open the aircraft in AIR.'}
+                </p>
               </Suspense>
             )}
           </main>
@@ -95,13 +110,43 @@ export function App() {
 }
 
 function itemPasses(i: EnrichedItem, st: IntelState): boolean {
-  const { filter, place } = st.prefs;
+  const { filter, place, lens, actor } = st.prefs;
+  if (!i.lens?.[lens]) return false;
   if (place && !i.entities.places.some((p) => p.name === place)) return false;
+  if (actor && !actorMatches(i.entities.actors ?? [], actor)) return false;
   if (filter === 'all') return true;
   if (filter === 'live') return i.matches.some(isStrong);
   const src = sourceById(i.sourceId);
-  const chip = FILTERS.find((f) => f.key === filter);
+  const chip = filtersOf(lens).find((f) => f.key === filter);
   return !!src && !!chip?.test?.(src.region, src.category);
+}
+
+/** An actor filter is an actor id, or cap:<capital> for every actor of that capital. */
+function actorMatches(actors: string[], filter: string): boolean {
+  return filter.startsWith('cap:') ? capitalsOf(actors).includes(filter.slice(4) as CapitalId) : actors.includes(filter);
+}
+const actorLabel = (filter: string) => (filter.startsWith('cap:') ? (CAPITALS[filter.slice(4) as CapitalId]?.name ?? filter) : (actorById(filter)?.name ?? filter));
+
+/** The report in the own words of an actor: Truth Social of Trump, a release of the government. */
+const voiceOf = (i: EnrichedItem) => sourceById(i.sourceId)?.voice;
+/** Politics lens, Signal: an original statement or at least two independent sources. */
+const isSignal = (s: Story) => independentCount(s) >= 2 || s.items.some(voiceOf);
+const inLens = (s: Story, lens: Lens) => storyInLens(s.items, lens);
+
+function LensSwitch({ st }: { st: IntelState }) {
+  const lens = st.prefs.lens;
+  // A new lens starts unfiltered: tiles, topic chips and actor filters of the other lens do not fit.
+  const pick = (l: Lens) => l !== lens && setPrefs({ lens: l, pulse: null, filter: 'all', actor: null, place: null });
+  return (
+    <div className="lens" role="tablist" aria-label="Lens">
+      <button role="tab" aria-selected={lens === 'security'} className={lens === 'security' ? 'on' : ''} onClick={() => pick('security')}>
+        <span aria-hidden>⚔</span> Security
+      </button>
+      <button role="tab" aria-selected={lens === 'politics'} className={lens === 'politics' ? 'on' : ''} onClick={() => pick('politics')}>
+        <span aria-hidden>🏛</span> Politics
+      </button>
+    </div>
+  );
 }
 
 /** Aircraft with a strong match, each once, with the newest item that names it. */
@@ -150,22 +195,45 @@ const FILTERS: { key: Filter; label: string; test?: (r: Region, c: Category) => 
   { key: 'c:news', label: 'News', test: (_r: Region, c: Category) => c === 'news' || c === 'politics' },
 ];
 
+/** Politics needs no topic chips of the security lens, but Europe as a region. */
+const POLITICS_FILTERS: typeof FILTERS = [
+  { key: 'all', label: 'All' },
+  ...(['usa', 'dach', 'europe', 'russia', 'ukraine', 'mideast'] as Region[]).map((r) => ({ key: `r:${r}`, label: REGION_LABEL[r], test: (reg: Region) => reg === r })),
+];
+const filtersOf = (lens: Lens) => (lens === 'politics' ? POLITICS_FILTERS : FILTERS);
+
 function Filters({ st }: { st: IntelState }) {
   const liveCount = st.stories.filter((s) => s.items.some((i) => i.matches.some(isStrong))).length;
+  const politics = st.prefs.lens === 'politics';
   return (
     <div className="filters" role="toolbar" aria-label="Filter">
-      {/* First, so it is visible on a phone: tapping a place on the map or in a story sets it. */}
+      {/* First, so they are visible on a phone: tapping a place, an actor or a capital sets them. */}
+      {st.prefs.actor && (
+        <button className="chip on place" onClick={() => setPrefs({ actor: null })} aria-label={`Remove actor filter ${actorLabel(st.prefs.actor)}`}>
+          ◉ {actorLabel(st.prefs.actor)} ✕
+        </button>
+      )}
       {st.prefs.place && (
         <button className="chip on place" onClick={() => setPrefs({ place: null })} aria-label={`Remove place filter ${st.prefs.place}`}>
           ◎ {st.prefs.place} ✕
         </button>
       )}
-      {FILTERS.map((f) => (
+      {politics && (
+        <button
+          className={`chip ${st.prefs.signal ? 'on' : ''}`}
+          onClick={() => setPrefs({ signal: !st.prefs.signal })}
+          aria-pressed={st.prefs.signal}
+          title="Signal: only stories with an original statement or at least two independent sources. Off: everything"
+        >
+          {st.prefs.signal ? 'Signal' : 'Everything'}
+        </button>
+      )}
+      {filtersOf(st.prefs.lens).map((f) => (
         <button
           key={f.key}
-          className={`chip ${st.prefs.filter === f.key && !(f.key === 'all' && st.prefs.place) ? 'on' : ''} ${f.key === 'live' ? 'chip-live' : ''}`}
-          // All means everything: it also removes a place filter.
-          onClick={() => setPrefs(f.key === 'all' ? { filter: 'all', place: null } : { filter: f.key })}
+          className={`chip ${st.prefs.filter === f.key && !(f.key === 'all' && (st.prefs.place || st.prefs.actor)) ? 'on' : ''} ${f.key === 'live' ? 'chip-live' : ''}`}
+          // All means everything: it also removes a place or actor filter.
+          onClick={() => setPrefs(f.key === 'all' ? { filter: 'all', place: null, actor: null } : { filter: f.key })}
         >
           {f.key === 'live' && liveCount ? `${f.label} ${liveCount}` : f.label}
         </button>
@@ -186,8 +254,12 @@ function Empty({ st }: { st: IntelState }) {
 
 const HOUR_MS = HOUR;
 
+const isDecision = (i: EnrichedItem, now: number) => now - i.time < 24 * HOUR_MS && DECISION.test(i.title);
+
 /** Which stories a pulse tile stands for. */
 export function pulsePasses(s: Story, pulse: Pulse, now: number): boolean {
+  if (pulse === 'originals') return s.items.some((i) => voiceOf(i) && now - i.time < 24 * HOUR_MS);
+  if (pulse === 'decisions') return s.items.some((i) => isDecision(i, now));
   if (pulse === 'hour') return s.items.some((i) => now - i.time < HOUR_MS);
   if (pulse === 'unverified') return s.status === 'signal' || s.status === 'emerging';
   if (pulse === 'developing') return independentCount(s) >= 2 && now - s.last < 12 * HOUR_MS;
@@ -197,9 +269,12 @@ export function pulsePasses(s: Story, pulse: Pulse, now: number): boolean {
 
 function Pulse({ st }: { st: IntelState }) {
   const now = Date.now();
-  const lastHour = st.items.filter((i) => now - i.time < HOUR);
+  const lens = st.prefs.lens;
+  const items = st.items.filter((i) => i.lens?.[lens]);
+  const stories = st.stories.filter((s) => inLens(s, lens));
+  const lastHour = items.filter((i) => now - i.time < HOUR);
   const unverified = lastHour.filter((i) => tierOf(i) === 'early' || tierOf(i) === 'perspective').length;
-  const developing = st.stories.filter((s) => pulsePasses(s, 'developing', now)).length;
+  const developing = stories.filter((s) => pulsePasses(s, 'developing', now)).length;
   const alerts = st.alerts.filter((i) => now - i.time < HOUR).length;
   const tile = (key: Exclude<Pulse, null>, n: number, text: string) => (
     <button className={st.prefs.pulse === key ? 'on' : ''} onClick={() => setPrefs({ pulse: st.prefs.pulse === key ? null : key })} aria-pressed={st.prefs.pulse === key}>
@@ -207,6 +282,28 @@ function Pulse({ st }: { st: IntelState }) {
       <span>{text}</span>
     </button>
   );
+  if (lens === 'politics') {
+    const originals = items.filter((i) => voiceOf(i) && now - i.time < 24 * HOUR).length;
+    const decisions = items.filter((i) => isDecision(i, now)).length;
+    // The loudest actor: named in the most stories of the last 6 hours.
+    const named = new Map<string, number>();
+    for (const s of stories) {
+      if (now - s.last > 6 * HOUR) continue;
+      for (const a of new Set(s.items.flatMap((i) => i.entities.actors ?? []))) named.set(a, (named.get(a) ?? 0) + 1);
+    }
+    const [loud, loudN] = [...named.entries()].sort((a, b) => b[1] - a[1])[0] ?? [null, 0];
+    return (
+      <div className="pulse" aria-label="Pulse">
+        {tile('originals', originals, 'original statements, 24 h')}
+        {tile('decisions', decisions, 'decisions and rulings, 24 h')}
+        {tile('developing', developing, 'developing stories')}
+        <button className={loud && st.prefs.actor === loud ? 'on' : ''} disabled={!loud} onClick={() => loud && setPrefs({ actor: st.prefs.actor === loud ? null : loud, pulse: null })}>
+          <b className="loud">{loud ? actorById(loud)?.name : '·'}</b>
+          <span>{loud ? `loudest, in ${loudN} ${loudN === 1 ? 'story' : 'stories'}, 6 h` : 'no actor named, 6 h'}</span>
+        </button>
+      </div>
+    );
+  }
   return (
     <div className="pulse" aria-label="Pulse">
       {tile('hour', lastHour.length, 'reports last hour')}
@@ -220,18 +317,19 @@ function Pulse({ st }: { st: IntelState }) {
 function StoriesView({ stories: all, st }: { stories: Story[]; st: IntelState }) {
   const stories = useMemo(() => all.filter((s) => pulsePasses(s, st.prefs.pulse, Date.now())), [all, st.prefs.pulse]);
   const { developing, latest } = useMemo(() => rankStories(stories, Date.now()), [stories]);
+  const bridges = useMemo(() => bridgesFor([...developing.slice(0, 12), ...latest.slice(0, 80)], st.stories, st.prefs.lens), [developing, latest, st.stories, st.prefs.lens]);
   if (!all.length) return <Empty st={st} />;
   return (
     <>
       <Pulse st={st} />
-      {st.prefs.pulse === 'alerts' && <AlertsList st={st} />}
+      {st.prefs.pulse === 'alerts' && st.prefs.lens === 'security' && <AlertsList st={st} />}
       {!stories.length && st.prefs.pulse !== 'alerts' && <div className="empty">No story for this tile right now.</div>}
       {developing.length > 0 && (
         <section>
           <h2 className="section-title">Developing, several sources</h2>
           <ol className="items">
             {developing.slice(0, 12).map((s) => (
-              <StoryCard key={s.id} story={s} st={st} />
+              <StoryCard key={s.id} story={s} st={st} bridges={bridges.get(s.id)} />
             ))}
           </ol>
         </section>
@@ -240,7 +338,7 @@ function StoriesView({ stories: all, st }: { stories: Story[]; st: IntelState })
         <h2 className="section-title">Latest</h2>
         <ol className="items">
           {latest.slice(0, 80).map((s) => (
-            <StoryCard key={s.id} story={s} st={st} />
+            <StoryCard key={s.id} story={s} st={st} bridges={bridges.get(s.id)} />
           ))}
         </ol>
       </section>}
@@ -281,8 +379,9 @@ const STATUS_HINT: Record<Status, string> = {
   confirmed: 'primary source or leading news medium',
 };
 
-function StoryCard({ story, st }: { story: Story; st: IntelState }) {
+function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridges?: { story: Story; key: string }[] }) {
   const [open, setOpen] = useState(false);
+  const original = story.items.find(voiceOf);
   const tr = useTr();
   const { lead } = story;
   const n = independentCount(story);
@@ -307,7 +406,18 @@ function StoryCard({ story, st }: { story: Story; st: IntelState }) {
       <a className="item-title" href={lead.url} target={lead.channel === 'sensor' ? undefined : '_blank'} rel="noopener noreferrer">
         {tr(lead.title, lead.sourceId)}
       </a>
-      {lead.text && story.sources.length === 1 && <p className="item-text">{tr(lead.text, lead.sourceId)}</p>}
+      {original && (
+        <div className="original">
+          <div className="original-head">
+            In the original · {sourceName(original.sourceId)} · {clock(original.time)}
+          </div>
+          <a className="original-quote" href={original.url} target="_blank" rel="noopener noreferrer">
+            {tr(original.title, original.sourceId)}
+          </a>
+          {original.text && <p>{tr(original.text.length > 260 ? `${original.text.slice(0, 260)} …` : original.text, original.sourceId)}</p>}
+        </div>
+      )}
+      {lead.text && story.sources.length === 1 && !original && <p className="item-text">{tr(lead.text, lead.sourceId)}</p>}
       {story.sources.length > 1 && (
         <>
           <Timeline story={story} />
@@ -330,8 +440,13 @@ function StoryCard({ story, st }: { story: Story; st: IntelState }) {
           </div>
         </>
       )}
-      {(entities.callsigns.length > 0 || entities.types.length > 0 || entities.places.length > 0) && (
+      {(entities.callsigns.length > 0 || entities.types.length > 0 || entities.places.length > 0 || entities.actors.length > 0) && (
         <div className="entities">
+          {entities.actors.slice(0, 4).map((a) => (
+            <button key={a} className="ent ent-actor" onClick={() => setPrefs({ actor: a, filter: 'all', pulse: null })}>
+              {actorById(a)?.name ?? a}
+            </button>
+          ))}
           {entities.callsigns.map((c) => (
             <span key={c} className="ent ent-cs">
               {c}
@@ -349,6 +464,22 @@ function StoryCard({ story, st }: { story: Story; st: IntelState }) {
           ))}
         </div>
       )}
+      {bridges?.map(({ story: b, key }) => (
+        <button
+          key={b.id}
+          className="bridge"
+          onClick={() =>
+            setPrefs({
+              lens: st.prefs.lens === 'security' ? 'politics' : 'security',
+              pulse: null,
+              filter: 'all',
+              ...(key.startsWith('a:') ? { actor: key.slice(2), place: null } : { place: key.slice(2), actor: null }),
+            })
+          }
+        >
+          <span className="bridge-lens">{st.prefs.lens === 'security' ? '🏛 Politics' : '⚔ Security'}</span> linked: {tr(b.lead.title, b.lead.sourceId)}
+        </button>
+      ))}
       {strong.length > 0 && (
         <div className="matches">
           {strong.slice(0, 4).map((m) => (
@@ -409,6 +540,8 @@ function uniqueMatches(list: Match[]): Match[] {
 }
 
 function mergeEntities(items: EnrichedItem[]) {
+  const actors = new Map<string, number>();
+  for (const i of items) for (const a of i.entities.actors ?? []) actors.set(a, (actors.get(a) ?? 0) + 1);
   const callsigns = new Set<string>();
   const types = new Set<string>();
   const places = new Map<string, number>();
@@ -417,7 +550,12 @@ function mergeEntities(items: EnrichedItem[]) {
     i.entities.types.forEach((t) => types.add(t.label));
     i.entities.places.forEach((p) => places.set(p.name, Math.min(places.get(p.name) ?? Infinity, p.radiusKm)));
   }
-  return { callsigns: [...callsigns], types: [...types], places: [...places.entries()].sort((a, b) => a[1] - b[1]).map(([n]) => n) };
+  return {
+    callsigns: [...callsigns],
+    types: [...types],
+    places: [...places.entries()].sort((a, b) => a[1] - b[1]).map(([n]) => n),
+    actors: [...actors.entries()].sort((a, b) => b[1] - a[1]).map(([a]) => a),
+  };
 }
 
 /* Wire: every report on its own, newest first */

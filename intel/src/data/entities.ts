@@ -1,6 +1,7 @@
 // Recognition of callsigns, aircraft types and places in posts and articles.
 // Callsign prefixes come from the catalogue of AIR, so both modules speak the same language.
 import { CALLSIGN_PREFIX } from '../../../air/src/data/catalog';
+import { findActors } from './actors';
 import { findPlaces } from './places';
 
 export interface CallsignEntity {
@@ -26,6 +27,8 @@ export interface Entities {
   callsigns: CallsignEntity[];
   types: TypeEntity[];
   places: PlaceEntity[];
+  /** Political actors (ids of actors.ts): Trump, Bundestag, Kremlin … */
+  actors: string[];
 }
 
 /** Military callsign prefixes often named in OSINT posts, in addition to the catalogue of AIR. */
@@ -146,6 +149,7 @@ export function extractEntities(text: string): Entities {
     callsigns: findCallsigns(text),
     types: findTypes(text),
     places: findPlaces(text).map(({ place: { name, lat, lon, radiusKm }, text: matched }) => ({ name, lat, lon, radiusKm, matched: matched.toLowerCase() })),
+    actors: findActors(text),
   };
 }
 

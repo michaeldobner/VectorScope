@@ -26,6 +26,8 @@ export interface Source {
   perspective?: string;
   /** Channels of one network (Rybar and its regional channels) count as one source for confirmation. */
   network?: string;
+  /** The source is the own voice of an actor (actors.ts): Truth Social of Trump, press releases of the government. Shown as "In the original". */
+  voice?: string;
   /** Bluesky handle, read directly from the public Bluesky API. */
   bluesky?: string;
   /** RSS or Atom feed, read through the proxy route /feed/{id}. */
@@ -122,6 +124,27 @@ export const SOURCES: Source[] = [
   { id: 'aljazeera', name: 'Al Jazeera', tier: 'confirming', category: 'news', region: 'mideast', lang: 'en', trust: 75, perspective: 'Qatari state funded', rss: 'https://www.aljazeera.com/xml/rss/all.xml', site: 'https://www.aljazeera.com' },
   { id: 'meduza', name: 'Meduza', tier: 'confirming', category: 'news', region: 'russia', lang: 'ru', trust: 82, perspective: 'independent Russian', ...tg('meduzalive') },
   { id: 'currenttime', name: 'Current Time', tier: 'confirming', category: 'news', region: 'russia', lang: 'ru', trust: 78, perspective: 'US funded, independent of Moscow', ...tg('currenttime') },
+  // Politics lens: own voices of actors (primary), parliaments and governments, political press
+  { id: 'trump', name: 'Trump (Truth Social)', tier: 'primary', category: 'politics', region: 'usa', lang: 'en', trust: 85, perspective: 'US president', voice: 'trump', rss: 'https://trumpstruth.org/feed', site: 'https://truthsocial.com/@realDonaldTrump' },
+  { id: 'whitehouse', name: 'White House', tier: 'primary', category: 'politics', region: 'usa', lang: 'en', trust: 88, perspective: 'US government', voice: 'whitehouse', network: 'whitehouse', rss: 'https://www.whitehouse.gov/news/feed/', site: 'https://www.whitehouse.gov/news/' },
+  { id: 'whitehouseactions', name: 'White House, presidential actions', tier: 'primary', category: 'politics', region: 'usa', lang: 'en', trust: 92, perspective: 'US government', voice: 'whitehouse', network: 'whitehouse', rss: 'https://www.whitehouse.gov/presidential-actions/feed/', site: 'https://www.whitehouse.gov/presidential-actions/' },
+  { id: 'bundestag', name: 'Bundestag', tier: 'primary', category: 'politics', region: 'dach', lang: 'de', trust: 92, voice: 'bundestag', network: 'bundestag', rss: 'https://www.bundestag.de/static/appdata/includes/rss/aktuellethemen.rss', site: 'https://www.bundestag.de' },
+  { id: 'bundestaghib', name: 'Bundestag, heute im bundestag', tier: 'primary', category: 'politics', region: 'dach', lang: 'de', trust: 92, voice: 'bundestag', network: 'bundestag', rss: 'https://www.bundestag.de/static/appdata/includes/rss/hib.rss', site: 'https://www.bundestag.de/presse/hib' },
+  { id: 'eucommission', name: 'European Commission', tier: 'primary', category: 'politics', region: 'europe', lang: 'en', trust: 90, voice: 'eucommission', rss: 'https://ec.europa.eu/commission/presscorner/api/rss?language=en', site: 'https://ec.europa.eu/commission/presscorner' },
+  { id: 'eucouncil', name: 'Council of the EU', tier: 'primary', category: 'politics', region: 'europe', lang: 'en', trust: 90, voice: 'eu', rss: 'https://www.consilium.europa.eu/en/rss/pressreleases.ashx', site: 'https://www.consilium.europa.eu/en/press/' },
+  { id: 'kremlin', name: 'Kremlin', tier: 'primary', category: 'politics', region: 'russia', lang: 'en', trust: 75, perspective: 'Russian government', voice: 'kremlin', rss: 'http://en.kremlin.ru/events/president/news/feed', site: 'http://en.kremlin.ru' },
+  { id: 'mid-russia', name: 'Russian Foreign Ministry', tier: 'primary', category: 'politics', region: 'russia', lang: 'ru', trust: 70, perspective: 'Russian government', ...tg('MID_Russia') },
+  { id: 'zelensky', name: 'Zelensky', tier: 'primary', category: 'politics', region: 'ukraine', lang: 'uk', trust: 80, perspective: 'Ukrainian government', voice: 'zelensky', ...tg('V_Zelenskiy_official') },
+  { id: 'unpress', name: 'UN Press', tier: 'primary', category: 'politics', region: 'global', lang: 'en', trust: 88, rss: 'https://press.un.org/en/rss.xml', site: 'https://press.un.org' },
+  { id: 'tagesschauinland', name: 'Tagesschau Inland', tier: 'confirming', category: 'politics', region: 'dach', lang: 'de', trust: 90, rss: 'https://www.tagesschau.de/inland/index~rss2.xml', site: 'https://www.tagesschau.de/inland' },
+  { id: 'spiegel', name: 'Spiegel Politik', tier: 'confirming', category: 'politics', region: 'dach', lang: 'de', trust: 85, rss: 'https://www.spiegel.de/politik/index.rss', site: 'https://www.spiegel.de/politik/' },
+  { id: 'zeit', name: 'Zeit Politik', tier: 'confirming', category: 'politics', region: 'dach', lang: 'de', trust: 85, rss: 'https://newsfeed.zeit.de/politik/index', site: 'https://www.zeit.de/politik/' },
+  { id: 'faz', name: 'FAZ Politik', tier: 'confirming', category: 'politics', region: 'dach', lang: 'de', trust: 85, rss: 'https://www.faz.net/rss/aktuell/politik/', site: 'https://www.faz.net/aktuell/politik/' },
+  { id: 'handelsblatt', name: 'Handelsblatt Politik', tier: 'specialist', category: 'politics', region: 'dach', lang: 'de', trust: 82, rss: 'https://www.handelsblatt.com/contentexport/feed/politik', site: 'https://www.handelsblatt.com/politik/' },
+  { id: 'politicoeu', name: 'Politico Europe', tier: 'specialist', category: 'politics', region: 'europe', lang: 'en', trust: 82, rss: 'https://www.politico.eu/feed/', site: 'https://www.politico.eu' },
+  { id: 'politicous', name: 'Politico', tier: 'specialist', category: 'politics', region: 'usa', lang: 'en', trust: 82, rss: 'https://rss.politico.com/politics-news.xml', site: 'https://www.politico.com/politics' },
+  { id: 'axios', name: 'Axios', tier: 'specialist', category: 'politics', region: 'usa', lang: 'en', trust: 80, rss: 'https://api.axios.com/feed/', site: 'https://www.axios.com' },
+  { id: 'npr', name: 'NPR Politics', tier: 'confirming', category: 'politics', region: 'usa', lang: 'en', trust: 86, rss: 'https://feeds.npr.org/1014/rss.xml', site: 'https://www.npr.org/sections/politics/' },
 ];
 
 export const CATEGORY_LABEL: Record<Category, string> = {
@@ -181,6 +204,8 @@ export const DEMO_SOURCES: Source[] = [
   { id: 'demo-primary', name: 'Demo Governor', tier: 'primary', category: 'general', region: 'russia', lang: 'ru', trust: 80, perspective: 'Demo official', site: 'https://example.org' },
   { id: 'demo-ru', name: 'Demo Incident Channel', tier: 'early', category: 'general', region: 'russia', lang: 'ru', trust: 55, site: 'https://example.org' },
   { id: 'demo-quake', name: 'Demo Seismometer', tier: 'physical', category: 'disaster', region: 'global', lang: 'en', trust: 95, site: 'https://example.org' },
+  { id: 'demo-office', name: 'Demo Press Office', tier: 'primary', category: 'politics', region: 'europe', lang: 'en', trust: 90, voice: 'eucommission', site: 'https://example.org' },
+  { id: 'demo-politics', name: 'Demo Politics Desk', tier: 'specialist', category: 'politics', region: 'europe', lang: 'en', trust: 82, site: 'https://example.org' },
   { id: 'demo-side', name: 'Demo Partisan Channel', tier: 'perspective', category: 'military', region: 'russia', lang: 'ru', trust: 40, perspective: 'Demo partisan', site: 'https://example.org' },
 ];
 
@@ -191,7 +216,7 @@ export const DEMO_SOURCES: Source[] = [
  * incident channels, which mix attacks and fires with celebrities and fraud.
  */
 export const isBroad = (s: Source | undefined) =>
-  !!s && (s.category === 'news' || (s.category === 'general' && (s.tier === 'primary' || (s.tier === 'early' && s.region === 'russia'))));
+  !!s && (s.category === 'news' || s.category === 'politics' || (s.category === 'general' && (s.tier === 'primary' || (s.tier === 'early' && s.region === 'russia'))));
 
 export const independenceKey = (id: string) => sourceById(id)?.network ?? id;
 

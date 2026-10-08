@@ -4,6 +4,17 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.8.0 (2026-10-08)
+
+### Neu
+* **Politik-Linse:** ein Umschalter zwischen Security und Politics über den Ansichten. Politics zeigt Regierungen, Parlamente, Wahlen, Gesetze, Diplomatie, Sanktionen und Zölle.
+* **Akteure:** 18 Personen und Institutionen (Trump, Weißes Haus, Merz, Bundestag, von der Leyen, EU-Kommission, Putin, Kreml, Selenskyj, NATO und weitere), erkannt auf Englisch, Deutsch, Russisch und Ukrainisch, als Chips und als Filter.
+* **Im Original:** Eine Aussage in den eigenen Worten eines Akteurs steht oben in ihrer Story.
+* Politik-Kacheln: Originalaussagen und Beschlüsse der letzten 24 Stunden, Stories in Entwicklung, der lauteste Akteur der letzten 6 Stunden. Ein Chip **Signal** zeigt nur Stories mit Originalaussage oder zwei unabhängigen Quellen.
+* **Karte der Hauptstädte:** in der Politik-Linse Hauptstädte mit Linien zwischen zwei Hauptstädten, deren Akteure eine Story nennt.
+* **Brücken** zwischen den Linsen: Eine Story zeigt eine verbundene Story der anderen Linse mit demselben Akteur oder derselben Stadt am selben Tag.
+* **20 Politik-Quellen:** Trump (Truth Social, über trumpstruth.org), Weißes Haus, Bundestag, EU-Kommission, Rat der EU, Kreml, russisches Außenministerium, Selenskyj, UN Press, Tagesschau Inland, Spiegel, Zeit, FAZ, NPR, Handelsblatt, Politico Europe, Politico, Axios. Insgesamt 94 Quellen.
+
 ## 0.7.1 (2026-10-08)
 
 ### Behoben

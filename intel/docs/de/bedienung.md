@@ -11,6 +11,26 @@
 
 Das Logo oben links führt zurück zur VectorScope-Startseite. **DE** zeigt alle Überschriften und Auszüge auf Deutsch, siehe [Deutsch](#deutsch). Der Status zeigt **LIVE**, wenn Quellen geantwortet haben, **LOADING** beim ersten Laden, **OFFLINE**, wenn nichts geladen werden konnte, und **DEMO** im Demo-Modus. Der runde Pfeil lädt alles neu.
 
+## Linsen: Security und Politics
+
+Unter der oberen Leiste wählt ein Umschalter die Linse. Stories, Wire und Map bleiben dieselben Ansichten, sie zeigen die Meldungen der Linse.
+
+| Linse | Zeigt | Kacheln |
+|---|---|---|
+| ⚔ **Security** | Angriffe, Militär, Zwischenfälle, Katastrophen, Luftaktivität, wie bisher | Meldungen der letzten Stunde, davon ungeprüft, Stories in Entwicklung, Luftalarme Ukraine |
+| 🏛 **Politics** | Regierungen, Parlamente, Wahlen, Gesetze, Diplomatie, Sanktionen, Zölle | Originalaussagen der letzten 24 h, Beschlüsse und Urteile der letzten 24 h, Stories in Entwicklung, der lauteste Akteur der letzten 6 Stunden |
+
+In der Politik-Linse:
+
+* **Akteure** statt Orte: Trump, Weißes Haus, Merz, Bundesregierung, Bundestag, von der Leyen, EU-Kommission, EU, Putin, Kreml, Selenskyj, NATO, Macron, Starmer, Xi Jinping, Netanjahu, Erdoğan, Chamenei. Sie erscheinen als Chips (◉) an einer Story. Ein Tipp filtert nach dem Akteur, die Schaltfläche am Anfang der Filterleiste (◉ Name ✕) oder **All** hebt den Filter wieder auf.
+* **Im Original** (In the original): Spricht ein Akteur selbst (Trump auf Truth Social, das Weiße Haus, der Bundestag, die EU-Kommission, der Kreml, Selenskyj), zeigt die Story die Aussage oben mit Quelle und Uhrzeit. Darunter sieht man, wer sie wann aufgegriffen hat.
+* **Signal** (Chip am Anfang der Filterleiste): nur Stories mit Originalaussage oder mindestens zwei unabhängigen Quellen. Ein Tipp schaltet auf **Everything**, also alles.
+* **Karte:** Hauptstädte als Kreise für die Stories, die ihre Akteure nennen, Linien zwischen zwei Hauptstädten, deren Akteure eine Story nennt, dicker bei mehr Stories. Ein Tipp auf eine Hauptstadt filtert nach ihren Akteuren.
+
+**Brücken:** Eine Story kann mit einer Story der anderen Linse verbunden sein, die am selben Tag denselben Akteur oder dieselbe Stadt nennt, etwa ein Sanktionspaket und ein Tankerangriff. Die Karte zeigt dann „🏛 Politics linked: …“ oder „⚔ Security linked: …“, ein Tipp wechselt die Linse und filtert nach dem Gemeinsamen.
+
+Die App merkt sich die Linse. Ein Wechsel startet die neue Linse ohne Filter.
+
 ## Stories
 
 Die Standardansicht. Meldungen verschiedener Quellen über dasselbe Ereignis bilden eine Karte. Oben stehen vier Kacheln: Meldungen der letzten Stunde, wie viele davon ungeprüft sind, wie viele Stories sich entwickeln und die Luftalarme der ukrainischen Luftwaffe der letzten Stunde. **Ein Tipp auf eine Kachel filtert die Stories** entsprechend, ein zweiter Tipp hebt den Filter auf. Die Kachel Luftalarme zeigt stattdessen die Drohnen- und Raketenspuren der letzten 6 Stunden, eine Zeile je Spur.

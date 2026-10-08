@@ -2,14 +2,15 @@
 import { useSyncExternalStore } from 'react';
 import type { Aircraft } from '../../../air/src/data/types';
 import { demoItems, demoLive } from '../data/demo';
-import { entitiesOf, isCrisisRelated, type Entities } from '../data/entities';
+import { entitiesOf, type Entities } from '../data/entities';
+import { lensesOf } from '../data/lens';
 import { loadCollected, loadLive, loadSource, mergeItems, pool, type SourceStatus } from '../data/feed';
 import { matchLive } from '../data/match';
 import { detectAll } from '../data/sensor';
 import { buildStories, type Story } from '../data/stories';
-import { SOURCES, isBroad, sourceById } from '../data/sources';
+import { SOURCES } from '../data/sources';
 import { isAirTrack } from '../data/alerts';
-import type { EnrichedItem, Item } from '../data/types';
+import type { EnrichedItem, Item, Lens } from '../data/types';
 
 const PREFS_KEY = 'vectorscope.intel.v1';
 const CACHE_KEY = 'vectorscope.intel.cache.v1';
@@ -20,10 +21,16 @@ const LIVE_EVERY_MS = 2 * 60_000;
 export type Filter = string;
 export type View = 'stories' | 'wire' | 'map';
 /** Filter by one of the pulse tiles above the stories. */
-export type Pulse = 'hour' | 'unverified' | 'developing' | 'alerts' | null;
+export type Pulse = 'hour' | 'unverified' | 'developing' | 'alerts' | 'originals' | 'decisions' | null;
 
 export interface Prefs {
   view: View;
+  /** Security and crisis, or politics. Both lenses share the views. */
+  lens: Lens;
+  /** Actor id of actors.ts, or cap:<capital> for every actor of a capital, or null. */
+  actor: string | null;
+  /** Politics lens: only stories with an original statement or at least two independent sources. */
+  signal: boolean;
   pulse: Pulse;
   /** Show headlines and excerpts in German. */
   german: boolean;
@@ -71,7 +78,7 @@ function writeJson(key: string, value: unknown) {
 }
 
 const storedPrefs = readJson<Partial<Prefs>>(PREFS_KEY);
-const prefs: Prefs = { view: 'stories', pulse: null, german: false, filter: 'all', place: null, lastSeen: 0, ...storedPrefs };
+const prefs: Prefs = { view: 'stories', lens: 'security', actor: null, signal: true, pulse: null, german: false, filter: 'all', place: null, lastSeen: 0, ...storedPrefs };
 // Filters of earlier versions ("aviation", "breaking") become "all".
 if (!/^(all|live|[rc]:[a-z]+)$/.test(prefs.filter)) prefs.filter = 'all';
 
@@ -101,11 +108,6 @@ export const getState = () => state;
 export const getRaw = () => rawItems;
 export const useIntel = () => useSyncExternalStore((l) => (listeners.add(l), () => listeners.delete(l)), getState);
 
-/** Sources with a broad remit count only with security and crisis topics: no book prizes, no celebrities. */
-function relevant(item: Item, text: string, entities: Entities): boolean {
-  return !isBroad(sourceById(item.sourceId)) || isCrisisRelated(text, entities);
-}
-
 // Entities are computed once per item, matches whenever items or live aircraft change.
 const entityCache = new Map<string, Entities>();
 function enrich(items: Item[], live: Aircraft[], now: number): EnrichedItem[] {
@@ -117,8 +119,9 @@ function enrich(items: Item[], live: Aircraft[], now: number): EnrichedItem[] {
       entities = entitiesOf(item);
       entityCache.set(item.id, entities);
     }
-    if (!relevant(item, text, entities)) continue;
-    out.push({ ...item, entities, matches: matchLive(entities, live, item.time, now) });
+    const lens = lensesOf(item, text, entities);
+    if (!lens.security && !lens.politics) continue;
+    out.push({ ...item, entities, matches: matchLive(entities, live, item.time, now), lens });
   }
   return out;
 }

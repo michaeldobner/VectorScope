@@ -878,3 +878,100 @@ section > .section-title {
 .src-meta.err {
   color: var(--critical);
 }
+
+/* Lens: security or politics, the same views for two ways of looking at the world */
+.lens {
+  display: flex;
+  gap: 4px;
+  margin: 8px calc(14px + var(--sar)) 0 calc(14px + var(--sal));
+  padding: 3px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.lens button {
+  flex: 1;
+  height: 34px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+.lens button.on {
+  background: var(--raised);
+  color: var(--accent);
+}
+.lens button span {
+  margin-right: 4px;
+}
+.wide .lens {
+  max-width: 420px;
+}
+
+/* Politics: an actor speaking in the own words */
+.original {
+  margin-top: 10px;
+  padding: 9px 11px;
+  border-left: 2px solid var(--accent);
+  background: var(--panel);
+  border-radius: 0 8px 8px 0;
+}
+.original-head {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.original-quote {
+  display: block;
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 14.5px;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.original-quote::before {
+  content: '„';
+  color: var(--text-3);
+}
+.original-quote::after {
+  content: '“';
+  color: var(--text-3);
+}
+.original p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.ent-actor {
+  font-family: var(--ui);
+  color: var(--text);
+}
+.ent-actor::before {
+  content: '◉ ';
+  color: var(--accent);
+}
+
+/* Bridge to a story of the other lens */
+.bridge {
+  display: block;
+  width: 100%;
+  margin-top: 9px;
+  padding: 7px 10px;
+  text-align: left;
+  font-size: 12.5px;
+  color: var(--text-2);
+  background: transparent;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+}
+.bridge-lens {
+  color: var(--accent);
+  font-weight: 600;
+}
+.pulse b.loud {
+  font-family: var(--ui);
+  font-size: 16px;
+  font-weight: 650;
+}

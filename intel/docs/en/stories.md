@@ -45,6 +45,8 @@ Sources with a broad remit count only with security and crisis topics (attacks, 
 
 The drone and missile tracks of the Ukrainian Air Force (several hundred a day) are live tracking, not events. They are kept out of the stories and have their own tile, see the [user guide](user-guide.md). Takeoffs of strategic bombers and the morning summary stay ordinary reports.
 
+**Lenses.** Every report belongs to the security lens, the politics lens or both. Politics: a politics source, a known actor (Trump, Bundestag, Kremlin …) or political vocabulary (government, election, law, sanctions, tariffs, summit, and the same in German and Russian). NATO alone does not count, it is mostly named in military reports. A story shows in the security lens if one of its reports belongs there, in the politics lens if at least half of its reports are political: a statement does not turn an attack into politics. Checked on one day of the raw archive: 917 reports in security, 434 in politics, 275 in both.
+
 ## How reports are grouped
 
 1. For every report INTEL collects its tokens: places, callsigns and aircraft types from headline and excerpt, words from the headline only, because headlines say what happened and excerpts are full of boilerplate. Common words in English and German are ignored, German event words are mapped to English (Pest to plague, Drohne to drone, Explosion to explosion).

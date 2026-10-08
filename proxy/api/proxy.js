@@ -38,12 +38,32 @@ const FEEDS = {
   bbc: 'https://feeds.bbci.co.uk/news/world/rss.xml',
   aljazeera: 'https://www.aljazeera.com/xml/rss/all.xml',
   // Machine readable sources without browser access
+  trump: 'https://trumpstruth.org/feed',
+  whitehouse: 'https://www.whitehouse.gov/news/feed/',
+  whitehouseactions: 'https://www.whitehouse.gov/presidential-actions/feed/',
+  bundestag: 'https://www.bundestag.de/static/appdata/includes/rss/aktuellethemen.rss',
+  bundestaghib: 'https://www.bundestag.de/static/appdata/includes/rss/hib.rss',
+  eucommission: 'https://ec.europa.eu/commission/presscorner/api/rss?language=en',
+  eucouncil: 'https://www.consilium.europa.eu/en/rss/pressreleases.ashx',
+  kremlin: 'http://en.kremlin.ru/events/president/news/feed',
+  unpress: 'https://press.un.org/en/rss.xml',
+  tagesschauinland: 'https://www.tagesschau.de/inland/index~rss2.xml',
+  spiegel: 'https://www.spiegel.de/politik/index.rss',
+  zeit: 'https://newsfeed.zeit.de/politik/index',
+  faz: 'https://www.faz.net/rss/aktuell/politik/',
+  handelsblatt: 'https://www.handelsblatt.com/contentexport/feed/politik',
+  politicoeu: 'https://www.politico.eu/feed/',
+  politicous: 'https://rss.politico.com/politics-news.xml',
+  axios: 'https://api.axios.com/feed/',
+  npr: 'https://feeds.npr.org/1014/rss.xml',
   gdacs: 'https://www.gdacs.org/xml/rss.xml',
   faa: 'https://nasstatus.faa.gov/api/airport-status-information',
 };
 const FEED = /^\/feed\/([a-z0-9-]{1,32})$/;
 // Public Telegram channels of INTEL, read from the web preview t.me/s/{channel}. Fixed list, not an open proxy.
 const TELEGRAM = [
+  'MID_Russia',
+  'V_Zelenskiy_official',
   'favt_info',
   'mchs_official',
   'sledcom_press',

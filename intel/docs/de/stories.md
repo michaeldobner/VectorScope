@@ -45,6 +45,8 @@ Quellen mit breitem Themenfeld zählen nur bei Sicherheits- und Krisenthemen (An
 
 Die Drohnen- und Raketenspuren der ukrainischen Luftwaffe (mehrere Hundert am Tag) sind Live-Verfolgung, keine Ereignisse. Sie bleiben aus den Stories heraus und haben eine eigene Kachel, siehe [Bedienung](bedienung.md). Starts strategischer Bomber und die Morgenbilanz bleiben normale Meldungen.
 
+**Linsen.** Jede Meldung gehört zur Sicherheits-Linse, zur Politik-Linse oder zu beiden. Politik: eine Politik-Quelle, ein bekannter Akteur (Trump, Bundestag, Kreml …) oder politisches Vokabular (Regierung, Wahl, Gesetz, Sanktionen, Zölle, Gipfel, ebenso auf Englisch und Russisch). NATO allein zählt nicht, sie wird meist in militärischen Meldungen genannt. Eine Story erscheint in der Sicherheits-Linse, wenn eine ihrer Meldungen dazugehört, in der Politik-Linse, wenn mindestens die Hälfte ihrer Meldungen politisch ist: Eine Stellungnahme macht aus einem Angriff keine Politik. Geprüft an einem Tag des Rohdaten-Archivs: 917 Meldungen in Sicherheit, 434 in Politik, 275 in beiden.
+
 ## Wie Meldungen gebündelt werden
 
 1. Für jede Meldung sammelt INTEL ihre Merkmale: Orte, Callsigns und Flugzeugtypen aus Überschrift und Auszug, Wörter nur aus der Überschrift, weil Überschriften sagen, was passiert ist, und Auszüge voller Floskeln sind. Häufige Wörter auf Englisch und Deutsch werden ignoriert, deutsche Ereigniswörter auf Englisch abgebildet (Pest zu plague, Drohne zu drone, Explosion zu explosion).

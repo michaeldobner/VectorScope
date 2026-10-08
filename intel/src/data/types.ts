@@ -35,7 +35,11 @@ export interface Match {
   place?: string;
 }
 
+export type Lens = 'security' | 'politics';
+
 export interface EnrichedItem extends Item {
   entities: Entities;
   matches: Match[];
+  /** Lenses the report belongs to: security and crisis, politics, or both (a sanctions package). */
+  lens?: Partial<Record<Lens, true>>;
 }

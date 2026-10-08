@@ -36,6 +36,13 @@ export function demoItems(now: number): Item[] {
     item('demo-confirm', 0.2, 'Drone attack causes fire at oil refinery in Voronezh', 'Demo item. Regional authorities report no casualties.', 'rss'),
     // A physical measurement
     { ...item('demo-quake', 0.5, 'Earthquake M6.1 near Izmir, Turkey', 'Demo item. Depth 12 km.', 'rss'), channel: 'sensor', lat: 38.4, lon: 27.1, area: 'Izmir, Turkey' },
+    // Politics lens: an original statement, the political press and a wire service, plus a decision
+    item('demo-office', 1.2, 'Commission proposes new sanctions package against Russia', 'Demo item. The package targets shipping and energy exports, member states decide next week.', 'rss'),
+    item('demo-politics', 0.9, 'EU Commission tables sanctions package aimed at Russian shipping', 'Demo item. Diplomats expect talks among member states to take several days.', 'rss'),
+    item('demo-confirm', 0.6, 'EU proposes new Russia sanctions over shipping and energy', 'Demo item. The European Commission presented the package in Brussels.', 'rss'),
+    item('demo-politics', 3, 'Bundestag passes defence budget increase', 'Demo item. The vote passed with a clear majority.', 'rss'),
+    item('demo-politics', 2.2, 'White House and Kremlin prepare phone call on Ukraine talks', 'Demo item. Both sides confirmed contacts at staff level.', 'rss'),
+    item('demo-confirm', 1.8, 'Kremlin confirms preparations for call with White House on Ukraine', 'Demo item. No date has been set.', 'rss'),
     // German specialist press
     item('demo-de', 2.5, 'Luftwaffe verlegt Eurofighter nach Rumänien', 'Demo-Beitrag. Vier Eurofighter übernehmen das Air Policing am Schwarzen Meer.', 'rss'),
     item('demo-press', 30, 'Analysis: tanker activity over the Mediterranean', 'Demo item. Open source flight data shows a rise in KC-46 and A330 MRTT sorties over the past week.', 'rss'),
