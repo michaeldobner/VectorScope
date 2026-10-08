@@ -12,13 +12,20 @@ export function parseFeed(xml: string, sourceId: string): Item[] {
   const items: Item[] = [];
   const blocks = xml.match(/<item[\s>][\s\S]*?<\/item>/gi) ?? xml.match(/<entry[\s>][\s\S]*?<\/entry>/gi) ?? [];
   for (const block of blocks) {
-    const title = plainText(cdata(tag(block, 'title')) ?? '');
+    let title = plainText(cdata(tag(block, 'title')) ?? '');
     let link = cdata(tag(block, 'link'));
     if (!link) {
       // Atom: <link rel="alternate" href="…"/>, the first link without rel or with rel="alternate".
       const links = [...block.matchAll(/<link\b([^>]*)\/?>/gi)].map((m) => m[1]);
       const alt = links.find((a) => !/rel=/.test(a) || /rel=["']alternate["']/.test(a)) ?? links[0];
       link = alt?.match(/href=["']([^"']+)["']/)?.[1] ?? null;
+    }
+    // Podcasts without an episode page: the audio file.
+    if (!link) link = block.match(/<enclosure\b[^>]*\burl=["']([^"']+)["']/i)?.[1] ?? null;
+    // Mastodon posts have no title: the first sentence stands in.
+    if (!title) {
+      const post = plainText(cdata(tag(block, 'description')) ?? '');
+      title = post.match(/^[\s\S]{20,200}?[^\d\s][.!?](?=\s|$)/)?.[0] ?? clip(post, 160);
     }
     if (!title || !link) continue;
     link = decodeEntities(link.trim());

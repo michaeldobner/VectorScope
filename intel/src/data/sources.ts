@@ -2,6 +2,10 @@
 // it exists, posts itself and published recently. See docs/en/sources.md.
 // RSS feeds and Telegram channels are read through the proxy, which must list the same ids (checked by a test).
 
+import type { ItemKind } from './kinds';
+import { MDB_BLUESKY } from './mdb-bluesky';
+import type { PartyId } from './parties';
+
 /**
  * Class of a source: what kind of origin its reports have. Independent of how true a single report is.
  * physical: measuring systems (seismometers, satellites, ADS-B). primary: the originator itself
@@ -28,6 +32,12 @@ export interface Source {
   network?: string;
   /** The source is the own voice of an actor (actors.ts): Truth Social of Trump, press releases of the government. Shown as "In the original". */
   voice?: string;
+  /** Fraction of a member of parliament, for the voices of a story and the grouping in the source list. */
+  party?: PartyId;
+  /** Every report of the source is of this kind (kinds.ts): an interview podcast, the votes of the Bundestag. */
+  kind?: ItemKind;
+  /** Loaded only by the collector, the app gets the reports through its data (many accounts, or an API without browser access). */
+  collectorOnly?: true;
   /** Bluesky handle, read directly from the public Bluesky API. */
   bluesky?: string;
   /** RSS or Atom feed, read through the proxy route /feed/{id}. */
@@ -35,11 +45,21 @@ export interface Source {
   /** Public Telegram channel, read through the proxy route /tg/{channel}. */
   telegram?: string;
   /** Machine readable sensor or warning system, see data/physical.ts. */
-  api?: 'usgs' | 'emsc' | 'gdacs' | 'nws' | 'faa';
+  api?: 'usgs' | 'emsc' | 'gdacs' | 'nws' | 'faa' | 'abgeordnetenwatch';
   site: string;
 }
 
 const tg = (channel: string) => ({ telegram: channel, site: `https://t.me/s/${channel}` });
+/** Account of the federal Mastodon server social.bund.de, read as RSS. */
+const bund = (account: string) => ({ rss: `https://social.bund.de/@${account}.rss`, site: `https://social.bund.de/@${account}` });
+const youtube = (channel: string) => ({ rss: `https://www.youtube.com/feeds/videos.xml?channel_id=${channel}`, site: `https://www.youtube.com/channel/${channel}` });
+const slug = (name: string) =>
+  name
+    .toLowerCase()
+    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+    .normalize('NFD')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 
 export const SOURCES: Source[] = [
   // Physical sensors and warning systems
@@ -145,6 +165,33 @@ export const SOURCES: Source[] = [
   { id: 'politicous', name: 'Politico', tier: 'specialist', category: 'politics', region: 'usa', lang: 'en', trust: 82, rss: 'https://rss.politico.com/politics-news.xml', site: 'https://www.politico.com/politics' },
   { id: 'axios', name: 'Axios', tier: 'specialist', category: 'politics', region: 'usa', lang: 'en', trust: 80, rss: 'https://api.axios.com/feed/', site: 'https://www.axios.com' },
   { id: 'npr', name: 'NPR Politics', tier: 'confirming', category: 'politics', region: 'usa', lang: 'en', trust: 86, rss: 'https://feeds.npr.org/1014/rss.xml', site: 'https://www.npr.org/sections/politics/' },
+  // Voices of German politics (INTEL 0.9.0): the federal government on its own Mastodon, parliament, interviews, documents
+  { id: 'bundesregierung', name: 'Bundesregierung', tier: 'primary', category: 'politics', region: 'dach', lang: 'de', trust: 92, perspective: 'German government', voice: 'bundesregierung', ...bund('Bundesregierung') },
+  { id: 'bmi', name: 'Federal Ministry of the Interior', tier: 'primary', category: 'politics', region: 'dach', lang: 'de', trust: 90, perspective: 'German government', ...bund('bmi') },
+  { id: 'bmds', name: 'Federal Ministry for Digital Affairs', tier: 'primary', category: 'politics', region: 'dach', lang: 'de', trust: 90, perspective: 'German government', ...bund('BMDS') },
+  { id: 'bgh', name: 'Federal Court of Justice', tier: 'primary', category: 'politics', region: 'dach', lang: 'de', trust: 94, ...bund('BGH_Bund') },
+  { id: 'bsi', name: 'BSI', tier: 'primary', category: 'infrastructure', region: 'dach', lang: 'de', trust: 92, ...bund('bsi') },
+  { id: 'zoll', name: 'German Customs', tier: 'primary', category: 'general', region: 'dach', lang: 'de', trust: 88, ...bund('Zoll') },
+  { id: 'awvotes', name: 'abgeordnetenwatch.de, votes', tier: 'primary', category: 'politics', region: 'dach', lang: 'de', trust: 92, kind: 'vote', collectorOnly: true, api: 'abgeordnetenwatch', site: 'https://www.abgeordnetenwatch.de/bundestag/abstimmungen' },
+  { id: 'bundestagtv', name: 'Bundestag (YouTube)', tier: 'primary', category: 'politics', region: 'dach', lang: 'de', trust: 92, voice: 'bundestag', network: 'bundestag', kind: 'speech', ...youtube('UCbh5D3EdIHP4YQA5X-eK1ug') },
+  { id: 'dlfinterview', name: 'Deutschlandfunk, Interview der Woche', tier: 'confirming', category: 'politics', region: 'dach', lang: 'de', trust: 90, kind: 'interview', rss: 'https://www.deutschlandfunk.de/interview-der-woche-100.rss', site: 'https://www.deutschlandfunk.de/interview-der-woche-100.html' },
+  { id: 'phoenixpersoenlich', name: 'phoenix persönlich', tier: 'confirming', category: 'politics', region: 'dach', lang: 'de', trust: 86, kind: 'interview', rss: 'https://www.phoenix.de/podcast/persoenlich/audio/rss.xml', site: 'https://www.phoenix.de/sendungen/gespraeche/phoenix-persoenlich' },
+  { id: 'berlinplaybook', name: 'POLITICO Berlin Playbook (podcast)', tier: 'specialist', category: 'politics', region: 'dach', lang: 'de', trust: 82, collectorOnly: true, rss: 'https://feeds.megaphone.fm/ASD3449434491', site: 'https://www.politico.eu/newsletter/berlin-playbook/' },
+  { id: 'fragdenstaat', name: 'FragDenStaat', tier: 'specialist', category: 'politics', region: 'dach', lang: 'de', trust: 82, kind: 'document', rss: 'https://fragdenstaat.de/artikel/feed/', site: 'https://fragdenstaat.de' },
+  // Members of the Bundestag on Bluesky, by fraction. Loaded by the collector only.
+  ...MDB_BLUESKY.map(([handle, name, party]): Source => ({
+    id: `mdb-${slug(name)}`,
+    name,
+    tier: 'primary',
+    category: 'politics',
+    region: 'dach',
+    lang: 'de',
+    trust: 70,
+    party,
+    collectorOnly: true,
+    bluesky: handle,
+    site: `https://bsky.app/profile/${handle}`,
+  })),
 ];
 
 export const CATEGORY_LABEL: Record<Category, string> = {
@@ -206,6 +253,9 @@ export const DEMO_SOURCES: Source[] = [
   { id: 'demo-quake', name: 'Demo Seismometer', tier: 'physical', category: 'disaster', region: 'global', lang: 'en', trust: 95, site: 'https://example.org' },
   { id: 'demo-office', name: 'Demo Press Office', tier: 'primary', category: 'politics', region: 'europe', lang: 'en', trust: 90, voice: 'eucommission', site: 'https://example.org' },
   { id: 'demo-politics', name: 'Demo Politics Desk', tier: 'specialist', category: 'politics', region: 'europe', lang: 'en', trust: 82, site: 'https://example.org' },
+  { id: 'demo-votes', name: 'Demo Votes', tier: 'primary', category: 'politics', region: 'dach', lang: 'en', trust: 92, kind: 'vote', site: 'https://example.org' },
+  { id: 'demo-member-a', name: 'Demo Member A', tier: 'primary', category: 'politics', region: 'dach', lang: 'en', trust: 70, party: 'spd', site: 'https://example.org' },
+  { id: 'demo-member-b', name: 'Demo Member B', tier: 'primary', category: 'politics', region: 'dach', lang: 'en', trust: 70, party: 'gruene', site: 'https://example.org' },
   { id: 'demo-side', name: 'Demo Partisan Channel', tier: 'perspective', category: 'military', region: 'russia', lang: 'ru', trust: 40, perspective: 'Demo partisan', site: 'https://example.org' },
 ];
 

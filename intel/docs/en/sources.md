@@ -2,7 +2,7 @@
 
 [Deutsche Version](../de/quellen.md) · [Overview](README.md)
 
-INTEL reads 94 sources in seven classes, from Russia, Ukraine, the Middle East, Europe, Germany and the USA plus global sensors. Quality over quantity: every source was checked in the test lab with real internet before it was added. The list lives in `src/data/sources.ts`.
+INTEL reads 194 sources in seven classes, from Russia, Ukraine, the Middle East, Europe, Germany and the USA plus global sensors. Quality over quantity: every source was checked in the test lab with real internet before it was added. The list lives in `src/data/sources.ts`.
 
 ## Class and trust
 
@@ -178,6 +178,34 @@ Sources of the politics lens (since INTEL 0.8.0). Own voices of actors count as 
 | Axios | USA | English | 80 | Specialist | | RSS |
 
 Checked in the test lab on 8 October 2026. Rejected: Bundesregierung and Euractiv (HTTP 403 for automated requests), Auswärtiges Amt, Federal Ministry of Defence, Federal Constitutional Court and NATO (no working feed, 404), Truth Social directly, AP and the President of Ukraine website (HTTP 403), European Parliament (HTTP 202 without content), EUobserver (feed ended, 410), Süddeutsche Zeitung (works, left out because four German confirming sources are enough), The Hill (about 160 posts a day, too loud), Federal Register (same documents as the White House, two days later), Telegram channels of the Bundeskanzler, the Bundesregierung, the Kremlin, Peskov and Trump (no public channel).
+
+## Voices of German politics
+
+Since INTEL 0.9.0: the federal government in its own words, the votes of the Bundestag, the members of the Bundestag, interviews and documents. Checked in the test lab on 8 October 2026 (`lab/politics.mjs`, `lab/voices.mjs`).
+
+| Source | Trust | Class | Kind | Note | Channel |
+|---|---|---|---|---|---|
+| Bundesregierung | 92 | Primary, own voice | | Mastodon of the federal government, about 2 posts a day | RSS of social.bund.de |
+| Federal Ministry of the Interior | 90 | Primary | | | RSS of social.bund.de |
+| Federal Ministry for Digital Affairs | 90 | Primary | | | RSS of social.bund.de |
+| Federal Court of Justice | 94 | Primary | | | RSS of social.bund.de |
+| BSI | 92 | Primary | | Category infrastructure, security lens | RSS of social.bund.de |
+| German Customs | 88 | Primary | | Category general | RSS of social.bund.de |
+| abgeordnetenwatch.de, votes | 92 | Primary | 🗳 Vote | Every recorded vote of the Bundestag with its result, data CC0. Collector only | API v2 |
+| Bundestag (YouTube) | 92 | Primary, own voice | 🗣 Speech | Debates of the plenary by agenda item, network Bundestag | YouTube RSS |
+| Deutschlandfunk, Interview der Woche | 90 | Confirming | 🎙 Interview | | RSS |
+| phoenix persönlich | 86 | Confirming | 🎙 Interview | Talk with one guest a week, the link is the audio file | Podcast RSS |
+| POLITICO Berlin Playbook (podcast) | 82 | Specialist | | Every morning, the feed has 4.4 MB. Collector only | Podcast RSS |
+| FragDenStaat | 82 | Specialist | 📄 Document | Articles on documents released under freedom of information laws | RSS |
+| 88 members of the Bundestag | 70 | Primary | | Own posts on Bluesky, grouped by fraction. Collector only | Bluesky |
+
+**Members of the Bundestag.** All 630 members of the 21st Bundestag with their fraction come from abgeordnetenwatch.de (`src/data/members.ts`). INTEL recognises them by full name, by first and last name without middle names, and 27 well known members (Merz, Klingbeil, Weidel, Spahn, Reichinnek, Pistorius and others) by the last name alone. Ambiguous last names like Lang, Bas or Hoffmann are never matched alone. 88 members have a Bluesky profile that the Bluesky search finds and that matches a member by name (`src/data/mdb-bluesky.ts`). Both files are written by `scripts/members.mjs` from the results of the test lab, so they can be refreshed after a change in the Bundestag.
+
+**Collector only.** Sources marked so are loaded every 10 minutes by the collector, not by every refresh of the app: 88 Bluesky accounts or a 4.4 MB feed would make the app slow. Their reports reach the app through the collector data, the source list shows them with a hollow dot.
+
+**Rejected:** DIP, the documentation system of the Bundestag (speeches, minutes, printed papers). Its API needs a key, the help page shows the public key only in the browser, every attempt from the lab answered 401. A personal key is free on request, see the [plan](#plan). phoenix on YouTube (shorts and documentary series, little politics), Auswärtiges Amt and BMWK on Mastodon (silent for more than a year), Heute im Bundestag on Mastodon (same reports as the Bundestag feed hib).
+
+<a id="plan"></a>**Planned:** DIP with a personal key (speeches with speaker, printed papers), how the fractions voted in every vote (abgeordnetenwatch has the 630 votes per poll).
 
 ## The check
 

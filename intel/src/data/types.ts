@@ -1,12 +1,13 @@
 import type { Aircraft } from '../../../air/src/data/types';
 import type { Entities } from './entities';
+import type { ItemKind } from './kinds';
 
 /** One post or article, normalised from Bluesky or RSS. */
 export interface Item {
   /** Stable id: channel plus URL or post URI. */
   id: string;
   sourceId: string;
-  channel: 'bluesky' | 'rss' | 'telegram' | 'sensor';
+  channel: 'bluesky' | 'rss' | 'telegram' | 'sensor' | 'api';
   title: string;
   text: string;
   /** Link to the article, or to the post when it links nothing. */
@@ -42,4 +43,6 @@ export interface EnrichedItem extends Item {
   matches: Match[];
   /** Lenses the report belongs to: security and crisis, politics, or both (a sanctions package). */
   lens?: Partial<Record<Lens, true>>;
+  /** Interview, vote, speech or document (kinds.ts). */
+  kind?: ItemKind;
 }

@@ -22,7 +22,7 @@ Schnelle Telegram-Eilmelder melden zuerst, Fachmedien ordnen ein, Leitmedien bes
 | | |
 |---|---|
 | **Stories** | Meldungen verschiedener Quellen über dasselbe Ereignis werden eine Karte mit Status Signal, Emerging, Reported oder Confirmed, einer Zeitachse aller Meldungen und dem Vorsprung der ersten ungeprüften Meldung |
-| **94 geprüfte Quellen in sieben Klassen** | Messung (USGS, EMSC, GDACS), primär (Rosaviatsiya, MChS, Gouverneure, ukrainische Luftwaffe, IDF, NWS, FAA), früh (Baza, Mash, SHOT, 112, ASTRA, OSINTdefender), OSINT, Fachmedium, parteiisch (Rybar, WarGonzo, Middle East Spectator) und bestätigend (Tagesschau, BBC, Meduza). Jede im Test-Labor geprüft, jede mit Region, Sprache, Trust und Perspektive |
+| **194 geprüfte Quellen in sieben Klassen** | Messung (USGS, EMSC, GDACS), primär (Rosaviatsiya, MChS, Gouverneure, ukrainische Luftwaffe, IDF, NWS, FAA), früh (Baza, Mash, SHOT, 112, ASTRA, OSINTdefender), OSINT, Fachmedium, parteiisch (Rybar, WarGonzo, Middle East Spectator) und bestätigend (Tagesschau, BBC, Meduza). Jede im Test-Labor geprüft, jede mit Region, Sprache, Trust und Perspektive |
 | **Politik-Linse** | Ein Umschalter zwischen Security und Politics. Politics zeigt Regierungen, Parlamente, Gesetze und Diplomatie, mit Akteuren (Trump, Bundestag, Kreml …) statt Orten, der Originalaussage oben in der Story, Kacheln für Originalaussagen und Beschlüsse, einer Karte der Hauptstädte mit Linien dazwischen und Brücken zu Stories der Sicherheits-Linse |
 | **Event Confidence** | Jede Story erhält einen Prozentwert aus Klassen und Trust ihrer unabhängigen Quellen, getrennt vom Trust einer einzelnen Quelle |
 | **Probe-Sammler** | Bis Ende Januar 2027 hält ein Sammler auf GitHub Actions alle 10 Minuten jede Meldung fest, damit nichts verloren geht, während die App geschlossen ist, und baut ein Rohdaten-Archiv für Auswertungen auf |
@@ -72,6 +72,6 @@ npm test               # Unit-Tests aller Module und Prüfungen des Repositorys
 
 ## Version
 
-Aktuelle Version: **0.8.0**. Siehe [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.9.0**. Siehe [Changelog](CHANGELOG.de.md).
 
 Erstellt von Michael Dobner. Lizenziert unter der [MIT-Lizenz](../LICENSE).

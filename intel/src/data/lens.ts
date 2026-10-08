@@ -22,7 +22,7 @@ export function lensesOf(item: Item, text: string, entities: Entities): Partial<
   const src = sourceById(item.sourceId);
   const out: Partial<Record<Lens, true>> = {};
   if (!isBroad(src) || isCrisisRelated(text, entities)) out.security = true;
-  if (item.channel !== 'sensor' && (src?.category === 'politics' || isPoliticsRelated(text, entities.actors))) out.politics = true;
+  if (item.channel !== 'sensor' && (src?.category === 'politics' || isPoliticsRelated(text, entities.actors) || entities.members.length > 0)) out.politics = true;
   return out;
 }
 

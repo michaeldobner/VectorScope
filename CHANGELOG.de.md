@@ -4,6 +4,14 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.14.0 (2026-10-08)
+
+### Neu
+* Proxy liefert die 12 neuen Feeds der Stimmen der Politik.
+* Sammler lädt Quellen, die nur für ihn markiert sind (88 Bundestagsabgeordnete auf Bluesky, Abstimmungen von abgeordnetenwatch.de, POLITICO Berlin Playbook), und legt die Abstimmungen im Rohdaten-Archiv ab, eine Einheit pro Abstimmung.
+* Test-Labor: `lab/voices.mjs` speichert Beispiele der neuen Feeds und APIs und probiert die DIP-API des Bundestags. `scripts/members.mjs` schreibt die Abgeordnetenliste aus den Laborergebnissen.
+* Modul INTEL 0.9.0, siehe sein [Changelog](intel/CHANGELOG.de.md).
+
 ## 0.13.0 (2026-10-08)
 
 ### Neu

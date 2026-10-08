@@ -4,6 +4,14 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.14.0 (2026-10-08)
+
+### Added
+* Proxy serves the 12 new feeds of the voices of politics.
+* Collector loads sources marked collector only (88 members of the Bundestag on Bluesky, votes of abgeordnetenwatch.de, POLITICO Berlin Playbook) and keeps the votes in the raw archive, one unit per vote.
+* Test lab: `lab/voices.mjs` saves samples of the new feeds and APIs and tries the DIP API of the Bundestag. `scripts/members.mjs` writes the member list of the Bundestag from the lab results.
+* Module INTEL 0.9.0, see its [changelog](intel/CHANGELOG.md).
+
 ## 0.13.0 (2026-10-08)
 
 ### Added

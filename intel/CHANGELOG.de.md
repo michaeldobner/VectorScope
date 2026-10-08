@@ -4,6 +4,20 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.9.0 (2026-10-08)
+
+### Neu
+* **Bundestagsabgeordnete:** alle 630 Mitglieder des 21. Bundestags mit Fraktion, in jeder Meldung am Namen erkannt. 27 bekannte Abgeordnete auch am Nachnamen allein.
+* **Who says what:** Eine Story in der Politik-Linse zeigt die Abgeordneten je Fraktion, wer selbst dazu geschrieben hat, ist mit ✎ markiert. Ein Tipp filtert nach Fraktion oder Person. Fraktions-Chips CDU/CSU, AfD, SPD, Grüne und Linke in der Filterzeile.
+* **Arten von Meldungen** als Abzeichen: 🎙 Interview, 🗳 Abstimmung, 🗣 Rede, 📄 Dokument.
+* **Abstimmungen des Bundestags** von abgeordnetenwatch.de, jede eine Meldung mit Ergebnis.
+* **100 neue Quellen, 194 insgesamt:** Bundesregierung, Innen- und Digitalministerium, Bundesgerichtshof, BSI und Zoll auf dem Mastodon des Bundes, der Bundestag auf YouTube, Deutschlandfunk Interview der Woche, phoenix persönlich, POLITICO Berlin Playbook, FragDenStaat, Abstimmungen von abgeordnetenwatch.de und 88 Bundestagsabgeordnete auf Bluesky.
+* **Nur Sammler:** Quellen mit vielen Konten oder großen Feeds kommen über die Sammlerdaten, nicht bei jeder Aktualisierung der App.
+* **Quellenliste für viele Quellen:** eine Übersichtszeile, ein Suchfeld, Gruppen nach Linse, Klasse und Fraktion, die ein Tipp öffnet, eine Gruppe „Needs attention“ für ausgefallene Quellen, Netzwerke als eine Zeile.
+
+### Behoben
+* Feeds ohne Titel (Mastodon) nehmen den ersten Satz als Titel, Podcasts ohne Episodenseite verlinken die Audiodatei. Beide fielen vorher weg.
+
 ## 0.8.0 (2026-10-08)
 
 ### Neu

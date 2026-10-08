@@ -29,6 +29,10 @@ In der Politik-Linse:
 
 **Brücken:** Eine Story kann mit einer Story der anderen Linse verbunden sein, die am selben Tag denselben Akteur oder dieselbe Stadt nennt, etwa ein Sanktionspaket und ein Tankerangriff. Die Karte zeigt dann „🏛 Politics linked: …“ oder „⚔ Security linked: …“, ein Tipp wechselt die Linse und filtert nach dem Gemeinsamen.
 
+**Who says what** (seit INTEL 0.9.0): Schreiben Bundestagsabgeordnete über eine Story oder werden sie darin genannt, zeigt die Story eine Gruppe pro Fraktion in ihrer Farbe, etwa „SPD ✎ Klingbeil, Miersch“. ✎ markiert Abgeordnete, die selbst auf Bluesky dazu geschrieben haben, die anderen werden in den Meldungen genannt. Ein Tipp auf die Fraktion filtert nach ihr, ein Tipp auf einen Namen nach der Person. Die Fraktions-Chips am Ende der Filterzeile (CDU/CSU, AfD, SPD, Grüne, Linke) tun dasselbe für die ganze Liste. In der Security-Linse erscheinen Abgeordnete als Chips an der Story.
+
+**Art** einer Meldung, als Abzeichen neben dem Status: 🎙 Interview, 🗳 Abstimmung im Bundestag, 🗣 Rede oder Debatte, 📄 Dokument. Interviews erkennt INTEL an der Quelle (Deutschlandfunk, phoenix persönlich) oder an „Interview“ in der Überschrift.
+
 Die App merkt sich die Linse. Ein Wechsel startet die neue Linse ohne Filter.
 
 ## Stories
@@ -102,7 +106,9 @@ Orte, die in den letzten 24 Stunden genannt wurden, sortiert nach Häufigkeit. D
 
 ## Sources
 
-Jede Quelle mit Statuspunkt (blau: hat geantwortet, rot: fehlgeschlagen), ihren Kanälen und dem Alter ihres neuesten Beitrags. Fällt eine Quelle aus, zeigt die Zeile ihren Fehler rot an, etwa den HTTP-Status, und die anderen arbeiten weiter.
+Eine Zeile mit der Übersicht (Quellen, antworten, nicht erreichbar, über den Sammler), ein Suchfeld für Name, Region oder Fraktion, dann die Quellen in Gruppen, die ein Tipp öffnet: Security nach Klasse, Politik nach eigenen Stimmen, Abgeordneten je Fraktion, Parlament und Regierung, Medien. Oben listet die Gruppe „Needs attention“ jede Quelle, die ausgefallen ist. Kanäle eines Netzwerks (Rybar) sind eine Zeile, die sich zu ihren Kanälen öffnet.
+
+Jede Quelle hat einen Statuspunkt (blau: hat geantwortet, rot: fehlgeschlagen, hohl: kommt über den Sammler), Region, Trust und das Alter ihres neuesten Beitrags. Fällt eine Quelle aus, zeigt die Zeile ihren Fehler rot an, etwa den HTTP-Status, und die anderen arbeiten weiter.
 
 Am Ende dieses Bereichs steht die Version von INTEL.
 

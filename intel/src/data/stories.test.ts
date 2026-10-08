@@ -79,8 +79,8 @@ describe('stories', () => {
 
   it('lists stories with several sources as developing', () => {
     const { developing, latest } = rankStories(stories, now);
-    expect(developing.map((s) => s.items.length)).toEqual([4, 3, 3, 2, 2, 2]);
-    expect(latest).toHaveLength(5);
+    expect(developing.map((s) => s.items.length)).toEqual([4, 4, 3, 4, 2, 2, 2]);
+    expect(latest).toHaveLength(4);
   });
 
   it('does not chain loosely related reports into one story', () => {

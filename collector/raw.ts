@@ -5,6 +5,7 @@
 import { createHash } from 'node:crypto';
 import type { RawResponse } from '../intel/src/data/feed';
 import { parseAuthorFeed } from '../intel/src/data/bluesky';
+import { parsePolls } from '../intel/src/data/parliament';
 import { parseEmsc, parseFaa, parseGdacs, parseNws, parseUsgs } from '../intel/src/data/physical';
 import { parseFeed } from '../intel/src/data/rss';
 import { parseTelegram } from '../intel/src/data/telegram';
@@ -149,6 +150,13 @@ export function splitUnits(r: Pick<RawResponse, 'sourceId' | 'kind' | 'api' | 'b
       return [unit(`bsky:${r.sourceId}:${sha1(body)}`, body)];
     }
   }
+  if (r.api === 'abgeordnetenwatch') {
+    try {
+      return (JSON.parse(body).data ?? []).map((p: any) => unit(`aw:${p.id}`, JSON.stringify(p)));
+    } catch {
+      return [unit(`aw:${sha1(body)}`, body)];
+    }
+  }
   if (r.api === 'usgs' || r.api === 'emsc' || r.api === 'nws') {
     try {
       const features = JSON.parse(body).features ?? [];
@@ -182,6 +190,8 @@ export function parseUnit(u: Pick<UnitRecord, 'src' | 'kind' | 'api' | 'body' | 
         return parseGdacs(`<rss><channel>${u.body}</channel></rss>`, u.src);
       case 'faa':
         return parseFaa(u.body, u.src, u.at);
+      case 'abgeordnetenwatch':
+        return parsePolls({ data: [JSON.parse(u.body)] }, u.src);
     }
   } catch {
     // A unit that does not parse stays in the raw archive and is counted by the checks.

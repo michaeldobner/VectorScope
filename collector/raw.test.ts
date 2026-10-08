@@ -179,3 +179,12 @@ describe('backfill', () => {
     }
   });
 });
+
+describe('raw archive of the votes', () => {
+  it('keeps one unit per poll and reads the vote back from it', () => {
+    const body = JSON.stringify({ data: [{ id: 1, label: 'Erster', field_accepted: true, field_poll_date: '2026-10-08' }, { id: 2, label: 'Zweiter', field_accepted: false, field_poll_date: '2026-10-08' }] });
+    const units = splitUnits({ sourceId: 'awvotes', kind: 'api', api: 'abgeordnetenwatch', body });
+    expect(units.map((u) => u.key)).toEqual(['aw:1', 'aw:2']);
+    expect(parseUnit({ src: 'awvotes', kind: 'api', api: 'abgeordnetenwatch', body: units[1].body, at: 0 })[0].title).toBe('Abstimmung im Bundestag: Zweiter, abgelehnt');
+  });
+});

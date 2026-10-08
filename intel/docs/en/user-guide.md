@@ -29,6 +29,10 @@ In the politics lens:
 
 **Bridges:** a story can be linked to a story of the other lens that names the same actor or the same city on the same day, for example a sanctions package and a tanker attack. The card then shows "🏛 Politics linked: …" or "⚔ Security linked: …", a tap switches the lens and filters by what both share.
 
+**Who says what** (since INTEL 0.9.0): if members of the Bundestag post about a story or are named in it, the story shows one group per fraction in its colour, for example "SPD ✎ Klingbeil, Miersch". ✎ marks a member who posted about it on Bluesky, the others are named in the reports. A tap on the fraction filters by it, a tap on a name by the member. The fraction chips at the end of the filter row (CDU/CSU, AfD, SPD, Grüne, Linke) do the same for the whole list. In the security lens the members appear as chips on the story.
+
+**Kind** of a report, as a badge next to the status: 🎙 Interview, 🗳 Vote of the Bundestag, 🗣 Speech or debate, 📄 Document. Interviews are recognised by the source (Deutschlandfunk, phoenix persönlich) or by "Interview" in the headline.
+
 The app remembers the lens. Switching starts the new lens without filters.
 
 ## Stories
@@ -102,7 +106,9 @@ Places named in the last 24 hours, sorted by how often. The bar shows the share.
 
 ## Sources
 
-Every source with a status dot (blue: answered, red: failed), its channels and the age of its newest post. When a source fails, the line shows its error in red, for example the HTTP status, and the other sources keep working.
+A summary line (sources, answering, not reachable, through the collector), a search field for name, region or fraction, then the sources in groups that open with a tap: security by class, politics by own voices, members of the Bundestag per fraction, parliament and government, media. A group "Needs attention" on top lists every source that failed. Channels of one network (Rybar) are one line that opens to its channels.
+
+Every source has a status dot (blue: answered, red: failed, hollow: comes through the collector), its region, trust and the age of its newest post. When a source fails, the line shows its error in red, for example the HTTP status, and the other sources keep working.
 
 The version of INTEL is shown at the end of this panel.
 

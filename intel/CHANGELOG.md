@@ -4,6 +4,20 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.9.0 (2026-10-08)
+
+### Added
+* **Members of the Bundestag:** all 630 members of the 21st Bundestag with their fraction, recognised by name in every report. 27 well known members also by the last name alone.
+* **Who says what:** a story in the politics lens shows the members per fraction, those who posted about it themselves marked with ✎. A tap filters by the fraction or the member. Fraction chips CDU/CSU, AfD, SPD, Grüne and Linke in the filter row.
+* **Kinds of reports** as badges: 🎙 Interview, 🗳 Vote, 🗣 Speech, 📄 Document.
+* **Votes of the Bundestag** from abgeordnetenwatch.de, each a report with its result.
+* **100 new sources, 194 in total:** the Bundesregierung, the ministries of the interior and digital affairs, the Federal Court of Justice, BSI and German Customs on the federal Mastodon, the Bundestag on YouTube, Deutschlandfunk Interview der Woche, phoenix persönlich, POLITICO Berlin Playbook, FragDenStaat, abgeordnetenwatch.de votes and 88 members of the Bundestag on Bluesky.
+* **Collector only:** sources with many accounts or large feeds come through the collector data, not with every refresh of the app.
+* **Source list for many sources:** a summary line, a search field, groups by lens, class and fraction that open with a tap, a group "Needs attention" for failing sources, networks as one line.
+
+### Fixed
+* Feeds without a title (Mastodon) take the first sentence as title, podcasts without an episode page link the audio file. Both were dropped before.
+
 ## 0.8.0 (2026-10-08)
 
 ### Added

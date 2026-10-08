@@ -2,7 +2,7 @@
 
 [English version](../en/sources.md) · [Übersicht](README.md)
 
-INTEL liest 94 Quellen in sieben Klassen, aus Russland, der Ukraine, Nahost, Europa, Deutschland und den USA sowie globale Sensoren. Qualität vor Menge: Jede Quelle wurde im Test-Labor mit echtem Internet geprüft, bevor sie aufgenommen wurde. Die Liste steht in `src/data/sources.ts`.
+INTEL liest 194 Quellen in sieben Klassen, aus Russland, der Ukraine, Nahost, Europa, Deutschland und den USA sowie globale Sensoren. Qualität vor Menge: Jede Quelle wurde im Test-Labor mit echtem Internet geprüft, bevor sie aufgenommen wurde. Die Liste steht in `src/data/sources.ts`.
 
 ## Klasse und Trust
 
@@ -176,6 +176,34 @@ Quellen der Politik-Linse (seit INTEL 0.8.0). Eigene Stimmen von Akteuren zähle
 | Axios | USA | Englisch | 80 | Fachmedium | | RSS |
 
 Geprüft im Test-Labor am 8. Oktober 2026. Verworfen: Bundesregierung und Euractiv (HTTP 403 für automatische Abrufe), Auswärtiges Amt, Verteidigungsministerium, Bundesverfassungsgericht und NATO (kein funktionierender Feed, 404), Truth Social direkt, AP und die Website des ukrainischen Präsidenten (HTTP 403), Europäisches Parlament (HTTP 202 ohne Inhalt), EUobserver (Feed eingestellt, 410), Süddeutsche Zeitung (funktioniert, weggelassen, weil vier deutsche bestätigende Quellen reichen), The Hill (rund 160 Beiträge am Tag, zu laut), Federal Register (dieselben Dokumente wie das Weiße Haus, zwei Tage später), Telegram-Kanäle von Bundeskanzler, Bundesregierung, Kreml, Peskow und Trump (kein öffentlicher Kanal).
+
+## Stimmen der deutschen Politik
+
+Seit INTEL 0.9.0: die Bundesregierung in eigenen Worten, die Abstimmungen des Bundestags, die Abgeordneten, Interviews und Dokumente. Geprüft im Test-Labor am 8. Oktober 2026 (`lab/politics.mjs`, `lab/voices.mjs`).
+
+| Quelle | Trust | Klasse | Art | Hinweis | Kanal |
+|---|---|---|---|---|---|
+| Bundesregierung | 92 | Primär, eigene Stimme | | Mastodon der Bundesregierung, etwa 2 Beiträge am Tag | RSS von social.bund.de |
+| Bundesinnenministerium | 90 | Primär | | | RSS von social.bund.de |
+| Bundesdigitalministerium | 90 | Primär | | | RSS von social.bund.de |
+| Bundesgerichtshof | 94 | Primär | | | RSS von social.bund.de |
+| BSI | 92 | Primär | | Kategorie Infrastruktur, Security-Linse | RSS von social.bund.de |
+| Zoll | 88 | Primär | | Kategorie allgemein | RSS von social.bund.de |
+| abgeordnetenwatch.de, Abstimmungen | 92 | Primär | 🗳 Abstimmung | Jede namentliche Abstimmung des Bundestags mit Ergebnis, Daten CC0. Nur Sammler | API v2 |
+| Bundestag (YouTube) | 92 | Primär, eigene Stimme | 🗣 Rede | Debatten im Plenum je Tagesordnungspunkt, Netzwerk Bundestag | YouTube-RSS |
+| Deutschlandfunk, Interview der Woche | 90 | Bestätigend | 🎙 Interview | | RSS |
+| phoenix persönlich | 86 | Bestätigend | 🎙 Interview | Ein Gast pro Woche, der Link ist die Audiodatei | Podcast-RSS |
+| POLITICO Berlin Playbook (Podcast) | 82 | Fachmedium | | Jeden Morgen, der Feed hat 4,4 MB. Nur Sammler | Podcast-RSS |
+| FragDenStaat | 82 | Fachmedium | 📄 Dokument | Artikel zu Dokumenten aus Anfragen nach dem Informationsfreiheitsgesetz | RSS |
+| 88 Bundestagsabgeordnete | 70 | Primär | | Eigene Beiträge auf Bluesky, nach Fraktion gruppiert. Nur Sammler | Bluesky |
+
+**Abgeordnete.** Alle 630 Mitglieder des 21. Bundestags mit Fraktion stammen von abgeordnetenwatch.de (`src/data/members.ts`). INTEL erkennt sie am vollen Namen, an Vor- und Nachname ohne zweiten Vornamen und 27 bekannte Abgeordnete (Merz, Klingbeil, Weidel, Spahn, Reichinnek, Pistorius und andere) schon am Nachnamen. Mehrdeutige Nachnamen wie Lang, Bas oder Hoffmann zählen allein nie. 88 Abgeordnete haben ein Bluesky-Profil, das die Bluesky-Suche findet und das dem Namen nach zu einem Mitglied passt (`src/data/mdb-bluesky.ts`). Beide Dateien schreibt `scripts/members.mjs` aus den Ergebnissen des Test-Labors, sie lassen sich nach einem Wechsel im Bundestag erneuern.
+
+**Nur Sammler.** So markierte Quellen lädt der Sammler alle 10 Minuten, nicht jede Aktualisierung der App: 88 Bluesky-Konten oder ein Feed mit 4,4 MB würden die App langsam machen. Ihre Meldungen kommen über die Sammlerdaten in die App, die Quellenliste zeigt sie mit hohlem Punkt.
+
+**Verworfen:** DIP, das Dokumentationssystem des Bundestags (Reden, Protokolle, Drucksachen). Seine API braucht einen Schlüssel, die Hilfeseite zeigt den öffentlichen Schlüssel nur im Browser, jeder Versuch aus dem Labor bekam 401. Ein persönlicher Schlüssel ist auf Anfrage kostenlos, siehe [Plan](#plan). phoenix auf YouTube (Shorts und Doku-Serien, wenig Politik), Auswärtiges Amt und BMWK auf Mastodon (seit über einem Jahr still), Heute im Bundestag auf Mastodon (dieselben Meldungen wie der Bundestag-Feed hib).
+
+<a id="plan"></a>**Geplant:** DIP mit persönlichem Schlüssel (Reden mit Redner, Drucksachen), wie die Fraktionen bei jeder Abstimmung gestimmt haben (abgeordnetenwatch hat die 630 Stimmen pro Abstimmung).
 
 ## Die Prüfung
 

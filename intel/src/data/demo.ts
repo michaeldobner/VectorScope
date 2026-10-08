@@ -41,6 +41,11 @@ export function demoItems(now: number): Item[] {
     item('demo-politics', 0.9, 'EU Commission tables sanctions package aimed at Russian shipping', 'Demo item. Diplomats expect talks among member states to take several days.', 'rss'),
     item('demo-confirm', 0.6, 'EU proposes new Russia sanctions over shipping and energy', 'Demo item. The European Commission presented the package in Brussels.', 'rss'),
     item('demo-politics', 3, 'Bundestag passes defence budget increase', 'Demo item. The vote passed with a clear majority.', 'rss'),
+    // Who says what: the vote and two members of different fractions on Bluesky. An interview on the sanctions
+    item('demo-votes', 3.1, 'Bundestag vote: defence budget increase, accepted', 'Demo item. Recorded vote of the Bundestag.', 'rss'),
+    item('demo-member-a', 2.9, 'Bundestag passes defence budget increase, a good day for the Bundeswehr', 'Demo item.', 'bluesky'),
+    item('demo-member-b', 2.7, 'Bundestag passes budget increase, now defence procurement must get faster', 'Demo item.', 'bluesky'),
+    item('demo-confirm', 0.5, 'Interview: foreign minister on the Russia sanctions package', 'Demo item.', 'rss'),
     item('demo-politics', 2.2, 'White House and Kremlin prepare phone call on Ukraine talks', 'Demo item. Both sides confirmed contacts at staff level.', 'rss'),
     item('demo-confirm', 1.8, 'Kremlin confirms preparations for call with White House on Ukraine', 'Demo item. No date has been set.', 'rss'),
     // German specialist press

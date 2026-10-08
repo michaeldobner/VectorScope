@@ -9,8 +9,11 @@ import { matchLive } from '../data/match';
 import { detectAll } from '../data/sensor';
 import { buildStories, type Story } from '../data/stories';
 import { SOURCES } from '../data/sources';
+import { kindOf } from '../data/kinds';
 import { isAirTrack } from '../data/alerts';
 import type { EnrichedItem, Item, Lens } from '../data/types';
+
+const LIVE_SOURCES = SOURCES.filter((s) => !s.collectorOnly);
 
 const PREFS_KEY = 'vectorscope.intel.v1';
 const CACHE_KEY = 'vectorscope.intel.cache.v1';
@@ -121,7 +124,8 @@ function enrich(items: Item[], live: Aircraft[], now: number): EnrichedItem[] {
     }
     const lens = lensesOf(item, text, entities);
     if (!lens.security && !lens.politics) continue;
-    out.push({ ...item, entities, matches: matchLive(entities, live, item.time, now), lens });
+    const kind = kindOf(item);
+    out.push({ ...item, entities, matches: matchLive(entities, live, item.time, now), lens, ...(kind ? { kind } : {}) });
   }
   return out;
 }
@@ -158,9 +162,14 @@ export async function refreshFeed() {
     return;
   }
   // Live sources and the collector in parallel. The collector adds what scrolled out of a channel while the app was closed.
-  const [results, collected] = await Promise.all([pool(SOURCES, 4, (s) => loadSource(s)), loadCollected().catch(() => null)]);
+  // Sources marked collectorOnly (members on Bluesky, votes) come only through the collector.
+  const [results, collected] = await Promise.all([pool(LIVE_SOURCES, 4, (s) => loadSource(s)), loadCollected().catch(() => null)]);
   const sources: Record<string, SourceStatus> = {};
-  SOURCES.forEach((s, i) => (sources[s.id] = results[i].status));
+  LIVE_SOURCES.forEach((s, i) => (sources[s.id] = results[i].status));
+  for (const s of SOURCES.filter((x) => x.collectorOnly)) {
+    const own = (collected?.items ?? []).filter((i) => i.sourceId === s.id);
+    sources[s.id] = { ok: own.length > 0, newest: own.length ? Math.max(...own.map((i) => i.time)) : null, count: own.length };
+  }
   const known = new Set(SOURCES.map((s) => s.id));
   // Earlier reports stay: a channel shows only its last posts, and an item that scrolled out is still news.
   const merged = mergeItems([...rawItems.filter((i) => known.has(i.sourceId)), ...results.flatMap((r) => r.items), ...(collected?.items ?? []).filter((i) => known.has(i.sourceId))], now);

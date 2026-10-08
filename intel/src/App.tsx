@@ -1,10 +1,13 @@
-import { Suspense, lazy, useMemo, useState } from 'react';
+import { Suspense, lazy, useMemo, useState, type CSSProperties } from 'react';
 import type { Aircraft } from '../../air/src/data/types';
 import { CAPITALS, DECISION, actorById, capitalsOf, type CapitalId } from './data/actors';
 import { bridgesFor } from './data/bridges';
 import { storyInLens } from './data/lens';
+import { KIND_LABEL } from './data/kinds';
 import { isStrong } from './data/match';
-import { REGION_LABEL, SOURCES, TIER_LABEL, sourceById, type Category, type Region, type Tier } from './data/sources';
+import { PARTIES, PARTY_ORDER, memberParty, shortName, type PartyId } from './data/parties';
+import { voicesOf } from './data/voices';
+import { REGION_LABEL, SOURCES, TIER_LABEL, sourceById, type Category, type Region, type Source, type Tier } from './data/sources';
 import { independentCount, rankStories, type Status, type Story } from './data/stories';
 import type { EnrichedItem, Lens, Match } from './data/types';
 import { refreshFeed, refreshLive, setPrefs, useIntel, type Filter, type IntelState, type Pulse } from './state/store';
@@ -113,7 +116,7 @@ function itemPasses(i: EnrichedItem, st: IntelState): boolean {
   const { filter, place, lens, actor } = st.prefs;
   if (!i.lens?.[lens]) return false;
   if (place && !i.entities.places.some((p) => p.name === place)) return false;
-  if (actor && !actorMatches(i.entities.actors ?? [], actor)) return false;
+  if (actor && !actorMatches(i, actor)) return false;
   if (filter === 'all') return true;
   if (filter === 'live') return i.matches.some(isStrong);
   const src = sourceById(i.sourceId);
@@ -121,11 +124,27 @@ function itemPasses(i: EnrichedItem, st: IntelState): boolean {
   return !!src && !!chip?.test?.(src.region, src.category);
 }
 
-/** An actor filter is an actor id, or cap:<capital> for every actor of that capital. */
-function actorMatches(actors: string[], filter: string): boolean {
-  return filter.startsWith('cap:') ? capitalsOf(actors).includes(filter.slice(4) as CapitalId) : actors.includes(filter);
+/**
+ * An actor filter is an actor id, cap:<capital> for every actor of that capital, party:<fraction> for the members
+ * of a fraction (named, or posting themselves) or mdb:<full name> for one member.
+ */
+function actorMatches(i: EnrichedItem, filter: string): boolean {
+  const actors = i.entities.actors ?? [];
+  const members = i.entities.members ?? [];
+  if (filter.startsWith('cap:')) return capitalsOf(actors).includes(filter.slice(4) as CapitalId);
+  if (filter.startsWith('party:')) {
+    const p = filter.slice(6);
+    return sourceById(i.sourceId)?.party === p || members.some((m) => memberParty(m) === p);
+  }
+  if (filter.startsWith('mdb:')) return sourceById(i.sourceId)?.name === filter.slice(4) || members.includes(filter.slice(4));
+  return actors.includes(filter);
 }
-const actorLabel = (filter: string) => (filter.startsWith('cap:') ? (CAPITALS[filter.slice(4) as CapitalId]?.name ?? filter) : (actorById(filter)?.name ?? filter));
+function actorLabel(filter: string): string {
+  if (filter.startsWith('cap:')) return CAPITALS[filter.slice(4) as CapitalId]?.name ?? filter;
+  if (filter.startsWith('party:')) return PARTIES[filter.slice(6) as PartyId]?.label ?? filter;
+  if (filter.startsWith('mdb:')) return filter.slice(4);
+  return actorById(filter)?.name ?? filter;
+}
 
 /** The report in the own words of an actor: Truth Social of Trump, a release of the government. */
 const voiceOf = (i: EnrichedItem) => sourceById(i.sourceId)?.voice;
@@ -238,6 +257,19 @@ function Filters({ st }: { st: IntelState }) {
           {f.key === 'live' && liveCount ? `${f.label} ${liveCount}` : f.label}
         </button>
       ))}
+      {politics &&
+        PARTY_ORDER.filter((p) => p !== 'fl').map((p) => (
+          <button
+            key={p}
+            className={`chip party ${st.prefs.actor === `party:${p}` ? 'on' : ''}`}
+            style={{ '--party': PARTIES[p].color } as CSSProperties}
+            onClick={() => setPrefs({ actor: st.prefs.actor === `party:${p}` ? null : `party:${p}`, pulse: null })}
+            aria-pressed={st.prefs.actor === `party:${p}`}
+            title={`Members of ${PARTIES[p].label}: their own posts and reports naming them`}
+          >
+            {PARTIES[p].label}
+          </button>
+        ))}
     </div>
   );
 }
@@ -390,6 +422,8 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
   const entities = mergeEntities(story.items);
   const tiers = TIER_ORDER.filter((t) => story.tiers[t]);
   const german = st.prefs.german;
+  const kinds = [...new Set(story.items.map((i) => i.kind).filter((k) => !!k))] as NonNullable<EnrichedItem['kind']>[];
+  const voices = st.prefs.lens === 'politics' ? voicesOf(story.items) : [];
   return (
     <li className={`item story status-${story.status} ${strong.length ? 'has-live' : ''}`}>
       <div className="item-meta">
@@ -397,6 +431,9 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
         <span className={`status-chip s-${story.status}`} title={STATUS_HINT[story.status]}>
           {STATUS_LABEL[story.status]}
         </span>
+        {kinds.map((k) => (
+          <KindBadge key={k} kind={k} german={german} />
+        ))}
         <span className="src">{n > 1 ? `${n} sources` : sourceName(lead.sourceId)}</span>
         <span className="conf" title="Event confidence from the classes and trust of the independent sources">
           {pct(story.confidence)}
@@ -418,6 +455,7 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
         </div>
       )}
       {lead.text && story.sources.length === 1 && !original && <p className="item-text">{tr(lead.text, lead.sourceId)}</p>}
+      {voices.length > 0 && <Voices voices={voices} />}
       {story.sources.length > 1 && (
         <>
           <Timeline story={story} />
@@ -440,13 +478,15 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
           </div>
         </>
       )}
-      {(entities.callsigns.length > 0 || entities.types.length > 0 || entities.places.length > 0 || entities.actors.length > 0) && (
+      {(entities.callsigns.length > 0 || entities.types.length > 0 || entities.places.length > 0 || entities.actors.length > 0 || (!voices.length && entities.members.length > 0)) && (
         <div className="entities">
           {entities.actors.slice(0, 4).map((a) => (
             <button key={a} className="ent ent-actor" onClick={() => setPrefs({ actor: a, filter: 'all', pulse: null })}>
               {actorById(a)?.name ?? a}
             </button>
           ))}
+          {/* In the politics lens the members are in "Who says what". */}
+          {!voices.length && entities.members.slice(0, 3).map((m) => <MemberChip key={m} name={m} />)}
           {entities.callsigns.map((c) => (
             <span key={c} className="ent ent-cs">
               {c}
@@ -498,6 +538,7 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
                 <li key={i.id}>
                   <span className="t">{clock(i.time)}</span>
                   <span className={`dot-tier t-${tierOf(i)}`} />
+                  {i.kind && <span title={KIND_LABEL[i.kind][german ? 'de' : 'en']}>{KIND_LABEL[i.kind].icon}</span>}
                   <span className="who">
                     {sourceName(i.sourceId)}
                     {story.echoItems.includes(i.id) && <span className="echo-mark"> echo</span>}
@@ -512,6 +553,68 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
         </>
       )}
     </li>
+  );
+}
+
+function KindBadge({ kind, german }: { kind: NonNullable<EnrichedItem['kind']>; german: boolean }) {
+  return (
+    <span className={`kind k-${kind}`}>
+      {KIND_LABEL[kind].icon} {KIND_LABEL[kind][german ? 'de' : 'en']}
+    </span>
+  );
+}
+
+function PartyTag({ party }: { party: PartyId }) {
+  return (
+    <span className="party-tag" style={{ '--party': PARTIES[party].color } as CSSProperties}>
+      {PARTIES[party].label}
+    </span>
+  );
+}
+
+/** A member of the Bundestag in the colour of the fraction, tapping filters for the member. */
+function MemberChip({ name }: { name: string }) {
+  const p = memberParty(name);
+  return (
+    <button
+      className="ent ent-member"
+      style={p ? ({ '--party': PARTIES[p].color } as CSSProperties) : undefined}
+      onClick={() => setPrefs({ actor: `mdb:${name}`, filter: 'all', pulse: null })}
+      title={p ? `${name}, ${PARTIES[p].label}` : name}
+    >
+      {shortName(name)}
+    </button>
+  );
+}
+
+/** Who says what: one row per fraction, members with an own post first and marked. Tapping a fraction filters for it. */
+function Voices({ voices }: { voices: ReturnType<typeof voicesOf> }) {
+  return (
+    <div className="voices">
+      <span className="voices-head">Who says what</span>
+      {voices.map((v) => {
+        const names = [...v.own, ...v.named];
+        return (
+          <span key={v.party} className="voice" style={{ '--party': PARTIES[v.party].color } as CSSProperties}>
+            <button className="voice-party" onClick={() => setPrefs({ actor: `party:${v.party}`, filter: 'all', pulse: null })}>
+              {PARTIES[v.party].label}
+            </button>
+            {names.slice(0, 3).map((n) => (
+              <button
+                key={n}
+                className={`voice-name ${v.own.includes(n) ? 'own' : ''}`}
+                onClick={() => setPrefs({ actor: `mdb:${n}`, filter: 'all', pulse: null })}
+                title={v.own.includes(n) ? `${n} posted about it` : `${n} is named`}
+              >
+                {v.own.includes(n) ? '✎ ' : ''}
+                {shortName(n)}
+              </button>
+            ))}
+            {names.length > 3 && <span className="voice-more">+{names.length - 3}</span>}
+          </span>
+        );
+      })}
+    </div>
   );
 }
 
@@ -545,6 +648,8 @@ function mergeEntities(items: EnrichedItem[]) {
   const callsigns = new Set<string>();
   const types = new Set<string>();
   const places = new Map<string, number>();
+  const members = new Set<string>();
+  for (const i of items) (i.entities.members ?? []).forEach((m) => members.add(m));
   for (const i of items) {
     i.entities.callsigns.forEach((c) => callsigns.add(c.callsign));
     i.entities.types.forEach((t) => types.add(t.label));
@@ -555,6 +660,7 @@ function mergeEntities(items: EnrichedItem[]) {
     types: [...types],
     places: [...places.entries()].sort((a, b) => a[1] - b[1]).map(([n]) => n),
     actors: [...actors.entries()].sort((a, b) => b[1] - a[1]).map(([a]) => a),
+    members: [...members],
   };
 }
 
@@ -571,7 +677,7 @@ function WireList({ items, st }: { items: EnrichedItem[]; st: IntelState }) {
   );
 }
 
-const CHANNEL_LABEL = { bluesky: 'Bluesky', rss: 'RSS', telegram: 'Telegram', sensor: 'ADS-B' } as const;
+const CHANNEL_LABEL = { bluesky: 'Bluesky', rss: 'RSS', telegram: 'Telegram', sensor: 'ADS-B', api: 'API' } as const;
 
 function ItemCard({ item, isNew }: { item: EnrichedItem; isNew: boolean }) {
   const tr = useTr();
@@ -580,11 +686,14 @@ function ItemCard({ item, isNew }: { item: EnrichedItem; isNew: boolean }) {
   const strong = item.matches.filter(isStrong);
   const weak = item.matches.filter((m) => !isStrong(m));
   const { callsigns, types, places } = item.entities;
+  const members = item.entities.members ?? [];
   return (
     <li className={`item ${strong.length ? 'has-live' : ''}`}>
       <div className="item-meta">
         {isNew && <span className="new-dot" aria-label="new" />}
+        {item.kind && <KindBadge kind={item.kind} german={german} />}
         <span className="src">{src?.name ?? 'Demo'}</span>
+        {src?.party && <PartyTag party={src.party} />}
         {src && <span className={`tier t-${src.tier}`}>{tierLabel(src.tier, german)}</span>}
         <span className="sep">·</span>
         <span>{CHANNEL_LABEL[item.channel]}</span>
@@ -594,8 +703,11 @@ function ItemCard({ item, isNew }: { item: EnrichedItem; isNew: boolean }) {
         {tr(item.title, item.sourceId)}
       </a>
       {item.text && <p className="item-text">{tr(item.text, item.sourceId)}</p>}
-      {(callsigns.length > 0 || types.length > 0 || places.length > 0) && (
+      {(callsigns.length > 0 || types.length > 0 || places.length > 0 || members.length > 0) && (
         <div className="entities">
+          {members.slice(0, 4).map((m) => (
+            <MemberChip key={m} name={m} />
+          ))}
           {callsigns.map((c) => (
             <span key={c.callsign} className="ent ent-cs" title={c.label}>
               {c.callsign}
@@ -730,32 +842,140 @@ function PlacesPanel({ st, onPick }: { st: IntelState; onPick: () => void }) {
   );
 }
 
+interface SourceGroup {
+  key: string;
+  title: string;
+  sources: Source[];
+}
+
+/** The source list grows with every lens: groups by lens and class, members of parliament by fraction. */
+function sourceGroups(): SourceGroup[] {
+  const groups: SourceGroup[] = [];
+  const add = (key: string, title: string, sources: Source[]) => sources.length && groups.push({ key, title, sources });
+  const security = SOURCES.filter((s) => s.category !== 'politics');
+  for (const t of TIER_ORDER) add(`s:${t}`, `Security · ${TIER_LABEL[t].en}`, security.filter((s) => s.tier === t));
+  const politics = SOURCES.filter((s) => s.category === 'politics');
+  add('p:voices', 'Politics · Own voices', politics.filter((s) => s.voice && !s.party));
+  for (const p of PARTY_ORDER) add(`p:party:${p}`, `Politics · Members of the Bundestag · ${PARTIES[p].label}`, politics.filter((s) => s.party === p));
+  add('p:official', 'Politics · Parliament and government', politics.filter((s) => !s.voice && !s.party && s.tier === 'primary'));
+  add('p:media', 'Politics · Media', politics.filter((s) => !s.voice && !s.party && s.tier !== 'primary'));
+  return groups;
+}
+
+function SourceRow({ s, st }: { s: Source; st: IntelState }) {
+  const status = st.sources[s.id];
+  const viaCollector = s.collectorOnly;
+  return (
+    <li>
+      <span className={`dot ${viaCollector ? 'via' : !status ? '' : status.ok ? 'ok' : 'err'}`} />
+      <span className="src-name">
+        <a href={s.site} target="_blank" rel="noopener noreferrer">
+          {s.name}
+        </a>
+        <span className={`src-meta ${status && !status.ok && !viaCollector ? 'err' : ''}`}>
+          {status && !status.ok && !viaCollector
+            ? `Not reachable: ${status.error ?? 'unknown error'}`
+            : `${REGION_LABEL[s.region]} · trust ${s.trust}${s.perspective ? ` · ${s.perspective}` : ''}${s.party ? ` · ${PARTIES[s.party].label}` : ''}${viaCollector ? ' · through the collector' : ''}`}
+        </span>
+      </span>
+      <span className={`tier t-${s.tier}`}>{tierLabel(s.tier, st.prefs.german)}</span>
+      <span className="n">{status?.newest ? age(status.newest) : status && !status.ok && !viaCollector ? 'error' : ''}</span>
+    </li>
+  );
+}
+
+/** A network (Rybar and its regional channels) is one row that opens to its channels. */
+function SourceList({ sources, st }: { sources: Source[]; st: IntelState }) {
+  const [openNet, setOpenNet] = useState<string | null>(null);
+  const rows: (Source | { net: string; members: Source[] })[] = [];
+  const seen = new Set<string>();
+  for (const s of sources) {
+    if (!s.network) rows.push(s);
+    else if (!seen.has(s.network)) {
+      seen.add(s.network);
+      const members = sources.filter((x) => x.network === s.network);
+      rows.push(members.length > 1 ? { net: s.network, members } : s);
+    }
+  }
+  return (
+    <ul className="sources">
+      {rows.map((r) =>
+        'members' in r ? (
+          <li key={`net:${r.net}`} className="net">
+            <button className="net-head" onClick={() => setOpenNet(openNet === r.net ? null : r.net)} aria-expanded={openNet === r.net}>
+              <span className={`dot ${r.members.every((m) => st.sources[m.id]?.ok) ? 'ok' : r.members.some((m) => st.sources[m.id] && !st.sources[m.id].ok) ? 'err' : ''}`} />
+              <span className="src-name">
+                {r.members[0].name.split(/[ (,]/)[0]} network
+                <span className="src-meta">{r.members.length} channels, counted as one source</span>
+              </span>
+              <span className="n">{openNet === r.net ? '▴' : '▾'}</span>
+            </button>
+            {openNet === r.net && (
+              <ul className="sources">
+                {r.members.map((m) => (
+                  <SourceRow key={m.id} s={m} st={st} />
+                ))}
+              </ul>
+            )}
+          </li>
+        ) : (
+          <SourceRow key={r.id} s={r} st={st} />
+        ),
+      )}
+    </ul>
+  );
+}
+
 function SourcesPanel({ st }: { st: IntelState }) {
+  const [query, setQuery] = useState('');
+  const [open, setOpen] = useState<string | null>(null);
+  const groups = useMemo(sourceGroups, []);
+  const live = SOURCES.filter((s) => !s.collectorOnly);
+  const failing = live.filter((s) => st.sources[s.id] && !st.sources[s.id].ok);
+  const ok = live.filter((s) => st.sources[s.id]?.ok).length;
+  const q = query.trim().toLowerCase();
+  const found = q ? SOURCES.filter((s) => `${s.name} ${s.id} ${REGION_LABEL[s.region]} ${s.perspective ?? ''} ${s.party ? PARTIES[s.party].label : ''}`.toLowerCase().includes(q)) : [];
+  const newest = (list: Source[]) => Math.max(0, ...list.map((s) => st.sources[s.id]?.newest ?? 0));
   return (
     <section className="panel">
       <h2 className="section-title">Sources</h2>
-      <ul className="sources">
-        {SOURCES.map((s) => {
-          const status = st.sources[s.id];
-          return (
-            <li key={s.id}>
-              <span className={`dot ${!status ? '' : status.ok ? 'ok' : 'err'}`} />
-              <span className="src-name">
-                <a href={s.site} target="_blank" rel="noopener noreferrer">
-                  {s.name}
-                </a>
-                <span className={`src-meta ${status && !status.ok ? 'err' : ''}`}>
-                  {status && !status.ok
-                    ? `Not reachable: ${status.error ?? 'unknown error'}`
-                    : `${REGION_LABEL[s.region]} · trust ${s.trust}${s.perspective ? ` · ${s.perspective}` : ''}${s.network ? ` · network ${s.network}` : ''}`}
-                </span>
-              </span>
-              <span className={`tier t-${s.tier}`}>{tierLabel(s.tier, st.prefs.german)}</span>
-              <span className="n">{status?.newest ? age(status.newest) : status && !status.ok ? 'error' : ''}</span>
-            </li>
-          );
-        })}
-      </ul>
+      <p className="src-summary">
+        <b>{SOURCES.length}</b> sources · <b>{ok}</b> answering{failing.length ? <> · <b className="bad">{failing.length}</b> not reachable</> : null}
+        {SOURCES.length > live.length ? ` · ${SOURCES.length - live.length} through the collector` : ''}
+      </p>
+      <input className="src-search" type="search" placeholder="Find a source, region or party" value={query} onChange={(e) => setQuery(e.target.value)} aria-label="Find a source" />
+      {q ? (
+        found.length ? <SourceList sources={found} st={st} /> : <p className="note">No source matches.</p>
+      ) : (
+        <>
+          {failing.length > 0 && (
+            <div className="src-group open">
+              <h3 className="src-group-head bad">Needs attention · {failing.length}</h3>
+              <SourceList sources={failing} st={st} />
+            </div>
+          )}
+          {groups.map((g) => {
+            const okN = g.sources.filter((s) => st.sources[s.id]?.ok).length;
+            const errN = g.sources.filter((s) => !s.collectorOnly && st.sources[s.id] && !st.sources[s.id].ok).length;
+            const isOpen = open === g.key;
+            const n = newest(g.sources);
+            return (
+              <div key={g.key} className={`src-group ${isOpen ? 'open' : ''}`}>
+                <button className="src-group-head" onClick={() => setOpen(isOpen ? null : g.key)} aria-expanded={isOpen}>
+                  <span className={`dot ${errN ? 'err' : okN ? 'ok' : g.sources.every((s) => s.collectorOnly) ? 'via' : ''}`} />
+                  <span className="g-title">{g.title}</span>
+                  <span className="g-meta">
+                    {g.sources.length}
+                    {n ? ` · ${age(n)}` : ''}
+                  </span>
+                  <span className="n">{isOpen ? '▴' : '▾'}</span>
+                </button>
+                {isOpen && <SourceList sources={g.sources} st={st} />}
+              </div>
+            );
+          })}
+        </>
+      )}
       <p className="note">
         {st.collectedAt ? `Collector last ran ${ago(st.collectedAt)}. ` : ''}Headlines and short excerpts link to the original publisher. Live aircraft © adsb.lol contributors, ODbL.
       </p>

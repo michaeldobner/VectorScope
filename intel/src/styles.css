@@ -953,6 +953,81 @@ section > .section-title {
   color: var(--accent);
 }
 
+/* Members of the Bundestag in the colour of their fraction (--party) */
+.ent-member {
+  font-family: var(--ui);
+  color: var(--text);
+  border-left: 3px solid var(--party, var(--border));
+}
+.chip.party {
+  border-left: 3px solid var(--party);
+}
+.chip.party.on {
+  border-color: var(--party);
+}
+.party-tag {
+  font-size: 10.5px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  border: 1px solid var(--party);
+  color: var(--text-2);
+}
+
+/* Who says what: one group per fraction */
+.voices {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 9px;
+}
+.voices-head {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.voice {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px 2px 0;
+  border-radius: 6px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--party);
+  font-size: 12px;
+}
+.voice-party {
+  padding: 0 4px 0 6px;
+  font-weight: 600;
+  color: var(--text);
+}
+.voice-name {
+  padding: 0 3px;
+  color: var(--text-2);
+}
+.voice-name.own {
+  color: var(--text);
+  font-weight: 600;
+}
+.voice-more {
+  color: var(--text-3);
+  padding-right: 3px;
+}
+
+/* Kind of a report: interview, vote, speech, document */
+.kind {
+  font-size: 10.5px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  white-space: nowrap;
+}
+
 /* Bridge to a story of the other lens */
 .bridge {
   display: block;
@@ -974,4 +1049,88 @@ section > .section-title {
   font-family: var(--ui);
   font-size: 16px;
   font-weight: 650;
+}
+
+/* Source list: summary, search, groups by lens and class, networks as one row */
+.src-summary {
+  margin: 0 0 8px;
+  font-size: 12.5px;
+  color: var(--text-2);
+}
+.src-summary b {
+  color: var(--text);
+  font-weight: 600;
+}
+.src-summary b.bad,
+.src-group-head.bad {
+  color: #ff6b5e;
+}
+.src-search {
+  width: 100%;
+  height: 34px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 14px;
+}
+.src-group {
+  border-top: 1px solid var(--border);
+}
+.src-group-head {
+  display: grid;
+  grid-template-columns: 10px minmax(0, 1fr) auto 18px;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 38px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  background: none;
+  margin: 0;
+}
+h3.src-group-head {
+  display: block;
+  min-height: 0;
+  padding: 10px 0 4px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.src-group-head .g-meta {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--text-2);
+}
+.src-group-head .n,
+.net-head .n {
+  color: var(--text-3);
+  text-align: right;
+}
+.sources li.net {
+  display: block;
+}
+.net-head {
+  display: grid;
+  grid-template-columns: 10px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 32px;
+  text-align: left;
+  background: none;
+  color: var(--text);
+  font-size: 13px;
+}
+.sources .sources {
+  margin: 0 0 6px 18px;
+}
+.dot.via {
+  background: transparent;
+  border: 1px solid var(--accent);
 }

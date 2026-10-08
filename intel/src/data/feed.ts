@@ -2,6 +2,7 @@
 import { parseV2 } from '../../../air/src/data/adsblol';
 import type { Aircraft } from '../../../air/src/data/types';
 import { authorFeedUrl, parseAuthorFeed } from './bluesky';
+import { AW_POLLS_URL, parsePolls } from './parliament';
 import { parseFeed } from './rss';
 import { parseTelegram } from './telegram';
 import { API_URL, VIA_PROXY, parseEmsc, parseFaa, parseGdacs, parseNws, parseUsgs } from './physical';
@@ -98,6 +99,7 @@ async function loadTelegram(source: Source, opt: LoadOptions): Promise<Item[]> {
 
 async function loadApi(source: Source, opt: LoadOptions): Promise<Item[]> {
   const api = source.api!;
+  if (api === 'abgeordnetenwatch') return parsePolls(JSON.parse(await getText(AW_POLLS_URL, opt, { sourceId: source.id, kind: 'api', api })), source.id);
   const url = !opt.direct && VIA_PROXY.includes(api) ? `${PROXY}/feed/${api}` : API_URL[api];
   const text = await getText(url, opt, { sourceId: source.id, kind: 'api', api });
   switch (api) {
