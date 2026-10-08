@@ -57,6 +57,26 @@ export function reportRows({ items, seen }: Pick<StoredRound, 'items' | 'seen'>)
   return [...rows.values()];
 }
 
+/**
+ * Inserts or updates reports. Earliest time and first sight win, the newest text replaces the old one.
+ * Batches keep a single statement small even with thousands of reports. Shared with backfill.ts.
+ */
+export async function upsertReports(client: pg.Client, rows: ReturnType<typeof reportRows>): Promise<void> {
+  for (let i = 0; i < rows.length; i += 500) {
+    await client.query(
+      `INSERT INTO reports (key, source, channel, time, seen, item)
+       SELECT key, source, channel, time, seen, item FROM jsonb_to_recordset($1::jsonb)
+         AS r(key text, source text, channel text, time timestamptz, seen timestamptz, item jsonb)
+       ON CONFLICT (key) DO UPDATE SET
+         time = LEAST(reports.time, EXCLUDED.time),
+         seen = LEAST(reports.seen, EXCLUDED.seen),
+         item = EXCLUDED.item,
+         updated = now()`,
+      [JSON.stringify(rows.slice(i, i + 500))],
+    );
+  }
+}
+
 /** Writes one round and its reports. Earliest time and first sight win, the newest text replaces the old one. */
 export async function storeRound(url: string, round: StoredRound): Promise<{ reports: number }> {
   const client = new pg.Client({ connectionString: url });
@@ -65,20 +85,7 @@ export async function storeRound(url: string, round: StoredRound): Promise<{ rep
     await client.query(SCHEMA);
     const rows = reportRows(round);
     await client.query('BEGIN');
-    // Batches keep a single statement small even with thousands of reports.
-    for (let i = 0; i < rows.length; i += 500) {
-      await client.query(
-        `INSERT INTO reports (key, source, channel, time, seen, item)
-         SELECT key, source, channel, time, seen, item FROM jsonb_to_recordset($1::jsonb)
-           AS r(key text, source text, channel text, time timestamptz, seen timestamptz, item jsonb)
-         ON CONFLICT (key) DO UPDATE SET
-           time = LEAST(reports.time, EXCLUDED.time),
-           seen = LEAST(reports.seen, EXCLUDED.seen),
-           item = EXCLUDED.item,
-           updated = now()`,
-        [JSON.stringify(rows.slice(i, i + 500))],
-      );
-    }
+    await upsertReports(client, rows);
     const sources = Object.values(round.run.sources);
     await client.query(
       `INSERT INTO rounds (at, ms, ok, total, fresh, sources) VALUES ($1, $2, $3, $4, $5, $6)

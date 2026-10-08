@@ -89,6 +89,6 @@ Traffic data © [adsb.lol](https://adsb.lol) contributors, licensed under ODbL 1
 
 ## Version
 
-Current version: **0.11.2**. See the [changelog](CHANGELOG.md).
+Current version: **0.12.0**. See the [changelog](CHANGELOG.md).
 
 Created by Michael Dobner. Licensed under the [MIT licence](LICENSE).

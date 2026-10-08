@@ -8,7 +8,8 @@
 // On the very first start the data of the GitHub Actions collector is taken over (SEED_FROM), so no
 // report counts as new twice and the raw archive continues where the branch collector-raw ends.
 // With RAW_PUSH_URL every round file also goes to the branch collector-raw (server/raw-git.mjs):
-// one continuous archive, with a copy off the server.
+// one continuous archive, with a copy off the server. On start the database is filled once from
+// the raw archive (collector/backfill.ts), so it holds the history since 30 September 2026.
 // Env: DATA_DIR (/data), EVERY_MIN (10), SEED_FROM, DATABASE_URL, VECTORSCOPE_PROXY, RAW_PUSH_URL, RAW_SUFFIX.
 import { spawn } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -67,6 +68,18 @@ function pushRound() {
   }
 }
 
+function backfill() {
+  return new Promise((resolve) => {
+    const child = spawn(join(root, 'node_modules/.bin/tsx'), [join(root, 'collector/backfill.ts'), rawDir], { cwd: root, stdio: 'inherit' });
+    // A failed or slow backfill must never stop the collector, the next start tries again.
+    const timer = setTimeout(() => child.kill('SIGKILL'), 10 * 60_000);
+    child.on('exit', () => {
+      clearTimeout(timer);
+      resolve();
+    });
+  });
+}
+
 function writeHeartbeat(exit) {
   let ok = 0;
   let total = 0;
@@ -87,6 +100,8 @@ function writeHeartbeat(exit) {
 await seed();
 // Before the first round, so the round files land in the checkout of the branch.
 if (pushUrl) prepareRawRepo(rawDir, pushUrl);
+// Once: the database gets the whole raw archive, not only the rounds of this server (collector/backfill.ts).
+if (process.env.DATABASE_URL) await backfill();
 for (;;) {
   const start = Date.now();
   const exit = await round();

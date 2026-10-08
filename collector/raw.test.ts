@@ -152,3 +152,30 @@ describe('checks', () => {
     expect(itemProblem({ ...base, url: 'x' }, now)).toBe('no link');
   });
 });
+
+describe('backfill', () => {
+  it('turns the raw archive into report items with first sight and round rows', async () => {
+    const { reportItem, roundsFromArchive } = await import('./backfill');
+    const raw = mkdtempSync(join(tmpdir(), 'raw-'));
+    const state = join(mkdtempSync(join(tmpdir(), 'st-')), 's.json');
+    try {
+      const t0 = Date.parse('2026-10-08T10:10:00Z');
+      const page = `<section><div class="tgme_widget_message js-widget_message" data-post="bazabazon/41"><div class="tgme_widget_message_text js-message_text">Взрыв на нефтебазе в Туапсе.</div><time datetime="2026-10-08T10:05:00+00:00"></time></div></section>`;
+      const res = (at: number, extra: Partial<RawResponse> = {}): RawResponse => ({ sourceId: 'baza', kind: 'telegram', url: 'https://t.me/s/bazabazon', at, ms: 1, status: 200, body: page, ...extra });
+      writeRawRound({ rawDir: raw, stateFile: state, at: t0, ms: 900, responses: [res(t0), { ...res(t0), sourceId: 'navalnews', kind: 'rss', body: undefined, status: 503, error: 'HTTP 503' }], sensorItems: [], sources: 2, ok: 1 });
+      writeRawRound({ rawDir: raw, stateFile: state, at: t0 + 600_000, ms: 800, responses: [res(t0 + 600_000)], sensorItems: [], sources: 1, ok: 1 });
+      const { reports } = parseArchive(raw);
+      const item = reportItem(reports[0]);
+      expect(item.seen).toBe(t0);
+      expect(item.url).toBe('https://t.me/bazabazon/41');
+      expect('firstSeen' in item).toBe(false);
+      const rounds = roundsFromArchive(raw);
+      expect(rounds).toHaveLength(2);
+      expect(rounds[0]).toMatchObject({ ms: 900, ok: 1, total: 2, fresh: 1 });
+      expect(rounds[0].sources.navalnews).toMatchObject({ ok: false, error: 'HTTP 503' });
+      expect(rounds[0].sources.baza).toMatchObject({ ok: true, items: 1, fresh: 1 });
+    } finally {
+      rmSync(raw, { recursive: true, force: true });
+    }
+  });
+});

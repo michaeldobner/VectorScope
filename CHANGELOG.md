@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.12.0 (2026-10-08)
+
+### Added
+* `collector/backfill.ts` fills the database of the own server once from the raw archive: every report since 30 September 2026 with its first sight, and every round. The collector runs it on start, a table `meta` remembers it. With `--force` it can be repeated at any time.
+
 ## 0.11.2 (2026-10-08)
 
 ### Added

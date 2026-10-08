@@ -179,7 +179,7 @@ Der Stack für einen eigenen Server mit Coolify steht bereit, siehe [Eigener Ser
 1. Den Branch `collector-raw` auf den Server klonen, `raw-state.json` aus `collector-data` kopieren.
 2. `npx tsx collector/collect.ts <Daten> <Roh>` jede Minute oder alle paar Minuten per Cron oder systemd-Timer starten. Das Skript hängt nicht an GitHub.
 3. `latest.json` vom Server ausliefern (oder weiter nach `collector-data` pushen) und `COLLECTOR_URL` in `intel/src/data/feed.ts` darauf zeigen lassen.
-4. Optional: täglich `parse.ts` und eine DuckDB-Datei oder Postgres für schnelle Abfragen. Die Rundendateien bleiben die Grundwahrheit, die Datenbank lässt sich jederzeit daraus neu bauen.
+4. Optional: täglich `parse.ts` und eine DuckDB-Datei oder Postgres für schnelle Abfragen. Die Rundendateien bleiben die Grundwahrheit, die Datenbank lässt sich jederzeit daraus neu bauen: `collector/backfill.ts` füllt PostgreSQL aus dem Archiv (geprüft mit dem echten Archiv: 5.742 Meldungen und 271 Runden in 4 Sekunden).
 5. Optional: Telegram über die offizielle Client-Schnittstelle (MTProto) mit eigenem Konto statt der Webvorschau. Das bringt vollständige Historie, Weiterleitungen mit Herkunft, Bearbeitungen und Löschungen in Echtzeit. Neue Einheiten bekommen dann eine eigene `kind`, und `RAW_FORMAT` geht auf 2.
 6. Den Workflow auf GitHub abschalten.
 

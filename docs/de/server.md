@@ -50,7 +50,7 @@ Die App erkennt, wo sie läuft: Auf GitHub Pages (`*.github.io`) und lokal nutzt
 |---|---|---|
 | Volume `vectorscope-data`, Ordner `/data` | `latest.json`, `archive.json`, `stats.json`, `health.json`, `raw-state.json`, `heartbeat.json` | Baut der Sammler neu auf |
 | `/data/raw` | Das Rohdaten-Archiv, ein Checkout des Branches `collector-raw` mit allen Dateien | GitHub-Branch `collector-raw` nach jeder Runde, dazu täglich `/var/backups/vectorscope/raw` |
-| Volume `vectorscope-pg` | Datenbank: Tabelle `reports` (eine Zeile pro Meldung, frühester Zeitpunkt und erstes Sehen) und `rounds` | Täglicher Abzug nach `/var/backups/vectorscope` |
+| Volume `vectorscope-pg` | Datenbank: Tabelle `reports` (eine Zeile pro Meldung, frühester Zeitpunkt und erstes Sehen), `rounds` und `meta`. Beim ersten Start füllt der Sammler sie einmalig aus dem Rohdaten-Archiv (`collector/backfill.ts`), damit sie die Historie seit 30. September 2026 enthält | Täglicher Abzug nach `/var/backups/vectorscope` |
 
 Das Rohdaten-Archiv ist die Grundwahrheit ([Rohdaten](../../intel/docs/de/rohdaten.md)). Die Datenbank leitet der Sammler ab, sie lässt sich neu aufbauen. Rundendateien des Servers heißen `HHMM-srv.jsonl.gz`, die von GitHub Actions `HHMM.jsonl.gz`, deshalb können beide ohne Kollision in denselben Branch schreiben. Findet einer von beiden den Branch weitergerückt, setzt er seine eigenen Commits obendrauf und pusht erneut.
 
@@ -79,6 +79,7 @@ Schritte nach Stand Coolify 4. Menünamen können je nach Version leicht abweich
 | Logs | Coolify > Ressource > Logs, je Dienst. Der Sammler schreibt pro Runde eine Zusammenfassung und `WARN`-Zeilen der Prüfungen |
 | Neustart | Coolify > Restart. Der Sammler macht mit seinen Dateien weiter, nichts geht verloren |
 | Aktualisieren | Push auf `main`, Coolify rollt aus (automatisch, wenn der Webhook an ist) |
+| Datenbank aus dem Rohdaten-Archiv neu aufbauen | Tabellen leeren oder im Sammler-Container (Coolify > Terminal) `npx tsx collector/backfill.ts /data/raw --force` ausführen. Beliebig wiederholbar |
 | Datenbank wiederherstellen | `gunzip -c /var/backups/vectorscope/vectorscope-<Datum>.sql.gz \| docker exec -i <DB-Container> psql -U vectorscope vectorscope` |
 | Rohdaten-Archiv wiederherstellen | Den Branch `collector-raw` klonen oder `/var/backups/vectorscope/raw` kopieren |
 | Abfragen | `/api/reports` oder `docker exec -it <DB-Container> psql -U vectorscope vectorscope` |

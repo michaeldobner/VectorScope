@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.12.0 (2026-10-08)
+
+### Neu
+* `collector/backfill.ts` füllt die Datenbank des eigenen Servers einmalig aus dem Rohdaten-Archiv: jede Meldung seit 30. September 2026 mit ihrem ersten Sehen und jede Runde. Der Sammler startet es beim Hochfahren, eine Tabelle `meta` merkt sich das. Mit `--force` jederzeit wiederholbar.
+
 ## 0.11.2 (2026-10-08)
 
 ### Neu

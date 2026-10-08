@@ -50,7 +50,7 @@ The app recognises where it runs: on GitHub Pages (`*.github.io`) and locally it
 |---|---|---|
 | Volume `vectorscope-data`, folder `/data` | `latest.json`, `archive.json`, `stats.json`, `health.json`, `raw-state.json`, `heartbeat.json` | Rebuilt by the collector |
 | `/data/raw` | The raw archive, a checkout of the branch `collector-raw` with every file | GitHub branch `collector-raw` after every round, plus `/var/backups/vectorscope/raw` daily |
-| Volume `vectorscope-pg` | Database: table `reports` (one row per report, earliest time and first sight) and `rounds` | Daily dump to `/var/backups/vectorscope` |
+| Volume `vectorscope-pg` | Database: table `reports` (one row per report, earliest time and first sight), `rounds` and `meta`. On its first start the collector fills it once from the raw archive (`collector/backfill.ts`), so it holds the history since 30 September 2026 | Daily dump to `/var/backups/vectorscope` |
 
 The raw archive is the source of truth ([Raw data](../../intel/docs/en/raw-data.md)). The database is derived from the collector and can be rebuilt. Round files of the server are named `HHMM-srv.jsonl.gz`, those of GitHub Actions `HHMM.jsonl.gz`, so both can write into the same branch without collisions. If one of them finds the branch moved on, it puts its own commits on top and pushes again.
 
@@ -79,6 +79,7 @@ Steps as of Coolify 4. Names of menus can differ slightly between versions.
 | Logs | Coolify > resource > Logs, per service. The collector prints one summary per round and `WARN` lines from the checks |
 | Restart | Coolify > Restart. The collector continues with its files, nothing is lost |
 | Update | Push to `main`, Coolify deploys (automatically if the webhook is on) |
+| Rebuild the database from the raw archive | Empty the tables or run `npx tsx collector/backfill.ts /data/raw --force` in the collector container (Coolify > Terminal). Safe to repeat |
 | Restore the database | `gunzip -c /var/backups/vectorscope/vectorscope-<date>.sql.gz \| docker exec -i <db container> psql -U vectorscope vectorscope` |
 | Restore the raw archive | Clone the branch `collector-raw`, or copy `/var/backups/vectorscope/raw` |
 | Query | `/api/reports`, or `docker exec -it <db container> psql -U vectorscope vectorscope` |
