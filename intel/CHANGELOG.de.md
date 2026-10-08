@@ -4,6 +4,11 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.7.1 (2026-10-08)
+
+### Behoben
+* Ort-Filter: Die Schaltfläche zum Aufheben steht vorn in der Filterleiste. Auf dem Handy lag sie nach einem Tipp auf die Karte außer Sicht am Ende. „All“ hebt einen Ort-Filter ebenfalls auf.
+
 ## 0.7.0 (2026-10-07)
 
 ### Neu

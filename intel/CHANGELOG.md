@@ -4,6 +4,11 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.7.1 (2026-10-08)
+
+### Fixed
+* Place filter: the chip to remove it stands first in the filter row, on a phone it was out of view at the end after a tap on the map. All removes a place filter as well.
+
 ## 0.7.0 (2026-10-07)
 
 ### Added

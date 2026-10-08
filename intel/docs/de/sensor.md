@@ -67,4 +67,4 @@ Die Ansicht **Map** zeigt die Lage auf der Grundkarte von AIR:
 | Roter Punkt | Squawk 7700 |
 | Gestrichelte Linie | Von einem genannten Flugzeug zum Ort seiner Story |
 
-Ein Tipp auf einen Kreis zeigt seine Stories, ein Tipp auf einen Punkt öffnet das Flugzeug in AIR. Filter und Kacheln gelten auch für die Karte.
+Ein Tipp auf einen Kreis zeigt seine Stories, ein Tipp auf einen Punkt öffnet das Flugzeug in AIR. Filter und Kacheln gelten auch für die Karte. Die Ort-Schaltfläche am Anfang der Filterleiste (◎ Name ✕) oder **All** hebt den Ort-Filter wieder auf.

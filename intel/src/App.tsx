@@ -154,16 +154,22 @@ function Filters({ st }: { st: IntelState }) {
   const liveCount = st.stories.filter((s) => s.items.some((i) => i.matches.some(isStrong))).length;
   return (
     <div className="filters" role="toolbar" aria-label="Filter">
-      {FILTERS.map((f) => (
-        <button key={f.key} className={`chip ${st.prefs.filter === f.key ? 'on' : ''} ${f.key === 'live' ? 'chip-live' : ''}`} onClick={() => setPrefs({ filter: f.key })}>
-          {f.key === 'live' && liveCount ? `${f.label} ${liveCount}` : f.label}
-        </button>
-      ))}
+      {/* First, so it is visible on a phone: tapping a place on the map or in a story sets it. */}
       {st.prefs.place && (
         <button className="chip on place" onClick={() => setPrefs({ place: null })} aria-label={`Remove place filter ${st.prefs.place}`}>
           ◎ {st.prefs.place} ✕
         </button>
       )}
+      {FILTERS.map((f) => (
+        <button
+          key={f.key}
+          className={`chip ${st.prefs.filter === f.key && !(f.key === 'all' && st.prefs.place) ? 'on' : ''} ${f.key === 'live' ? 'chip-live' : ''}`}
+          // All means everything: it also removes a place filter.
+          onClick={() => setPrefs(f.key === 'all' ? { filter: 'all', place: null } : { filter: f.key })}
+        >
+          {f.key === 'live' && liveCount ? `${f.label} ${liveCount}` : f.label}
+        </button>
+      ))}
     </div>
   );
 }

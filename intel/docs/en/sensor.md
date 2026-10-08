@@ -67,4 +67,4 @@ The view **Map** shows the situation on the basemap of AIR:
 | Red dot | Squawk 7700 |
 | Dashed line | From a named aircraft to the place of its story |
 
-Tapping a circle shows its stories, tapping a dot opens the aircraft in AIR. Filters and tiles apply to the map as well.
+Tapping a circle shows its stories, tapping a dot opens the aircraft in AIR. Filters and tiles apply to the map as well. The place chip at the start of the filter row (◎ name ✕) or **All** removes the place filter again.
