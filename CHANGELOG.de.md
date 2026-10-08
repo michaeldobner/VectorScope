@@ -4,6 +4,15 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.11.2 (2026-10-08)
+
+### Neu
+* Eigener Server: `/api/diag` zeigt, ob der Server adsb.lol, Telegram, die Feeds, Bluesky, Google Translate und GitHub erreicht, mit DNS und Zeiten.
+
+### Behoben
+* Proxy: Jede Anfrage an einen Herausgeber gibt nach 15 Sekunden auf, eine Übersetzung nach 10. Auf dem eigenen Server ließ eine hängende Verbindung die App ewig laden.
+* Eigener Server: Node bevorzugt IPv4, weil Docker-Netze oft kein funktionierendes IPv6 haben.
+
 ## 0.11.1 (2026-10-07)
 
 ### Geändert

@@ -10,7 +10,8 @@ RUN npm run build
 FROM node:22-bookworm-slim
 # git pushes the raw archive to the branch collector-raw (server/raw-git.mjs).
 RUN apt-get update && apt-get install -y --no-install-recommends git ca-certificates && rm -rf /var/lib/apt/lists/*
-ENV NODE_ENV=production PORT=8080 DATA_DIR=/data
+# IPv4 first: Docker networks often have no working IPv6, and a hanging IPv6 attempt slows every request.
+ENV NODE_ENV=production PORT=8080 DATA_DIR=/data NODE_OPTIONS=--dns-result-order=ipv4first
 WORKDIR /app
 # node_modules keeps tsx, which runs collector/collect.ts in the collector container.
 COPY --from=build /app/node_modules ./node_modules

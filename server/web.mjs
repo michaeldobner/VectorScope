@@ -5,10 +5,12 @@
 //   /data/latest.json the collector's last 72 hours, read by INTEL
 //   /api/health       web, collector and database in one JSON, read by the status page
 //   /api/reports      reports from the database: ?hours=24&source=id&q=text&limit=200
+//   /api/diag         can the server reach the publishers: DNS and one request per host, with times
 //   /healthz          liveness for the Docker healthcheck
 //
 // Env: PORT (8080), DATA_DIR (/data), DATABASE_URL, plus the proxy's ALLOWED_ORIGIN, PROXY_TOKEN, CONTACT.
 import { createServer } from 'node:http';
+import { lookup } from 'node:dns/promises';
 import { createReadStream, existsSync, readFileSync, statSync } from 'node:fs';
 import { dirname, extname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -162,6 +164,45 @@ async function reports(res, params) {
   }
 }
 
+/** One request to each kind of publisher the server needs, to tell a network problem from a code problem. */
+const DIAG = [
+  ['adsb.lol (AIR, sensor)', 'https://api.adsb.lol/v2/mil'],
+  ['Telegram', 'https://t.me/s/rybar'],
+  ['RSS (Tagesschau)', 'https://www.tagesschau.de/index~rss2.xml'],
+  ['Bluesky', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bsky.app'],
+  ['Google Translate', 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=de&dt=t&q=test'],
+  ['GitHub (raw archive)', 'https://github.com/michaeldobner/VectorScope.git/info/refs?service=git-upload-pack'],
+];
+
+async function diag(res) {
+  const checks = await Promise.all(
+    DIAG.map(async ([name, url]) => {
+      const host = new URL(url).hostname;
+      const out = { name, host };
+      const t0 = Date.now();
+      try {
+        const addrs = await lookup(host, { all: true });
+        out.dns = addrs.map((a) => `${a.address} (IPv${a.family})`);
+        out.dns_ms = Date.now() - t0;
+      } catch (e) {
+        out.dns_error = String(e.code ?? e.message ?? e);
+        return out;
+      }
+      const t1 = Date.now();
+      try {
+        const r = await fetch(url, { headers: { 'User-Agent': 'VectorScope-diag' }, signal: AbortSignal.timeout(10_000) });
+        await r.arrayBuffer();
+        out.status = r.status;
+      } catch (e) {
+        out.error = String(e.cause?.code ?? e.name ?? e.message ?? e);
+      }
+      out.ms = Date.now() - t1;
+      return out;
+    }),
+  );
+  json(res, 200, { at: new Date().toISOString(), version, node: process.version, node_options: process.env.NODE_OPTIONS ?? '', checks, heartbeat: heartbeat() });
+}
+
 // ---------- Static ----------
 
 function serveFile(res, file, cacheControl) {
@@ -198,6 +239,7 @@ createServer(async (req, res) => {
     if (path === '/healthz') return json(res, 200, { ok: true });
     if (path === '/proxy' || path.startsWith('/proxy/')) return await handleProxy(req, res, path.slice('/proxy'.length) || '/');
     if (path === '/api/health') return await health(res);
+    if (path === '/api/diag') return await diag(res);
     if (path === '/api/reports') return await reports(res, url.searchParams);
     if (path === '/data/latest.json') {
       const file = join(dataDir, 'latest.json');

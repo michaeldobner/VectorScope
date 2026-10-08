@@ -26,6 +26,7 @@ Ein Container mit fehlschlagendem Healthcheck erscheint auf der Statusseite und 
 | `/data/latest.json` | Meldungen der letzten 72 Stunden, gelesen von INTEL unter dieser Adresse |
 | `/api/health` | Zustand für die Statusseite, siehe unten |
 | `/api/reports?hours=24&source=baza&q=Tuapse&limit=200` | Meldungen aus der Datenbank |
+| `/api/diag` | Ob der Server die Herausgeber erreicht: DNS und eine Anfrage pro Host mit Zeit. Erste Anlaufstelle, wenn die App ewig lädt |
 | `/healthz` | Lebenszeichen für Docker |
 
 Die App erkennt, wo sie läuft: Auf GitHub Pages (`*.github.io`) und lokal nutzt sie den Proxy auf Vercel und die Sammlerdaten auf GitHub, unter jeder anderen Adresse ihr eigenes `/proxy` und `/data`. Ein Build bedient beides.

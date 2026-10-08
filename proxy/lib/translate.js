@@ -30,7 +30,7 @@ export function parseGoogle(json) {
 
 async function google(text, to, fetchImpl) {
   const url = `${ENDPOINT}?client=gtx&sl=auto&tl=${to}&dt=t&q=${encodeURIComponent(text)}`;
-  const r = await fetchImpl(url, { headers: { Accept: 'application/json' } });
+  const r = await fetchImpl(url, { headers: { Accept: 'application/json' }, signal: AbortSignal.timeout(10_000) });
   if (!r.ok) throw new Error(`google ${r.status}`);
   return parseGoogle(await r.json());
 }

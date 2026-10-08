@@ -4,6 +4,15 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.11.2 (2026-10-08)
+
+### Added
+* Own server: `/api/diag` shows whether the server reaches adsb.lol, Telegram, the feeds, Bluesky, Google Translate and GitHub, with DNS and times.
+
+### Fixed
+* Proxy: every request to a publisher gives up after 15 seconds, a translation after 10. On the own server a hanging connection kept the app loading forever.
+* Own server: Node prefers IPv4, because Docker networks often have no working IPv6.
+
 ## 0.11.1 (2026-10-07)
 
 ### Changed

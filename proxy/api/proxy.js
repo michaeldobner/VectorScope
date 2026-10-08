@@ -96,6 +96,9 @@ const TELEGRAM = [
   'currenttime',
 ];
 const TG = /^\/tg\/([A-Za-z0-9_]{4,32})$/;
+// Every request to a publisher gives up after 15 seconds. Vercel ends a function after 10 seconds anyway,
+// on the own server a hanging connection would otherwise keep the app waiting forever.
+const UPSTREAM_TIMEOUT = () => AbortSignal.timeout(15_000);
 const CONTACT_UA = `VectorScope/0.1 (+https://github.com/michaeldobner/VectorScope; ${process.env.CONTACT || 'github.com/michaeldobner'})`;
 
 export default async function handler(req, res) {
@@ -121,6 +124,7 @@ export default async function handler(req, res) {
     try {
       const r = await fetch(`https://api.planespotters.net/pub/photos/hex/${photo[1].toLowerCase()}`, {
         headers: { Accept: 'application/json', 'User-Agent': CONTACT_UA },
+        signal: UPSTREAM_TIMEOUT(),
       });
       res.setHeader('Content-Type', 'application/json');
       res.setHeader('Cache-Control', 'public, s-maxage=86400');
@@ -147,6 +151,7 @@ export default async function handler(req, res) {
       const r = await fetch(url, {
         headers: { Accept: 'application/rss+xml, application/atom+xml, application/xml, text/xml', 'User-Agent': CONTACT_UA },
         redirect: 'follow',
+        signal: UPSTREAM_TIMEOUT(),
       });
       res.setHeader('Content-Type', 'application/xml; charset=utf-8');
       res.setHeader('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=900');
@@ -161,7 +166,7 @@ export default async function handler(req, res) {
     const channel = TELEGRAM.find((c) => c.toLowerCase() === tg[1].toLowerCase());
     if (!channel) return res.status(404).json({ error: 'unknown channel' });
     try {
-      const r = await fetch(`https://t.me/s/${channel}`, { headers: { Accept: 'text/html', 'User-Agent': CONTACT_UA }, redirect: 'follow' });
+      const r = await fetch(`https://t.me/s/${channel}`, { headers: { Accept: 'text/html', 'User-Agent': CONTACT_UA }, redirect: 'follow', signal: UPSTREAM_TIMEOUT() });
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
       res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=120');
       return res.status(r.status).send(await r.text());
@@ -183,6 +188,7 @@ export default async function handler(req, res) {
         'User-Agent': CONTACT_UA,
       },
       body: req.method === 'POST' ? JSON.stringify(req.body ?? {}) : undefined,
+      signal: UPSTREAM_TIMEOUT(),
     });
     const body = await upstream.text();
     res.setHeader('Content-Type', 'application/json');

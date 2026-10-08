@@ -26,6 +26,7 @@ A container whose healthcheck fails shows on the status page and raises the Tele
 | `/data/latest.json` | Reports of the last 72 hours, read by INTEL on this address |
 | `/api/health` | State for the status page, see below |
 | `/api/reports?hours=24&source=baza&q=Tuapse&limit=200` | Reports from the database |
+| `/api/diag` | Whether the server reaches the publishers: DNS and one request per host with time. First stop when the app keeps loading |
 | `/healthz` | Liveness for Docker |
 
 The app recognises where it runs: on GitHub Pages (`*.github.io`) and locally it uses the proxy on Vercel and the collector data on GitHub, on every other address its own `/proxy` and `/data`. One build serves both.
