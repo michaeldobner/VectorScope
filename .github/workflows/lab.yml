@@ -33,6 +33,7 @@ jobs:
           sleep 3
           node lab/run.mjs || true
           node lab/politics.mjs || true
+          node lab/voices.mjs || true
           LAB_SKIP_BLUESKY=1 node lab/osint.mjs || true
           npx tsx lab/qa.ts || true
       - name: Publish results to branch lab-results
