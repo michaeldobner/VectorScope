@@ -28,12 +28,16 @@ jobs:
       - run: npm run build
       - run: npx playwright install --with-deps chromium webkit
       - name: Run lab
+        env:
+          # Optional: a read-only Cloudflare Radar token as repository secret. Empty, the lab tries without.
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
           node scripts/serve.mjs 4173 &
           sleep 3
           node lab/run.mjs || true
           node lab/politics.mjs || true
           node lab/voices.mjs || true
+          node lab/cloudflare.mjs || true
           LAB_SKIP_BLUESKY=1 node lab/osint.mjs || true
           npx tsx lab/qa.ts || true
       - name: Publish results to branch lab-results
