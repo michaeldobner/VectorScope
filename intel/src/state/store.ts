@@ -64,6 +64,8 @@ export interface IntelState {
   prefs: Prefs;
   /** lastSeen of the previous visit, fixed for this session so "new" marks do not vanish while reading. */
   newSince: number;
+  /** Search over stories and wire, for this session only. */
+  query: string;
 }
 
 const demo = new URLSearchParams(location.search).has('demo');
@@ -105,6 +107,7 @@ let state: IntelState = {
   liveError: null,
   prefs,
   newSince: prefs.lastSeen,
+  query: '',
 };
 const listeners = new Set<() => void>();
 const emit = (patch: Partial<IntelState>) => {
@@ -150,6 +153,10 @@ function derive(items: Item[], live: Aircraft[], now: number): Pick<IntelState, 
   const all = enrich(sensor.length ? mergeItems([...items, ...sensor], now) : items, live, now);
   const enriched = all.filter((i) => !isAirTrack(i));
   return { items: enriched, stories: buildStories(enriched), alerts: all.filter(isAirTrack) };
+}
+
+export function setQuery(query: string) {
+  emit({ query });
 }
 
 export function setPrefs(patch: Partial<Prefs>) {

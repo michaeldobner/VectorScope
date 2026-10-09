@@ -4,6 +4,11 @@ Alle wesentlichen Änderungen am Modul AIR. [English](CHANGELOG.md) · [Changelo
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.5.0 (2026-10-09)
+
+### Neu
+* Zeigt die Karte ein Gebiet fern deines Standorts, sagt eine Zeile oben, dass AIR den Verkehr dort lädt, wie viele Flugzeuge es gefunden hat und wie weit das von dir entfernt ist. **◎ Back** führt zurück zu deinem Standort.
+
 ## 0.4.0 (2026-10-09)
 
 ### Neu

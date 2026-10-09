@@ -4,6 +4,12 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.16.0 (2026-10-09)
+
+### Added
+* Hub: one live number per module, military aircraft broadcasting worldwide for AIR, reports of the last 24 hours and the last hour for INTEL. The text of INTEL names security and politics.
+* Shared shell 1.1.0, module AIR 0.5.0 and INTEL 0.11.0, see their changelogs.
+
 ## 0.15.2 (2026-10-09)
 
 ### Fixed

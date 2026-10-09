@@ -4,6 +4,12 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.16.0 (2026-10-09)
+
+### Neu
+* Startseite: eine Live-Zahl pro Modul, weltweit sendende Militärflugzeuge für AIR, Meldungen der letzten 24 Stunden und der letzten Stunde für INTEL. Der Text von INTEL nennt Sicherheit und Politik.
+* Gemeinsame Hülle 1.1.0, Modul AIR 0.5.0 und INTEL 0.11.0, siehe ihre Changelogs.
+
 ## 0.15.2 (2026-10-09)
 
 ### Behoben

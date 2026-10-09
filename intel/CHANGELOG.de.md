@@ -4,6 +4,21 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.11.0 (2026-10-09)
+
+### Neu
+* **Suche:** Eine Lupe in der oberen Leiste durchsucht Stories und Wire, jedes Wort in Überschrift, Auszug, Quelle, Übersetzung, Orten, Akteuren und Abgeordneten.
+* **Sprachmenü:** 🌐 öffnet drei Möglichkeiten, Original, English, Deutsch, statt blind weiterzuschalten.
+* **Konfidenz erklärt:** Ein Tipp auf den Prozentwert einer Story erklärt Status und Prozentwert auf der Karte.
+
+### Geändert
+* **Handy:** Der Linsen-Schalter sitzt in der oberen Leiste, die Leiste gleitet beim Scrollen nach unten weg, die vier Kacheln sind eine schmale Zahlenleiste. Die erste Story beginnt ein Drittel weiter oben.
+* **Places** am Handy unter der Karte, der Reiter Sources zeigt nur Quellen.
+* **Signal | Everything** ist ein Schalter mit zwei Seiten am Anfang der Filterzeile, kein Chip, der seinen Namen ändert.
+* Der Prozentwert einer Story ist leise, der Status trägt die Farbe.
+* **Who says what:** Abgeordnete, die selbst dazu geschrieben haben, sind ein gefüllter Name, in einer Meldung genannte ein umrandeter.
+* Die Zeitachse einer Story erscheint mit geöffneten Meldungen. Geschlossen sagt eine Zeile „21:27 to 21:51 · 4 reports“.
+
 ## 0.10.2 (2026-10-09)
 
 ### Behoben

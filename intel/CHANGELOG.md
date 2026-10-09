@@ -4,6 +4,21 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.11.0 (2026-10-09)
+
+### Added
+* **Search:** a magnifier in the top bar searches stories and wire, every word in headline, excerpt, source, translation, places, actors and members.
+* **Language menu:** 🌐 opens three choices, Original, English, Deutsch, instead of switching blindly.
+* **Confidence explained:** a tap on the percentage of a story explains status and percentage on the card.
+
+### Changed
+* **Phone:** the lens switch sits in the top bar, the top bar slides away while scrolling down, the four tiles are a slim strip of numbers. The first story starts a third higher.
+* **Places** below the map on a phone, the tab Sources shows sources only.
+* **Signal | Everything** is a switch with two sides at the start of the filter row, not a chip that changes its name.
+* The percentage of a story is quiet, the status carries the colour.
+* **Who says what:** a member who posted about it is a filled name, a member named in a report an outlined one.
+* The time axis of a story shows when the reports are open. Closed, one line says "21:27 to 21:51 · 4 reports".
+
 ## 0.10.2 (2026-10-09)
 
 ### Fixed

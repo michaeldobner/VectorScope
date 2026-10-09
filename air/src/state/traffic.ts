@@ -55,6 +55,8 @@ export interface TrafficState {
   external: Tracked | null;
   alerts: Alert[];
   version: number;
+  /** The map shows an area away from the own position: its distance, whether it is loading, aircraft found there. */
+  area: { distKm: number; loading: boolean; count: number | null } | null;
 }
 
 const HISTORY_MS = 30 * 60_000;
@@ -74,6 +76,7 @@ let state: TrafficState = {
   external: null,
   alerts: [],
   version: 0,
+  area: null,
 };
 
 const listeners = new Set<() => void>();
@@ -234,7 +237,11 @@ export function setView(center: LatLon, radiusKm: number) {
   const prev = view;
   view = { center, radiusKm: Math.min(radiusKm, MAX_VIEW_KM) };
   const moved = !prev || distanceM(prev.center, center) > 20_000 || Math.abs(prev.radiusKm - view.radiusKm) > prev.radiusKm * 0.3;
-  if (moved && viewQuery(state.observer)) {
+  const area = viewQuery(state.observer);
+  if (!area) {
+    if (state.area) emit({ area: null });
+  } else if (moved) {
+    emit({ area: { distKm: distanceM(state.observer!, area.center) / 1000, loading: true, count: null } });
     window.clearTimeout(viewTimer);
     viewTimer = window.setTimeout(poll, 700);
   }
@@ -270,6 +277,7 @@ async function poll() {
         const known = new Set(list.map((a) => a.hex));
         list = [...list, ...more.aircraft.filter((a) => !known.has(a.hex))];
       }
+      if (viewQuery(observer)) emit({ area: { distKm: distanceM(observer, area.center) / 1000, loading: false, count: more ? more.aircraft.length : null } });
     }
     const { next, newAlerts } = ingest(list, observer);
     backoff = 1;

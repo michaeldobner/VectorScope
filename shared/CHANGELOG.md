@@ -2,6 +2,11 @@
 
 [Deutsch](CHANGELOG.de.md) · [Back to the shared shell](README.md)
 
+## 1.1.0 (2026-10-09)
+
+### Added
+* `hub.css`: a line for the live number of a module.
+
 ## 1.0.0 (2026-10-05)
 
 ### Added

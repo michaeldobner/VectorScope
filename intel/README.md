@@ -72,6 +72,6 @@ npm test               # unit tests of all modules and repository checks
 
 ## Version
 
-Current version: **0.10.2**. See the [changelog](CHANGELOG.md).
+Current version: **0.11.0**. See the [changelog](CHANGELOG.md).
 
 Created by Michael Dobner. Licensed under the [MIT licence](../LICENSE).

@@ -33,7 +33,7 @@ Das Layout richtet sich nach dem tatsächlich verfügbaren Platz und passt sich 
 | **◆** | Nur interessante Flugzeuge zeigen. Normaler Verkehr wird ausgeblendet |
 | Flugzeug antippen | Öffnet den Inspector. Das Flugzeug erhält einen Lichtkranz, seine Flugspur und eine gestrichelte Vorausberechnung für drei Minuten |
 | Leere Karte antippen | Schließt den Inspector |
-| Zwei Finger, Ziehen | Zoomen und verschieben. Die Karte dreht sich nicht, Norden ist immer oben. Zeigt die Karte ein Gebiet fern deines Standorts, lädt AIR auch den Verkehr dort, bis etwa 460 km um die Kartenmitte (seit AIR 0.4.0). Listen und Hinweise bleiben bei deinem Standort |
+| Zwei Finger, Ziehen | Zoomen und verschieben. Die Karte dreht sich nicht, Norden ist immer oben. Zeigt die Karte ein Gebiet fern deines Standorts, lädt AIR auch den Verkehr dort, bis etwa 460 km um die Kartenmitte (seit AIR 0.4.0). Eine Zeile oben sagt das, wie viele Flugzeuge es dort gefunden hat und wie weit das von dir entfernt ist, **◎ Back** führt zurück zu deinem Standort. Listen und Hinweise bleiben bei deinem Standort |
 
 ## Die Karte lesen
 

@@ -1,4 +1,4 @@
-import { Suspense, lazy, useMemo, useState, type CSSProperties } from 'react';
+import { Suspense, lazy, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import type { Aircraft } from '../../air/src/data/types';
 import { CAPITALS, DECISION, actorById, capitalsOf, type CapitalId } from './data/actors';
 import { bridgesFor } from './data/bridges';
@@ -12,7 +12,7 @@ import { voicesOf } from './data/voices';
 import { REGION_LABEL, SOURCES, TIER_LABEL, sourceById, type Category, type Region, type Source, type Tier } from './data/sources';
 import { independentCount, rankStories, type Status, type Story } from './data/stories';
 import type { EnrichedItem, Lens, Match } from './data/types';
-import { refreshFeed, refreshLive, setPrefs, useIntel, type Filter, type IntelState, type Pulse } from './state/store';
+import { refreshFeed, refreshLive, setPrefs, setQuery, useIntel, type Filter, type IntelState, type Pulse } from './state/store';
 import { TranslateContext, translate, useTr, useTranslationVersion } from './state/translate';
 import { age, ago, altitude, clock, count, duration, km } from './ui/format';
 import { useWide } from './ui/useWide';
@@ -25,13 +25,54 @@ const tierOf = (i: EnrichedItem): Tier => sourceById(i.sourceId)?.tier ?? 'early
 const TIER_ORDER: Tier[] = ['physical', 'primary', 'early', 'osint', 'specialist', 'perspective', 'confirming'];
 /** Class label: the interface is English, whatever language the reports are shown in. */
 const tierLabel = (t: Tier) => TIER_LABEL[t].en;
-/** The language switch of the reports: original, English, German, and round again. */
-const NEXT_LANG: Record<ReportLang, ReportLang> = { original: 'en', en: 'de', de: 'original' };
-const LANG_LABEL: Record<ReportLang, { short: string; title: string }> = {
-  original: { short: 'ORIG', title: 'in their original language' },
-  en: { short: 'EN', title: 'all in English' },
-  de: { short: 'DE', title: 'all in German' },
+/** Languages of the reports, for the language menu. */
+const LANG_LABEL: Record<ReportLang, { short: string; title: string; hint: string }> = {
+  original: { short: 'ORIG', title: 'Original', hint: 'Every report as it came' },
+  en: { short: 'EN', title: 'English', hint: 'All reports in English' },
+  de: { short: 'DE', title: 'Deutsch', hint: 'All reports in German' },
 };
+
+/** 🌐 with the chosen language. A tap opens three choices instead of switching blindly. */
+function LangMenu({ st }: { st: IntelState }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!open) return;
+    const close = (e: PointerEvent) => !ref.current?.contains(e.target as Node) && setOpen(false);
+    document.addEventListener('pointerdown', close);
+    return () => document.removeEventListener('pointerdown', close);
+  }, [open]);
+  const current = st.prefs.reports;
+  return (
+    <div className="lang-menu" ref={ref}>
+      <button
+        className={`icon-btn lang ${current !== 'original' ? 'on' : ''}`}
+        onClick={() => setOpen(!open)}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        aria-label={`Language of the reports: ${LANG_LABEL[current].title}`}
+      >
+        <span aria-hidden>🌐</span> {LANG_LABEL[current].short}
+      </button>
+      {open && (
+        <div className="lang-pop" role="menu">
+          {(Object.keys(LANG_LABEL) as ReportLang[]).map((l) => (
+            <button
+              key={l}
+              role="menuitemradio"
+              aria-checked={current === l}
+              className={current === l ? 'on' : ''}
+              onClick={() => (setPrefs({ reports: l }), setOpen(false))}
+            >
+              <b>{LANG_LABEL[l].title}</b>
+              <span>{LANG_LABEL[l].hint}</span>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 const pct = (x: number) => `${Math.round(x * 100)} %`;
 const sourceName = (id: string) => sourceById(id)?.name ?? 'Demo';
 
@@ -39,6 +80,8 @@ export function App() {
   const st = useIntel();
   const wide = useWide();
   const [tab, setTab] = useState<Tab>('main');
+  const [searching, setSearching] = useState(false);
+  const collapsed = useCollapsedHeader(!wide);
   const view = st.prefs.view;
   const lens = st.prefs.lens;
   const items = useMemo(() => st.items.filter((i) => itemPasses(i, st)), [st]);
@@ -56,9 +99,18 @@ export function App() {
 
   return (
     <TranslateContext.Provider value={tr}>
-    <div className={`app ${wide ? 'wide' : 'narrow'} view-${view}`}>
-      <TopBar st={st} />
-      <LensSwitch st={st} />
+    <div className={`app ${wide ? 'wide' : 'narrow'} view-${view} ${collapsed ? 'collapsed' : ''}`}>
+      <TopBar
+        st={st}
+        wide={wide}
+        searching={searching}
+        onSearch={() => {
+          if (searching) setQuery('');
+          else setTab('main');
+          setSearching(!searching);
+        }}
+      />
+      {wide && <LensSwitch st={st} />}
       {!wide && (
         <nav className="tabs" aria-label="Views">
           <button className={tab === 'main' && view === 'stories' ? 'on' : ''} onClick={() => (setTab('main'), setPrefs({ view: 'stories' }))}>
@@ -94,6 +146,7 @@ export function App() {
                 </button>
               </div>
             )}
+            {searching && <SearchBar st={st} onClose={() => (setQuery(''), setSearching(false))} />}
             <Filters st={st} />
             {view === 'stories' && <StoriesView stories={stories} st={st} />}
             {view === 'wire' && <WireList items={items} st={st} />}
@@ -105,6 +158,8 @@ export function App() {
                     ? 'Circles: capitals, size by the stories that name their actors, white when one of them is confirmed. Lines: stories that name actors of two capitals, thicker for more stories. Tap a capital for its stories.'
                     : 'Circles: stories at the place most of their reports name, size by number of independent sources, white confirmed, blue reported or emerging, grey unverified. Dots: military aircraft, blue when a story names them, red squawk 7700. Tap a circle for its stories, a dot to open the aircraft in AIR.'}
                 </p>
+                {/* On a phone the places belong to the map, the tab Sources shows sources only. */}
+                {!wide && <PlacesPanel st={st} onPick={() => setPrefs({ view: 'stories' })} />}
               </Suspense>
             )}
           </main>
@@ -112,7 +167,7 @@ export function App() {
         {(wide || tab !== 'main') && (
           <aside className="side">
             {(wide || tab === 'live') && <LivePanel st={st} />}
-            {(wide || tab === 'more') && <PlacesPanel st={st} onPick={() => setTab('main')} />}
+            {wide && <PlacesPanel st={st} onPick={() => setTab('main')} />}
             {(wide || tab === 'more') && <SourcesPanel st={st} />}
           </aside>
         )}
@@ -125,6 +180,7 @@ export function App() {
 function itemPasses(i: EnrichedItem, st: IntelState): boolean {
   const { filter, place, lens, actor } = st.prefs;
   if (!i.lens?.[lens]) return false;
+  if (st.query.trim() && !searchMatches(i, st.query)) return false;
   if (place && !i.entities.places.some((p) => p.name === place)) return false;
   if (actor && !actorMatches(i, actor)) return false;
   if (filter === 'all') return true;
@@ -132,6 +188,65 @@ function itemPasses(i: EnrichedItem, st: IntelState): boolean {
   const src = sourceById(i.sourceId);
   const chip = filtersOf(lens).find((f) => f.key === filter);
   return !!src && !!chip?.test?.(src.region, src.category);
+}
+
+/** Search: every word of the query in headline, excerpt, source, translations or named places and members. */
+function searchMatches(i: EnrichedItem, query: string): boolean {
+  const hay = [
+    i.title,
+    i.text,
+    sourceName(i.sourceId),
+    i.tr?.en?.title,
+    i.tr?.de?.title,
+    ...i.entities.places.map((p) => p.name),
+    ...(i.entities.members ?? []),
+    ...(i.entities.actors ?? []).map((a) => actorById(a)?.name),
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+  return query
+    .toLowerCase()
+    .split(/\s+/)
+    .filter(Boolean)
+    .every((w) => hay.includes(w));
+}
+
+/** On a phone the top bar slides away while scrolling down and comes back when scrolling up. */
+function useCollapsedHeader(enabled: boolean): boolean {
+  const [collapsed, setCollapsed] = useState(false);
+  useEffect(() => {
+    if (!enabled) return setCollapsed(false);
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (Math.abs(y - last) < 8) return;
+      setCollapsed(y > 120 && y > last);
+      last = y;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [enabled]);
+  return collapsed;
+}
+
+function SearchBar({ st, onClose }: { st: IntelState; onClose: () => void }) {
+  return (
+    <div className="searchbar">
+      <input
+        type="search"
+        autoFocus
+        value={st.query}
+        onChange={(e) => setQuery(e.target.value)}
+        onKeyDown={(e) => e.key === 'Escape' && onClose()}
+        placeholder="Search reports, places, people, sources"
+        aria-label="Search reports"
+      />
+      <button className="icon-btn" onClick={onClose} aria-label="Close search">
+        ✕
+      </button>
+    </div>
+  );
 }
 
 /**
@@ -162,17 +277,20 @@ const voiceOf = (i: EnrichedItem) => sourceById(i.sourceId)?.voice;
 const isSignal = (s: Story) => independentCount(s) >= 2 || s.items.some(voiceOf);
 const inLens = (s: Story, lens: Lens) => storyInLens(s.items, lens);
 
-function LensSwitch({ st }: { st: IntelState }) {
+/** The lens switch. On a phone it sits compact in the top bar, so the stories start higher up. */
+function LensSwitch({ st, compact }: { st: IntelState; compact?: boolean }) {
   const lens = st.prefs.lens;
   // A new lens starts unfiltered: tiles, topic chips and actor filters of the other lens do not fit.
   const pick = (l: Lens) => l !== lens && setPrefs({ lens: l, pulse: null, filter: 'all', actor: null, place: null });
   return (
-    <div className="lens" role="tablist" aria-label="Lens">
-      <button role="tab" aria-selected={lens === 'security'} className={lens === 'security' ? 'on' : ''} onClick={() => pick('security')}>
-        <span aria-hidden>⚔</span> Security
+    <div className={`lens ${compact ? 'compact' : ''}`} role="tablist" aria-label="Lens">
+      <button role="tab" aria-selected={lens === 'security'} aria-label="Security" className={lens === 'security' ? 'on' : ''} onClick={() => pick('security')}>
+        <span aria-hidden>⚔</span>
+        {compact ? (lens === 'security' ? ' Security' : '') : ' Security'}
       </button>
-      <button role="tab" aria-selected={lens === 'politics'} className={lens === 'politics' ? 'on' : ''} onClick={() => pick('politics')}>
-        <span aria-hidden>🏛</span> Politics
+      <button role="tab" aria-selected={lens === 'politics'} aria-label="Politics" className={lens === 'politics' ? 'on' : ''} onClick={() => pick('politics')}>
+        <span aria-hidden>🏛</span>
+        {compact ? (lens === 'politics' ? ' Politics' : '') : ' Politics'}
       </button>
     </div>
   );
@@ -185,28 +303,28 @@ function liveMatches(st: IntelState): { match: Match; item: EnrichedItem }[] {
   return [...seen.values()];
 }
 
-function TopBar({ st }: { st: IntelState }) {
+function TopBar({ st, wide, searching, onSearch }: { st: IntelState; wide: boolean; searching: boolean; onSearch: () => void }) {
   const okSources = Object.values(st.sources).filter((s) => s.ok).length;
   const status = st.demo ? 'DEMO' : st.loading && !st.items.length ? 'LOADING' : okSources || st.items.length ? 'LIVE' : st.updated ? 'OFFLINE' : 'LOADING';
   return (
     <header className="topbar">
       <a className="brand" href="../" aria-label="VectorScope home">
         <span className="logo">◇</span>
-        <span>VectorScope</span>
+        {wide && <span>VectorScope</span>}
         <span className="code">INTEL</span>
       </a>
+      {!wide && <LensSwitch st={st} compact />}
       <span className="spacer" />
-      <span className={`status status-${status.toLowerCase()}`}>
-        <i /> {status}
+      <span className={`status status-${status.toLowerCase()}`} title={status}>
+        <i /> {wide ? status : ''}
       </span>
-      <button
-        className={`icon-btn lang ${st.prefs.reports !== 'original' ? 'on' : ''}`}
-        onClick={() => setPrefs({ reports: NEXT_LANG[st.prefs.reports] })}
-        aria-label={`Reports: ${LANG_LABEL[st.prefs.reports].title}. Tap for ${LANG_LABEL[NEXT_LANG[st.prefs.reports]].title}`}
-        title={`Reports ${LANG_LABEL[st.prefs.reports].title}. Tap for ${LANG_LABEL[NEXT_LANG[st.prefs.reports]].title}`}
-      >
-        {LANG_LABEL[st.prefs.reports].short}
+      <button className={`icon-btn ${searching ? 'on' : ''}`} onClick={onSearch} aria-label={searching ? 'Close search' : 'Search'} aria-pressed={searching}>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
+          <circle cx="10.5" cy="10.5" r="6.5" />
+          <path d="M15.5 15.5 20 20" />
+        </svg>
       </button>
+      <LangMenu st={st} />
       <button className={`icon-btn ${st.loading ? 'spin' : ''}`} onClick={() => refreshLive().then(refreshFeed)} aria-label="Refresh">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
           <path d="M20 11a8 8 0 1 0-2.3 5.7" />
@@ -254,14 +372,21 @@ function Filters({ st }: { st: IntelState }) {
           </button>
         )}
         {politics && (
-          <button
-            className={`chip ${st.prefs.signal ? 'on' : ''}`}
-            onClick={() => setPrefs({ signal: !st.prefs.signal })}
-            aria-pressed={st.prefs.signal}
-            title="Signal: only stories with an original statement or at least two independent sources. Off: everything"
-          >
-            {st.prefs.signal ? 'Signal' : 'Everything'}
-          </button>
+          // A switch with two sides, not a chip: it decides how much the list shows, the chips after it what.
+          <span className="seg-mini" role="radiogroup" aria-label="Signal or everything">
+            <button
+              role="radio"
+              aria-checked={st.prefs.signal}
+              className={st.prefs.signal ? 'on' : ''}
+              onClick={() => setPrefs({ signal: true })}
+              title="Only stories with an original statement or at least two independent sources"
+            >
+              Signal
+            </button>
+            <button role="radio" aria-checked={!st.prefs.signal} className={st.prefs.signal ? '' : 'on'} onClick={() => setPrefs({ signal: false })} title="Every story">
+              Everything
+            </button>
+          </span>
         )}
         {filtersOf(st.prefs.lens).map((f) => (
           <button
@@ -299,7 +424,7 @@ function Filters({ st }: { st: IntelState }) {
 function Empty({ st }: { st: IntelState }) {
   return (
     <div className="empty">
-      {st.loading || !st.updated ? 'Loading sources …' : st.prefs.filter === 'live' ? 'No report matches an aircraft in the air right now.' : 'Nothing here for this filter.'}
+      {st.loading || !st.updated ? 'Loading sources …' : st.query.trim() ? `No report matches "${st.query.trim()}" in this lens and filter.` : st.prefs.filter === 'live' ? 'No report matches an aircraft in the air right now.' : 'Nothing here for this filter.'}
     </div>
   );
 }
@@ -436,6 +561,7 @@ const STATUS_HINT: Record<Status, string> = {
 
 function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridges?: { story: Story; key: string }[] }) {
   const [open, setOpen] = useState(false);
+  const [why, setWhy] = useState(false);
   const original = story.items.find(voiceOf);
   const tr = useTr();
   const { lead } = story;
@@ -457,11 +583,18 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
           <KindBadge key={k} kind={k} />
         ))}
         <span className="src">{n > 1 ? `${n} sources` : sourceName(lead.sourceId)}</span>
-        <span className="conf" title="Event confidence from the classes and trust of the independent sources">
+        {/* Quiet, with its meaning a tap away: the status says what it is, the percentage how sure. */}
+        <button className="conf" onClick={() => setWhy(!why)} aria-expanded={why} title="Event confidence: tap for what it means">
           {pct(story.confidence)}
-        </span>
+        </button>
         <span className="age">{age(story.last)}</span>
       </div>
+      {why && (
+        <p className="conf-why">
+          <b>{STATUS_LABEL[story.status]}:</b> {STATUS_HINT[story.status]}. <b>{pct(story.confidence)}</b> is how sure the event is, from the classes and trust of{' '}
+          {n === 1 ? 'its one source' : `its ${n} independent sources`}. It says nothing about who is right.
+        </p>
+      )}
       <a className="item-title" href={lead.url} target={lead.channel === 'sensor' ? undefined : '_blank'} rel="noopener noreferrer">
         {tr(lead.title, lead.sourceId)}
       </a>
@@ -481,7 +614,14 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
       {voices.length > 0 && <Voices voices={voices} />}
       {story.sources.length > 1 && (
         <>
-          <Timeline story={story} />
+          {/* The dots on an axis only when the reports are open, closed one line says the same. */}
+          {open ? (
+            <Timeline story={story} />
+          ) : (
+            <p className="span-line">
+              {clock(story.first)} to {clock(story.last)} · {story.items.length} reports
+            </p>
+          )}
           <div className="ladder">
             {tiers.map((t) => (
               <span key={t} className={`tier t-${t}`}>
@@ -615,7 +755,9 @@ function MemberChip({ name }: { name: string }) {
 function Voices({ voices }: { voices: ReturnType<typeof voicesOf> }) {
   return (
     <div className="voices">
-      <span className="voices-head">Who says what</span>
+      <span className="voices-head" title="Filled: posted about it themselves. Outlined: named in a report">
+        Who says what
+      </span>
       {voices.map((v) => {
         const names = [...v.own, ...v.named];
         return (
@@ -630,7 +772,6 @@ function Voices({ voices }: { voices: ReturnType<typeof voicesOf> }) {
                 onClick={() => setPrefs({ actor: `mdb:${n}`, filter: 'all', pulse: null })}
                 title={v.own.includes(n) ? `${n} posted about it` : `${n} is named`}
               >
-                {v.own.includes(n) ? '✎ ' : ''}
                 {shortName(n)}
               </button>
             ))}
@@ -638,6 +779,7 @@ function Voices({ voices }: { voices: ReturnType<typeof voicesOf> }) {
           </span>
         );
       })}
+      {voices.some((v) => v.own.length) && voices.some((v) => v.named.length) && <span className="voices-legend">filled: own post · outlined: named</span>}
     </div>
   );
 }

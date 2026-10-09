@@ -872,11 +872,25 @@ section > .section-title {
 /* Event confidence on the card */
 .conf {
   font-family: var(--mono);
-  font-size: 11.5px;
-  color: var(--accent);
-  border: 1px solid rgba(85, 189, 235, 0.35);
-  border-radius: 5px;
-  padding: 0 5px;
+  font-size: 11px;
+  color: var(--text-3);
+  padding: 0 3px;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
+.conf-why {
+  margin: 6px 0 2px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: var(--panel);
+  font-size: 12.5px;
+  color: var(--text-2);
+}
+.span-line {
+  margin: 8px 0 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-3);
 }
 
 /* Sources with region, trust and perspective */
@@ -1023,12 +1037,21 @@ section > .section-title {
   color: var(--text);
 }
 .voice-name {
-  padding: 0 3px;
+  padding: 0 5px;
+  border-radius: 4px;
   color: var(--text-2);
+  border: 1px solid color-mix(in srgb, var(--party) 70%, transparent);
 }
+/* Posted it themselves: filled. Only named: outlined. */
 .voice-name.own {
   color: var(--text);
   font-weight: 600;
+  border-color: transparent;
+  background: color-mix(in srgb, var(--party) 45%, transparent);
+}
+.voices-legend {
+  font-size: 10.5px;
+  color: var(--text-3);
 }
 .voice-more {
   color: var(--text-3);
@@ -1154,4 +1177,149 @@ h3.src-group-head {
 .dot.via {
   background: transparent;
   border: 1px solid var(--accent);
+}
+
+/* Top bar on a phone: the lens switch inside, slides away while scrolling down */
+.topbar .lens.compact {
+  margin: 0;
+  padding: 2px;
+  border-radius: 9px;
+  flex: none;
+}
+.topbar .lens.compact button {
+  flex: none;
+  height: 30px;
+  padding: 0 9px;
+  font-size: 12.5px;
+}
+.narrow .topbar {
+  gap: 6px;
+  transition: transform 0.2s ease;
+}
+.narrow .tabs {
+  transition: top 0.2s ease;
+}
+.narrow.collapsed .topbar {
+  transform: translateY(-100%);
+}
+.narrow.collapsed .tabs {
+  top: var(--sat);
+}
+.icon-btn.on {
+  color: var(--accent);
+  background: var(--raised);
+}
+
+/* Search */
+.searchbar {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 10px;
+}
+.searchbar input {
+  flex: 1;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+}
+
+/* Language menu */
+.lang-menu {
+  position: relative;
+}
+.lang-pop {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 30;
+  min-width: 210px;
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+.lang-pop button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 7px;
+  text-align: left;
+}
+.lang-pop button b {
+  font-size: 13.5px;
+  color: var(--text);
+}
+.lang-pop button span {
+  font-size: 11.5px;
+  color: var(--text-3);
+}
+.lang-pop button.on {
+  background: var(--raised);
+}
+.lang-pop button.on b {
+  color: var(--accent);
+}
+
+/* Signal or everything: a switch with two sides */
+.seg-mini {
+  flex: none;
+  display: inline-flex;
+  padding: 2px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+.seg-mini button {
+  height: 26px;
+  padding: 0 11px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  color: var(--text-2);
+}
+.seg-mini button.on {
+  background: var(--raised);
+  color: var(--accent);
+}
+
+/* Tiles on a phone: one slim strip of numbers instead of a block of four */
+.narrow .pulse {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  gap: 6px;
+  margin: 0 0 12px;
+}
+.narrow .pulse::-webkit-scrollbar {
+  display: none;
+}
+.narrow .pulse button {
+  flex: none;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+.narrow .pulse b {
+  font-size: 15px;
+}
+.narrow .pulse span {
+  white-space: nowrap;
+}
+.icon-btn.lang {
+  display: inline-flex;
+  gap: 4px;
+  white-space: nowrap;
+}
+/* The bar has its own close button. */
+.searchbar input::-webkit-search-cancel-button {
+  display: none;
 }

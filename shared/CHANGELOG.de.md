@@ -2,6 +2,11 @@
 
 [English](CHANGELOG.md) · [Zurück zur gemeinsamen Hülle](README.de.md)
 
+## 1.1.0 (2026-10-09)
+
+### Neu
+* `hub.css`: eine Zeile für die Live-Zahl eines Moduls.
+
 ## 1.0.0 (2026-10-05)
 
 ### Neu

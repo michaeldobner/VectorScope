@@ -4,6 +4,11 @@ All notable changes to module AIR. [Deutsch](CHANGELOG.de.md) · [Changelog of t
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.5.0 (2026-10-09)
+
+### Added
+* When the map shows an area away from your position, a line at the top says that AIR loads the traffic there, how many aircraft it found and how far that is from you. **◎ Back** returns to your position.
+
 ## 0.4.0 (2026-10-09)
 
 ### Added

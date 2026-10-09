@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>VectorScope</title>
-    <meta name="description" content="VectorScope: personal live situational awareness. Airspace now, intelligence feed next." />
+    <meta name="description" content="VectorScope: personal live situational awareness. The airspace above you and an intelligence feed for security and politics." />
     <meta name="theme-color" content="#0E0E10" />
     <meta name="color-scheme" content="dark" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,24 +32,59 @@
             <div class="module-top"><span class="module-code">AIR</span><span class="badge live">Live</span></div>
             <div class="module-name">Airspace</div>
             <div class="module-text">Live aviation radar: what is flying above you, what passes over next, what is worth a look.</div>
-            <div class="module-meta" data-version="air">v0.4.0</div>
+            <div class="module-live" data-live="air"></div>
+            <div class="module-meta" data-version="air">v0.5.0</div>
           </a>
           <a class="module live" href="./intel/" data-module="intel">
             <div class="module-top"><span class="module-code">INTEL</span><span class="badge live">Live</span></div>
             <div class="module-name">Intelligence feed</div>
-            <div class="module-text">OSINT posts and defence news from verified sources, matched to aircraft in the air right now.</div>
-            <div class="module-meta" data-version="intel">v0.10.2</div>
+            <div class="module-text">Security and politics from 194 verified sources: what happened, who confirms it, who says what, matched to aircraft in the air right now.</div>
+            <div class="module-live" data-live="intel"></div>
+            <div class="module-meta" data-version="intel">v0.11.0</div>
           </a>
         </div>
       </section>
 
       <footer class="hub-foot">
-        <span data-version="collection">VectorScope v0.15.2</span>
+        <span data-version="collection">VectorScope v0.16.0</span>
         <a href="https://github.com/michaeldobner/VectorScope">Source and documentation</a>
         <span>Personal, non-commercial project</span>
       </footer>
     </main>
     <script>
+      // One live number per module, so the start page shows at a glance what is going on. Same addresses as the
+      // modules: on the own server its /proxy and /data, on GitHub Pages and locally the Vercel proxy and GitHub.
+      (function () {
+        var onServer = !/(^|\.)github\.io$|^localhost$|^127\.0\.0\.1$/.test(location.hostname);
+        var proxy = onServer ? location.origin + '/proxy' : 'https://vectorscope-proxy.vercel.app';
+        var data = onServer ? location.origin + '/data/latest.json' : 'https://raw.githubusercontent.com/michaeldobner/VectorScope/collector-data/latest.json';
+        function show(id, text) {
+          var el = document.querySelector('[data-live="' + id + '"]');
+          if (el) el.textContent = text;
+        }
+        function get(url) {
+          return fetch(url, { signal: AbortSignal.timeout(12000) }).then(function (r) {
+            if (!r.ok) throw new Error(r.status);
+            return r.json();
+          });
+        }
+        get(proxy + '/v2/mil')
+          .then(function (j) {
+            show('air', (j.ac || []).length + ' military aircraft broadcasting worldwide');
+          })
+          .catch(function () {});
+        get(data)
+          .then(function (j) {
+            var day = (j.items || []).filter(function (i) {
+              return Date.now() - i.time < 864e5;
+            });
+            var hour = day.filter(function (i) {
+              return Date.now() - i.time < 36e5;
+            }).length;
+            show('intel', day.length + ' reports in 24 h, ' + hour + ' in the last hour');
+          })
+          .catch(function () {});
+      })();
       if ('serviceWorker' in navigator && location.protocol === 'https:') {
         navigator.serviceWorker.register('./sw.js').catch(function () {});
       }

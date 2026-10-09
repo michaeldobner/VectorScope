@@ -70,6 +70,7 @@ a.module:active { background: var(--raised); }
 .module-code { font-size: 13px; font-weight: 600; letter-spacing: 0.16em; color: var(--accent); }
 .module-name { font-size: 18px; font-weight: 600; }
 .module-text { color: var(--text-2); font-size: 14px; }
+.module-live { margin-top: 10px; color: var(--accent); font-family: var(--mono, monospace); font-size: 12px; min-height: 1.2em; }
 .module-meta { margin-top: auto; color: var(--text-3); font-size: 12px; }
 
 .badge {

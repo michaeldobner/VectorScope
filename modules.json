@@ -1,8 +1,8 @@
 {
   "name": "VectorScope",
-  "version": "0.15.2",
+  "version": "0.16.0",
   "shared": {
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "modules": [
     {
@@ -10,7 +10,7 @@
       "code": "AIR",
       "name": "Airspace",
       "status": "live",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "path": "air/",
       "description": {
         "en": "Live aviation radar: what is flying above you, what passes over next, what is worth a look.",
@@ -22,11 +22,11 @@
       "code": "INTEL",
       "name": "Intelligence feed",
       "status": "live",
-      "version": "0.10.2",
+      "version": "0.11.0",
       "path": "intel/",
       "description": {
-        "en": "OSINT posts and defence news from verified sources, matched to aircraft in the air right now.",
-        "de": "OSINT-Beiträge und Verteidigungsnachrichten aus geprüften Quellen, abgeglichen mit Flugzeugen, die gerade in der Luft sind."
+        "en": "Security and politics from 194 verified sources: what happened, who confirms it, who says what, matched to aircraft in the air right now.",
+        "de": "Sicherheit und Politik aus 194 geprüften Quellen: was passiert ist, wer es bestätigt, wer was sagt, abgeglichen mit Flugzeugen, die gerade in der Luft sind."
       }
     }
   ]

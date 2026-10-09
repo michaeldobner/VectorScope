@@ -65,6 +65,7 @@ export function App() {
         }}
       />
       <MapControls onRecenter={() => setRecenter((n) => n + 1)} />
+      {!pickMode && <AreaHint onBack={() => setRecenter((n) => n + 1)} />}
       {pickMode && (
         <div className="pick-hint">
           Tap the map to set your location <button onClick={() => setPickMode(false)}>Cancel</button>
@@ -287,6 +288,26 @@ function Search() {
           ))}
         </div>
       )}
+    </div>
+  );
+}
+
+/** The map shows somewhere else: AIR loads the traffic there too and says so, with the way back. */
+function AreaHint({ onBack }: { onBack: () => void }) {
+  const area = useTraffic().area;
+  if (!area) return null;
+  const dist = area.distKm >= 100 ? `${Math.round(area.distKm).toLocaleString('en')} km` : `${area.distKm.toFixed(0)} km`;
+  return (
+    <div className="area-hint" role="status">
+      <span>
+        {area.loading
+          ? 'Loading traffic here …'
+          : area.count == null
+            ? 'Traffic here could not be loaded'
+            : `${area.count} aircraft around the map centre`}
+        <span className="muted"> · {dist} from you</span>
+      </span>
+      <button onClick={onBack}>◎ Back</button>
     </div>
   );
 }

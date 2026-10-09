@@ -52,4 +52,4 @@ A repository check keeps `tokens.css` identical to the Graphite theme in `air/sr
 
 ## Version
 
-Current version: **1.0.0**. See the [changelog](CHANGELOG.md).
+Current version: **1.1.0**. See the [changelog](CHANGELOG.md).
