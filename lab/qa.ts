@@ -72,7 +72,7 @@ const collector = await fetch('https://raw.githubusercontent.com/michaeldobner/V
   .then((r) => r.json())
   .catch(() => ({ items: [] as Item[] }));
 const day = (collector.items as Item[]).filter((i) => Date.now() - i.time < 24 * 3600_000);
-const volume: { target: Target; texts: number; chars: number; translated: number; refused: number; ms: number }[] = [];
+const volume: { target: Target; texts: number; chars: number; translated: number; refused: number; ms: number; examples: string[] }[] = [];
 for (const target of TARGETS) {
   const texts = [...new Set(day.flatMap((i) => textsOf(i, target)))];
   const sample = texts.slice(0, 150);
@@ -85,6 +85,8 @@ for (const target of TARGETS) {
     translated: out.filter((x, i) => x && x !== sample[i]).length,
     refused: out.filter((x, i) => !x || x === sample[i]).length,
     ms: Date.now() - t,
+    // What came back untouched or not at all: a refusal of Google, or a text that needs no translation (names, numbers).
+    examples: sample.filter((x, i) => !out[i] || out[i] === x).slice(0, 8).map((x, i) => `${x.slice(0, 90)} => ${out[sample.indexOf(x)] == null ? 'null' : 'unchanged'}`),
   });
 }
 
@@ -121,6 +123,8 @@ const lines = [
   '| Target | Texts a day | Characters a day | Sample translated | Refused | ms |',
   '|---|---|---|---|---|---|',
   ...volume.map((v) => `| ${v.target} | ${v.texts} | ${v.chars} | ${v.translated} | ${v.refused} | ${v.ms} |`),
+  '',
+  ...volume.flatMap((v) => [`Not translated into ${v.target}:`, '', ...v.examples.map((e) => `* ${e.replace(/\|/g, '/')}`), '']),
 ];
 writeFileSync(`${OUT}/qa.md`, lines.join('\n') + '\n');
 writeFileSync(`${OUT}/qa.json`, JSON.stringify({ rounds, burst, translation, googleDirect, volume }, null, 2));
