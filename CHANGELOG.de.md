@@ -4,6 +4,12 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.15.1 (2026-10-09)
+
+### Behoben
+* Übersetzung im Sammler: in Portionen von 20 Texten mit Pause, eine Runde stoppt, sobald Google eine ganze Portion ablehnt, ein abgelehnter Text wird nach 10 Minuten erneut angefragt, danach jeweils dreimal später, nie aufgegeben, solange seine Meldung aktuell ist. Im Labor wurde ein zweiter Durchlauf direkt danach für die Hälfte der Texte abgelehnt.
+* Modul INTEL 0.10.1.
+
 ## 0.15.0 (2026-10-09)
 
 ### Neu

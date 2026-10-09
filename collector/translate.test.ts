@@ -11,7 +11,7 @@ describe('translation in the collector', () => {
     expect(textsOf(item('Luftwaffe verlegt Eurofighter nach Rumänien', '', 'demo-de'), 'en')).toEqual(['Luftwaffe verlegt Eurofighter nach Rumänien']);
   });
 
-  it('translates once, keeps refusals for a later round and attaches the result', async () => {
+  it('translates once, asks a refused text again later and attaches the result', async () => {
     const cache: TrCache = {};
     const calls: string[][] = [];
     const translate = async (texts: string[], to: string) => {
@@ -19,12 +19,24 @@ describe('translation in the collector', () => {
       return texts.map((t) => (t.includes('НПЗ') ? `[${to}] ${t}` : null));
     };
     const items = [item('Взрыв в Воронеже, горит НПЗ', 'Очевидцы сообщают о взрыве на заводе.')];
-    const first = await translateMissing(items, cache, { now: 1, translate });
+    const first = await translateMissing(items, cache, { now: 1, translate, pauseMs: 0 });
     expect(first).toMatchObject({ translated: 2, refused: 2 });
-    const second = await translateMissing(items, cache, { now: 2, translate });
-    // Only the refused excerpt is asked again, in both languages.
-    expect(second.translated + second.refused).toBe(2);
-    expect(withTranslations(items[0], cache).tr).toEqual({ en: { title: '[en] Взрыв в Воронеже, горит НПЗ' }, de: { title: '[de] Взрыв в Воронеже, горит НПЗ' } });
+    // Ten minutes later, not before, the refused excerpt is asked again, in both languages.
+    await translateMissing(items, cache, { now: 2, translate, pauseMs: 0 });
+    expect(calls).toHaveLength(2);
+    await translateMissing(items, cache, { now: 1 + 10 * 60_000, translate, pauseMs: 0 });
     expect(calls).toHaveLength(4);
+    expect(withTranslations(items[0], cache).tr).toEqual({ en: { title: '[en] Взрыв в Воронеже, горит НПЗ' }, de: { title: '[de] Взрыв в Воронеже, горит НПЗ' } });
+  });
+
+  it('stops the round when Google refuses a whole slice, without counting it as tried', async () => {
+    const cache: TrCache = {};
+    let calls = 0;
+    const refuse = async (texts: string[]) => (calls++, texts.map(() => null));
+    const items = Array.from({ length: 50 }, (_, i) => item(`Взрыв номер ${i} в Воронеже`));
+    const r = await translateMissing(items, cache, { now: 1, translate: refuse, pauseMs: 0 });
+    expect(calls).toBe(2);
+    expect(r.refused).toBe(40);
+    expect(Object.keys(cache)).toHaveLength(0);
   });
 });

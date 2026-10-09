@@ -22,7 +22,7 @@ The script is `collector/collect.ts`. It uses the same loaders, parsers and merg
 | File | Contents | Used by |
 |---|---|---|
 | `latest.json` | Reports of the last 72 hours, excerpts shortened, with their translations in `tr.en` and `tr.de` | INTEL in the browser |
-| `translations.json` | Every headline and excerpt with its English and German translation, kept 30 days. Up to 150 new texts per language and round, newest first, refused texts are asked again up to three times. `TRANSLATE=0` turns it off | The collector itself |
+| `translations.json` | Every headline and excerpt with its English and German translation, kept 30 days. Up to 150 new texts per language and round, newest first, in slices of 20 with a pause. A round stops when Google refuses a whole slice. A refused text is asked again after 10 minutes, then three times longer each time, at most every 12 hours. `TRANSLATE=0` turns it off | The collector itself |
 | `archive.json` | Every report of the last 7 days | Evaluation |
 | `stats.json` | One record per round: per source ok, number of reports, new reports of the last 24 hours, error | Evaluation, checks |
 | `health.json` | Checks after every round: failing and silent sources, gaps, reports that break an assumption | Monitoring |

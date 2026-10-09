@@ -4,6 +4,7 @@ import { CAPITALS, DECISION, actorById, capitalsOf, type CapitalId } from './dat
 import { bridgesFor } from './data/bridges';
 import { storyInLens } from './data/lens';
 import { KIND_LABEL } from './data/kinds';
+import { clip } from './data/text';
 import type { ReportLang } from './data/lang';
 import { isStrong } from './data/match';
 import { PARTIES, PARTY_ORDER, memberParty, shortName, type PartyId } from './data/parties';
@@ -413,7 +414,8 @@ function AlertsList({ st }: { st: IntelState }) {
           <li key={i.id} className="alert">
             <span className="age">{clock(i.time)}</span>
             <a href={i.url} target="_blank" rel="noopener noreferrer">
-              {tr(i.text ? `${i.title} ${i.text}` : i.title, i.sourceId)}
+              {tr(i.title, i.sourceId)}
+              {i.text ? ` ${tr(i.text, i.sourceId)}` : ''}
             </a>
           </li>
         ))}
@@ -471,7 +473,8 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
           <a className="original-quote" href={original.url} target="_blank" rel="noopener noreferrer">
             {tr(original.title, original.sourceId)}
           </a>
-          {original.text && <p>{tr(original.text.length > 260 ? `${original.text.slice(0, 260)} …` : original.text, original.sourceId)}</p>}
+          {/* Translated whole, then shortened: the translations of the collector belong to the whole excerpt. */}
+          {original.text && <p>{clip(tr(original.text, original.sourceId), 260)}</p>}
         </div>
       )}
       {lead.text && story.sources.length === 1 && !original && <p className="item-text">{tr(lead.text, lead.sourceId)}</p>}

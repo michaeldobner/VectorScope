@@ -5,9 +5,8 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { PROXY, loadSource, pool } from '../intel/src/data/feed';
 import { SOURCES } from '../intel/src/data/sources';
 import type { Item } from '../intel/src/data/types';
-import { TARGETS, type Target } from '../intel/src/data/lang';
-import { translateAll } from '../proxy/lib/translate.js';
-import { textsOf } from '../collector/translate';
+import { TARGETS } from '../intel/src/data/lang';
+import { textsOf, translateMissing, type TrCache } from '../collector/translate';
 
 const OUT = 'lab-out';
 mkdirSync(OUT, { recursive: true });
@@ -72,23 +71,19 @@ const collector = await fetch('https://raw.githubusercontent.com/michaeldobner/V
   .then((r) => r.json())
   .catch(() => ({ items: [] as Item[] }));
 const day = (collector.items as Item[]).filter((i) => Date.now() - i.time < 24 * 3600_000);
-const volume: { target: Target; texts: number; chars: number; translated: number; refused: number; ms: number; examples: string[] }[] = [];
-for (const target of TARGETS) {
+const volume = TARGETS.map((target) => {
   const texts = [...new Set(day.flatMap((i) => textsOf(i, target)))];
-  const sample = texts.slice(0, 150);
-  const t = Date.now();
-  const out = await translateAll(sample, target).catch(() => sample.map(() => null));
-  volume.push({
-    target,
-    texts: texts.length,
-    chars: texts.reduce((n, x) => n + x.length, 0),
-    translated: out.filter((x, i) => x && x !== sample[i]).length,
-    refused: out.filter((x, i) => !x || x === sample[i]).length,
-    ms: Date.now() - t,
-    // What came back untouched or not at all: a refusal of Google, or a text that needs no translation (names, numbers).
-    examples: sample.filter((x, i) => !out[i] || out[i] === x).slice(0, 8).map((x, i) => `${x.slice(0, 90)} => ${out[sample.indexOf(x)] == null ? 'null' : 'unchanged'}`),
-  });
-}
+  return { target, texts: texts.length, chars: texts.reduce((n, x) => n + x.length, 0) };
+});
+// One round exactly like the collector: 150 texts per language in slices of 20 with a pause.
+const trCache: TrCache = {};
+const trStart = Date.now();
+const trRound = await translateMissing(day, trCache, { now: Date.now() });
+const trMs = Date.now() - trStart;
+const untouched = Object.entries(trCache)
+  .filter(([, v]) => v.tries)
+  .slice(0, 8)
+  .map(([k, v]) => `${k.slice(0, 90)} (${Object.keys(v.tries ?? {}).join(', ')})`);
 
 const lines = [
   `# QA ${new Date().toISOString()}`,
@@ -120,12 +115,16 @@ const lines = [
   '',
   `## Translation in the collector, ${day.length} reports of the last 24 hours`,
   '',
-  '| Target | Texts a day | Characters a day | Sample translated | Refused | ms |',
-  '|---|---|---|---|---|---|',
-  ...volume.map((v) => `| ${v.target} | ${v.texts} | ${v.chars} | ${v.translated} | ${v.refused} | ${v.ms} |`),
+  '| Target | Texts a day | Characters a day |',
+  '|---|---|---|',
+  ...volume.map((v) => `| ${v.target} | ${v.texts} | ${v.chars} |`),
   '',
-  ...volume.flatMap((v) => [`Not translated into ${v.target}:`, '', ...v.examples.map((e) => `* ${e.replace(/\|/g, '/')}`), '']),
+  `One round like the collector: ${trRound.translated} translated, ${trRound.refused} refused, ${trRound.waiting} waiting for the next round, ${trMs} ms.`,
+  '',
+  'Came back untouched (a refusal, or nothing to translate):',
+  '',
+  ...untouched.map((e) => `* ${e.replace(/\|/g, '/')}`),
 ];
 writeFileSync(`${OUT}/qa.md`, lines.join('\n') + '\n');
-writeFileSync(`${OUT}/qa.json`, JSON.stringify({ rounds, burst, translation, googleDirect, volume }, null, 2));
+writeFileSync(`${OUT}/qa.json`, JSON.stringify({ rounds, burst, translation, googleDirect, volume, trRound }, null, 2));
 console.log(lines.slice(0, 5).join('\n'));

@@ -4,6 +4,12 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.15.1 (2026-10-09)
+
+### Fixed
+* Translation in the collector: in slices of 20 texts with a pause, a round stops as soon as Google refuses a whole slice, a refused text is asked again after 10 minutes, then three times longer each time, never given up while its report is recent. In the lab a second run in a row was refused for half the texts.
+* Module INTEL 0.10.1.
+
 ## 0.15.0 (2026-10-09)
 
 ### Added

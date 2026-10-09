@@ -4,6 +4,12 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.10.1 (2026-10-09)
+
+### Behoben
+* Die Übersetzung schaltete nicht überall um: Luftalarme setzten Überschrift und Auszug zusammen, die Originalaussage wurde vor dem Übersetzen gekürzt, so passten die Übersetzungen des Sammlers nicht. Beides wird jetzt übersetzt, wie es ist.
+* Ein Text, den Google dreimal ablehnte, blieb die ganze Sitzung im Original. Ablehnungen werden jetzt alle 15 Minuten vergessen.
+
 ## 0.10.0 (2026-10-09)
 
 ### Neu

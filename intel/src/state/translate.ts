@@ -32,6 +32,8 @@ try {
 
 const queues: Record<Target, Set<string>> = { en: new Set(), de: new Set() };
 const tries = new Map<string, number>();
+// Refusals are forgotten every 15 minutes: a text Google refused three times is asked again later, never given up.
+if (typeof window !== 'undefined') setInterval(() => tries.clear(), 15 * 60_000);
 let timer: ReturnType<typeof setTimeout> | null = null;
 let busy = false;
 let pauseMs = 0;

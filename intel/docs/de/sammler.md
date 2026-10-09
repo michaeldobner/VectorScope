@@ -22,7 +22,7 @@ Das Skript ist `collector/collect.ts`. Es nutzt dieselben Lade-, Lese- und Zusam
 | Datei | Inhalt | Genutzt von |
 |---|---|---|
 | `latest.json` | Meldungen der letzten 72 Stunden, Auszüge gekürzt, mit ihren Übersetzungen in `tr.en` und `tr.de` | INTEL im Browser |
-| `translations.json` | Jede Überschrift und jeder Auszug mit englischer und deutscher Übersetzung, 30 Tage aufbewahrt. Bis zu 150 neue Texte pro Sprache und Runde, die neuesten zuerst, abgelehnte Texte werden bis zu dreimal erneut angefragt. `TRANSLATE=0` schaltet es ab | Der Sammler selbst |
+| `translations.json` | Jede Überschrift und jeder Auszug mit englischer und deutscher Übersetzung, 30 Tage aufbewahrt. Bis zu 150 neue Texte pro Sprache und Runde, die neuesten zuerst, in Portionen von 20 mit Pause. Eine Runde stoppt, wenn Google eine ganze Portion ablehnt. Ein abgelehnter Text wird nach 10 Minuten erneut angefragt, danach jeweils dreimal später, höchstens alle 12 Stunden. `TRANSLATE=0` schaltet es ab | Der Sammler selbst |
 | `archive.json` | Jede Meldung der letzten 7 Tage | Auswertung |
 | `stats.json` | Ein Eintrag pro Runde: je Quelle ok, Zahl der Meldungen, neue Meldungen der letzten 24 Stunden, Fehler | Auswertung, Prüfungen |
 | `health.json` | Prüfungen nach jeder Runde: ausgefallene und stille Quellen, Lücken, Meldungen, die eine Annahme verletzen | Überwachung |

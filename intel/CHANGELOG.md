@@ -4,6 +4,12 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.10.1 (2026-10-09)
+
+### Fixed
+* Translation did not switch everywhere: air alerts joined headline and excerpt and the original statement was shortened before translating, so the translations of the collector did not fit. Both are translated as they are now.
+* A text Google refused three times stayed in the original for the whole session. Refusals are now forgotten every 15 minutes.
+
 ## 0.10.0 (2026-10-09)
 
 ### Added
