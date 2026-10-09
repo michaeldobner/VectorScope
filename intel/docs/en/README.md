@@ -7,6 +7,7 @@ This documentation describes module INTEL: how to use it, which sources it reads
 | Document | Contents | Audience |
 |---|---|---|
 | [User guide](user-guide.md) | Views, filters, live matches, places, sources, new posts | Everyone |
+| [Benchmark of Now](benchmark.md) | How well Now picks the main stories: the reference of Tagesschau, ntv and Spiegel, Recall@5 and @10 | Development |
 | [Stories](stories.md) | Tiers of the sources, status of a story, grouping, lead time | Everyone |
 | [Sensor and map](sensor.md) | Own observations in live flight data: air activity, emergencies, the situation map | Everyone |
 | [Sources](sources.md) | The 194 verified sources, the check, rejected candidates | Everyone |

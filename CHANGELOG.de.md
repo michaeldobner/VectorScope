@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.19.0 (2026-10-09)
+
+### Neu
+* **Messlatte für Now:** Einmal pro Stunde legt der Sammler die ersten zehn Überschriften von Tagesschau, ntv und Spiegel ab (`collector/reference.ts`). `collector/benchmark.ts` rechnet Now für jede Stunde neu und misst Recall@5 und @10 der Themen, bei denen sich zwei Redaktionen einig sind. Das Test-Labor misst täglich und nach jeder Änderung an der Datenlogik. Siehe [Messlatte für Now](intel/docs/de/messlatte.md).
+
 ## 0.18.0 (2026-10-09)
 
 ### Geändert

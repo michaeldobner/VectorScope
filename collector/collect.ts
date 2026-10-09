@@ -10,6 +10,7 @@
 //   stats.json       one record per round: per source ok, items, new items, error
 //   health.json      checks: failing or silent sources, reports that break an assumption
 //   raw-state.json   which raw units are known, with their fingerprint
+//   reference.json   once an hour the top headlines of Tagesschau, ntv and Spiegel, for collector/benchmark.ts
 //   translations.json  every headline and excerpt in English and German, see translate.ts (TRANSLATE=0 turns it off)
 // Raw folder (published on the branch collector-raw, only grows): raw/YYYY/MM/DD/HHMM.jsonl.gz,
 // every answer of every source split into units, new or changed units only. See intel/docs/en/raw-data.md
@@ -20,6 +21,7 @@ import { writeLegacy, writeRawRound } from './archive-raw';
 import { checkHealth, healthMarkdown, type RunRecord } from './checks';
 import { storeRound } from './store';
 import { translateMissing, withTranslations, type TrCache } from './translate';
+import { takeSnapshot, type ReferenceFile } from './reference';
 import { detectAll } from '../intel/src/data/sensor';
 import { SOURCES } from '../intel/src/data/sources';
 import { clip } from '../intel/src/data/text';
@@ -87,6 +89,18 @@ if (process.env.TRANSLATE !== '0') {
 }
 const latest = recent.map((i) => withTranslations({ ...i, text: clip(i.text, 300) }, translations));
 writeFileSync(join(DIR, 'latest.json'), JSON.stringify({ at: now, items: latest }));
+
+// Reference for the benchmark of Now (benchmark.ts): once an hour the top headlines of Tagesschau, ntv and Spiegel.
+const reference = read<ReferenceFile>('reference.json', { snapshots: [] });
+const snap = await takeSnapshot(reference, now, async (url) => {
+  const r = await fetch(url, { headers: { 'User-Agent': 'VectorScope-collector/0.1 (+https://github.com/michaeldobner/VectorScope)' }, signal: AbortSignal.timeout(20_000) });
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  return r.text();
+}).catch(() => null);
+if (snap) {
+  writeFileSync(join(DIR, 'reference.json'), JSON.stringify(reference));
+  console.log(`Reference: ${Object.entries(snap.top).map(([k, v]) => `${k} ${v!.length}`).join(', ')}`);
+}
 stats.runs = [...stats.runs.filter((r) => now - r.at < 8 * DAY), run];
 writeFileSync(join(DIR, 'stats.json'), JSON.stringify(stats));
 

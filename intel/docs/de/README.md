@@ -7,6 +7,7 @@ Diese Dokumentation beschreibt das Modul INTEL: die Bedienung, welche Quellen es
 | Dokument | Inhalt | Zielgruppe |
 |---|---|---|
 | [Bedienung](bedienung.md) | Ansichten, Filter, Live-Treffer, Orte, Quellen, neue Beiträge | Alle |
+| [Messlatte für Now](messlatte.md) | Wie gut Now die Hauptmeldungen wählt: die Referenz aus Tagesschau, ntv und Spiegel, Recall@5 und @10 | Entwicklung |
 | [Stories](stories.md) | Stufen der Quellen, Status einer Story, Bündelung, Vorsprung | Alle |
 | [Sensor und Karte](sensor.md) | Eigene Beobachtungen in den Live-Flugdaten: Luftaktivität, Notfälle, Lagekarte | Alle |
 | [Quellen](quellen.md) | Die 194 geprüften Quellen, die Prüfung, verworfene Kandidaten | Alle |

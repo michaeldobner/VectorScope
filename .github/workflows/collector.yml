@@ -54,7 +54,7 @@ jobs:
         run: |
           mkdir -p data
           if git fetch --depth=1 origin collector-data; then
-            for f in archive.json stats.json translations.json; do git show "FETCH_HEAD:$f" > "data/$f" 2>/dev/null || rm -f "data/$f"; done
+            for f in archive.json stats.json translations.json reference.json; do git show "FETCH_HEAD:$f" > "data/$f" 2>/dev/null || rm -f "data/$f"; done
           fi
       - name: Collect and publish every round
         if: steps.gate.outputs.run == 'yes'

@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.19.0 (2026-10-09)
+
+### Added
+* **Benchmark of Now:** once an hour the collector stores the top ten headlines of Tagesschau, ntv and Spiegel (`collector/reference.ts`). `collector/benchmark.ts` computes Now again for every hour and measures Recall@5 and @10 of the topics two newsrooms agree on. The test lab runs it daily and after every change to the data logic. See [Benchmark of Now](intel/docs/en/benchmark.md).
+
 ## 0.18.0 (2026-10-09)
 
 ### Changed

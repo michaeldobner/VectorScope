@@ -4,9 +4,13 @@ name: Lab
 # Results are pushed to the branch "lab-results".
 on:
   workflow_dispatch:
+  # Once a day for the benchmark of Now, so its trend is measured even without a change.
+  schedule:
+    - cron: '17 6 * * *'
   push:
     branches: [main]
-    paths: ['air/**', 'shared/**', 'lab/**', 'proxy/**', '.github/workflows/lab.yml']
+    # INTEL's data logic and the collector too: every change to the ranking of Now is measured.
+    paths: ['air/**', 'shared/**', 'lab/**', 'proxy/**', 'intel/src/data/**', 'collector/**', '.github/workflows/lab.yml']
 
 permissions:
   contents: write
@@ -41,6 +45,7 @@ jobs:
           node lab/reference.mjs || true
           LAB_SKIP_BLUESKY=1 node lab/osint.mjs || true
           npx tsx lab/qa.ts || true
+          npx tsx collector/benchmark.ts https://raw.githubusercontent.com/michaeldobner/VectorScope/collector-data lab-out || true
       - name: Publish results to branch lab-results
         run: |
           cd lab-out
