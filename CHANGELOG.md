@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.17.0 (2026-10-09)
+
+### Added
+* Module INTEL 0.12.0 with the overview Now, see its changelog.
+
 ## 0.16.0 (2026-10-09)
 
 ### Added

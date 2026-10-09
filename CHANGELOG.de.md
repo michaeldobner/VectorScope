@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.17.0 (2026-10-09)
+
+### Neu
+* Modul INTEL 0.12.0 mit dem Überblick Now, siehe sein Changelog.
+
 ## 0.16.0 (2026-10-09)
 
 ### Neu

@@ -123,3 +123,40 @@ describe('bridges', () => {
     expect([...bridgesFor(security, stories, 'security').values()].flat()).toHaveLength(0);
   });
 });
+
+describe('now', () => {
+  it('puts confirmed, severe and original stories on top and fast single channels in the ticker', async () => {
+    const { headlines, earlyReports } = await import('./headlines');
+    const { buildStories } = await import('./stories');
+    const { lensesOf } = await import('./lens');
+    const { demoItems } = await import('./demo');
+    const now = Date.parse('2026-10-08T12:00:00Z');
+    const items = demoItems(now).map((i) => {
+      const entities = extractEntities(`${i.title}\n${i.text}`);
+      return { ...i, entities, matches: [], lens: lensesOf(i, `${i.title}\n${i.text}`, entities) };
+    });
+    const stories = buildStories(items);
+    const top = headlines(stories, now);
+    expect(top).toHaveLength(5);
+    expect(top[0].story.lead.title).toMatch(/Voronezh/);
+    expect(top[0].why).toContain('severe');
+    expect(top.some((h) => h.why.some((w) => w.endsWith('in the original')))).toBe(true);
+    expect(top.every((h) => h.story.status !== 'signal')).toBe(true);
+    const early = earlyReports(stories, now, new Set(top.map((h) => h.story.id)));
+    expect(early.map((e) => e.story.lead.title).join(' | ')).toMatch(/Odesa/);
+    expect(early.find((e) => /Rzesz/.test(e.story.lead.title))?.why).toBe('2 channels within 15 min');
+  });
+
+  it('lets a story fade: the same story three hours later weighs half', async () => {
+    const { weigh } = await import('./headlines');
+    const { buildStories } = await import('./stories');
+    const { demoItems } = await import('./demo');
+    const now = Date.parse('2026-10-08T12:00:00Z');
+    const items = demoItems(now).map((i) => ({ ...i, entities: extractEntities(`${i.title}\n${i.text}`), matches: [], lens: { security: true as const } }));
+    const s = buildStories(items).find((x) => /Voronezh/.test(x.lead.title))!;
+    // Growth counts reports of the last hour, so compare two moments when it no longer grows.
+    const later = s.last + 2 * 3600_000;
+    expect(weigh(s, later + 3 * 3600_000).score / weigh(s, later).score).toBeCloseTo(0.5, 5);
+    expect(weigh(s, s.last + 25 * 3600_000).score).toBe(0);
+  });
+});

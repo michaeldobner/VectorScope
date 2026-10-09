@@ -37,7 +37,8 @@ export interface Prefs {
   /** Politics lens: only stories with an original statement or at least two independent sources. */
   signal: boolean;
   pulse: Pulse;
-  /** Show headlines and excerpts in German. */
+  /** Now: the five main stories of both lenses and the early ticker. The app always starts there. */
+  now: boolean;
   /** Reports as they came, all in English or all in German. The interface stays English. */
   reports: ReportLang;
   filter: Filter;
@@ -87,7 +88,7 @@ function writeJson(key: string, value: unknown) {
 
 const storedPrefs = readJson<Partial<Prefs> & { german?: boolean }>(PREFS_KEY);
 const { german: wasGerman, ...kept } = storedPrefs ?? {};
-const prefs: Prefs = { view: 'stories', lens: 'security', actor: null, signal: true, pulse: null, reports: wasGerman ? 'de' : 'original', filter: 'all', place: null, lastSeen: 0, ...kept };
+const prefs: Prefs = { view: 'stories', lens: 'security', actor: null, signal: true, pulse: null, reports: wasGerman ? 'de' : 'original', filter: 'all', place: null, lastSeen: 0, ...kept, now: true };
 // The switch DE of earlier versions becomes the choice German.
 if (!['original', 'en', 'de'].includes(prefs.reports)) prefs.reports = 'original';
 // Filters of earlier versions ("aviation", "breaking") become "all".

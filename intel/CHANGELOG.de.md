@@ -4,6 +4,12 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.12.0 (2026-10-09)
+
+### Neu
+* **Now:** INTEL öffnet mit einem Überblick über beide Linsen. Die fünf Hauptmeldungen, gewichtet nach Bestätigung, Originalaussagen, Staats- und Regierungschefs, Schwere, Entscheidungen, Wachstum und Live-Flugzeugen, alle drei Stunden zur Hälfte verblassend, jede mit Linse und Grund. Darunter **⚡ Early, unconfirmed**: schnelle oder schwere Meldungen, die nur frühe oder parteiische Kanäle tragen. Eine Zeile sagt, wie viele Hauptmeldungen seit dem letzten Besuch neu sind.
+* Der Schalter oben: ◉ Now, ⚔ Security, 🏛 Politics.
+
 ## 0.11.0 (2026-10-09)
 
 ### Neu

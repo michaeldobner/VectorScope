@@ -69,6 +69,10 @@ for (const [name, device] of DEVICES) {
     .then(() => true)
     .catch(() => false);
   check(items, 'INTEL shows no items in demo mode');
+  // INTEL opens with Now: main stories with their reason, and the early ticker.
+  check((await page.locator('.headline-why').count()) === 5, 'INTEL Now does not show five main stories');
+  check((await page.locator('.early li').count()) > 0, 'INTEL Now shows no early report in demo mode');
+  await page.getByRole('tab', { name: 'Security' }).click();
   check((await page.locator('.live-row').count()) > 0, 'INTEL shows no live match in demo mode');
   for (const status of ['signal', 'emerging', 'reported', 'confirmed']) check((await page.locator(`.status-chip.s-${status}`).count()) > 0, `INTEL shows no story with status ${status}`);
   await page.locator('.pulse button').nth(1).click();

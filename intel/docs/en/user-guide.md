@@ -15,6 +15,16 @@ The logo at the top left leads back to the VectorScope hub. The status shows **L
 
 The magnifier opens a search field above the filters. Stories and Wire then show only reports that contain every word you type, in the headline, the excerpt, the name of the source, a translation, a named place, actor or member of the Bundestag. Lens and filters still apply. ✕ or Escape close the search and clear it. The search is not remembered.
 
+## Now
+
+INTEL opens with **◉ Now**, the first place of the switch next to Security and Politics. Now is no topic but the overview across both lenses:
+
+* **The main stories:** the five heaviest stories of both lenses, each with ⚔ Security or 🏛 Politics (a tap opens that lens) and why it is there, for example "EU Commission in the original · growing". The weight comes from the status and the number of independent sources, an original statement, heads of state and government, a severe event with a place (attack, explosion, crash, people killed) or a decision, new reports in the last hour and live aircraft named in it. It halves every three hours without new reports, after a day a story is out. Single unverified posts are never main stories.
+* **⚡ Early, unconfirmed:** stories of the last two hours carried only by early or partisan sources, when two channels report the same within 15 minutes or one reports a severe event with a place. Dashed, with source and perspective. When a source confirms them, they can rise into the main stories.
+* **Since your last visit:** how many of the main stories are new.
+
+On a phone the tabs in Now are Now, Live and Sources, filters do not apply. The search switches to the lens views. Code: `src/data/headlines.ts`.
+
 ## Lenses: Security and Politics
 
 Below the top bar a switch chooses the lens. Stories, Wire and Map stay the same views, they show the reports of the lens.

@@ -15,6 +15,16 @@ Das Logo oben links führt zurück zur VectorScope-Startseite. Der Status zeigt 
 
 Die Lupe öffnet ein Suchfeld über den Filtern. Stories und Wire zeigen dann nur Meldungen, die jedes eingegebene Wort enthalten, in Überschrift, Auszug, Name der Quelle, einer Übersetzung, einem genannten Ort, Akteur oder Bundestagsabgeordneten. Linse und Filter gelten weiter. ✕ oder Escape schließen die Suche und leeren sie. Die Suche wird nicht gespeichert.
 
+## Now
+
+INTEL öffnet mit **◉ Now**, dem ersten Platz des Schalters neben Security und Politics. Now ist kein Thema, sondern der Überblick über beide Linsen:
+
+* **Die Hauptmeldungen:** die fünf gewichtigsten Stories beider Linsen, jede mit ⚔ Security oder 🏛 Politics (ein Tipp öffnet diese Linse) und dem Grund, warum sie oben steht, etwa „EU Commission in the original · growing“. Das Gewicht kommt aus Status und Zahl unabhängiger Quellen, einer Originalaussage, Staats- und Regierungschefs, einem schweren Ereignis mit Ort (Angriff, Explosion, Absturz, Tote) oder einer Entscheidung, neuen Meldungen der letzten Stunde und darin genannten Live-Flugzeugen. Es halbiert sich alle drei Stunden ohne neue Meldung, nach einem Tag ist eine Story draußen. Einzelne ungeprüfte Beiträge sind nie Hauptmeldung.
+* **⚡ Early, unconfirmed:** Stories der letzten zwei Stunden, die nur frühe oder parteiische Quellen tragen, wenn zwei Kanäle dasselbe innerhalb von 15 Minuten melden oder einer ein schweres Ereignis mit Ort. Gestrichelt, mit Quelle und Perspektive. Bestätigt eine Quelle sie, können sie in die Hauptmeldungen aufsteigen.
+* **Since your last visit:** wie viele der Hauptmeldungen neu sind.
+
+Am Handy sind die Reiter in Now: Now, Live und Sources, Filter gelten dort nicht. Die Suche wechselt in die Linsen-Ansichten. Code: `src/data/headlines.ts`.
+
 ## Linsen: Security und Politics
 
 Unter der oberen Leiste wählt ein Umschalter die Linse. Stories, Wire und Map bleiben dieselben Ansichten, sie zeigen die Meldungen der Linse.

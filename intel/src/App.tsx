@@ -2,6 +2,7 @@ import { Suspense, lazy, useEffect, useMemo, useRef, useState, type CSSPropertie
 import type { Aircraft } from '../../air/src/data/types';
 import { CAPITALS, DECISION, actorById, capitalsOf, type CapitalId } from './data/actors';
 import { bridgesFor } from './data/bridges';
+import { earlyReports, headlines, type Headline } from './data/headlines';
 import { storyInLens } from './data/lens';
 import { KIND_LABEL } from './data/kinds';
 import { clip } from './data/text';
@@ -106,22 +107,30 @@ export function App() {
         searching={searching}
         onSearch={() => {
           if (searching) setQuery('');
-          else setTab('main');
+          else (setTab('main'), st.prefs.now && setPrefs({ now: false }));
           setSearching(!searching);
         }}
       />
       {wide && <LensSwitch st={st} />}
       {!wide && (
         <nav className="tabs" aria-label="Views">
-          <button className={tab === 'main' && view === 'stories' ? 'on' : ''} onClick={() => (setTab('main'), setPrefs({ view: 'stories' }))}>
-            Stories
-          </button>
-          <button className={tab === 'main' && view === 'wire' ? 'on' : ''} onClick={() => (setTab('main'), setPrefs({ view: 'wire' }))}>
-            Wire
-          </button>
-          <button className={tab === 'main' && view === 'map' ? 'on' : ''} onClick={() => (setTab('main'), setPrefs({ view: 'map' }))}>
-            Map
-          </button>
+          {st.prefs.now ? (
+            <button className={tab === 'main' ? 'on' : ''} onClick={() => setTab('main')}>
+              Now
+            </button>
+          ) : (
+            <>
+              <button className={tab === 'main' && view === 'stories' ? 'on' : ''} onClick={() => (setTab('main'), setPrefs({ view: 'stories' }))}>
+                Stories
+              </button>
+              <button className={tab === 'main' && view === 'wire' ? 'on' : ''} onClick={() => (setTab('main'), setPrefs({ view: 'wire' }))}>
+                Wire
+              </button>
+              <button className={tab === 'main' && view === 'map' ? 'on' : ''} onClick={() => (setTab('main'), setPrefs({ view: 'map' }))}>
+                Map
+              </button>
+            </>
+          )}
           <button className={tab === 'live' ? 'on' : ''} onClick={() => setTab('live')}>
             Live {liveMatches(st).length || ''}
           </button>
@@ -133,6 +142,10 @@ export function App() {
       <div className="layout">
         {(wide || tab === 'main') && (
           <main className="feed">
+            {st.prefs.now && !searching ? (
+              <NowView st={st} />
+            ) : (
+            <>
             {wide && (
               <div className="seg" role="tablist">
                 <button className={view === 'stories' ? 'on' : ''} onClick={() => setPrefs({ view: 'stories' })}>
@@ -161,6 +174,8 @@ export function App() {
                 {/* On a phone the places belong to the map, the tab Sources shows sources only. */}
                 {!wide && <PlacesPanel st={st} onPick={() => setPrefs({ view: 'stories' })} />}
               </Suspense>
+            )}
+            </>
             )}
           </main>
         )}
@@ -277,21 +292,22 @@ const voiceOf = (i: EnrichedItem) => sourceById(i.sourceId)?.voice;
 const isSignal = (s: Story) => independentCount(s) >= 2 || s.items.some(voiceOf);
 const inLens = (s: Story, lens: Lens) => storyInLens(s.items, lens);
 
-/** The lens switch. On a phone it sits compact in the top bar, so the stories start higher up. */
+/** Now and the two lenses. On a phone the switch sits compact in the top bar, so the stories start higher up. */
 function LensSwitch({ st, compact }: { st: IntelState; compact?: boolean }) {
-  const lens = st.prefs.lens;
+  const { lens, now } = st.prefs;
   // A new lens starts unfiltered: tiles, topic chips and actor filters of the other lens do not fit.
-  const pick = (l: Lens) => l !== lens && setPrefs({ lens: l, pulse: null, filter: 'all', actor: null, place: null });
+  const pick = (l: Lens) => (now || l !== lens) && setPrefs({ now: false, lens: l, pulse: null, filter: 'all', actor: null, place: null });
+  const tab = (on: boolean, icon: string, label: string, onClick: () => void) => (
+    <button role="tab" aria-selected={on} aria-label={label} className={on ? 'on' : ''} onClick={onClick}>
+      <span aria-hidden>{icon}</span>
+      {!compact || on ? ` ${label}` : ''}
+    </button>
+  );
   return (
     <div className={`lens ${compact ? 'compact' : ''}`} role="tablist" aria-label="Lens">
-      <button role="tab" aria-selected={lens === 'security'} aria-label="Security" className={lens === 'security' ? 'on' : ''} onClick={() => pick('security')}>
-        <span aria-hidden>⚔</span>
-        {compact ? (lens === 'security' ? ' Security' : '') : ' Security'}
-      </button>
-      <button role="tab" aria-selected={lens === 'politics'} aria-label="Politics" className={lens === 'politics' ? 'on' : ''} onClick={() => pick('politics')}>
-        <span aria-hidden>🏛</span>
-        {compact ? (lens === 'politics' ? ' Politics' : '') : ' Politics'}
-      </button>
+      {tab(now, '◉', 'Now', () => setPrefs({ now: true }))}
+      {tab(!now && lens === 'security', '⚔', 'Security', () => pick('security'))}
+      {tab(!now && lens === 'politics', '🏛', 'Politics', () => pick('politics'))}
     </div>
   );
 }
@@ -493,6 +509,56 @@ function Pulse({ st }: { st: IntelState }) {
   );
 }
 
+/** Now: the five main stories of both lenses, below them the early reports nobody confirmed yet. */
+function NowView({ st }: { st: IntelState }) {
+  const tr = useTr();
+  const now = Date.now();
+  const top = useMemo(() => headlines(st.stories, now), [st.stories]);
+  const early = useMemo(() => earlyReports(st.stories, now, new Set(top.map((h) => h.story.id))), [st.stories, top]);
+  if (!st.stories.length) return <Empty st={st} />;
+  const fresh = st.newSince > 0 && !st.demo ? top.filter((h) => h.story.first > st.newSince).length : 0;
+  return (
+    <section className="now">
+      <h2 className="section-title">Now · the main stories</h2>
+      {fresh > 0 && <p className="since">Since your last visit: {fresh === 1 ? '1 new main story' : `${fresh} new main stories`}</p>}
+      <ol className="items">
+        {top.map((h) => (
+          <StoryCard key={h.story.id} story={h.story} st={st} headline={h} />
+        ))}
+      </ol>
+      <h2 className="section-title early-title">⚡ Early, unconfirmed</h2>
+      {early.length ? (
+        <ul className="early">
+          {early.map((e) => {
+            const src = sourceById(e.story.lead.sourceId);
+            return (
+              <li key={e.story.id}>
+                <span className="age">{age(e.story.first)}</span>
+                <span className="early-src">
+                  {sourceName(e.story.lead.sourceId)}
+                  {src?.perspective ? <i> · {src.perspective}</i> : null}
+                </span>
+                <a href={e.story.lead.url} target="_blank" rel="noopener noreferrer">
+                  {tr(e.story.lead.title, e.story.lead.sourceId)}
+                </a>
+                <span className="early-why">
+                  {e.lens === 'security' ? '⚔' : '🏛'} {e.why}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <p className="note">Nothing fast and unconfirmed in the last two hours.</p>
+      )}
+      <p className="note">
+        Main stories: weighed by confirmation, original statements, weight of the actors, severity, growth in the last hour and live aircraft, halving every three hours. Early: only early or partisan
+        sources, two channels within 15 minutes or a severe event with a place. Not confirmed, read with care.
+      </p>
+    </section>
+  );
+}
+
 function StoriesView({ stories: all, st }: { stories: Story[]; st: IntelState }) {
   const stories = useMemo(() => all.filter((s) => pulsePasses(s, st.prefs.pulse, Date.now())), [all, st.prefs.pulse]);
   const { developing, latest } = useMemo(() => rankStories(stories, Date.now()), [stories]);
@@ -559,7 +625,7 @@ const STATUS_HINT: Record<Status, string> = {
   confirmed: 'primary source or leading news medium',
 };
 
-function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridges?: { story: Story; key: string }[] }) {
+function StoryCard({ story, st, bridges, headline }: { story: Story; st: IntelState; bridges?: { story: Story; key: string }[]; headline?: Headline }) {
   const [open, setOpen] = useState(false);
   const [why, setWhy] = useState(false);
   const original = story.items.find(voiceOf);
@@ -571,7 +637,7 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
   const entities = mergeEntities(story.items);
   const tiers = TIER_ORDER.filter((t) => story.tiers[t]);
   const kinds = [...new Set(story.items.map((i) => i.kind).filter((k) => !!k))] as NonNullable<EnrichedItem['kind']>[];
-  const voices = st.prefs.lens === 'politics' ? voicesOf(story.items) : [];
+  const voices = (headline?.lens ?? st.prefs.lens) === 'politics' ? voicesOf(story.items) : [];
   return (
     <li className={`item story status-${story.status} ${strong.length ? 'has-live' : ''}`}>
       <div className="item-meta">
@@ -589,6 +655,19 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
         </button>
         <span className="age">{age(story.last)}</span>
       </div>
+      {headline && (
+        <p className="headline-why">
+          <button
+            className="headline-lens"
+            onClick={() => setPrefs({ now: false, lens: headline.lens, pulse: null, filter: 'all', actor: null, place: null })}
+            title={`Open the ${headline.lens} lens`}
+          >
+            {headline.lens === 'security' ? '⚔ Security' : '🏛 Politics'} ›
+          </button>
+          {/* The number of sources stands in the line above already. */}
+          {headline.why.filter((w) => !w.endsWith(' sources')).length > 0 && <span>{headline.why.filter((w) => !w.endsWith(' sources')).join(' · ')}</span>}
+        </p>
+      )}
       {why && (
         <p className="conf-why">
           <b>{STATUS_LABEL[story.status]}:</b> {STATUS_HINT[story.status]}. <b>{pct(story.confidence)}</b> is how sure the event is, from the classes and trust of{' '}

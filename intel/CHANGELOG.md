@@ -4,6 +4,12 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.12.0 (2026-10-09)
+
+### Added
+* **Now:** INTEL opens with an overview across both lenses. The five main stories, weighed by confirmation, original statements, heads of state, severity, decisions, growth and live aircraft, fading by half every three hours, each with its lens and why it is there. Below **⚡ Early, unconfirmed**: fast or severe reports only early or partisan channels carry. A line says how many main stories are new since the last visit.
+* The switch at the top: ◉ Now, ⚔ Security, 🏛 Politics.
+
 ## 0.11.0 (2026-10-09)
 
 ### Added
