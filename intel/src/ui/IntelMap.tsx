@@ -13,11 +13,12 @@ import { setPrefs } from '../state/store';
 import { CAPITALS, capitalsOf, type CapitalId } from '../data/actors';
 import type { Lens } from '../data/types';
 
-const STATUS_RANK: Record<Status, number> = { observed: 0, signal: 1, emerging: 2, reported: 3, confirmed: 4 };
+const STATUS_RANK: Record<Status, number> = { observed: 0, signal: 1, emerging: 2, official: 3, reported: 4, confirmed: 5 };
 const STATUS_COLOR: Record<Status, string> = {
   observed: '#7DD3FC',
   signal: '#A1A1A6',
   emerging: '#55BDEB',
+  official: '#C9C9CE',
   reported: '#55BDEB',
   confirmed: '#F5F5F7',
 };

@@ -2,6 +2,7 @@
 // Two lanes instead of one list: confirmed weight on top, fast unconfirmed sensations in a ticker of their own.
 // Every headline says why it is there, so the ranking can be checked by reading it.
 import { DECISION, actorById } from './actors';
+import { isAirTrack } from './alerts';
 import { storyInLens } from './lens';
 import { sourceById, type Tier } from './sources';
 import { independentCount, type Story } from './stories';
@@ -15,16 +16,32 @@ export const HEADLINES = 5;
 /** Heads of state and government: their own words weigh more than those of a governor. */
 const HEAVY_ACTORS = new Set(['trump', 'putin', 'zelensky', 'merz', 'xi', 'kremlin', 'whitehouse', 'bundesregierung', 'vonderleyen', 'netanyahu', 'khamenei', 'erdogan', 'macron', 'starmer']);
 
-/** Severe events: people killed or hurt, explosions, attacks, crashes, fires. Not a word alone, see isSevere. */
+/**
+ * Severe events: people killed or hurt, explosions, attacks, crashes, fires. Not a word alone, see isSevere.
+ * German words end where the word ends: "Angriffskrieg" is no attack, "Explosionsgefahr" no explosion.
+ */
 const SEVERE =
-  /(?<![\p{L}])(killed|dead|deaths?|casualt\p{L}*|injured|wounded|explosions?|blasts?|attacks?|attacked|strikes?|struck|missiles?|crash\p{L}*|shot down|downed|fire|ablaze|evacuat\p{L}*|hostages?|tote|getötet|verletzt\p{L}*|explosion\p{L}*|angriff\p{L}*|absturz|abgestürzt|abgeschossen|brand|evakuier\p{L}*|взрыв\p{L}*|погиб\p{L}*|убит\p{L}*|ранен\p{L}*|атак\p{L}*|удар\p{L}*|пожар\p{L}*|сбит\p{L}*|крушени\p{L}*|вибух\p{L}*|загин\p{L}*|поранен\p{L}*|ракет\p{L}*)(?![\p{L}])/iu;
+  /(?<![\p{L}])(killed|dead|deaths?|casualt\p{L}*|injured|wounded|explosions?|blasts?|attacks?|attacked|strikes?|struck|missiles?|crash\p{L}*|shot down|downed|fire|ablaze|evacuat\p{L}*|hostages?|tote|toten|getötet|verletzte?n?|explosionen|explosion|angriffe?n?|absturz|abgestürzt|abgeschossen|brand|evakuier\p{L}*|взрыв\p{L}*|погиб\p{L}*|убит\p{L}*|ранен\p{L}*|атак\p{L}*|удар\p{L}*|пожар\p{L}*|сбит\p{L}*|крушени\p{L}*|вибух\p{L}*|загин\p{L}*|поранен\p{L}*|ракет\p{L}*)(?![\p{L}])/iu;
 
-const STATUS_WEIGHT: Record<Story['status'], number> = { confirmed: 3, reported: 2, observed: 1.5, emerging: 1.2, signal: 0.6 };
+const STATUS_WEIGHT: Record<Story['status'], number> = { confirmed: 3, reported: 2, official: 1.6, observed: 1.5, emerging: 1.2, signal: 0.6 };
 const FAST: Tier[] = ['early', 'perspective'];
 
+/**
+ * Air situation: warnings, all-clears and the drone and missile tracks of air forces. Live tracking, not an event:
+ * kept out of the main stories and the ticker, counted in one line of its own.
+ */
+const AIR_SITUATION =
+  /(?<![\p{L}])(отбой|отмен\p{L}* (опасност|угроз|режим|ракетн)\p{L}*|угроз\p{L}* (атаки )?(бпла|беспилотн)\p{L}*|опасност\p{L}* (атаки )?(бпла|беспилотн)\p{L}*|ракетная опасность|режим (беспилотной|ракетной) опасности|відбій|повітряна тривога|загроза (застосування )?(бпла|балістики)|all clear|air raid (alert|warning)|entwarnung|luftalarm)/iu;
+/** "No injuries", "без пострадавших": the injury word does not make the report severe. */
+const NEGATED = /(no|without) (casualties|injuries|deaths|victims)|keine (verletzten|toten|opfer)|ohne (verletzte|tote)|без (пострадавших|жертв|погибших)|(пострадавших|жертв|погибших) нет|без постраждалих|постраждалих немає/giu;
+
 const textOf = (i: EnrichedItem) => `${i.title}\n${i.text}`;
-/** A severe event needs a place: "attack" alone is also a political attack. */
-const isSevere = (i: EnrichedItem) => SEVERE.test(textOf(i)) && i.entities.places.length > 0;
+/** A track or warning of the air situation, see AIR_SITUATION. */
+export const isAirSituation = (i: EnrichedItem) => isAirTrack(i) || AIR_SITUATION.test(textOf(i));
+/** A severe event needs a place: "attack" alone is also a political attack. Warnings and all-clears are none. */
+const isSevere = (i: EnrichedItem) => !isAirSituation(i) && SEVERE.test(textOf(i).replace(NEGATED, ' ')) && i.entities.places.length > 0;
+/** A story made only of warnings, all-clears and tracks. */
+const isAirStory = (s: Story) => s.items.every(isAirSituation);
 const lensOf = (s: Story): Lens => (storyInLens(s.items, 'security') ? 'security' : 'politics');
 
 export interface Headline {
@@ -72,7 +89,7 @@ export function weigh(s: Story, now: number): { score: number; why: string[] } {
 /** The main stories of both lenses, heaviest first. Single unverified posts are the ticker's, not here. */
 export function headlines(stories: Story[], now: number, count = HEADLINES): Headline[] {
   return stories
-    .filter((s) => s.status !== 'signal' && s.items.some((i) => i.lens?.security || i.lens?.politics))
+    .filter((s) => s.status !== 'signal' && !isAirStory(s) && s.items.some((i) => i.lens?.security || i.lens?.politics))
     .map((s) => ({ story: s, lens: lensOf(s), ...weigh(s, now) }))
     .filter((h) => h.score > 0)
     .sort((a, b) => b.score - a.score)
@@ -93,7 +110,7 @@ export interface EarlyReport {
 export function earlyReports(stories: Story[], now: number, exclude: Set<string>, count = 5): EarlyReport[] {
   const out: EarlyReport[] = [];
   for (const s of [...stories].sort((a, b) => b.last - a.last)) {
-    if (exclude.has(s.id) || now - s.first > 2 * HOUR) continue;
+    if (exclude.has(s.id) || now - s.first > 2 * HOUR || isAirStory(s)) continue;
     if (!s.items.every((i) => FAST.includes(sourceById(i.sourceId)?.tier ?? 'early'))) continue;
     const quick = independentCount(s) >= 2 && s.items.length >= 2 && s.items[1].time - s.items[0].time <= 15 * 60_000;
     const severe = s.items.some(isSevere);
@@ -102,4 +119,12 @@ export function earlyReports(stories: Story[], now: number, exclude: Set<string>
     if (out.length >= count) break;
   }
   return out;
+}
+
+/** The air situation of the last hour in one line: tracks of the air force and warnings or all-clears of regions. */
+export function airSituation(items: EnrichedItem[], tracks: EnrichedItem[], now: number): { tracks: number; warnings: number } {
+  return {
+    tracks: tracks.filter((i) => now - i.time < HOUR).length,
+    warnings: items.filter((i) => now - i.time < HOUR && !isAirTrack(i) && AIR_SITUATION.test(textOf(i))).length,
+  };
 }

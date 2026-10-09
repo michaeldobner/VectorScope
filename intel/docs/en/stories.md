@@ -26,7 +26,8 @@ Every source belongs to one of seven classes, see [Sources](sources.md) for the 
 | **Signal** | One early or partisan source |
 | **Emerging** | Several early or partisan sources, nobody else yet |
 | **Reported** | At least one OSINT or specialist source |
-| **Confirmed** | At least one primary or confirming source |
+| **Official** | Only primary sources: an authority, a governor, a ministry or the actor itself. A claim, not a confirmation (since INTEL 0.13.0) |
+| **Confirmed** | At least one confirming source, or a primary source plus an independent OSINT or specialist source |
 
 ## Event confidence
 
@@ -68,7 +69,7 @@ When a story has an early, partisan or measured report and a later confirming or
 
 | Element | Meaning |
 |---|---|
-| Status chip | Observed, Signal, Emerging, Reported, Confirmed |
+| Status chip | Observed, Signal, Emerging, Official, Reported, Confirmed |
 | Percentage | Event confidence |
 | Headline | Of the most trustworthy report, the earliest at that tier |
 | Time axis | Every report as a dot from the first to the last, coloured by tier |

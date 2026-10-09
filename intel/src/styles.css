@@ -619,6 +619,10 @@ section > .section-title {
   background: rgba(85, 189, 235, 0.1);
   color: var(--accent);
 }
+.status-chip.s-official {
+  border-color: var(--text-2);
+  color: var(--text);
+}
 .status-chip.s-confirmed {
   border-color: var(--text);
   background: var(--text);
@@ -1386,4 +1390,27 @@ h3.src-group-head {
 .early-why {
   font-size: 11.5px;
   color: var(--text-3);
+}
+.air-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  text-align: left;
+  font-size: 12.5px;
+  color: var(--text-2);
+}
+.air-line b {
+  color: var(--text);
+  font-size: 13px;
+}
+.air-open {
+  margin-left: auto;
+  color: var(--accent);
 }

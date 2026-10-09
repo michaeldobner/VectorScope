@@ -3,7 +3,7 @@
 import { independenceKey, sourceById, type Source, type Tier } from './sources';
 import type { EnrichedItem } from './types';
 
-export type Status = 'observed' | 'signal' | 'emerging' | 'reported' | 'confirmed';
+export type Status = 'observed' | 'signal' | 'emerging' | 'official' | 'reported' | 'confirmed';
 
 export interface Story {
   id: string;
@@ -242,12 +242,16 @@ function toStory(list: EnrichedItem[]): Story {
   for (const s of known) tiers[s.tier]++;
   const lead = [...independent].sort((a, b) => RANK[tierOf(b)] - RANK[tierOf(a)] || a.time - b.time)[0];
   const reporters = independentSources.length - tiers.physical;
+  // An authority or the actor itself is a claim, not a confirmation: a governor saying X is "official",
+  // confirmed only with a leading medium or an independent specialist or OSINT source.
   const status: Status =
-    tiers.confirming || tiers.primary
+    tiers.confirming || (tiers.primary && (tiers.specialist || tiers.osint))
       ? 'confirmed'
-      : tiers.specialist || tiers.osint
-        ? 'reported'
-        : reporters >= 2
+      : tiers.primary
+        ? 'official'
+        : tiers.specialist || tiers.osint
+          ? 'reported'
+          : reporters >= 2
           ? 'emerging'
           : reporters === 1
             ? 'signal'

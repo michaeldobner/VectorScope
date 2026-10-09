@@ -49,7 +49,7 @@ Die App erkennt, wo sie läuft: Auf GitHub Pages (`*.github.io`) und lokal nutzt
 | Wo | Was | Sicherung |
 |---|---|---|
 | Volume `vectorscope-data`, Ordner `/data` | `latest.json`, `archive.json`, `stats.json`, `health.json`, `raw-state.json`, `heartbeat.json` | Baut der Sammler neu auf |
-| `/data/raw` | Das Rohdaten-Archiv, ein Checkout des Branches `collector-raw` mit allen Dateien | GitHub-Branch `collector-raw` nach jeder Runde, dazu täglich `/var/backups/vectorscope/raw` |
+| `/data/raw` | Das Rohdaten-Archiv mit allen Dateien. Nicht öffentlich: die vollen Texte der Herausgeber | Täglich `/var/backups/vectorscope/raw`. Mit `RAW_PUSH_URL` zusätzlich nach jeder Runde gepusht, dann nur in ein **privates** Repository |
 | Volume `vectorscope-pg` | Datenbank: Tabelle `reports` (eine Zeile pro Meldung, frühester Zeitpunkt und erstes Sehen), `rounds` und `meta`. Beim ersten Start füllt der Sammler sie einmalig aus dem Rohdaten-Archiv (`collector/backfill.ts`), damit sie die Historie seit 30. September 2026 enthält | Täglicher Abzug nach `/var/backups/vectorscope` |
 
 Das Rohdaten-Archiv ist die Grundwahrheit ([Rohdaten](../../intel/docs/de/rohdaten.md)). Die Datenbank leitet der Sammler ab, sie lässt sich neu aufbauen. Rundendateien des Servers heißen `HHMM-srv.jsonl.gz`, die von GitHub Actions `HHMM.jsonl.gz`, deshalb können beide ohne Kollision in denselben Branch schreiben. Findet einer von beiden den Branch weitergerückt, setzt er seine eigenen Commits obendrauf und pusht erneut.
@@ -61,7 +61,7 @@ Schritte nach Stand Coolify 4. Menünamen können je nach Version leicht abweich
 1. **GitHub-Token für das Rohdaten-Archiv** (optional, empfohlen). Auf GitHub: Settings > Developer settings > Fine-grained personal access tokens > Generate new token. Repository access: nur `michaeldobner/VectorScope`. Permissions: Contents, Read and write. Ablauf: bis nach der Probe, z. B. 1. März 2027. Token kopieren, er wird nur einmal angezeigt.
 2. **Neue Ressource.** Im Coolify-Projekt: New resource > Public repository, `https://github.com/michaeldobner/VectorScope`, Branch `main`. Build pack: Docker Compose, Datei `/docker-compose.yaml`.
 3. **Domain.** Beim Dienst `vectorscope-web`: Domain `https://vectorscope.duckdns.org:8080`. Der Port sagt Coolify, dass der Container auf 8080 lauscht, die Adresse selbst bleibt ohne Port. Die anderen Dienste bekommen keine Domain.
-4. **Umgebungsvariablen.** `SERVICE_PASSWORD_POSTGRES` erzeugt Coolify selbst. `RAW_PUSH_URL` als Secret anlegen: `https://x-access-token:<Token>@github.com/michaeldobner/VectorScope.git`. Optional: `ALLOWED_ORIGIN`, wenn die Adresse abweicht, `CONTACT` für den User-Agent.
+4. **Umgebungsvariablen.** `SERVICE_PASSWORD_POSTGRES` erzeugt Coolify selbst. `RAW_PUSH_URL` nur, wenn das Rohdaten-Archiv zusätzlich zu GitHub soll, und dann nur in ein **privates** Repository: `https://x-access-token:<Token>@github.com/<Besitzer>/<privates Repository>.git`. Ohne bleibt das Archiv auf dem Server und in seiner täglichen Sicherung (seit Sammlung 0.18.0, das Repository VectorScope ist öffentlich). Optional: `ALLOWED_ORIGIN`, wenn die Adresse abweicht, `CONTACT` für den User-Agent.
 5. **Deploy.** Der Build dauert einige Minuten (Typprüfung und Build aller Module). Danach `https://vectorscope.duckdns.org/api/health` öffnen.
 6. **Erste Runde.** Beim ersten Start übernimmt der Sammler `archive.json`, `stats.json` und `raw-state.json` des GitHub-Sammlers, damit keine Meldung zweimal als neu zählt, und checkt den Branch `collector-raw` aus. Nach 10 bis 15 Minuten ist `collector.age_min` klein und `raw_push` meldet `pushed`.
 
@@ -81,7 +81,7 @@ Schritte nach Stand Coolify 4. Menünamen können je nach Version leicht abweich
 | Aktualisieren | Push auf `main`, Coolify rollt aus (automatisch, wenn der Webhook an ist) |
 | Datenbank aus dem Rohdaten-Archiv neu aufbauen | Tabellen leeren oder im Sammler-Container (Coolify > Terminal) `npx tsx collector/backfill.ts /data/raw --force` ausführen. Beliebig wiederholbar |
 | Datenbank wiederherstellen | `gunzip -c /var/backups/vectorscope/vectorscope-<Datum>.sql.gz \| docker exec -i <DB-Container> psql -U vectorscope vectorscope` |
-| Rohdaten-Archiv wiederherstellen | Den Branch `collector-raw` klonen oder `/var/backups/vectorscope/raw` kopieren |
+| Rohdaten-Archiv wiederherstellen | `/var/backups/vectorscope/raw` kopieren oder das private Repository von `RAW_PUSH_URL` klonen |
 | Abfragen | `/api/reports` oder `docker exec -it <DB-Container> psql -U vectorscope vectorscope` |
 
 ## Geprüft und noch nicht geprüft

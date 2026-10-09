@@ -28,7 +28,7 @@ Das Skript ist `collector/collect.ts`. Es nutzt dieselben Lade-, Lese- und Zusam
 | `health.json` | Prüfungen nach jeder Runde: ausgefallene und stille Quellen, Lücken, Meldungen, die eine Annahme verletzen | Überwachung |
 | `raw-state.json` | Welche Roh-Einheiten bekannt sind, mit Fingerabdruck und Version | Sammler |
 
-Daneben behält der Branch `collector-raw` jede Antwort jeder Quelle dauerhaft, eine Datei pro Runde. Aufbau, Format und Auswertung: [Rohdaten](rohdaten.md).
+Das Rohdaten-Archiv, jede Antwort jeder Quelle dauerhaft, eine Datei pro Runde, führt seit Sammlung 0.18.0 nur noch der eigene Server, dieses Repository ist öffentlich. Aufbau, Format und Auswertung: [Rohdaten](rohdaten.md).
 
 ## In der App
 

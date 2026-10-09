@@ -21,6 +21,7 @@ INTEL öffnet mit **◉ Now**, dem ersten Platz des Schalters neben Security und
 
 * **Die Hauptmeldungen:** die fünf gewichtigsten Stories beider Linsen, jede mit ⚔ Security oder 🏛 Politics (ein Tipp öffnet diese Linse) und dem Grund, warum sie oben steht, etwa „EU Commission in the original · growing“. Das Gewicht kommt aus Status und Zahl unabhängiger Quellen, einer Originalaussage, Staats- und Regierungschefs, einem schweren Ereignis mit Ort (Angriff, Explosion, Absturz, Tote) oder einer Entscheidung, neuen Meldungen der letzten Stunde und darin genannten Live-Flugzeugen. Es halbiert sich alle drei Stunden ohne neue Meldung, nach einem Tag ist eine Story draußen. Einzelne ungeprüfte Beiträge sind nie Hauptmeldung.
 * **⚡ Early, unconfirmed:** Stories der letzten zwei Stunden, die nur frühe oder parteiische Quellen tragen, wenn zwei Kanäle dasselbe innerhalb von 15 Minuten melden oder einer ein schweres Ereignis mit Ort. Gestrichelt, mit Quelle und Perspektive. Bestätigt eine Quelle sie, können sie in die Hauptmeldungen aufsteigen.
+* **✈ Air situation, last hour:** Drohnen- und Raketenspuren der ukrainischen Luftwaffe und Warnungen oder Entwarnungen von Regionen, eine Zeile statt einem Dutzend Hauptmeldungen. Ein Tipp öffnet sie in der Security-Linse. Sie sind nie Hauptmeldung und nie im Ticker.
 * **Since your last visit:** wie viele der Hauptmeldungen neu sind.
 
 Am Handy sind die Reiter in Now: Now, Live und Sources, Filter gelten dort nicht. Die Suche wechselt in die Linsen-Ansichten. Code: `src/data/headlines.ts`.
@@ -59,7 +60,8 @@ Die Standardansicht. Meldungen verschiedener Quellen über dasselbe Ereignis bil
 | **SIGNAL** grau | Eine frühe oder parteiische Quelle, zum Beispiel ein einzelner Telegram-Kanal |
 | **EMERGING** blau gestrichelt | Mehrere frühe oder parteiische Quellen |
 | **REPORTED** blau | Eine OSINT- oder Fachquelle hat berichtet |
-| **CONFIRMED** weiß | Eine Primärquelle (Behörde, Militär, Gouverneur) oder ein Leitmedium hat berichtet |
+| **OFFICIAL** umrandet | Nur eine Behörde, ein Gouverneur oder der Akteur selbst sagt es. Eine Angabe, niemand Unabhängiges hat es bestätigt |
+| **CONFIRMED** weiß | Ein Leitmedium hat berichtet, oder eine Behörde plus eine unabhängige OSINT- oder Fachquelle |
 | `87 %` | Event Confidence, wie sicher das Ereignis ist, siehe [Stories](stories.md#event-confidence). Ein Tipp erklärt Status und Prozentwert auf der Karte |
 | `21:27 to 21:51 · 4 reports` | Wann die Story lief. Mit geöffneten Meldungen zeigt eine Zeitachse jede Meldung als Punkt, Form und Farbe nach Klasse |
 | `1 early · 1 perspective · 1 primary` | Wie viele unabhängige Quellen je Klasse, mit DE auf Deutsch (früh, parteiisch, primär) |

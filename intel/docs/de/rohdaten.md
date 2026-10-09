@@ -26,10 +26,10 @@ Bewusste Unterschiede: JSON-Zeilen statt SQLite, weil eine Textdatei pro Runde i
 
 | Ort | Inhalt | Änderungen |
 |---|---|---|
-| Branch `collector-raw` | Das Rohdaten-Archiv: `raw/JJJJ/MM/TT/HHMM.jsonl.gz` pro Runde (UTC), einmalig `raw/legacy/archive-JJJJ-MM-TT.jsonl.gz` | Wächst nur. Eine Datei wird nach dem Schreiben nie mehr geändert |
+| Auf dem eigenen Server, `/data/raw` | Das Rohdaten-Archiv: `raw/JJJJ/MM/TT/HHMM.jsonl.gz` pro Runde (UTC), einmalig `raw/legacy/archive-JJJJ-MM-TT.jsonl.gz` | Wächst nur. Eine Datei wird nach dem Schreiben nie mehr geändert |
 | Branch `collector-data` | Aktueller Stand für INTEL und den Sammler: `latest.json`, `archive.json`, `stats.json`, `health.json`, `raw-state.json` | Wird jede Runde ersetzt, keine Historie |
 
-Beide Branches liegen im Repository `michaeldobner/VectorScope` und haben mit dem Code auf `main` nichts zu tun.
+**Seit Sammlung 0.18.0 nicht mehr öffentlich.** Die Rohantworten sind die vollen Texte der Herausgeber und ihre Übersetzungen. Sie bleiben auf dem eigenen Server (`/data/raw`, täglich nach `/var/backups/vectorscope/raw` kopiert). Der GitHub-Sammler schreibt kein Rohdaten-Archiv mehr, und `collector-data` enthält nur noch Auszüge. Der Server pusht das Archiv nur, wenn `RAW_PUSH_URL` auf ein Repository zeigt, und das muss privat sein. Bis 9. Oktober 2026 war das Archiv der Branch `collector-raw` des öffentlichen Repositorys; die Befehle unten, die ihn klonen, gehen genauso mit einem privaten Repository.
 
 **Größe.** Etwa 20 bis 30 neue Einheiten pro Runde, meist Telegram-Beiträge mit 2 bis 6 KB. Gepackt sind das grob 1 bis 3 MB am Tag, 0,5 bis 1 GB im Jahr. Ein Klon von `main` mit `--single-branch` lädt das Archiv nicht herunter.
 

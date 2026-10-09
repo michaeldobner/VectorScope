@@ -74,7 +74,8 @@ const merged = mergeItems([...archive.items, ...results.flatMap((r) => r.items).
 
 mkdirSync(DIR, { recursive: true });
 const keys = Object.fromEntries([...seenBefore].filter(([, seen]) => now - seen < 30 * DAY));
-writeFileSync(join(DIR, 'archive.json'), JSON.stringify({ at: now, items: merged, keys }));
+// Excerpts only: the data folder is published on GitHub, the full texts stay in the raw archive and the database.
+writeFileSync(join(DIR, 'archive.json'), JSON.stringify({ at: now, items: merged.map((i) => ({ ...i, text: clip(i.text, 300) })), keys }));
 // Translation of what the app gets: headlines and excerpts of the last 72 hours, newest first.
 const translations = read<TrCache>('translations.json', {});
 const recent = merged.filter((i) => now - i.time < 3 * DAY).slice(0, 1500);

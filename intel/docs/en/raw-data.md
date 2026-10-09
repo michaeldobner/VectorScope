@@ -26,10 +26,10 @@ Differences on purpose: JSON lines instead of SQLite, because a text file per ro
 
 | Place | Contents | Changes |
 |---|---|---|
-| Branch `collector-raw` | The raw archive: `raw/YYYY/MM/DD/HHMM.jsonl.gz` per round (UTC), once `raw/legacy/archive-YYYY-MM-DD.jsonl.gz` | Only grows. A file is never changed after it was written |
+| On the own server, `/data/raw` | The raw archive: `raw/YYYY/MM/DD/HHMM.jsonl.gz` per round (UTC), once `raw/legacy/archive-YYYY-MM-DD.jsonl.gz` | Only grows. A file is never changed after it was written |
 | Branch `collector-data` | Current state for INTEL and the collector: `latest.json`, `archive.json`, `stats.json`, `health.json`, `raw-state.json` | Replaced every round, no history |
 
-Both branches are in the repository `michaeldobner/VectorScope` and have nothing to do with the code on `main`.
+**Not public since collection 0.18.0.** The raw answers are the full texts of the publishers and their translations. They stay on the own server (`/data/raw`, copied daily to `/var/backups/vectorscope/raw`). The GitHub collector no longer writes a raw archive, and `collector-data` carries excerpts only. The server pushes the archive only when `RAW_PUSH_URL` points to a repository, which must be private. Until 9 October 2026 the archive was the branch `collector-raw` of the public repository; the commands below that clone it work the same with a private repository.
 
 **Size.** About 20 to 30 new units per round, most of them Telegram posts of 2 to 6 KB. Compressed that is roughly 1 to 3 MB a day, 0.5 to 1 GB a year. A clone of `main` with `--single-branch` does not download the archive.
 

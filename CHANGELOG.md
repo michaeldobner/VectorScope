@@ -4,6 +4,12 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.18.0 (2026-10-09)
+
+### Changed
+* **Raw archive no longer public.** The GitHub collector writes no raw archive any more, `archive.json` on `collector-data` carries excerpts like `latest.json`. The raw archive stays on the own server and its daily backup, pushed only with `RAW_PUSH_URL`, which must point to a private repository.
+* Module INTEL 0.13.0, see its changelog.
+
 ## 0.17.0 (2026-10-09)
 
 ### Added

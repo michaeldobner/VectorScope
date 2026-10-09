@@ -4,6 +4,15 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.13.0 (2026-10-09)
+
+### Changed
+* **Official** is a new status: only an authority, a governor or the actor itself says so. Confirmed needs a leading medium, or an authority plus an independent OSINT or specialist source. Before, a single governor made a story confirmed.
+
+### Fixed
+* Now: warnings, all-clears and drone tracks are no main stories and not in the ticker any more. One line "✈ Air situation, last hour" counts them. An all-clear of Voronezh was a severe main story.
+* Now: "Angriffskrieg" or "Explosionsgefahr" are no severe event, nor injury words after "keine", "no" or "без". A delegation talking about the war of aggression was a severe main story.
+
 ## 0.12.0 (2026-10-09)
 
 ### Added

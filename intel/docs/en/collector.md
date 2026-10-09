@@ -28,7 +28,7 @@ The script is `collector/collect.ts`. It uses the same loaders, parsers and merg
 | `health.json` | Checks after every round: failing and silent sources, gaps, reports that break an assumption | Monitoring |
 | `raw-state.json` | Which raw units are known, with fingerprint and version | Collector |
 
-Next to it the branch `collector-raw` keeps every answer of every source for good, one file per round. Structure, format and analysis: [Raw data](raw-data.md).
+The raw archive, every answer of every source for good, one file per round, is kept only by the own server since collection 0.18.0, this repository is public. Structure, format and analysis: [Raw data](raw-data.md).
 
 ## In the app
 

@@ -2,7 +2,7 @@ import { Suspense, lazy, useEffect, useMemo, useRef, useState, type CSSPropertie
 import type { Aircraft } from '../../air/src/data/types';
 import { CAPITALS, DECISION, actorById, capitalsOf, type CapitalId } from './data/actors';
 import { bridgesFor } from './data/bridges';
-import { earlyReports, headlines, type Headline } from './data/headlines';
+import { airSituation, earlyReports, headlines, type Headline } from './data/headlines';
 import { storyInLens } from './data/lens';
 import { KIND_LABEL } from './data/kinds';
 import { clip } from './data/text';
@@ -515,6 +515,7 @@ function NowView({ st }: { st: IntelState }) {
   const now = Date.now();
   const top = useMemo(() => headlines(st.stories, now), [st.stories]);
   const early = useMemo(() => earlyReports(st.stories, now, new Set(top.map((h) => h.story.id))), [st.stories, top]);
+  const air = airSituation(st.items, st.alerts, now);
   if (!st.stories.length) return <Empty st={st} />;
   const fresh = st.newSince > 0 && !st.demo ? top.filter((h) => h.story.first > st.newSince).length : 0;
   return (
@@ -526,6 +527,16 @@ function NowView({ st }: { st: IntelState }) {
           <StoryCard key={h.story.id} story={h.story} st={st} headline={h} />
         ))}
       </ol>
+      {/* Tracks, warnings and all-clears are live tracking, not news: one line instead of a dozen headlines. */}
+      {(air.tracks > 0 || air.warnings > 0) && (
+        <button className="air-line" onClick={() => setPrefs({ now: false, lens: 'security', pulse: 'alerts', filter: 'all', actor: null, place: null })}>
+          <b>✈ Air situation, last hour</b>
+          <span>
+            {air.tracks} {air.tracks === 1 ? 'track' : 'tracks'} of the Ukrainian Air Force · {air.warnings} {air.warnings === 1 ? 'warning or all-clear' : 'warnings or all-clears'} of regions
+          </span>
+          <span className="air-open">Open ›</span>
+        </button>
+      )}
       <h2 className="section-title early-title">⚡ Early, unconfirmed</h2>
       {early.length ? (
         <ul className="early">
@@ -616,11 +627,12 @@ function AlertsList({ st }: { st: IntelState }) {
   );
 }
 
-const STATUS_LABEL: Record<Status, string> = { observed: 'Observed', signal: 'Signal', emerging: 'Emerging', reported: 'Reported', confirmed: 'Confirmed' };
+const STATUS_LABEL: Record<Status, string> = { observed: 'Observed', signal: 'Signal', emerging: 'Emerging', official: 'Official', reported: 'Reported', confirmed: 'Confirmed' };
 const STATUS_HINT: Record<Status, string> = {
   observed: 'seen by the VectorScope sensor in live flight data, nobody reported it yet',
   signal: 'one early or partisan source',
   emerging: 'several early or partisan sources',
+  official: 'only an authority or the actor itself says so, nobody independent confirmed it yet',
   reported: 'specialist or OSINT source',
   confirmed: 'primary source or leading news medium',
 };

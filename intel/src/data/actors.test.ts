@@ -160,3 +160,44 @@ describe('now', () => {
     expect(weigh(s, s.last + 25 * 3600_000).score).toBe(0);
   });
 });
+
+describe('now, cases of the review of 9 October 2026', () => {
+  const at = Date.parse('2026-10-09T01:00:00Z');
+  const mk = (id: string, sourceId: string, title: string, minAgo: number) => {
+    const entities = extractEntities(title);
+    return { id, sourceId, channel: 'telegram' as const, title, text: '', url: `https://x.org/${id}`, time: at - minAgo * 60_000, entities, matches: [], lens: { security: true as const } };
+  };
+
+  it('a single authority is official, not confirmed', async () => {
+    const { buildStories } = await import('./stories');
+    expect(buildStories([mk('a', 'gusev', 'Губернатор: в Воронеже отражена атака БПЛА', 5)])[0].status).toBe('official');
+    const both = buildStories([mk('a', 'gusev', 'Атака БПЛА на Воронеж отражена, губернатор', 30), mk('b', 'bbc', 'Drone attack on Voronezh repelled, governor says', 5)]);
+    expect(both[0].status).toBe('confirmed');
+  });
+
+  it('keeps all-clears, warnings and drone tracks out of the main stories and the ticker', async () => {
+    const { buildStories } = await import('./stories');
+    const { headlines, earlyReports, airSituation } = await import('./headlines');
+    const stories = buildStories([
+      mk('a', 'gusev', 'Отмена опасности атаки БПЛА в Воронеже', 10),
+      mk('b', 'gusev', 'Внимание! Угроза атаки БПЛА в Воронеже', 40),
+      mk('c', 'kpszsu', 'Реактивний БпЛА повз Тальне на Черкащині у північному напрямку', 5),
+    ]);
+    expect(headlines(stories, at)).toHaveLength(0);
+    expect(earlyReports(stories, at, new Set())).toHaveLength(0);
+    const items = stories.flatMap((s) => s.items);
+    expect(airSituation(items, items.filter((i) => i.sourceId === 'kpszsu'), at)).toEqual({ tracks: 1, warnings: 2 });
+  });
+
+  it('does not take a war of aggression or "no injuries" for a severe event', async () => {
+    const { weigh } = await import('./headlines');
+    const { buildStories } = await import('./stories');
+    const talks = buildStories([mk('a', 'tagesschau', 'Ukraine-Delegation führt in Washington Gespräche über den russischen Angriffskrieg', 10)])[0];
+    expect(weigh(talks, at).why).not.toContain('severe');
+    const calm = buildStories([mk('a', 'tagesschau', 'Brand in Odesa gelöscht, keine Verletzten', 10)])[0];
+    const hurt = buildStories([mk('a', 'tagesschau', 'Explosion in Odesa, mehrere Verletzte', 10)])[0];
+    expect(weigh(hurt, at).why).toContain('severe');
+    // "Brand" still counts, "keine Verletzten" alone would not.
+    expect(weigh(calm, at).why).toContain('severe');
+  });
+});

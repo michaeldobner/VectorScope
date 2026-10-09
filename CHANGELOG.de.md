@@ -4,6 +4,12 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.18.0 (2026-10-09)
+
+### Geändert
+* **Rohdaten-Archiv nicht mehr öffentlich.** Der GitHub-Sammler schreibt kein Rohdaten-Archiv mehr, `archive.json` auf `collector-data` enthält Auszüge wie `latest.json`. Das Rohdaten-Archiv bleibt auf dem eigenen Server und in seiner täglichen Sicherung, gepusht nur mit `RAW_PUSH_URL`, das auf ein privates Repository zeigen muss.
+* Modul INTEL 0.13.0, siehe sein Changelog.
+
 ## 0.17.0 (2026-10-09)
 
 ### Neu

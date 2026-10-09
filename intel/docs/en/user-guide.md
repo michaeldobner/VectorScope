@@ -21,6 +21,7 @@ INTEL opens with **◉ Now**, the first place of the switch next to Security and
 
 * **The main stories:** the five heaviest stories of both lenses, each with ⚔ Security or 🏛 Politics (a tap opens that lens) and why it is there, for example "EU Commission in the original · growing". The weight comes from the status and the number of independent sources, an original statement, heads of state and government, a severe event with a place (attack, explosion, crash, people killed) or a decision, new reports in the last hour and live aircraft named in it. It halves every three hours without new reports, after a day a story is out. Single unverified posts are never main stories.
 * **⚡ Early, unconfirmed:** stories of the last two hours carried only by early or partisan sources, when two channels report the same within 15 minutes or one reports a severe event with a place. Dashed, with source and perspective. When a source confirms them, they can rise into the main stories.
+* **✈ Air situation, last hour:** drone and missile tracks of the Ukrainian Air Force and warnings or all-clears of regions, one line instead of a dozen headlines. A tap opens them in the security lens. They are never main stories or in the ticker.
 * **Since your last visit:** how many of the main stories are new.
 
 On a phone the tabs in Now are Now, Live and Sources, filters do not apply. The search switches to the lens views. Code: `src/data/headlines.ts`.
@@ -59,7 +60,8 @@ The default view. Reports from different sources about the same event are one ca
 | **SIGNAL** grey | One early or partisan source, for example a single Telegram channel |
 | **EMERGING** dashed blue | Several early or partisan sources |
 | **REPORTED** blue | An OSINT or specialist source reported it |
-| **CONFIRMED** white | A primary source (authority, military, governor) or a leading medium reported it |
+| **OFFICIAL** outlined | Only an authority, a governor or the actor itself says so. A claim, nobody independent confirmed it |
+| **CONFIRMED** white | A leading medium reported it, or an authority plus an independent OSINT or specialist source |
 | `87 %` | Event confidence, how sure the event is, see [Stories](stories.md#event-confidence). A tap explains status and percentage on the card |
 | `21:27 to 21:51 · 4 reports` | When the story ran. With the reports open a time axis shows every report as a dot, shape and colour by class |
 | `1 early · 1 perspective · 1 primary` | How many independent sources per class |

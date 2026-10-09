@@ -4,6 +4,15 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.13.0 (2026-10-09)
+
+### Geändert
+* **Official** ist ein neuer Status: Nur eine Behörde, ein Gouverneur oder der Akteur selbst sagt es. Confirmed braucht ein Leitmedium, oder eine Behörde plus eine unabhängige OSINT- oder Fachquelle. Vorher machte ein einzelner Gouverneur eine Story zu confirmed.
+
+### Behoben
+* Now: Warnungen, Entwarnungen und Drohnenspuren sind keine Hauptmeldungen mehr und nicht im Ticker. Eine Zeile „✈ Air situation, last hour“ zählt sie. Eine Entwarnung von Woronesch war eine schwere Hauptmeldung.
+* Now: „Angriffskrieg“ oder „Explosionsgefahr“ sind kein schweres Ereignis, ebenso Verletzungswörter nach „keine“, „no“ oder „без“. Eine Delegation, die über den Angriffskrieg sprach, war eine schwere Hauptmeldung.
+
 ## 0.12.0 (2026-10-09)
 
 ### Neu

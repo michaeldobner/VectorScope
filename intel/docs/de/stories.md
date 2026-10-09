@@ -26,7 +26,8 @@ Jede Quelle gehört zu einer von sieben Klassen, die vollständige Liste steht u
 | **Signal** | Eine frühe oder parteiische Quelle |
 | **Emerging** | Mehrere frühe oder parteiische Quellen, sonst noch niemand |
 | **Reported** | Mindestens eine OSINT- oder Fachquelle |
-| **Confirmed** | Mindestens eine primäre oder bestätigende Quelle |
+| **Official** | Nur Primärquellen: eine Behörde, ein Gouverneur, ein Ministerium oder der Akteur selbst. Eine Angabe, keine Bestätigung (seit INTEL 0.13.0) |
+| **Confirmed** | Mindestens eine bestätigende Quelle, oder eine Primärquelle plus eine unabhängige OSINT- oder Fachquelle |
 
 ## Event Confidence
 
@@ -68,7 +69,7 @@ Hat eine Story eine frühe, parteiische oder gemessene Meldung und eine spätere
 
 | Element | Bedeutung |
 |---|---|
-| Status-Chip | Observed, Signal, Emerging, Reported, Confirmed |
+| Status-Chip | Observed, Signal, Emerging, Official, Reported, Confirmed |
 | Prozentwert | Event Confidence |
 | Überschrift | Von der vertrauenswürdigsten Meldung, auf dieser Stufe die früheste |
 | Zeitachse | Jede Meldung als Punkt von der ersten bis zur letzten, eingefärbt nach Stufe |
