@@ -3,6 +3,8 @@
 //
 //   npx tsx collector/benchmark.ts <data folder or URL of collector-data> [out folder]
 //
+// Reads archive.json (7 days), translations.json and reference.json of the collector.
+//
 // Major topic: a topic at least two of the three newsrooms have in their top ten. Recall@5 and @10: the share
 // of major topics that one of the first five or ten main stories of Now covers. Matching by shared words and
 // names, with the German translation of the collector, so "execution" meets "Hinrichtung" only if translated.
@@ -17,6 +19,7 @@ import { lensesOf } from '../intel/src/data/lens';
 import { buildStories, keywords, type Story } from '../intel/src/data/stories';
 import type { EnrichedItem, Item } from '../intel/src/data/types';
 import type { ReferenceFile, ReferenceId, ReferenceSnapshot } from './reference';
+import { withTranslations, type TrCache } from './translate';
 
 /** The tokens of a headline: words, small places, actors and members of the Bundestag. */
 export function tokensOf(title: string): Set<string> {
@@ -24,6 +27,8 @@ export function tokensOf(title: string): Set<string> {
   const out = keywords({ id: '', sourceId: '', channel: 'rss', title, text: '', url: '', time: 0, entities, matches: [] });
   for (const a of entities.actors) out.add(`*${a}`);
   for (const m of entities.members) out.add(`*${m}`);
+  // German writes "Fort-Hood-Amokläufer" and "US-Justiz": the parts count, so the words of other headlines meet them.
+  for (const tok of [...out]) if (/^[\p{L}\p{N}]/u.test(tok) && tok.includes('-')) for (const part of tok.split('-')) if (part.length >= 3) out.add(part.replace(/s$/, ''));
   // Countries and seas say little alone, they stay out of the comparison.
   for (const t of [...out]) if (t.startsWith('@') && !t.startsWith('@!')) out.delete(t);
   return out;
@@ -144,10 +149,13 @@ async function load(where: string, file: string): Promise<string> {
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const where = process.argv[2] ?? 'collector-data';
   const out = process.argv[3] ?? 'lab-out';
-  const items: Item[] = JSON.parse(await load(where, 'latest.json')).items ?? [];
+  // The 7 day archive, with the translations of the collector attached. latest.json alone covers only about 17 hours.
+  const archive: Item[] = JSON.parse(await load(where, 'archive.json').catch(() => load(where, 'latest.json'))).items ?? [];
+  const translations: TrCache = JSON.parse(await load(where, 'translations.json').catch(() => '{}'));
+  const items = archive.map((i) => withTranslations(i, translations));
   const ref: ReferenceFile = JSON.parse(await load(where, 'reference.json').catch(() => '{"snapshots":[]}'));
   const first = Math.min(...items.map((i) => i.seen ?? i.time));
-  // Only snapshots the reports cover: 24 hours of reports before them.
+  // Only snapshots the reports cover: a day of reports before them, Now looks back no further.
   const snaps = ref.snapshots.filter((s) => s.at - first > 24 * 3600_000);
   const results = snaps.map((s) => benchmarkSnapshot(items, s));
   if (!existsSync(out)) mkdirSync(out, { recursive: true });
