@@ -4,6 +4,12 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## Unreleased
+
+### Added
+* **Topics by meaning** (`collector/embed.ts`): a small multilingual model (`Xenova/paraphrase-multilingual-MiniLM-L12-v2`, transformers.js, on the CPU, no key) turns every headline into a vector, headlines close in meaning get one topic id, also across languages and without a shared word. INTEL groups reports of one topic into one story, Now keeps one place per topic. Off until the test lab has measured it: `EMBED=1` turns it on, the model is downloaded once into the data folder.
+* Test lab: `lab/embed.ts` runs the benchmark of Now without topics and with topics at five thresholds.
+
 ## 0.20.0 (2026-10-09)
 
 ### Changed

@@ -137,6 +137,8 @@ export function buildStories(items: EnrichedItem[]): Story[] {
   for (const k of keys) for (const t of k) df.set(t, (df.get(t) ?? 0) + 1);
 
   const score = (a: number, b: number) => {
+    // The model of the collector found the same topic by meaning: a link of its own, across languages.
+    if (items[a].topic && items[a].topic === items[b].topic) return LINK_SCORE * 2;
     let sum = 0;
     let words = 0;
     for (const t of keys[a]) {

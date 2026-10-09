@@ -23,6 +23,8 @@ export interface Item {
   lon?: number;
   /** Name of the area at these coordinates, as the sensor names it. */
   area?: string;
+  /** Topic by meaning, from the multilingual model of the collector (collector/embed.ts): same id, same story. */
+  topic?: string;
   /** Translations by the collector (collector/translate.ts): headline and clipped excerpt in English and German. */
   tr?: Partial<Record<'en' | 'de', { title?: string; text?: string }>>;
 }

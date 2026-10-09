@@ -46,6 +46,7 @@ jobs:
           LAB_SKIP_BLUESKY=1 node lab/osint.mjs || true
           npx tsx lab/qa.ts || true
           npx tsx collector/benchmark.ts https://raw.githubusercontent.com/michaeldobner/VectorScope/collector-data lab-out || true
+          npx tsx lab/embed.ts || true
       - name: Publish results to branch lab-results
         run: |
           cd lab-out

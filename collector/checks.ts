@@ -11,6 +11,8 @@ export interface RunRecord {
   sources: Record<string, { ok: boolean; items: number; fresh: number; error?: string }>;
   /** Texts translated in this round, refused by Google, still waiting, characters sent (collector/translate.ts). */
   translation?: { translated: number; refused: number; waiting: number; chars: number };
+  /** Reports embedded in this round and how many joined an existing topic (collector/embed.ts). */
+  topics?: { embedded: number; joined: number };
 }
 
 export interface SourceHealth {

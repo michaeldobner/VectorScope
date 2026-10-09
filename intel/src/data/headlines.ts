@@ -155,7 +155,8 @@ export function headlines(stories: Story[], now: number, count = HEADLINES): Hea
   for (const h of ranked) {
     if (out.length >= count) break;
     const core = storyCore(h.story);
-    const same = out.find((o) => sameTopic(o.core, core));
+    const topics = new Set(h.story.items.map((i) => i.topic).filter(Boolean));
+    const same = out.find((o) => sameTopic(o.core, core) || o.story.items.some((i) => i.topic && topics.has(i.topic)));
     if (same) {
       same.related = [...(same.related ?? []), h.story];
       continue;

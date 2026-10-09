@@ -4,6 +4,12 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## Unveröffentlicht
+
+### Neu
+* **Themen nach Bedeutung** (`collector/embed.ts`): Ein kleines mehrsprachiges Modell (`Xenova/paraphrase-multilingual-MiniLM-L12-v2`, transformers.js, auf der CPU, ohne Schlüssel) macht aus jeder Überschrift einen Vektor, Überschriften mit ähnlicher Bedeutung bekommen eine Themen-Kennung, auch über Sprachen hinweg und ohne gemeinsames Wort. INTEL bündelt Meldungen eines Themas zu einer Story, Now hält einen Platz pro Thema. Aus, bis das Test-Labor es gemessen hat: `EMBED=1` schaltet es ein, das Modell wird einmal in den Datenordner geladen.
+* Test-Labor: `lab/embed.ts` misst Now ohne Themen und mit Themen bei fünf Schwellwerten.
+
 ## 0.20.0 (2026-10-09)
 
 ### Geändert

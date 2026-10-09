@@ -10,6 +10,7 @@
 //   stats.json       one record per round: per source ok, items, new items, error
 //   health.json      checks: failing or silent sources, reports that break an assumption
 //   raw-state.json   which raw units are known, with their fingerprint
+//   embeddings.json  vector and topic of every report of 72 hours, with EMBED=1 (embed.ts), models/ the model
 //   reference.json   once an hour the top headlines of Tagesschau, ntv and Spiegel, for collector/benchmark.ts
 //   translations.json  every headline and excerpt in English and German, see translate.ts (TRANSLATE=0 turns it off)
 // Raw folder (published on the branch collector-raw, only grows): raw/YYYY/MM/DD/HHMM.jsonl.gz,
@@ -21,6 +22,7 @@ import { writeLegacy, writeRawRound } from './archive-raw';
 import { checkHealth, healthMarkdown, type RunRecord } from './checks';
 import { storeRound } from './store';
 import { translateMissing, withTranslations, type TrCache } from './translate';
+import { assignTopics, loadEmbedder, withTopic, type EmbedState } from './embed';
 import { takeSnapshot, type ReferenceFile } from './reference';
 import { detectAll } from '../intel/src/data/sensor';
 import { SOURCES } from '../intel/src/data/sources';
@@ -77,7 +79,9 @@ const merged = mergeItems([...archive.items, ...results.flatMap((r) => r.items).
 mkdirSync(DIR, { recursive: true });
 const keys = Object.fromEntries([...seenBefore].filter(([, seen]) => now - seen < 30 * DAY));
 // Excerpts only: the data folder is published on GitHub, the full texts stay in the raw archive and the database.
-writeFileSync(join(DIR, 'archive.json'), JSON.stringify({ at: now, items: merged.map((i) => ({ ...i, text: clip(i.text, 300) })), keys }));
+const writeArchive = (withTopics: (i: Item) => Item = (i) => i) =>
+  writeFileSync(join(DIR, 'archive.json'), JSON.stringify({ at: now, items: merged.map((i) => withTopics({ ...i, text: clip(i.text, 300) })), keys }));
+writeArchive();
 // Translation of what the app gets: headlines and excerpts of the last 72 hours, newest first.
 const translations = read<TrCache>('translations.json', {});
 const recent = merged.filter((i) => now - i.time < 3 * DAY).slice(0, 1500);
@@ -87,7 +91,22 @@ if (process.env.TRANSLATE !== '0') {
   writeFileSync(join(DIR, 'translations.json'), JSON.stringify(translations));
   console.log(`Translation: ${tr.translated} texts translated, ${tr.refused} refused, ${tr.waiting} waiting, ${tr.chars} characters`);
 }
-const latest = recent.map((i) => withTranslations({ ...i, text: clip(i.text, 300) }, translations));
+// Topics by meaning (embed.ts), on the own server with EMBED=1: the model reads the English translations.
+// A failure here never loses the round, the reports go out without topics and INTEL groups them by words.
+const topics = read<EmbedState>('embeddings.json', {});
+if (process.env.EMBED === '1') {
+  try {
+    const embed = await loadEmbedder(join(DIR, 'models'));
+    const r = await assignTopics(recent.map((i) => withTranslations(i, translations)), topics, { embed, now });
+    writeFileSync(join(DIR, 'embeddings.json'), JSON.stringify(topics));
+    run.topics = r;
+    console.log(`Topics: ${r.embedded} reports embedded, ${r.joined} joined a topic`);
+  } catch (e) {
+    console.log(`WARN topics not assigned: ${e instanceof Error ? e.message : String(e)}`);
+  }
+}
+if (Object.keys(topics).length) writeArchive((i) => withTopic(i, topics));
+const latest = recent.map((i) => withTopic(withTranslations({ ...i, text: clip(i.text, 300) }, translations), topics));
 writeFileSync(join(DIR, 'latest.json'), JSON.stringify({ at: now, items: latest }));
 
 // Reference for the benchmark of Now (benchmark.ts): once an hour the top headlines of Tagesschau, ntv and Spiegel.
@@ -127,7 +146,7 @@ for (const w of health.warnings) console.log(`WARN ${w}`);
 if (process.env.DATABASE_URL) {
   try {
     // The reports the sources show right now: new ones are added, changed ones updated. The 7 day archive is in the database already.
-    const roundItems = results.flatMap((r) => r.items).map((i) => withTranslations(i, translations));
+    const roundItems = results.flatMap((r) => r.items).map((i) => withTopic(withTranslations(i, translations), topics));
     const db = await storeRound(process.env.DATABASE_URL, { run, items: roundItems, seen: (i) => seenBefore.get(itemKey(i)) ?? i.seen ?? now });
     console.log(`Database: ${db.reports} reports written`);
   } catch (e) {
