@@ -4,6 +4,11 @@ Alle wesentlichen Änderungen am Modul AIR. [English](CHANGELOG.md) · [Changelo
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.4.0 (2026-10-09)
+
+### Neu
+* Der Verkehr folgt der Karte: Nach dem Verschieben oder Zoomen in ein Gebiet fern deines Standorts lädt AIR auch den Verkehr dort, bis etwa 460 km um die Kartenmitte. Listen und Hinweise bleiben bei deinem Standort.
+
 ## 0.3.1 (2026-10-05)
 
 ### Neu

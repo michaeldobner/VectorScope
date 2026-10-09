@@ -208,6 +208,24 @@ a {
 .filters::-webkit-scrollbar {
   display: none;
 }
+/* A desktop has no swipe: the chips wrap instead of scrolling out of reach. */
+.wide .filters {
+  flex-wrap: wrap;
+  overflow-x: visible;
+}
+.filters.parties {
+  padding-top: 0;
+  align-items: center;
+}
+.filters-label {
+  flex: none;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-right: 2px;
+}
 .chip {
   flex: none;
   height: 30px;

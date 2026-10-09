@@ -5,6 +5,9 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { PROXY, loadSource, pool } from '../intel/src/data/feed';
 import { SOURCES } from '../intel/src/data/sources';
 import type { Item } from '../intel/src/data/types';
+import { TARGETS, type Target } from '../intel/src/data/lang';
+import { translateAll } from '../proxy/lib/translate.js';
+import { textsOf } from '../collector/translate';
 
 const OUT = 'lab-out';
 mkdirSync(OUT, { recursive: true });
@@ -63,6 +66,28 @@ for (let b = 0; b < 5; b++) {
 const g = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=de&dt=t&q=' + encodeURIComponent('Взрыв в Воронеже'), { headers: ORIGIN }).catch(() => null);
 const googleDirect = { status: g?.status ?? 0, cors: g?.headers.get('access-control-allow-origin') ?? null, body: g ? (await g.text()).slice(0, 120) : '' };
 
+// 5. Translation like the collector does it (collector/translate.ts, variant A): the reports of the last 24 hours
+// of the collector, every text that needs English or German, translated directly at Google in rounds of 150.
+const collector = await fetch('https://raw.githubusercontent.com/michaeldobner/VectorScope/collector-data/latest.json')
+  .then((r) => r.json())
+  .catch(() => ({ items: [] as Item[] }));
+const day = (collector.items as Item[]).filter((i) => Date.now() - i.time < 24 * 3600_000);
+const volume: { target: Target; texts: number; chars: number; translated: number; refused: number; ms: number }[] = [];
+for (const target of TARGETS) {
+  const texts = [...new Set(day.flatMap((i) => textsOf(i, target)))];
+  const sample = texts.slice(0, 150);
+  const t = Date.now();
+  const out = await translateAll(sample, target).catch(() => sample.map(() => null));
+  volume.push({
+    target,
+    texts: texts.length,
+    chars: texts.reduce((n, x) => n + x.length, 0),
+    translated: out.filter((x, i) => x && x !== sample[i]).length,
+    refused: out.filter((x, i) => !x || x === sample[i]).length,
+    ms: Date.now() - t,
+  });
+}
+
 const lines = [
   `# QA ${new Date().toISOString()}`,
   '',
@@ -90,7 +115,13 @@ const lines = [
   ...translation.map((t) => `| ${t.batch} | ${t.status} | ${t.ms} | ${t.sent} | ${t.translated} | ${t.untouched} | ${t.error ?? ''} |`),
   '',
   `Google directly from a browser: HTTP ${googleDirect.status}, CORS ${googleDirect.cors}, ${googleDirect.body}`,
+  '',
+  `## Translation in the collector, ${day.length} reports of the last 24 hours`,
+  '',
+  '| Target | Texts a day | Characters a day | Sample translated | Refused | ms |',
+  '|---|---|---|---|---|---|',
+  ...volume.map((v) => `| ${v.target} | ${v.texts} | ${v.chars} | ${v.translated} | ${v.refused} | ${v.ms} |`),
 ];
 writeFileSync(`${OUT}/qa.md`, lines.join('\n') + '\n');
-writeFileSync(`${OUT}/qa.json`, JSON.stringify({ rounds, burst, translation, googleDirect }, null, 2));
+writeFileSync(`${OUT}/qa.json`, JSON.stringify({ rounds, burst, translation, googleDirect, volume }, null, 2));
 console.log(lines.slice(0, 5).join('\n'));

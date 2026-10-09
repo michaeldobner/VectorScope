@@ -1,6 +1,6 @@
 {
   "name": "VectorScope",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "shared": {
     "version": "1.0.0"
   },
@@ -10,7 +10,7 @@
       "code": "AIR",
       "name": "Airspace",
       "status": "live",
-      "version": "0.3.1",
+      "version": "0.4.0",
       "path": "air/",
       "description": {
         "en": "Live aviation radar: what is flying above you, what passes over next, what is worth a look.",
@@ -22,7 +22,7 @@
       "code": "INTEL",
       "name": "Intelligence feed",
       "status": "live",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "path": "intel/",
       "description": {
         "en": "OSINT posts and defence news from verified sources, matched to aircraft in the air right now.",

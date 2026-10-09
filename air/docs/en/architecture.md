@@ -54,7 +54,7 @@ src/
 
 ## Data flow of one update
 
-1. `traffic.ts` calls `fetchNearby(lat, lon, radius)` every `pollSec` seconds while the page is visible.
+1. `traffic.ts` calls `fetchNearby(lat, lon, radius)` every `pollSec` seconds while the page is visible. If the map shows an area the own query does not cover (`setView` after every pan or zoom), a second `fetchNearby` around the middle of the map follows, at most 250 nm, and both lists are joined.
 2. `feed.ts` chooses the transport. In **auto** mode it tries adsb.lol directly. If the browser blocks the request (CORS) or adsb.lol answers 403 and a proxy is configured, it switches to the proxy and remembers this for the session.
 3. `adsblol.ts` normalises the readsb JSON into `Aircraft` objects: upper-case hex, altitude in feet or `onGround`, position source, time of the position.
 4. `ingest()` in `traffic.ts` builds the new aircraft map. For each aircraft it

@@ -33,7 +33,7 @@ The layout follows the space actually available, so it also adapts in Split View
 | **◆** | Show only interesting aircraft. Regular traffic is hidden |
 | Tap an aircraft | Opens the inspector. The aircraft gets a halo, its track and a dashed projection for the next three minutes |
 | Tap empty map | Closes the inspector |
-| Pinch, drag | Zoom and pan. The map does not rotate, north is always up |
+| Pinch, drag | Zoom and pan. The map does not rotate, north is always up. Shows the map an area away from your position, AIR loads the traffic there too, up to about 460 km around the middle of the map (since AIR 0.4.0). The lists and alerts stay with your position |
 
 ## Reading the map
 

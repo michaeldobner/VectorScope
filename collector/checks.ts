@@ -9,6 +9,8 @@ export interface RunRecord {
   at: number;
   ms: number;
   sources: Record<string, { ok: boolean; items: number; fresh: number; error?: string }>;
+  /** Texts translated in this round, refused by Google, still waiting, characters sent (collector/translate.ts). */
+  translation?: { translated: number; refused: number; waiting: number; chars: number };
 }
 
 export interface SourceHealth {

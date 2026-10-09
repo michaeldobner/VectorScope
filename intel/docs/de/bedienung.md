@@ -112,9 +112,11 @@ Jede Quelle hat einen Statuspunkt (blau: hat geantwortet, rot: fehlgeschlagen, h
 
 Am Ende dieses Bereichs steht die Version von INTEL.
 
-## Deutsch
+## Sprache der Meldungen
 
-**DE** oben rechts übersetzt Überschriften und Auszüge ins Deutsche, auch die Meldungen einer Story und die Überschriften unter Live now. Übersetzt wird nur, was auf dem Bildschirm steht, jede Übersetzung bleibt auf dem Gerät gespeichert. Deutsche Quellen bleiben, wie sie sind. Die Übersetzung kommt von Google Translate, direkt vom Gerät und nur ersatzweise über den Proxy, ohne Schlüssel und ohne Garantie: Lehnt Google ab, bleibt der Originaltext stehen, und INTEL versucht es später erneut, mit jedem Mal etwas länger Pause bis zu fünf Minuten. Callsigns, Typen und Orte werden immer im Original erkannt.
+Der Schalter oben rechts wählt die Sprache der Meldungen, ein Tipp schaltet weiter: **ORIG** zeigt jede Meldung, wie sie kam, **EN** alles auf Englisch, **DE** alles auf Deutsch. Die Oberfläche bleibt Englisch. Die Sprache wird pro Meldung erkannt, nicht pro Quelle: Ein russisches Zitat in einem deutschen Kanal wird übersetzt, eine deutsche Überschrift bleibt in DE deutsch.
+
+Seit INTEL 0.10.0 übersetzt der Sammler jede Überschrift und jeden Auszug einmal ins Englische und Deutsche (`collector/translate.ts`) und gibt die Übersetzungen mit seinen Daten an die App. Sie erscheinen sofort, auf jedem Gerät, ohne eigene Anfrage. Nur eine Meldung, die der Sammler noch nicht kennt, etwa ein Beitrag der letzten Minuten, übersetzt das Gerät selbst: direkt bei Google Translate, ersatzweise über den Proxy. Die Übersetzung kommt vom öffentlichen Google-Zugang (Variante A), ohne Schlüssel und ohne Garantie: Lehnt Google ab, bleibt der Originaltext stehen und wird später erneut angefragt. Callsigns, Typen und Orte werden immer im Original erkannt.
 
 ## Aktualisierung
 

@@ -1,10 +1,10 @@
 import maplibregl, { type GeoJSONSource, type Map as MLMap } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { useEffect, useRef } from 'react';
-import { circleRing, destination, project } from '../geo/geo';
+import { circleRing, destination, distanceM, project } from '../geo/geo';
 import { altitudeShort, KT_TO_MPS } from '../lib/format';
 import { useSettings, getSettings } from '../state/settings';
-import { displayPosition, getTraffic, select, selectedTracked, useTraffic, type Tracked } from '../state/traffic';
+import { displayPosition, getTraffic, select, selectedTracked, setView, useTraffic, type Tracked } from '../state/traffic';
 import { C, TONE_COLOR } from '../ui/tokens';
 import { heliImage, planeImage } from './icons';
 import { FONT, FONT_BOLD, baseStyle } from './style';
@@ -200,6 +200,13 @@ export function MapView({ padding, pickMode, onPick, recenterSignal }: Props) {
     map.on('error', () => {
       // A missing basemap must not take the overlays down with it.
       if (!ready.current) setTimeout(setup, 0);
+    });
+
+    // Traffic follows the map: after panning or zooming the visible area is loaded as well.
+    map.on('moveend', () => {
+      const c = map.getCenter();
+      const ne = map.getBounds().getNorthEast();
+      setView({ lat: c.lat, lon: c.lng }, distanceM({ lat: c.lat, lon: c.lng }, { lat: ne.lat, lon: ne.lng }) / 1000);
     });
 
     map.on('click', (e) => {

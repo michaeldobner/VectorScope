@@ -4,6 +4,16 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.10.0 (2026-10-09)
+
+### Neu
+* **Sprache der Meldungen:** Der Schalter oben rechts wählt ORIG (wie sie kamen), EN (alles auf Englisch) oder DE (alles auf Deutsch). Die Oberfläche bleibt Englisch. Ersetzt den Schalter DE, eine Wahl für Deutsch bleibt erhalten.
+* Die Sprache wird pro Meldung erkannt (Schrift, Umlaute, häufige Wörter), nicht pro Quelle.
+* Übersetzungen kommen vom Sammler, einmal für jedes Gerät gemacht, und erscheinen sofort. Das Gerät übersetzt nur Meldungen, die der Sammler noch nicht kennt.
+
+### Behoben
+* Fraktions-Chips in eigener Zeile. Auf dem Computer scrollte die Filterzeile seitlich ohne Bildlaufleiste, Grüne und Linke waren nicht erreichbar. Auf breiten Bildschirmen brechen die Chips um.
+
 ## 0.9.0 (2026-10-08)
 
 ### Neu

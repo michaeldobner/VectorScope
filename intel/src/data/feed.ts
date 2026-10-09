@@ -173,7 +173,9 @@ export function mergeItems(items: Item[], now: number): Item[] {
     const rss = prev.channel === 'rss' ? prev : item.channel === 'rss' ? item : prev;
     const post = prev.channel === 'bluesky' ? prev : item.channel === 'bluesky' ? item : undefined;
     const seen = Math.min(prev.seen ?? Infinity, item.seen ?? Infinity);
-    byKey.set(key, { ...rss, postUrl: rss.postUrl ?? post?.postUrl, time: Math.min(prev.time, item.time), ...(Number.isFinite(seen) ? { seen } : {}) });
+    // The translations of the collector stay, whichever copy came first.
+    const tr = rss.tr ?? prev.tr ?? item.tr;
+    byKey.set(key, { ...rss, postUrl: rss.postUrl ?? post?.postUrl, time: Math.min(prev.time, item.time), ...(Number.isFinite(seen) ? { seen } : {}), ...(tr ? { tr } : {}) });
   }
   return [...byKey.values()].sort((a, b) => b.time - a.time);
 }

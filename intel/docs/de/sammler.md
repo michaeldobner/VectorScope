@@ -21,7 +21,8 @@ Das Skript ist `collector/collect.ts`. Es nutzt dieselben Lade-, Lese- und Zusam
 
 | Datei | Inhalt | Genutzt von |
 |---|---|---|
-| `latest.json` | Meldungen der letzten 72 Stunden, Auszüge gekürzt | INTEL im Browser |
+| `latest.json` | Meldungen der letzten 72 Stunden, Auszüge gekürzt, mit ihren Übersetzungen in `tr.en` und `tr.de` | INTEL im Browser |
+| `translations.json` | Jede Überschrift und jeder Auszug mit englischer und deutscher Übersetzung, 30 Tage aufbewahrt. Bis zu 150 neue Texte pro Sprache und Runde, die neuesten zuerst, abgelehnte Texte werden bis zu dreimal erneut angefragt. `TRANSLATE=0` schaltet es ab | Der Sammler selbst |
 | `archive.json` | Jede Meldung der letzten 7 Tage | Auswertung |
 | `stats.json` | Ein Eintrag pro Runde: je Quelle ok, Zahl der Meldungen, neue Meldungen der letzten 24 Stunden, Fehler | Auswertung, Prüfungen |
 | `health.json` | Prüfungen nach jeder Runde: ausgefallene und stille Quellen, Lücken, Meldungen, die eine Annahme verletzen | Überwachung |

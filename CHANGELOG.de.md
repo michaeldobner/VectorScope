@@ -4,6 +4,13 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.15.0 (2026-10-09)
+
+### Neu
+* Der Sammler übersetzt jede Überschrift und jeden Auszug der letzten 72 Stunden einmal ins Englische und Deutsche (`collector/translate.ts`, öffentlicher Google-Zugang), hält sie in `translations.json` und gibt sie INTEL in `latest.json` und der Datenbank.
+* Test-Labor misst die Übersetzung des Sammlers: Texte und Zeichen am Tag pro Sprache, wie viele Google ablehnt.
+* Modul AIR 0.4.0 und INTEL 0.10.0, siehe ihre Changelogs.
+
 ## 0.14.0 (2026-10-08)
 
 ### Neu

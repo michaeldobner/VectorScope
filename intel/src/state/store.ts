@@ -12,6 +12,8 @@ import { SOURCES } from '../data/sources';
 import { kindOf } from '../data/kinds';
 import { isAirTrack } from '../data/alerts';
 import type { EnrichedItem, Item, Lens } from '../data/types';
+import type { ReportLang } from '../data/lang';
+import { learnTranslations } from './translate';
 
 const LIVE_SOURCES = SOURCES.filter((s) => !s.collectorOnly);
 
@@ -36,7 +38,8 @@ export interface Prefs {
   signal: boolean;
   pulse: Pulse;
   /** Show headlines and excerpts in German. */
-  german: boolean;
+  /** Reports as they came, all in English or all in German. The interface stays English. */
+  reports: ReportLang;
   filter: Filter;
   /** Place name the list is narrowed to, or null. */
   place: string | null;
@@ -80,8 +83,11 @@ function writeJson(key: string, value: unknown) {
   }
 }
 
-const storedPrefs = readJson<Partial<Prefs>>(PREFS_KEY);
-const prefs: Prefs = { view: 'stories', lens: 'security', actor: null, signal: true, pulse: null, german: false, filter: 'all', place: null, lastSeen: 0, ...storedPrefs };
+const storedPrefs = readJson<Partial<Prefs> & { german?: boolean }>(PREFS_KEY);
+const { german: wasGerman, ...kept } = storedPrefs ?? {};
+const prefs: Prefs = { view: 'stories', lens: 'security', actor: null, signal: true, pulse: null, reports: wasGerman ? 'de' : 'original', filter: 'all', place: null, lastSeen: 0, ...kept };
+// The switch DE of earlier versions becomes the choice German.
+if (!['original', 'en', 'de'].includes(prefs.reports)) prefs.reports = 'original';
 // Filters of earlier versions ("aviation", "breaking") become "all".
 if (!/^(all|live|[rc]:[a-z]+)$/.test(prefs.filter)) prefs.filter = 'all';
 
@@ -170,6 +176,7 @@ export async function refreshFeed() {
     const own = (collected?.items ?? []).filter((i) => i.sourceId === s.id);
     sources[s.id] = { ok: own.length > 0, newest: own.length ? Math.max(...own.map((i) => i.time)) : null, count: own.length };
   }
+  if (collected) learnTranslations(collected.items);
   const known = new Set(SOURCES.map((s) => s.id));
   // Earlier reports stay: a channel shows only its last posts, and an item that scrolled out is still news.
   const merged = mergeItems([...rawItems.filter((i) => known.has(i.sourceId)), ...results.flatMap((r) => r.items), ...(collected?.items ?? []).filter((i) => known.has(i.sourceId))], now);
@@ -199,6 +206,7 @@ export function startIntel() {
   const cached = demo ? null : readJson<{ at: number; items: Item[] }>(CACHE_KEY);
   if (cached?.items?.length) {
     rawItems = cached.items;
+    learnTranslations(rawItems);
     emit({ ...derive(rawItems, [], Date.now()), updated: cached.at });
   }
   refreshLive().then(refreshFeed);

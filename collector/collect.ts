@@ -10,6 +10,7 @@
 //   stats.json       one record per round: per source ok, items, new items, error
 //   health.json      checks: failing or silent sources, reports that break an assumption
 //   raw-state.json   which raw units are known, with their fingerprint
+//   translations.json  every headline and excerpt in English and German, see translate.ts (TRANSLATE=0 turns it off)
 // Raw folder (published on the branch collector-raw, only grows): raw/YYYY/MM/DD/HHMM.jsonl.gz,
 // every answer of every source split into units, new or changed units only. See intel/docs/en/raw-data.md
 import { appendFileSync, existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -18,6 +19,7 @@ import { itemKey, loadLive, loadSource, mergeItems, pool, type RawResponse } fro
 import { writeLegacy, writeRawRound } from './archive-raw';
 import { checkHealth, healthMarkdown, type RunRecord } from './checks';
 import { storeRound } from './store';
+import { translateMissing, withTranslations, type TrCache } from './translate';
 import { detectAll } from '../intel/src/data/sensor';
 import { SOURCES } from '../intel/src/data/sources';
 import { clip } from '../intel/src/data/text';
@@ -73,10 +75,16 @@ const merged = mergeItems([...archive.items, ...results.flatMap((r) => r.items).
 mkdirSync(DIR, { recursive: true });
 const keys = Object.fromEntries([...seenBefore].filter(([, seen]) => now - seen < 30 * DAY));
 writeFileSync(join(DIR, 'archive.json'), JSON.stringify({ at: now, items: merged, keys }));
-const latest = merged
-  .filter((i) => now - i.time < 3 * DAY)
-  .slice(0, 1500)
-  .map((i) => ({ ...i, text: clip(i.text, 300) }));
+// Translation of what the app gets: headlines and excerpts of the last 72 hours, newest first.
+const translations = read<TrCache>('translations.json', {});
+const recent = merged.filter((i) => now - i.time < 3 * DAY).slice(0, 1500);
+if (process.env.TRANSLATE !== '0') {
+  const tr = await translateMissing(recent, translations, { now });
+  run.translation = tr;
+  writeFileSync(join(DIR, 'translations.json'), JSON.stringify(translations));
+  console.log(`Translation: ${tr.translated} texts translated, ${tr.refused} refused, ${tr.waiting} waiting, ${tr.chars} characters`);
+}
+const latest = recent.map((i) => withTranslations({ ...i, text: clip(i.text, 300) }, translations));
 writeFileSync(join(DIR, 'latest.json'), JSON.stringify({ at: now, items: latest }));
 stats.runs = [...stats.runs.filter((r) => now - r.at < 8 * DAY), run];
 writeFileSync(join(DIR, 'stats.json'), JSON.stringify(stats));
@@ -104,7 +112,7 @@ for (const w of health.warnings) console.log(`WARN ${w}`);
 if (process.env.DATABASE_URL) {
   try {
     // The reports the sources show right now: new ones are added, changed ones updated. The 7 day archive is in the database already.
-    const roundItems = results.flatMap((r) => r.items);
+    const roundItems = results.flatMap((r) => r.items).map((i) => withTranslations(i, translations));
     const db = await storeRound(process.env.DATABASE_URL, { run, items: roundItems, seen: (i) => seenBefore.get(itemKey(i)) ?? i.seen ?? now });
     console.log(`Database: ${db.reports} reports written`);
   } catch (e) {

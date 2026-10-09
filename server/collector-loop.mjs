@@ -27,7 +27,7 @@ mkdirSync(rawDir, { recursive: true });
 
 async function seed() {
   if (!seedFrom || existsSync(join(dataDir, 'archive.json'))) return;
-  for (const file of ['archive.json', 'stats.json', 'raw-state.json']) {
+  for (const file of ['archive.json', 'stats.json', 'raw-state.json', 'translations.json']) {
     try {
       const r = await fetch(`${seedFrom}/${file}`);
       if (!r.ok) throw new Error(`HTTP ${r.status}`);

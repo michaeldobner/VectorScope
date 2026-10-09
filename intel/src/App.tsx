@@ -4,6 +4,7 @@ import { CAPITALS, DECISION, actorById, capitalsOf, type CapitalId } from './dat
 import { bridgesFor } from './data/bridges';
 import { storyInLens } from './data/lens';
 import { KIND_LABEL } from './data/kinds';
+import type { ReportLang } from './data/lang';
 import { isStrong } from './data/match';
 import { PARTIES, PARTY_ORDER, memberParty, shortName, type PartyId } from './data/parties';
 import { voicesOf } from './data/voices';
@@ -11,7 +12,7 @@ import { REGION_LABEL, SOURCES, TIER_LABEL, sourceById, type Category, type Regi
 import { independentCount, rankStories, type Status, type Story } from './data/stories';
 import type { EnrichedItem, Lens, Match } from './data/types';
 import { refreshFeed, refreshLive, setPrefs, useIntel, type Filter, type IntelState, type Pulse } from './state/store';
-import { TranslateContext, german, useTr, useTranslationVersion } from './state/translate';
+import { TranslateContext, translate, useTr, useTranslationVersion } from './state/translate';
 import { age, ago, altitude, clock, count, duration, km } from './ui/format';
 import { useWide } from './ui/useWide';
 
@@ -21,8 +22,15 @@ type Tab = 'main' | 'live' | 'more';
 const HOUR = 3600_000;
 const tierOf = (i: EnrichedItem): Tier => sourceById(i.sourceId)?.tier ?? 'early';
 const TIER_ORDER: Tier[] = ['physical', 'primary', 'early', 'osint', 'specialist', 'perspective', 'confirming'];
-/** Class label in the language of the interface: English, or German when DE is on. */
-const tierLabel = (t: Tier, german: boolean) => TIER_LABEL[t][german ? 'de' : 'en'];
+/** Class label: the interface is English, whatever language the reports are shown in. */
+const tierLabel = (t: Tier) => TIER_LABEL[t].en;
+/** The language switch of the reports: original, English, German, and round again. */
+const NEXT_LANG: Record<ReportLang, ReportLang> = { original: 'en', en: 'de', de: 'original' };
+const LANG_LABEL: Record<ReportLang, { short: string; title: string }> = {
+  original: { short: 'ORIG', title: 'in their original language' },
+  en: { short: 'EN', title: 'all in English' },
+  de: { short: 'DE', title: 'all in German' },
+};
 const pct = (x: number) => `${Math.round(x * 100)} %`;
 const sourceName = (id: string) => sourceById(id)?.name ?? 'Demo';
 
@@ -40,9 +48,10 @@ export function App() {
       ),
     [st, lens],
   );
-  // Re-render when translations arrive. The function hands out German text where it is known.
+  // Re-render when translations arrive. The function hands out the text in the chosen language where it is known.
   const trVersion = useTranslationVersion();
-  const tr = useMemo(() => (st.prefs.german ? german : (t: string) => t), [st.prefs.german, trVersion]);
+  const reports = st.prefs.reports;
+  const tr = useMemo(() => (reports === 'original' ? (t: string) => t : (t: string, s: string) => translate(t, s, reports)), [reports, trVersion]);
 
   return (
     <TranslateContext.Provider value={tr}>
@@ -189,8 +198,13 @@ function TopBar({ st }: { st: IntelState }) {
       <span className={`status status-${status.toLowerCase()}`}>
         <i /> {status}
       </span>
-      <button className={`icon-btn lang ${st.prefs.german ? 'on' : ''}`} onClick={() => setPrefs({ german: !st.prefs.german })} aria-pressed={st.prefs.german} aria-label="Translate to German" title="Translate to German">
-        DE
+      <button
+        className={`icon-btn lang ${st.prefs.reports !== 'original' ? 'on' : ''}`}
+        onClick={() => setPrefs({ reports: NEXT_LANG[st.prefs.reports] })}
+        aria-label={`Reports: ${LANG_LABEL[st.prefs.reports].title}. Tap for ${LANG_LABEL[NEXT_LANG[st.prefs.reports]].title}`}
+        title={`Reports ${LANG_LABEL[st.prefs.reports].title}. Tap for ${LANG_LABEL[NEXT_LANG[st.prefs.reports]].title}`}
+      >
+        {LANG_LABEL[st.prefs.reports].short}
       </button>
       <button className={`icon-btn ${st.loading ? 'spin' : ''}`} onClick={() => refreshLive().then(refreshFeed)} aria-label="Refresh">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">
@@ -225,52 +239,59 @@ function Filters({ st }: { st: IntelState }) {
   const liveCount = st.stories.filter((s) => s.items.some((i) => i.matches.some(isStrong))).length;
   const politics = st.prefs.lens === 'politics';
   return (
-    <div className="filters" role="toolbar" aria-label="Filter">
-      {/* First, so they are visible on a phone: tapping a place, an actor or a capital sets them. */}
-      {st.prefs.actor && (
-        <button className="chip on place" onClick={() => setPrefs({ actor: null })} aria-label={`Remove actor filter ${actorLabel(st.prefs.actor)}`}>
-          ◉ {actorLabel(st.prefs.actor)} ✕
-        </button>
-      )}
-      {st.prefs.place && (
-        <button className="chip on place" onClick={() => setPrefs({ place: null })} aria-label={`Remove place filter ${st.prefs.place}`}>
-          ◎ {st.prefs.place} ✕
-        </button>
-      )}
-      {politics && (
-        <button
-          className={`chip ${st.prefs.signal ? 'on' : ''}`}
-          onClick={() => setPrefs({ signal: !st.prefs.signal })}
-          aria-pressed={st.prefs.signal}
-          title="Signal: only stories with an original statement or at least two independent sources. Off: everything"
-        >
-          {st.prefs.signal ? 'Signal' : 'Everything'}
-        </button>
-      )}
-      {filtersOf(st.prefs.lens).map((f) => (
-        <button
-          key={f.key}
-          className={`chip ${st.prefs.filter === f.key && !(f.key === 'all' && (st.prefs.place || st.prefs.actor)) ? 'on' : ''} ${f.key === 'live' ? 'chip-live' : ''}`}
-          // All means everything: it also removes a place or actor filter.
-          onClick={() => setPrefs(f.key === 'all' ? { filter: 'all', place: null, actor: null } : { filter: f.key })}
-        >
-          {f.key === 'live' && liveCount ? `${f.label} ${liveCount}` : f.label}
-        </button>
-      ))}
-      {politics &&
-        PARTY_ORDER.filter((p) => p !== 'fl').map((p) => (
+    <>
+      <div className="filters" role="toolbar" aria-label="Filter">
+        {/* First, so they are visible on a phone: tapping a place, an actor or a capital sets them. */}
+        {st.prefs.actor && (
+          <button className="chip on place" onClick={() => setPrefs({ actor: null })} aria-label={`Remove actor filter ${actorLabel(st.prefs.actor)}`}>
+            ◉ {actorLabel(st.prefs.actor)} ✕
+          </button>
+        )}
+        {st.prefs.place && (
+          <button className="chip on place" onClick={() => setPrefs({ place: null })} aria-label={`Remove place filter ${st.prefs.place}`}>
+            ◎ {st.prefs.place} ✕
+          </button>
+        )}
+        {politics && (
           <button
-            key={p}
-            className={`chip party ${st.prefs.actor === `party:${p}` ? 'on' : ''}`}
-            style={{ '--party': PARTIES[p].color } as CSSProperties}
-            onClick={() => setPrefs({ actor: st.prefs.actor === `party:${p}` ? null : `party:${p}`, pulse: null })}
-            aria-pressed={st.prefs.actor === `party:${p}`}
-            title={`Members of ${PARTIES[p].label}: their own posts and reports naming them`}
+            className={`chip ${st.prefs.signal ? 'on' : ''}`}
+            onClick={() => setPrefs({ signal: !st.prefs.signal })}
+            aria-pressed={st.prefs.signal}
+            title="Signal: only stories with an original statement or at least two independent sources. Off: everything"
           >
-            {PARTIES[p].label}
+            {st.prefs.signal ? 'Signal' : 'Everything'}
+          </button>
+        )}
+        {filtersOf(st.prefs.lens).map((f) => (
+          <button
+            key={f.key}
+            className={`chip ${st.prefs.filter === f.key && !(f.key === 'all' && (st.prefs.place || st.prefs.actor)) ? 'on' : ''} ${f.key === 'live' ? 'chip-live' : ''}`}
+            // All means everything: it also removes a place or actor filter.
+            onClick={() => setPrefs(f.key === 'all' ? { filter: 'all', place: null, actor: null } : { filter: f.key })}
+          >
+            {f.key === 'live' && liveCount ? `${f.label} ${liveCount}` : f.label}
           </button>
         ))}
-    </div>
+      </div>
+      {/* Own row: at the end of the first row a desktop without touch could not reach them. */}
+      {politics && (
+        <div className="filters parties" role="toolbar" aria-label="Fractions of the Bundestag">
+          <span className="filters-label">Bundestag</span>
+          {PARTY_ORDER.filter((p) => p !== 'fl').map((p) => (
+            <button
+              key={p}
+              className={`chip party ${st.prefs.actor === `party:${p}` ? 'on' : ''}`}
+              style={{ '--party': PARTIES[p].color } as CSSProperties}
+              onClick={() => setPrefs({ actor: st.prefs.actor === `party:${p}` ? null : `party:${p}`, pulse: null })}
+              aria-pressed={st.prefs.actor === `party:${p}`}
+              title={`Members of ${PARTIES[p].label}: their own posts and reports naming them`}
+            >
+              {PARTIES[p].label}
+            </button>
+          ))}
+        </div>
+      )}
+    </>
   );
 }
 
@@ -421,7 +442,6 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
   const strong = uniqueMatches(story.items.flatMap((i) => i.matches.filter(isStrong)));
   const entities = mergeEntities(story.items);
   const tiers = TIER_ORDER.filter((t) => story.tiers[t]);
-  const german = st.prefs.german;
   const kinds = [...new Set(story.items.map((i) => i.kind).filter((k) => !!k))] as NonNullable<EnrichedItem['kind']>[];
   const voices = st.prefs.lens === 'politics' ? voicesOf(story.items) : [];
   return (
@@ -432,7 +452,7 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
           {STATUS_LABEL[story.status]}
         </span>
         {kinds.map((k) => (
-          <KindBadge key={k} kind={k} german={german} />
+          <KindBadge key={k} kind={k} />
         ))}
         <span className="src">{n > 1 ? `${n} sources` : sourceName(lead.sourceId)}</span>
         <span className="conf" title="Event confidence from the classes and trust of the independent sources">
@@ -462,7 +482,7 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
           <div className="ladder">
             {tiers.map((t) => (
               <span key={t} className={`tier t-${t}`}>
-                {story.tiers[t]} {tierLabel(t, german).toLowerCase()}
+                {story.tiers[t]} {tierLabel(t).toLowerCase()}
               </span>
             ))}
             {story.echoes.length > 0 && (
@@ -538,7 +558,7 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
                 <li key={i.id}>
                   <span className="t">{clock(i.time)}</span>
                   <span className={`dot-tier t-${tierOf(i)}`} />
-                  {i.kind && <span title={KIND_LABEL[i.kind][german ? 'de' : 'en']}>{KIND_LABEL[i.kind].icon}</span>}
+                  {i.kind && <span title={KIND_LABEL[i.kind].en}>{KIND_LABEL[i.kind].icon}</span>}
                   <span className="who">
                     {sourceName(i.sourceId)}
                     {story.echoItems.includes(i.id) && <span className="echo-mark"> echo</span>}
@@ -556,10 +576,10 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
   );
 }
 
-function KindBadge({ kind, german }: { kind: NonNullable<EnrichedItem['kind']>; german: boolean }) {
+function KindBadge({ kind }: { kind: NonNullable<EnrichedItem['kind']> }) {
   return (
     <span className={`kind k-${kind}`}>
-      {KIND_LABEL[kind].icon} {KIND_LABEL[kind][german ? 'de' : 'en']}
+      {KIND_LABEL[kind].icon} {KIND_LABEL[kind].en}
     </span>
   );
 }
@@ -681,7 +701,6 @@ const CHANNEL_LABEL = { bluesky: 'Bluesky', rss: 'RSS', telegram: 'Telegram', se
 
 function ItemCard({ item, isNew }: { item: EnrichedItem; isNew: boolean }) {
   const tr = useTr();
-  const german = useIntel().prefs.german;
   const src = sourceById(item.sourceId);
   const strong = item.matches.filter(isStrong);
   const weak = item.matches.filter((m) => !isStrong(m));
@@ -691,10 +710,10 @@ function ItemCard({ item, isNew }: { item: EnrichedItem; isNew: boolean }) {
     <li className={`item ${strong.length ? 'has-live' : ''}`}>
       <div className="item-meta">
         {isNew && <span className="new-dot" aria-label="new" />}
-        {item.kind && <KindBadge kind={item.kind} german={german} />}
+        {item.kind && <KindBadge kind={item.kind} />}
         <span className="src">{src?.name ?? 'Demo'}</span>
         {src?.party && <PartyTag party={src.party} />}
-        {src && <span className={`tier t-${src.tier}`}>{tierLabel(src.tier, german)}</span>}
+        {src && <span className={`tier t-${src.tier}`}>{tierLabel(src.tier)}</span>}
         <span className="sep">·</span>
         <span>{CHANNEL_LABEL[item.channel]}</span>
         <span className="age">{age(item.time)}</span>
@@ -878,7 +897,7 @@ function SourceRow({ s, st }: { s: Source; st: IntelState }) {
             : `${REGION_LABEL[s.region]} · trust ${s.trust}${s.perspective ? ` · ${s.perspective}` : ''}${s.party ? ` · ${PARTIES[s.party].label}` : ''}${viaCollector ? ' · through the collector' : ''}`}
         </span>
       </span>
-      <span className={`tier t-${s.tier}`}>{tierLabel(s.tier, st.prefs.german)}</span>
+      <span className={`tier t-${s.tier}`}>{tierLabel(s.tier)}</span>
       <span className="n">{status?.newest ? age(status.newest) : status && !status.ok && !viaCollector ? 'error' : ''}</span>
     </li>
   );
@@ -979,7 +998,9 @@ function SourcesPanel({ st }: { st: IntelState }) {
       <p className="note">
         {st.collectedAt ? `Collector last ran ${ago(st.collectedAt)}. ` : ''}Headlines and short excerpts link to the original publisher. Live aircraft © adsb.lol contributors, ODbL.
       </p>
-      {st.prefs.german && <p className="note">German translations by Google Translate (unofficial), cached on this device.</p>}
+      {st.prefs.reports !== 'original' && (
+        <p className="note">Translations by Google Translate (unofficial), made once by the collector, recent reports on this device.</p>
+      )}
       <p className="note version">VectorScope INTEL v{__APP_VERSION__}</p>
     </section>
   );

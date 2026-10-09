@@ -54,7 +54,7 @@ src/
 
 ## Datenfluss einer Aktualisierung
 
-1. `traffic.ts` ruft alle `pollSec` Sekunden `fetchNearby(lat, lon, radius)` auf, solange die Seite sichtbar ist.
+1. `traffic.ts` ruft alle `pollSec` Sekunden `fetchNearby(lat, lon, radius)` auf, solange die Seite sichtbar ist. Zeigt die Karte ein Gebiet, das die eigene Abfrage nicht abdeckt (`setView` nach jedem Verschieben oder Zoomen), folgt ein zweites `fetchNearby` um die Kartenmitte, höchstens 250 nm, und beide Listen werden vereint.
 2. `feed.ts` wählt den Übertragungsweg. Im Modus **auto** wird adsb.lol direkt versucht. Blockiert der Browser die Anfrage (CORS) oder antwortet adsb.lol mit 403 und ist ein Proxy eingetragen, wechselt VectorScope zum Proxy und merkt sich das für die Sitzung.
 3. `adsblol.ts` wandelt das readsb-JSON in `Aircraft`-Objekte um: Hex in Großbuchstaben, Höhe in Fuß oder `onGround`, Herkunft der Position, Zeitpunkt der Position.
 4. `ingest()` in `traffic.ts` baut die neue Flugzeugliste. Für jedes Flugzeug wird

@@ -223,6 +223,28 @@ function rescoreNotable(list: Aircraft[]): NotableItem[] {
 
 let timer: number | undefined;
 let notableTimer: number | undefined;
+let viewTimer: number | undefined;
+
+/** The visible map area. Traffic there is loaded too, not only around the own location: pan to Moscow, see Moscow. */
+let view: { center: LatLon; radiusKm: number } | null = null;
+/** adsb.lol answers at most 250 nm around a point. */
+const MAX_VIEW_KM = 460;
+
+export function setView(center: LatLon, radiusKm: number) {
+  const prev = view;
+  view = { center, radiusKm: Math.min(radiusKm, MAX_VIEW_KM) };
+  const moved = !prev || distanceM(prev.center, center) > 20_000 || Math.abs(prev.radiusKm - view.radiusKm) > prev.radiusKm * 0.3;
+  if (moved && viewQuery(state.observer)) {
+    window.clearTimeout(viewTimer);
+    viewTimer = window.setTimeout(poll, 700);
+  }
+}
+
+/** The area to load besides the own one, or null if the own feed covers the visible map already. */
+export function viewQuery(observer: LatLon | null): { center: LatLon; radiusKm: number } | null {
+  if (!view || !observer) return null;
+  return distanceM(observer, view.center) / 1000 + view.radiusKm <= getSettings().radiusKm * 1.25 ? null : view;
+}
 let backoff = 1;
 let inFlight = false;
 
@@ -239,7 +261,17 @@ async function poll() {
   if (state.status === 'idle') emit({ status: 'loading' });
   try {
     const res = await fetchNearby(observer.lat, observer.lon, s.radiusKm);
-    const { next, newAlerts } = ingest(res.aircraft, observer);
+    let list = res.aircraft;
+    // The visible area, when the map shows somewhere else. A failure there keeps the own traffic.
+    const area = viewQuery(observer);
+    if (area) {
+      const more = await fetchNearby(area.center.lat, area.center.lon, area.radiusKm).catch(() => null);
+      if (more) {
+        const known = new Set(list.map((a) => a.hex));
+        list = [...list, ...more.aircraft.filter((a) => !known.has(a.hex))];
+      }
+    }
+    const { next, newAlerts } = ingest(list, observer);
     backoff = 1;
     emit({
       aircraft: next,

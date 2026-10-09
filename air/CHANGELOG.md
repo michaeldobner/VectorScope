@@ -4,6 +4,11 @@ All notable changes to module AIR. [Deutsch](CHANGELOG.de.md) · [Changelog of t
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.4.0 (2026-10-09)
+
+### Added
+* Traffic follows the map: after panning or zooming to an area away from your position, AIR loads the traffic there as well, up to about 460 km around the middle of the map. Lists and alerts stay with your position.
+
 ## 0.3.1 (2026-10-05)
 
 ### Added

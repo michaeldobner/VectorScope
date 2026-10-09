@@ -4,6 +4,13 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.15.0 (2026-10-09)
+
+### Added
+* Collector translates every headline and excerpt of the last 72 hours once into English and German (`collector/translate.ts`, public Google endpoint), keeps them in `translations.json` and hands them to INTEL in `latest.json` and the database.
+* Test lab measures the translation of the collector: texts and characters a day per language, how many Google refuses.
+* Module AIR 0.4.0 and INTEL 0.10.0, see their changelogs.
+
 ## 0.14.0 (2026-10-08)
 
 ### Added

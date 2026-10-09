@@ -112,9 +112,11 @@ Every source has a status dot (blue: answered, red: failed, hollow: comes throug
 
 The version of INTEL is shown at the end of this panel.
 
-## German
+## Language of the reports
 
-**DE** at the top right translates headlines and excerpts into German, including the reports of a story and the headlines under Live now. Only what is on screen is translated, every translation is kept on the device. German sources stay as they are. The translation comes from Google Translate, straight from the device and through the proxy only as a fallback, without a key and without a guarantee: if Google refuses, the original text stays and INTEL tries again later, waiting longer each time up to five minutes. Callsigns, types and places are always recognised in the original.
+The switch at the top right chooses the language of the reports, a tap moves on: **ORIG** shows every report as it came, **EN** all in English, **DE** all in German. The interface stays English. The language is recognised per report, not per source: a Russian quote in a German channel is translated, a German headline stays German in DE.
+
+Since INTEL 0.10.0 the collector translates every headline and excerpt once into English and German (`collector/translate.ts`) and hands the translations to the app with its data. They appear at once, on every device, without a request of their own. Only a report the collector has not seen yet, for example a post of the last minutes, is translated on the device: straight at Google Translate, through the proxy as a fallback. The translation comes from the public Google endpoint (variant A), without a key and without a guarantee: if Google refuses, the original text stays and is asked again later. Callsigns, types and places are always recognised in the original.
 
 ## Updates
 

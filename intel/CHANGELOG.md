@@ -4,6 +4,16 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.10.0 (2026-10-09)
+
+### Added
+* **Language of the reports:** the switch at the top right chooses ORIG (as they came), EN (all in English) or DE (all in German). The interface stays English. Replaces the switch DE, a German choice is kept.
+* The language is recognised per report (script, umlauts, common words), not per source.
+* Translations come from the collector, made once for every device, and appear at once. The device translates only reports the collector has not seen yet.
+
+### Fixed
+* Fraction chips in their own row. On a desktop the filter row scrolled sideways without a scrollbar, Grüne and Linke were out of reach. On a wide screen the chips wrap.
+
 ## 0.9.0 (2026-10-08)
 
 ### Added
