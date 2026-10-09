@@ -1,6 +1,6 @@
 {
   "name": "VectorScope",
-  "version": "0.19.0",
+  "version": "0.20.0",
   "shared": {
     "version": "1.1.0"
   },
@@ -22,7 +22,7 @@
       "code": "INTEL",
       "name": "Intelligence feed",
       "status": "live",
-      "version": "0.13.0",
+      "version": "0.14.0",
       "path": "intel/",
       "description": {
         "en": "Security and politics from 194 verified sources: what happened, who confirms it, who says what, matched to aircraft in the air right now.",

@@ -4,6 +4,15 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.14.0 (2026-10-09)
+
+### Geändert
+* **Now, gemessen an Tagesschau, ntv und Spiegel** (9. Oktober, 13 Stunden, 31 Themen): Recall@5 von 32 % auf 45 %, Recall@10 von 42 % auf 65 %.
+  * Ein Platz pro Thema: Stories über dasselbe, auch über Sprachen hinweg mit den Übersetzungen, werden „related“. Die Festnahme des Rybar-Gründers belegte drei von fünf Plätzen.
+  * Tageszusammenfassungen, Liveblogs und Sendungshinweise sind keine Hauptmeldungen, Kommentare, Analysen und Fragen als Überschrift wiegen weniger.
+  * Breite statt Masse: Quellen zählen pro Raum (Russland, Ukraine, deutschsprachige Medien, internationale Medien), höchstens drei je Raum, dazu die Zahl der Räume. Vierzig russische Kanäle gaben einer Story mehr Gewicht als jedem deutschen Topthema.
+  * Nachts verblassen die Hauptmeldungen langsamer, und frühe und parteiische Kanäle zählen fürs Wachstum halb.
+
 ## 0.13.0 (2026-10-09)
 
 ### Geändert

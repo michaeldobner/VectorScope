@@ -4,6 +4,15 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.14.0 (2026-10-09)
+
+### Changed
+* **Now, measured against Tagesschau, ntv and Spiegel** (9 October, 13 hours, 31 topics): Recall@5 from 32 % to 45 %, Recall@10 from 42 % to 65 %.
+  * One place per topic: stories about the same thing, also across languages through the translations, become "related". The arrest of the Rybar founder took three of five places.
+  * Digests of the day, live blogs and programme notes are no main stories, opinion, analysis and question headlines weigh less.
+  * Breadth instead of mass: sources count per space (Russia, Ukraine, German media, international media), at most three each, plus the number of spaces. Forty Russian channels gave a story more weight than any German top topic.
+  * At night the main stories fade more slowly, and early and partisan channels count half for growth.
+
 ## 0.13.0 (2026-10-09)
 
 ### Changed

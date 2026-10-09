@@ -4,6 +4,12 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.20.0 (2026-10-09)
+
+### Changed
+* Benchmark: the matching of topics moved to `intel/src/data/topics.ts`, Now uses it to keep one place per topic. Filler words and a name counted twice no longer tie two headlines.
+* Module INTEL 0.14.0.
+
 ## 0.19.0 (2026-10-09)
 
 ### Added

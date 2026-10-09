@@ -12,53 +12,17 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { isAirTrack } from '../intel/src/data/alerts';
-import { entitiesOf, extractEntities } from '../intel/src/data/entities';
+import { entitiesOf } from '../intel/src/data/entities';
 import { headlines } from '../intel/src/data/headlines';
 import { kindOf } from '../intel/src/data/kinds';
 import { lensesOf } from '../intel/src/data/lens';
-import { buildStories, keywords, type Story } from '../intel/src/data/stories';
+import { buildStories } from '../intel/src/data/stories';
+import { sameTopic, storyTokens, tokensOf } from '../intel/src/data/topics';
+
+export { sameTopic, storyTokens, tokensOf };
 import type { EnrichedItem, Item } from '../intel/src/data/types';
 import type { ReferenceFile, ReferenceId, ReferenceSnapshot } from './reference';
 import { withTranslations, type TrCache } from './translate';
-
-/** The tokens of a headline: words, small places, actors and members of the Bundestag. */
-export function tokensOf(title: string): Set<string> {
-  const entities = extractEntities(title);
-  const out = keywords({ id: '', sourceId: '', channel: 'rss', title, text: '', url: '', time: 0, entities, matches: [] });
-  for (const a of entities.actors) out.add(`*${a}`);
-  for (const m of entities.members) out.add(`*${m}`);
-  // German writes "Fort-Hood-Amokläufer" and "US-Justiz": the parts count, so the words of other headlines meet them.
-  for (const tok of [...out]) if (/^[\p{L}\p{N}]/u.test(tok) && tok.includes('-')) for (const part of tok.split('-')) if (part.length >= 3) out.add(part.replace(/s$/, ''));
-  // Countries and seas say little alone, they stay out of the comparison.
-  for (const t of [...out]) if (t.startsWith('@') && !t.startsWith('@!')) out.delete(t);
-  return out;
-}
-
-/**
- * Function words the headline keywords keep (they only drop a fixed list): they tie any two headlines.
- * Found in the first benchmark: "und", "ein", "für" matched an attack in Ukraine with Schröder's visit.
- */
-const FILLER = new Set(
-  (
-    'und ein eine einer einem einen für ist sind als per was wie wer bei mit von vom zum zur den dem der die das des sich auf aus nach über unter gegen geht gibt neue neuer neues neuen massive massiver ' +
-    'the and for are was were with from into after over says said new not but has have its his her their who what how why'
-  ).split(' '),
-);
-const meaningful = (t: string) => !FILLER.has(t) && (t.length >= 4 || /^[@*#%]/.test(t));
-
-/** Same topic: at least two shared tokens that carry meaning: names, places, words of four letters or more. */
-export function sameTopic(a: Set<string>, b: Set<string>): boolean {
-  const shared = [...a].filter((t) => meaningful(t) && b.has(t));
-  // A name counts once: "trump" the word and "*trump" the actor are one hit.
-  return shared.filter((t) => !shared.includes(`*${t}`)).length >= 2;
-}
-
-/** Tokens of a story: every headline of its reports, and their German and English translations. */
-export function storyTokens(s: Story): Set<string> {
-  const out = new Set<string>();
-  for (const i of s.items) for (const title of [i.title, i.tr?.de?.title, i.tr?.en?.title]) if (title) for (const t of tokensOf(title)) out.add(t);
-  return out;
-}
 
 export interface Topic {
   titles: Partial<Record<ReferenceId, string>>;

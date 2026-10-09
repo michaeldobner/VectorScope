@@ -4,13 +4,21 @@
 import { DECISION, actorById } from './actors';
 import { isAirTrack } from './alerts';
 import { storyInLens } from './lens';
-import { sourceById, type Tier } from './sources';
+import { independenceKey, sourceById, type Tier } from './sources';
 import { independentCount, type Story } from './stories';
+import { sameTopic, storyCore } from './topics';
 import type { EnrichedItem, Lens } from './types';
 
 const HOUR = 3600_000;
-/** The weight of a story halves every three hours without new reports. */
-const HALF_LIFE_MS = 3 * HOUR;
+/**
+ * The weight of a story halves every three hours without new reports, at night (21 to 5 UTC, about 23 to 7 in
+ * Germany) every seven: few serious sources post then, the main stories of the evening must not give way to
+ * whatever the night channels post.
+ */
+const halfLife = (now: number) => {
+  const h = new Date(now).getUTCHours();
+  return (h >= 21 || h < 5 ? 7 : 3) * HOUR;
+};
 export const HEADLINES = 5;
 
 /** Heads of state and government: their own words weigh more than those of a governor. */
@@ -44,12 +52,50 @@ const isSevere = (i: EnrichedItem) => !isAirSituation(i) && SEVERE.test(textOf(i
 const isAirStory = (s: Story) => s.items.every(isAirSituation);
 const lensOf = (s: Story): Lens => (storyInLens(s.items, 'security') ? 'security' : 'politics');
 
+/**
+ * No events: digests of the day, live blogs, programme notes, newsletters. They collect the news, they are none.
+ * German, English, Russian and Ukrainian.
+ */
+const ROUNDUP =
+  /^\s*(das wichtigste|die wichtigsten|liveblog|live-?blog|newsblog|news-?ticker|liveticker|live-?ticker|live:|im live|live-updates?|live updates?|tagesüberblick|nachrichten (am|vom|des)|die nacht im überblick|der tag im überblick|was (heute|in der nacht) wichtig|krieg\.? was am|sehen sie sich|schalten sie ein|jetzt live|watch live|morning briefing|evening briefing|newsletter|podcast|what we know|the latest:|главное( за| к)|итоги (дня|недели)|что известно|хроника|головне( за)?|підсумки дня|що відомо)/iu;
+/** Opinion, analysis and features: worth reading, not the news of the hour. They weigh less. */
+const FEATURE =
+  /^\s*(kommentar|meinung|analyse|essay|hintergrund|interview|reportage|opinion|analysis|explainer|comment|мнение|колонка|аналитика)\b|^\s*(wie|warum|was|wer|weshalb|how|why|what|who)\s|\?\s*$/iu;
+const isRoundup = (i: EnrichedItem) => ROUNDUP.test(i.title) || /^\s*(\p{Extended_Pictographic}|➤|✹|❗)?\s*(krieg|war)\.\s/u.test(i.title);
+const isFeature = (i: EnrichedItem) => FEATURE.test(i.title);
+
+/**
+ * Where a source reports from: Russia, Ukraine, the German-speaking media or the international ones. Breadth across
+ * these spaces says more than the number of channels in one of them: forty Russian channels are one public.
+ */
+function spaceOf(sourceId: string): string {
+  const s = sourceById(sourceId);
+  if (!s) return 'other';
+  if (s.region === 'russia' || (s.lang === 'ru' && s.region !== 'ukraine')) return 'ru';
+  if (s.region === 'ukraine' || s.lang === 'uk') return 'ua';
+  if (s.region === 'dach' || s.lang === 'de') return 'de';
+  return 'intl';
+}
+/** Sources counted per space, at most three each, and the number of spaces. */
+function breadth(s: Story): { sources: number; spaces: number } {
+  const per = new Map<string, Set<string>>();
+  for (const i of s.items) {
+    if (s.echoItems.includes(i.id)) continue;
+    const space = spaceOf(i.sourceId);
+    (per.get(space) ?? per.set(space, new Set()).get(space)!).add(independenceKey(i.sourceId));
+  }
+  return { sources: [...per.values()].reduce((n, set) => n + Math.min(set.size, 3), 0), spaces: per.size };
+}
+const SPACE_LABEL: Record<string, string> = { ru: 'Russia', ua: 'Ukraine', de: 'German media', intl: 'international', other: 'other' };
+
 export interface Headline {
   story: Story;
   lens: Lens;
   score: number;
   /** Why it is a headline, in a few words: "5 sources", "Kremlin in the original", "growing". */
   why: string[];
+  /** Other stories about the same topic, folded into this place. */
+  related?: Story[];
 }
 
 /** Weight of a story now, with the reasons. Stories older than a day weigh nothing. */
@@ -57,8 +103,13 @@ export function weigh(s: Story, now: number): { score: number; why: string[] } {
   if (now - s.last > 24 * HOUR) return { score: 0, why: [] };
   const why: string[] = [];
   const n = independentCount(s);
-  let score = STATUS_WEIGHT[s.status] + 0.8 * Math.log2(1 + n);
+  const { sources, spaces } = breadth(s);
+  let score = STATUS_WEIGHT[s.status] + 0.6 * Math.log2(1 + sources) + 0.8 * (spaces - 1);
   if (n > 1) why.push(`${n} sources`);
+  if (spaces > 1) {
+    const names = [...new Set(s.items.map((i) => spaceOf(i.sourceId)))].map((x) => SPACE_LABEL[x]);
+    why.push(`in ${names.join(', ')}`);
+  }
   const voice = s.items.find((i) => sourceById(i.sourceId)?.voice);
   if (voice) {
     score += 1;
@@ -75,25 +126,43 @@ export function weigh(s: Story, now: number): { score: number; why: string[] } {
     score += 0.8;
     why.push('decision');
   }
-  // Growth: new reports in the last hour lift a story, up to five of them.
-  const fresh = s.items.filter((i) => now - i.time < HOUR).length;
-  if (fresh >= 2) why.push('growing');
-  score += Math.min(fresh, 5) * 0.3;
+  // Growth: new reports in the last hour lift a story, up to five of them. Early and partisan channels count half,
+  // they post around the clock, most of all at night.
+  const fresh = s.items.filter((i) => now - i.time < HOUR);
+  const growth = fresh.reduce((g, i) => g + (FAST.includes(sourceById(i.sourceId)?.tier ?? 'early') ? 0.5 : 1), 0);
+  if (fresh.length >= 2) why.push('growing');
+  score += Math.min(growth, 5) * 0.3;
   if (s.items.some((i) => i.matches.some((m) => m.kind === 'callsign'))) {
     score += 0.8;
     why.push('aircraft live');
   }
-  return { score: score * 0.5 ** ((now - s.last) / HALF_LIFE_MS), why };
+  if (s.items.filter(isFeature).length > s.items.length / 2) score *= 0.6;
+  return { score: score * 0.5 ** ((now - s.last) / halfLife(now)), why };
 }
 
-/** The main stories of both lenses, heaviest first. Single unverified posts are the ticker's, not here. */
+/**
+ * The main stories of both lenses, heaviest first, one per topic. Single unverified posts are the ticker's,
+ * digests and live blogs nobody's. A story about the same topic as a heavier one joins it as related: the same
+ * arrest reported by three clusters of channels takes one place, not three.
+ */
 export function headlines(stories: Story[], now: number, count = HEADLINES): Headline[] {
-  return stories
-    .filter((s) => s.status !== 'signal' && !isAirStory(s) && s.items.some((i) => i.lens?.security || i.lens?.politics))
+  const ranked = stories
+    .filter((s) => s.status !== 'signal' && !isAirStory(s) && !s.items.every(isRoundup) && s.items.some((i) => i.lens?.security || i.lens?.politics))
     .map((s) => ({ story: s, lens: lensOf(s), ...weigh(s, now) }))
     .filter((h) => h.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, count);
+    .sort((a, b) => b.score - a.score);
+  const out: (Headline & { core: Set<string> })[] = [];
+  for (const h of ranked) {
+    if (out.length >= count) break;
+    const core = storyCore(h.story);
+    const same = out.find((o) => sameTopic(o.core, core));
+    if (same) {
+      same.related = [...(same.related ?? []), h.story];
+      continue;
+    }
+    out.push({ ...h, core });
+  }
+  return out.map(({ core: _, ...h }) => (h.related?.length ? { ...h, why: [...h.why, `${h.related.length} related ${h.related.length === 1 ? 'story' : 'stories'}`] } : h));
 }
 
 export interface EarlyReport {

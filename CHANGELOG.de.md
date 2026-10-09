@@ -4,6 +4,12 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.20.0 (2026-10-09)
+
+### Geändert
+* Messlatte: Der Themenabgleich liegt jetzt in `intel/src/data/topics.ts`, Now nutzt ihn für einen Platz pro Thema. Füllwörter und ein doppelt gezählter Name verbinden keine Überschriften mehr.
+* Modul INTEL 0.14.0.
+
 ## 0.19.0 (2026-10-09)
 
 ### Neu

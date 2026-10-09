@@ -201,3 +201,59 @@ describe('now, cases of the review of 9 October 2026', () => {
     expect(weigh(calm, at).why).toContain('severe');
   });
 });
+
+describe('now, after the benchmark of 9 October 2026', () => {
+  const at = Date.parse('2026-10-09T15:00:00Z');
+  const mk = (id: string, sourceId: string, title: string, minAgo: number, de?: string) => {
+    const entities = extractEntities(title);
+    return { id, sourceId, channel: 'rss' as const, title, text: '', url: `https://x.org/${id}`, time: at - minAgo * 60_000, entities, matches: [], lens: { security: true as const }, ...(de ? { tr: { de: { title: de } } } : {}) };
+  };
+
+  it('gives one place per topic, the others become related', async () => {
+    const { headlines } = await import('./headlines');
+    const { buildStories } = await import('./stories');
+    const stories = buildStories([
+      mk('a', 'baza', 'Основатель Рыбаря задержан в Черногории', 50, 'Gründer von Rybar in Montenegro festgenommen'),
+      mk('b', 'mash', 'Создатель Рыбаря Михаил Звинчук задержан в Черногории', 45, 'Rybar-Gründer Michail Swintschuk in Montenegro festgenommen'),
+      mk('c', 'spiegel', 'Rybar-Chef in Montenegro festgenommen', 40),
+      mk('d', 'tagesschau', 'Rybar-Gründer in Montenegro festgenommen, Moskau protestiert', 30),
+      mk('e', 'bbc', 'Strike on Zaporizhzhia kills one, eight injured', 20),
+      mk('f', 'dw', 'Russian strike on Zaporizhzhia kills one', 10),
+    ]);
+    const top = headlines(stories, at);
+    const rybar = top.filter((h) => /Rybar|Рыбар/i.test(h.story.items.map((i) => i.title).join(' ')));
+    expect(rybar).toHaveLength(1);
+  });
+
+  it('leaves digests, live blogs and programme notes out', async () => {
+    const { headlines } = await import('./headlines');
+    const { buildStories } = await import('./stories');
+    const stories = buildStories([
+      mk('a', 'dlf', 'Das Wichtigste zum 8. Oktober: Angriffe auf Kramatorsk', 30),
+      mk('b', 'tagesschau', 'Liveblog Ukrainekrieg: Verhandler in den USA', 20),
+      mk('c', 'currenttime', 'Sehen Sie sich in wenigen Minuten die Sendung Morning live an', 10),
+    ]);
+    expect(headlines(stories, at)).toHaveLength(0);
+  });
+
+  it('weighs breadth across Russia, Ukraine, German and international media over the number of channels', async () => {
+    const { weigh } = await import('./headlines');
+    const { buildStories } = await import('./stories');
+    // Two stories with the same status, one carried by six Russian channels, one by three spaces.
+    const base = buildStories([mk('x', 'baza', 'Взрыв на складе в Брянске', 30)])[0];
+    const story = (items: ReturnType<typeof mk>[]) => ({ ...base, items, independent: items.length, status: 'confirmed' as const, echoItems: [], last: at - 10 * 60_000 });
+    const ru = story(['baza', 'mash', 'shot', 'astra', 'news112', 'sirena'].map((s, i) => mk(`r${i}`, s, 'Взрыв на складе в Брянске', 30 - i)));
+    const wide = story([mk('w1', 'baza', 'Взрыв на складе в Брянске', 30), mk('w2', 'bbc', 'Explosion at depot in Bryansk', 20), mk('w3', 'tagesschau', 'Explosion in Depot in Brjansk', 10)]);
+    expect(weigh(wide, at).score).toBeGreaterThan(weigh(ru, at).score);
+  });
+
+  it('keeps an evening story longer at night', async () => {
+    const { weigh } = await import('./headlines');
+    const { buildStories } = await import('./stories');
+    const s = buildStories([mk('a', 'bbc', 'Strike on Zaporizhzhia kills one', 0), mk('b', 'dw', 'Russian strike on Zaporizhzhia kills one', 0)])[0];
+    const night = Date.parse('2026-10-10T02:00:00Z');
+    const day = Date.parse('2026-10-10T14:00:00Z');
+    const fade = (now: number) => weigh({ ...s, last: now - 4 * 3600_000 }, now).score;
+    expect(fade(night)).toBeGreaterThan(fade(day));
+  });
+});
