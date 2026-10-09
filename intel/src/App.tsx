@@ -540,7 +540,8 @@ function StoryCard({ story, st, bridges }: { story: Story; st: IntelState; bridg
             })
           }
         >
-          <span className="bridge-lens">{st.prefs.lens === 'security' ? '🏛 Politics' : '⚔ Security'}</span> linked: {tr(b.lead.title, b.lead.sourceId)}
+          <span className="bridge-lens">{st.prefs.lens === 'security' ? '🏛 Politics' : '⚔ Security'}</span>{' '}
+          <span className="bridge-why">via {key.startsWith('a:') ? `◉ ${actorById(key.slice(2))?.name ?? key.slice(2)}` : `◎ ${key.slice(2)}`}:</span> {tr(b.lead.title, b.lead.sourceId)}
         </button>
       ))}
       {strong.length > 0 && (

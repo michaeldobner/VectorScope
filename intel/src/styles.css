@@ -1047,6 +1047,9 @@ section > .section-title {
 }
 
 /* Bridge to a story of the other lens */
+.bridge-why {
+  color: var(--text-3);
+}
 .bridge {
   display: block;
   width: 100%;

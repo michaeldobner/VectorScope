@@ -53,6 +53,8 @@ export const PLACES: Place[] = [
   P('Belgium', 50.6, 4.6, 130, 'Belgien'),
   P('France', 46.6, 2.4, 500, 'Frankreich', 'French'),
   P('United Kingdom', 54.0, -2.5, 450, 'UK', 'Britain', 'British', 'Großbritannien'),
+  // As one place, not as the two words "united" and "states", which tied unrelated reports into one story.
+  P('United States', 39.5, -98.4, 2500, 'United States of America', 'USA', 'U\\.S\\.', 'America', 'American', 'Amerika', 'Vereinigten? Staaten'),
   P('Italy', 42.5, 12.5, 500, 'Italien', 'Italian'),
   P('Spain', 40.2, -3.7, 500, 'Spanien', 'Spanish'),
   P('Greece', 39.0, 22.5, 300, 'Griechenland', 'Greek'),
@@ -204,6 +206,7 @@ const FOREIGN: Record<string, string[]> = {
   Finland: ['Финлянди\\p{L}*'],
   Germany: ['Германи\\p{L}*', 'Німеччин\\p{L}*'],
   'United Kingdom': ['Британи\\p{L}*', 'Великобритани\\p{L}*'],
+  'United States': ['США', 'Соединённ\\p{L}* Штат\\p{L}*', 'Соединенн\\p{L}* Штат\\p{L}*', 'Америк\\p{L}*', 'ארה"ב'],
   France: ['Франци\\p{L}*'],
   Turkey: ['Турци\\p{L}*'],
   Georgia: ['Грузи\\p{L}*'],

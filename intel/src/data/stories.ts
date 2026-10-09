@@ -97,7 +97,9 @@ const STOP = new Set(
     'about after again against also amid among another around back been before being between both called could during each even every first from have having here into just last later like made make many more most much must near never news next only other over part said says some still such than that their them then there these they this those three through time today under until very were what when where which while will with within without would year years your ' +
     'aber alle allem allen aller alles also andere anderen auch auf aus bei beim bereits bevor bis bisher dabei damit dann darf darum dass davon dazu dem den denen der des deshalb dessen die dies diese diesem diesen dieser dieses doch dort durch eine einem einen einer eines einige erst etwa etwas euro fall gegen gibt habe haben hatte heute hier ihre ihren immer jahr jahre jahren jetzt kann kein keine können laut lassen machen mehr meisten mit nach nicht noch nun nur oder ohne rund schon sehr seien sein seine seit sich sind soll sollen sowie über unter viele vom von vor wegen weil weiter weitere wenn werden wieder wird wurde wurden zum zur zwei zwischen ' +
     'breaking update updated report reports reported according official officials video footage photo photos watch read first latest sources source new says said ' +
-    'week weeks month recent recently aboard following amid could might plans white house president government minister ministry military forces defense defence analysis inside behind'
+    'week weeks month recent recently aboard following amid could might plans white house president government minister ministry military forces defense defence analysis inside behind ' +
+    // Country words that are no event: "the United States" alone tied four unrelated reports into one story.
+    'united states america american americans amerika people country countries western'
   ).split(' '),
 );
 

@@ -4,6 +4,12 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.10.2 (2026-10-09)
+
+### Fixed
+* Reports that shared only "the United States" were one story (North Korea, a Senate race, a Rybar quote, H1-B visas). The United States are now a place, in English, German, Russian and Hebrew, and country words count as no event.
+* Bridges between the lenses only by an actor or city that at most three stories name that day. Trump or Washington tied any two stories together. A bridge shows what ties it: "⚔ Security via ◉ Kremlin: …".
+
 ## 0.10.1 (2026-10-09)
 
 ### Fixed

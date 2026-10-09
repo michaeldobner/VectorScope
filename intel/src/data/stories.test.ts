@@ -128,3 +128,20 @@ describe('relevance of general news', () => {
     expect(rel('Bayern gewinnt gegen Dortmund')).toBe(false);
   });
 });
+
+describe('country words', () => {
+  it('keeps reports apart that share only "the United States" (case of 9 October 2026)', () => {
+    const t0 = Date.parse('2026-10-07T19:17:00Z');
+    const mk = (id: string, sourceId: string, h: number, title: string): EnrichedItem => {
+      const item: Item = { id, sourceId, channel: 'rss', title, text: '', url: `https://example.org/${id}`, time: t0 + h * 3600_000 };
+      return { ...item, entities: extractEntities(title), matches: [] };
+    };
+    const items = [
+      mk('a', 'isw', 0, 'The United States’ recent de-emphasis of North Korean denuclearization may increase Pyongyang’s willingness to engage in dialogue with Washington'),
+      mk('b', 'trump', 10, 'Ladies and Gentlemen, upon information and belief, James Talarico, who is running for the United States Senate in Texas, is MISSING IN ACTION!'),
+      mk('c', 'rybar-en', 16.6, '#EXCLUSIVE: "People should be ashamed to basically follow whatever the Western media is saying, follow whatever the news in the United States, in Europe is saying."'),
+      mk('d', 'insiderpaper', 21.3, 'U.S. VP JD Vance says H1-B visa program is meant to allow companies to bring in really the best of the best from outside the United States of America'),
+    ];
+    expect(buildStories(items).every((s) => s.items.length === 1)).toBe(true);
+  });
+});

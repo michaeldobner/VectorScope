@@ -27,7 +27,7 @@ In the politics lens:
 * **Signal** (chip at the start of the filter row): only stories with an original statement or at least two independent sources. A tap switches to **Everything**.
 * **Map:** capitals as circles for the stories that name their actors, lines between two capitals whose actors one story names, thicker for more stories. A tap on a capital filters by its actors.
 
-**Bridges:** a story can be linked to a story of the other lens that names the same actor or the same city on the same day, for example a sanctions package and a tanker attack. The card then shows "🏛 Politics linked: …" or "⚔ Security linked: …", a tap switches the lens and filters by what both share.
+**Bridges:** a story can be linked to a story of the other lens that names the same actor or the same city on the same day, for example a sanctions package and a tanker attack. The card then shows "🏛 Politics via ◎ Sochi: …" or "⚔ Security via ◉ Kremlin: …", so you see what ties them. A tap switches the lens and filters by what both share. The actor or city must be rare that day, at most three stories name it: Trump or Washington alone tie nothing.
 
 **Who says what** (since INTEL 0.9.0): if members of the Bundestag post about a story or are named in it, the story shows one group per fraction in its colour, for example "SPD ✎ Klingbeil, Miersch". ✎ marks a member who posted about it on Bluesky, the others are named in the reports. A tap on the fraction filters by it, a tap on a name by the member. The fraction chips at the end of the filter row (CDU/CSU, AfD, SPD, Grüne, Linke) do the same for the whole list. In the security lens the members appear as chips on the story.
 

@@ -4,6 +4,12 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.10.2 (2026-10-09)
+
+### Behoben
+* Meldungen, die nur „die United States“ gemeinsam hatten, waren eine Story (Nordkorea, ein Senatswahlkampf, ein Rybar-Zitat, H1-B-Visa). Die USA sind jetzt ein Ort, auf Englisch, Deutsch, Russisch und Hebräisch, und Länderwörter zählen nicht als Ereignis.
+* Brücken zwischen den Linsen nur über einen Akteur oder eine Stadt, die an diesem Tag höchstens drei Stories nennen. Trump oder Washington verbanden beliebige Stories. Eine Brücke zeigt, was sie verbindet: „⚔ Security via ◉ Kremlin: …“.
+
 ## 0.10.1 (2026-10-09)
 
 ### Behoben

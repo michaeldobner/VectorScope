@@ -101,4 +101,25 @@ describe('bridges', () => {
     expect(['p:Sochi', 'a:kremlin']).toContain(linked[0].key);
     expect(linked[0].story.lead.title).toMatch(/Kremlin|Kreml/);
   });
+
+  it('does not link by an actor or city that many stories name that day', async () => {
+    const { bridgesFor } = await import('./bridges');
+    const { buildStories } = await import('./stories');
+    const now = Date.parse('2026-10-08T12:00:00Z');
+    const mk = (id: string, sourceId: string, title: string, lens: 'security' | 'politics', h: number) => ({
+      id, sourceId, channel: 'rss' as const, title, text: '', url: `https://x.org/${id}`, time: now - h * 3600_000, entities: extractEntities(title), matches: [], lens: { [lens]: true as const },
+    });
+    const stories = buildStories([
+      mk('a', 'bbc', 'Trump approves firing squad execution for soldier', 'security', 2),
+      mk('b', 'aljazeera', 'Trump signs firing squad execution order, first since WWII', 'security', 1.5),
+      mk('c', 'politicous', 'Trump says senate candidate Talarico is missing', 'politics', 1),
+      mk('d', 'npr', 'Trump attacks Talarico campaign in Texas senate race', 'politics', 0.8),
+      mk('e', 'axios', 'Trump tariffs on steel rise again next month', 'politics', 0.6),
+      mk('f', 'politicoeu', 'Trump tariffs: EU prepares answer on steel', 'politics', 0.5),
+      mk('g', 'whitehouse', 'Trump hosts Japanese prime minister at the White House', 'politics', 0.4),
+      mk('h', 'npr', 'Trump meets Japanese prime minister, trade deal in reach', 'politics', 0.3),
+    ]);
+    const security = stories.filter((s) => s.items.some((i) => i.lens?.security));
+    expect([...bridgesFor(security, stories, 'security').values()].flat()).toHaveLength(0);
+  });
 });
