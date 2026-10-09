@@ -57,4 +57,11 @@ describe('benchmark of Now', () => {
     expect(await takeSnapshot(file, at + 60 * 60_000, fetchText)).not.toBeNull();
     expect(file.snapshots).toHaveLength(2);
   });
+
+  it('does not tie headlines by filler words or by a name counted twice', async () => {
+    const { sameTopic, tokensOf } = await import('./benchmark');
+    expect(sameTopic(tokensOf('Massive Angriffe und ein neuer Verhandlungsversuch'), tokensOf('Schröder besucht Putin und ein Fest für alte Freunde'))).toBe(false);
+    expect(sameTopic(tokensOf('Nobelpreis für Pillay: Eine Backpfeife für Trump'), tokensOf('Trump verhängt Sanktionen gegen Strafgerichtshof'))).toBe(false);
+    expect(sameTopic(tokensOf('Schröder feiert Putins Geburtstag in Moskau'), tokensOf('Altkanzler Schröder besucht Putin zum Geburtstag'))).toBe(true);
+  });
 });

@@ -34,8 +34,24 @@ export function tokensOf(title: string): Set<string> {
   return out;
 }
 
-/** Same topic: at least two shared tokens. */
-export const sameTopic = (a: Set<string>, b: Set<string>) => [...a].filter((t) => b.has(t)).length >= 2;
+/**
+ * Function words the headline keywords keep (they only drop a fixed list): they tie any two headlines.
+ * Found in the first benchmark: "und", "ein", "für" matched an attack in Ukraine with Schröder's visit.
+ */
+const FILLER = new Set(
+  (
+    'und ein eine einer einem einen für ist sind als per was wie wer bei mit von vom zum zur den dem der die das des sich auf aus nach über unter gegen geht gibt neue neuer neues neuen massive massiver ' +
+    'the and for are was were with from into after over says said new not but has have its his her their who what how why'
+  ).split(' '),
+);
+const meaningful = (t: string) => !FILLER.has(t) && (t.length >= 4 || /^[@*#%]/.test(t));
+
+/** Same topic: at least two shared tokens that carry meaning: names, places, words of four letters or more. */
+export function sameTopic(a: Set<string>, b: Set<string>): boolean {
+  const shared = [...a].filter((t) => meaningful(t) && b.has(t));
+  // A name counts once: "trump" the word and "*trump" the actor are one hit.
+  return shared.filter((t) => !shared.includes(`*${t}`)).length >= 2;
+}
 
 /** Tokens of a story: every headline of its reports, and their German and English translations. */
 export function storyTokens(s: Story): Set<string> {
