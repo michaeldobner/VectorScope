@@ -3,6 +3,7 @@
 // soll live übertragen werden" and the Russian report on it meet, without a shared word.
 // The collector attaches the topic to every report (item.topic), INTEL groups reports of one topic into one story
 // (stories.ts). The model runs on the own server, on the CPU, no key and no fee. Off with EMBED=0.
+import { isAirTrack } from '../intel/src/data/alerts';
 import { itemKey } from '../intel/src/data/feed';
 import type { Item } from '../intel/src/data/types';
 
@@ -16,8 +17,14 @@ const KEEP_MS = 72 * 3600_000;
 
 export type Embed = (texts: string[]) => Promise<Float32Array[]>;
 
-/** Per report: its vector (int8, base64), its topic and when it was published. Kept in embeddings.json, 72 hours. */
+/**
+ * Per report: its vector (int8, base64), its topic and when it was published. Kept in embeddings.json, 72 hours.
+ * The topic id is the key of its first report, the seed.
+ */
 export type EmbedState = Record<string, { v: string; topic: string; time: number }>;
+
+/** Too short to say what happened ("Радомишль", "Auf Ukrainisch"): such texts attract each other in the model. */
+const MIN_WORDS = 4;
 
 const toB64 = (v: Float32Array) => Buffer.from(Int8Array.from(v, (x) => Math.max(-127, Math.min(127, Math.round(x * 127)))).buffer).toString('base64');
 // Small Buffers share one pool in Node: copy exactly the bytes of this vector, not the pool around it.
@@ -49,8 +56,11 @@ export async function assignTopics(items: Item[], state: EmbedState, opt: { embe
   const fresh = items.filter((i) => !state[itemKey(i)] && opt.now - i.time < KEEP_MS).sort((a, b) => a.time - b.time);
   let joined = 0;
   const size = opt.batch ?? 32;
-  // Decoded once per round: thousands of comparisons per new report.
-  const known = Object.values(state).map((e) => ({ topic: e.topic, time: e.time, vec: fromB64(e.v) }));
+  // Seeds only, decoded once per round: a report joins a topic if it is close to the first report of that topic.
+  // Joining the nearest member instead lets topics grow in chains (A like B, B like C) to hundreds of reports.
+  const seeds = Object.entries(state)
+    .filter(([key, e]) => e.topic === key)
+    .map(([key, e]) => ({ topic: key, time: e.time, vec: fromB64(e.v) }));
   for (let s = 0; s < fresh.length; s += size) {
     const part = fresh.slice(s, s + size);
     const vectors = await opt.embed(part.map(textOf));
@@ -58,7 +68,9 @@ export async function assignTopics(items: Item[], state: EmbedState, opt: { embe
       const v = toB64(vectors[k]);
       const mine = fromB64(v);
       let best: { topic: string; sim: number } | null = null;
-      for (const other of known) {
+      // Drone tracks and one-word posts get a topic of their own: the model cannot tell them apart.
+      const loner = isAirTrack(item) || textOf(item).split(/\s+/).filter((w) => /\p{L}{2}/u.test(w)).length < MIN_WORDS;
+      for (const other of loner ? [] : seeds) {
         if (Math.abs(other.time - item.time) > WINDOW_MS) continue;
         const sim = cosine(mine, other.vec);
         if (sim >= threshold && (!best || sim > best.sim)) best = { topic: other.topic, sim };
@@ -66,7 +78,7 @@ export async function assignTopics(items: Item[], state: EmbedState, opt: { embe
       if (best) joined++;
       const topic = best?.topic ?? itemKey(item);
       state[itemKey(item)] = { v, topic, time: item.time };
-      known.push({ topic, time: item.time, vec: mine });
+      if (!best && !loner) seeds.push({ topic, time: item.time, vec: mine });
     });
   }
   for (const [k, e] of Object.entries(state)) if (opt.now - e.time > KEEP_MS) delete state[k];

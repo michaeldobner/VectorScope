@@ -60,4 +60,24 @@ describe('topics by meaning', () => {
     expect(buildStories(enriched)).toHaveLength(1);
     expect(buildStories(items.map((i) => ({ ...i, entities: extractEntities(i.title), matches: [] })))).toHaveLength(2);
   });
+
+  it('does not chain: a report joins a topic only if it is close to its first report', async () => {
+    const vec: Record<string, number[]> = { 'first report about the topic': [1, 0], 'second report a bit apart': [0.8, 0.6], 'third report further apart again': [0.6, 0.8] };
+    const embed = async (texts: string[]) => texts.map((x) => Float32Array.from(vec[x]));
+    const items = Object.keys(vec).map((title, k) => item(`c${k}`, 'bbc', title, 3 - k));
+    const state: EmbedState = {};
+    await assignTopics(items, state, { embed, now: at, threshold: 0.75 });
+    const topic = (i: Item) => withTopic(i, state).topic;
+    expect(topic(items[1])).toBe(topic(items[0]));
+    // Close to the second (0.96), not to the first (0.6): a topic of its own.
+    expect(topic(items[2])).not.toBe(topic(items[0]));
+  });
+
+  it('gives drone tracks and one-word posts a topic of their own', async () => {
+    const same = async (texts: string[]) => texts.map(() => Float32Array.from([1, 0]));
+    const items = [item('s1', 'bbc', 'Радомишль', 2), item('s2', 'bbc', 'Жмеринка!', 1), item('s3', 'kpszsu', 'Реактивний БпЛА на Житомирщині в напрямку Житомира', 1)];
+    const state: EmbedState = {};
+    await assignTopics([...items, item('s4', 'bbc', 'Strike on a depot in Zhytomyr region overnight', 0.5)], state, { embed: same, now: at });
+    expect(new Set(items.map((i) => withTopic(i, state).topic)).size).toBe(3);
+  });
 });
