@@ -100,6 +100,9 @@ if (failures.length) {
 }
 console.log(`\nAll checks passed. Screenshots in ${OUT}/`);
 
+// Against the width of the device, not window.innerWidth: Chromium widens the layout of a phone page to fit
+// content that sticks out, so innerWidth grows with the overflow and hides it.
 async function noSideScroll(page) {
-  return page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1);
+  const width = page.viewportSize()?.width ?? Infinity;
+  return page.evaluate((w) => document.documentElement.scrollWidth <= Math.min(w, window.innerWidth) + 1, width);
 }

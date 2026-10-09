@@ -53,7 +53,7 @@ function LangMenu({ st }: { st: IntelState }) {
         aria-expanded={open}
         aria-label={`Language of the reports: ${LANG_LABEL[current].title}`}
       >
-        <span aria-hidden>🌐</span> {LANG_LABEL[current].short}
+        <span className="globe" aria-hidden>🌐</span> {LANG_LABEL[current].short}
       </button>
       {open && (
         <div className="lang-pop" role="menu">

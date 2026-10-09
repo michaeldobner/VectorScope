@@ -29,9 +29,10 @@ jobs:
           node scripts/serve.mjs 4173 &
           sleep 2
           npm run e2e
+      # Screenshots only when a check fails, kept 3 days: the free Actions storage is 0.5 GB.
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: failure()
         with:
           name: screenshots-${{ matrix.browser }}
           path: e2e-out
-          retention-days: 14
+          retention-days: 3

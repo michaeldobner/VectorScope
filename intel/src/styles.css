@@ -1193,12 +1193,27 @@ h3.src-group-head {
 .topbar .lens.compact button {
   flex: none;
   height: 30px;
-  padding: 0 9px;
+  padding: 0 6px;
   font-size: 12.5px;
 }
 .narrow .topbar {
-  gap: 6px;
+  gap: 4px;
+  padding-left: calc(10px + var(--sal));
+  padding-right: calc(10px + var(--sar));
   transition: transform 0.2s ease;
+}
+/* An iPhone SE is 375 pixels wide: the logo alone says where you are, the lens switch says which view. */
+.narrow .topbar .brand .code,
+.narrow .topbar .lang .globe {
+  display: none;
+}
+.narrow .topbar .icon-btn {
+  flex: none;
+  width: 32px;
+}
+.narrow .topbar .icon-btn.lang {
+  width: auto;
+  padding: 0 7px;
 }
 .narrow .tabs {
   transition: top 0.2s ease;
