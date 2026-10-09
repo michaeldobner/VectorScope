@@ -53,12 +53,25 @@ const cached = async (texts: string[]) => {
   if (missing.length) (await embed(missing)).forEach((v, i) => cache.set(missing[i], v));
   return texts.map((t) => cache.get(t)!);
 };
-for (const threshold of [0.7, 0.75, 0.8, 0.85, 0.9]) {
+const samples: string[] = ['', '## Samples'];
+for (const threshold of [0.7, 0.75, 0.8, 0.85]) {
   const state: EmbedState = {};
   const t = Date.now();
   const r = await assignTopics(items, state, { embed: cached, now, threshold });
   const m = measure(items.map((i) => withTopic(i, state)));
+  // For checking by hand: reports that joined a topic, with the first report of that topic.
+  const byTopic = new Map<string, Item[]>();
+  for (const i of items) {
+    const tp = withTopic(i, state).topic;
+    if (tp) (byTopic.get(tp) ?? byTopic.set(tp, []).get(tp)!).push(i);
+  }
+  const pairs = [...byTopic.values()].filter((l) => l.length > 1).sort(() => 0.5 - Math.random()).slice(0, 25);
+  samples.push('', `### Threshold ${threshold}: 25 random topics, first and last headline`, '');
+  for (const l of pairs) {
+    const name = (i: Item) => (i.tr?.de?.title ?? i.tr?.en?.title ?? i.title).replace(/\|/g, '/').slice(0, 110);
+    samples.push(`* ${l.length} reports: ${name(l[0])} ↔ ${name(l[l.length - 1])}`);
+  }
   lines.push(`| topics, threshold ${threshold} | ${pct(m.at5, m.major)} | ${pct(m.at10, m.major)} | ${m.stories} | ${pct(m.single * 100, 100)} | ${r.joined} | ${Date.now() - t} |`);
 }
-writeFileSync(`${OUT}/embed.md`, lines.join('\n') + '\n');
+writeFileSync(`${OUT}/embed.md`, [...lines, ...samples].join('\n') + '\n');
 console.log(lines.join('\n'));
