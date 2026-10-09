@@ -36,3 +36,13 @@ The test lab runs the benchmark once a day and after every change to `intel/src/
 * The reference measures news value for a general audience. VectorScope looks at security and politics. A Nobel Prize for literature is a major topic of the newsrooms and rightly missing in Now. Recall will not reach 100 % and should not; what counts is the trend and the misses that hurt (an attack, a shooting, Kyiv being evacuated).
 * The matching is by words: a story in Russian without a translation is not matched. A miss can therefore also be a missing translation.
 * Precision is not measured yet: whether the main stories of Now are important when the newsrooms do not have them. Telegram is often first, see "lead time" in [Stories](stories.md). For that a small hand-checked sample per day is planned.
+
+## Results so far
+
+| Date | Change | Recall@5 | Recall@10 |
+|---|---|---|---|
+| 9 Oct 2026, 13 hours | INTEL 0.13.0, first measurement after correcting the matching | 32 % | 42 % |
+| 9 Oct 2026, same data | INTEL 0.14.0: one place per topic, no digests, breadth across spaces, slower nights | 45 % | 65 % |
+| 9 Oct 2026, 72 hours in the lab | Topics by meaning (collector/embed.ts), threshold 0.8, against words only (44 % / 63 %) | 50 % | 69 % |
+
+The numbers of one day vary by a few points between runs. They become solid after several days.

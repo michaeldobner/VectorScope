@@ -9,7 +9,10 @@ import type { Item } from '../intel/src/data/types';
 
 /** Multilingual sentence model, 384 dimensions, about 120 MB quantized. Converted for transformers.js. */
 export const MODEL = 'Xenova/paraphrase-multilingual-MiniLM-L12-v2';
-/** Two headlines are one topic from this cosine similarity on. Set by the test lab (lab/embed.ts). */
+/**
+ * Two headlines are one topic from this cosine similarity on. Set by the test lab (lab/embed.ts) on 9 October 2026:
+ * 0.7, 0.75 and 0.8 gave the same Recall@5 of 50 % (words only 44 %), 0.8 with almost no wrong groups in the samples.
+ */
 export const THRESHOLD = 0.8;
 /** A topic joins reports within this time of each other. */
 const WINDOW_MS = 36 * 3600_000;

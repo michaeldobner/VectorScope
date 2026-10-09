@@ -4,6 +4,11 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.15.0 (2026-10-09)
+
+### Added
+* Stories and Now use the topics by meaning of the collector: reports about the same thing become one story across languages without a shared word, for example the Fort Hood execution in English, German and Russian. Measured in the test lab on 72 hours: Recall@5 of Now from 44 % to 50 %, Recall@10 from 63 % to 69 %.
+
 ## 0.14.0 (2026-10-09)
 
 ### Changed

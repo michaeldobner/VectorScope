@@ -36,3 +36,13 @@ Das Test-Labor misst einmal am Tag und nach jeder Änderung an `intel/src/data` 
 * Die Referenz misst Nachrichtenwert für ein breites Publikum. VectorScope schaut auf Sicherheit und Politik. Ein Literaturnobelpreis ist Topthema der Redaktionen und fehlt in Now zu Recht. Der Recall wird nicht 100 % erreichen und soll es nicht. Es zählen der Verlauf und die Lücken, die wehtun (ein Angriff, Schüsse, die Räumung von Kiew).
 * Der Abgleich geht über Wörter: Eine Story auf Russisch ohne Übersetzung wird nicht erkannt. Eine Lücke kann also auch eine fehlende Übersetzung sein.
 * Die Präzision wird noch nicht gemessen: ob die Hauptmeldungen von Now wichtig sind, wenn die Redaktionen sie nicht haben. Telegram ist oft früher, siehe „Vorsprung“ in [Stories](stories.md). Dafür ist eine kleine, von Hand geprüfte Stichprobe pro Tag geplant.
+
+## Bisherige Ergebnisse
+
+| Datum | Änderung | Recall@5 | Recall@10 |
+|---|---|---|---|
+| 9. Okt. 2026, 13 Stunden | INTEL 0.13.0, erste Messung nach Korrektur des Abgleichs | 32 % | 42 % |
+| 9. Okt. 2026, gleiche Daten | INTEL 0.14.0: ein Platz pro Thema, keine Zusammenfassungen, Breite über Räume, ruhigere Nächte | 45 % | 65 % |
+| 9. Okt. 2026, 72 Stunden im Labor | Themen nach Bedeutung (collector/embed.ts), Schwelle 0,8, gegenüber nur Wörtern (44 % / 63 %) | 50 % | 69 % |
+
+Die Zahlen eines Tages schwanken zwischen zwei Läufen um einige Punkte. Belastbar werden sie nach mehreren Tagen.

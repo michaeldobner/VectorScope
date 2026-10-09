@@ -4,6 +4,11 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.15.0 (2026-10-09)
+
+### Neu
+* Stories und Now nutzen die Themen nach Bedeutung des Sammlers: Meldungen über dasselbe werden über Sprachen hinweg eine Story, auch ohne gemeinsames Wort, etwa die Fort-Hood-Hinrichtung auf Englisch, Deutsch und Russisch. Gemessen im Test-Labor über 72 Stunden: Recall@5 von Now von 44 % auf 50 %, Recall@10 von 63 % auf 69 %.
+
 ## 0.14.0 (2026-10-09)
 
 ### Geändert

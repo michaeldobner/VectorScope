@@ -47,6 +47,8 @@ services:
       # Round files of the server are named HHMM-srv.jsonl.gz, so they never collide with the GitHub collector.
       - RAW_SUFFIX=srv
       - RAW_PUSH_URL=${RAW_PUSH_URL:-}
+      # Topics by meaning (collector/embed.ts): the model is downloaded once into /data/models. EMBED=0 turns it off.
+      - EMBED=${EMBED:-1}
     volumes:
       - vectorscope-data:/data
     depends_on:
