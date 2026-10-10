@@ -66,9 +66,20 @@ async function get(url) {
       redirect: 'follow',
       signal: AbortSignal.timeout(25000),
     });
+    // Not every feed is UTF-8 (Golem is ISO-8859-1): charset from the header, else from the XML declaration.
+    const bytes = new Uint8Array(await r.arrayBuffer());
+    const head = new TextDecoder('latin1').decode(bytes.slice(0, 200));
+    const charset = r.headers.get('content-type')?.match(/charset=([\w-]+)/i)?.[1] ?? head.match(/encoding="([\w-]+)"/i)?.[1] ?? 'utf-8';
+    let body;
+    try {
+      body = new TextDecoder(charset).decode(bytes);
+    } catch {
+      body = new TextDecoder().decode(bytes);
+    }
     return {
       status: r.status,
-      body: await r.text(),
+      body,
+      charset,
       ms: Date.now() - t,
       type: r.headers.get('content-type'),
       cors: r.headers.get('access-control-allow-origin'),
@@ -145,6 +156,7 @@ for (const [region, name, url] of FEEDS) {
     status: r.status || r.error,
     ms: r.ms,
     type: r.type,
+    charset: r.charset ?? '',
     cors: r.cors ?? '',
     redirected: r.final && r.final !== url ? r.final : '',
     format: p.format,
@@ -167,11 +179,11 @@ const md = [
   '',
   `${results.filter(usable).length} of ${results.length} usable: HTTP 200, at least 5 items, newest under 48 hours.`,
   '',
-  '| Region | Feed | OK | HTTP | ms | Format | Lang | Items | Newest h | 24h | Images % | Teasers % | CORS | First titles |',
-  '|---|---|---|---|---|---|---|---|---|---|---|---|---|---|',
+  '| Region | Feed | OK | HTTP | ms | Charset | Format | Lang | Items | Newest h | 24h | Images % | Teasers % | CORS | First titles |',
+  '|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|',
   ...results.map(
     (r) =>
-      `| ${r.region} | [${cell(r.name)}](${r.url}) | ${usable(r) ? 'yes' : 'no'} | ${cell(r.status)} | ${r.ms} | ${r.format} | ${cell(r.lang)} | ${r.items} | ${r.newestAgeH ?? ''} | ${r.last24h} | ${r.imagesPct} | ${r.teasersPct} | ${cell(r.cors)} | ${cell(r.titles.join(' / '))} |`,
+      `| ${r.region} | [${cell(r.name)}](${r.url}) | ${usable(r) ? 'yes' : 'no'} | ${cell(r.status)} | ${r.ms} | ${cell(r.charset)} | ${r.format} | ${cell(r.lang)} | ${r.items} | ${r.newestAgeH ?? ''} | ${r.last24h} | ${r.imagesPct} | ${r.teasersPct} | ${cell(r.cors)} | ${cell(r.titles.join(' / '))} |`,
   ),
   '',
 ];
