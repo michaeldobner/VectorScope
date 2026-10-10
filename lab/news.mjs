@@ -95,11 +95,44 @@ async function get(url) {
   }
 }
 
+// HTML entities: ZDF writes umlauts as &uuml;, others escape their markup once or twice.
+const ENTITIES = {
+  amp: '&',
+  lt: '<',
+  gt: '>',
+  quot: '"',
+  apos: "'",
+  nbsp: ' ',
+  auml: 'ä',
+  ouml: 'ö',
+  uuml: 'ü',
+  Auml: 'Ä',
+  Ouml: 'Ö',
+  Uuml: 'Ü',
+  szlig: 'ß',
+  eacute: 'é',
+  egrave: 'è',
+  agrave: 'à',
+  ccedil: 'ç',
+  laquo: '«',
+  raquo: '»',
+  bdquo: '„',
+  ldquo: '“',
+  rdquo: '”',
+  lsquo: '‘',
+  rsquo: '’',
+  ndash: '-',
+  mdash: '-',
+  hellip: '…',
+};
+const decode = (s) =>
+  s.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e) =>
+    e[0] === '#' ? String.fromCodePoint(e[1] === 'x' || e[1] === 'X' ? parseInt(e.slice(2), 16) : +e.slice(1)) : (ENTITIES[e] ?? m),
+  );
+const cdata = (s) => (s ?? '').replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1');
 const text = (s) =>
-  (s ?? '')
-    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+  decode(decode(cdata(s)).replace(/<[^>]+>/g, ' '))
     .replace(/<[^>]+>/g, ' ')
-    .replace(/&[a-z#0-9]+;/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 const tag = (block, names) => {
@@ -112,6 +145,20 @@ const tag = (block, names) => {
 const IMAGE =
   /<media:(content|thumbnail)[^>]*url=|<enclosure[^>]*type="image|<enclosure[^>]*url="[^"]+\.(jpe?g|png|webp)|&lt;img|<img|<image>/i;
 
+function imageUrl(block) {
+  const b = decode(cdata(block));
+  const m =
+    b.match(/<media:content[^>]*url="([^"]+)"[^>]*(?:medium="image"|type="image)/i) ??
+    b.match(/<media:content[^>]*(?:medium="image"|type="image)[^>]*url="([^"]+)"/i) ??
+    b.match(/<media:thumbnail[^>]*url="([^"]+)"/i) ??
+    b.match(/<enclosure[^>]*url="([^"]+)"[^>]*type="image/i) ??
+    b.match(/<enclosure[^>]*type="image[^"]*"[^>]*url="([^"]+)"/i) ??
+    b.match(/<media:content[^>]*url="([^"]+\.(?:jpe?g|png|webp)[^"]*)"/i) ??
+    b.match(/<img[^>]*src="([^"]+)"/i);
+  // Golem puts a counting pixel into the description, not a picture.
+  return m && !/cpx\.php|\/pixel|1x1/i.test(m[1]) ? decode(m[1]) : undefined;
+}
+
 function parseFeed(body) {
   try {
     const j = JSON.parse(body);
@@ -123,6 +170,10 @@ function parseFeed(body) {
         date: n.date,
         image: Boolean(n.teaserImage),
         teaser: (n.firstSentence ?? n.content?.[0]?.value ?? '').length > 40,
+        link: n.shareURL ?? n.detailsweb,
+        imageUrl: n.teaserImage?.imageVariants?.['16x9-960'] ?? n.teaserImage?.imageVariants?.['16x9-640'],
+        teaserText: text(n.firstSentence ?? n.content?.[0]?.value ?? ''),
+        ressort: n.ressort,
       })),
     };
   } catch {}
@@ -138,6 +189,10 @@ function parseFeed(body) {
       date: text(tag(b, ['pubDate', 'updated', 'published', 'dc:date'])),
       image: IMAGE.test(b),
       teaser: text(tag(b, ['description', 'summary', 'content'])).length > 40,
+      link: text(tag(b, ['link'])) || b.match(/<link[^>]*href="([^"]+)"/i)?.[1],
+      imageUrl: imageUrl(b),
+      teaserText: text(tag(b, ['description', 'summary', 'content'])).slice(0, 400),
+      category: text(tag(b, ['category'])),
     })),
   };
 }
@@ -190,3 +245,65 @@ const md = [
 fs.writeFileSync(`${OUT}/news-feeds.md`, md.join('\n'));
 fs.writeFileSync(`${OUT}/news-feeds.json`, JSON.stringify(results, null, 2));
 console.log('News feeds written');
+
+// Snapshot for the prototype: the newest items of every usable feed, with their images.
+// Feeds without images in the feed: test whether the article page names one (og:image).
+const SNAP = `${OUT}/news-snapshot`;
+fs.mkdirSync(`${SNAP}/img`, { recursive: true });
+const snapshot = [];
+const ogTest = [];
+let n = 0;
+for (const [region, name, url] of FEEDS) {
+  const res = results.find((r) => r.url === url);
+  if (!usable(res)) continue;
+  const r = await get(url);
+  if (r.status !== 200) continue;
+  const items = parseFeed(r.body).items.slice(0, 15);
+  for (const [i, it] of items.entries()) {
+    let image = it.imageUrl;
+    let imageFrom = image ? 'feed' : '';
+    if (!image && i < 6 && it.link) {
+      const page = await get(it.link);
+      image =
+        page.body.match(/<meta[^>]+property="og:image"[^>]+content="([^"]+)"/i)?.[1] ??
+        page.body.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:image"/i)?.[1];
+      if (image) image = decode(image);
+      imageFrom = image ? 'og' : '';
+      ogTest.push({ feed: name, link: it.link, status: page.status || page.error, ogImage: Boolean(image) });
+    }
+    let file;
+    if (image && i < 10) {
+      try {
+        const img = await fetch(new URL(image, it.link).href, { headers: UA, signal: AbortSignal.timeout(20000) });
+        const buf = Buffer.from(await img.arrayBuffer());
+        if (img.ok && buf.length < 2_500_000 && /^image\//.test(img.headers.get('content-type') ?? '')) {
+          file = `img/${String(++n).padStart(4, '0')}.${(img.headers.get('content-type').split('/')[1] ?? 'jpg').replace(/[^a-z]/g, '').replace('jpeg', 'jpg')}`;
+          fs.writeFileSync(`${SNAP}/${file}`, buf);
+        }
+      } catch {}
+    }
+    snapshot.push({
+      region,
+      feed: name,
+      title: it.title,
+      date: it.date,
+      link: it.link,
+      teaser: it.teaserText,
+      category: it.category ?? it.ressort ?? '',
+      image,
+      imageFrom,
+      file,
+    });
+  }
+}
+fs.writeFileSync(`${SNAP}/snapshot.json`, JSON.stringify(snapshot, null, 1));
+const ogByFeed = Object.entries(Object.groupBy(ogTest, (o) => o.feed)).map(
+  ([feed, list]) => `| ${feed} | ${list.filter((o) => o.ogImage).length} of ${list.length} |`,
+);
+fs.writeFileSync(
+  `${OUT}/news-og-image.md`,
+  ['# og:image on the article page, for items without an image in the feed', '', '| Feed | Found |', '|---|---|', ...ogByFeed, ''].join(
+    '\n',
+  ),
+);
+console.log(`Snapshot: ${snapshot.length} items, ${n} images`);
