@@ -4,7 +4,12 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
-## 0.21.1 (2026-10-11)
+## 0.21.2 (2026-10-10)
+
+### Behoben
+* Modul AIR 0.5.1 und INTEL 0.15.2: Kopfleiste außerhalb des unscharfen Streifens unter der iOS-Statusleiste.
+
+## 0.21.1 (2026-10-10)
 
 ### Behoben
 * Der GitHub-Actions-Speicher (0,5 GB frei) war voll: E2E-Screenshots werden nur noch hochgeladen, wenn eine Prüfung scheitert, und 3 Tage behalten, das Pages-Paket 1 Tag, und der neue Workflow `cleanup.yml` löscht jede Nacht Artefakte, die älter als zwei Tage sind.

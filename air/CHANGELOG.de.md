@@ -4,6 +4,11 @@ Alle wesentlichen Änderungen am Modul AIR. [English](CHANGELOG.md) · [Changelo
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.5.1 (2026-10-10)
+
+### Behoben
+* **Bedienelemente aus dem unscharfen Streifen am iPhone:** Neuere iOS-Versionen zeichnen den Streifen unter Statusleiste und Dynamic Island weich und unscharf, die Kopfleiste saß direkt darunter und ihre Symbole wirkten verwaschen. Auf Bildschirmen mit oberem Rand hält die Leiste jetzt bis zu 14 px Abstand, Bildschirme ohne diesen Rand bleiben unverändert.
+
 ## 0.5.0 (2026-10-09)
 
 ### Neu

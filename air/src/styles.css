@@ -7,7 +7,9 @@
   --ui: 'Inter', system-ui, -apple-system, sans-serif;
   --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
 
-  --sat: env(safe-area-inset-top, 0px);
+  /* Top inset plus a gap: newer iOS draws the strip below the status bar and the Dynamic Island soft and
+     blurred, controls right under it look washed out. No gap on screens without an inset. */
+  --sat: calc(env(safe-area-inset-top, 0px) + min(env(safe-area-inset-top, 0px), 14px));
   --sar: env(safe-area-inset-right, 0px);
   --sab: env(safe-area-inset-bottom, 0px);
   --sal: env(safe-area-inset-left, 0px);

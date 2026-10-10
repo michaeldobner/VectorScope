@@ -4,7 +4,12 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
-## 0.15.1 (2026-10-11)
+## 0.15.2 (2026-10-10)
+
+### Behoben
+* **Bedienelemente aus dem unscharfen Streifen am iPhone:** Neuere iOS-Versionen zeichnen den Streifen unter Statusleiste und Dynamic Island weich und unscharf, die Kopfleiste saß direkt darunter und ihre Symbole wirkten verwaschen. Auf Bildschirmen mit oberem Rand hält die Leiste jetzt bis zu 14 px Abstand, Bildschirme ohne diesen Rand bleiben unverändert.
+
+## 0.15.1 (2026-10-10)
 
 ### Behoben
 * **Sicherheit und Politik zeigen deutlich seltener dieselben Storys:** 191 von 688 Storys eines Tages (28 %) standen in beiden Linsen, jetzt 13 (2 %). Eine Story kommt in die Linse, für die die meisten ihrer Meldungen zählen, in die andere nur mit mehr als einem Drittel. Eine Meldung in beiden Linsen zählt nur dann für Sicherheit, wenn etwas passiert ist (Angriff, Explosion, Tote, Festnahme, Absturz), sonst für Politik. Vorher brachte eine einzige Meldung zum Krieg den Streit um den Friedensnobelpreis in die Sicherheit, dort auf Platz 2. Recall von Now unverändert.
