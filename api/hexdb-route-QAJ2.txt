@@ -1,0 +1,14 @@
+HTTP 404
+alt-svc: h3=":443"; ma=86400
+cache-control: max-age=14400
+cf-cache-status: MISS
+cf-ray: a485ad2409c13824-SJC
+connection: keep-alive
+content-length: 43
+content-type: application/json
+date: Sat, 10 Oct 2026 12:37:26 GMT
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=tOEZ%2FGb9K%2B%2B9bYf2fh1Rqf7Qrb2F2%2FlG0ijgWVpL1uYmQmoY6aaRrosfMyOWaqumfSz2jEUj6eMu9qLYzZ0rIgbWIBZVy%2FClgVl3n3ZP3vfxy0jUNH2mOtFeQA%3D%3D"}]}
+server: cloudflare
+
+{"status":"404","error":"Route not found."}

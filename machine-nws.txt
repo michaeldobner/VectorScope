@@ -1,0 +1,1320 @@
+HTTP 200 CORS *
+
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "@vocab": "https://api.weather.gov/ontology#"
+        }
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4d6ab23facc66fffcf425b934c7bd6e4ea2b78dd.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -84.7,
+                            28.63
+                        ],
+                        [
+                            -84.5,
+                            29.14
+                        ],
+                        [
+                            -84.09,
+                            29.92
+                        ],
+                        [
+                            -83.92,
+                            30.11
+                        ],
+                        [
+                            -83.83,
+                            30.04
+                        ],
+                        [
+                            -83.74,
+                            30.04
+                        ],
+                        [
+                            -83.54,
+                            29.85
+                        ],
+                        [
+                            -83.73,
+                            29.12
+                        ],
+                        [
+                            -83.82,
+                            28.99
+                        ],
+                        [
+                            -84.04,
+                            28.86
+                        ],
+                        [
+                            -84.12,
+                            28.94
+                        ],
+                        [
+                            -84.51,
+                            28.69
+                        ],
+                        [
+                            -84.7,
+                            28.63
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4d6ab23facc66fffcf425b934c7bd6e4ea2b78dd.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.4d6ab23facc66fffcf425b934c7bd6e4ea2b78dd.001.1",
+                "areaDesc": "Apalachee Bay or Coastal Waters From Keaton Beach to Ochlockonee River Fl out to 20 Nm; Coastal Waters From  Ochlockonee River to Apalachicola FL out to 20 Nm; Coastal waters from  Suwannee River to Keaton Beach out 20 NM; Waters from Suwannee River to Apalachicola FL from 20 to 60 NM",
+                "geocode": {
+                    "SAME": [
+                        "077730",
+                        "077755",
+                        "077765",
+                        "077775"
+                    ],
+                    "UGC": [
+                        "GMZ730",
+                        "GMZ755",
+                        "GMZ765",
+                        "GMZ775"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/GMZ730",
+                    "https://api.weather.gov/zones/forecast/GMZ755",
+                    "https://api.weather.gov/zones/forecast/GMZ765",
+                    "https://api.weather.gov/zones/forecast/GMZ775"
+                ],
+                "references": [],
+                "sent": "2026-10-10T08:26:00-04:00",
+                "effective": "2026-10-10T08:26:00-04:00",
+                "onset": "2026-10-10T08:26:00-04:00",
+                "expires": "2026-10-10T10:30:00-04:00",
+                "ends": "2026-10-10T10:30:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Special Marine Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tallahassee FL",
+                "headline": "Special Marine Warning issued October 10 at 8:26AM EDT until October 10 at 10:30AM EDT by NWS Tallahassee FL",
+                "description": "SMWTAE\n\nThe National Weather Service in Tallahassee has issued a\n\n* Special Marine Warning for...\nApalachee Bay or Coastal Waters From Keaton Beach to Ochlockonee\nRiver Fl out to 20 Nm...\nCoastal Waters From  Ochlockonee River to Apalachicola FL out to 20\nNm...\nCoastal waters from  Suwannee River to Keaton Beach out 20 NM...\nWaters from Suwannee River to Apalachicola FL from 20 to 60 NM...\n\n* Until 1030 AM EDT.\n\n* At 826 AM EDT, severe thunderstorms capable of producing\nwaterspouts were located along a line extending from 27 nm east of\nSt. Marks to 25 nm southeast of V Tower, moving northeast at 30\nknots.\n\nHAZARD...Waterspouts and wind gusts 34 knots or greater.\n\nSOURCE...Radar indicated.\n\nIMPACT...Waterspouts can quickly form and capsize boats...damage\nvessels...and create suddenly higher waves. Make sure all\non board are in a secure location and wearing life\njackets. Expect wind gusts in excess of 34\nknots...suddenly higher waves...frequent lightning...and\nheavy downpours. Make sure all on board are wearing life\njackets.\n\n* Locations impacted include...\nV Tower and Buckeye Reef.",
+                "instruction": "Move to safe harbor until hazardous weather passes.\n\nThunderstorms can produce sudden waterspouts. Waterspouts can easily\noverturn boats and create locally hazardous seas. Seek safe harbor\nimmediately.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "SMWTAE"
+                    ],
+                    "WMOidentifier": [
+                        "WHUS52 KTAE 101226"
+                    ],
+                    "eventMotionDescription": [
+                        "2026-10-10T12:26:00-00:00...storm...207DEG...31KT...30.07,-83.7 29.02,-84.15"
+                    ],
+                    "waterspoutDetection": [
+                        "POSSIBLE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KTAE.MA.W.0459.261010T1226Z-261010T1430Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-10T10:30:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "SMW"
+                    ],
+                    "NationalWeatherService": [
+                        "MAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5b98a741bc987f47fd6482ea3ae06442ef623bf8.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -77.79,
+                            33.09
+                        ],
+                        [
+                            -78,
+                            33
+                        ],
+                        [
+                            -78.22,
+                            33.22
+                        ],
+                        [
+                            -77.96,
+                            33.36
+                        ],
+                        [
+                            -77.85,
+                            33.26
+                        ],
+                        [
+                            -77.79,
+                            33.09
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.5b98a741bc987f47fd6482ea3ae06442ef623bf8.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.5b98a741bc987f47fd6482ea3ae06442ef623bf8.001.1",
+                "areaDesc": "Waters from Little River Inlet SC to South Santee River SC from 20 to 60 NM",
+                "geocode": {
+                    "SAME": [
+                        "075284"
+                    ],
+                    "UGC": [
+                        "AMZ284"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/AMZ284"
+                ],
+                "references": [],
+                "sent": "2026-10-10T08:23:00-04:00",
+                "effective": "2026-10-10T08:23:00-04:00",
+                "onset": "2026-10-10T08:23:00-04:00",
+                "expires": "2026-10-10T09:30:00-04:00",
+                "ends": "2026-10-10T09:30:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Special Marine Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Wilmington NC",
+                "headline": "Special Marine Warning issued October 10 at 8:23AM EDT until October 10 at 9:30AM EDT by NWS Wilmington NC",
+                "description": "SMWILM\n\nThe National Weather Service in Wilmington has issued a\n\n* Special Marine Warning for...\nWaters from Little River Inlet SC to South Santee River SC from 20\nto 60 NM...\n\n* Until 930 AM EDT.\n\n* At 823 AM EDT, a severe thunderstorm capable of producing\nwaterspouts was located 17 NM southeast of Sunset Mid Shelf Buoy,\nmoving northwest at 10 knots.\n\nHAZARD...Waterspouts and wind gusts to 40 knots.\n\nSOURCE...Radar indicated.\n\nIMPACT...Waterspouts can easily overturn boats and create locally\nhazardous seas. Small craft could be damaged in briefly\nhigher winds and suddenly higher waves.\n\n* Locations impacted include...\nMainly open waters from Little River Inlet SC to South Santee River\nSC from 20 to 60 NM.",
+                "instruction": "Move to safe harbor until hazardous weather passes. If caught on the\nopen water, prepare for deteriorating conditions.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "SMWILM"
+                    ],
+                    "WMOidentifier": [
+                        "WHUS52 KILM 101223"
+                    ],
+                    "eventMotionDescription": [
+                        "2026-10-10T12:23:00-00:00...storm...147DEG...8KT...33.08,-77.93"
+                    ],
+                    "maxWindGust": [
+                        "40 knots"
+                    ],
+                    "maxHailSize": [
+                        "0.00"
+                    ],
+                    "waterspoutDetection": [
+                        "POSSIBLE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KILM.MA.W.0094.261010T1223Z-261010T1330Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-10T09:30:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "SMW"
+                    ],
+                    "NationalWeatherService": [
+                        "MAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a9920bd6bb7cc3082e8b1fe3fa3821767716d5ef.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -79.14,
+                            33.39
+                        ],
+                        [
+                            -78.84,
+                            33.36
+                        ],
+                        [
+                            -78.99,
+                            32.98
+                        ],
+                        [
+                            -79.27,
+                            33.12
+                        ],
+                        [
+                            -79.26,
+                            33.12
+                        ],
+                        [
+                            -79.25,
+                            33.13
+                        ],
+                        [
+                            -79.24,
+                            33.13
+                        ],
+                        [
+                            -79.24,
+                            33.14
+                        ],
+                        [
+                            -79.22,
+                            33.16
+                        ],
+                        [
+                            -79.2,
+                            33.16
+                        ],
+                        [
+                            -79.2,
+                            33.17
+                        ],
+                        [
+                            -79.17,
+                            33.21
+                        ],
+                        [
+                            -79.18,
+                            33.24
+                        ],
+                        [
+                            -79.18,
+                            33.25
+                        ],
+                        [
+                            -79.17,
+                            33.3
+                        ],
+                        [
+                            -79.16,
+                            33.31
+                        ],
+                        [
+                            -79.16,
+                            33.32
+                        ],
+                        [
+                            -79.15,
+                            33.35
+                        ],
+                        [
+                            -79.15,
+                            33.38
+                        ],
+                        [
+                            -79.14,
+                            33.39
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a9920bd6bb7cc3082e8b1fe3fa3821767716d5ef.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.a9920bd6bb7cc3082e8b1fe3fa3821767716d5ef.001.1",
+                "areaDesc": "Coastal waters from Murrells Inlet to South Santee River SC out 20 NM",
+                "geocode": {
+                    "SAME": [
+                        "075256"
+                    ],
+                    "UGC": [
+                        "AMZ256"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/AMZ256"
+                ],
+                "references": [],
+                "sent": "2026-10-10T08:15:00-04:00",
+                "effective": "2026-10-10T08:15:00-04:00",
+                "onset": "2026-10-10T08:15:00-04:00",
+                "expires": "2026-10-10T09:45:00-04:00",
+                "ends": "2026-10-10T09:45:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Special Marine Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Wilmington NC",
+                "headline": "Special Marine Warning issued October 10 at 8:15AM EDT until October 10 at 9:45AM EDT by NWS Wilmington NC",
+                "description": "SMWILM\n\nThe National Weather Service in Wilmington has issued a\n\n* Special Marine Warning for...\nCoastal waters from Murrells Inlet to South Santee River SC out 20\nNM...\n\n* Until 945 AM EDT.\n\n* At 815 AM EDT, a severe thunderstorm capable of producing\nwaterspouts was located 8 NM southeast of South Santee River\nEntrance, moving north at 10 knots.\n\nHAZARD...Waterspouts and wind gusts to 40 knots.\n\nSOURCE...Radar indicated.\n\nIMPACT...Waterspouts can easily overturn boats and create locally\nhazardous seas. Small craft could be damaged in briefly\nhigher winds and suddenly higher waves.\n\n* Locations impacted include...\nGeorgetown Nearshore Wreck, Winyah Bay Sea Buoy, Georgetown Reef, C\nJ Davidson Wreck and East Bank Buoy.",
+                "instruction": "Move to safe harbor until hazardous weather passes. If caught on the\nopen water, prepare for deteriorating conditions.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "SMWILM"
+                    ],
+                    "WMOidentifier": [
+                        "WHUS52 KILM 101215"
+                    ],
+                    "eventMotionDescription": [
+                        "2026-10-10T12:14:00-00:00...storm...191DEG...11KT...32.98,-79.21"
+                    ],
+                    "maxWindGust": [
+                        "40 knots"
+                    ],
+                    "maxHailSize": [
+                        "0.00"
+                    ],
+                    "waterspoutDetection": [
+                        "POSSIBLE"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KILM.MA.W.0093.261010T1215Z-261010T1345Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-10T09:45:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "SMW"
+                    ],
+                    "NationalWeatherService": [
+                        "MAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0ccf3baa1ca2f0996d893c76d55d48811bbfac24.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -84.46,
+                            33.55
+                        ],
+                        [
+                            -84.52,
+                            33.62
+                        ],
+                        [
+                            -84.49,
+                            33.81
+                        ],
+                        [
+                            -84.46,
+                            33.83
+                        ],
+                        [
+                            -84.46,
+                            33.85
+                        ],
+                        [
+                            -84.44,
+                            33.92
+                        ],
+                        [
+                            -84.16,
+                            34.06
+                        ],
+                        [
+                            -84.03,
+                            33.77
+                        ],
+                        [
+                            -84.12,
+                            33.47
+                        ],
+                        [
+                            -84.33,
+                            33.39
+                        ],
+                        [
+                            -84.38,
+                            33.46
+                        ],
+                        [
+                            -84.39,
+                            33.48
+                        ],
+                        [
+                            -84.42,
+                            33.5
+                        ],
+                        [
+                            -84.44,
+                            33.55
+                        ],
+                        [
+                            -84.46,
+                            33.55
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.0ccf3baa1ca2f0996d893c76d55d48811bbfac24.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.0ccf3baa1ca2f0996d893c76d55d48811bbfac24.001.1",
+                "areaDesc": "Clayton, GA; DeKalb, GA; Fulton, GA; Gwinnett, GA; Henry, GA; Rockdale, GA",
+                "geocode": {
+                    "SAME": [
+                        "013063",
+                        "013089",
+                        "013121",
+                        "013135",
+                        "013151",
+                        "013247"
+                    ],
+                    "UGC": [
+                        "GAC063",
+                        "GAC089",
+                        "GAC121",
+                        "GAC135",
+                        "GAC151",
+                        "GAC247"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/GAC063",
+                    "https://api.weather.gov/zones/county/GAC089",
+                    "https://api.weather.gov/zones/county/GAC121",
+                    "https://api.weather.gov/zones/county/GAC135",
+                    "https://api.weather.gov/zones/county/GAC151",
+                    "https://api.weather.gov/zones/county/GAC247"
+                ],
+                "references": [],
+                "sent": "2026-10-10T07:12:00-04:00",
+                "effective": "2026-10-10T07:12:00-04:00",
+                "onset": "2026-10-10T07:12:00-04:00",
+                "expires": "2026-10-10T13:15:00-04:00",
+                "ends": "2026-10-10T13:15:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Peachtree City GA",
+                "headline": "Flash Flood Warning issued October 10 at 7:12AM EDT until October 10 at 1:15PM EDT by NWS Peachtree City GA",
+                "description": "FFWFFC\n\nThe National Weather Service in Peachtree City has issued a\n\n* Flash Flood Warning for...\nClayton County in north central Georgia...\nDeKalb County in north central Georgia...\nCentral Fulton County in north central Georgia...\nSouthwestern Gwinnett County in north central Georgia...\nNorthwestern Henry County in north central Georgia...\nCentral Rockdale County in north central Georgia...\n\n* Until 115 PM EDT Saturday.\n\n* At 712 AM EDT, Doppler radar indicated thunderstorms producing\nheavy rain across the warned area. Between 1 and 3 inches of rain\nhave fallen. Additional rainfall amounts of 2 to 3 inches are\npossible in the warned area. Flash flooding is ongoing or expected\nto begin shortly.\n\nHAZARD...Flash flooding caused by heavy rain.\n\nSOURCE...Radar indicated.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\n* Some locations that will experience flash flooding include...\nAtlanta, McDonough, Decatur, Jonesboro, Peachtree Corners, Sandy\nSprings, Johns Creek, Dunwoody, East Point, Duluth, Stockbridge,\nForest Park, Riverdale, College Park, Lilburn, Chamblee, Norcross\nand Doraville.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFWFFC"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS52 KFFC 101112"
+                    ],
+                    "flashFloodDetection": [
+                        "RADAR INDICATED"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KFFC.FF.W.0080.261010T1112Z-261010T1715Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-10T13:15:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFW"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4d3422f73f7bf47b50a13dd09188ecc602c6489f.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -84.48,
+                            33.2
+                        ],
+                        [
+                            -84.4,
+                            33.28
+                        ],
+                        [
+                            -84.39,
+                            33.31
+                        ],
+                        [
+                            -84.35,
+                            33.34
+                        ],
+                        [
+                            -84.33,
+                            33.4
+                        ],
+                        [
+                            -84.27,
+                            33.42
+                        ],
+                        [
+                            -84.22,
+                            33.46
+                        ],
+                        [
+                            -84.07,
+                            33.46
+                        ],
+                        [
+                            -84.08,
+                            33.36
+                        ],
+                        [
+                            -84.1,
+                            33.31
+                        ],
+                        [
+                            -84.11,
+                            33.31
+                        ],
+                        [
+                            -84.12,
+                            33.24
+                        ],
+                        [
+                            -84.13,
+                            33.24
+                        ],
+                        [
+                            -84.13,
+                            33.11
+                        ],
+                        [
+                            -84.17,
+                            33.06
+                        ],
+                        [
+                            -84.24,
+                            33.04
+                        ],
+                        [
+                            -84.24,
+                            33.03
+                        ],
+                        [
+                            -84.35,
+                            33.03
+                        ],
+                        [
+                            -84.43,
+                            33.05
+                        ],
+                        [
+                            -84.47,
+                            33.08
+                        ],
+                        [
+                            -84.48,
+                            33.2
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.4d3422f73f7bf47b50a13dd09188ecc602c6489f.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.4d3422f73f7bf47b50a13dd09188ecc602c6489f.001.1",
+                "areaDesc": "Henry, GA; Lamar, GA; Pike, GA; Spalding, GA",
+                "geocode": {
+                    "SAME": [
+                        "013151",
+                        "013171",
+                        "013231",
+                        "013255"
+                    ],
+                    "UGC": [
+                        "GAC151",
+                        "GAC171",
+                        "GAC231",
+                        "GAC255"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/GAC151",
+                    "https://api.weather.gov/zones/county/GAC171",
+                    "https://api.weather.gov/zones/county/GAC231",
+                    "https://api.weather.gov/zones/county/GAC255"
+                ],
+                "references": [],
+                "sent": "2026-10-10T05:43:00-04:00",
+                "effective": "2026-10-10T05:43:00-04:00",
+                "onset": "2026-10-10T05:43:00-04:00",
+                "expires": "2026-10-10T11:45:00-04:00",
+                "ends": "2026-10-10T11:45:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Immediate",
+                "event": "Flash Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Peachtree City GA",
+                "headline": "Flash Flood Warning issued October 10 at 5:43AM EDT until October 10 at 11:45AM EDT by NWS Peachtree City GA",
+                "description": "FFWFFC\n\nThe National Weather Service in Peachtree City has issued a\n\n* Flash Flood Warning for...\nSouthwestern Henry County in north central Georgia...\nNorthwestern Lamar County in west central Georgia...\nPike County in west central Georgia...\nSpalding County in west central Georgia...\n\n* Until 1145 AM EDT Saturday.\n\n* At 543 AM EDT, Doppler radar indicated heavy rain across the warned\narea. Between 1.5 and 2.5 inches of rain have fallen. The expected\nrainfall rate is 0.5 to 1.5 inches in 1 hour. Additional rainfall\namounts of 1 to 2 inches are possible in the warned area. Flash\nflooding is ongoing or expected to begin shortly.\n\nHAZARD...Flash flooding caused by heavy rain.\n\nSOURCE...Radar indicated.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\n* Some locations that will experience flash flooding include...\nGriffin, McDonough, Zebulon, Hampton, Locust Grove, Milner,\nWilliamson, Orchard Hill, Meansville, Sunny Side, East Griffin,\nConcord, Experiment, Highland Mills, Rover, Towalaga, Walker Mill,\nZetella and Birdie.",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe especially cautious at night when it is harder to recognize the\ndangers of flooding.\n\nBe aware of your surroundings and do not drive on flooded roads.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FFWFFC"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS52 KFFC 100943"
+                    ],
+                    "flashFloodDetection": [
+                        "RADAR INDICATED"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KFFC.FF.W.0079.261010T0943Z-261010T1545Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-10T11:45:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FFW"
+                    ],
+                    "NationalWeatherService": [
+                        "FFW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.60ebf6c9439dddd57acced08a49bd97366677b11.002.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.60ebf6c9439dddd57acced08a49bd97366677b11.002.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.60ebf6c9439dddd57acced08a49bd97366677b11.002.1",
+                "areaDesc": "Eastern Curry County and Josephine County; Jackson County",
+                "geocode": {
+                    "SAME": [
+                        "041015",
+                        "041033",
+                        "041029"
+                    ],
+                    "UGC": [
+                        "ORZ024",
+                        "ORZ026"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/ORZ024",
+                    "https://api.weather.gov/zones/forecast/ORZ026"
+                ],
+                "references": [],
+                "sent": "2026-10-10T02:17:00-07:00",
+                "effective": "2026-10-10T02:17:00-07:00",
+                "onset": "2026-10-12T02:00:00-07:00",
+                "expires": "2026-10-10T17:15:00-07:00",
+                "ends": "2026-10-12T09:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Possible",
+                "urgency": "Future",
+                "event": "Freeze Watch",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Medford OR",
+                "headline": "Freeze Watch issued October 10 at 2:17AM PDT until October 12 at 9:00AM PDT by NWS Medford OR",
+                "description": "* WHAT...For the Frost Advisory in the valleys of Josephine and\nJackson Counties, temperatures as low as 30 will result in frost\nformation. For the Freeze Watch, sub-freezing temperatures as low\nas 27 degrees possible.\n\n* WHERE...Within the valleys of Josephine and Jackson counties. For\nthe Frost Advisory, most areas will fall into the mid 30s. Some\nareas like Ashland and the typically colder spots of the Illinois\nValley such as Cave Junction and Obrien will drop to the lower 30s.\nFor the Freeze Watch, more locations within the same general area\ncould fall to the lower 30s.\n\n* WHEN...For the Frost Advisory, from 2 AM to 8 AM PDT Sunday. For\nthe Freeze Watch, from late Sunday night through Monday morning.\n\n* IMPACTS...Frost and freeze conditions could kill crops and other\nsensitive vegetation.",
+                "instruction": "Take steps now to protect tender plants from the cold.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWMFR"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS76 KMFR 100917"
+                    ],
+                    "NWSheadline": [
+                        "FROST ADVISORY REMAINS IN EFFECT FROM 2 AM TO 8 AM PDT SUNDAY VALLEYS OF JOSEPHINE AND JACKSON COUNTIES... ...FREEZE WATCH IN EFFECT FROM LATE SUNDAY NIGHT THROUGH MONDAY MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KMFR.FZ.A.0008.261012T0900Z-261012T1600Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-12T09:00:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FZA"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.60ebf6c9439dddd57acced08a49bd97366677b11.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.60ebf6c9439dddd57acced08a49bd97366677b11.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.60ebf6c9439dddd57acced08a49bd97366677b11.001.1",
+                "areaDesc": "Western Siskiyou County; Central Siskiyou County; South Central Siskiyou County",
+                "geocode": {
+                    "SAME": [
+                        "006093"
+                    ],
+                    "UGC": [
+                        "CAZ080",
+                        "CAZ081",
+                        "CAZ082"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/forecast/CAZ080",
+                    "https://api.weather.gov/zones/forecast/CAZ081",
+                    "https://api.weather.gov/zones/forecast/CAZ082"
+                ],
+                "references": [],
+                "sent": "2026-10-10T02:17:00-07:00",
+                "effective": "2026-10-10T02:17:00-07:00",
+                "onset": "2026-10-12T02:00:00-07:00",
+                "expires": "2026-10-10T17:15:00-07:00",
+                "ends": "2026-10-12T09:00:00-07:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Possible",
+                "urgency": "Future",
+                "event": "Freeze Watch",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Medford OR",
+                "headline": "Freeze Watch issued October 10 at 2:17AM PDT until October 12 at 9:00AM PDT by NWS Medford OR",
+                "description": "* WHAT...For the Freeze Warning, sub-freezing temperatures as low as\n28 expected. For the Freeze Watch, sub-freezing temperatures as low\nas 26 possible.\n\n* WHERE...Valleys of western and central Siskiyou County, including\nthe Shasta Valley, Scott Valley, portions of the lower Klamath\nRiver Valley. This also includes Mount Shasta City and areas to the\neast.\n\n* WHEN...For the Freeze Warning, from 2 AM to 8 AM PDT Sunday. For\nthe Freeze Watch, from late Sunday night through Monday morning.\n\n* IMPACTS...Frost and freeze conditions could kill crops and other\nsensitive vegetation.",
+                "instruction": "Take steps now to protect tender plants from the cold.",
+                "response": "Prepare",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "NPWMFR"
+                    ],
+                    "WMOidentifier": [
+                        "WWUS76 KMFR 100917"
+                    ],
+                    "NWSheadline": [
+                        "FREEZE WARNING REMAINS IN EFFECT FROM 2 AM TO 8 AM PDT SUNDAY... ...FREEZE WATCH IN EFFECT FROM LATE SUNDAY NIGHT THROUGH MONDAY MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KMFR.FZ.A.0008.261012T0900Z-261012T1600Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-12T09:00:00-07:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "NWS"
+                    ],
+                    "NationalWeatherService": [
+                        "FZA"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a0d30d83349158f5375c479a9a2895fe3c6eec1d.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -86.19,
+                            31.51
+                        ],
+                        [
+                            -86.14,
+                            31.54
+                        ],
+                        [
+                            -86.14,
+                            31.57
+                        ],
+                        [
+                            -86.11,
+                            31.62
+                        ],
+                        [
+                            -85.61,
+                            31.62
+                        ],
+                        [
+                            -85.66,
+                            31.3
+                        ],
+                        [
+                            -85.69,
+                            31.21
+                        ],
+                        [
+                            -85.71,
+                            31.2
+                        ],
+                        [
+                            -85.69,
+                            31.2
+                        ],
+                        [
+                            -85.76,
+                            31
+                        ],
+                        [
+                            -86.18,
+                            31
+                        ],
+                        [
+                            -86.19,
+                            31.51
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.a0d30d83349158f5375c479a9a2895fe3c6eec1d.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.a0d30d83349158f5375c479a9a2895fe3c6eec1d.001.1",
+                "areaDesc": "Coffee, AL; Dale, AL; Geneva, AL",
+                "geocode": {
+                    "SAME": [
+                        "001031",
+                        "001045",
+                        "001061"
+                    ],
+                    "UGC": [
+                        "ALC031",
+                        "ALC045",
+                        "ALC061"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/ALC031",
+                    "https://api.weather.gov/zones/county/ALC045",
+                    "https://api.weather.gov/zones/county/ALC061"
+                ],
+                "references": [],
+                "sent": "2026-10-10T03:35:00-04:00",
+                "effective": "2026-10-10T03:35:00-04:00",
+                "onset": "2026-10-10T03:35:00-04:00",
+                "expires": "2026-10-10T12:45:00-04:00",
+                "ends": "2026-10-10T12:45:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tallahassee FL",
+                "headline": "Flood Warning issued October 10 at 3:35AM EDT until October 10 at 12:45PM EDT by NWS Tallahassee FL",
+                "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...Coffee County in southeastern Alabama...\nWestern Dale County in southeastern Alabama...\nGeneva County in southeastern Alabama...\n\n* WHEN...Until 1145 AM CDT Saturday.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring. Numerous roads\nremain closed due to flooding. Streams continue to rise due to\nexcess runoff from earlier rainfall. It will take several hours for\nall the water from these storms to work through local drainage\nsystems in urban areas.\n\n* ADDITIONAL DETAILS...\n- At 232 AM CDT, Extremely heavy rain on Friday night due to\nHurricane Isaias brought 5 to 12 inches of rain to the warned\narea. Heavy rain has ended, but small streams, creeks and rivers\nwill continue to rise and flood for at least several more hours\nas water moves downhill and downstream.\n- Flooding impacts will continue, but no additional rainfall is\nexpected.\n- Some locations that will experience flooding include...\nDaleville, Elba, Enterprise, Fort Rucker, Geneva, Ozark, Level\nPlains, Samson, New Brockton, Ariton, Lee, Clayhatchee, Kinston,\nCoffee Springs, Enterprise Municipal A/P, Turner Crossroads,\nBattens Crossroads, Lucile and Shell Army Field.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nBe aware of your surroundings and do not drive on flooded roads.\n\nIn hilly terrain there are hundreds of low water crossings which are\npotentially dangerous in heavy rain. Do not attempt to cross flooded\nroads. Find an alternate route.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWTAE"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS42 KTAE 100735"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT UNTIL 1145 AM CDT THIS MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KTAE.FA.W.0005.261010T0735Z-261010T1645Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-10T12:45:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FAW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.133773dc20fe2bec39765d948183390aceb163a8.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -85.9,
+                            31.43
+                        ],
+                        [
+                            -86.04,
+                            31.39
+                        ],
+                        [
+                            -86.08,
+                            31.19
+                        ],
+                        [
+                            -86.18,
+                            31.19
+                        ],
+                        [
+                            -86.1,
+                            31.43
+                        ],
+                        [
+                            -85.93,
+                            31.49
+                        ],
+                        [
+                            -85.9,
+                            31.43
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.133773dc20fe2bec39765d948183390aceb163a8.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.133773dc20fe2bec39765d948183390aceb163a8.001.1",
+                "areaDesc": "Coffee, AL",
+                "geocode": {
+                    "SAME": [
+                        "001031"
+                    ],
+                    "UGC": [
+                        "ALC031"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/ALC031"
+                ],
+                "references": [],
+                "sent": "2026-10-10T02:54:00-04:00",
+                "effective": "2026-10-10T02:54:00-04:00",
+                "onset": "2026-10-11T00:00:00-04:00",
+                "expires": "2026-10-10T15:00:00-04:00",
+                "ends": "2026-10-11T21:00:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tallahassee FL",
+                "headline": "Flood Warning issued October 10 at 2:54AM EDT until October 11 at 9:00PM EDT by NWS Tallahassee FL",
+                "description": "...The National Weather Service in Tallahassee has issued a Flood\nWarning for the following rivers in Alabama...\n\nPea River at Elba (US 84) affecting Coffee County.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Pea River at Elba (US 84).\n\n* WHEN...From this evening to Sunday evening.\n\n* IMPACTS...At 30.0 feet, Minor flooding will affect farmland along\nthe Pea River near Elba.\n\n* ADDITIONAL DETAILS...\n- At 1:00 AM CDT Saturday the stage was 12.0 feet.\n- Bankfull stage is 23.0 feet.\n- Forecast...The river is expected to rise above flood stage late\nthis evening to a crest of 30.6 feet just after midnight tonight.\nIt will then fall below flood stage tomorrow morning.\n- Flood stage is 30.0 feet.\n- Flood History...This crest compares to a previous crest of 30.0\nfeet on 04/06/1937.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued this afternoon at 200 PM CDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWTAE"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS42 KTAE 100654"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT FROM THIS EVENING TO SUNDAY EVENING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KTAE.FL.W.0008.261011T0400Z-261012T0100Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-11T21:00:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b618604d44059281566d17bc9b24b9ffdec7ec1e.001.1",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -85.71,
+                            31.62
+                        ],
+                        [
+                            -85.9,
+                            31.43
+                        ],
+                        [
+                            -85.93,
+                            31.49
+                        ],
+                        [
+                            -85.79,
+                            31.62
+                        ],
+                        [
+                            -85.71,
+                            31.62
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.b618604d44059281566d17bc9b24b9ffdec7ec1e.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.b618604d44059281566d17bc9b24b9ffdec7ec1e.001.1",
+                "areaDesc": "Coffee, AL; Dale, AL",
+                "geocode": {
+                    "SAME": [
+                        "001031",
+                        "001045"
+                    ],
+                    "UGC": [
+                        "ALC031",
+                        "ALC045"
+                    ]
+                },
+                "affectedZones": [
+                    "https://api.weather.gov/zones/county/ALC031",
+                    "https://api.weather.gov/zones/county/ALC045"
+                ],
+                "references": [],
+                "sent": "2026-10-10T02:52:00-04:00",
+                "effective": "2026-10-10T02:52:00-04:00",
+                "onset": "2026-10-10T17:00:00-04:00",
+                "expires": "2026-10-10T15:00:00-04:00",
+                "ends": "2026-10-13T09:00:00-04:00",
+                "status": "Actual",
+                "messageType": "Alert",
+                "category": "Met",
+                "severity": "Severe",
+                "certainty": "Likely",
+                "urgency": "Expected",
+                "event": "Flood Warning",
+                "sender": "w-nws.webmaster@noaa.gov",
+                "senderName": "NWS Tallahassee FL",
+                "headline": "Flood Warning issued October 10 at 2:52AM EDT until October 13 at 9:00AM EDT by NWS Tallahassee FL",
+                "description": "...The National Weather Service in Tallahassee has issued a Flood\nWarning for the following rivers in Alabama...\n\nPea River near Ariton (US 231) affecting Coffee and Dale Counties.\n\n* WHAT...Minor flooding is forecast.\n\n* WHERE...Pea River near Ariton (US 231).\n\n* WHEN...From this afternoon to Tuesday morning.\n\n* IMPACTS...At 17.0 feet, The basement of a home on U.S. Highway 231\nand the Pea River will be flooded.\n\n* ADDITIONAL DETAILS...\n- At 1:00 AM CDT Saturday the stage was 6.5 feet.\n- Forecast...The river is expected to rise above flood stage late\nthis afternoon to a crest of 16.6 feet early tomorrow afternoon.\nIt will then fall below flood stage Monday evening.\n- Flood stage is 14.0 feet.\n- Flood History...This crest compares to a previous crest of 16.6\nfeet on 09/27/1956.\n- http://www.weather.gov/safety/flood",
+                "instruction": "Turn around, don't drown when encountering flooded roads. Most flood\ndeaths occur in vehicles.\n\nAdditional information is available at www.weather.gov.\n\nThe next statement will be issued this afternoon at 200 PM CDT.",
+                "response": "Avoid",
+                "note": null,
+                "parameters": {
+                    "AWIPSidentifier": [
+                        "FLWTAE"
+                    ],
+                    "WMOidentifier": [
+                        "WGUS42 KTAE 100652"
+                    ],
+                    "NWSheadline": [
+                        "FLOOD WARNING IN EFFECT FROM THIS AFTERNOON TO TUESDAY MORNING"
+                    ],
+                    "BLOCKCHANNEL": [
+                        "EAS",
+                        "NWEM",
+                        "CMAS"
+                    ],
+                    "EAS-ORG": [
+                        "WXR"
+                    ],
+                    "VTEC": [
+                        "/O.NEW.KTAE.FL.W.0007.261010T2100Z-261013T1300Z/"
+                    ],
+                    "eventEndingTime": [
+                        "2026-10-13T09:00:00-04:00"
+                    ]
+                },
+                "scope": "Public",
+                "code": "IPAWSv1.0",
+                "language": "en-US",
+                "web": "http://www.weather.gov",
+                "eventCode": {
+                    "SAME": [
+                        "FLW"
+                    ],
+                    "NationalWeatherService": [
+                        "FLW"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dddeb5372aed21d78e9cf473fcfc5d2f9d391a1b.001.1",
+            "type": "Feature",
+            "geometry": null,
+            "properties": {
+                "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.dddeb5372aed21d78e9cf473fcfc5d2f9d391a1b.001.1",
+                "@type": "wx:Alert",
+                "id": "urn:oid:2.49.0.1.840.0.dddeb5372aed21d78e9cf473fcfc5d2f9d391a1

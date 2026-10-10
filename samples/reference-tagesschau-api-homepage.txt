@@ -1,0 +1,1076 @@
+{
+  "news" : [ {
+    "sophoraId" : "trump-diesellieferungen-russland-100",
+    "externalId" : "237c93a2-7d5a-4666-85c2-10bd88f62056",
+    "title" : "Trump kündigt russische Diesellieferungen an",
+    "date" : "2026-10-10T04:43:04.852+02:00",
+    "teaserImage" : {
+      "copyright" : "REUTERS",
+      "alttext" : "US-Präsident Donald Trump",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "Trump"
+    }, {
+      "tag" : "Diesel"
+    }, {
+      "tag" : "Russland"
+    }, {
+      "tag" : "Ukraine"
+    }, {
+      "tag" : "Inflation"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/trump-diesellieferungen-russland-100.json?view=hasChanged&lastKnown=37973D255230E3404AA0A20EAE103977",
+    "content" : [ {
+      "value" : "<strong>Wegen der hohen Spritpreise steht Trump innenpolitisch unter wachsendem Druck. Nun verkündet der US-Präsident einen Deal mit Russland, der die Lieferung von zunächst 300.000 Tonnen Diesel für die USA und den Weltmarkt umfasst. Kiew ist empört.</strong>",
+      "type" : "text"
+    }, {
+      "value" : "US-Präsident Donald Trump hat nach einem Gespräch mit Russlands Präsident Wladimir Putin Hunderttausende Tonnen an Diesel aus Russland in Aussicht gestellt. ",
+      "type" : "text"
+    }, {
+      "value" : "Er habe mit dem russischen Präsidenten vereinbart, dass \"umgehend\" mehr als 300.000 Tonnen Diesel für die USA und den Weltmarkt zur Verfügung gestellt würden, teilte Trump auf seiner Plattform Truth Social mit.",
+      "type" : "text"
+    }, {
+      "value" : "Im Laufe des Novembers solle eine weitere halbe Million Tonnen Diesel freigegeben werden sowie eine Million Tonnen \"sofort danach\". ",
+      "type" : "text"
+    }, {
+      "value" : "\"Abhängig vom Zustand seiner Dieselraffinerien\" wolle Russland zudem innerhalb kurzer Zeit drei Millionen Tonnen Diesel liefern. Trump spezifizierte nicht die Zeiträume dafür.",
+      "type" : "text"
+    }, {
+      "value" : "<h2>Russland bestätigt Einigung</h2>",
+      "type" : "headline"
+    }, {
+      "value" : "Der Kreml bestätigte die Vereinbarung. \"Bei der Diskussion der Situation auf dem weltweiten Energiemarkt bestätigte die russische Seite ihre Bereitschaft Erdöl und Erdölprodukte auf den amerikanischen und die Weltmärkte zu liefern\", hieß es in der schriftlichen Erklärung Putins. Das werde sich positiv auf die \"gesamte Weltwirtschaft\" auswirken.",
+      "type" : "text"
+    }, {
+      "video" : {
+        "sophoraId" : "video-1663670",
+        "externalId" : "e9951a20-df1b-453c-9fda-ffbc4727887b",
+        "title" : "Samuel Jackisch, ARD Washington, zu Trumps Ankündigung von Dieselimporten aus Russland",
+        "date" : "2026-10-09T23:05:16.998+02:00",
+        "teaserImage" : {
+          "title" : "Sendungsbild",
+          "copyright" : "ARD-aktuell",
+          "alttext" : "Sendungsbild",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/d3e2050b-1eed-483d-a7d9-e0db00c97607/AAABoSJ76Wo/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/d3e2050b-1eed-483d-a7d9-e0db00c97607/AAABoSJ76Wo/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/d3e2050b-1eed-483d-a7d9-e0db00c97607/AAABoSJ76Wo/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/d3e2050b-1eed-483d-a7d9-e0db00c97607/AAABoSJ76Wo/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/d3e2050b-1eed-483d-a7d9-e0db00c97607/AAABoSJ76Wo/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/d3e2050b-1eed-483d-a7d9-e0db00c97607/AAABoSJ76Wo/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/d3e2050b-1eed-483d-a7d9-e0db00c97607/AAABoSJ76Wo/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/d3e2050b-1eed-483d-a7d9-e0db00c97607/AAABoSJ76Wo/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/d3e2050b-1eed-483d-a7d9-e0db00c97607/AAABoSJ76Wo/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/d3e2050b-1eed-483d-a7d9-e0db00c97607/AAABoSJ76Wo/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/d3e2050b-1eed-483d-a7d9-e0db00c97607/AAABoSJ76Wo/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/d3e2050b-1eed-483d-a7d9-e0db00c97607/AAABoSJ76Wo/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "tags" : [ {
+          "tag" : "schnell informiert"
+        }, {
+          "tag" : "Trump"
+        }, {
+          "tag" : "Diesel"
+        }, {
+          "tag" : "Importe"
+        }, {
+          "tag" : "Russland"
+        } ],
+        "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1663670.json?view=hasChanged&lastKnown=B2E2CEAB10C6A63C9DE1160B71BC4C57",
+        "tracking" : [ {
+          "sid" : "app.multimedia.sendung.tagesthemen.video-1663670",
+          "src" : "tagesschau",
+          "ctp" : "SEGMENT",
+          "pdt" : "20261010T1041",
+          "otp" : "video",
+          "cid" : "video-1663670",
+          "pti" : "Samuel_Jackisch_ARD_Washington_zu_Trumps_Ankuendigung_von_Dieselimporten_aus_Russland",
+          "bcr" : "ja",
+          "type" : "generic",
+          "av_full_show" : false,
+          "av_air_time" : "2026-10-09T21:45:00.000+02:00"
+        }, {
+          "assetid" : "video-1663670",
+          "program" : "tagesthemen",
+          "title" : "Samuel_Jackisch_ARD_Washington_zu_Trumps_Ankuendigung_von_Dieselimporten_aus_Russland",
+          "length" : "140",
+          "c2" : "p2,N",
+          "c5" : "p5,https://www.tagesschau.de/tagesthemen/video-1663670.html",
+          "c7" : "p7,video-1663670",
+          "c8" : "p8,140",
+          "c9" : "p9,tagesthemen_Samuel_Jackisch_ARD_Washington_zu_Trumps_Ankuendigung_von_Dieselimporten_aus_Russland_09.10.2026_2145",
+          "c10" : "p10,Das_Erste",
+          "c12" : "p12,content",
+          "c15" : "p15,brid://publication@ard.de/X005909333",
+          "c16" : "p16,ARD_Information/ARD_Livestream",
+          "c18" : "p18,N",
+          "type_nielsen" : "content",
+          "type" : "nielsen"
+        } ],
+        "streams" : {
+          "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1009/TV-20261009-2212-0000.webs.h264.mp4",
+          "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1009/TV-20261009-2212-0000.webm.h264.mp4",
+          "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1009/TV-20261009-2212-0000.webxl.h264.mp4",
+          "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1009/TV-20261009-2212-0000.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+        },
+        "alttext" : "Sendungsbild",
+        "type" : "video"
+      },
+      "type" : "video"
+    }, {
+      "value" : "<h2>Massive Kritik aus Kiew</h2>",
+      "type" : "headline"
+    }, {
+      "value" : "Scharfe Kritik kam dagegen vom ukrainischen Präsidenten Wolodymyr Selenskyj: \"Die Erlaubnis für Russland, Erdölprodukte zu verkaufen, ist eine Investition in den Krieg (gegen die Ukraine), den man beenden und nicht verlängern muss\", schrieb er bei Telegram. Moskau werde mit weiterem \"Terror und Gemeinheiten\" danken.",
+      "type" : "text"
+    }, {
+      "value" : "In einem Interview des US-Nachrichtenportals Axios verschärfte Selenskyj seine Kritik. Die Vereinbarung sei \"nicht fair und nicht ehrlich\", sagte er. ",
+      "type" : "text"
+    }, {
+      "value" : "Besonders verärgert zeigte er sich darüber, dass Trumps Gesandte Steve Witkoff und Jared Kushner parallel zu der Dieselvereinbarung in Miami mit ukrainischen Unterhändlern über ein mögliches Ende des Krieges verhandelten. Von dem geplanten Diesel-Abkommen sei dabei keine Rede gewesen.",
+      "type" : "text"
+    }, {
+      "value" : "<h2>Selenskyj: Zeichen der \"offensichtlichen Schwäche\"</h2>",
+      "type" : "headline"
+    }, {
+      "value" : "Selenskyj erneuerte die ukrainische Bereitschaft, Angriffe auf russische Raffinerien einzustellen, wenn Russland im Gegenzug die Attacken auf ukrainische Energieanlagen einstellt. \"Wir haben eben Amerika eine solche Vereinbarung vorgeschlagen und finden, dass die Kräfte der Vereinigten Staaten ausreichend sind, um einen derartigen Kompromiss zu erreichen\", schrieb der Staatschef. ",
+      "type" : "text"
+    }, {
+      "value" : "Eine Abschwächung der Russland-Sanktionen sei ein Zeichen der \"offensichtlichen Schwäche\". Russland werde die USA noch weniger ernst nehmen. ",
+      "type" : "text"
+    }, {
+      "box" : {
+        "image" : {
+          "copyright" : "AP Photo/Jacquelyn Martin",
+          "alttext" : "Donald Trump",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/fcf6ce91-69ab-47cc-8e06-ae3b20103673/AAABoLoUop4/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/fcf6ce91-69ab-47cc-8e06-ae3b20103673/AAABoLoUop4/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/fcf6ce91-69ab-47cc-8e06-ae3b20103673/AAABoLoUop4/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/fcf6ce91-69ab-47cc-8e06-ae3b20103673/AAABoLoUop4/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/fcf6ce91-69ab-47cc-8e06-ae3b20103673/AAABoLoUop4/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/fcf6ce91-69ab-47cc-8e06-ae3b20103673/AAABoLoUop4/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/fcf6ce91-69ab-47cc-8e06-ae3b20103673/AAABoLoUop4/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/fcf6ce91-69ab-47cc-8e06-ae3b20103673/AAABoLoUop4/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/fcf6ce91-69ab-47cc-8e06-ae3b20103673/AAABoLoUop4/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/fcf6ce91-69ab-47cc-8e06-ae3b20103673/AAABoLoUop4/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/fcf6ce91-69ab-47cc-8e06-ae3b20103673/AAABoLoUop4/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/fcf6ce91-69ab-47cc-8e06-ae3b20103673/AAABoLoUop4/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "date" : "2026-09-19T16:52:46.357+02:00",
+        "link" : "<a href=\"https://www.tagesschau.de/api2u/ausland/amerika/usa-trump-russland-sanktionen-100.json\" type=\"intern\">mehr</a>",
+        "subtitle" : "Paket nimmt letzte Hürde",
+        "text" : "Es sieht unter anderem US-Einreiseverbote gegen Kremlchef Putin und eine Reihe von Militärvertretern vor. ",
+        "title" : "Trump setzt neue Russland-Sanktionen in Kraft",
+        "infobox" : false
+      },
+      "type" : "box"
+    }, {
+      "value" : "<h2>\"Ukraine sind teilweise die Hände gebunden\"</h2>",
+      "type" : "headline"
+    }, {
+      "value" : "Für die Ukraine sei der von Trump vereinbarte Deal \"nur sehr, sehr schwer nachzuvollziehen\", berichtet auch <em>ARD-Korrespondentin Susanne Petersohn</em> aus Kiew. Gerade angesichts der anhaltenden massiven Angriffe Russlands und dessen Vorbereitungen auf einen weiteren Kriegswinter sei es ein \"fatales Signal\", das die USA an die Ukraine sendeten.",
+      "type" : "text"
+    }, {
+      "value" : "Doch der Ukraine seien - trotz aller Kritik - auch die Hände gebunden, sagt Petersohn weiter. Denn die USA seien nach wie vor deren größter Unterstützer in der Verteidigung gegen Russland.",
+      "type" : "text"
+    }, {
+      "video" : {
+        "sophoraId" : "video-1663832",
+        "externalId" : "4e9375f1-5f64-4331-834c-ac078418d82c",
+        "title" : "Susanne Petersohn, ARD Kiew, zu Reaktionen nach Trumps Diesel-Deal mit Russland",
+        "date" : "2026-10-10T13:28:26.359+02:00",
+        "teaserImage" : {
+          "title" : "Sendungsbild",
+          "copyright" : "ARD-aktuell",
+          "alttext" : "Sendungsbild",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "tags" : [ {
+          "tag" : "schnell informiert"
+        }, {
+          "tag" : "Trump"
+        }, {
+          "tag" : "Putin"
+        }, {
+          "tag" : "Diesel"
+        }, {
+          "tag" : "Russland"
+        } ],
+        "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1663832.json?view=hasChanged&lastKnown=815699EB185566046C0F6B37C06AD8C7",
+        "tracking" : [ {
+          "sid" : "app.multimedia.video.video-1663832",
+          "src" : "tagesschau",
+          "ctp" : "SEGMENT",
+          "pdt" : "20261010T1328",
+          "otp" : "video",
+          "cid" : "video-1663832",
+          "pti" : "Susanne_Petersohn_ARD_Kiew_zu_Reaktionen_nach_Trumps_Diesel-Deal_mit_Russland",
+          "bcr" : "ja",
+          "type" : "generic",
+          "av_full_show" : false
+        }, {
+          "assetid" : "video-1663832",
+          "program" : "tagesschau24",
+          "title" : "Susanne_Petersohn_ARD_Kiew_zu_Reaktionen_nach_Trumps_Diesel-Deal_mit_Russland",
+          "length" : "291",
+          "c2" : "p2,N",
+          "c5" : "p5,https://www.tagesschau.de/video/video-1663832.html",
+          "c7" : "p7,video-1663832",
+          "c8" : "p8,291",
+          "c9" : "p9,tagesschau24_Susanne_Petersohn_ARD_Kiew_zu_Reaktionen_nach_Trumps_Diesel-Deal_mit_Russland_10.10.2026_1328",
+          "c10" : "p10,Das_Erste",
+          "c12" : "p12,content",
+          "c16" : "p16,ARD_Information/ARD_Livestream",
+          "c18" : "p18,N",
+          "type_nielsen" : "content",
+          "type" : "nielsen"
+        } ],
+        "streams" : {
+          "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1322-4600.webs.h264.mp4",
+          "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1322-4600.webm.h264.mp4",
+          "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1322-4600.webxl.h264.mp4",
+          "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1010/TV-20261010-1322-4600.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+        },
+        "alttext" : "Sendungsbild",
+        "type" : "video"
+      },
+      "type" : "video"
+    }, {
+      "value" : "<h2>Kehrtwende nach verschärften Sanktionen</h2>",
+      "type" : "headline"
+    }, {
+      "value" : "Trumps Ankündigung sorgt auch deshalb für Aufruhr, weil der US-Präsident erst im vergangenen Monat <a href=\"https://www.tagesschau.de/api2u/ausland/amerika/usa-trump-russland-sanktionen-100.json\" type=\"intern\">ein vom Parlament verabschiedetes Gesetz </a>unterzeichnet hatte, das ihm weitreichende Befugnisse für neue Sanktionen gegen Russland in die Hand gibt. ",
+      "type" : "text"
+    }, {
+      "value" : "Neben direkten Strafmaßnahmen gegen russische Politiker und Firmen zielte das Gesetz darauf ab, die russischen Öl- und Gas-Exporte stärker einzudämmen, mit denen Russland seinen Angriffskrieg gegen die Ukraine finanziert. Der nun von Trump verkündete Schritt geht in die gegenteilige Richtung.  ",
+      "type" : "text"
+    }, {
+      "value" : "Wegen der bestehenden Sanktionen gegen Russland stellte das US-Finanzministerium für die mit Putin getroffene Vereinbarung eine temporäre Erlaubnis aus. Dadurch seien der Verkauf, die Lieferung, das Entladen und der Import von Diesel aus Russland bis zum 7. April 2027 genehmigt.  ",
+      "type" : "text"
+    }, {
+      "box" : {
+        "image" : {
+          "copyright" : "Ramon Espinosa/AP/dpa",
+          "alttext" : "Ein russischer Öltanker nähert sich der Stadt Matanzas auf Kuba. ",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "date" : "2026-05-17T09:59:09.337+02:00",
+        "link" : "<a href=\"https://www.tagesschau.de/api2u/ausland/usa-russisches-oel-sanktionen-100.json\" type=\"intern\">mehr</a>",
+        "subtitle" : "Energiepreise",
+        "text" : "Die US-Regierung hat die Sanktionen auf russisches Öl gelockert. Nun ist die Ausnahmeregelung ausgelaufen.",
+        "title" : "Ausnahmen bei US-Sanktionen für russisches Öl laufen aus",
+        "infobox" : false
+      },
+      "type" : "box"
+    }, {
+      "value" : "<h2>Experten: keine langfristige Lösung</h2>",
+      "type" : "headline"
+    }, {
+      "value" : "Experten bezweifeln, dass die russischen Lieferungen zu einem nachhaltigen Preisrückgang führen werden. \"Ich kann gar nicht genug betonen, wie unbedeutend das ist\", erklärte der Ölanalyst Rory Johnston auf X. Russland exportiere normalerweise weitaus mehr Diesel, wenn seine Raffinerien nicht angegriffen würden. Die sofort zugesagten 300.000 Tonnen entsprechen etwa 2,25 Millionen Barrel Diesel, während die USA täglich rund 1,5 Millionen Barrel exportieren. ",
+      "type" : "text"
+    }, {
+      "value" : "Nach Angaben der US-Energiebehörde EIA liegt der Verbrauch von Diesel und anderen Destillat-Kraftstoffen in den USA derzeit bei durchschnittlich rund 3,77 Millionen Barrel täglich. Das entspricht umgerechnet etwa 500.000 Tonnen. Eine Menge von 300.000 Tonnen würde damit rechnerisch den US-Verbrauch für gut 14 Stunden decken. ",
+      "type" : "text"
+    }, {
+      "value" : "Es handele sich eindeutig nicht um eine Lösung, sondern um eine weitere Quelle zur Unterstützung eines sehr angespannten Marktes, sagte Jim Mitchell vom Beratungsunternehmen Wood Mackenzie der Nachrichtenagentur Reuters. ",
+      "type" : "text"
+    }, {
+      "value" : "Die US-Terminkontrakte für Diesel gaben nach Bekanntwerden der Einigung dennoch um mehr als knapp fünf Prozent auf 1,23 Dollar pro Liter nach. Die Dieselpreise, die als maßgeblicher Treiber der Inflation gelten, sind seit dem Beginn des von den USA und Israel begonnenen Krieges gegen Iran am 28. Februar um 70 Prozent gestiegen. Die Konflikte in Iran und in der Ukraine haben weltweit zu einem Engpass bei der Kraftstoffversorgung geführt. ",
+      "type" : "text"
+    }, {
+      "title" : "Russland hebt Diesel-Exportverbot nach Putin-Trump-Vereinbarung auf",
+      "date" : "2026-10-10T09:46:13.024+02:00",
+      "teaserImage" : {
+        "copyright" : "ARD-aktuell",
+        "alttext" : "Hintergrundbild für den Audioplayer",
+        "imageVariants" : {
+          "1x1-144" : "https://images.tagesschau.de/image/197a5977-3f5f-4c21-8c08-fad6ecb4b493/AAABnSQwl8A/AAABnSStQvU/1x1-144.jpg",
+          "1x1-256" : "https://images.tagesschau.de/image/197a5977-3f5f-4c21-8c08-fad6ecb4b493/AAABnSQwl8A/AAABnSStSJ8/1x1-256.jpg",
+          "1x1-432" : "https://images.tagesschau.de/image/197a5977-3f5f-4c21-8c08-fad6ecb4b493/AAABnSQwl8A/AAABnSStTkw/1x1-432.jpg",
+          "1x1-640" : "https://images.tagesschau.de/image/197a5977-3f5f-4c21-8c08-fad6ecb4b493/AAABnSQwl8A/AAABnSStU_E/1x1-640.jpg",
+          "1x1-840" : "https://images.tagesschau.de/image/197a5977-3f5f-4c21-8c08-fad6ecb4b493/AAABnSQwl8A/AAABnSStWZo/1x1-840.jpg",
+          "16x9-256" : "https://images.tagesschau.de/image/197a5977-3f5f-4c21-8c08-fad6ecb4b493/AAABnSQwl8A/AAABnSSvh0M/16x9-256.jpg",
+          "16x9-384" : "https://images.tagesschau.de/image/197a5977-3f5f-4c21-8c08-fad6ecb4b493/AAABnSQwl8A/AAABnSSvjXw/16x9-384.jpg",
+          "16x9-512" : "https://images.tagesschau.de/image/197a5977-3f5f-4c21-8c08-fad6ecb4b493/AAABnSQwl8A/AAABnSSvlIQ/16x9-512.jpg",
+          "16x9-640" : "https://images.tagesschau.de/image/197a5977-3f5f-4c21-8c08-fad6ecb4b493/AAABnSQwl8A/AAABnSSvmjA/16x9-640.jpg",
+          "16x9-960" : "https://images.tagesschau.de/image/197a5977-3f5f-4c21-8c08-fad6ecb4b493/AAABnSQwl8A/AAABnSSvpk8/16x9-960.jpg",
+          "16x9-1280" : "https://images.tagesschau.de/image/197a5977-3f5f-4c21-8c08-fad6ecb4b493/AAABnSQwl8A/AAABnSSveow/16x9-1280.jpg",
+          "16x9-1920" : "https://images.tagesschau.de/image/197a5977-3f5f-4c21-8c08-fad6ecb4b493/AAABnSQwl8A/AAABnSSvgNE/16x9-1920.jpg"
+        },
+        "type" : "image"
+      },
+      "tracking" : [ {
+        "sid" : "app.multimedia.audio.audio-3528232",
+        "src" : "tagesschau",
+        "ctp" : "nicht-definiert",
+        "pdt" : "20261010T0946",
+        "otp" : "audio",
+        "cid" : "audio-3528232",
+        "pti" : "Russland_hebt_Diesel-Exportverbot_nach_Putin-Trump-Vereinbarung_auf",
+        "bcr" : "ja",
+        "type" : "generic",
+        "av_full_show" : false,
+        "av_air_time" : "2026-10-10T09:45:00.000+02:00"
+      } ],
+      "stream" : "https://tagesschau-podcast.ard-mcdn.de/audio/2026/1010/AU-20261010-0945-2100.mp3",
+      "text" : "Stephan Laack, WDR, 10.10.2026, 09:46 Uhr",
+      "type" : "audio"
+    }, {
+      "value" : "<ul><li>Das Erste | tagesthemen | 09.10.2026 | 21:45 Uhr </li><li>tagesschau24 | Nachrichten | 10.10.2026 | 13:00 Uhr</li></ul>",
+      "type" : "text"
+    }, {
+      "related" : [ {
+        "teaserImage" : {
+          "copyright" : "REUTERS",
+          "alttext" : "Ein Feuerwehrmann ist in Saporischschja (Ukraine) nach einem Angriff an ausgebrannten Autos im Einsatz.",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "date" : "2026-10-09T09:57:06.450+02:00",
+        "sophoraId" : "ukraine-trump-angriffe-100",
+        "externalId" : "dc386d89-e315-4996-aea6-131a22d26456",
+        "topline" : "Krieg gegen die Ukraine",
+        "title" : "Massive Angriffe und ein neuer Verhandlungsversuch",
+        "details" : "https://www.tagesschau.de/api2u/ausland/europa/ukraine-trump-angriffe-100.json",
+        "detailsweb" : "https://www.tagesschau.de/ausland/europa/ukraine-trump-angriffe-100.html",
+        "type" : "story"
+      }, {
+        "teaserImage" : {
+          "copyright" : "REUTERS",
+          "alttext" : "Alischer Usmanow",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/098e2526-606d-4727-b3cd-e3f2455a47fc/AAABoM9vzn0/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/098e2526-606d-4727-b3cd-e3f2455a47fc/AAABoM9vzn0/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/098e2526-606d-4727-b3cd-e3f2455a47fc/AAABoM9vzn0/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/098e2526-606d-4727-b3cd-e3f2455a47fc/AAABoM9vzn0/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/098e2526-606d-4727-b3cd-e3f2455a47fc/AAABoM9vzn0/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/098e2526-606d-4727-b3cd-e3f2455a47fc/AAABoM9vzn0/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/098e2526-606d-4727-b3cd-e3f2455a47fc/AAABoM9vzn0/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/098e2526-606d-4727-b3cd-e3f2455a47fc/AAABoM9vzn0/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/098e2526-606d-4727-b3cd-e3f2455a47fc/AAABoM9vzn0/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/098e2526-606d-4727-b3cd-e3f2455a47fc/AAABoM9vzn0/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/098e2526-606d-4727-b3cd-e3f2455a47fc/AAABoM9vzn0/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/098e2526-606d-4727-b3cd-e3f2455a47fc/AAABoM9vzn0/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "date" : "2026-09-23T18:50:49.753+02:00",
+        "sophoraId" : "eu-russland-sanktionen-142",
+        "externalId" : "4e88453d-4fec-4b74-a0cb-923330931330",
+        "topline" : "EU streicht Oligarchen von Sanktionsliste ",
+        "title" : "Ein Kompromiss, der für Diskussionen sorgt",
+        "details" : "https://www.tagesschau.de/api2u/ausland/europa/eu-russland-sanktionen-142.json",
+        "detailsweb" : "https://www.tagesschau.de/ausland/europa/eu-russland-sanktionen-142.html",
+        "type" : "story"
+      }, {
+        "teaserImage" : {
+          "copyright" : "Ramon Espinosa/AP/dpa",
+          "alttext" : "Ein russischer Öltanker nähert sich der Stadt Matanzas auf Kuba. ",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/5117627d-5e75-4a2e-ba88-9c5060fe674b/AAABnjTW44w/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "date" : "2026-05-17T09:59:09.337+02:00",
+        "sophoraId" : "usa-russisches-oel-sanktionen-100",
+        "externalId" : "5d69ba98-6c5f-4637-aa00-9383a2760c83",
+        "topline" : "Energiepreise",
+        "title" : "Ausnahmen bei US-Sanktionen für russisches Öl laufen aus",
+        "details" : "https://www.tagesschau.de/api2u/ausland/usa-russisches-oel-sanktionen-100.json",
+        "detailsweb" : "https://www.tagesschau.de/ausland/usa-russisches-oel-sanktionen-100.html",
+        "type" : "story"
+      }, {
+        "teaserImage" : {
+          "copyright" : "REUTERS",
+          "alttext" : "Scott Bessent",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/7bea1bd2-91c8-4a46-907f-764775a92fc5/AAABnOVWxDw/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/7bea1bd2-91c8-4a46-907f-764775a92fc5/AAABnOVWxDw/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/7bea1bd2-91c8-4a46-907f-764775a92fc5/AAABnOVWxDw/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/7bea1bd2-91c8-4a46-907f-764775a92fc5/AAABnOVWxDw/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/7bea1bd2-91c8-4a46-907f-764775a92fc5/AAABnOVWxDw/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/7bea1bd2-91c8-4a46-907f-764775a92fc5/AAABnOVWxDw/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/7bea1bd2-91c8-4a46-907f-764775a92fc5/AAABnOVWxDw/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/7bea1bd2-91c8-4a46-907f-764775a92fc5/AAABnOVWxDw/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/7bea1bd2-91c8-4a46-907f-764775a92fc5/AAABnOVWxDw/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/7bea1bd2-91c8-4a46-907f-764775a92fc5/AAABnOVWxDw/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/7bea1bd2-91c8-4a46-907f-764775a92fc5/AAABnOVWxDw/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/7bea1bd2-91c8-4a46-907f-764775a92fc5/AAABnOVWxDw/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "date" : "2026-03-13T07:47:48.614+01:00",
+        "sophoraId" : "usa-russisches-erdoel-100",
+        "externalId" : "c087c5fb-82ac-4cda-a3f6-9f4d5c0bc65f",
+        "topline" : "Steigende Energiepreise",
+        "title" : "USA erlauben vorübergehend Kauf russischen Öls",
+        "details" : "https://www.tagesschau.de/api2u/ausland/amerika/usa-russisches-erdoel-100.json",
+        "detailsweb" : "https://www.tagesschau.de/ausland/amerika/usa-russisches-erdoel-100.html",
+        "type" : "story"
+      }, {
+        "teaserImage" : {
+          "copyright" : "dpa",
+          "alttext" : "Logo von WhatsApp ist auf einem Smartphone zu sehen",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/19b648a3-37e3-4d8d-a248-f9dbe3d397fb/AAABle5GLu0/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/19b648a3-37e3-4d8d-a248-f9dbe3d397fb/AAABle5GLu0/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/19b648a3-37e3-4d8d-a248-f9dbe3d397fb/AAABle5GLu0/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/19b648a3-37e3-4d8d-a248-f9dbe3d397fb/AAABle5GLu0/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/19b648a3-37e3-4d8d-a248-f9dbe3d397fb/AAABle5GLu0/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/19b648a3-37e3-4d8d-a248-f9dbe3d397fb/AAABle5GLu0/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/19b648a3-37e3-4d8d-a248-f9dbe3d397fb/AAABle5GLu0/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/19b648a3-37e3-4d8d-a248-f9dbe3d397fb/AAABle5GLu0/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/19b648a3-37e3-4d8d-a248-f9dbe3d397fb/AAABle5GLu0/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/19b648a3-37e3-4d8d-a248-f9dbe3d397fb/AAABle5GLu0/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/19b648a3-37e3-4d8d-a248-f9dbe3d397fb/AAABle5GLu0/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/19b648a3-37e3-4d8d-a248-f9dbe3d397fb/AAABle5GLu0/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "date" : "2023-10-19T10:00:00.000+02:00",
+        "sophoraId" : "whatsapp-channel-link-100",
+        "externalId" : "68fb876c-8d35-4e24-b3a8-ef6bb6f4181a",
+        "topline" : "Nachrichten per Messenger",
+        "title" : "tagesschau bei WhatsApp",
+        "details" : "https://www.tagesschau.de/api2u/infoservices/whatsapp-channel-link-100.json",
+        "detailsweb" : "https://whatsapp.com/channel/0029VaDH2eU0AgWDHGiYms1a",
+        "type" : "webview"
+      } ],
+      "type" : "related"
+    } ],
+    "tracking" : [ {
+      "sid" : "app.ausland.amerika.trump-diesellieferungen-russland-100",
+      "src" : "tagesschau",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T0003",
+      "otp" : "meldung",
+      "cid" : "trump-diesellieferungen-russland-100",
+      "pti" : "Trump_kuendigt_russische_Diesellieferungen_an",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Vereinbarung mit Putin ",
+    "firstSentence" : "Wegen der hohen Spritpreise steht Trump innenpolitisch unter wachsendem Druck.",
+    "video" : {
+      "sophoraId" : "video-1663702",
+      "externalId" : "95a12fae-8cac-4744-ae73-1ed9fa3e63d5",
+      "title" : "APP0030 NiF- Freigabe russischer Diesel_vapp.mxf",
+      "date" : "2026-10-10T08:57:19.162+02:00",
+      "teaserImage" : {
+        "title" : "Sendungsbild",
+        "copyright" : "ARD-aktuell",
+        "alttext" : "Sendungsbild",
+        "imageVariants" : {
+          "1x1-144" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStQvU/1x1-144.jpg",
+          "1x1-256" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStSJ8/1x1-256.jpg",
+          "1x1-432" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStTkw/1x1-432.jpg",
+          "1x1-640" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStU_E/1x1-640.jpg",
+          "1x1-840" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStWZo/1x1-840.jpg",
+          "16x9-256" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvh0M/16x9-256.jpg",
+          "16x9-384" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvjXw/16x9-384.jpg",
+          "16x9-512" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvlIQ/16x9-512.jpg",
+          "16x9-640" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvmjA/16x9-640.jpg",
+          "16x9-960" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvpk8/16x9-960.jpg",
+          "16x9-1280" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSveow/16x9-1280.jpg",
+          "16x9-1920" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvgNE/16x9-1920.jpg"
+        },
+        "type" : "image"
+      },
+      "tags" : [ ],
+      "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1663702.json?view=hasChanged&lastKnown=4C8A52357CF835EB76C77961DE6ADD1B",
+      "tracking" : [ {
+        "sid" : "app.multimedia.video.video-1663702",
+        "src" : "tagesschau",
+        "ctp" : "VERTICALAPPVIDEO",
+        "pdt" : "20261010T0857",
+        "otp" : "video",
+        "cid" : "video-1663702",
+        "pti" : "APP0030_NiF-_Freigabe_russischer_Diesel_vapp.mxf",
+        "bcr" : "ja",
+        "type" : "generic",
+        "av_full_show" : false
+      }, {
+        "assetid" : "video-1663702",
+        "program" : "Tagesschau",
+        "title" : "APP0030_NiF-_Freigabe_russischer_Diesel_vapp.mxf",
+        "length" : "17",
+        "c2" : "p2,N",
+        "c5" : "p5,https://www.tagesschau.de/video/video-1663702.html",
+        "c7" : "p7,video-1663702",
+        "c8" : "p8,17",
+        "c9" : "p9,Tagesschau_APP0030_NiF-_Freigabe_russischer_Diesel_vapp.mxf_10.10.2026_0857",
+        "c10" : "p10,Das_Erste",
+        "c12" : "p12,content",
+        "c16" : "p16,ARD_Information/ARD_Livestream",
+        "c18" : "p18,N",
+        "type_nielsen" : "content",
+        "type" : "nielsen"
+      } ],
+      "streams" : {
+        "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-0045-1400.webs.h264.mp4",
+        "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-0045-1400.webm.h264.mp4",
+        "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-0045-1400.webxl.h264.mp4",
+        "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1010/TV-20261010-0045-1400.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+      },
+      "alttext" : "Sendungsbild",
+      "type" : "video"
+    },
+    "images" : [ {
+      "title" : "Sendungsbild",
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Sendungsbild",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    } ],
+    "firstFrame" : {
+      "title" : "Sendungsbild",
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Sendungsbild",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/538ee4bf-b54a-42ce-9e5b-21c72e7523ab/AAABoSLX4CQ/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/ausland/amerika/trump-diesellieferungen-russland-100.json",
+    "detailsweb" : "https://www.tagesschau.de/ausland/amerika/trump-diesellieferungen-russland-100.html",
+    "shareURL" : "https://www.tagesschau.de/ausland/amerika/trump-diesellieferungen-russland-100.html",
+    "comments" : "https://www.tagesschau.de/api2u/trump-diesellieferungen-russland-100.json?view=comment",
+    "geotags" : [ ],
+    "regionId" : 0,
+    "regionIds" : [ ],
+    "ressort" : "ausland",
+    "crop" : {
+      "id" : "TV-20261010-0045-1400",
+      "type" : "video",
+      "croppingApiVersion" : "1.1",
+      "croppingUIVersion" : "20260916.2-Release-171",
+      "croppingServiceVersion" : "1.1",
+      "noSound" : false,
+      "videoSrc" : "",
+      "imageSrc" : [ ],
+      "imageNames" : [ ],
+      "headerText" : "Hohe Spritpreise in den USA",
+      "mainTexts" : [ "Trump einigt sich mit Pu&shy;\ntin auf Diesellieferungen", "Russland will 300.000 Tonnen Diesel liefern", "Ab November sollen 1,5 Millionen Tonnen folgen", "Abkommen löst weltweit Kritik aus" ],
+      "sceneSrcTexts" : [ "", "" ],
+      "cameraMoves" : [ ],
+      "events" : [ [ 0, 9, 245 ], [ 0, 1, 1 ], [ 0, 2, 1 ], [ 0, 3, 0 ], [ 0, 0, 245 ], [ 3800, 1, 0 ], [ 3800, 2, 0 ], [ 4120, 9, 126 ], [ 4120, 0, 126 ], [ 4480, 2, 1 ], [ 4480, 3, 1 ], [ 7360, 2, 0 ], [ 8040, 2, 1 ], [ 8040, 3, 2 ], [ 11480, 2, 0 ], [ 12160, 2, 1 ], [ 12160, 3, 3 ], [ 15840, 2, 0 ] ]
+    },
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "ukraine-russland-angriffe-saporischschja-104",
+    "externalId" : "a13619e9-db33-47c4-93b6-f4aa6b713fe3",
+    "title" : "Mehrere Tote durch Angriffe auf Saporischschja",
+    "date" : "2026-10-10T12:54:13.189+02:00",
+    "teaserImage" : {
+      "copyright" : "EPA",
+      "alttext" : "Rettungskräfte durchsuchen ein stark zerstörtes Gebäude in Saporischschja.",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/53230fcf-9628-494b-898b-63cf1a3e8352/AAABoSVy9Do/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/53230fcf-9628-494b-898b-63cf1a3e8352/AAABoSVy9Do/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/53230fcf-9628-494b-898b-63cf1a3e8352/AAABoSVy9Do/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/53230fcf-9628-494b-898b-63cf1a3e8352/AAABoSVy9Do/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/53230fcf-9628-494b-898b-63cf1a3e8352/AAABoSVy9Do/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/53230fcf-9628-494b-898b-63cf1a3e8352/AAABoSVy9Do/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/53230fcf-9628-494b-898b-63cf1a3e8352/AAABoSVy9Do/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/53230fcf-9628-494b-898b-63cf1a3e8352/AAABoSVy9Do/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/53230fcf-9628-494b-898b-63cf1a3e8352/AAABoSVy9Do/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/53230fcf-9628-494b-898b-63cf1a3e8352/AAABoSVy9Do/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/53230fcf-9628-494b-898b-63cf1a3e8352/AAABoSVy9Do/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/53230fcf-9628-494b-898b-63cf1a3e8352/AAABoSVy9Do/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "Ukraine"
+    }, {
+      "tag" : "Ukraine-Krieg"
+    }, {
+      "tag" : "Russland"
+    }, {
+      "tag" : "Saporischschja"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/ukraine-russland-angriffe-saporischschja-104.json?view=hasChanged&lastKnown=516B89B572CED9C819B3F2A2E36C7B7E",
+    "content" : [ {
+      "value" : "<strong>Während in Miami über Hilfe für die Ukraine und Wege hin zu einem Ende des russischen Angriffskrieges beraten wird, setzt Moskau seine Attacken fort. In der Region Saporischschja gab es mehrere Todesopfer und Verletzte.</strong>",
+      "type" : "text"
+    }, {
+      "value" : "Bei russischen Angriffen auf die Stadt und die Region Saporischschja im Südosten der Ukraine sind mehrere Menschen getötet worden. Zu der Zahl der Opfer kursieren mehrere Angaben: Laut der Nachrichtenagentur dpa wurden mindestens zwölf Menschen getötet. Die Nachrichtenagentur AFP berichtete unter Berufung auf den Verteidigungsrat der Region von mindestens acht Todesopfern, die Nachrichtenagentur Reuters meldete mindestens elf Tote. Reuters bezog sich dabei auf die regionale Militärverwaltung.",
+      "type" : "text"
+    }, {
+      "value" : "Übereinstimmend hieß es von beiden Nachrichtenagenturen, dass zu den Todesopfern auch drei Minderjährige zählen. Mindestens 14 Menschen seien zudem verletzt worden, hieß es von der dpa weiter.",
+      "type" : "text"
+    }, {
+      "value" : "Nach Angaben der örtlichen Polizei hatte Russland am frühen Samstagmorgen in der Stadt Saporischschja Wohngebiete mit fünf Lenkbomben angegriffen. Mindestens zwei Wohnhäuser seien getroffen und beschädigt worden. Die Zahl der Opfer könne sich daher noch erhöhen, da unter Trümmern noch nach möglichen Verschütteten gesucht werde.",
+      "type" : "text"
+    }, {
+      "value" : "Die Region Saporischschja liegt nur wenige Dutzend Kilometer von der Front entfernt. Die Region und die gleichnamige Stadt sind immer wieder Ziel von Angriffen. ",
+      "type" : "text"
+    }, {
+      "gallery" : [ {
+        "copyright" : "ISW, Critical Threats Project | Stand: 23.9.2026",
+        "alttext" : "Karte: Ukraine und Russland, hell schraffiert: von Russland besetzte Gebiete.",
+        "imageVariants" : {
+          "1x1-144" : "https://images.tagesschau.de/image/b818c7ec-ee50-4c92-a638-a03dbba7ca6e/AAABoSVPhcI/AAABnSStQvU/1x1-144.jpg",
+          "1x1-256" : "https://images.tagesschau.de/image/b818c7ec-ee50-4c92-a638-a03dbba7ca6e/AAABoSVPhcI/AAABnSStSJ8/1x1-256.jpg",
+          "1x1-432" : "https://images.tagesschau.de/image/b818c7ec-ee50-4c92-a638-a03dbba7ca6e/AAABoSVPhcI/AAABnSStTkw/1x1-432.jpg",
+          "1x1-640" : "https://images.tagesschau.de/image/b818c7ec-ee50-4c92-a638-a03dbba7ca6e/AAABoSVPhcI/AAABnSStU_E/1x1-640.jpg",
+          "1x1-840" : "https://images.tagesschau.de/image/b818c7ec-ee50-4c92-a638-a03dbba7ca6e/AAABoSVPhcI/AAABnSStWZo/1x1-840.jpg",
+          "16x9-256" : "https://images.tagesschau.de/image/b818c7ec-ee50-4c92-a638-a03dbba7ca6e/AAABoSVPhcI/AAABnSSvh0M/16x9-256.jpg",
+          "16x9-384" : "https://images.tagesschau.de/image/b818c7ec-ee50-4c92-a638-a03dbba7ca6e/AAABoSVPhcI/AAABnSSvjXw/16x9-384.jpg",
+          "16x9-512" : "https://images.tagesschau.de/image/b818c7ec-ee50-4c92-a638-a03dbba7ca6e/AAABoSVPhcI/AAABnSSvlIQ/16x9-512.jpg",
+          "16x9-640" : "https://images.tagesschau.de/image/b818c7ec-ee50-4c92-a638-a03dbba7ca6e/AAABoSVPhcI/AAABnSSvmjA/16x9-640.jpg",
+          "16x9-960" : "https://images.tagesschau.de/image/b818c7ec-ee50-4c92-a638-a03dbba7ca6e/AAABoSVPhcI/AAABnSSvpk8/16x9-960.jpg",
+          "16x9-1280" : "https://images.tagesschau.de/image/b818c7ec-ee50-4c92-a638-a03dbba7ca6e/AAABoSVPhcI/AAABnSSveow/16x9-1280.jpg"
+        },
+        "type" : "image"
+      } ],
+      "type" : "image_gallery"
+    }, {
+      "value" : "<h2>Teile von Kiew und umliegender Region erneut ohne Strom</h2>",
+      "type" : "headline"
+    }, {
+      "value" : "Insgesamt seien in der Nacht 13 ukrainische Regionen attackiert und Wohnhäuser, Infrastruktur und Eisenbahneinrichtungen beschädigt worden, berichtete die dpa weiter. ",
+      "type" : "text"
+    }, {
+      "value" : "Auch die Region um die Hauptstadt Kiew wurde laut Reuters erneut angegriffen. In Teilen der Stadt und der Region sei daraufhin die Stromversorgung zusammengebrochen, zitierte die Nachrichtenagentur das ukrainische Energieministerium.",
+      "type" : "text"
+    }, {
+      "value" : "<h2>Auch Russland meldet massive Drohnenangriffe</h2>",
+      "type" : "headline"
+    }, {
+      "value" : "Das ukrainische Militär soll in der Nacht russisches Gebiet mit mindestens 560 Drohnen attackiert haben, wie dase das russische Verteidigungsministerium mitteilte. In der Stadt Asow seien zwei Schiffe beschädigt worden.",
+      "type" : "text"
+    }, {
+      "value" : "Auch die südrussische Region Rostow soll Ziel der Attacken gewesen sein, wie der dortige Gouverneur Juri Sljussar bei Telegram mitteilte. Durch die Angriffe seien mehrere Brände ausgebrochen und mehrere Wohnhäuser sowie eine Eisenbahnbrücke beschädigt worden. ",
+      "type" : "text"
+    }, {
+      "value" : "<h2>Beratungen über Ukraine-Krieg in Miami</h2>",
+      "type" : "headline"
+    }, {
+      "value" : "Während die gegenseitigen Angriffe von Russland und der Ukraine weitergehen, sollten in der US-Metropole Miami die Beratungen über weitere mögliche Unterstützung für die Ukraine den zweiten Tag in Folge fortgesetzt werden. Von US-amerikanischer Seite nehmen der Sondergesandte Steve Witkoff, der Schwiegersohn von US-Präsident Donald Trump, Jared Kushner, sowie Vertreter des Nationalen Sicherheitsrats und des Finanzministeriums an den Gesprächen teil. Auch eine europäische Delegation war nach Miami gereist.",
+      "type" : "text"
+    }, {
+      "value" : "Die ersten Beratungen am Freitag bezeichnete Witkoff nach deren Ende beim Kurznachrichtendienst X als konstruktiv. Unter anderem sei über Maßnahmen gesprochen worden, um die Ukraine für den bevorstehenden Winter zu wappnen, etwa die Stärkung der Energieinfrastruktur, die das russische Militär immer wieder attackiert. ",
+      "type" : "text"
+    }, {
+      "value" : "<h2>Selenskyj kritisiert russische Diesellieferungen</h2>",
+      "type" : "headline"
+    }, {
+      "value" : "Derweil stößt die Bekanntmachung von US-Präsident Donald Trump über eine russische Diesellieferung  beim ukrainischen Präsidenten Wolodymyr Selenskyj auf scharfe Kritik. Trump teilte mit, er habe mit Kremlchef Wladimir Putin einen Deal vereinbart, der vorsieht, dass Russland mehr als 300.000 Tonnen Diesel für die USA und den Weltmarkt zur Verfügung stellt. Selenskyj warf der US-Regierung vor, damit in den russischen Krieg zu investieren und Moskau zu ermöglichen, diesen weiter fortzuführen.",
+      "type" : "text"
+    }, {
+      "box" : {
+        "image" : {
+          "copyright" : "REUTERS",
+          "alttext" : "US-Präsident Donald Trump",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "date" : "2026-10-10T04:43:04.852+02:00",
+        "link" : "<a href=\"https://www.tagesschau.de/api2u/ausland/amerika/trump-diesellieferungen-russland-100.json\" type=\"intern\">mehr</a>",
+        "subtitle" : "Vereinbarung mit Putin ",
+        "text" : "Wegen der hohen Spritpreise steht Trump innenpolitisch unter wachsendem Druck.",
+        "title" : "Trump kündigt russische Diesellieferungen an",
+        "infobox" : false
+      },
+      "type" : "box"
+    }, {
+      "value" : "<ul><li>Das Erste | Tagesschau | 10.10.2026 | 12:00 Uhr</li></ul>",
+      "type" : "text"
+    }, {
+      "related" : [ {
+        "teaserImage" : {
+          "copyright" : "REUTERS",
+          "alttext" : "Ein Feuerwehrmann ist in Saporischschja (Ukraine) nach einem Angriff an ausgebrannten Autos im Einsatz.",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/26d69c80-f0b6-4586-b3e1-5e77b7d86096/AAABoR9xg9U/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "date" : "2026-10-09T09:57:06.450+02:00",
+        "sophoraId" : "ukraine-trump-angriffe-100",
+        "externalId" : "dc386d89-e315-4996-aea6-131a22d26456",
+        "topline" : "Krieg gegen die Ukraine",
+        "title" : "Massive Angriffe und ein neuer Verhandlungsversuch",
+        "details" : "https://www.tagesschau.de/api2u/ausland/europa/ukraine-trump-angriffe-100.json",
+        "detailsweb" : "https://www.tagesschau.de/ausland/europa/ukraine-trump-angriffe-100.html",
+        "type" : "story"
+      }, {
+        "teaserImage" : {
+          "copyright" : "AFP PHOTO / DONETSK REGION PROSECUTOR'S OFFICE",
+          "alttext" : "Ein brennender Bus im ukrainischen Kramatorsk.",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/df74c0cc-b835-48de-a3f7-ad89434464e9/AAABoRsL_hc/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/df74c0cc-b835-48de-a3f7-ad89434464e9/AAABoRsL_hc/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/df74c0cc-b835-48de-a3f7-ad89434464e9/AAABoRsL_hc/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/df74c0cc-b835-48de-a3f7-ad89434464e9/AAABoRsL_hc/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/df74c0cc-b835-48de-a3f7-ad89434464e9/AAABoRsL_hc/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/df74c0cc-b835-48de-a3f7-ad89434464e9/AAABoRsL_hc/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/df74c0cc-b835-48de-a3f7-ad89434464e9/AAABoRsL_hc/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/df74c0cc-b835-48de-a3f7-ad89434464e9/AAABoRsL_hc/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/df74c0cc-b835-48de-a3f7-ad89434464e9/AAABoRsL_hc/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/df74c0cc-b835-48de-a3f7-ad89434464e9/AAABoRsL_hc/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/df74c0cc-b835-48de-a3f7-ad89434464e9/AAABoRsL_hc/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/df74c0cc-b835-48de-a3f7-ad89434464e9/AAABoRsL_hc/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "date" : "2026-10-08T21:16:45.654+02:00",
+        "sophoraId" : "ukraine-bus-kramatorsk-100",
+        "externalId" : "8ad77f05-2de9-41ad-9853-f33c6aa6efd4",
+        "topline" : "Krieg in der Ukraine",
+        "title" : "Mindestens 30 Tote bei russischen Angriffen auf Busse",
+        "details" : "https://www.tagesschau.de/api2u/ausland/europa/ukraine-bus-kramatorsk-100.json",
+        "detailsweb" : "https://www.tagesschau.de/ausland/europa/ukraine-bus-kramatorsk-100.html",
+        "type" : "story"
+      }, {
+        "teaserImage" : {
+          "copyright" : "Kai Küstner/Stefan Niemann",
+          "alttext" : "Drohnen sind in einem Karton in einem aus Sperrholzplatten zusammengezimmerter Unterstand an der ukrainischen Schwarzmeerküste zu sehen.",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/bba5b5c3-e64e-46dc-9452-9d93285c8194/AAABoNPmfhU/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/bba5b5c3-e64e-46dc-9452-9d93285c8194/AAABoNPmfhU/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/bba5b5c3-e64e-46dc-9452-9d93285c8194/AAABoNPmfhU/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/bba5b5c3-e64e-46dc-9452-9d93285c8194/AAABoNPmfhU/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/bba5b5c3-e64e-46dc-9452-9d93285c8194/AAABoNPmfhU/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/bba5b5c3-e64e-46dc-9452-9d93285c8194/AAABoNPmfhU/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/bba5b5c3-e64e-46dc-9452-9d93285c8194/AAABoNPmfhU/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/bba5b5c3-e64e-46dc-9452-9d93285c8194/AAABoNPmfhU/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/bba5b5c3-e64e-46dc-9452-9d93285c8194/AAABoNPmfhU/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/bba5b5c3-e64e-46dc-9452-9d93285c8194/AAABoNPmfhU/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/bba5b5c3-e64e-46dc-9452-9d93285c8194/AAABoNPmfhU/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/bba5b5c3-e64e-46dc-9452-9d93285c8194/AAABoNPmfhU/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "date" : "2026-09-24T19:50:55.472+02:00",
+        "sophoraId" : "ukraine-schnelle-drohnen-100",
+        "externalId" : "2840e188-e7ec-4637-881e-c687b63d14c1",
+        "topline" : "Russischer Angriffskrieg",
+        "title" : "Ukrainische Aufholjagd bei Drohnen",
+        "details" : "https://www.tagesschau.de/api2u/ausland/europa/ukraine-schnelle-drohnen-100.json",
+        "detailsweb" : "https://www.tagesschau.de/ausland/europa/ukraine-schnelle-drohnen-100.html",
+        "type" : "story"
+      }, {
+        "teaserImage" : {
+          "copyright" : "Basil Wegener/dpa",
+          "alttext" : "Karin Prien wird am Bahnhof in Kiew vom deutschen Botschafter Boris Ruge begrüßt.",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/0177c0b8-df3e-47a9-99be-213b4a309878/AAABoQqiK2Q/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/0177c0b8-df3e-47a9-99be-213b4a309878/AAABoQqiK2Q/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/0177c0b8-df3e-47a9-99be-213b4a309878/AAABoQqiK2Q/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/0177c0b8-df3e-47a9-99be-213b4a309878/AAABoQqiK2Q/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/0177c0b8-df3e-47a9-99be-213b4a309878/AAABoQqiK2Q/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/0177c0b8-df3e-47a9-99be-213b4a309878/AAABoQqiK2Q/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/0177c0b8-df3e-47a9-99be-213b4a309878/AAABoQqiK2Q/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/0177c0b8-df3e-47a9-99be-213b4a309878/AAABoQqiK2Q/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/0177c0b8-df3e-47a9-99be-213b4a309878/AAABoQqiK2Q/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/0177c0b8-df3e-47a9-99be-213b4a309878/AAABoQqiK2Q/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/0177c0b8-df3e-47a9-99be-213b4a309878/AAABoQqiK2Q/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/0177c0b8-df3e-47a9-99be-213b4a309878/AAABoQqiK2Q/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "date" : "2026-10-05T09:02:36.439+02:00",
+        "sophoraId" : "prien-besuch-ukraine-100",
+        "externalId" : "c152b929-bd76-46de-8296-69d869299611",
+        "topline" : "Prien in Kiew eingetroffen",
+        "title" : "Neuer deutscher Besuch, neue russische Angriffe",
+        "details" : "https://www.tagesschau.de/api2u/ausland/europa/prien-besuch-ukraine-100.json",
+        "detailsweb" : "https://www.tagesschau.de/ausland/europa/prien-besuch-ukraine-100.html",
+        "type" : "story"
+      }, {
+        "teaserImage" : {
+          "copyright" : "AP Photo/Efrem Lukatsky",
+          "alttext" : "Ein Mann sucht nach unversehrten Büchern nach einem Brand auf dem Gelände des größten Buchmarkts der Ukraine in Kiew.",
+          "imageVariants" : {
+            "1x1-144" : "https://images.tagesschau.de/image/c92c5b8c-6c64-4535-a4bd-e700051fc2fa/AAABoK37l_E/AAABnSStQvU/1x1-144.jpg",
+            "1x1-256" : "https://images.tagesschau.de/image/c92c5b8c-6c64-4535-a4bd-e700051fc2fa/AAABoK37l_E/AAABnSStSJ8/1x1-256.jpg",
+            "1x1-432" : "https://images.tagesschau.de/image/c92c5b8c-6c64-4535-a4bd-e700051fc2fa/AAABoK37l_E/AAABnSStTkw/1x1-432.jpg",
+            "1x1-640" : "https://images.tagesschau.de/image/c92c5b8c-6c64-4535-a4bd-e700051fc2fa/AAABoK37l_E/AAABnSStU_E/1x1-640.jpg",
+            "1x1-840" : "https://images.tagesschau.de/image/c92c5b8c-6c64-4535-a4bd-e700051fc2fa/AAABoK37l_E/AAABnSStWZo/1x1-840.jpg",
+            "16x9-256" : "https://images.tagesschau.de/image/c92c5b8c-6c64-4535-a4bd-e700051fc2fa/AAABoK37l_E/AAABnSSvh0M/16x9-256.jpg",
+            "16x9-384" : "https://images.tagesschau.de/image/c92c5b8c-6c64-4535-a4bd-e700051fc2fa/AAABoK37l_E/AAABnSSvjXw/16x9-384.jpg",
+            "16x9-512" : "https://images.tagesschau.de/image/c92c5b8c-6c64-4535-a4bd-e700051fc2fa/AAABoK37l_E/AAABnSSvlIQ/16x9-512.jpg",
+            "16x9-640" : "https://images.tagesschau.de/image/c92c5b8c-6c64-4535-a4bd-e700051fc2fa/AAABoK37l_E/AAABnSSvmjA/16x9-640.jpg",
+            "16x9-960" : "https://images.tagesschau.de/image/c92c5b8c-6c64-4535-a4bd-e700051fc2fa/AAABoK37l_E/AAABnSSvpk8/16x9-960.jpg",
+            "16x9-1280" : "https://images.tagesschau.de/image/c92c5b8c-6c64-4535-a4bd-e700051fc2fa/AAABoK37l_E/AAABnSSveow/16x9-1280.jpg",
+            "16x9-1920" : "https://images.tagesschau.de/image/c92c5b8c-6c64-4535-a4bd-e700051fc2fa/AAABoK37l_E/AAABnSSvgNE/16x9-1920.jpg"
+          },
+          "type" : "image"
+        },
+        "date" : "2026-09-17T22:13:01.969+02:00",
+        "sophoraId" : "ukraine-verbrannte-buecher-100",
+        "externalId" : "082b12b4-6755-4082-9420-d8b3430f068b",
+        "topline" : "Millionen Bücher in der Ukraine verbrannt",
+        "title" : "\"Man zerstört unsere Kultur und Identität\"",
+        "details" : "https://www.tagesschau.de/api2u/kultur/ukraine-verbrannte-buecher-100.json",
+        "detailsweb" : "https://www.tagesschau.de/kultur/ukraine-verbrannte-buecher-100.html",
+        "type" : "story"
+      } ],
+      "type" : "related"
+    } ],
+    "tracking" : [ {
+      "sid" : "app.ausland.europa.ukraine-russland-angriffe-saporischschja-104",
+      "src" : "tagesschau",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1254",
+      "otp" : "meldung",
+      "cid" : "ukraine-russland-angriffe-saporischschja-104",
+      "pti" : "Mehrere_Tote_durch_russische_Angriffe_auf_Saporischschja",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Krieg gegen die Ukraine",
+    "firstSentence" : "Während Russland seine Angriffe fortsetzt, wird in den USA über Hilfe für die Ukraine beraten.",
+    "video" : {
+      "sophoraId" : "video-1663792",
+      "externalId" : "179b5a6c-3084-4bcb-979d-f60d4309013d",
+      "title" : "APP1200 NIF Angriffe auf Saporischschja Ukraine_vapp.mxf",
+      "date" : "2026-10-10T12:54:32.014+02:00",
+      "teaserImage" : {
+        "title" : "Sendungsbild",
+        "copyright" : "ARD-aktuell",
+        "alttext" : "Sendungsbild",
+        "imageVariants" : {
+          "1x1-144" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStQvU/1x1-144.jpg",
+          "1x1-256" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStSJ8/1x1-256.jpg",
+          "1x1-432" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStTkw/1x1-432.jpg",
+          "1x1-640" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStU_E/1x1-640.jpg",
+          "1x1-840" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStWZo/1x1-840.jpg",
+          "16x9-256" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvh0M/16x9-256.jpg",
+          "16x9-384" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvjXw/16x9-384.jpg",
+          "16x9-512" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvlIQ/16x9-512.jpg",
+          "16x9-640" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvmjA/16x9-640.jpg",
+          "16x9-960" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvpk8/16x9-960.jpg",
+          "16x9-1280" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSveow/16x9-1280.jpg",
+          "16x9-1920" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvgNE/16x9-1920.jpg"
+        },
+        "type" : "image"
+      },
+      "tags" : [ ],
+      "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1663792.json?view=hasChanged&lastKnown=A6DE039FF0B2DD9A83C129603BA37468",
+      "tracking" : [ {
+        "sid" : "app.multimedia.video.video-1663792",
+        "src" : "tagesschau",
+        "ctp" : "VERTICALAPPVIDEO",
+        "pdt" : "20261010T1254",
+        "otp" : "video",
+        "cid" : "video-1663792",
+        "pti" : "APP1200_NIF_Angriffe_auf_Saporischschja_Ukraine_vapp.mxf",
+        "bcr" : "ja",
+        "type" : "generic",
+        "av_full_show" : false
+      }, {
+        "assetid" : "video-1663792",
+        "program" : "Tagesschau",
+        "title" : "APP1200_NIF_Angriffe_auf_Saporischschja_Ukraine_vapp.mxf",
+        "length" : "25",
+        "c2" : "p2,N",
+        "c5" : "p5,https://www.tagesschau.de/video/video-1663792.html",
+        "c7" : "p7,video-1663792",
+        "c8" : "p8,25",
+        "c9" : "p9,Tagesschau_APP1200_NIF_Angriffe_auf_Saporischschja_Ukraine_vapp.mxf_10.10.2026_1254",
+        "c10" : "p10,Das_Erste",
+        "c12" : "p12,content",
+        "c16" : "p16,ARD_Information/ARD_Livestream",
+        "c18" : "p18,N",
+        "type_nielsen" : "content",
+        "type" : "nielsen"
+      } ],
+      "streams" : {
+        "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1205-3900.webs.h264.mp4",
+        "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1205-3900.webm.h264.mp4",
+        "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1205-3900.webxl.h264.mp4",
+        "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1010/TV-20261010-1205-3900.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+      },
+      "alttext" : "Sendungsbild",
+      "type" : "video"
+    },
+    "images" : [ {
+      "title" : "Sendungsbild",
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Sendungsbild",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    } ],
+    "firstFrame" : {
+      "title" : "Sendungsbild",
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Sendungsbild",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/714ad26b-636e-4062-bc46-5d5f904a42a8/AAABoSVG6to/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/ausland/europa/ukraine-russland-angriffe-saporischschja-104.json",
+    "detailsweb" : "https://www.tagesschau.de/ausland/europa/ukraine-russland-angriffe-saporischschja-104.html",
+    "shareURL" : "https://www.tagesschau.de/ausland/europa/ukraine-russland-angriffe-saporischschja-104.html",
+    "geotags" : [ ],
+    "regionId" : 0,
+    "regionIds" : [ ],
+    "ressort" : "ausland",
+    "crop" : {
+      "id" : "TV-20261010-1205-3900",
+      "type" : "video",
+      "croppingApiVersion" : "1.1",
+      "croppingUIVersion" : "20260916.2-Release-171",
+      "croppingServiceVersion" : "1.1",
+      "noSound" : false,
+      "videoSrc" : "",
+      "imageSrc" : [ ],
+      "imageNames" : [ ],
+      "headerText" : "Russischer Krieg gegen die Ukraine",
+      "mainTexts" : [ "Schwerer Angriff auf Saporischschja", "Mehrere Tote, unter ihnen auch Kinder", "Wohnhäuser in mehreren Stadtteilen betroffen", "Retter suchen in Trümmern nach Verschütteten", "Zahl der Opfer könnte sich noch erhöhen" ],
+      "sceneSrcTexts" : [ "", "", "", "", "" ],
+      "cameraMoves" : [ {
+        "point1X" : 0.0,
+        "point1Y" : -0.286,
+        "p

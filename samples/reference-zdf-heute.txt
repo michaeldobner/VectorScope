@@ -1,0 +1,1224 @@
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:georss="http://www.georss.org/georss" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<channel>
+    <title>ZDFheute</title>
+    <link>https://www.zdfheute.de/rss/zdf/nachrichten</link>
+    <atom:link href="https://www.zdfheute.de/rss/zdf/nachrichten" rel="self" type="application/rss+xml" />
+    <description>News aus Deutschland sowie aktuelle Nachrichten aus Europa und aller Welt. Videos, Livestreams, Kommentare und Analysen von Politik bis Sport bei ZDFheute.</description>
+    <pubDate>Sat, 10 Oct 2026 14:40:00 +0200</pubDate>
+		<item>
+        <title>Die Trump-Bilanz: Hohe Kurse, hohe Preise</title>
+        <category>Vor den Midterms in den USA</category>
+        <link>https://www.zdfheute.de/wirtschaft/donald-trump-midterms-2026-usa-wirtschaft-bilanz-100.html</link>
+        <description>Zu Beginn seiner zweiten Amtszeit versprach Donald Trump den USA ein &quot;goldenes Zeitalter&quot;. Die wirtschaftliche Bilanz kurz vor den Midterms: Was kostet uns der US-Pr&#228;sident?</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/trump-nebraska-stift-100~384x216?cb=1791617113606"
+                    type="image/jpeg"
+                    length="16324"
+            />
+                <pubDate>Sat, 10 Oct 2026 12:12:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_db698aa3-e5ef-4d6c-9644-4fc89d58c074</guid>
+    </item>
+		<item>
+        <title>Wie geht&apos;s der US-Wirtschaft unter Trump?</title>
+        <category>Wichtige Daten im &#220;berblick</category>
+        <link>https://www.zdfheute.de/wirtschaft/usa-donald-trump-wirtschaft-daten-100.html</link>
+        <description>Wachstum, Arbeitslosigkeit, Inflation, Aktien: Wie geht es der US-Wirtschaft nach mehr als einem Jahr unter Pr&#228;sident Donald Trump? Ein &#220;berblick in Grafiken.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/us-wirtschaft-trump-daten-100~384x216?cb=1746950938860"
+                    type="image/jpeg"
+                    length="9230"
+            />
+                <pubDate>Sat, 3 Oct 2026 09:21:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_2ff0b5d2-dd8b-455d-b364-7409c11e2630</guid>
+    </item>
+		<item>
+        <title>Anthropic-KI schickt erfundenen Hinweis an die Polizei</title>
+        <category>Pannen bei Tests von KI-Agenten</category>
+        <link>https://www.zdfheute.de/wirtschaft/anthropic-ki-falscher-hinweis-us-polizei-100.html</link>
+        <description>Ausgebrochene Software sorgt f&#252;r Alarm: KI-Agenten von Anthropic und OpenAI reichen Fake-Mordinformationen bei der Polizei ein und hacken fremde IT-Systeme.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/anthropic-logo-104~384x216?cb=1788941956726"
+                    type="image/jpeg"
+                    length="10119"
+            />
+                <pubDate>Sat, 10 Oct 2026 07:23:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_4131ceb6-5d01-4fd8-9c12-bf5eb3d2b315</guid>
+    </item>
+		<item>
+        <title>&quot;Ragebait&quot; ist das offizielle Jugendwort des Jahres 2026</title>
+        <category>&quot;Peak&quot; und &quot;Crashout&quot;</category>
+        <link>https://www.zdfheute.de/panorama/jugendwort-des-jahres-2026-gewinner-ragebait-100.html</link>
+        <description>Das Jugendwort 2026 steht fest: &quot;Ragebait&quot; gewinnt knapp. Das steckt hinter dem Social-Media-Trend.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/jugendwort-des-jahres-2026-102~384x216?cb=1791634075515"
+                    type="image/jpeg"
+                    length="14971"
+            />
+                <pubDate>Sat, 10 Oct 2026 14:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_7f3563ad-4a44-415d-9325-b5a0497c0a79</guid>
+    </item>
+		<item>
+        <title>Schlagzeilen</title>
+        <category>Newsticker</category>
+        <link>https://www.zdfheute.de/newsticker/schlagzeilen-100.html</link>
+        <description>Schlagzeilen zu aktuellen Ereignissen - kurze Nachrichten im Ticker</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/zdfheute-keyvisual-100~384x216?cb=1695027601231"
+                    type="image/jpeg"
+                    length="15310"
+            />
+                <pubDate>Sat, 10 Oct 2026 14:40:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_f17f4783-14bc-4618-8d05-48351e9c5dc2</guid>
+    </item>
+		<item>
+        <title>69-J&#228;hriger treibt 20 Stunden vor Borkum</title>
+        <category>hallo deutschland</category>
+        <link>https://www.zdfheute.de/video/hallo-deutschland/surfer-rettung-sturm-borkum-100.html</link>
+        <description>Ein 69-J&#228;hriger wurde bei einem Herbststurm vor Borkum abgetrieben. Mehr als 20 Stunden lang klammerte sich der Mann an sein Surfbrett, bis er wieder zur&#252;ckgetrieben wurde.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/surfer-rettung-borkum-100~384x216?cb=1791550866922"
+                    type="image/jpeg"
+                    length="10965"
+            />
+                <pubDate>Fri, 9 Oct 2026 17:10:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_97c7869f-3de2-4b2e-898c-40df94b84b67</guid>
+    </item>
+		<item>
+        <title>Pillay widmet Nobelpreis Opfern von Gewalt</title>
+        <category>ZDFheute Xpress</category>
+        <link>https://www.zdfheute.de/video/zdfheute-xpress/friedensnobelpreis-navanethem-pillay-video-100.html</link>
+        <description>Die s&#252;dafrikanische Juristin Navi Pillay widmet ihren Friedensnobelpreis den &quot;&#220;berlebenden internationaler Verbrechen&quot;. Sie warnt vor Angriffen auf das V&#246;lkerrecht.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/friedensnobelpreis-navanethem-pillay-clean-100~384x216?cb=1791557504965"
+                    type="image/jpeg"
+                    length="11077"
+            />
+                <pubDate>Fri, 9 Oct 2026 17:23:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_09f9c327-293c-4d21-ac89-134170d54d5d</guid>
+    </item>
+		<item>
+        <title>&quot;Ragebait&quot; auf die 1: Das Jugendwort des Jahres</title>
+        <category></category>
+        <link>https://www.zdfheute.de/video/panorama-jugendwort-des-jahres-ragebait-100.html</link>
+        <description>&quot;Raigebait&quot; ist das Jugendwort des Jahres 2026. Knapp dahinter landen &quot;Peak&quot; und &quot;Crashout&quot;. Was sagt die &#228;ltere Generation dazu?</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/jugendwort-des-jahres-2026-100~384x216?cb=1791634054701"
+                    type="image/jpeg"
+                    length="8582"
+            />
+                <pubDate>Sat, 10 Oct 2026 14:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_3c5d627b-1c83-4421-9420-8c64ec038137</guid>
+    </item>
+		<item>
+        <title>Schwere Unwetter auf Sizilien</title>
+        <category>ZDFheute Xpress</category>
+        <link>https://www.zdfheute.de/video/zdfheute-xpress/unwetter-sizilien-italien-video-100.html</link>
+        <description>Nach heftigen Unwettern auf der Mittelmeerinsel Sizilien gibt es Verletzte und schwere Sch&#228;den an Autos und Geb&#228;uden. Auch andere Regionen Italiens sind von Unwettern betroffen.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/unwetter-sizilien-italien-clean-100~384x216?cb=1791567708553"
+                    type="image/jpeg"
+                    length="17387"
+            />
+                <pubDate>Fri, 9 Oct 2026 23:24:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_3a08ed9e-7ded-4cda-adf3-61b4597410b4</guid>
+    </item>
+		<item>
+        <title>Weinfest auf dem Montmartre</title>
+        <category>heute in Europa</category>
+        <link>https://www.zdfheute.de/video/heute-in-europa/weinfest-montmartre-paris-100.html</link>
+        <description>Das Weinfest auf dem Montmartre in Paris bringt jedes Jahr Nachbarn, Pariser und Touristen zusammen, um den besonderen Stadtwein zu probieren. Der Erl&#246;s flie&#223;t in soziale Projekte.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/weinfest-montmartre-100~384x216?cb=1791557100967"
+                    type="image/jpeg"
+                    length="18369"
+            />
+                <pubDate>Fri, 9 Oct 2026 16:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_5f6581de-ae6c-4d45-8682-d3fe2d574e3c</guid>
+    </item>
+		<item>
+        <title>Wasserpflanze sorgt in Gent f&#252;r Probleme</title>
+        <category>heute in Europa</category>
+        <link>https://www.zdfheute.de/video/heute-in-europa/wasserpflanze-in-gent-100.html</link>
+        <description>In den Gew&#228;ssern von Gent breitet sich die sogenannte Wasserlinse rasant aus und wird f&#252;r Touristenboote zunehmend zum Problem. Die Ausbreitung ist Folge von Hitze und hohen Wassertemperaturen.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/wasserlinsen-in-gent-100~384x216?cb=1791557515391"
+                    type="image/jpeg"
+                    length="23463"
+            />
+                <pubDate>Fri, 9 Oct 2026 16:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_3e455240-a871-4567-b884-80ed4a85cf61</guid>
+    </item>
+		<item>
+        <title>Nackte Trump-Statue im EU-Parlament</title>
+        <category>heute in Europa</category>
+        <link>https://www.zdfheute.de/video/heute-in-europa/nackte-trump-statue-im-eu-parlament-100.html</link>
+        <description>Im EU-Parlament in Stra&#223;burg sorgt eine nackte Trump-Statue f&#252;r Aufsehen. Die Arbeit des d&#228;nischen K&#252;nstlers Jens Galschiot richtet sich gegen Trumps Klima- und Weltpolitik.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/nackte-trump-statue-eu-parlament-100~384x216?cb=1791557297323"
+                    type="image/jpeg"
+                    length="9950"
+            />
+                <pubDate>Fri, 9 Oct 2026 16:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_d7a49b7a-9be7-4683-9da3-8f9ee90bc633</guid>
+    </item>
+		<item>
+        <title>137 Meter: Neuer Weltrekord im Apnoetauchen</title>
+        <category>heute in Europa</category>
+        <link>https://www.zdfheute.de/video/heute-in-europa/neuer-weltrekord-apnoe-tauchen-100.html</link>
+        <description>Weltrekord: Der russische Apnoetaucher Alexej Moltschanow ist bei der Freitauch-WM vor Zypern 137 Meter tief getaucht &#8211; nur mit einer Monoflosse.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/apnoe-tauchen-104~384x216?cb=1791557740559"
+                    type="image/jpeg"
+                    length="6172"
+            />
+                <pubDate>Fri, 9 Oct 2026 16:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_fada2d30-d16d-4843-ae03-bec583e69aff</guid>
+    </item>
+		<item>
+        <title>&#220;berschwemmungen in Santiago de Chile</title>
+        <category>ZDFheute Xpress</category>
+        <link>https://www.zdfheute.de/video/zdfheute-xpress/unwetter-ueberschwemmungen-chile-video-100.html</link>
+        <description>Nach heftigen Regenf&#228;llen raste eine Flutwelle durch den Osten Chiles. Die Sturzflut riss Autos und Busse mit sich und &#252;berschwemmte Geb&#228;ude. </description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/chile-ueberschwemmung-102~384x216?cb=1791542498834"
+                    type="image/jpeg"
+                    length="22406"
+            />
+                <pubDate>Fri, 9 Oct 2026 16:46:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_bdd9c2e1-99e4-4789-90c7-fffa0dd000ce</guid>
+    </item>
+		<item>
+        <title>Rund 355.700 Euro f&#252;r ein kaum genutztes Klo</title>
+        <category></category>
+        <link>https://www.zdfheute.de/video/panorama-toilette-steuergeld-100.html</link>
+        <description>Ein &#246;ffentliches Toilettenh&#228;uschen im hessischen Niederhadamar hat rund 355.700 Euro gekostet. Allerdings wird es eigentlich kaum gebraucht, sagen die Anwohnenden. </description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/panorama-teures-klo-steuergeld-100~384x216?cb=1791550530625"
+                    type="image/jpeg"
+                    length="13291"
+            />
+                <pubDate>Sat, 10 Oct 2026 07:30:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_15e340af-88c3-4a23-8be9-63d8b03a9713</guid>
+    </item>
+		<item>
+        <title>Lars Eidinger in der T&#252;binger Kunsthalle</title>
+        <category>ZDF-Mittagsmagazin</category>
+        <link>https://www.zdfheute.de/video/zdf-mittagsmagazin/lars-eidinger-ausstellung-tuebingen-100.html</link>
+        <description>Lars Eidinger ist nicht nur Schauspieler, sondern widmet sich seit Jahren auch der Fotografie. Nun er&#246;ffnet in der T&#252;binger Kunsthalle seine Foto-Ausstellung &#8222;Present Perfect&#8220;.  </description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/aid-image-73466891-hires-100~384x216?cb=1791550182904"
+                    type="image/jpeg"
+                    length="6694"
+            />
+                <pubDate>Fri, 9 Oct 2026 12:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_f5fdf9b5-e98e-47ba-8806-7a60059eee36</guid>
+    </item>
+		<item>
+        <title>Expedition: Berlin f&#252;r umme</title>
+        <category>ZDF-Mittagsmagazin</category>
+        <link>https://www.zdfheute.de/video/zdf-mittagsmagazin/berlin-kostenlos-programm-100.html</link>
+        <description>Was kann man in Berlin einen ganzen Tag lang machen und erleben, ohne einen einzigen Cent auszugeben? Erstaunlich viel, wenn man nur die richtigen Orte kennt.  </description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/aid-image-73045701-hires-100~384x216?cb=1791542313543"
+                    type="image/jpeg"
+                    length="12797"
+            />
+                <pubDate>Fri, 9 Oct 2026 12:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_a556b90f-9721-45db-bc39-d0d3685e81e7</guid>
+    </item>
+		<item>
+        <title>Italien: Kapernernte auf Pantelleria</title>
+        <category>heute in Europa</category>
+        <link>https://www.zdfheute.de/video/heute-in-europa/261008-lueg-hie-100.html</link>
+        <description>Auf Pantelleria werden Kapern seit Jahrhunderten von Hand geerntet. Die Tradition pr&#228;gt die Insel bis heute. Anfang Juni feiert ein Fest die Kapernbl&#252;te und das regionale Kulturerbe.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/aid-image-73555501-hires-100~384x216?cb=1791455563229"
+                    type="image/jpeg"
+                    length="13449"
+            />
+                <pubDate>Thu, 8 Oct 2026 16:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_1cd34ba5-dfc2-4bf3-b19d-d72ef6912b07</guid>
+    </item>
+		<item>
+        <title>Gesundheits-Check f&#252;r Sibirische Tiger-Drillinge</title>
+        <category>ZDF-Mittagsmagazin</category>
+        <link>https://www.zdfheute.de/video/zdf-mittagsmagazin/tierpark-stroehen-sibirische-tiger-drillinge-100.html</link>
+        <description>Im Tierpark Str&#246;hen sind am 20. August 2026 Amur-Tiger-Drillinge zur Welt gekommen. Nun war der Tierarzt das erste Mal da und der Nachwuchs durfte der &#214;ffentlichkeit vorgestellt werden.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/aid-image-73801227-hires-100~384x216?cb=1791456115556"
+                    type="image/jpeg"
+                    length="23331"
+            />
+                <pubDate>Thu, 8 Oct 2026 12:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_dbe21809-97c7-4497-915f-9200ad26e7cc</guid>
+    </item>
+		<item>
+        <title>Klaus Bresser war mein Vorbild als Journalist</title>
+        <category>Ehemaliger ZDF-Chefredakteur gestorben</category>
+        <link>https://www.zdfheute.de/in-eigener-sache/peter-frey-nachruf-klaus-bresser-zdf-chefredakteur-100.html</link>
+        <description>Zw&#246;lf Jahre lang war Klaus Bresser ZDF-Chefredakteur. Seine Arbeit pr&#228;gt das ZDF bis heute. Peter Frey, einer seiner Nachfolger, erinnert sich.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/klaus-bresser-100~384x216?cb=1658423262111"
+                    type="image/jpeg"
+                    length="13658"
+            />
+                <pubDate>Sat, 10 Oct 2026 10:44:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_8e410314-d217-4b52-9e24-bd64cb7985eb</guid>
+    </item>
+		<item>
+        <title>Fr&#252;herer ZDF-Chefredakteur Klaus Bresser gestorben</title>
+        <category>Journalist wurde 90 Jahre alt</category>
+        <link>https://www.zdfheute.de/in-eigener-sache/klaus-bresser-frueherer-zdf-chefredakteur-tot-100.html</link>
+        <description>Das ZDF trauert um Klaus Bresser: Zw&#246;lf Jahre war er Chefredakteur, moderierte das heute journal und die Interviewreihe &quot;Was nun, ...?&quot;. Er starb im Alter von 90 Jahren. </description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/klaus-bresser-100~384x216?cb=1658423262111"
+                    type="image/jpeg"
+                    length="13658"
+            />
+                <pubDate>Fri, 9 Oct 2026 21:47:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_66cbb5a6-64e9-468a-8069-3d5de2ad4ba6</guid>
+    </item>
+		<item>
+        <title>Trump: Russland wird Diesel an USA und Weltmarkt liefern</title>
+        <category>&quot;M&#246;chte Pr&#228;sident Putin danken&quot;</category>
+        <link>https://www.zdfheute.de/politik/ausland/trump-putin-diesel-usa-russland-100.html</link>
+        <description>US-Pr&#228;sident Donald Trump setzt im Kampf gegen die hohen Treibstoffpreise vor den Midterms auf eine &#252;berraschende Kooperation mit Moskau und lockert bestehende Sanktionen.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/trump-winkt-abflug-alaska-100~384x216?cb=1765192522913"
+                    type="image/jpeg"
+                    length="11398"
+            />
+                <pubDate>Sat, 10 Oct 2026 14:26:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_73a99d22-4b0c-4a98-a911-61ecd9f11ac8</guid>
+    </item>
+		<item>
+        <title>Gr&#252;nen-Chefin Brantner fordert SPD-Ausschluss von Schr&#246;der</title>
+        <category>Scharfe Kritik an Altkanzler in Moskau</category>
+        <link>https://www.zdfheute.de/politik/deutschland/brantner-gruene-forderung-spd-parteiausschluss-schroeder-100.html</link>
+        <description>Nachdem er mit Wladimir Putin dessen Geburtstag feierte, steht Altkanzler Gerhard Schr&#246;der in der Kritik. Gr&#252;nen-Co-Chefin Franziska Brantner will von der SPD Konsequenzen.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/altkanzler-gerhard-schroeder-praesident-wladimir-putin-100~384x216?cb=1791628399573"
+                    type="image/jpeg"
+                    length="14575"
+            />
+                <pubDate>Sat, 10 Oct 2026 13:11:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_af6d1bca-8937-43de-b4ca-4944ecfba19d</guid>
+    </item>
+		<item>
+        <title>Nobelpreis f&#252;r Pillay: Trump nennt Wahl &quot;sch&#228;ndlich&quot;</title>
+        <category>&quot;Habe von dieser Person noch nie geh&#246;rt&quot;</category>
+        <link>https://www.zdfheute.de/panorama/trump-kritik-vergabe-friedensnobelpreis-pillay-100.html</link>
+        <description>Trump empfindet den Friedensnobelpreis f&#252;r Navi Pillay als &quot;blamabel&quot; und kritisiert die Wahl des Nobelkomitees. Am liebsten h&#228;tte er ihn selbst bekommen.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/trump-medien-102~384x216?cb=1790395948441"
+                    type="image/jpeg"
+                    length="14169"
+            />
+                <pubDate>Sat, 10 Oct 2026 08:12:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_0da4e0b7-5aca-4ec1-9795-01af866081f5</guid>
+    </item>
+		<item>
+        <title>&quot;Riesenbelastung&quot;: CSU-Vize Weber kritisiert Brandmauer</title>
+        <category>Diskussion &#252;ber den Umgang mit der AfD</category>
+        <link>https://www.zdfheute.de/politik/deutschland/csu-afd-vize-weber-brandmauer-belastung-100.html</link>
+        <description>Nach den Landtagswahlen gibt es in der Union Streit &#252;ber den Umgang mit der Brandmauer zur AfD. Das Thema d&#252;rfte auch die anstehende CDU-Klausur pr&#228;gen.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/cdu-afd-zusammenarbeit-koalition-100~384x216?cb=1758214675864"
+                    type="image/jpeg"
+                    length="18256"
+            />
+                <pubDate>Sat, 10 Oct 2026 12:30:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_d6b30673-1464-4344-b156-7286a3da798c</guid>
+    </item>
+		<item>
+        <title>Der Pr&#228;sident und die Sache mit den fremden Schuhen</title>
+        <category>Verstehen, wie Trump die USA ver&#228;ndert</category>
+        <link>https://www.zdfheute.de/briefing/trump-effekt/midterms-donald-trump-ukraine-krieg-100.html</link>
+        <description>Keine vier Wochen bis zu den Midterms: Trump verspricht Entlastung bei hohen Preisen. Die Verantwortung f&#252;r die Folgen seines Iran-Kriegs sucht er bei anderen.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/katrin-eigendorf-update-100~384x216?cb=1715678389073"
+                    type="image/jpeg"
+                    length="18947"
+            />
+                <pubDate>Sat, 10 Oct 2026 09:24:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_9b38409d-53ed-4581-abb4-cc87ed2bfd68</guid>
+    </item>
+		<item>
+        <title>&quot;Wacht auf&quot;: CDU-Sozialfl&#252;gel warnt vor Zerfall der Koalition</title>
+        <category>Innerparteilicher Druck auf Merz</category>
+        <link>https://www.zdfheute.de/politik/deutschland/cda-chef-radtke-warnung-zerbrechen-koalition-100.html</link>
+        <description>Den Spekulationen um eine Minderheitsregierung der Union schiebt Dennis Radtke, Chef des CDU-Sozialfl&#252;gels, einen Riegel vor. Die politische Mitte begebe sich ins Fegefeuer.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/dennis-radtke-cda-bundesvorsitzender-cdu-100~384x216?cb=1791613355379"
+                    type="image/jpeg"
+                    length="11556"
+            />
+                <pubDate>Sat, 10 Oct 2026 08:04:36 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_15f4a28d-13ae-4263-b7c0-faf0ac694332</guid>
+    </item>
+		<item>
+        <title>Studenten versperren AfD-Politiker Zutritt zu Synagoge</title>
+        <category>Gedenken an Anschlag in Halle</category>
+        <link>https://www.zdfheute.de/politik/deutschland/halle-anschlag-gedenktag-menschenkette-afd-tillschneider-100.html</link>
+        <description>Mit einer Menschenkette haben Studierende in Halle AfD-Landtagsvize Tillschneider den Zugang zur Synagoge verwehrt. Dort wurde der Opfer des Anschlags von 2019 gedacht.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/tillschneider-gedenktag-100~384x216?cb=1791560548938"
+                    type="image/jpeg"
+                    length="19990"
+            />
+                <pubDate>Fri, 9 Oct 2026 19:14:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_503fe5f9-35ad-4b8f-a410-7caf28bc070e</guid>
+    </item>
+		<item>
+        <title>Sorge vor K&#252;nstlicher Intelligenz: Das kann die EU tun</title>
+        <category>KI-Modelle au&#223;er Kontrolle?</category>
+        <link>https://www.zdfheute.de/wirtschaft/unternehmen/ki-eu-sorge-moeglichkeiten-kontrolle-100.html</link>
+        <description>Die Sorge um K&#252;nstliche Intelligenz, ihre Risiken und die zunehmenden Zwischenf&#228;lle steigt. Welche Handlungsm&#246;glichkeiten hat die EU? Ein &#220;berblick.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/ki-apps-smartphone-104~384x216?cb=1791623232852"
+                    type="image/jpeg"
+                    length="13300"
+            />
+                <pubDate>Sat, 10 Oct 2026 12:41:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_2540d293-230e-4f62-ae9a-2a7037dd6115</guid>
+    </item>
+		<item>
+        <title>BMW zieht Dienstwagen-Angebot zur&#252;ck: Rausch ist &quot;emp&#246;rt&quot;</title>
+        <category>Neuer Landtagspr&#228;sident Sachsen-Anhalt</category>
+        <link>https://www.zdfheute.de/politik/deutschland/bmw-dienstwagen-landtag-afd-ablehnung-100.html</link>
+        <description>BMW stellt dem neuen AfD-Landtagspr&#228;sidenten in Sachsen-Anhalt keinen Dienstwagen mehr zur Verf&#252;gung. Der Politiker reagiert in der &quot;Mitteldeutschen Zeitung&quot; vor allem &quot;emp&#246;rt&quot;.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/tobias-rausch-106~384x216?cb=1791536052260"
+                    type="image/jpeg"
+                    length="10793"
+            />
+                <pubDate>Fri, 9 Oct 2026 16:35:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_f9a1c3ac-dc62-4751-86bf-f558794a5c05</guid>
+    </item>
+		<item>
+        <title>Aktuelle Sendungs-Videos</title>
+        <category>Nachrichten im ZDF</category>
+        <link>https://www.zdfheute.de/thema/video-150.html</link>
+        <description>Aktuelle Meldungen, vertiefende Analysen, Hintergr&#252;nde und Interviews aus den Nachrichtensendungen im ZDF und bei ZDFheute.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/zdfheute-ticker-h19-100~384x216?cb=1764250166462"
+                    type="image/jpeg"
+                    length="17038"
+            />
+                <pubDate>Fri, 28 Nov 2025 09:20:16 +0100</pubDate>
+        <guid isPermaLink="false">SCMS_2760c9ec-a4d7-4207-a515-3500cac06cc9</guid>
+    </item>
+		<item>
+        <title>Der FC Bayern startet in einen hei&#223;en Herbst</title>
+        <category>Vier englische Wochen in Serie</category>
+        <link>https://www.zdfheute.de/sport/fussball-bundesliga/bundesliga-fc-augsburg-fc-bayern-5-spieltag-vincent-kompany-100.html</link>
+        <description>F&#252;r den FC Bayern beginnt mit dem Spiel in Augsburg eine knifflige Phase. Trainer Vincent Kompany will die Basis legen f&#252;r die Saisonziele - und st&#252;tzt daf&#252;r seinen Mittelfeldchef.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/vincent-kompany-150~384x216?cb=1791554305195"
+                    type="image/jpeg"
+                    length="14103"
+            />
+                <pubDate>Sat, 10 Oct 2026 05:04:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_20f7229a-1dce-4a1d-a86a-46fa4a254a93</guid>
+    </item>
+		<item>
+        <title>Verstappen gewinnt Sprintrennen in Singapur</title>
+        <category>Formel 1 in Bildern</category>
+        <link>https://www.zdfheute.de/sport/formel-1-saison-2026-100.html</link>
+        <description>Die Formel 1: Das Wichtigste der Rennserie in Bildern.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/max-verstappen-220~384x216?cb=1791629025781"
+                    type="image/jpeg"
+                    length="13581"
+            />
+                <pubDate>Sat, 10 Oct 2026 12:40:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_66dbd552-e22b-43b7-8256-0d13268b3dc1</guid>
+    </item>
+		<item>
+        <title>Nackte Tatsachen, brutale B&#246;en: Die Ironman-WM auf Hawaii</title>
+        <category>Radstrecke f&#252;hrt durch Lavafelder</category>
+        <link>https://www.zdfheute.de/sport/triathlon-ironman-hawaii-vorschau-stadler-100.html</link>
+        <description>Unterhosenlauf, heftige B&#246;en und jede Menge Hawaii-Mythen: Die Ironman-WM in Kona ist mehr als ein Rennen. Diese Geschichten machen den Triathlon-Kult auf der Pazifikinsel aus.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/ironman-hawaii-philipp-100~384x216?cb=1791541595183"
+                    type="image/jpeg"
+                    length="18456"
+            />
+                <pubDate>Sat, 10 Oct 2026 05:04:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_e3a88cd8-e18d-44c3-af28-7793ea9bcc06</guid>
+    </item>
+		<item>
+        <title>Bremen holt Punkt in Dortmund</title>
+        <category>Nach wilder Aufholjagd</category>
+        <link>https://www.zdfheute.de/sport/fussball-bundesliga/bundesliga-fussball-borussia-dortmund-werder-bremen-58-spieltag-100.html</link>
+        <description>Niclas F&#252;llkrug hat Werder Bremen mit einem Tor in der Nachspielzeit einen Punkt gerettet. Nach einer 2:0 F&#252;hrung musste Borussia Dortmund noch das 2:2 hinnehmen.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/niclas-fuellkrug-148~384x216?cb=1791578260109"
+                    type="image/jpeg"
+                    length="14346"
+            />
+                <pubDate>Fri, 9 Oct 2026 23:04:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_27e11dee-5775-4e51-93ed-ce539c6bcf15</guid>
+    </item>
+		<item>
+        <title>Roger Schmidt - neuer Steuermann des Red-Bull-Fu&#223;balls</title>
+        <category>Heute Gast im aktuellen sportstudio</category>
+        <link>https://www.zdfheute.de/sport/fussball-roger-schmidt-red-bull-juergen-klopp-100.html</link>
+        <description>Roger Schmidt soll als Nachfolger von J&#252;rgen Klopp die Red-Bull-Klubs wieder auf Kurs bringen. Schon jetzt zeigt er dabei mehr Pr&#228;senz als sein Vorg&#228;nger.  </description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/roger-schmidt-118~384x216?cb=1791544192283"
+                    type="image/jpeg"
+                    length="12794"
+            />
+                <pubDate>Fri, 9 Oct 2026 14:12:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_f9af1697-965a-41c1-9fbd-3326da3bd3fe</guid>
+    </item>
+		<item>
+        <title>K&#246;ssler trifft doppelt: DFB-Frauen schlagen Australien</title>
+        <category>Start in die WM-Saison</category>
+        <link>https://www.zdfheute.de/sport/fussball-frauen-laenderspiel-australien-dfb-team-wueck-karlsruhe-100.html</link>
+        <description>Dank einer &#252;berragenden ersten H&#228;lfte haben die DFB-Frauen gegen Australien gewonnen. Die Frau des Abends war Melissa K&#246;ssler.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/melissa-koessler-106~384x216?cb=1791574309597"
+                    type="image/jpeg"
+                    length="18783"
+            />
+                <pubDate>Fri, 9 Oct 2026 22:29:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_16759a95-6c2f-46b3-9add-8dcdd491c80f</guid>
+    </item>
+		<item>
+        <title>Rodel-Duo Wendl/Arlt verk&#252;ndet Karriere-Fortsetzung</title>
+        <category>Ziel ist Olympia 2030 </category>
+        <link>https://www.zdfheute.de/sport/wintersport/rodeln-doppelsitzer-tobias-wendl-tobias-arlt-karriere-fortsetzung-100.html</link>
+        <description>Es ist doch noch nicht Schluss f&#252;r Deutschlands Rodel-Top-Duo Tobias Wendl und Tobias Arlt. Die Olympiasieger haben nun verk&#252;ndet, dass sie bis Olympia 2030 weitermachen wollen.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/tobias-wendl-tobias-arlt-116~384x216?cb=1791559493790"
+                    type="image/jpeg"
+                    length="15156"
+            />
+                <pubDate>Fri, 9 Oct 2026 19:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_74cd1e63-6ee5-4b84-8516-3d071dd1e0a7</guid>
+    </item>
+		<item>
+        <title>So ist die Flugabwehr der Ukraine genau aufgebaut</title>
+        <category>Grafiken zur Verteidigung gegen Russland</category>
+        <link>https://www.zdfheute.de/politik/ausland/ukraine-krieg-russland-luftangriffe-drohnen-raketen-verteidigung-100.html</link>
+        <description>Kanonen, Drohnen, Kampfjets: Verschiedene Systeme verteidigen die Ukraine gegen russische Luftangriffe. Wie die ukrainische Flugabwehr funktioniert - ein &#220;berblick mit Grafiken.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/f-16-kampfjet-ukraine-luftverteidigung-flugabwehr-100~384x216?cb=1791540665868"
+                    type="image/jpeg"
+                    length="6727"
+            />
+                <pubDate>Fri, 9 Oct 2026 19:23:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_c48c5233-e69c-4489-9e1f-b75235dc8f36</guid>
+    </item>
+		<item>
+        <title>Aktuelles zum Krieg in der Ukraine</title>
+        <category>Politik</category>
+        <link>https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html</link>
+        <description>Seit Februar 2022 f&#252;hrt Russland einen Angriffskrieg gegen die Ukraine, die K&#228;mpfe dauern an. Alle Entwicklungen und Ukraine-News im Liveticker.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/krim-bruecke-130~384x216?cb=1782470542571"
+                    type="image/jpeg"
+                    length="14326"
+            />
+                <pubDate>Sat, 10 Oct 2026 14:40:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_02702b55-e8d7-4713-a2e1-d0cdb3974519</guid>
+    </item>
+		<item>
+        <title>Was wir von Nobelpreistr&#228;gerin Anne Carson lernen k&#246;nnen</title>
+        <category>Texte &#252;ber Begehren, Schmerz, Verlust</category>
+        <link>https://www.zdfheute.de/panorama/anne-carson-literatur-nobelpreis-100.html</link>
+        <description>Die Literaturnobelpreistr&#228;gerin Anne Carson schreibt in ihren B&#252;chern &#252;ber Verlust und Schmerz. Was k&#246;nnen wir von ihr &#252;ber den Umgang mit diesen Gef&#252;hlen lernen? Ein Gespr&#228;ch. </description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/anne-carson-110~384x216?cb=1791475530831"
+                    type="image/jpeg"
+                    length="8647"
+            />
+                <pubDate>Thu, 8 Oct 2026 16:13:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_6c81c3b0-db1b-49c0-ab64-2172551f9dfa</guid>
+    </item>
+		<item>
+        <title>Nobelpreis f&#252;r Literatur geht an Anne Carson aus Kanada</title>
+        <category>Schwedische Akademie in Stockholm</category>
+        <link>https://www.zdfheute.de/panorama/nobelpreis-literatur-anne-carson-100.html</link>
+        <description>Der Literaturnobelpreis wird in diesem Jahr an die Kanadierin Anne Carson verliehen. Sie galt schon in den vergangenen Jahren als Favoritin.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/anne-carson-100~384x216?cb=1791458301375"
+                    type="image/jpeg"
+                    length="9778"
+            />
+                <pubDate>Thu, 8 Oct 2026 14:16:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_d1db1c83-553b-4f24-9026-cdd0c71e5740</guid>
+    </item>
+		<item>
+        <title>Chemie-Nobelpreis: Forschung ebnete Weg f&#252;r Arzneimittel</title>
+        <category>Franzose und Japaner geehrt</category>
+        <link>https://www.zdfheute.de/wissen/chemie-nobelpreis-2026-kagan-soai-100.html</link>
+        <description>Entscheidende Entdeckung f&#252;r Arzneimittel: Der diesj&#228;hrige Chemie-Nobelpreis geht an den franz&#246;sischen Forscher Henri Kagan und den japanischen Chemiker Kenso Soai.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/bekanntgabe-nobelpreis-fuer-chemie-100~384x216?cb=1791369528939"
+                    type="image/jpeg"
+                    length="17806"
+            />
+                <pubDate>Wed, 7 Oct 2026 12:50:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_e9b47086-6919-4ff3-a350-925e8b8e1850</guid>
+    </item>
+		<item>
+        <title>Physik-Nobelpreis 2026 geht an Astrophysiker Francis Halzen</title>
+        <category>Auszeichnung f&#252;r Geisterteilchen</category>
+        <link>https://www.zdfheute.de/wissen/physik-nobelpreis-2026-francis-halzen-neutrinos-astrophysik-100.html</link>
+        <description>Der Physik-Nobelpreis geht an Francis Halzen. Er wird f&#252;r den Nachweis von Neutrinos - &quot;Geisterteilchen&quot; - mit dem riesigen &quot;IceCube&quot;-Detektor am S&#252;dpol geehrt.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/nobelpreis-physik-francis-halzen-100~384x216?cb=1791280893189"
+                    type="image/jpeg"
+                    length="17437"
+            />
+                <pubDate>Tue, 6 Oct 2026 13:03:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_3a4ac201-5df0-4728-8943-37fa0360cdd6</guid>
+    </item>
+		<item>
+        <title>Medizin-Nobelpreis f&#252;r Forscher aus Deutschland und den USA</title>
+        <category>Entdeckungen zur Optogenetik</category>
+        <link>https://www.zdfheute.de/wissen/medizin-nobelpreis-2026-verleihung-100.html</link>
+        <description>Der Medizin-Nobelpreis geht dieses Jahr an zwei deutsche und einen US-Forscher. Ausgezeichnet werden ihre Entdeckungen zur Optogenetik, so das Karolinska-Institut in Stockholm.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/medizin-nobelpreis-104~384x216?cb=1791193574156"
+                    type="image/jpeg"
+                    length="15280"
+            />
+                <pubDate>Mon, 5 Oct 2026 14:20:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_96972faa-167b-4901-9a44-97bcce8d1cfb</guid>
+    </item>
+		<item>
+        <title>Spionage-Verdacht: Wie sicher ist der BND?</title>
+        <category>heute journal - der Podcast</category>
+        <link>https://www.zdfheute.de/video/heute-journal/heute-journal-podcast-folge-88-bundesnachrichtendienst-skandal-100.html</link>
+        <description>Spionage-Verdacht: Wie sicher ist der BND?</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/heute-journal-der-podcast-helene-reiner-christian-sievers-keyvisual-100~384x216?cb=1758231557070"
+                    type="image/jpeg"
+                    length="14833"
+            />
+                <pubDate>Thu, 8 Oct 2026 18:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_061669dd-a82e-4414-bd00-cfd4b4b6d966</guid>
+    </item>
+		<item>
+        <title>Iran-Krieg und Nahost-Konflikt: Alle Nachrichten im Liveblog</title>
+        <category>Politik</category>
+        <link>https://www.zdfheute.de/politik/ausland/iran-israel-usa-angriff-liveblog-100.html</link>
+        <description>Die Lage in Nahost ist weiter angespannt - es kommt immer wieder zu Angriffen. Im Konflikt zwischen Iran und USA gibt es noch keine L&#246;sung. Alle Entwicklungen im Liveblog.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/beitrag-x-von-centcom-zu-angriffen-usa-auf-iran-100~384x216?cb=1788158231999"
+                    type="image/jpeg"
+                    length="10121"
+            />
+                <pubDate>Sat, 10 Oct 2026 14:37:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_858cf472-1b07-46fd-b812-8f8016d9f6c8</guid>
+    </item>
+		<item>
+        <title>Spannende Dokus rund um die Uhr</title>
+        <category>ZDFinfo im Livestream</category>
+        <link>https://www.zdfheute.de/zdfinfo-live-beitrag-102.html</link>
+        <description>Sehen Sie hier ZDFinfo im 24-Stunden-Livestream.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/2400-zdfinfo-100~384x216?cb=1742472376228"
+                    type="image/jpeg"
+                    length="5558"
+            />
+                <pubDate>Mon, 1 Dec 2025 00:00:00 +0100</pubDate>
+        <guid isPermaLink="false">SCMS_5aa02a5c-064b-4ea3-9a86-0fa367ee5bb5</guid>
+    </item>
+		<item>
+        <title>Politische Debatten und aktuelle Dokus</title>
+        <category>phoenix im Livestream</category>
+        <link>https://www.zdf.de/sender/phoenix/phoenix-live-beitrag-100.html</link>
+        <description>phoenix im Livestream rund um die Uhr.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/logo-282~384x216?cb=1784637182904"
+                    type="image/png"
+                    length="14921"
+            />
+                <pubDate>Mon, 21 Sep 2026 11:38:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_292d05da-3bab-4b95-802d-13c931638e95</guid>
+    </item>
+		<item>
+        <title>F-35A-Kampfjets: Knebeldeal f&#252;r Bundeswehr</title>
+        <category>frontal</category>
+        <link>https://www.zdf.de/video/dokus/frontal-die-doku-100/deutschlands-neuer-kampfjet-f-35-knebelvertraege-mit-usa-100</link>
+        <description>Deutschland kauft 35 neue F-35A-Kampfjets direkt bei der US-Regierung. Doch Vertragsunterlagen, die &quot;frontal&quot; und &quot;DIE ZEIT&quot; zeigen: Der Deal schafft langfristige Abh&#228;ngigkeiten von den USA.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/kampfjet-us-knebelvertrag-100~384x216?cb=1791389099089"
+                    type="image/jpeg"
+                    length="14613"
+            />
+                <pubDate>Wed, 7 Oct 2026 18:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_1ba4dfa6-c8cf-414f-99e7-93895addf49f</guid>
+    </item>
+		<item>
+        <title>Risiko Augen-OP | KI au&#223;er Kontrolle</title>
+        <category>frontal</category>
+        <link>https://www.zdf.de/video/magazine/frontal-das-magazin-100/frontal-vom-29-september-2026-100</link>
+        <description>Mit den Themen: Risiko Augen-OP | KI au&#223;er Kontrolle | Frauen in der Teilzeitfalle | Verschleppte ukrainische Kinder</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/daniel-pontzen-moderation-100~384x216?cb=1756974964075"
+                    type="image/jpeg"
+                    length="12453"
+            />
+                <pubDate>Tue, 29 Sep 2026 21:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_2328befe-27d5-46c4-a17f-e4e8134965f9</guid>
+    </item>
+		<item>
+        <title>Augen-OP: Profit auf Kosten der Patienten?</title>
+        <category>frontal</category>
+        <link>https://www.zdfheute.de/video/frontal/risiko-augenoperation-augen-op-100.html</link>
+        <description>Augenoperationen f&#252;r ein Leben ohne Brille: Was als medizinischer Fortschritt klingt, kann f&#252;r Patienten mit Risiken und Komplikationen verbunden sein.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/untersuchung-beim-augenarzt-100~384x216?cb=1790691447165"
+                    type="image/jpeg"
+                    length="11499"
+            />
+                <pubDate>Tue, 29 Sep 2026 21:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_e47090b7-f7e8-43af-a96f-32cb53698c9a</guid>
+    </item>
+		<item>
+        <title>KI au&#223;er Kontrolle</title>
+        <category>frontal</category>
+        <link>https://www.zdfheute.de/video/frontal/ki-ausser-kontrolle-102.html</link>
+        <description>KI-Systeme, die au&#223;er Kontrolle geraten: Immer wieder sorgen neue sicherheitsrelevante Vorf&#228;lle f&#252;r Schlagzeilen. Wie gef&#228;hrlich ist die Lage &#8211; und was kann auch Europa tun, um sich zu sch&#252;tzen?</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/ki-agenten-100~384x216?cb=1790695047866"
+                    type="image/jpeg"
+                    length="14229"
+            />
+                <pubDate>Tue, 29 Sep 2026 21:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_2fe13904-570b-4e58-878a-73a8d7ab01f4</guid>
+    </item>
+		<item>
+        <title>Verschleppte ukrainische Kinder</title>
+        <category>frontal</category>
+        <link>https://www.zdfheute.de/video/frontal/verschleppte-ukrainische-kinder-spurensuche-in-russland-ukraine-europa-100.html</link>
+        <description>Tausende ukrainische Kinder werden seit Beginn des russischen Angriffskriegs vermisst. Datenanalysten suchen nach ihren Spuren &#8211; in Russland, den besetzten Gebieten der Ukraine und in der EU. </description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/verschleppte-ukrainische-kinder-100~384x216?cb=1790697831430"
+                    type="image/jpeg"
+                    length="13069"
+            />
+                <pubDate>Tue, 29 Sep 2026 21:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_8802db66-e4cc-44c3-8f5d-abef1b9c0dc3</guid>
+    </item>
+		<item>
+        <title>Frauen in der Teilzeitfalle</title>
+        <category>frontal</category>
+        <link>https://www.zdfheute.de/video/frontal/frauen-in-der-teilzeitfalle-ehegattensplitting-100.html</link>
+        <description>Die Deutschen sollen mehr arbeiten, fordert der Bundeskanzler. Doch tut seine Regierung genug gegen Fehlanreize, die es insbesondere f&#252;r Frauen unattraktiv machen, ihre Arbeitszeit auszuweiten?</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/ehegattensplitting-typical-102~384x216?cb=1772982755678"
+                    type="image/jpeg"
+                    length="11961"
+            />
+                <pubDate>Tue, 29 Sep 2026 21:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_a9fc7804-aaad-4270-8a66-19b44b418dd7</guid>
+    </item>
+		<item>
+        <title>Missbrauch: Insider schockt die Techno-Szene</title>
+        <category>Die Spur</category>
+        <link>https://www.zdf.de/video/reportagen/die-spur-224/missbrauch-techno-szene-edm-dj-uebergriffe-100</link>
+        <description>Die Technoszene ist in Aufruhr: Schwere Anschuldigungen machen die Runde.
+Sexueller Missbrauch lautet der Vorwurf. Die T&#228;ter: angeblich bekannte DJs. Was ist dran an den Vorw&#252;rfen?</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/techno-spur-bild-100~384x216?cb=1790152652705"
+                    type="image/png"
+                    length="162156"
+            />
+                <pubDate>Wed, 23 Sep 2026 18:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_c421ce6d-b211-4b1d-9ec1-b7176a1adffd</guid>
+    </item>
+		<item>
+        <title>CDU-Pleite | Notaufnahmen vor dem Kollaps</title>
+        <category>frontal</category>
+        <link>https://www.zdf.de/video/magazine/frontal-das-magazin-100/frontal-vom-22-september-2026-100</link>
+        <description>Mit den Themen: CDU nach historischer Pleite | Notaufnahmen vor dem Kollaps | Deutschlands neuer Kampfjet F-35 | Berliner Linke und Antisemitismus</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/frontal-vorschaubild-sendung-ilka-brecht-100~384x216?cb=1759751592611"
+                    type="image/jpeg"
+                    length="9643"
+            />
+                <pubDate>Tue, 22 Sep 2026 21:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_240ebfce-4e08-4325-80a4-52c3a36f2aa7</guid>
+    </item>
+		<item>
+        <title>CDU nach historischer Pleite</title>
+        <category>frontal</category>
+        <link>https://www.zdfheute.de/video/frontal/cdu-pleite-wie-sich-parteibasis-von-merz-distanziert-100.html</link>
+        <description>Die CDU erlebt einen historischen Absturz: In Mecklenburg-Vorpommern scheitert die Partei erstmals bei einer Landtagswahl an der F&#252;nf-Prozent-H&#252;rde, auch in Berlin verliert sie deutlich.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/aid-image-73509438-hires-100~384x216?cb=1790091257393"
+                    type="image/jpeg"
+                    length="13032"
+            />
+                <pubDate>Tue, 22 Sep 2026 21:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_5edaec89-81a5-4689-a846-9d74efc5ca53</guid>
+    </item>
+		<item>
+        <title>Die Berliner Linke und der Antisemitismus</title>
+        <category>frontal</category>
+        <link>https://www.zdfheute.de/video/frontal/berliner-linke-und-antisemitismus-100.html</link>
+        <description>Die Berliner Linke steht nach ihrem Wahlerfolg vor einer schwierigen Debatte: Spitzenkandidatin Elif Eralp hat sich ausdr&#252;cklich zum Schutz j&#252;dischen Lebens in der Hauptstadt bekannt.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/berlin-linke-wahl-clean-100~384x216?cb=1790022495108"
+                    type="image/jpeg"
+                    length="16879"
+            />
+                <pubDate>Tue, 22 Sep 2026 21:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_7a7306a0-a1f5-453a-bee4-a3f5a878c146</guid>
+    </item>
+		<item>
+        <title>US-Beamter: Hinrichtung soll live &#252;bertragen werden</title>
+        <category>Todesstrafe in den USA</category>
+        <link>https://www.zdfheute.de/politik/ausland/usa-hinrichtung-militaer-oeffentlich-livestream-100.html</link>
+        <description>Die US-Regierung will die Hinrichtung eines Amokl&#228;ufers laut einem Pentagon-Mitarbeiter live &#252;bertragen. Laut der UN w&#228;re das eine Form von &quot;Folter&quot;.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/pete-hegseth-verteidigungsminister-usa-100~384x216?cb=1791507041530"
+                    type="image/jpeg"
+                    length="10875"
+            />
+                <pubDate>Fri, 9 Oct 2026 12:56:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_37b8773a-b3b8-4909-b181-04835b792ab1</guid>
+    </item>
+		<item>
+        <title>Mecklenburg-Vorpommern: Rot-Rot-Gr&#252;n will Regierung bilden</title>
+        <category>Koalitionsverhandlungen vereinbart</category>
+        <link>https://www.zdfheute.de/politik/deutschland/spd-linke-gruene-koalitionsverhandlungen-meckelnburg-vorpommern-100.html</link>
+        <description>SPD, Linke und Gr&#252;ne in Mecklenburg-Vorpommern haben sich auf Koalitionsverhandlungen geeinigt. Sollten sie erfolgreich verlaufen, w&#228;re die AfD alleinige Opposition im Landtag.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/manuela-schwesig-234~384x216?cb=1791558663204"
+                    type="image/jpeg"
+                    length="13592"
+            />
+                <pubDate>Fri, 9 Oct 2026 17:28:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_7d11ac83-0911-46e3-90c8-7c99c6cee72c</guid>
+    </item>
+		<item>
+        <title>Was Chinas Bikini-Stadt mit der EU zu tun hat</title>
+        <category>Handelsgespr&#228;che in Peking</category>
+        <link>https://www.zdfheute.de/politik/ausland/china-peking-eu-handelsstreit-100.html</link>
+        <description>Ein Viertel der Bademode weltweit kommt aus einer K&#252;stenstadt im Nordosten Chinas. Dort f&#252;rchten sie neue Handelsinstrumente der EU - Sorge, die deutsche Firmen in China teilen.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/china-eu-handelstreit-fahnen-100~384x216?cb=1791549471152"
+                    type="image/jpeg"
+                    length="9756"
+            />
+                <pubDate>Fri, 9 Oct 2026 14:37:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_967b96d4-e297-4cdb-bb8f-62a775e8c8f1</guid>
+    </item>
+		<item>
+        <title>Altmaier &#252;ber Schwarz-Rot: &quot;Pleiten, Pech und Pannen&quot;</title>
+        <category>Ex-Kanzleramtschef bei &quot;Lanz&quot;</category>
+        <link>https://www.zdfheute.de/politik/deutschland/lanz-ex-kanzleramtschef-altmaier-schwarz-rot-bundesregierung-merz-100.html</link>
+        <description>Die Bundesregierung habe zu viel gestritten und zu wenig beschlossen, sagt Peter Altmaier bei &quot;Markus Lanz&quot;. Der Ex-Kanzleramtschef teilt auch gegen Friedrich Merz aus.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/markus-lanz-peter-altmaier-100~384x216?cb=1791504034769"
+                    type="image/jpeg"
+                    length="15712"
+            />
+                <pubDate>Fri, 9 Oct 2026 02:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_3757e307-aa1a-4c56-a98e-2a0e8249c510</guid>
+    </item>
+		<item>
+        <title>New York: ICE-Beamter schie&#223;t bei Festnahme auf Mann</title>
+        <category>Einsatz von US-Einwanderungsbeh&#246;rde</category>
+        <link>https://www.zdfheute.de/politik/ausland/us-einwanderungsbehoerde-ice-schuesse-festnahme-new-york-100.html</link>
+        <description>Ein ICE-Beamter hat bei einem Einsatz in New York auf einen Mann geschossen. Der Vorfall l&#246;ste Proteste aus. F&#252;r B&#252;rgermeister Mamdani ist er &quot;nicht zu rechtfertigen&quot;.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/ice-schuesse-festnahme-new-york-100~384x216?cb=1791512368974"
+                    type="image/jpeg"
+                    length="19122"
+            />
+                <pubDate>Fri, 9 Oct 2026 08:59:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_3f01006d-6b72-481f-866d-ae652cf8d1c7</guid>
+    </item>
+		<item>
+        <title>Bundestag, 100. Sitzung: Aktuelle Stunde zu Sachsen-Anhalt</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5239244</link>
+        <description>Aktuelle Stunde auf Verlangen der Linksfraktion mit dem Titel  &quot;Z&#228;sur in Sachsen-Anhalt - Zusammenarbeit mit Rechtsextremen&#8220;</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-bundestag-100-sitzung-aktuelle-stunde-zu-sachsen-anhalt-5239244-100~384x216?cb=1791562132281"
+                    type="image/jpeg"
+                    length="7637"
+            />
+                <pubDate>Fri, 9 Oct 2026 16:48:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5239244</guid>
+    </item>
+		<item>
+        <title>AfD-Antrag zur Migrationspolitik</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5239226</link>
+        <description>Bundestagsdebatte zu einem AfD-Antrag mit dem Titel &quot;Ma&#223;nahmen f&#252;r eine wirkliche Migrationswende&quot;</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-afd-antrag-zur-migrationspolitik-5239226-100~384x216?cb=1791557932235"
+                    type="image/jpeg"
+                    length="9888"
+            />
+                <pubDate>Fri, 9 Oct 2026 16:17:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5239226</guid>
+    </item>
+		<item>
+        <title>85. Jahrestag des Massakers von Babyn Jar</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5239221</link>
+        <description>Debatte im Bundestag zum 85. Jahrestag des Massakers von Babyn Jar</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-85-jahrestag-des-massakers-von-babyn-jar-5239221-100~384x216?cb=1791556131961"
+                    type="image/jpeg"
+                    length="7683"
+            />
+                <pubDate>Fri, 9 Oct 2026 15:50:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5239221</guid>
+    </item>
+		<item>
+        <title>Antr&#228;ge Die Linke zur Rente</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5239214</link>
+        <description>Bundestagsdebatte zur Rentenpolitik</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-antraege-die-linke-zur-rente-5239214-100~384x216?cb=1791554332276"
+                    type="image/jpeg"
+                    length="10473"
+            />
+                <pubDate>Fri, 9 Oct 2026 15:46:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5239214</guid>
+    </item>
+		<item>
+        <title>Debatte zur St&#228;rkung der Zollverwaltung</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5239194</link>
+        <description>Bundestagsdebatte zur St&#228;rkung der Zollverwaltung</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-debatte-zur-staerkung-der-zollverwaltung-5239194-100~384x216?cb=1791551932366"
+                    type="image/jpeg"
+                    length="9689"
+            />
+                <pubDate>Fri, 9 Oct 2026 15:06:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5239194</guid>
+    </item>
+		<item>
+        <title>Bekanntgabe Friedensnobelpreis</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/friedensnobelpreis-a-5239136.html</link>
+        <description>Oslo: Bekanntgabe des diesj&#228;hrigen Friedensnobelpreises</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-bekanntgabe-friedensnobelpreis-5239147-100~384x216?cb=1791541132243"
+                    type="image/jpeg"
+                    length="13748"
+            />
+                <pubDate>Fri, 9 Oct 2026 11:51:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5239147</guid>
+    </item>
+		<item>
+        <title>Debatte zur &#196;nderung des Telekommunikationsgesetzes</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5239138</link>
+        <description>Bundestagsdebatte zur &#196;nderung des Telekommunikationsgesetzes</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-debatte-zur-aenderung-des-telekommunikationsgesetzes-5239138-100~384x216?cb=1791536932247"
+                    type="image/jpeg"
+                    length="9929"
+            />
+                <pubDate>Fri, 9 Oct 2026 10:48:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5239138</guid>
+    </item>
+		<item>
+        <title>Startchancengesetz f&#252;r Kitas: &quot;Mittel vom Bund werden halbiert&quot;</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/sendungen/ereignisse/phoenix-vor-ort/ua-bundestag-live-a-5230340.html</link>
+        <description>phoenix bundestagsgespr&#228;ch mit Heidi Reichinnek (Fraktionsvorsitzende Die Linke) und&#160;Jasmina Hostert (SPD, familienpolitische Sprecherin)&#160;zum Startchancen- und Qualit&#228;tsentwicklungsgesetz.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-startchancengesetz-fuer-kitas-mittel-vom-bund-werden-halbiert-5239089-100~384x216?cb=1791532732335"
+                    type="image/jpeg"
+                    length="13539"
+            />
+                <pubDate>Fri, 9 Oct 2026 09:19:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5239089</guid>
+    </item>
+		<item>
+        <title>Bundestag: Bericht der Ostbeauftragten</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/sendungen/ereignisse/phoenix-vor-ort/ua-pressekonferenz-und-tr-a-5238687.html</link>
+        <description>Bericht &#8222;In Bewegung bleiben&#8220; der Beauftragten der Bundesregierung f&#252;r Ostdeutschland 2026, Elisabeth Kaiser (SPD)</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-bundestag-bericht-der-ostbeauftragten-5238989-100~384x216?cb=1791476340543"
+                    type="image/jpeg"
+                    length="9560"
+            />
+                <pubDate>Thu, 8 Oct 2026 17:13:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238989</guid>
+    </item>
+		<item>
+        <title>Aktuelle Stunde: Wirtschaftsprognosen 2027</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/sendungen/ereignisse/phoenix-vor-ort/ua-pressekonferenz-und-tr-a-5238687.html</link>
+        <description>Deutscher Bundestag: Aktuelle Stunde zu &quot;Wirtschaftsprognosen 2027&quot; mit Bundeswirtschaftsministerin Katherina Reiche (CDU)</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-aktuelle-stunde-wirtschaftsprognosen-2027-5238988-100~384x216?cb=1791476332218"
+                    type="image/jpeg"
+                    length="8503"
+            />
+                <pubDate>Thu, 8 Oct 2026 17:11:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238988</guid>
+    </item>
+		<item>
+        <title>Sondierungen in Berlin: PK nach ersten Gespr&#228;chen</title>
+        <category>phoenix vor ort</category>
+        <link>https://www.phoenix.de/berliner-abgeordnetenhaus-a-5238924.html</link>
+        <description>Linke, Gr&#252;ne und SPD in Berlin haben sich nach ihren Vorgespr&#228;chen auf die Aufnahme offizieller Sondierungsgespr&#228;che verst&#228;ndigt. Die Spitzen der drei Parteien informieren in ihrer PK am 08.10.2026.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-sondierungen-in-berlin-pk-nach-ersten-gespraechen-5238966-100~384x216?cb=1791472180379"
+                    type="image/jpeg"
+                    length="14379"
+            />
+                <pubDate>Thu, 8 Oct 2026 14:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238966</guid>
+    </item>
+		<item>
+        <title>Bundestag: Debatte zu linksextremer Gewalt und Besch&#228;digung kritischer Infrastruktur</title>
+        <category>phoenix vor ort</category>
+        <link>https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5238959</link>
+        <description>Debatte &#252;ber zwei Antr&#228;ge der AfD-Fraktion: &#8222;24 Ma&#223;nahmen gegen linksextremistische Gewalt&quot; und &#8222;Sachbesch&#228;digungen von kritischen Infrastrukturen (KRITIS)&#8220;.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-bundestag-debatte-zu-linksextremer-gewalt-und-beschaedigung-kritischer-infrastruktur-5238959-100~384x216?cb=1791472176151"
+                    type="image/jpeg"
+                    length="8745"
+            />
+                <pubDate>Thu, 8 Oct 2026 12:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238959</guid>
+    </item>
+		<item>
+        <title>&#8222;Unser Plan f&#252;r Deutschland&#8220;: Vorstellung des Leitantrages von B&#8217;90/Gr&#252;ne</title>
+        <category>phoenix vor ort</category>
+        <link>https://www.phoenix.de/sendungen/ereignisse/phoenix-vor-ort/ua-bundestag-live-a-5230280.html</link>
+        <description>Vorstellung des Leitantrages &#8222;Unser Plan f&#252;r Deutschland&#8220; mit Franziska Brantner (Bundesvorsitzende) und Felix Banaszak (Bundesvorsitzender) von B&#252;ndnis &apos;90/ Die Gr&#252;nen</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-unser-plan-fuer-deutschland-vorstellung-des-leitantrages-von-b90gruene-5238927-100~384x216?cb=1791470932831"
+                    type="image/jpeg"
+                    length="10880"
+            />
+                <pubDate>Thu, 8 Oct 2026 11:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238927</guid>
+    </item>
+		<item>
+        <title>Bundeswirtschaftsministerin Katherina Reiche (CDU) stellt Herbstprojektion 2026 vor</title>
+        <category>phoenix vor ort</category>
+        <link>https://www.phoenix.de/herbstprojektion-2026-a-5238876.html</link>
+        <description>Vorstellung der &quot;Herbstprojektion 2026 der Bundesregierung&quot; mit Bundeswirtschaftsministerin Katherina Reiche (CDU) und Dr. Benjamin Weigert, Abteilungsleiter Wirtschaft</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-bundeswirtschaftsministerin-katherina-reiche-cdu-stellt-herbstprojektion-2026-vor-5238949-100~384x216?cb=1791472165745"
+                    type="image/jpeg"
+                    length="8844"
+            />
+                <pubDate>Thu, 8 Oct 2026 11:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238949</guid>
+    </item>
+		<item>
+        <title>Bundestag: Gesetzentw&#252;rfe und Antr&#228;ge zum Steuersystem</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5238887</link>
+        <description>Steuerpolitik steht im Mittelpunkt dieser Bundestagsdebatte. Im Anschluss an die einst&#252;ndige Aussprache soll &#252;ber vier Antr&#228;ge und drei Gesetzentw&#252;rfe der Fraktion B&apos;90/Gr&#252;ne und &#252;ber einen Antrag der Fraktion Die Linke abgestimmt werden.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-bundestag-gesetzentwuerfe-und-antraege-zum-steuersystem-5238887-100~384x216?cb=1791472145091"
+                    type="image/jpeg"
+                    length="8975"
+            />
+                <pubDate>Thu, 8 Oct 2026 10:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238887</guid>
+    </item>
+		<item>
+        <title>Bundestag: Vereinbarte Debatte zu  &#8222;Nachhaltigkeit und Zukunftsfragen&#8220;</title>
+        <category>phoenix vor ort</category>
+        <link>https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5238938</link>
+        <description>Der Bundestag befasst sich in dieser zweist&#252;ndigen Vereinbarten Debatte mit dem Thema &#8222;Nachhaltigkeit und Zukunftsfragen&#8220;.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-bundestag-vereinbarte-debatte-zu--nachhaltigkeit-und-zukunftsfragen-5238938-100~384x216?cb=1791472157926"
+                    type="image/jpeg"
+                    length="8685"
+            />
+                <pubDate>Thu, 8 Oct 2026 10:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238938</guid>
+    </item>
+		<item>
+        <title>Bundestag: Debatte zur Reform des Einkommensteuergesetzes</title>
+        <category>phoenix vor ort</category>
+        <link>https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5238873</link>
+        <description>Der Bundestag hat am Donnerstag, 8. Oktober 2026, in erster Lesung die Entw&#252;rfe der Bundesregierung f&#252;r ein Einkommensteuerreformgesetz 2027 und f&#252;r ein Jahressteuergesetz 2027 beraten.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-bundestag-debatte-zur-reform-des-einkommensteuergesetzes-5238873-100~384x216?cb=1791472131824"
+                    type="image/jpeg"
+                    length="9985"
+            />
+                <pubDate>Thu, 8 Oct 2026 09:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238873</guid>
+    </item>
+		<item>
+        <title>Jahresbericht des Nationalen Normenkontrollrates zum B&#252;rokratieabbau, u.a. mit Karsten Wildberger (CDU)</title>
+        <category>phoenix vor ort</category>
+        <link>https://www.phoenix.de/sendungen/ereignisse/phoenix-vor-ort/ua-bundestag-live-a-5230280.html</link>
+        <description>Jahresbericht des Nationalen Normenkontrollrates (NKR), mit Karsten Wildberger, CDU, Bundesminister f&#252;r Digitalisierung und Staatsmodernisierung, Lutz Goebel, Vorsitzender, und Prof. Sabine Kuhlmann, Stellvertretende Vorsitzende des NKR</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-jahresbericht-des-nationalen-normenkontrollrates-zum-buerokratieabbau-ua-mit-karsten-wildberger-cdu-5238906-100~384x216?cb=1791459672466"
+                    type="image/jpeg"
+                    length="10877"
+            />
+                <pubDate>Thu, 8 Oct 2026 09:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238906</guid>
+    </item>
+		<item>
+        <title>Bundestag: Drei Jahre nach dem terroristischen &#220;berfall der Hamas auf Israel</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/sendungen/ereignisse/phoenix-vor-ort/ua-98-sitzung-des-deutsch-a-5230138.html</link>
+        <description>Debatte im Bundestag zum Gedenktag an den terroristischen &#220;berfall der Hamas auf Israel am 7. Oktober.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-bundestag-drei-jahre-nach-dem-terroristischen-ueberfall-der-hamas-auf-israel-5238753-100~384x216?cb=1791405532200"
+                    type="image/jpeg"
+                    length="8282"
+            />
+                <pubDate>Wed, 7 Oct 2026 22:11:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238753</guid>
+    </item>
+		<item>
+        <title>Befragung der Minister:innen Reiche und Bilger</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5238713</link>
+        <description>Befragung der Bundesregierung im Bundestag - diesmal stellen sich Wirtschaftsministerin Katherina Reiche (CDU) und Verkehrsminister Steffen Bilger (CDU) den Fragen der Abgeordneten</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-befragung-der-ministerinnen-reiche-und-bilger-5238713-100~384x216?cb=1791385749042"
+                    type="image/jpeg"
+                    length="13523"
+            />
+                <pubDate>Wed, 7 Oct 2026 16:54:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238713</guid>
+    </item>
+		<item>
+        <title>Bilanz &quot;Ein Jahr Staatsmodernisierung&quot;</title>
+        <category>phoenix vor ort</category>
+        <link>https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5238700</link>
+        <description>Statement von Karsten Wildberger (CDU, Bundesdigitalminister)  anl&#228;sslich des Berichts zu &quot;Ein Jahr Staatsmodernisierung&quot;,</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-bilanz-ein-jahr-staatsmodernisierung-5238700-100~384x216?cb=1791381544511"
+                    type="image/jpeg"
+                    length="10862"
+            />
+                <pubDate>Wed, 7 Oct 2026 15:41:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238700</guid>
+    </item>
+		<item>
+        <title>Kabinettsbeschluss zur Bek&#228;mpfung digitaler Gewalt</title>
+        <category>phoenix vor ort</category>
+        <link>https://www.phoenix.de/nach-kabinettssitzung-a-5238495.html</link>
+        <description>Kabinettsbeschluss zur st&#228;rkeren Bek&#228;mpfung sexueller Gewalt: Pressestatement von Justizministerin Stefanie Hubig (SPD)</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-kabinettsbeschluss-zur-bekaempfung-digitaler-gewalt-5238698-100~384x216?cb=1791381531980"
+                    type="image/jpeg"
+                    length="6485"
+            />
+                <pubDate>Wed, 7 Oct 2026 15:26:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238698</guid>
+    </item>
+		<item>
+        <title>Berlin: Zentrale Gedenkveranstaltung zum 07. Oktober</title>
+        <category>phoenix vor ort</category>
+        <link>https://www.phoenix.de/3-jahrestag-des-hamas-ebe-a-5238660.html</link>
+        <description>Ausschnitte aus der Zentralen Gedenkveranstaltung in Berlin, u.a. mit Ron Prosor (Israelischer Botschafter in Deutschland) und Alexander Dobrindt (Bundesinnenmininster, CSU) in phoenix vor ort am 07.10.2026</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-berlin-zentrale-gedenkveranstaltung-zum-07-oktober-5238820-100~384x216?cb=1791446932669"
+                    type="image/jpeg"
+                    length="14616"
+            />
+                <pubDate>Wed, 7 Oct 2026 15:00:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238820</guid>
+    </item>
+		<item>
+        <title>Pistorius: &quot;Einzigartiger Tabubruch der parlamentarischen Demokratie&quot;</title>
+        <category>phoenix vor ort</category>
+        <link>https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5238697</link>
+        <description>Berlin: Ansprache von Verteidigungsminister Boris Pistorius (SPD) nach spontanem Protestmarsch der SPD-Fraktion (06.10.26) zur konstituierenden Sitzung im Landtag von Sachsen-Anhalt</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-pistorius-einzigartiger-tabubruch-der-parlamentarischen-demokratie-5238697-100~384x216?cb=1791380343974"
+                    type="image/jpeg"
+                    length="15299"
+            />
+                <pubDate>Wed, 7 Oct 2026 14:53:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238697</guid>
+    </item>
+		<item>
+        <title>EU-Parlament zum Haushalt &amp; zu Lebenshaltungskosten</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5238650</link>
+        <description>Debatten im EU-Parlament zum mehrj&#228;hrigen Finanzrehmwen 2028-34 und zur Unterst&#252;tzung bei Krise der Lebenshaltungskosten</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-eu-parlament-zum-haushalt--zu-lebenshaltungskosten-5238650-100~384x216?cb=1791369532278"
+                    type="image/jpeg"
+                    length="9322"
+            />
+                <pubDate>Wed, 7 Oct 2026 12:17:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238650</guid>
+    </item>
+		<item>
+        <title>europatalk zum EU-Haushalt</title>
+        <category>phoenix parlament</category>
+        <link>https://www.phoenix.de/europatalk-a-5238454.html</link>
+        <description>phoenix europatalk mit Matthias Ecke (S&amp;D) und Rasmus Andresen (European Greens) vor der Aussprache zum mehrj&#228;hrigen Finanzrahmen 2028-2034</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/teaser-phoenix-europatalk-zum-eu-haushalt-5238601-100~384x216?cb=1791359335216"
+                    type="image/jpeg"
+                    length="17464"
+            />
+                <pubDate>Wed, 7 Oct 2026 09:33:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_phoenix_video_phoenix_5238601</guid>
+    </item>
+		<item>
+        <title>Elon Musk schickt Telekom-Aktien auf Talfahrt</title>
+        <category>Starlink-Mobilfunk aus dem All</category>
+        <link>https://www.zdfheute.de/wirtschaft/unternehmen/musk-mobilfunk-spacex-telekom-100.html</link>
+        <description>Mit Starlink will SpaceX k&#252;nftig Mobilfunk direkt aus dem All anbieten. An der B&#246;rse sorgt das f&#252;r Unruhe: Telekom-Aktien st&#252;rzen ab.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/elon-musk-304~384x216?cb=1791542248209"
+                    type="image/jpeg"
+                    length="10257"
+            />
+                <pubDate>Fri, 9 Oct 2026 12:41:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_4a9c1526-2968-4152-a733-ba424392608b</guid>
+    </item>
+		<item>
+        <title>EZB-Plattform Pontes: Digitales Wertpapier trifft auf Geld</title>
+        <category>EZB baut die Br&#252;cke zur &quot;B&#246;rse f&#252;r alle&quot;</category>
+        <link>https://www.zdfheute.de/wirtschaft/ezb-pontes-finanzmarkt-boerse-blockchain-wertpapier-euro-100.html</link>
+        <description>Tokenisierung macht aus Verm&#246;genswerten digitale Wertpapiere. Nun schafft die EZB mit &quot;Pontes&quot; die Verbindung zum klassischen Zentralbankgeld. Ein wichtiger Schritt.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/europaeische-zentralbank-in-frankfurt-100~384x216?cb=1791462006850"
+                    type="image/jpeg"
+                    length="12722"
+            />
+                <pubDate>Fri, 9 Oct 2026 19:58:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_c39ff8c7-6360-4c85-8b91-68bc17a6cca3</guid>
+    </item>
+		<item>
+        <title>Deutsche Bahn verschiebt zahlreiche Strecken-Sanierungen</title>
+        <category>Wichtige Verbindungen betroffen</category>
+        <link>https://www.zdfheute.de/wirtschaft/bahn-sanierung-strecken-2031-100.html</link>
+        <description>Die Deutsche Bahn kippt ihren Zeitplan: Bis 2031 werden deutlich weniger wichtige Strecken erneuert als bisher vorgesehen. Welche Zugverbindungen das betrifft.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/db-ice-100~384x216?cb=1791551632027"
+                    type="image/jpeg"
+                    length="28568"
+            />
+                <pubDate>Fri, 9 Oct 2026 16:16:00 +0200</pubDate>
+        <guid isPermaLink="false">SCMS_0d8408d0-27ca-4be1-9d54-21e1d38b677d</guid>
+    </item>
+		<item>
+        <title>Bundesregierung hebt Wachstumsprognose an</title>
+        <category>2026 Wachstum von 1,3 Prozent erwartet</category>
+        <link>https://www.zdfheute.de/politik/deutschland/wirtschaft-prognose-bundesregierung-wachstum-100.html</link>
+        <description>&quot;Die deutsche Wirtschaft befindet sich auf Wachstumskurs&quot;: Das Wirtschaftsministerium von Katherina Reiche erwartet mehr Wachstum und korrigiert seine Prognosen nach oben.</description>
+                    <enclosure
+                    url="https://www.zdfheute.de/assets/katherina-reiche-140~384x216?cb=179145534

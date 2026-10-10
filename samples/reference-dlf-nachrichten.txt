@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Deutschlandfunk - Fortlaufende Nachrichten vom 10. Oktober 2026</title>
+    <link>https://www.deutschlandfunk.de/nachrichten-index-40304.html</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://www.deutschlandfunk.de/nachrichten-index-40304.rss" />
+    <description>></description>
+    <category>Info</category>
+    <copyright>Deutschlandradio - deutschlandradio.de</copyright>
+    <ttl>60</ttl>
+    <language>de-DE</language>
+    <pubDate>Sat, 10 Oct 2026 14:42:02 +0200</pubDate>
+    <lastBuildDate>Sat, 10 Oct 2026 14:42:02 +0200</lastBuildDate>
+    <image>
+      <url>https://bilder.deutschlandfunk.de/FI/LE/_c/d7/FILE_cd7fe2b3d944a65650ee9b89d0df82ea/dlf-die-nachrichten-cover-100-1920x1920.jpg</url>
+      <title>Deutschlandfunk - Fortlaufende Nachrichten vom 10. Oktober 2026</title>
+      <link>https://www.deutschlandfunk.de/nachrichten-index-40304.html</link>
+    </image> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791629472852-132105%22%7D%7D-->
+    <item>
+  <title>Internationaler Strafgerichtshof - EU fordert USA auf, neu verhängte Sanktionen rückgängig zu machen</title>
+  <link>https://www.deutschlandfunk.de/eu-fordert-usa-auf-neu-verhaengte-sanktionen-rueckgaengig-zu-machen-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/NO/VA/_e/93/NOVA_e93d1d7a1e86ebfdd934b486e9bff46c/craft-12561150-asset-100-1920x1920.jpg" alt="Internationaler Strafgerichtshof IStGH, International Criminal Court ICC, Cour penale internationale CPI, Den Haag, The Hague, Niederlande, The Netherlands" title="Internationaler Strafgerichtshof IStGH, International Criminal Court ICC, Cour penale internationale CPI, Den Haag, The Hague, Niederlande, The Netherlands" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Die EU-Außenbeauftragte Kallas hat die USA aufgefordert, die neu gegen den Internationalen Strafgerichtshof verhängten Sanktionen zurückzunehmen. Die Europäische Union bekräftige ihr Bekenntnis zur regelbasierten internationalen Ordnung, deren grundlegender Teil der IStGH sei und auf der Achtung des Völkerrechts beruhe, heißt es in einer vom EU-Rat veröffentlichen Erklärung.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">eu-fordert-usa-auf-neu-verhaengte-sanktionen-rueckgaengig-zu-machen-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791629463064-609500%22%7D%7D-->
+    <item>
+  <title>Ukraine-Krieg - Deutsche Regierung bekräftigt nach USA-Russland-Deal Unterstützung für Ukraine</title>
+  <link>https://www.deutschlandfunk.de/deutsche-regierung-bekraeftigt-nach-usa-russland-deal-unterstuetzung-fuer-ukraine-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/NO/VA/_7/bb/NOVA_7bbf631b31ade2b14595d173891df372/craft-13304782-asset-100-1920x1920.jpg" alt="US-Präsident Donald Trump begrüßt am 15.08.2025 den russischen Präsidenten Wladimir Putin auf dem Rollfeld, nachdem sie zur Teilnahme an einem Treffen auf der Joint Base Elmendorf-Richardson in Anchorage, Alaska (USA), eingetroffen ist." title="US-Präsident Donald Trump begrüßt am 15.08.2025 den russischen Präsidenten Wladimir Putin auf dem Rollfeld, nachdem sie zur Teilnahme an einem Treffen auf der Joint Base Elmendorf-Richardson in Anchorage, Alaska (USA), eingetroffen ist." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Nach der Vereinbarung zwischen den USA und Russland über Diesel-Lieferungen hat Deutschland seine Unterstützung für die Ukraine bekräftigt.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">deutsche-regierung-bekraeftigt-nach-usa-russland-deal-unterstuetzung-fuer-ukraine-102</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791626142660-341547%22%7D%7D-->
+    <item>
+  <title>EU-Haushalt - Irische Ratspräsidentschaft macht neuen Etat-Vorschlag</title>
+  <link>https://www.deutschlandfunk.de/irische-ratspraesidentschaft-macht-neuen-etat-vorschlag-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/FI/LE/_4/3a/FILE_43a712db3f76953946bce43f29a211ad/000-par7099108-jpg-100-768x768.jpg" alt="Euro-Münzen liegen auf einer EU-Flagge" title="Euro-Münzen liegen auf einer EU-Flagge" width="768" height="768" border="0" align="left" hspace="4" vspace="4"/>Für den künftigen EU-Etat gibt es einen neuen Verhandlungsvorschlag. Er stammt von der irischen Ratspräsidentschaft und sieht vor, das von der Europäischen Kommission vorgelegte Konzept um rund 159 Milliarden Euro zu kürzen.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">irische-ratspraesidentschaft-macht-neuen-etat-vorschlag-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791633267486-888779%22%7D%7D-->
+    <item>
+  <title>Online-Abstimmung - &quot;Ragebait&quot; ist das Jugendwort des Jahres 2026</title>
+  <link>https://www.deutschlandfunk.de/ragebait-ist-das-jugendwort-des-jahres-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/30/ca/b9/cc/30cab9cc-adf6-4d9e-961f-e36068847c2c/jugendwort-des-jahres-112-1920x1920.jpg" alt="&quot;Jugendwort des Jahres&quot; steht in weiß auf bunt gezogenen Linien." title="&quot;Jugendwort des Jahres&quot; steht in weiß auf bunt gezogenen Linien." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>"Ragebait" ist das Jugendwort des Jahres 2026.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">ragebait-ist-das-jugendwort-des-jahres-102</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791579004777-556607%22%7D%7D-->
+    <item>
+  <title>Vereinbarung mit Putin - &quot;Zeichen der Schwäche&quot; - Selenskyj kritisiert US-Deal zu russischem Diesel - Lob von Weidel</title>
+  <link>https://www.deutschlandfunk.de/zeichen-der-schwaeche-selenskyj-kritisiert-us-deal-zu-russischem-diesel-lob-von-weidel-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/ea/47/70/80/ea477080-675a-423f-9bc4-c4d7282e425c/623207074-100-1920x1920.jpg" alt="Der Präsident der Ukraine, Wolodymyr Selenskyj im Porträt." title="Der Präsident der Ukraine, Wolodymyr Selenskyj im Porträt." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Der ukrainische Präsident Selenskyj hat die Vereinbarung der USA mit Russland zur Lieferung von Diesel kritisiert. Das sei eine Investition in den Krieg gegen die Ukraine. Selenskyj sprach von einem Zeichen der offensichtlichen Schwäche. Russland werde die Vereinigten Staaten noch weniger ernst nehmen.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">zeichen-der-schwaeche-selenskyj-kritisiert-us-deal-zu-russischem-diesel-lob-von-weidel-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791619186935-466932%22%7D%7D-->
+    <item>
+  <title>Lebensmittelchemiker - Bundesverband warnt vor Kontrolllücken bei Restaurants, Imbissen und Cafés</title>
+  <link>https://www.deutschlandfunk.de/bundesverband-warnt-vor-kontrollluecken-bei-restaurants-imbissen-und-caf-s-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/84/ab/47/5b/84ab475b-421a-4003-b583-10d3eeb4b886/hygiene-kontrolle-imbiss-100-1920x1920.jpg" alt="Ein Kotrolleur überprüft eine Dunstabzugshaube über einem Dönerspieß" title="Ein Kotrolleur überprüft eine Dunstabzugshaube über einem Dönerspieß" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Wegen Sparmaßnahmen und Haushaltsproblemen in vielen Landkreisen drohen Restaurants und Cafés seltener und schlechter auf Hygiene und Sicherheit kontrolliert zu werden.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">bundesverband-warnt-vor-kontrollluecken-bei-restaurants-imbissen-und-caf-s-102</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791623287108-70702%22%7D%7D-->
+    <item>
+  <title>Wirtschaftspolitik - China: Zentralkomitee der Kommunistischen Partei und Staatsrat veröffentlichen Leitlinien zur Entwicklung von Spitzentechnologie</title>
+  <link>https://www.deutschlandfunk.de/china-zentralkomitee-der-kommunistischen-partei-und-staatsrat-veroeffentlichen-leitlinien-zur-entwic-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/NO/VA/_1/da/NOVA_1da788a0485b9ae70338e2b6d75c44b5/craft-13026951-asset-100-1920x1920.jpg" alt="Ein Roboter der chinesischen Smartphone-Marke Honor läuft bei einem Halbmarathon in Peking ins Ziel und gewinnt" title="Ein Roboter der chinesischen Smartphone-Marke Honor läuft bei einem Halbmarathon in Peking ins Ziel und gewinnt" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>In China haben das Zentralkomitee der Kommunistischen Partei und der Staatsrat Leitlinien zur Entwicklung von Spitzentechnologie veröffentlicht.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">china-zentralkomitee-der-kommunistischen-partei-und-staatsrat-veroeffentlichen-leitlinien-zur-entwic-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791619188859-399021%22%7D%7D-->
+    <item>
+  <title>Finanzen - Ökonomen fordern Reform der Erbschaftssteuer</title>
+  <link>https://www.deutschlandfunk.de/oekonomen-fordern-reform-der-erbschaftssteuer-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/2b/90/af/95/2b90af95-168b-4f4e-a5e4-c0131d6d44f8/clemens-fuest-106-1920x1920.jpg" alt="Prof. Dr. Clemens Fuest, Präsident des ifo Instituts" title="Prof. Dr. Clemens Fuest, Präsident des ifo Instituts" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Der Präsident des Münchner Ifo-Instituts, Fuest, hält die geltenden Sonderregeln für Unternehmer bei der Erbschaftssteuer für nicht mehr zeitgemäß.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">oekonomen-fordern-reform-der-erbschaftssteuer-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791630022846-870780%22%7D%7D-->
+    <item>
+  <title>Formel-1-Sprintrennen - Verstappen gewinnt in Singapur</title>
+  <link>https://www.deutschlandfunk.de/verstappen-gewinnt-in-singapur-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/e4/34/99/ad/e43499ad-c5cc-422d-9dfb-67af2ea9bb83/formel-1-104-1920x1920.jpg" alt="Der niederländische Formel1-Rennfahrer Max Verstappen während des Sprintrennens Singapur." title="Der niederländische Formel1-Rennfahrer Max Verstappen während des Sprintrennens Singapur." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Das Formel-1-Sprintrennen in Singapur hat Max Verstappen gewonnen<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">verstappen-gewinnt-in-singapur-102</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791625444854-628843%22%7D%7D-->
+    <item>
+  <title>Mittelamerika - Verletzte und beschädigte Infrastruktur nach schwerem Erdbeben in Panama</title>
+  <link>https://www.deutschlandfunk.de/verletzte-und-beschaedigte-infrastruktur-nach-schwerem-erdbeben-in-panama-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/74/4b/16/df/744b16df-9e18-4e16-a5c0-8ab4280feaa2/panamaerdbeben-100-1920x1920.jpg" alt="Das Santo-Tomas-Krankenhauses in Panama-Stadt." title="Das Santo-Tomas-Krankenhauses in Panama-Stadt." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>In Panama hat ein Erdbeben der Stärke 7,7 schwere Schäden angerichtet und Panik ausgelöst.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">verletzte-und-beschaedigte-infrastruktur-nach-schwerem-erdbeben-in-panama-102</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791624510143-686424%22%7D%7D-->
+    <item>
+  <title>Neu Delhi - Polizei stoppt Proteste in Indien - auch Gründer von Kakerlaken-Bewegung &quot;CJP&quot; festgenommen</title>
+  <link>https://www.deutschlandfunk.de/polizei-stoppt-proteste-in-indien-auch-gruender-von-kakerlaken-bewegung-cjp-festgenommen-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/86/76/74/b0/867674b0-c6c5-4b26-9056-59d25f991798/neu-delhi-proteste-kakerlaken-cjp-100-1920x1920.jpg" alt="Polizeikräfte nehmen in Neu-Delhi eine Anhängerin der „Cockroach Janata Party“ (CJP) fest. Die Demonstrantin wird von mehreren uniformierten Polizistinnen getragen." title="Polizeikräfte nehmen in Neu-Delhi eine Anhängerin der „Cockroach Janata Party“ (CJP) fest. Die Demonstrantin wird von mehreren uniformierten Polizistinnen getragen." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>In der indischen Hauptstadt Neu-Delhi hat die Polizei regierungskritische Proteste gestoppt.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">polizei-stoppt-proteste-in-indien-auch-gruender-von-kakerlaken-bewegung-cjp-festgenommen-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791614398332-204875%22%7D%7D-->
+    <item>
+  <title>Navi Pillay - Friedensnobelpreisträgerin schockiert von neuen US-Sanktionen gegen Strafgerichtshof - Trump nennt Preisvergabe &quot;schändlich&quot;</title>
+  <link>https://www.deutschlandfunk.de/friedensnobelpreistraegerin-schockiert-von-neuen-us-sanktionen-gegen-strafgerichtshof-trump-nennt-pr-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/bb/1c/50/b9/bb1c50b9-5373-4947-b24b-76c4d3c48d71/navanethem-pillay-100-1920x1920.jpg" alt="Navanethem Pillay steht gestikulierend vor dem Emblem der UNO" title="Navanethem Pillay steht gestikulierend vor dem Emblem der UNO" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Die neue Friedensnobelpreisträgerin Navanethem Pillay hat sich schockiert über die gestern verschärften US-Sanktionen gegen den Internationalen Strafgerichtshof in Den Haag geäußert. Besonders schlimm sei, dass Richter wegen ihrer gerichtlichen Anordnungen sanktioniert würden, sagte Pillay im ARD-Fernsehen. <br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">friedensnobelpreistraegerin-schockiert-von-neuen-us-sanktionen-gegen-strafgerichtshof-trump-nennt-pr-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791615307181-169673%22%7D%7D-->
+    <item>
+  <title>Wirtschaft - CDU‑Außenpolitiker Volkmann rät EU zu Handelsschutzinstrumenten gegen unfairen Wettbewerb aus China</title>
+  <link>https://www.deutschlandfunk.de/cdu-aussenpolitiker-volkmann-raet-eu-zu-handelsschutzinstrumenten-gegen-unfairen-wettbewerb-aus-chin-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/19/fc/72/aa/19fc72aa-2db6-415c-85c5-e03942e8a004/volkmann-cdu-100-1920x1920.jpg" alt="Johannes Volkmann (CDU) spricht in der Aktuellen Stunde im Plenarsaal im Bundestag und gestikuliert." title="Johannes Volkmann (CDU) spricht in der Aktuellen Stunde im Plenarsaal im Bundestag und gestikuliert." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Angesichts des steigenden EU-Handelsbilanzdefizits mit China zeigt sich der CDU-Außenpolitiker Volkmann offen für Ausgleichszölle.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">cdu-aussenpolitiker-volkmann-raet-eu-zu-handelsschutzinstrumenten-gegen-unfairen-wettbewerb-aus-chin-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791609511898-914252%22%7D%7D-->
+    <item>
+  <title>Bundeshaushalt - SPD-Co-Vorsitzende in NRW kritisiert geplante Wohngeld-Kürzungen ihrer Parteikollegin</title>
+  <link>https://www.deutschlandfunk.de/spd-co-vorsitzende-in-nrw-kritisiert-geplante-wohngeld-kuerzungen-ihrer-parteikollegin-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/6d/e7/09/2b/6de7092b-ac3d-43ef-810f-ea641048a196/sarah-philipp-spd-nrw-100-1920x1920.jpg" alt="Sarah Philipp, Co-Vorsitzende der SPD Nordrhein-Westfalen, spricht bei der Landesdelegiertenkonferenz der SPD Nordrhein-Westfalen. Die NRW SPD will bei der Delegiertenkonferenz den Spitzenkandidaten für die Landtagswahl 2027 küren." title="Sarah Philipp, Co-Vorsitzende der SPD Nordrhein-Westfalen, spricht bei der Landesdelegiertenkonferenz der SPD Nordrhein-Westfalen. Die NRW SPD will bei der Delegiertenkonferenz den Spitzenkandidaten für die Landtagswahl 2027 küren." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Die Vorsitzende der SPD in Nordrhein-Westfalen, Philipp, hat die Kürzungspläne der schwarz-roten Bundesregierung beim Wohngeld kritisiert.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">spd-co-vorsitzende-in-nrw-kritisiert-geplante-wohngeld-kuerzungen-ihrer-parteikollegin-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791606631443-770121%22%7D%7D-->
+    <item>
+  <title>Sachsen-Anhalt - CDU-Abgeordnete haben offenbar über ihre Landtagspräsidentenwahl gelogen</title>
+  <link>https://www.deutschlandfunk.de/cdu-abgeordnete-haben-offenbar-ueber-ihre-landtagspraesidentenwahl-gelogen-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/82/99/0b/27/82990b27-267f-4cc7-8396-4068590de119/landtag-sachsen-anhalt-magdeburg-102-1920x1920.jpg" alt="Sachsen-Anhalt, Magdeburg: Blick in den Landtag vor der konstituierenden Sitzung des Landtags von Sachsen-Anhalt." title="Sachsen-Anhalt, Magdeburg: Blick in den Landtag vor der konstituierenden Sitzung des Landtags von Sachsen-Anhalt." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Mindestens drei CDU-Abgeordnete im Landtag von Sachsen-Anhalt haben einem Medienbericht zufolge die Unwahrheit über ihr Abstimmungsverhalten bei der Wahl von AfD-Landtagspräsident Rausch gesagt.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">cdu-abgeordnete-haben-offenbar-ueber-ihre-landtagspraesidentenwahl-gelogen-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791612229648-271918%22%7D%7D-->
+    <item>
+  <title>Anleihenmärkte - Bundesbank-Vorstandsmitglied Theurer sieht noch keine systemische Staatsschuldenkrise, aber Warnsignale</title>
+  <link>https://www.deutschlandfunk.de/bundesbank-vorstandsmitglied-theurer-sieht-noch-keine-systemische-staatsschuldenkrise-aber-warnsigna-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/13/ab/a4/11/13aba411-2dbc-40f8-9dce-a1b2c295c57d/michael-theurer-bundesbank-100-1920x1920.jpg" alt="Michael Theurer, Mitglied des Vorstandes Deutsche Bundesbank, bei einer Rede im Juli 2025." title="Michael Theurer, Mitglied des Vorstandes Deutsche Bundesbank, bei einer Rede im Juli 2025." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Bundesbank-Vorstandsmitglied Theurer warnt angesichts einer hohen Staatsverschuldung vor den Folgen für die europäischen Finanzmärkte.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">bundesbank-vorstandsmitglied-theurer-sieht-noch-keine-systemische-staatsschuldenkrise-aber-warnsigna-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791614733218-309176%22%7D%7D-->
+    <item>
+  <title>Jemen - Militärkoalition um Saudi-Arabien zerstört Ziele der Huthi-Miliz</title>
+  <link>https://www.deutschlandfunk.de/militaerkoalition-um-saudi-arabien-zerstoert-ziele-der-huthi-miliz-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/78/a8/8b/ff/78a88bff-95c8-4d4a-8ca6-e2a37efd4b44/jemen-huthi-miliz-100-1920x1920.jpg" alt="Eine Rauchsäule steigt am 9. Oktober 2026 während eines gemeldeten Luftangriffs der von Saudi-Arabien geführten Koalition auf die von den Huthi-Rebellen kontrollierte jemenitische Hauptstadt Sanaa auf." title="Eine Rauchsäule steigt am 9. Oktober 2026 während eines gemeldeten Luftangriffs der von Saudi-Arabien geführten Koalition auf die von den Huthi-Rebellen kontrollierte jemenitische Hauptstadt Sanaa auf." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Die von Saudi-Arabien angeführte Militärkoalition hat nach eigenen Angaben mehr als hundert militärische Ziele der Huthi-Miliz im Jemen zerstört.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">militaerkoalition-um-saudi-arabien-zerstoert-ziele-der-huthi-miliz-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791609041128-531598%22%7D%7D-->
+    <item>
+  <title>Rechtswesen - Bundesjustizministerin Hubig kündigt für kommende Woche Gesetzentwurf an, um Extremisten als Schöffen zu verhindern</title>
+  <link>https://www.deutschlandfunk.de/bundesjustizministerin-hubig-kuendigt-fuer-kommende-woche-gesetzentwurf-an-um-extremisten-als-schoef-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/a4/cd/d5/ed/a4cdd5ed-7e5d-4c46-81ef-2b2f4e3f2182/schoeffen-gericht-102-1920x1920.jpg" alt="Drei Richterinnen und zwei Schöffen stehen im Gerichtssaal bei einem Prozess in Düsseldorf 2025 (Symbolbild)" title="Drei Richterinnen und zwei Schöffen stehen im Gerichtssaal bei einem Prozess in Düsseldorf 2025 (Symbolbild)" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Bundesjustizministerin Hubig hat für kommende Woche einen Entwurf zur Reform des Richtergesetzes angekündigt.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">bundesjustizministerin-hubig-kuendigt-fuer-kommende-woche-gesetzentwurf-an-um-extremisten-als-schoef-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791607294027-719050%22%7D%7D-->
+    <item>
+  <title>Revanchismus - Großdeutsche Fantasien eines AfD-Jugend-Vorstands lösen Besorgnis in Nachbarländern aus</title>
+  <link>https://www.deutschlandfunk.de/grossdeutsche-fantasien-eines-afd-jugend-vorstands-loesen-besorgnis-in-nachbarlaendern-aus-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/d8/f9/ba/77/d8f9ba77-b1fc-455e-8f9f-bfe0ef491ea7/revanchismus-afd-karte-100-1280x1280.png" alt="Ein Landkarte von West- und Mitteleuropa mit angeblich deutschen Gebieten eingezeichnet." title="Ein Landkarte von West- und Mitteleuropa mit angeblich deutschen Gebieten eingezeichnet." width="1280" height="1280" border="0" align="left" hspace="4" vspace="4"/>Revanchistische Signale aus der AfD sorgen für Diskussionen in den Medien einiger unserer Nachbarländer.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">grossdeutsche-fantasien-eines-afd-jugend-vorstands-loesen-besorgnis-in-nachbarlaendern-aus-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791606638931-86829%22%7D%7D-->
+    <item>
+  <title>Frühkindliche Bildung - Streit ums neue Kita-Gesetz: Bund bestellt, aber zahlt nicht?</title>
+  <link>https://www.deutschlandfunk.de/streit-ums-neue-kita-gesetz-bund-bestellt-aber-zahlt-nicht-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/d5/61/4b/32/d5614b32-dbdf-4e83-b155-867543de1ca0/verena-schaeffer-nrw-familienministerin-2026-100-1920x1920.jpg" alt="Das Bild zeigt NRW-Familienministerin Verena Schäffer von Bündnis 90/Die Grünen in der Wandelhalle im Landtag." title="Das Bild zeigt NRW-Familienministerin Verena Schäffer von Bündnis 90/Die Grünen in der Wandelhalle im Landtag." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Nordrhein-Westfalen hat der Bundesregierung in der Bildungspolitik vorgeworfen, "neue Standards zu setzen, ohne diese zu finanzieren".<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">streit-ums-neue-kita-gesetz-bund-bestellt-aber-zahlt-nicht-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791573875447-993010%22%7D%7D-->
+    <item>
+  <title>Vereinigte Arabische Emirate - Staatsanwaltschaft: Flydubai-Copilot plante Anschlag auf Flughafen in Tel Aviv</title>
+  <link>https://www.deutschlandfunk.de/staatsanwaltschaft-flydubai-copilot-plante-anschlag-auf-flughafen-in-tel-aviv-106.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/NO/VA/_f/8a/NOVA_f8aef309c3005942e3de7b50f8b19795/craft-13449079-asset-100-1920x1920.jpg" alt="Im Landeanflug auf den Ben Gurion Airport in Tel Aviv: Ein Flugzeug von Flydubai an Bord Passagiere des Flugs FZ1073, dieser wurde wegen einer Terrorwarnung umgeleitet." title="Im Landeanflug auf den Ben Gurion Airport in Tel Aviv: Ein Flugzeug von Flydubai an Bord Passagiere des Flugs FZ1073, dieser wurde wegen einer Terrorwarnung umgeleitet." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Der Anschlag während des Flydubai-Flugs vergangene Woche sollte offenbar dem Flughafen von Tel Aviv gelten.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">staatsanwaltschaft-flydubai-copilot-plante-anschlag-auf-flughafen-in-tel-aviv-106</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791581916780-674123%22%7D%7D-->
+    <item>
+  <title>Humanität - Welttag gegen die Todesstrafe: Internationale Initiative fordert mehr Humanität und Toleranz</title>
+  <link>https://www.deutschlandfunk.de/welttag-gegen-die-todesstrafe-internationale-initiative-fordert-mehr-humanitaet-und-toleranz-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/2a/6f/48/62/2a6f4862-283a-4425-9d78-8c5028114cb4/terre-haute-todesstrafe-usa-100-1280x1280.jpg" alt="Blick auf den Todesstuhl im Exekutionsraum des Bundesgefängnisses in Terre Haute, US-Bundesstaat Indiana." title="Blick auf den Todesstuhl im Exekutionsraum des Bundesgefängnisses in Terre Haute, US-Bundesstaat Indiana." width="1280" height="1280" border="0" align="left" hspace="4" vspace="4"/>Anlässlich des Welttags gegen die Todesstrafe hat ein internationales Bündnis für mehr Humanität und Toleranz gegenüber den Tätern geworben. Notwendig sei es, die strukturellen, sozialen und individuellen Umstände zu berücksichtigen, die dazu beigetragen hätten, dass Personen mit dem Gesetz in Konflikt gerieten.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">welttag-gegen-die-todesstrafe-internationale-initiative-fordert-mehr-humanitaet-und-toleranz-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791608476818-686656%22%7D%7D-->
+    <item>
+  <title>Fluss - Wiederansiedlung: 3.000 junge Störe in der Oder ausgesetzt</title>
+  <link>https://www.deutschlandfunk.de/wiederansiedlung-3-000-junge-stoere-in-der-oder-ausgesetzt-106.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/e5/f8/b4/c3/e5f8b4c3-fc4c-44a8-a95a-fc9883439711/stoer-europa-100-1920x1920.jpg" alt="Europäischer Stör" title="Europäischer Stör" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>In der Oder hat der Versuch einer Wiederansiedlung von Stören begonnen.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">wiederansiedlung-3-000-junge-stoere-in-der-oder-ausgesetzt-106</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791613157501-69458%22%7D%7D-->
+    <item>
+  <title>Wissenschaft - Virchow-Preis für Forschung zu Ebola - Verleihung im Roten Rathaus</title>
+  <link>https://www.deutschlandfunk.de/virchow-preis-fuer-forschung-zu-ebola-verleihung-im-roten-rathaus-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/ad/4b/e1/16/ad4be116-13f0-4d30-8899-535bb9a4a273/jean-jacques-muyembe-100-1920x1920.jpg" alt="Professor Jean-Jacques Muyembe arbeitet am 20. Mai 2026 in einem Labor des Nationalen Instituts für biomedizinische Forschung (INRB) in Kinshasa, Demokratische Republik Kongo." title="Professor Jean-Jacques Muyembe arbeitet am 20. Mai 2026 in einem Labor des Nationalen Instituts für biomedizinische Forschung (INRB) in Kinshasa, Demokratische Republik Kongo." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Für ihren jahrzehntelangen Einsatz gegen Ebola und für ein besseres Verständnis von Epidemien erhalten die Wissenschaftler Jean-Jacques Muyembe und Peter Piot den diesjährigen Virchow-Preis. Die Auszeichnung für globale Gesundheit ist mit 500.000 Euro dotiert und wird heute im Roten Rathaus in Berlin verliehen.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">virchow-preis-fuer-forschung-zu-ebola-verleihung-im-roten-rathaus-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791606634558-767671%22%7D%7D-->
+    <item>
+  <title>Thüringen - Nach Entzug des Doktortitels: Ministerpräsident Voigt kann nicht wieder Professor an seiner Berliner Hochschule werden</title>
+  <link>https://www.deutschlandfunk.de/nach-entzug-des-doktortitels-ministerpraesident-voigt-kann-nicht-wieder-professor-an-seiner-berliner-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/fa/a7/0f/68/faa70f68-3a49-4bd3-9599-112598e1ac59/mario-voigt-doktortitel-100-1920x1920.jpg" alt="Thüringen, Erfurt: Mario Voigt (CDU), Ministerpräsident von Thüringen, spricht zu Journalisten im Thüringer Landtag. " title="Thüringen, Erfurt: Mario Voigt (CDU), Ministerpräsident von Thüringen, spricht zu Journalisten im Thüringer Landtag. " width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Thüringens Ministerpräsident Voigt kann nach dem Entzug seines Doktortitels kein Professor mehr an der Quadriga Hochschule Berlin sein.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">nach-entzug-des-doktortitels-ministerpraesident-voigt-kann-nicht-wieder-professor-an-seiner-berliner-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791581372752-259%22%7D%7D-->
+    <item>
+  <title>Bundesländer - Nach SPD stimmt auch Linke für Koalitionsverhandlungen in Mecklenburg-Vorpommern</title>
+  <link>https://www.deutschlandfunk.de/nach-spd-stimmt-auch-linke-fuer-koalitionsverhandlungen-in-mecklenburg-vorpommern-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/FI/LE/_e/57/FILE_e573a2166b546a1df9fd8e008c781514/beginn-koalitionsver-71303664-jpg-100-768x768.jpg" alt="Manuela Schwesig (SPD, l.), Ministerpräsidentin von Mecklenburg-Vorpommern, und Simone Oldenburg, Fraktionschefin der Linken im Landtag, vor dem Schweriner Schloss." title="Manuela Schwesig (SPD, l.), Ministerpräsidentin von Mecklenburg-Vorpommern, und Simone Oldenburg, Fraktionschefin der Linken im Landtag, vor dem Schweriner Schloss." width="768" height="768" border="0" align="left" hspace="4" vspace="4"/>Nach der SPD hat auch die Linke in Mecklenburg-Vorpommern für Koalitionsverhandlungen zur Bildung einer rot-rot-grünen Landesregierung gestimmt.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">nach-spd-stimmt-auch-linke-fuer-koalitionsverhandlungen-in-mecklenburg-vorpommern-102</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791609945548-919297%22%7D%7D-->
+    <item>
+  <title>Rohstoffe - EU stuft Lithiumabbau im Ostdeutschland als strategisch wichtig ein</title>
+  <link>https://www.deutschlandfunk.de/eu-stuft-lithiumabbau-im-ostdeutschland-als-strategisch-wichtig-ein-104.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/ff/24/5e/11/ff245e11-c537-490f-9363-a90e1560de01/salzwedel-lithium-abbau-100-1920x1920.jpg" alt="Techniker bedienen in einer Halle eine Apparatur mit vielen Schläuchen. " title="Techniker bedienen in einer Halle eine Apparatur mit vielen Schläuchen. " width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Die EU-Kommission hat zwei Bergbauprojekte zur Förderung von Lithium in Sachsen und Sachsen-Anhalt als strategisch wichtige Projekte für kritische Rohstoffe eingestuft.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">eu-stuft-lithiumabbau-im-ostdeutschland-als-strategisch-wichtig-ein-104</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791609950498-540753%22%7D%7D-->
+    <item>
+  <title>Berlin - Linke-Politiker kritisieren Einigung zum Antisemitismus</title>
+  <link>https://www.deutschlandfunk.de/linke-politiker-kritisieren-einigung-zum-antisemitismus-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/7a/00/cf/67/7a00cf67-2dee-400f-b598-0142d3af0aff/logo-die-linke-100-1920x1920.jpg" alt="Parteitag der Linkspartei mit dem neuen Logo, im Vordergrund sitzen Delegierte" title="Parteitag der Linkspartei mit dem neuen Logo, im Vordergrund sitzen Delegierte" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>In Berlin haben 120 Mitglieder der Linkspartei die Einigung ihrer Führungsspitze mit den Grünen und der SPD zum Thema Antisemitismus kritisiert.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">linke-politiker-kritisieren-einigung-zum-antisemitismus-102</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791592780944-91175%22%7D%7D-->
+    <item>
+  <title>Interview - Bau-Präsident Demuth warnt vor Enteignungsplänen der Linken in Berlin</title>
+  <link>https://www.deutschlandfunk.de/bau-praesident-demuth-warnt-vor-enteignungsplaenen-der-linken-in-berlin-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/71/e5/24/f2/71e524f2-7c8d-4e74-aae9-3d0e3778746b/wohnungen-berlin-100-1920x1920.jpg" alt="Berlin, 01.03.2023 - Blick am Abend auf Hochhaeuser und Mehrfamilienwohnhaeuser im Berliner Stadtteil Marzahn-Hellersdorf." title="Berlin, 01.03.2023 - Blick am Abend auf Hochhaeuser und Mehrfamilienwohnhaeuser im Berliner Stadtteil Marzahn-Hellersdorf." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Der Präsident des Hauptverbandes der Deutschen Bauindustrie, Demuth, hat vor dem Vorhaben der Berliner Linken gewarnt, Immobilienkonzerne zu enteignen.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">bau-praesident-demuth-warnt-vor-enteignungsplaenen-der-linken-in-berlin-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791573875444-9814%22%7D%7D-->
+    <item>
+  <title>Bericht - Regierungskoalition einigt sich offenbar auf Regelung für Steuer auf zuckerhaltige Getränke</title>
+  <link>https://www.deutschlandfunk.de/regierungskoalition-einigt-sich-offenbar-auf-regelung-fuer-steuer-auf-zuckerhaltige-getraenke-106.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/FI/LE/_5/c5/FILE_5c502a3ee0c1d955199ad5457e0dfd19/imago78066294h-169-jpg-100-768x768.jpg" alt="Cola-Flaschen stehen in einer Fabrik." title="Cola-Flaschen stehen in einer Fabrik." width="768" height="768" border="0" align="left" hspace="4" vspace="4"/>Die Regierungskoalition hat sich einem Bericht zufolge auf einen Kompromiss über die Einführung einer Steuer auf zuckerhaltige Getränke geeinigt.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">regierungskoalition-einigt-sich-offenbar-auf-regelung-fuer-steuer-auf-zuckerhaltige-getraenke-106</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791599715056-202934%22%7D%7D-->
+    <item>
+  <title>Russischer Angriffskrieg - US-Sondergesandter Witkoff nennt Gespräche mit ukrainischer Delegation in Miami &quot;konstruktiv&quot;</title>
+  <link>https://www.deutschlandfunk.de/us-sondergesandter-witkoff-nennt-gespraeche-mit-ukrainischer-delegation-in-miami-konstruktiv-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/NO/VA/_b/ac/NOVA_bacdad42946bb3afc427e7964fd2cf5c/craft-12861888-asset-100-1920x1920.jpg" alt="Der Sondergesandte Steve Witkoff im Oval Office" title="Der Sondergesandte Steve Witkoff im Oval Office" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Der US-Sondergesandte Witkoff hat die neuen Gespräche mit einer ukrainischen Delegation über das weitere Vorgehen im russischen Angriffskrieg als konstruktiv bezeichnet.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">us-sondergesandter-witkoff-nennt-gespraeche-mit-ukrainischer-delegation-in-miami-konstruktiv-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791573875442-78673%22%7D%7D-->
+    <item>
+  <title>Erinnerung an 1989 in Leipzig - Politologin Ashbrook fordert kollektiven Mut für Demokratie</title>
+  <link>https://www.deutschlandfunk.de/politologin-ashbrook-fordert-kollektiven-mut-fuer-demokratie-108.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/97/e0/62/b8/97e062b8-5b2f-4f80-a5b2-1359ccd5b7e4/ashbrookleipzig-100-1920x1920.jpg" alt="Cathryn Clüver Ashbrook, Politikwissenschaftlerin, hält in der Nikolaikirche in Leipzig die Rede zur Demokratie. Die Stadt erinnert mit dem Lichtfest an die Friedliche Revolution im Herbst 1989." title="Cathryn Clüver Ashbrook, Politikwissenschaftlerin, hält in der Nikolaikirche in Leipzig die Rede zur Demokratie. Die Stadt erinnert mit dem Lichtfest an die Friedliche Revolution im Herbst 1989." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>In Leipzig ist an die friedliche Revolution im Jahr 1989 in der DDR erinnert worden.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">politologin-ashbrook-fordert-kollektiven-mut-fuer-demokratie-108</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791573875441-202159%22%7D%7D-->
+    <item>
+  <title>Automobilindustrie - EU und China einigen sich auf Drosselung chinesischer Hybridauto-Exporte</title>
+  <link>https://www.deutschlandfunk.de/eu-und-china-einigen-sich-auf-drosselung-chinesischer-hybridauto-exporte-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/03/2c/b9/75/032cb975-3750-4aa9-9891-acf3278ffce1/china-elektroauto-transport-100-1920x1920.jpg" alt="Hunderte Elektroautos stehen auf einem Kai in Lianyungang, in der Jiangsu Provinz in China und warten darauf, auf ein Schiff verladen zu werden.
+" title="Hunderte Elektroautos stehen auf einem Kai in Lianyungang, in der Jiangsu Provinz in China und warten darauf, auf ein Schiff verladen zu werden.
+" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Die EU und China haben sich auf eine Drosselung chinesischer Exporte von Hybrid-Autos verständigt. Das teilte EU-Handelskommissar Šefčovič nach Verhandlungen in Peking mit. Über die nächsten vier Jahre sollen mehrere Millionen weniger Hybrid- und Plug-in-Hybrid-Autos nach Europa ausgeführt werden.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">eu-und-china-einigen-sich-auf-drosselung-chinesischer-hybridauto-exporte-102</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791573875439-912877%22%7D%7D-->
+    <item>
+  <title>Von AliExpress bis Temu - Umsätze asiatischer Shoppingplattformen brechen ein</title>
+  <link>https://www.deutschlandfunk.de/umsaetze-asiatischer-shoppingplattformen-brechen-ein-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/NO/VA/_2/1c/NOVA_21c99febf4f6f7359d155903294e639e/craft-13165959-asset-100-1920x1920.jpg" alt="Eine Frau bestellt online mit ihrem Smartphone" title="Eine Frau bestellt online mit ihrem Smartphone" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Die asiatischen Plattformen Shein, Temu und AliExpress haben in Deutschland in den vergangenen Monaten deutlich weniger umgesetzt.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">umsaetze-asiatischer-shoppingplattformen-brechen-ein-102</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791608504751-825089%22%7D%7D-->
+    <item>
+  <title>Cagnes-sur-Mer - Südfrankreich: Gestohlene Renoir-Gemälde wieder aufgetaucht</title>
+  <link>https://www.deutschlandfunk.de/suedfrankreich-gestohlene-renoir-gemaelde-wieder-aufgetaucht-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/b1/df/7f/f8/b1df7ff8-43cd-43b9-9863-9da5aad4268c/cagnes-sur-mer-renoir-raub-100-1920x1920.jpg" alt="Vor einem Monat wurden zwei Gemälde des französischen Impressionisten Pierre-Auguste Renoir aus dem Renoir-Museum in Cagnes-sur-Mer gestohlen. " title="Vor einem Monat wurden zwei Gemälde des französischen Impressionisten Pierre-Auguste Renoir aus dem Renoir-Museum in Cagnes-sur-Mer gestohlen. " width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Zwei Renoir-Gemälde, die vor einem Monat aus einem Museum in Südfrankreich gestohlen wurden, sind wieder da.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">suedfrankreich-gestohlene-renoir-gemaelde-wieder-aufgetaucht-102</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791608498877-226168%22%7D%7D-->
+    <item>
+  <title>Fertigteilbauweise - Nur 75 Tage Bauzeit: Erste &quot;Expressbrücke&quot; in Baden-Württemberg ist fertig</title>
+  <link>https://www.deutschlandfunk.de/nur-75-tage-bauzeit-erste-expressbruecke-in-baden-wuerttemberg-ist-fertig-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/72/0a/17/cc/720a17cc-8c1f-478a-9514-d257aca40154/expressbruecke-baden-wuerttemberg-100-1920x1920.jpg" alt="Hinter einer Baustelle ist die Struktur einer Brücke zu sehen, davor ein Fluss." title="Hinter einer Baustelle ist die Struktur einer Brücke zu sehen, davor ein Fluss." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>In etwas mehr als vier Monaten ist in Marbach am Neckar eine marode Straßenbrücke abgerissen und ein Neubau hochgezogen worden.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">nur-75-tage-bauzeit-erste-expressbruecke-in-baden-wuerttemberg-ist-fertig-102</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791573875438-435032%22%7D%7D-->
+    <item>
+  <title>Öffentliche Exekution - US-Regierung wegen geplantem Livestream von Hinrichtung in der Kritik</title>
+  <link>https://www.deutschlandfunk.de/us-regierung-wegen-geplantem-livestream-von-hinrichtung-in-der-kritik-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/NO/VA/_f/f1/NOVA_ff163d289f9fc329708093b4142bc1ed/craft-13007973-asset-100-1920x1920.jpg" alt="US-Verteidigungsminister Pete Hegseth spricht auf einer Pressekonferenz im Pentagon (Arlington, USA, 8.04.2026)" title="US-Verteidigungsminister Pete Hegseth spricht auf einer Pressekonferenz im Pentagon (Arlington, USA, 8.04.2026)" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Die vom US-Verteidigungsministerium angekündigte Live-Übertragung einer Hinrichtung hat kritische Reaktionen ausgelöst.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">us-regierung-wegen-geplantem-livestream-von-hinrichtung-in-der-kritik-102</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791588052480-316722%22%7D%7D-->
+    <item>
+  <title>USA - Frühere TV-Kommentatorin Katie Zacharia wird neue Sprecherin des Weißen Hauses</title>
+  <link>https://www.deutschlandfunk.de/fruehere-tv-kommentatorin-katie-zacharia-wird-neue-sprecherin-des-weissen-hauses-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/aa/ac/50/a0/aaac50a0-0ae1-447b-8d80-f96f4840605c/katie-zacharia-100-1280x1280.jpg" alt="Die neue Pressesprecherin des Weißen Hauses Katie Zacharia " title="Die neue Pressesprecherin des Weißen Hauses Katie Zacharia " width="1280" height="1280" border="0" align="left" hspace="4" vspace="4"/>Das Weiße Haus hat eine neue Pressesprecherin.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">fruehere-tv-kommentatorin-katie-zacharia-wird-neue-sprecherin-des-weissen-hauses-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791581335943-925533%22%7D%7D-->
+    <item>
+  <title>Jugendsprache - Jugendwort des Jahres 2026 wird verkündet</title>
+  <link>https://www.deutschlandfunk.de/jugendwort-des-jahres-2026-wird-verkuendet-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/30/ca/b9/cc/30cab9cc-adf6-4d9e-961f-e36068847c2c/jugendwort-des-jahres-112-1920x1920.jpg" alt="&quot;Jugendwort des Jahres&quot; steht in weiß auf bunt gezogenen Linien." title="&quot;Jugendwort des Jahres&quot; steht in weiß auf bunt gezogenen Linien." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Heute wird das Jugendwort des Jahres gekürt.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">jugendwort-des-jahres-2026-wird-verkuendet-102</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791578992980-131017%22%7D%7D-->
+    <item>
+  <title>Fußball-Bundesliga - Später Ausgleich: Dortmund verspielt Sieg gegen Bremen</title>
+  <link>https://www.deutschlandfunk.de/spaeter-ausgleich-dortmund-verspielt-sieg-gegen-bremen-110.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/b0/2c/e8/5c/b02ce85c-c4e2-4238-965d-26424f37d227/dortmund-werder-bundesliga-100-1920x1920.jpg" alt="Die Fußballspieler Nico Schlotterbeck (hinten) und Ludovit Reis im Zweikampf" title="Die Fußballspieler Nico Schlotterbeck (hinten) und Ludovit Reis im Zweikampf" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Im Freitagsspiel der Fußball-Bundesliga haben sich Borussia Dortmund und Werder Bremen 2:2 getrennt. Die Dortmunder kassierten dabei zwei späte Gegentreffer und konnten das erste Mal in dieser Saison nicht gewinnen.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">spaeter-ausgleich-dortmund-verspielt-sieg-gegen-bremen-110</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791577918656-745403%22%7D%7D-->
+    <item>
+  <title>Medien - Früherer ZDF-Chefredakteur Klaus Bresser gestorben</title>
+  <link>https://www.deutschlandfunk.de/frueherer-zdf-chefredakteur-klaus-bresser-gestorben-110.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/a7/de/b3/cd/a7deb3cd-ef38-438a-a402-eb7520527ed5/klausbresserzdf-100-1280x1280.jpg" alt="Der Journalist und Moderator des ZDF - &quot;heute journal&quot;, Klaus Bresser (undatiert) [dpabilderarchiv]" title="Der Journalist und Moderator des ZDF - &quot;heute journal&quot;, Klaus Bresser (undatiert) [dpabilderarchiv]" width="1280" height="1280" border="0" align="left" hspace="4" vspace="4"/>Der Fernsehjournalist Klaus Bresser ist im Alter von 90 Jahren gestorben. Das teilte das ZDF mit. Von 1988 bis 2000 war er Chefredakteur des Senders, zuvor bereits unter anderem Moderator des Heute-Journals.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">frueherer-zdf-chefredakteur-klaus-bresser-gestorben-110</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791573875429-909596%22%7D%7D-->
+    <item>
+  <title>Wetter - Im Süden und Nordwesten regnerisch, sonst wechselhaft, 13 bis 19 Grad</title>
+  <link>https://www.deutschlandfunk.de/im-sueden-und-nordwesten-regnerisch-sonst-wechselhaft-13-bis-19-grad-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/e5/f6/55/84/e5f65584-6dc2-4dce-979d-729a024cd599/wetter-grafik-nachrichten-100-768x768.jpg" alt="Eine Grafik in verschiedenen Blautönen zeigt Symbole für Sonne oder Mond sowie für Wolken und Regen. Darunter steht: Das Wetter." title="Eine Grafik in verschiedenen Blautönen zeigt Symbole für Sonne oder Mond sowie für Wolken und Regen. Darunter steht: Das Wetter." width="768" height="768" border="0" align="left" hspace="4" vspace="4"/>Das Wetter:<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">im-sueden-und-nordwesten-regnerisch-sonst-wechselhaft-13-bis-19-grad-100</guid>
+  <pubDate>Sat, 10 Oct 2026 14:35:24 +0200</pubDate>
+</item>
+  </channel>
+</rss>

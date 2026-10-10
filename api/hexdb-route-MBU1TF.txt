@@ -1,0 +1,17 @@
+HTTP 200
+access-control-allow-origin: *
+alt-svc: h3=":443"; ma=86400
+cache-control: max-age=14400
+cf-cache-status: MISS
+cf-ray: a485ad208b043824-SJC
+connection: keep-alive
+content-encoding: br
+content-type: application/json
+date: Sat, 10 Oct 2026 12:37:25 GMT
+last-modified: Sat, 10 Oct 2026 12:37:25 GMT
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=hK2UQ%2FnrB3nUEArNAX4Tc%2BfunfBVsiKbYk8Wt1TzyfCSN%2BZzU%2B%2FnLs%2BZ%2BsLZWH%2Bqo278Vzl6rsA7IGZgysHJ9jjiQRbJ6ZK6fFh7qaGTPk2%2FEZA%2FLRGfsUtdew%3D%3D"}]}
+server: cloudflare
+transfer-encoding: chunked
+
+{"flight": "MBU1TF", "route": "LEPA-EDDH", "updatetime": 1785429835}

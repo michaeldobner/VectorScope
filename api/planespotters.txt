@@ -1,0 +1,23 @@
+HTTP 403
+access-control-allow-credentials: true
+access-control-allow-methods: GET, OPTIONS
+access-control-allow-origin: *
+cache-control: no-store, no-cache, must-revalidate
+cf-cache-status: BYPASS
+cf-ray: a485ad19392acf12-SJC
+connection: keep-alive
+content-encoding: gzip
+content-type: application/json; charset=UTF-8
+date: Sat, 10 Oct 2026 12:37:24 GMT
+expires: Thu, 19 Nov 1981 08:52:00 GMT
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+pragma: no-cache
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=DdWAzppDMND6ZopMa2hxJ2lHUwtCSiWlYZBZcUUpfmXCLkP8%2Fihfx9SKQzOvhMLI4SOUomH3Gw%2FhNj0TPDhwvR6RKMCx8LAKDc8HVstVzXfreslOr6SNn3o1U4Ks08FX6JZfLkdXSw%3D%3D"}]}
+server: cloudflare
+transfer-encoding: chunked
+vary: Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+
+{"error":"Server User-Agent strings must include a contact URL or email so we can reach you, e.g. MyFlightTracker\/1.2 (+https:\/\/example.com\/contact). See https:\/\/www.planespotters.net\/photo\/api"}

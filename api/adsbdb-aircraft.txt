@@ -1,0 +1,15 @@
+HTTP 404
+access-control-allow-origin: *
+connection: keep-alive
+content-encoding: br
+content-type: application/json
+date: Sat, 10 Oct 2026 12:37:23 GMT
+server: api.adsbdb.com v1.0.0
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+transfer-encoding: chunked
+vary: Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+
+{"response":"unknown aircraft"}

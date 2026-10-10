@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:spotify="http://www.spotify.com/ns/rss" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+        <channel>
+        	<atom:link href="" rel="self" type="application/rss+xml" />
+        	<title>n-tv.de - Startseite</title>
+        	<link>https://www.n-tv.de/</link>
+            <language>de-de</language>
+            <copyright>n-tv Nachrichtenfernsehen GmbH. RSS Meldungen dürfen nur unverändert wiedergegeben und ausschließlich online verwendet werden. Die eingeräumten Nutzungsrechte beinhalten ausdrücklich nicht das Recht zur Weitergabe an Dritte. Insbesondere ist es nicht gestattet, die Daten auf öffentlichen Screens oder zum Download anzubieten - weder kostenlos noch kostenpflichtig.</copyright>
+            <description>n-tv.de, Nachrichten seriös, schnell und kompetent. Artikel und Videos aus Politik, Wirtschaft, Börse, Sport und aller Welt.</description>
+            <lastBuildDate>Sat, 10 Oct 2026 14:42:09 +0200</lastBuildDate>
+            <ttl>5</ttl>
+            <image>
+                <url>https://www.n-tv.de/stat/rss/head_logo.png</url>
+                <title>n-tv.de - Startseite</title>
+                <link>https://www.n-tv.de/</link>
+            </image>
+           
+            <item>
+                <title>Sind die fetten Jahre vorbei?: Wie viel VW-Mitarbeiter verdienen</title>
+                <description>Die übliche Gehaltserhöhung bei Volkswagen fällt im vergangenen Tarifstreit den drastischen Sparplänen zum Opfer. Im Vergleich zu anderen Arbeitgebern zahlt der Autobauer trotzdem noch stattliche Löhne. In der bevorstehenden Tarifrunde müssen Beschäftigte allerdings erneut bangen.</description>
+                <link>https://www.n-tv.de/wirtschaft/Wie-viel-VW-Mitarbeiter-verdienen-id31388650.html</link>
+                <guid>https://www.n-tv.de/wirtschaft/Wie-viel-VW-Mitarbeiter-verdienen-id31388650.html</guid>
+                <category>Wirtschaft</category>
+                <pubDate>Sat, 10 Oct 2026 11:17:22 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31388734/1791307385/Img_4_3/250/552965840.jpg" width="250" height="188" align="left" />Die übliche Gehaltserhöhung bei Volkswagen fällt im vergangenen Tarifstreit den drastischen Sparplänen zum Opfer. Im Vergleich zu anderen Arbeitgebern zahlt der Autobauer trotzdem noch stattliche Löhne. In der bevorstehenden Tarifrunde müssen Beschäftigte allerdings erneut bangen.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31388734/1791307385/Img_4_3/250/552965840.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Sanktionen sollen bleiben: Bundesregierung nimmt Trumps Diesel-Deal &quot;zur Kenntnis&quot;</title>
+                <description>Nach dem Diesel-Deal zwischen den Präsidenten Trump und Putin betont die deutsche Bundesregierung: Hierzulande soll alles beim Alten bleiben. Die Unterstützung der kriegsgebeutelten Ukraine sei &quot;ungebrochen&quot; und ohnehin sei man nicht auf Lieferungen aus Russland angewiesen.</description>
+                <link>https://www.n-tv.de/politik/Bundesregierung-nimmt-Trumps-Diesel-Deal-zur-Kenntnis-id31403428.html</link>
+                <guid>https://www.n-tv.de/politik/Bundesregierung-nimmt-Trumps-Diesel-Deal-zur-Kenntnis-id31403428.html</guid>
+                <category>Politik</category>
+                <pubDate>Sat, 10 Oct 2026 13:24:00 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31403406/1791637219/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Nach dem Diesel-Deal zwischen den Präsidenten Trump und Putin betont die deutsche Bundesregierung: Hierzulande soll alles beim Alten bleiben. Die Unterstützung der kriegsgebeutelten Ukraine sei "ungebrochen" und ohnehin sei man nicht auf Lieferungen aus Russland angewiesen.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31403406/1791637219/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Ministerin &quot;würfelt anscheinend&quot;: Reiches Ministerium will angeforderte Gasmengen nicht erklären </title>
+                <description>Der verstaatlichte Energiekonzern Sefe soll auf Anweisung von Katherina Reiche acht Terrawattstunden Gas zusätzlich beschaffen, um die Speicher für den Winter zu füllen. Wie das Ministerium aber zu dieser Menge kommt, bleibt nebulös - zum Unverständnis der Grünen.</description>
+                <link>https://www.n-tv.de/politik/Reiches-Ministerium-will-angeforderte-Gasmengen-nicht-erklaeren-id31402116.html</link>
+                <guid>https://www.n-tv.de/politik/Reiches-Ministerium-will-angeforderte-Gasmengen-nicht-erklaeren-id31402116.html</guid>
+                <category>Politik</category>
+                <pubDate>Sat, 10 Oct 2026 13:20:32 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402132/1791571900/Img_4_3/250/619541803.jpg" width="250" height="188" align="left" />Der verstaatlichte Energiekonzern Sefe soll auf Anweisung von Katherina Reiche acht Terrawattstunden Gas zusätzlich beschaffen, um die Speicher für den Winter zu füllen. Wie das Ministerium aber zu dieser Menge kommt, bleibt nebulös - zum Unverständnis der Grünen.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402132/1791571900/Img_4_3/250/619541803.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Maga-Grüße nach Magdeburg: Die AfD ist Trumps Partner für den Angriff auf Europa</title>
+                <description>Nicht nur der erste AfD-Landtagspräsident ist eine Zäsur für die deutsche Demokratie. Die Liebesgrüße aus Washington für die rechte Partei sind es auch. Mit ihr wollen Donald Trump und Elon Musk den Widerstand gegen ihre autoritären Interessen auf dem Kontinent brechen.</description>
+                <link>https://www.n-tv.de/politik/Die-EU-sollte-abgeschafft-werden-Die-AfD-ist-Donald-Trumps-Rammbock-in-Europa-id31400100.html</link>
+                <guid>https://www.n-tv.de/politik/Die-EU-sollte-abgeschafft-werden-Die-AfD-ist-Donald-Trumps-Rammbock-in-Europa-id31400100.html</guid>
+                <category>Politik</category>
+                <pubDate>Sat, 10 Oct 2026 10:24:07 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/2247933/1791631850/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Nicht nur der erste AfD-Landtagspräsident ist eine Zäsur für die deutsche Demokratie. Die Liebesgrüße aus Washington für die rechte Partei sind es auch. Mit ihr wollen Donald Trump und Elon Musk den Widerstand gegen ihre autoritären Interessen auf dem Kontinent brechen.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/2247933/1791631850/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Bericht über brisante Chats: US-Botschafterin will Trump-Unterstützer ihre privaten Schulden zahlen lassen</title>
+                <description>&quot;Schatz, bitte, du musst das heute für mich erledigen&quot;: Mit diesen Worten soll die US-Botschafterin in Griechenland einen Trump-Unterstützer aufgefordert haben, ihre Kreditkartenschulden zu bezahlen. Geld floss wohl nicht - dafür aber viele Versprechen.</description>
+                <link>https://www.n-tv.de/politik/Bericht-US-Botschafterin-will-Trump-Unterstuetzer-ihre-privaten-Schulden-zahlen-lassen-id31402910.html</link>
+                <guid>https://www.n-tv.de/politik/Bericht-US-Botschafterin-will-Trump-Unterstuetzer-ihre-privaten-Schulden-zahlen-lassen-id31402910.html</guid>
+                <category>Politik</category>
+                <pubDate>Sat, 10 Oct 2026 10:52:20 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31403040/1791623667/Img_4_3/250/584319617.jpg" width="250" height="188" align="left" />"Schatz, bitte, du musst das heute für mich erledigen": Mit diesen Worten soll die US-Botschafterin in Griechenland einen Trump-Unterstützer aufgefordert haben, ihre Kreditkartenschulden zu bezahlen. Geld floss wohl nicht - dafür aber viele Versprechen.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31403040/1791623667/Img_4_3/250/584319617.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Rund eine Million stimmte ab: &quot;Ragebait&quot; ist Jugendwort des Jahres</title>
+                <description>Am Ende ist es ein knappes Rennen, aber der Wutköder setzt sich durch: &quot;Ragebait&quot; ist zum Jugendwort des Jahres 2026 gewählt worden. Der Begriff steht für absichtlich provokant oder falsch gestaltete Online-Inhalte. Seine Wahl ist indes keine Überraschung.</description>
+                <link>https://www.n-tv.de/panorama/Ragebait-ist-Jugendwort-des-Jahres-id31403577.html</link>
+                <guid>https://www.n-tv.de/panorama/Ragebait-ist-Jugendwort-des-Jahres-id31403577.html</guid>
+                <category>Panorama</category>
+                <pubDate>Sat, 10 Oct 2026 13:53:45 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31403591/1791640879/Img_4_3/250/624099433.jpg" width="250" height="188" align="left" />Am Ende ist es ein knappes Rennen, aber der Wutköder setzt sich durch: "Ragebait" ist zum Jugendwort des Jahres 2026 gewählt worden. Der Begriff steht für absichtlich provokant oder falsch gestaltete Online-Inhalte. Seine Wahl ist indes keine Überraschung.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31403591/1791640879/Img_4_3/250/624099433.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Nigeria liefert Europa Kerosin: Warum wieder Öl durch Hormus fließt, aber kaum Diesel </title>
+                <description>Der Öltransport durch die Straße von Hormus ist teuer und gefährlich, aber wieder zunehmend möglich in den vergangenen Wochen. Bei Kraftstoffen wie Diesel und Kerosin, die Europa importieren muss, sieht die Lage anders aus.</description>
+                <link>https://www.n-tv.de/wirtschaft/Warum-wieder-Oel-durch-Hormus-fliesst-aber-kaum-Diesel-id31401482.html</link>
+                <guid>https://www.n-tv.de/wirtschaft/Warum-wieder-Oel-durch-Hormus-fliesst-aber-kaum-Diesel-id31401482.html</guid>
+                <category>Wirtschaft</category>
+                <pubDate>Sat, 10 Oct 2026 10:06:33 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31401484/1791561350/Img_4_3/250/2026-03-30T070555Z_1938985151_RC2CWJA6M88V_RTRMADP_3_IRAN-CRISIS-NIGERIA-DANGOTE.jpg" width="250" height="188" align="left" />Der Öltransport durch die Straße von Hormus ist teuer und gefährlich, aber wieder zunehmend möglich in den vergangenen Wochen. Bei Kraftstoffen wie Diesel und Kerosin, die Europa importieren muss, sieht die Lage anders aus.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31401484/1791561350/Img_4_3/250/2026-03-30T070555Z_1938985151_RC2CWJA6M88V_RTRMADP_3_IRAN-CRISIS-NIGERIA-DANGOTE.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Droht Angriff auf Polen?: &quot;Ich habe einen Notfallrucksack gepackt&quot;</title>
+                <description>Wie real ist ein russischer Angriff auf Polen? Der polnische Politologe Wojciech Michnik hat sich auch privat auf den Ernstfall vorbereitet - und warnt vor einem deutschen Irrtum.</description>
+                <link>https://www.n-tv.de/politik/Ich-habe-einen-Notfallrucksack-gepackt-id31391030.html</link>
+                <guid>https://www.n-tv.de/politik/Ich-habe-einen-Notfallrucksack-gepackt-id31391030.html</guid>
+                <category>Politik</category>
+                <pubDate>Sat, 10 Oct 2026 07:48:07 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31391179/1791373213/Img_4_3/250/imago0852377706h.jpg" width="250" height="188" align="left" />Wie real ist ein russischer Angriff auf Polen? Der polnische Politologe Wojciech Michnik hat sich auch privat auf den Ernstfall vorbereitet - und warnt vor einem deutschen Irrtum.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31391179/1791373213/Img_4_3/250/imago0852377706h.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Polizei prüft Internettrend: Horror-Katze versetzt Schüler in Angst und Schrecken</title>
+                <description>In sozialen Netzwerken verbreitet sich eine düstere Variante der Kinderbuchfigur &quot;Cat in the Hat&quot;. Zum Teil enthalten die Posts Drohungen und Namen von echten Personen und Schulen. In Hessen schaltet sich nun die Polizei ein.</description>
+                <link>https://www.n-tv.de/panorama/Internettrend-Horror-Katze-versetzt-Schueler-in-Angst-und-Schrecken-id31403255.html</link>
+                <guid>https://www.n-tv.de/panorama/Internettrend-Horror-Katze-versetzt-Schueler-in-Angst-und-Schrecken-id31403255.html</guid>
+                <category>Panorama</category>
+                <pubDate>Sat, 10 Oct 2026 12:32:36 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31403271/1791632113/Img_4_3/250/624183253.jpg" width="250" height="188" align="left" />In sozialen Netzwerken verbreitet sich eine düstere Variante der Kinderbuchfigur "Cat in the Hat". Zum Teil enthalten die Posts Drohungen und Namen von echten Personen und Schulen. In Hessen schaltet sich nun die Polizei ein.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31403271/1791632113/Img_4_3/250/624183253.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Mit Megareichweite: Modernere Optik und neue Elektrik für den Volvo XC60</title>
+                <description>Seinem Bestseller spendiert Volvo noch einmal ein Facelift und macht den Plug-in-Hybrid mit bis zu 1200 Kilometern Reichweite zum Reiseriesen. Zweihundert davon soll er rein elektrisch zurücklegen können dank deutlich größerer Batterie.</description>
+                <link>https://www.n-tv.de/auto/Modernere-Optik-und-neue-Elektrik-fuer-den-Volvo-XC60-id31400962.html</link>
+                <guid>https://www.n-tv.de/auto/Modernere-Optik-und-neue-Elektrik-fuer-den-Volvo-XC60-id31400962.html</guid>
+                <category>Auto</category>
+                <pubDate>Sat, 10 Oct 2026 14:21:57 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31400944/1791555921/Img_4_3/250/Foto 1.jpg" width="250" height="188" align="left" />Seinem Bestseller spendiert Volvo noch einmal ein Facelift und macht den Plug-in-Hybrid mit bis zu 1200 Kilometern Reichweite zum Reiseriesen. Zweihundert davon soll er rein elektrisch zurücklegen können dank deutlich größerer Batterie.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31400944/1791555921/Img_4_3/250/Foto 1.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Star beim BVB und auf Schalke: Der traurige Tod eines Wunderkindes mitten aus dem Revier</title>
+                <description>Reinhard &quot;Stan&quot; Libuda hatte das große Talent, die Zuschauer in den Stadien in seinen Bann zu ziehen. Die Fans von Schalke und dem BVB liebten ihn gleichermaßen. Doch das Glück, das er auf dem Rasen fand, verließ ihn im wahren Leben.</description>
+                <link>https://www.n-tv.de/sport/fussball/redelings_nachspielzeit/Der-traurige-Tod-eines-Wunderkindes-mitten-aus-dem-Revier-id31394826.html</link>
+                <guid>https://www.n-tv.de/sport/fussball/redelings_nachspielzeit/Der-traurige-Tod-eines-Wunderkindes-mitten-aus-dem-Revier-id31394826.html</guid>
+                <category>Sport</category>
+                <pubDate>Sat, 10 Oct 2026 08:05:57 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31394859/1791449119/Img_4_3/250/imago0004881229h.jpg" width="250" height="188" align="left" />Reinhard "Stan" Libuda hatte das große Talent, die Zuschauer in den Stadien in seinen Bann zu ziehen. Die Fans von Schalke und dem BVB liebten ihn gleichermaßen. Doch das Glück, das er auf dem Rasen fand, verließ ihn im wahren Leben.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31394859/1791449119/Img_4_3/250/imago0004881229h.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>&quot;Ich hätte ihn bekommen müssen&quot;: Trump nennt Friedensnobelpreisvergabe &quot;schändlich&quot;</title>
+                <description>Dem Nobelkomitee in Oslo stellt Trump die denkbar schlechteste Note aus: Die Wahl der früheren Den Haager Richterin Pillay werde einen &quot;Fleck&quot; hinterlassen. Der US-Präsident erklärt zugleich, wer den Friedensnobelpreis eigentlich verdient hätte. </description>
+                <link>https://www.n-tv.de/politik/Trump-nennt-Friedensnobelpreisvergabe-schaendlich-id31402780.html</link>
+                <guid>https://www.n-tv.de/politik/Trump-nennt-Friedensnobelpreisvergabe-schaendlich-id31402780.html</guid>
+                <category>Politik</category>
+                <pubDate>Sat, 10 Oct 2026 05:43:52 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402789/1791610928/Img_4_3/250/AP26283074060285.jpg" width="250" height="188" align="left" />Dem Nobelkomitee in Oslo stellt Trump die denkbar schlechteste Note aus: Die Wahl der früheren Den Haager Richterin Pillay werde einen "Fleck" hinterlassen. Der US-Präsident erklärt zugleich, wer den Friedensnobelpreis eigentlich verdient hätte. ]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402789/1791610928/Img_4_3/250/AP26283074060285.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>&quot;Ermittlungen&quot; abgeschlossen: Russland will deutschen Journalisten in Abwesenheit anklagen</title>
+                <description>Im August fragt ein deutscher Journalist bei einer Pressekonferenz in Belgrad, wie Europa der Ukraine helfen könne, &quot;mehr russische Soldaten zu töten&quot;. Der FAZ-Korrespondent wird daraufhin &quot;in Abwesenheit festgenommen&quot;. Nun erfolgt die Anklage.</description>
+                <link>https://www.n-tv.de/politik/Russland-will-deutschen-Journalisten-in-Abwesenheit-anklagen-id31403444.html</link>
+                <guid>https://www.n-tv.de/politik/Russland-will-deutschen-Journalisten-in-Abwesenheit-anklagen-id31403444.html</guid>
+                <category>Politik</category>
+                <pubDate>Sat, 10 Oct 2026 13:19:35 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31403440/1791637372/Img_4_3/250/612009452.jpg" width="250" height="188" align="left" />Im August fragt ein deutscher Journalist bei einer Pressekonferenz in Belgrad, wie Europa der Ukraine helfen könne, "mehr russische Soldaten zu töten". Der FAZ-Korrespondent wird daraufhin "in Abwesenheit festgenommen". Nun erfolgt die Anklage.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31403440/1791637372/Img_4_3/250/612009452.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>&quot;Dank für Ende der Sanktionen&quot;: Massiver Angriff direkt nach Diesel-Deal - Ukraine beklagt 15 Tote</title>
+                <description>US-Präsident Trump verkündet, wieder russischen Diesel kaufen zu wollen. Direkt im Anschluss attackiert Russland 13 Regionen in der Ukraine. Moskau meldet seinerseits 560 ukrainische Drohnen.</description>
+                <link>https://www.n-tv.de/politik/Massiver-Angriff-direkt-nach-Diesel-Deal-Ukraine-beklagt-15-Tote-id31403522.html</link>
+                <guid>https://www.n-tv.de/politik/Massiver-Angriff-direkt-nach-Diesel-Deal-Ukraine-beklagt-15-Tote-id31403522.html</guid>
+                <category>Politik</category>
+                <pubDate>Sat, 10 Oct 2026 14:21:49 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31403572/1791640366/Img_4_3/250/image.jpg" width="250" height="188" align="left" />US-Präsident Trump verkündet, wieder russischen Diesel kaufen zu wollen. Direkt im Anschluss attackiert Russland 13 Regionen in der Ukraine. Moskau meldet seinerseits 560 ukrainische Drohnen.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31403572/1791640366/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Stolperfalle Treppenstufe: Herbert Reul meldet sich nach Hüft-OP zu Wort</title>
+                <description>Keine zwölf Stunden nach seinem Sturz auf der Treppe ist die Hüfte von Herbert Reul &quot;repariert&quot;. Der NRW-Innenminister bedankt sich beim Klinikpersonal und kündigt hartes Training an. Größere Termine muss der CDU-Mann vorerst streichen - ausgerechnet jetzt.</description>
+                <link>https://www.n-tv.de/politik/Herbert-Reul-meldet-sich-nach-Hueft-OP-zu-Wort-id31403420.html</link>
+                <guid>https://www.n-tv.de/politik/Herbert-Reul-meldet-sich-nach-Hueft-OP-zu-Wort-id31403420.html</guid>
+                <category>Politik</category>
+                <pubDate>Sat, 10 Oct 2026 13:17:04 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31403425/1791636820/Img_4_3/250/616437190.jpg" width="250" height="188" align="left" />Keine zwölf Stunden nach seinem Sturz auf der Treppe ist die Hüfte von Herbert Reul "repariert". Der NRW-Innenminister bedankt sich beim Klinikpersonal und kündigt hartes Training an. Größere Termine muss der CDU-Mann vorerst streichen - ausgerechnet jetzt.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31403425/1791636820/Img_4_3/250/616437190.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>McLaren-Aufreger in Singapur: Verstappen behält im Chaos-Sprint die Nerven, Russell crasht sich raus</title>
+                <description>Auch in Singapur wirbelt das Wetter die Pläne der Formel 1 durcheinander. Das Sprintrennen beginnt mit Verspätung. In Führung liegend wirft George Russell seinen Mercedes weg, Max Verstappen profitiert. Für Aufregung sorgen die beiden McLaren-Piloten. </description>
+                <link>https://www.n-tv.de/sport/formel1/Verstappen-behaelt-im-Chaos-Sprint-die-Nerven-Russell-crasht-sich-raus-id31403349.html</link>
+                <guid>https://www.n-tv.de/sport/formel1/Verstappen-behaelt-im-Chaos-Sprint-die-Nerven-Russell-crasht-sich-raus-id31403349.html</guid>
+                <category>Sport</category>
+                <pubDate>Sat, 10 Oct 2026 13:16:07 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31403316/1791633633/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Auch in Singapur wirbelt das Wetter die Pläne der Formel 1 durcheinander. Das Sprintrennen beginnt mit Verspätung. In Führung liegend wirft George Russell seinen Mercedes weg, Max Verstappen profitiert. Für Aufregung sorgen die beiden McLaren-Piloten. ]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31403316/1791633633/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Zwei Tote bei Waffenkontrolle: Täter von Berngau war früher Polizist in Ausbildung</title>
+                <description>Die bayerische Gemeinde Berngau steht unter Schock. Der 60-Jährige, der zwei Behördenmitarbeiter erschoss, als sie seine Waffen kontrollieren wollten, war vor Ort kein Unbekannter.</description>
+                <link>https://www.n-tv.de/panorama/Taeter-von-Berngau-war-frueher-Polizist-in-Ausbildung-id31402847.html</link>
+                <guid>https://www.n-tv.de/panorama/Taeter-von-Berngau-war-frueher-Polizist-in-Ausbildung-id31402847.html</guid>
+                <category>Panorama</category>
+                <pubDate>Sat, 10 Oct 2026 12:36:00 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402873/1791615593/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Die bayerische Gemeinde Berngau steht unter Schock. Der 60-Jährige, der zwei Behördenmitarbeiter erschoss, als sie seine Waffen kontrollieren wollten, war vor Ort kein Unbekannter.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402873/1791615593/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Lüge, Verrat, Schuld, Schmerz: &quot;Happy Weekend&quot; mit dem Mechaniker des Todes</title>
+                <description>Ein Knacken, ein Splittern, ein unmenschlicher Schrei: Für den &quot;Mechaniker des Todes&quot; ist das Musik in seinen Ohren. Er will Rache am Mörder seines &quot;Förderers&quot;. Der ins Visier Genommene ahnt nichts, plant vielmehr ein &quot;Happy Weekend&quot; samt Verlobung. Dank Arno Strobel kommt es anders.</description>
+                <link>https://www.n-tv.de/leute/hoerbuecher/Happy-Weekend-mit-dem-Mechaniker-des-Todes-id31361455.html</link>
+                <guid>https://www.n-tv.de/leute/hoerbuecher/Happy-Weekend-mit-dem-Mechaniker-des-Todes-id31361455.html</guid>
+                <category>Unterhaltung</category>
+                <pubDate>Sat, 10 Oct 2026 12:31:47 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31363373/1790754327/Img_4_3/250/537011897.jpg" width="250" height="188" align="left" />Ein Knacken, ein Splittern, ein unmenschlicher Schrei: Für den "Mechaniker des Todes" ist das Musik in seinen Ohren. Er will Rache am Mörder seines "Förderers". Der ins Visier Genommene ahnt nichts, plant vielmehr ein "Happy Weekend" samt Verlobung. Dank Arno Strobel kommt es anders.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31363373/1790754327/Img_4_3/250/537011897.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Atemnot-Risiko bei Qualzucht: Hunde zahlen schmerzhaften Preis für Niedlichkeit</title>
+                <description>Kurze Schnauzen, besondere Fellfarben oder Falten: Was für Menschen niedlich aussieht, kann für Hunde zur gesundheitlichen Belastung werden. Solche Äußerlichkeiten sind oft mit Schmerz verbunden.</description>
+                <link>https://www.n-tv.de/panorama/Hunde-zahlen-schmerzhaften-Preis-fuer-Niedlichkeit-id31380832.html</link>
+                <guid>https://www.n-tv.de/panorama/Hunde-zahlen-schmerzhaften-Preis-fuer-Niedlichkeit-id31380832.html</guid>
+                <category>Panorama</category>
+                <pubDate>Sat, 10 Oct 2026 11:19:02 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31380875/1791193113/Img_4_3/250/Zwei Möpse blicken in die Kamera des Fotografen.jpg" width="250" height="188" align="left" />Kurze Schnauzen, besondere Fellfarben oder Falten: Was für Menschen niedlich aussieht, kann für Hunde zur gesundheitlichen Belastung werden. Solche Äußerlichkeiten sind oft mit Schmerz verbunden.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31380875/1791193113/Img_4_3/250/Zwei Möpse blicken in die Kamera des Fotografen.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Eklat in LaLiga: Spanische Fans wünschen Bayern-Leihgabe Zaragoza den Tod</title>
+                <description>Bryan Zaragoza gelingt gegen sein Heimatteam in Málaga ein sehenswerter Treffer. Kurz darauf folgt die verbale Eskalation auf den Rängen. Zu hören sind skandalöse Rufe. </description>
+                <link>https://www.n-tv.de/sport/fussball/Spanische-Fans-wuenschen-Bayern-Leihgabe-Zaragoza-den-Tod-id31402997.html</link>
+                <guid>https://www.n-tv.de/sport/fussball/Spanische-Fans-wuenschen-Bayern-Leihgabe-Zaragoza-den-Tod-id31402997.html</guid>
+                <category>Sport</category>
+                <pubDate>Sat, 10 Oct 2026 10:06:04 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402919/1791623475/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Bryan Zaragoza gelingt gegen sein Heimatteam in Málaga ein sehenswerter Treffer. Kurz darauf folgt die verbale Eskalation auf den Rängen. Zu hören sind skandalöse Rufe. ]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402919/1791623475/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>&quot;She&apos;ll Never Be Me&quot;: Britney Spears veröffentlicht neuen alten Song</title>
+                <description>Drei Jahre lang ist es still um Britney Spears. Nun erscheint überraschend &quot;She&apos;ll Never Be Me&quot; - ein Song aus den Archiven des Jahres 2001. Vier weitere unveröffentlichte Titel sollen bald folgen.</description>
+                <link>https://www.n-tv.de/leute/Britney-Spears-veroeffentlicht-neuen-alten-Song-id31403438.html</link>
+                <guid>https://www.n-tv.de/leute/Britney-Spears-veroeffentlicht-neuen-alten-Song-id31403438.html</guid>
+                <category>Unterhaltung</category>
+                <pubDate>Sat, 10 Oct 2026 14:21:26 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31403553/1791640022/Img_4_3/250/421460134.jpg" width="250" height="188" align="left" />Drei Jahre lang ist es still um Britney Spears. Nun erscheint überraschend "She'll Never Be Me" - ein Song aus den Archiven des Jahres 2001. Vier weitere unveröffentlichte Titel sollen bald folgen.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31403553/1791640022/Img_4_3/250/421460134.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Heimkehr mit Misstönen: Prinz Harry erntet Buhrufe bei Rugby-Spiel</title>
+                <description>Vor einigen Wochen zieht Prinz Harry mit Kind und Kegel in die Heimat zurück. In Leicester verfolgt der Royal nun ein Rugby-Spiel. Als er auf dem Stadionbildschirm zu sehen ist, zeigen einige Fans ziemlich deutlich, was sie von seiner Rückkehr halten.</description>
+                <link>https://www.n-tv.de/leute/Prinz-Harry-erntet-Buhrufe-bei-Rugby-Spiel-id31403089.html</link>
+                <guid>https://www.n-tv.de/leute/Prinz-Harry-erntet-Buhrufe-bei-Rugby-Spiel-id31403089.html</guid>
+                <category>Unterhaltung</category>
+                <pubDate>Sat, 10 Oct 2026 11:18:26 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31403113/1791640066/Img_4_3/250/605995328.jpg" width="250" height="188" align="left" />Vor einigen Wochen zieht Prinz Harry mit Kind und Kegel in die Heimat zurück. In Leicester verfolgt der Royal nun ein Rugby-Spiel. Als er auf dem Stadionbildschirm zu sehen ist, zeigen einige Fans ziemlich deutlich, was sie von seiner Rückkehr halten.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31403113/1791640066/Img_4_3/250/605995328.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Indien will Großdemo stoppen: Kakerlaken-Bewegung meldet Festnahme ihres Gründers</title>
+                <description>Die indische Polizei fordert Regierungskritiker auf, eine Großdemonstration abzusagen. Diese soll mit allen Mitteln verhindert werden: Zehntausende Polizisten und paramilitärische Kräfte werden in die Hauptstadt geschickt, Tausende Menschen festgenommen, Straßen und Internet gesperrt.  </description>
+                <link>https://www.n-tv.de/politik/Kakerlaken-Bewegung-meldet-Festnahme-ihres-Gruenders-id31403256.html</link>
+                <guid>https://www.n-tv.de/politik/Kakerlaken-Bewegung-meldet-Festnahme-ihres-Gruenders-id31403256.html</guid>
+                <category>Politik</category>
+                <pubDate>Sat, 10 Oct 2026 12:33:14 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31403289/1791632749/Img_4_3/250/621308149.jpg" width="250" height="188" align="left" />Die indische Polizei fordert Regierungskritiker auf, eine Großdemonstration abzusagen. Diese soll mit allen Mitteln verhindert werden: Zehntausende Polizisten und paramilitärische Kräfte werden in die Hauptstadt geschickt, Tausende Menschen festgenommen, Straßen und Internet gesperrt.  ]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31403289/1791632749/Img_4_3/250/621308149.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Im Alter von 63 Jahren: L&apos;Osteria-Gründer stirbt bei Rallye-Unfall auf Mallorca</title>
+                <description>Vom jüngsten McDonald’s-Franchisenehmer Deutschlands zum Mitgründer zweier großer Restaurantketten: Klaus Rader prägte die Systemgastronomie. Nun ist der Unternehmer bei einer Rallye auf Mallorca tödlich verunglückt.</description>
+                <link>https://www.n-tv.de/wirtschaft/L-Osteria-Gruender-Klaus-Rader-stirbt-bei-Rallye-Unfall-auf-Mallorca-id31401978.html</link>
+                <guid>https://www.n-tv.de/wirtschaft/L-Osteria-Gruender-Klaus-Rader-stirbt-bei-Rallye-Unfall-auf-Mallorca-id31401978.html</guid>
+                <category>Wirtschaft</category>
+                <pubDate>Fri, 09 Oct 2026 18:06:25 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402016/1791568742/Img_4_3/250/110625982.jpg" width="250" height="188" align="left" />Vom jüngsten McDonald’s-Franchisenehmer Deutschlands zum Mitgründer zweier großer Restaurantketten: Klaus Rader prägte die Systemgastronomie. Nun ist der Unternehmer bei einer Rallye auf Mallorca tödlich verunglückt.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402016/1791568742/Img_4_3/250/110625982.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>&quot;Unfassbares Privileg&quot;: Dreifach-Weltmeister Lange sehnt sich ein letztes Mal nach brutaler Quälerei </title>
+                <description>Noch einmal Hawaii, noch einmal Sehnsuchtsort. Patrick Lange startet zum letzten Mal bei der Ironman-Weltmeisterschaft. Im Mekka derjenigen, die sich ganz besonders quälen können. Zu den Topfavoriten gehört er nicht - eine Deutsche aber schon. </description>
+                <link>https://www.n-tv.de/sport/Dreifach-Weltmeister-Lange-sehnt-sich-ein-letztes-Mal-nach-brutaler-Quaelerei-id31395272.html</link>
+                <guid>https://www.n-tv.de/sport/Dreifach-Weltmeister-Lange-sehnt-sich-ein-letztes-Mal-nach-brutaler-Quaelerei-id31395272.html</guid>
+                <category>Sport</category>
+                <pubDate>Sat, 10 Oct 2026 10:45:01 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31395275/1791455424/Img_4_3/250/490015979.jpg" width="250" height="188" align="left" />Noch einmal Hawaii, noch einmal Sehnsuchtsort. Patrick Lange startet zum letzten Mal bei der Ironman-Weltmeisterschaft. Im Mekka derjenigen, die sich ganz besonders quälen können. Zu den Topfavoriten gehört er nicht - eine Deutsche aber schon. ]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31395275/1791455424/Img_4_3/250/490015979.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Eine Gruppe besonders betroffen: Dauerkrise hinterlässt Spuren in der Psyche</title>
+                <description>Pandemie, Kriege, Inflation: Die Krisen der vergangenen Jahre schlagen auf die Psyche vieler Menschen. Besonders belastet fühlen sich die Jüngeren. Was heißt das - auch für die Prävention?</description>
+                <link>https://www.n-tv.de/panorama/Dauerkrise-hinterlaesst-Spuren-in-der-Psyche-id31380309.html</link>
+                <guid>https://www.n-tv.de/panorama/Dauerkrise-hinterlaesst-Spuren-in-der-Psyche-id31380309.html</guid>
+                <category>Panorama</category>
+                <pubDate>Sat, 10 Oct 2026 10:05:13 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31380319/1791185051/Img_4_3/250/Psychische Belastung nimmt in Deutschland zu.jpg" width="250" height="188" align="left" />Pandemie, Kriege, Inflation: Die Krisen der vergangenen Jahre schlagen auf die Psyche vieler Menschen. Besonders belastet fühlen sich die Jüngeren. Was heißt das - auch für die Prävention?]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31380319/1791185051/Img_4_3/250/Psychische Belastung nimmt in Deutschland zu.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Ärger in Ohio : Nachbarn von Taylor Swift und Travis Kelce wehren sich gegen Umbau </title>
+                <description>Ein hoher Zaun, zahlreiche Bäume und die Sorge vor verstopften Abwasserrohren: Die Umbaupläne von Taylor Swift und Travis Kelce für ihr luxuriöses Anwesen in Ohio sorgen bei den Nachbarn für Unmut. </description>
+                <link>https://www.n-tv.de/leute/Nachbarn-von-Taylor-Swift-und-Travis-Kelce-wehren-sich-gegen-Umbau-id31402527.html</link>
+                <guid>https://www.n-tv.de/leute/Nachbarn-von-Taylor-Swift-und-Travis-Kelce-wehren-sich-gegen-Umbau-id31402527.html</guid>
+                <category>Unterhaltung</category>
+                <pubDate>Sat, 10 Oct 2026 00:15:33 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31187398/1788381679/Img_4_3/250/imago760569287.jpg" width="250" height="188" align="left" />Ein hoher Zaun, zahlreiche Bäume und die Sorge vor verstopften Abwasserrohren: Die Umbaupläne von Taylor Swift und Travis Kelce für ihr luxuriöses Anwesen in Ohio sorgen bei den Nachbarn für Unmut. ]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31187398/1788381679/Img_4_3/250/imago760569287.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Von Mäusen, Enten und Monstern: Fünf Autos mit tierischen Spitznamen</title>
+                <description>Ente, Käfer oder Mäuschen: Manche Autos sind unter ihrem tierischen Spitznamen bekannter geworden als unter ihrer eigentlichen Modellbezeichnung. Und nicht alles sind liebevolle Kosenamen. Fünf Beispiele.</description>
+                <link>https://www.n-tv.de/auto/Fuenf-Autos-mit-tierischen-Spitznamen-id31386948.html</link>
+                <guid>https://www.n-tv.de/auto/Fuenf-Autos-mit-tierischen-Spitznamen-id31386948.html</guid>
+                <category>Auto</category>
+                <pubDate>Sat, 10 Oct 2026 10:13:21 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31387031/1791290864/Img_4_3/250/268053697.jpg" width="250" height="188" align="left" />Ente, Käfer oder Mäuschen: Manche Autos sind unter ihrem tierischen Spitznamen bekannter geworden als unter ihrer eigentlichen Modellbezeichnung. Und nicht alles sind liebevolle Kosenamen. Fünf Beispiele.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31387031/1791290864/Img_4_3/250/268053697.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>&quot;Chance genutzt&quot;: Matchwinnerin Kössler macht&apos;s wie Thomas Müller</title>
+                <description>Doppeltorschützin Melina Kessler nutzt ihre Chance und überzeugt beim Sieg gegen Australien Bundestrainer Christian Wück. Beobachter erinnert sie an eine deutsche Sturm-Ikone, die auch ihr Idol ist. </description>
+                <link>https://www.n-tv.de/sport/fussball/Matchwinnerin-Koessler-macht-s-wie-Thomas-Mueller-id31402849.html</link>
+                <guid>https://www.n-tv.de/sport/fussball/Matchwinnerin-Koessler-macht-s-wie-Thomas-Mueller-id31402849.html</guid>
+                <category>Sport</category>
+                <pubDate>Sat, 10 Oct 2026 09:08:47 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402852/1791613992/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Doppeltorschützin Melina Kessler nutzt ihre Chance und überzeugt beim Sieg gegen Australien Bundestrainer Christian Wück. Beobachter erinnert sie an eine deutsche Sturm-Ikone, die auch ihr Idol ist. ]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402852/1791613992/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>&quot;Muss Geschichte sein&quot;: CSU-Vize Weber sieht Brandmauer als &quot;Riesenbelastung&quot; für die Union</title>
+                <description>Der Schock über die herben Wahlniederlagen der CDU sitzt in der Union tief. CSU-Vize Manfred Weber sieht den Grund dafür in der eigenen Abgrenzungslinie zur AfD. Er fordert ein Ende der Brandmauer. Thüringens Ministerpräsident Mario Voigt setzt dagegen auf Inhalte.</description>
+                <link>https://www.n-tv.de/politik/CSU-Vize-Weber-sieht-Brandmauer-als-Riesenbelastung-fuer-die-Union-id31402878.html</link>
+                <guid>https://www.n-tv.de/politik/CSU-Vize-Weber-sieht-Brandmauer-als-Riesenbelastung-fuer-die-Union-id31402878.html</guid>
+                <category>Politik</category>
+                <pubDate>Sat, 10 Oct 2026 08:13:26 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402896/1791616699/Img_4_3/250/622249639.jpg" width="250" height="188" align="left" />Der Schock über die herben Wahlniederlagen der CDU sitzt in der Union tief. CSU-Vize Manfred Weber sieht den Grund dafür in der eigenen Abgrenzungslinie zur AfD. Er fordert ein Ende der Brandmauer. Thüringens Ministerpräsident Mario Voigt setzt dagegen auf Inhalte.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402896/1791616699/Img_4_3/250/622249639.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Wieduwilts Woche: Niemand hat die Absicht, den Juden an den Kragen zu gehen</title>
+                <description>In Berlin ballt sich ein Linksbündnis mit Toleranz für Judenhass zusammen - und in Sachsen-Anhalt wählen mutmaßlich CDU-Abgeordnete einen AfDler zum Landtagspräsidenten. Vielleicht hilft&apos;s ja, zu singen!</description>
+                <link>https://www.n-tv.de/politik/politik_wieduwilts_woche/Niemand-hat-die-Absicht-den-Juden-an-den-Kragen-zu-gehen-id31401734.html</link>
+                <guid>https://www.n-tv.de/politik/politik_wieduwilts_woche/Niemand-hat-die-Absicht-den-Juden-an-den-Kragen-zu-gehen-id31401734.html</guid>
+                <category>Politik</category>
+                <pubDate>Sat, 10 Oct 2026 06:37:27 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31401710/1791564226/Img_4_3/250/image.jpg" width="250" height="188" align="left" />In Berlin ballt sich ein Linksbündnis mit Toleranz für Judenhass zusammen - und in Sachsen-Anhalt wählen mutmaßlich CDU-Abgeordnete einen AfDler zum Landtagspräsidenten. Vielleicht hilft's ja, zu singen!]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31401710/1791564226/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>&quot;Nicht fair und nicht ehrlich&quot;: Selenskyj zürnt über Trumps Diesel-Deal mit Putin</title>
+                <description>Vor den Zwischenwahlen treibt der Iran-Krieg die Spritpreise in den USA auf Rekordhöhen. Putin nutzt Trumps Zwangslage aus und verspricht Washington russische Diesel-Lieferungen in großem Umfang. Für den ukrainischen Präsidenten Selenskyj ein herber Rückschlag. </description>
+                <link>https://www.n-tv.de/politik/Selenskyj-zuernt-ueber-Trumps-Diesel-Deal-mit-Putin-id31402545.html</link>
+                <guid>https://www.n-tv.de/politik/Selenskyj-zuernt-ueber-Trumps-Diesel-Deal-mit-Putin-id31402545.html</guid>
+                <category>Politik</category>
+                <pubDate>Sat, 10 Oct 2026 01:37:51 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402546/1791595423/Img_4_3/250/623205550.jpg" width="250" height="188" align="left" />Vor den Zwischenwahlen treibt der Iran-Krieg die Spritpreise in den USA auf Rekordhöhen. Putin nutzt Trumps Zwangslage aus und verspricht Washington russische Diesel-Lieferungen in großem Umfang. Für den ukrainischen Präsidenten Selenskyj ein herber Rückschlag. ]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402546/1791595423/Img_4_3/250/623205550.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Ehrlicherer Name in Europa: Tesla nennt Fahrassistent nicht mehr selbstfahrend</title>
+                <description>Kunden in europäischen Ländern verspricht Tesla vorerst keine autonomen Autos mehr, sondern nur noch ein Fahrassistenzsystem. Es ist bereits das zweite Mal, dass der Autobauer seine umstrittene Technik umbenennt.</description>
+                <link>https://www.n-tv.de/wirtschaft/Tesla-nennt-Fahrassistent-nicht-mehr-selbstfahrend-id31403052.html</link>
+                <guid>https://www.n-tv.de/wirtschaft/Tesla-nennt-Fahrassistent-nicht-mehr-selbstfahrend-id31403052.html</guid>
+                <category>Wirtschaft</category>
+                <pubDate>Sat, 10 Oct 2026 10:49:58 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31403095/1791626518/Img_4_3/250/583903676 (1).jpg" width="250" height="188" align="left" />Kunden in europäischen Ländern verspricht Tesla vorerst keine autonomen Autos mehr, sondern nur noch ein Fahrassistenzsystem. Es ist bereits das zweite Mal, dass der Autobauer seine umstrittene Technik umbenennt.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31403095/1791626518/Img_4_3/250/583903676 (1).jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>&quot;Ausnahmen abschaffen&quot;: Ökonomen fordern Ende der Steuervorteile für Firmenerben</title>
+                <description>Bei Betriebsvermögen gelten weitreichende Ausnahmen von der Erbschaftsteuer. Die Sorge, Unternehmen könnten andernfalls aufgegeben werden, halten Topökonomen für unangebracht. In wenigen Tagen verhandelt das Bundesverfassungsgericht über die Privilegien.</description>
+                <link>https://www.n-tv.de/wirtschaft/Oekonomen-fordern-Ende-der-Steuervorteile-fuer-Firmenerben-id31402940.html</link>
+                <guid>https://www.n-tv.de/wirtschaft/Oekonomen-fordern-Ende-der-Steuervorteile-fuer-Firmenerben-id31402940.html</guid>
+                <category>Wirtschaft</category>
+                <pubDate>Sat, 10 Oct 2026 09:07:45 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402995/1791622262/Img_4_3/250/601684793.jpg" width="250" height="188" align="left" />Bei Betriebsvermögen gelten weitreichende Ausnahmen von der Erbschaftsteuer. Die Sorge, Unternehmen könnten andernfalls aufgegeben werden, halten Topökonomen für unangebracht. In wenigen Tagen verhandelt das Bundesverfassungsgericht über die Privilegien.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402995/1791622262/Img_4_3/250/601684793.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Mitschuldig an Erderwärmung?: Brasiliens Staatsanwaltschaft verklagt Shell wegen Flutkatastrophe</title>
+                <description>Im Bundesstaat Rio Grande do Sul müssen 2024 eine halbe Million Menschen vor dem verheerenden Hochwasser fliehen, fast 200 sterben. Brasiliens Staatsanwaltschaft sieht den britischen Ölkonzern Shell mitschuldig und fordert nun 108 Millionen Euro. Auch anderswo häufen sich Klagen gegen Energieriesen.</description>
+                <link>https://www.n-tv.de/wirtschaft/Brasiliens-Staatsanwaltschaft-verklagt-Shell-wegen-Flutkatastrophe-id31402931.html</link>
+                <guid>https://www.n-tv.de/wirtschaft/Brasiliens-Staatsanwaltschaft-verklagt-Shell-wegen-Flutkatastrophe-id31402931.html</guid>
+                <category>Wirtschaft</category>
+                <pubDate>Sat, 10 Oct 2026 10:05:38 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402938/1791619710/Img_4_3/250/461983675.jpg" width="250" height="188" align="left" />Im Bundesstaat Rio Grande do Sul müssen 2024 eine halbe Million Menschen vor dem verheerenden Hochwasser fliehen, fast 200 sterben. Brasiliens Staatsanwaltschaft sieht den britischen Ölkonzern Shell mitschuldig und fordert nun 108 Millionen Euro. Auch anderswo häufen sich Klagen gegen Energieriesen.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402938/1791619710/Img_4_3/250/461983675.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Und bald wieder fürs DFB-Team?: &quot;Champions-League-Fülle&quot; kann sich Jubel einfach &quot;nicht verkneifen&quot;</title>
+                <description>Ausgerechnet der frühere Dortmunder Niclas Füllkrug schockt den BVB in der Nachspielzeit. Sein Tor feiert der Werder-Stürmer ausgiebig. Beim Thema Nationalelf ist der Angreifer aber deutlich zurückhaltender. </description>
+                <link>https://www.n-tv.de/sport/fussball/Champions-League-Fuelle-kann-sich-Jubel-einfach-nicht-verkneifen-id31402842.html</link>
+                <guid>https://www.n-tv.de/sport/fussball/Champions-League-Fuelle-kann-sich-Jubel-einfach-nicht-verkneifen-id31402842.html</guid>
+                <category>Sport</category>
+                <pubDate>Sat, 10 Oct 2026 06:35:14 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402795/1791622124/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Ausgerechnet der frühere Dortmunder Niclas Füllkrug schockt den BVB in der Nachspielzeit. Sein Tor feiert der Werder-Stürmer ausgiebig. Beim Thema Nationalelf ist der Angreifer aber deutlich zurückhaltender. ]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402795/1791622124/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Wie geht die Formel 1 damit um?: Nun legt auch noch Smog einen Schatten auf das Extrem-Rennen </title>
+                <description>Extreme Hitze, hohe Luftfeuchtigkeit - und gesundheitsgefährdender Smog: In Singapur sind die klimatischen Bedingungen alles andere als ideal. Erst recht für Formel-1-Fahrer. Das Rennwochenende verlangt ihnen alles ab. </description>
+                <link>https://www.n-tv.de/sport/formel1/Nun-legt-auch-noch-Smog-einen-Schatten-auf-das-Extrem-Rennen-id31400439.html</link>
+                <guid>https://www.n-tv.de/sport/formel1/Nun-legt-auch-noch-Smog-einen-Schatten-auf-das-Extrem-Rennen-id31400439.html</guid>
+                <category>Sport</category>
+                <pubDate>Sat, 10 Oct 2026 06:10:10 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31400460/1791550184/Img_4_3/250/624048343.jpg" width="250" height="188" align="left" />Extreme Hitze, hohe Luftfeuchtigkeit - und gesundheitsgefährdender Smog: In Singapur sind die klimatischen Bedingungen alles andere als ideal. Erst recht für Formel-1-Fahrer. Das Rennwochenende verlangt ihnen alles ab. ]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31400460/1791550184/Img_4_3/250/624048343.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Sieg zum Start in WM-Saison: Doppelpackerin Kössler lässt DFB-Frauen jubeln</title>
+                <description>Das DFB-Team der Frauen startet mit einem Sieg in die WM-Saison. Gegen Australien überzeugt eine neue Goalgetterin. In der Schlussphase klingelt es hüben wie drüben.</description>
+                <link>https://www.n-tv.de/sport/fussball/Doppelpackerin-Koessler-laesst-DFB-Frauen-jubeln-id31402473.html</link>
+                <guid>https://www.n-tv.de/sport/fussball/Doppelpackerin-Koessler-laesst-DFB-Frauen-jubeln-id31402473.html</guid>
+                <category>Sport</category>
+                <pubDate>Fri, 09 Oct 2026 22:35:58 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402455/1791584331/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Das DFB-Team der Frauen startet mit einem Sieg in die WM-Saison. Gegen Australien überzeugt eine neue Goalgetterin. In der Schlussphase klingelt es hüben wie drüben.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402455/1791584331/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Bis zur 88. Minute alles klar: Niclas Füllkrug schockt blitz-kollabierenden BVB</title>
+                <description>Nächster Werder-Wahnsinn in Dortmund: Bis zur 85. Minute liegt Bremen beim BVB hinten und verdient sich doch noch einen Punkt. Matchwinner wird ausgerechnet Niclas Füllkrug.</description>
+                <link>https://www.n-tv.de/sport/fussball/Niclas-Fuellkrug-schockt-blitz-kollabierenden-BVB-id31402250.html</link>
+                <guid>https://www.n-tv.de/sport/fussball/Niclas-Fuellkrug-schockt-blitz-kollabierenden-BVB-id31402250.html</guid>
+                <category>Sport</category>
+                <pubDate>Fri, 09 Oct 2026 22:30:01 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402478/1791585834/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Nächster Werder-Wahnsinn in Dortmund: Bis zur 85. Minute liegt Bremen beim BVB hinten und verdient sich doch noch einen Punkt. Matchwinner wird ausgerechnet Niclas Füllkrug.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402478/1791585834/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Altstar trifft nach Flucht: Saudische Fans schmieren Ronaldos Seele mit ganz viel Balsam ein</title>
+                <description>Wenigstens in Saudi-Arabien liegen sie dem zickenden Altstar Cristiano Ronaldo noch bedingungslos zu Füßen. Beim ersten Spiel nach seinem unrühmlichen Abgang von der portugiesischen Nationalmannschaft trifft CR7 - die Fans huldigen dem Altstar.  </description>
+                <link>https://www.n-tv.de/sport/fussball/Saudische-Fans-schmieren-Ronaldos-Seele-mit-ganz-viel-Balsam-ein-id31402447.html</link>
+                <guid>https://www.n-tv.de/sport/fussball/Saudische-Fans-schmieren-Ronaldos-Seele-mit-ganz-viel-Balsam-ein-id31402447.html</guid>
+                <category>Sport</category>
+                <pubDate>Fri, 09 Oct 2026 22:13:50 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402442/1791583624/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Wenigstens in Saudi-Arabien liegen sie dem zickenden Altstar Cristiano Ronaldo noch bedingungslos zu Füßen. Beim ersten Spiel nach seinem unrühmlichen Abgang von der portugiesischen Nationalmannschaft trifft CR7 - die Fans huldigen dem Altstar.  ]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402442/1791583624/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Immerhin einer jubelt: Herbst-Blues legt die 2. Fußball-Bundesliga schlafen</title>
+                <description>Die 2. Fußball-Bundesliga bietet nach der Länderspielpause erstmal ganz wenig Offensiv-Spektakel. Zum Auftakt des 7. Spieltags fällt ein mickriges Törchen. Zwei Aufstiegs-Aspiranten teilen sich brav die Punkte.</description>
+                <link>https://www.n-tv.de/sport/fussball/Herbst-Blues-legt-die-2-Fussball-Bundesliga-schlafen-id31402304.html</link>
+                <guid>https://www.n-tv.de/sport/fussball/Herbst-Blues-legt-die-2-Fussball-Bundesliga-schlafen-id31402304.html</guid>
+                <category>Sport</category>
+                <pubDate>Fri, 09 Oct 2026 20:25:08 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402298/1791576994/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Die 2. Fußball-Bundesliga bietet nach der Länderspielpause erstmal ganz wenig Offensiv-Spektakel. Zum Auftakt des 7. Spieltags fällt ein mickriges Törchen. Zwei Aufstiegs-Aspiranten teilen sich brav die Punkte.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402298/1791576994/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Brutale Aktion mit Folgen: Deutschlands Eishockey-Buhmann kehrt zurück</title>
+                <description>Nach seinem rücksichtslosen Check in den vergangenen DEL-Playoffs war Fabio Wagner der Buhmann des deutschen Eishockeys. Nun kehrt der Münchner nach abgelaufener Sperre zurück.</description>
+                <link>https://www.n-tv.de/sport/Deutschlands-Eishockey-Buhmann-kehrt-zurueck-id31402284.html</link>
+                <guid>https://www.n-tv.de/sport/Deutschlands-Eishockey-Buhmann-kehrt-zurueck-id31402284.html</guid>
+                <category>Sport</category>
+                <pubDate>Fri, 09 Oct 2026 21:19:32 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/4324009/1791584024/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Nach seinem rücksichtslosen Check in den vergangenen DEL-Playoffs war Fabio Wagner der Buhmann des deutschen Eishockeys. Nun kehrt der Münchner nach abgelaufener Sperre zurück.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/4324009/1791584024/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Er fürchtet um sein Leben: ManCity-Whistleblower doch weiterhin unter Polizeischutz</title>
+                <description>Ein Whistleblower bringt Manchester City in die Bredouille, soll jetzt aber aus einem Schutzprogramm fliegen - obwohl er um sein Leben fürchtet. Jetzt ändert sich die Situation.</description>
+                <link>https://www.n-tv.de/sport/fussball/ManCity-Whistleblower-doch-weiterhin-unter-Polizeischutz-id31402165.html</link>
+                <guid>https://www.n-tv.de/sport/fussball/ManCity-Whistleblower-doch-weiterhin-unter-Polizeischutz-id31402165.html</guid>
+                <category>Sport</category>
+                <pubDate>Fri, 09 Oct 2026 19:49:22 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/3301963/1791573352/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Ein Whistleblower bringt Manchester City in die Bredouille, soll jetzt aber aus einem Schutzprogramm fliegen - obwohl er um sein Leben fürchtet. Jetzt ändert sich die Situation.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/3301963/1791573352/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Pleite gegen Weltmeister Wagner: LeBron James legt im neuen Superteam los</title>
+                <description>Im zweiten Spiel der NBA-Vorbereitung gibt Basketball-Superstar LeBron James sein Debüt für die Philadelphia 76ers. Sein Trainer schwärmt bereits. Auf der anderen Seite macht ein deutscher Weltmeister auf sich aufmerksam.</description>
+                <link>https://www.n-tv.de/sport/LeBron-James-legt-im-neuen-Superteam-los-id31401706.html</link>
+                <guid>https://www.n-tv.de/sport/LeBron-James-legt-im-neuen-Superteam-los-id31401706.html</guid>
+                <category>Sport</category>
+                <pubDate>Fri, 09 Oct 2026 16:39:10 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31401696/1791563881/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Im zweiten Spiel der NBA-Vorbereitung gibt Basketball-Superstar LeBron James sein Debüt für die Philadelphia 76ers. Sein Trainer schwärmt bereits. Auf der anderen Seite macht ein deutscher Weltmeister auf sich aufmerksam.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31401696/1791563881/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Keine Strafe gegen Red-Bull-Star: Verstappen rast im nächsten Formel-1-Chaos auf Sprint-Pole</title>
+                <description>Nach dem Software-Fiasko von Malaysia erlebt die Formel 1 beim Sprintqualifying das nächste Chaos. Dieses Mal ticken die Uhren nicht richtig. Max Verstappen behält den Durchblick. Um seine Pole muss er aber erst noch zittern.</description>
+                <link>https://www.n-tv.de/sport/formel1/Verstappen-rast-im-naechsten-Formel-1-Chaos-auf-Sprint-Pole-id31401517.html</link>
+                <guid>https://www.n-tv.de/sport/formel1/Verstappen-rast-im-naechsten-Formel-1-Chaos-auf-Sprint-Pole-id31401517.html</guid>
+                <category>Sport</category>
+                <pubDate>Fri, 09 Oct 2026 16:20:13 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31401528/1791561822/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Nach dem Software-Fiasko von Malaysia erlebt die Formel 1 beim Sprintqualifying das nächste Chaos. Dieses Mal ticken die Uhren nicht richtig. Max Verstappen behält den Durchblick. Um seine Pole muss er aber erst noch zittern.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31401528/1791561822/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Sechs Tote bei Hilfeplangespräch: Waren die Morde von Stade ein Angriff auf den Staat?</title>
+                <description>Sechs Menschen sterben, als ein Kinderschutzfall in Stade zur Katastrophe wird. War es ein Sorgerechtsstreit - oder ein gezielter Angriff auf den Staat? Ein Sicherheitsexperte warnt vor einer unterschätzten Gefahr.</description>
+                <link>https://www.n-tv.de/panorama/Waren-die-Morde-von-Stade-ein-Angriff-auf-den-Staat-id31399037.html</link>
+                <guid>https://www.n-tv.de/panorama/Waren-die-Morde-von-Stade-ein-Angriff-auf-den-Staat-id31399037.html</guid>
+                <category>Panorama</category>
+                <pubDate>Sat, 10 Oct 2026 08:34:07 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31399058/1791530515/Img_4_3/250/604277189.jpg" width="250" height="188" align="left" />Sechs Menschen sterben, als ein Kinderschutzfall in Stade zur Katastrophe wird. War es ein Sorgerechtsstreit - oder ein gezielter Angriff auf den Staat? Ein Sicherheitsexperte warnt vor einer unterschätzten Gefahr.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31399058/1791530515/Img_4_3/250/604277189.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>13 Kinder in Brasilien befreit: Geiselnehmer in Kita von Polizei erschossen</title>
+                <description>Schwerbewaffnete Spezialkräfte befreien 13 Kindergartenkinder in Brasilien aus der Gewalt eines Geiselnehmers. Der Mann hatte sich mit den Kleinkindern in einem Raum verschanzt und drohte, die Kita in Brand zu stecken. </description>
+                <link>https://www.n-tv.de/panorama/Geiselnehmer-in-Kita-von-Polizei-erschossen-id31402703.html</link>
+                <guid>https://www.n-tv.de/panorama/Geiselnehmer-in-Kita-von-Polizei-erschossen-id31402703.html</guid>
+                <category>Panorama</category>
+                <pubDate>Sat, 10 Oct 2026 04:36:32 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31402712/1791606556/Img_4_3/250/AP21299788502287.jpg" width="250" height="188" align="left" />Schwerbewaffnete Spezialkräfte befreien 13 Kindergartenkinder in Brasilien aus der Gewalt eines Geiselnehmers. Der Mann hatte sich mit den Kleinkindern in einem Raum verschanzt und drohte, die Kita in Brand zu stecken. ]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31402712/1791606556/Img_4_3/250/AP21299788502287.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Grabung in Berlin: Archäologen legen DDR-Grenzübergang am Checkpoint Charlie frei</title>
+                <description>Jahrzehntelang liegen sie im Verborgenen. Nun stoßen Archäologen am früheren Checkpoint Charlie in Berlin auf Mauerteile und Fundamente der DDR-Grenztruppen. Zu sehen bekommen Besucher die Funde vorerst jedoch nicht.</description>
+                <link>https://www.n-tv.de/wissen/Archaeologen-legen-DDR-Grenzuebergang-am-Checkpoint-Charlie-frei-id31401638.html</link>
+                <guid>https://www.n-tv.de/wissen/Archaeologen-legen-DDR-Grenzuebergang-am-Checkpoint-Charlie-frei-id31401638.html</guid>
+                <category>Wissen</category>
+                <pubDate>Fri, 09 Oct 2026 19:16:45 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31401640/1791563302/Img_4_3/250/Fundament der Führungsstelle der DDR-Grenztruppen aus den Jahren 1985 bis 1989.jpg" width="250" height="188" align="left" />Jahrzehntelang liegen sie im Verborgenen. Nun stoßen Archäologen am früheren Checkpoint Charlie in Berlin auf Mauerteile und Fundamente der DDR-Grenztruppen. Zu sehen bekommen Besucher die Funde vorerst jedoch nicht.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31401640/1791563302/Img_4_3/250/Fundament der Führungsstelle der DDR-Grenztruppen aus den Jahren 1985 bis 1989.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Sehr hohe Rendite möglich : Amazon mit 21-Prozent-Chance </title>
+                <description>Die Amazon-Aktie befindet sich nach ihrem Hoch vom August 2026 aktuell in einer Konsolidierungsphase. Mit einem Bonus-Zertifikat mit Cap können Anleger auch dann hohe Renditen erzielen, wenn es mit der Aktie nicht weiter aufwärts geht.</description>
+                <link>https://www.n-tv.de/ratgeber/Amazon-mit-21-Prozent-Chance-id31399505.html</link>
+                <guid>https://www.n-tv.de/ratgeber/Amazon-mit-21-Prozent-Chance-id31399505.html</guid>
+                <category>Ratgeber</category>
+                <pubDate>Sat, 10 Oct 2026 06:39:38 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/3259324/1562263695/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Die Amazon-Aktie befindet sich nach ihrem Hoch vom August 2026 aktuell in einer Konsolidierungsphase. Mit einem Bonus-Zertifikat mit Cap können Anleger auch dann hohe Renditen erzielen, wenn es mit der Aktie nicht weiter aufwärts geht.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/3259324/1562263695/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+            <item>
+                <title>Urteil aus dem Verkehrsrecht: Dooring-Unfall mit Motorrad: Haftet allein der Türöffner?</title>
+                <description>Eine Autotür geht auf - und es kracht ein Motorrad hinein. Ein solcher Fall, der ein Gericht beschäftigte, zeigt, warum bei einem Dooring-Unfall unter Umständen nicht nur der Türöffner Schuld trägt.</description>
+                <link>https://www.n-tv.de/ratgeber/Dooring-Unfall-mit-Motorrad-Haftet-allein-der-Tueroeffner-id31399299.html</link>
+                <guid>https://www.n-tv.de/ratgeber/Dooring-Unfall-mit-Motorrad-Haftet-allein-der-Tueroeffner-id31399299.html</guid>
+                <category>Ratgeber</category>
+                <pubDate>Fri, 09 Oct 2026 19:15:42 +0200</pubDate>
+                <content:encoded><![CDATA[<img src="https://www.n-tv.de/img/31398881/1791535398/Img_4_3/250/image.jpg" width="250" height="188" align="left" />Eine Autotür geht auf - und es kracht ein Motorrad hinein. Ein solcher Fall, der ein Gericht beschäftigte, zeigt, warum bei einem Dooring-Unfall unter Umständen nicht nur der Türöffner Schuld trägt.]]></content:encoded>
+                <enclosure url="https://www.n-tv.de/img/31398881/1791535398/Img_4_3/250/image.jpg" length="12555" type="image/jpeg" />
+            </item>
+    </channel>
+    </rss>

@@ -1,0 +1,667 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<rss version='2.0' xmlns:itunes='http://www.itunes.com/dtds/podcast-1.0.dtd' xmlns:atom='http://www.w3.org/2005/Atom' >
+	<channel>
+		<title>phoenix persönlich - Podcast</title>
+		<link>https://www.phoenix.de</link>
+		<atom:link href='https://www.phoenix.de/podcast/persoenlich/audio/rss.xml' rel='self' type='application/rss+xml' />
+		<description>phoenix persönlich</description>
+		<itunes:author>phoenix</itunes:author>
+		<language>de-de</language>
+		<copyright>phoenix 2026</copyright>
+		<pubDate>Sat, 10 Oct 2026 14:42:15 +0200</pubDate>
+		<lastBuildDate>Sat, 10 Oct 2026 14:42:15 +0200</lastBuildDate>
+		<itunes:subtitle></itunes:subtitle>
+		<itunes:summary>phoenix persönlich</itunes:summary>
+		<itunes:image href='https://www.phoenix.de/sixcms/media.php/242/persoenlich3.3425492.jpg' />
+		<itunes:new-feed-url>https://www.phoenix.de/podcast/persoenlich/audio/rss.xml</itunes:new-feed-url>
+		<webMaster>webmaster@phoenix.de (phoenix Webmaster)</webMaster>
+		<itunes:owner>
+			<itunes:name>phoenix persönlich - Podcast</itunes:name>
+			<itunes:email>webmaster@phoenix.de</itunes:email>
+		</itunes:owner>
+		<image>
+			<url>https://www.phoenix.de/sixcms/media.php/242/persoenlich3.jpg</url>
+			<title>phoenix persönlich - Podcast</title>
+			<link>https://www.phoenix.de</link>
+		</image>
+		<category>Nachrichten</category>
+		<itunes:category text='News'>
+			<itunes:category text='Politics' />
+		</itunes:category>
+		<itunes:category text='TV &amp; Film' />
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:keywords>phoenix,Politik,Kultur,Ereignis,Debatte,Diskussion,Gespraech,Meinung,Wortwechsel,Gesellschaft,Wirtschaft,Soziales,Hintergrundinformationen</itunes:keywords>
+		<item>
+			<guid isPermaLink="false">5237665</guid>
+			<title><![CDATA[Verfassungsrechtlerin Frauke Brosius-Gersdorf zu Gast bei Jörg Thadeusz]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:28:51</itunes:duration>
+			<description><![CDATA[In der aktuellen Sendung von "phoenix persönlich" spricht Jörg Thadeusz mit Verfassungsrechtlerin Frauke Brosius-Gersdorf]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/261003_phx_pers_00959.jpg.4043709.jpg' />
+			<enclosure length='48489549' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/10/261002_phx_persoenlich/1/261002_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 03 Oct 2026 08:52:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">293742</guid>
+			<title><![CDATA[Friedrich Merz im Gespräch mit Michael Krons]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:30:38</itunes:duration>
+			<description><![CDATA[Friedrich Merz, der Vorsitzende der Atlantik-Brücke, vertritt die Auffassung, dass wir trotz Donald Trump weiter sehr eng mit Amerika zusammenarbeiten müssten: "Denn die Demokratie in Amerika funktioniert, der Rechtsstaat funktioniert, die Pluralität in Amerika funktioniert. Bei allem, was wir da zu kritisieren haben."]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/2018_06_24_10_03_24_phoenix_pers%C3%B6nlich_Friedrich_Merz_zu_Gast_bei_Michael_Krons_vom_22.06.18_You_SMUBL.271072.jpg.271082.jpg' />
+			<enclosure length='14710744' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/18/06/180622_phx_persoenlich/1/180622_phx_persoenlich_64k_p21v13.mp3' />
+			<pubDate>Thu, 24 Sep 2026 14:31:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5233911</guid>
+			<title><![CDATA[Fregattenkapitänin Inka von Puttkamer zu Gast bei Jörg Thadeusz]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:32:09</itunes:duration>
+			<description><![CDATA[In der aktuellen Sendung von "phoenix persönlich" spricht Jörg Thadeusz mit Fregattenkapitän Inka von Puttkamer u.a. über die veränderte Sicherheitslage in der Ostsee und die Herausforderung der sogenannten Schattenflotte.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/260918_%20phoenix_persoenlich_puttkamer_zdf_00903.jpg.4040897.jpg' />
+			<enclosure length='54033549' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/09/260918_phx_persoenlich/1/260918_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 19 Sep 2026 08:06:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5228230</guid>
+			<title><![CDATA[Kabarettist Florian Schroeder über die AfD, die Brandmauer und seinen eigenen Lebensweg]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:31:06</itunes:duration>
+			<description><![CDATA[Mit Blick auf die anstehenden Landtagswahlen in Sachsen-Anhalt warnt Florian Schroeder vor den Folgen eines möglichen politischen Erfolgs der AfD: „Wir drohen unendlich viel von dem zu verlieren, was wir bisher vielleicht auch für zu selbstverständlich gehalten haben“, so der Kabarettist, der in diesem Zusammenhang die Brandmauer verteidigt: „Das war zunächst der richtige Weg, um Klarheit zu haben, dass wir es hier nicht mit einer demokratischen Partei zu tun haben, sondern mit einer systemzerstörenden Partei.“
+
+Ganz offen spricht Schroeder über seinen eigenen Lebensweg. Er beschreibt seine Kindheit als „windschief“, erzählt von einem kriminellen Vater und einer „großartigen Mutter“ und davon, wie er bereits als Jugendlicher durch Parodien eine andere Rolle für sich gefunden habe. „Wenn du an dich selbst glaubst und dran bleibst, dann kann aus dir ein anderer werden, als du jetzt bist“, sagt Schroeder.]]></description>
+			<itunes:image href='https://www.phoenix.de' />
+			<enclosure length='52266189' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/08/260829_nur_podcast_phx_persoenlich/1/260829_nur_podcast_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 29 Aug 2026 08:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5217074</guid>
+			<title><![CDATA[Markus Söder (CSU, Ministerpräsident Bayern) zu Gast bei Theo Koll]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:32:11</itunes:duration>
+			<description><![CDATA[Welche Rolle spielt Macht in der Politik – und wie viel Gestaltung ist in Krisenzeiten möglich? Theo Koll spricht im aktuellen 'phoenix persönlich' mit dem bayerischen Ministerpräsidenten und CSU-Vorsitzenden Markus Söder.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/20260710_s_der_pers_nlich_1_00054.jpg.4030796.jpg' />
+			<enclosure length='54089325' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/07/260710_phx_persoenlich/1/260710_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Fri, 10 Jul 2026 22:01:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5213337</guid>
+			<title><![CDATA[Soldatin und Ärztin Sophia Wilk-Vollmann zu Gast bei Jörg Thadeusz]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:19</itunes:duration>
+			<description><![CDATA[Jörg Thadeusz spricht mit der Notärztin, Oberfeldärztin und Autorin Sophia Wilk-Vollmann über ihre Einsätze in der Luftrettung, ihre Erfahrungen als Soldatin der Bundeswehr sowie über die psychischen Belastungen von Rettungskräften und Soldaten.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20phx%20pers_nlich%20Wilk-Vollmann_43197.jpg.4028104.jpg' />
+			<enclosure length='49257645' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/06/260626_phx_persoenlich/1/260626_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 27 Jun 2026 09:04:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5211499</guid>
+			<title><![CDATA[Giovanni di Lorenzo (DIE ZEIT) zu Gast bei Theo Koll]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:30:41</itunes:duration>
+			<description><![CDATA[In der neuesten Ausgabe phoenix persönlich spricht Theo Koll mit dem Chefredakteur der Wochenzeitung DIE ZEIT, Giovanni di Lorenzo, u.a. über einen drohenden Vertrauensverlust in die Handlungsfähigkeit der demokratischen Mitte.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20phoenix%20pers_nlich%20di%20Lorenzo_00696.jpg.4026764.jpg' />
+			<enclosure length='51567981' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/06/260619_phx_persoenlich/1/260619_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 20 Jun 2026 10:08:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5209628</guid>
+			<title><![CDATA[Gerhard Conrad (Nahost-Experte) zu Gast bei Jörg Thadeusz]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:18</itunes:duration>
+			<description><![CDATA[In der neuesten Ausgabe von phoenix persönlich spricht Jörg Thadeusz mit dem ehemaligen Bundesnachrichtendienst-Mitarbeiter, Islamwissenschaftler und Nahost-Experten Gerhard Conrad u.a. über seine Erfahrungen als Vermittler zwischen Israel und der Hamas.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/CF%20pers_nlich%20Gerd%20Conrad%2010_06__00830.jpg.4025508.jpg' />
+			<enclosure length='49246221' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/06/260612_phx_persoenlich/1/260612_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 13 Jun 2026 08:05:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5207727</guid>
+			<title><![CDATA[Familienministerin Prien: "Alle Förderungen laufen weiter wie bisher"]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:32:06</itunes:duration>
+			<description><![CDATA[Zur Kritik an der Neuausrichtung des Programms „Demokratie leben!“ äußert sich die Familienministerin: "Bisher haben wir noch keinen einzigen Cent gekürzt. In diesem Jahr laufen alle Förderungen so weiter wie bisher auch".]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/Pers_nix_Prien_2_01781.jpg.4023899.jpg' />
+			<enclosure length='53940141' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/06/260605_phx_persoenlich/1/260605_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Fri, 05 Jun 2026 09:57:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5205789</guid>
+			<title><![CDATA[Dieter Kosslick (ehem. Berlinale-Leiter) zu Gast bei Anke Plättner]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:28:41</itunes:duration>
+			<description><![CDATA[Anke Plättner spricht mit dem ehemaligen Berlinale-Direktor Dieter Kosslick über seine Leidenschaft für das Kino, prägende Momente aus 18 Jahren Berlinale und den Einfluss gesellschaftlicher Debatten auf die Filmwelt.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20pers_nlich%20Kosslick_42315.jpg.4022346.jpg' />
+			<enclosure length='48190509' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/05/260529_phx_persoenlich/1/260529_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 30 May 2026 08:51:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5203320</guid>
+			<title><![CDATA[Sören Link (SPD) zu Gast bei Ina Kühn]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:28:29</itunes:duration>
+			<description><![CDATA[In der aktuellen Ausgabe spricht Moderation Inga Kühn mit Duisburgs Oberbürgermeister Sören Link über aktuellen Herausforderungen für Kommunen, politische Handlungsfähigkeit sowie über seine Erwartungen an die Politik der Bundesregierung.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/260522_phx_Pers_nlich_Link_20538%201.jpg.4020659.jpg' />
+			<enclosure length='47875341' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/05/260522_phx_persoenlich/1/260522_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 23 May 2026 08:37:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5200979</guid>
+			<title><![CDATA[„phoenix persönlich“: Omid Nouripour zu Gast bei Theo Koll]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:21</itunes:duration>
+			<description><![CDATA[Theo Koll spricht mit dem ehemaligen Grünen-Vorsitzenden Omid Nouripour über den Zustand der politischen Kultur in Deutschland, die Herausforderungen für Europa sowie seine persönliche Geschichte als Geflüchteter aus dem Iran.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20Pers_nlich%20%202026-05-15%20Nouripour_00617%201.jpg.4018696.jpg' />
+			<enclosure length='49309389' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/05/260515_phx_persoenlich/1/260515_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 16 May 2026 08:47:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5198710</guid>
+			<title><![CDATA[Autor Harald Jähner zu Gast bei Jörg Thadeusz]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:33</itunes:duration>
+			<description><![CDATA[In der aktuellen Ausgabe von „phoenix persönlich“ spricht Jörg Thadeusz mit dem Journalisten und Autor Harald Jähner über die Jahre des Wirtschaftswunders.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20phx%20pers_nlich%202026-05-07%20Harald%20J_hner_00596.jpg.4016863.jpg' />
+			<enclosure length='49659501' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/05/260508_phx_persoenlich/1/260508_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 09 May 2026 08:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5197341</guid>
+			<title><![CDATA[Verena Pausder zu Gast bei Anke Plättner]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:41</itunes:duration>
+			<description><![CDATA[Die Unternehmerin, Gründerin und Vorstandsvorsitzende des Startup-Verbandes Verena Pausder plädiert für den Abbau von Bürokratie, mehr Vertrauen in Innovation sowie für einen grundlegenden Mentalitätswandel in Deutschland.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/260430_persoenlich_pausder_03031.jpg.4015750.jpg' />
+			<enclosure length='49887981' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/05/260501_phx_persoenlich/1/260501_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Mon, 04 May 2026 14:01:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5195594</guid>
+			<title><![CDATA[Boris Palmer (Oberbürgermeister Tübingen) zu Gast bei Inga Kühn]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:17</itunes:duration>
+			<description><![CDATA[In der aktuellen Ausgabe von "phoenix persönlich" spricht Inga Kühn mit dem Tübinger Oberbürgermeister Boris Palmer über die Regierungsbildung in Baden-Württemberg, Kommunalpolitik in Zeiten globaler Krisen sowie den Umgang mit der AfD.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/palmer%20persoenlich.jpg.4014408.jpg' />
+			<enclosure length='49215309' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/04/260424_phx_persoenlich/1/260424_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 25 Apr 2026 07:38:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5193943</guid>
+			<title><![CDATA[Natalie Amiri (Nahost-Expertin und Journalistin) zu Gast bei Theo Koll]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:16</itunes:duration>
+			<description><![CDATA[Theo Koll spricht mit der Nahost-Expertin Natalie Amiri über die aktuellen Entwicklungen im Iran.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/backdrop-stage-16-9-phoenix-persoenlich-amiri.jpg.4013111.jpg' />
+			<enclosure length='49178349' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/04/260417_phx_persoenlich/1/260417_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 18 Apr 2026 09:51:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5187561</guid>
+			<title><![CDATA[Elina Valtonen (Außenministerin Finnland) zu Gast]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:30:16</itunes:duration>
+			<description><![CDATA[Eva Lindenau spricht mit der finnischen Außenministerin Elina Valtonen über die hohe Verteidigungsbereitschaft ihres Landes, die Rolle Deutschlands in Europa, die Unterstützung der Ukraine sowie über den Reformbedarf der Europäischen Union.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/backdrop-stage-16-9-elina-valtonen-persoenlich.jpg.4011997.jpg' />
+			<enclosure length='50868429' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/03/260327_phx_persoenlich/1/260327_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 28 Mar 2026 08:18:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5184427</guid>
+			<title><![CDATA[Heike Rauer (Astrophysikerin) zu Gast]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:30:10</itunes:duration>
+			<description><![CDATA[In der aktuellen Ausgabe von "phoenix persönlich" spricht Jörg Thadeusz mit der Planetenforscherin Prof. Heike Rauer von der FU Berlin über die Faszination des Sternenhimmels und die Suche nach erdähnlichen Planeten.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/backdrop-stage-16-9-%20%2880%29.jpg.4007840.jpg' />
+			<enclosure length='50694381' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/03/260313_phx_persoenlich/1/260313_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Mon, 16 Mar 2026 11:31:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5181732</guid>
+			<title><![CDATA[phoenix persönlich mit Prof. Karl Schlögel]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:05</itunes:duration>
+			<description><![CDATA[Historiker und Osteuropa-Experte Prof. Karl Schlögel zu Gast bei Theo Koll]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20phx%20pers_nlich%20Schl_gel_43202.jpg.4006079.jpg' />
+			<enclosure length='48874605' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/03/260306_phx_persoenlich/1/260306_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 07 Mar 2026 08:37:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5179649</guid>
+			<title><![CDATA[Marie-Agnes Strack-Zimmermann (FDP-Europapolitikerin) zu Gast bei Inga Kühn]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:30:59</itunes:duration>
+			<description><![CDATA[Sie ist bekannt für ihre klaren Worte: Marie-Agnes Strack-Zimmermann.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/TNs%20Julia.jpg.4004640.jpg.4004687.jpg' />
+			<enclosure length='52075341' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/02/260227_phx_persoenlich/1/260227_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 28 Feb 2026 08:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5177848</guid>
+			<title><![CDATA[Marketingexperte Simon Usifo zu Gast bei Jörg Thadeusz]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:28:48</itunes:duration>
+			<description><![CDATA[Jörg Thadeusz spricht mit dem Kreativmanager Simon Usifo über die Wirkung von Werbung, die Verantwortung von Marken im gesellschaftlichen Wandel, strukturellen Rassismus sowie über die Suche nach der eigenen Identität.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20phoenix%20pers_nlich%20Simon%20Usifo_42907.jpg.4003406.jpg' />
+			<enclosure length='48405549' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/02/260220_phx_2_persoenlich/1/260220_phx_2_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sun, 22 Feb 2026 09:35:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5175682</guid>
+			<title><![CDATA[Herfried Münkler (Politikwissenschaftler) zu Gast bei Eva Lindenau]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:07</itunes:duration>
+			<description><![CDATA[In der Sendung „phoenix persönlich“ spricht Eva Lindenau mit dem Politikwissenschaftler Herfried Münkler über die aktuelle geopolitische Umbruchsphase, die Rolle Europas und die sicherheitspolitischen Herausforderungen für Deutschland.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/260213_persoenlich_herfried_muenkler_43473.jpg.4002116.jpg' />
+			<enclosure length='48931725' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/02/260213_phx_persoenlich/1/260213_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Fri, 13 Feb 2026 23:02:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5173520</guid>
+			<title><![CDATA[Franz Müntefering zu Gast bei Theo Koll]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:30:16</itunes:duration>
+			<description><![CDATA[Theo Koll spricht mit dem früheren SPD-Chef Franz Müntefering über den Zustand der SPD und die Zukunft Europas.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20phoenix%20pers_nlich%20M_ntefering_00941%20%281%29.jpg.4000892.jpg' />
+			<enclosure length='50875149' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/02/260206_phx_persoenlich/1/260206_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 07 Feb 2026 08:10:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5170792</guid>
+			<title><![CDATA[Rüdiger Bachmann (Ökonom) zu Gast bei Eva Lindenau]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:28:57</itunes:duration>
+			<description><![CDATA[Moderation: ??? Vor-+ Nachname, phoenix]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20phx%20pers_nlich%2027_01_%20R_diger%20Bachmann_00538.jpg.3999667.jpg' />
+			<enclosure length='48651501' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/01/260130_phx_persoenlich/1/260130_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 31 Jan 2026 08:12:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5168897</guid>
+			<title><![CDATA[phoenix persönlich: Georg Mascolo (Investigativ-Journalist)]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:28:44</itunes:duration>
+			<description><![CDATA[Jörg Thadeusz spricht mit dem Investigativ-Journalisten Georg Mascolo über den Abend des Mauerfalls sowie über tiefgreifende Fehler der deutschen Russlandpolitik und deren historische Konsequenzen.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/260123_phx_persoenlichmascolo_42740.jpg.3998323.jpg' />
+			<enclosure length='48278541' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/01/260123_phx_persoenlich/1/260123_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 24 Jan 2026 08:42:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5167006</guid>
+			<title><![CDATA[phoenix persönlich: Jessica Berlin (Sicherheitsexpertin) bei Inga Kühn]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:32:33</itunes:duration>
+			<description><![CDATA[Inga Kühn spricht mit der Sicherheitsexpertin und Politikanalystin Jessica Berlin über das erste Jahr der zweiten Amtszeit von US-Präsident Donald Trump.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/Jessica%20Berlin.png.3996995.jpg' />
+			<enclosure length='54686061' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/26/01/260116_phx_persoenlich/1/260116_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 17 Jan 2026 09:21:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5158705</guid>
+			<title><![CDATA[phoenix persönlich: Paul Ronzheimer zu Gast bei Inga Kühn]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:14</itunes:duration>
+			<description><![CDATA[Über seine Erfahrungen und Arbeit in Kriegsgebieten, vor allem in der Ukraine, und über die politischen Schlagzeilen des Jahres erzählt Paul Ronzheimer im Gespräch mit Inga Kühn.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/251211_phx_persoenlich_Ronzheimer_43685.jpg.3991937.jpg' />
+			<enclosure length='49123245' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/12/251212_phx_persoenlich/1/251212_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 13 Dec 2025 11:35:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5156365</guid>
+			<title><![CDATA[phoenix persönlich mit Sicherheitsexpertin Jana Puglierin]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:03</itunes:duration>
+			<description><![CDATA[Sendung vom 06.12.2025]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20pers_nlich%20Jana%20Puglierin_43048%20%281%29.jpg.3990383.jpg' />
+			<enclosure length='48812781' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/12/251205_phx_persoenlich/1/251205_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 06 Dec 2025 08:25:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5152539</guid>
+			<title><![CDATA[Friedensnobelpreisträgerin Irina Scherbakowa zu Gast bei Jörg Thadeusz]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:30:18</itunes:duration>
+			<description><![CDATA[phoenix persönlich mit Irina Scherbakowa]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20pers_nlich%20Scherbakowa_45263.jpg.3987240.jpg' />
+			<enclosure length='50914125' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/11/251121_phx_persoenlich/1/251121_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 22 Nov 2025 11:38:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5150629</guid>
+			<title><![CDATA[China-Expertin Oertel: Die Abhängigkeit Deutschlands von China]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:30:09</itunes:duration>
+			<description><![CDATA[Politikwissenschaftlerin und Sinologin Janka Oertel zu Gast bei Theo Koll]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/Vorlagen%20RanRan%20%28Nicht%20verwenden%21%29.png.3985904.jpg' />
+			<enclosure length='50668845' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/11/251114_phx_persoenlich/1/251114_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 15 Nov 2025 08:22:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5148582</guid>
+			<title><![CDATA[CDU-Spitzenkandidat Sven Schulze zu Gast bei Marc Steinhäuser]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:25</itunes:duration>
+			<description><![CDATA[In der Sendung „phoenix persönlich“ spricht Marc Steinhäuser mit dem CDU-Spitzenkandidaten in Sachsen-Anhalt Sven Schulze über den anstehenden Wahlkampf in seinem Bundesland.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20pers_nlich%20Schulze_43653.jpg.3984565.jpg' />
+			<enclosure length='49440429' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/11/251107_phx_persoenlich/1/251107_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 08 Nov 2025 08:42:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5146809</guid>
+			<title><![CDATA[Peer Steinbrück (SPD, ehem. Bundesfinanzminister) zu Gast bei Inga Kühn]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:30:58</itunes:duration>
+			<description><![CDATA[Peer Steinbrück (SPD, ehem. Bundesfinanzminister) zu Gast bei Inga Kühn]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/Bild%20%283%29.3983454.jpg.3983457.jpg' />
+			<enclosure length='52027629' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/10/251031_phx_persoenlich/1/251031_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 01 Nov 2025 09:32:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5145150</guid>
+			<title><![CDATA[Ricarda Lang zu Gast bei Theo Koll]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:27:53</itunes:duration>
+			<description><![CDATA[Ricarda Lang zu Gast bei Theo Koll]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20pers_nlich%20Ricarda%20Lang_01427.jpg.3982318.jpg' />
+			<enclosure length='46867341' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/10/251024_phx_persoenlich/1/251024_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sun, 26 Oct 2025 10:50:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5142891</guid>
+			<title><![CDATA[Journalist Konstantin Richter zu Gast bei Jörg Thadeusz]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:30:07</itunes:duration>
+			<description><![CDATA[In der Sendung „phoenix persönlich“ spricht Jörg Thadeusz mit dem Journalisten und Buchautor Konstantin Richter über den Aufstieg und Wandel deutscher Unternehmen sowie über die Entwicklung des deutschen Wirtschaftssystems.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20pers_nlich%20Richter_45041.jpg.3981070.jpg' />
+			<enclosure length='50616429' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/10/251017_phx_persoenlich/1/251017_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Fri, 17 Oct 2025 22:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5130739</guid>
+			<title><![CDATA[Politikwissenschaftler Prof. Peter R. Neumann zu Gast bei Eva Lindenau]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:27:30</itunes:duration>
+			<description><![CDATA[In der Sendung „phoenix persönlich“ spricht Eva Lindenau mit dem Sicherheitsexperten Peter R. Neumann über die aktuelle Sicherheitslage in Deutschland und Europa, das Erstarken der extremen Rechten in ganz Europa und die Zukunft der Demokratie.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20Phoenix%20Pers_nlich%20Neumann-001_00004.jpg.3969755.jpg' />
+			<enclosure length='46212141' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/10/251010_phx_persoenlich/1/251010_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 11 Oct 2025 07:23:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5104831</guid>
+			<title><![CDATA[Arbeitsministerin Bärbel Bas zu Gast]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:32:08</itunes:duration>
+			<description><![CDATA[In der Sendung "phoenix persönlich" spricht Eva Lindenau mit Bärbel Bas, Bundesarbeitsministerin und Co-Vorsitzende der SPD, u.a. über ihre Reformvorhaben, den Missbrauch des Sozialsystems und ihre Aufstiegsgeschichte.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/Semi%20clean%20%20%20%20%2028_335932.jpg.3944617.jpg' />
+			<enclosure length='54010029' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/09/250926_phx_persoenlich/2/250926_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 27 Sep 2025 14:08:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5077432</guid>
+			<title><![CDATA[Ökonom Prof. Marcel Fratzscher (DIW)]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:30:40</itunes:duration>
+			<description><![CDATA[Eva Lindenau spricht mit Prof. Marcel Fratzscher, Präsident des DIW Berlin, u.a. über Generationengerechtigkeit und darüber, ob er glaubt, dass es tatsächlich zu einem Herbst der Reformen kommen wird.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20pers_nlich%20Fratzscher%2012_9__45811.jpg.3923152.jpg' />
+			<enclosure length='51542445' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/09/250912_phx_persoenlich/1/250912_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 13 Sep 2025 10:18:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5068562</guid>
+			<title><![CDATA[BND-Präsident Bruno Kahl zu Gast bei Theo Koll]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:28:36</itunes:duration>
+			<description><![CDATA[06.09.2025 BND - Präsident Bruno Kahl zu Gast bei Theo Koll]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/Kahl_Bruno_pers%C3%B6nlich.jpg.3916947.jpg' />
+			<enclosure length='48052749' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/09/250905_phx_persoenlich/1/250905_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 06 Sep 2025 14:11:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5062387</guid>
+			<title><![CDATA[Ex-Verkehrsminister Volker Wissing]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:07</itunes:duration>
+			<description><![CDATA[Jörg Thadeusz spricht mit dem ehemaligen Bundesverkehrsminister Volker Wissing u.a. über die Chance von lagerübergreifenden Koalitionen und das Scheitern der Ampel-Regierung]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/20250831%20PhPers%20Wissing%20Trailer%20v1_00406.3912392.jpg.3912407.jpg' />
+			<enclosure length='48935085' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/08/250831_phx_persoenlich/1/250831_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sun, 31 Aug 2025 13:30:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">5046067</guid>
+			<title><![CDATA[Bergsteiger Reinhold Messner: „Ein Restrisiko bleibt immer“]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:16</itunes:duration>
+			<description><![CDATA[phoenix persönlich: Reinhold Messner bei Inga Kühn]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/CF%20phx%20pers%20Messner%2030%20MIN_43687.jpg.3903647.jpg' />
+			<enclosure length='49188429' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/08/250819_phx_persoenlich/1/250819_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sun, 17 Aug 2025 09:30:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4992287</guid>
+			<title><![CDATA[Alexander: Merz habe im Wahlkampf anderes versprochen]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:27:43</itunes:duration>
+			<description><![CDATA[phoenix persönlich: Robin Alexander (Stellv. Chefredakteur WELT) bei Inga Kühn]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/pers_nlich_Clip4_01065.jpg.3879847.jpg' />
+			<enclosure length='46589805' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/07/250711_phx_persoenlich/1/250711_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Fri, 11 Jul 2025 22:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4983437</guid>
+			<title><![CDATA[Auslandskorrespondent Michael Thumann]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:30:00</itunes:duration>
+			<description><![CDATA[04.07.25 | Theo Koll spricht mit Michael Thumann, Leiter des Moskauer Büros der ZEIT, über Russlands Blick auf Europa und die Frage, ob ein Frieden mit Putin möglich ist sowie seine persönlichen Erfahrungen als Auslandskorrespondent.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/250704_persoenlich_koll_thumann_01221%201.jpg.3872777.jpg' />
+			<enclosure length='50411469' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/07/250704_phx_persoenlich/1/250704_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 05 Jul 2025 09:08:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4953032</guid>
+			<title><![CDATA[Sicherheitsexperte Carlo Masala zu Gast bei Eva Lindenau]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:34</itunes:duration>
+			<description><![CDATA[In „phoenix persönlich“ spricht Eva Lindenau mit dem Sicherheitsexperten Carlo Masala (Universität der Bundeswehr München) über die Strategie Donald Trumps bei seinem Militäreinsatz im Inland und darüber, ob und wann Russland die NATO testen könnte.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20phx%20pers_nlich%20Masala_44110.jpg.3851747.jpg' />
+			<enclosure length='49697805' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/06/250613_phx_persoenlich/1/250613_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 14 Jun 2025 07:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4942477</guid>
+			<title><![CDATA[JoinPolitics-Gründerin Caroline Weimann bei Theo Koll]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:06</itunes:duration>
+			<description><![CDATA[Theo Koll spricht mit Caroline Weimann, der Gründerin der gemeinnützigen Organisation JoinPolitics, über ihre Suche nach neuen politischen Talenten, authentischen Politiker:innen sowie Resilienz im politischen Alltag.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/250606_phx_persoenlich_cweimann_korr_2%20NEU_43335.jpg.3846792.jpg' />
+			<enclosure length='48912909' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/06/250606_phx_persoenlich/1/250606_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 07 Jun 2025 07:58:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4932292</guid>
+			<title><![CDATA[Sarna Röser (Unternehmerin) zu Gast bei Jörg Thadeusz]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:28:56</itunes:duration>
+			<description><![CDATA[31.05.2025 Jörg Thadeusz spricht mit der Unternehmerin Sarna Röser über ihre Erwartungen an die neue Bundesregierung, über Zuwanderung und Fachkräftemangel, ihr politisches Engagement und ihr Aufwachsen in einer Unternehmerfamilie.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/250530_persoenlich_roeser_43064.jpg.3840262.jpg' />
+			<enclosure length='48632685' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/05/250530_phx_persoenlich/1/250530_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 31 May 2025 08:25:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4931672</guid>
+			<title><![CDATA[Sarna Röser (Unternehmerin) zu Gast bei Jörg Thadeusz]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:28:56</itunes:duration>
+			<description><![CDATA[Moderation: ??? Vor-+ Nachname, phoenix]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/Bild%20%282%29.3839547.png.3839562.jpg' />
+			<enclosure length='48632685' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/05/250530_phx_persoenlich/1/250530_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Fri, 30 May 2025 11:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4918557</guid>
+			<title><![CDATA[Felix Lee (Wirtschaftsjournalist) zu Gast bei Inga Kühn]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:31:37</itunes:duration>
+			<description><![CDATA[In „phoenix persönlich“ spricht Inga Kühn mit dem Wirtschaftsjournalisten und China-Kenner Felix Lee über das China-Bild in Deutschland, wirtschaftliche Abhängigkeiten, das Verhältnis Russlands zu China und seine eigenen Erfahrungen in dem Land.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20pers_nlich%202025-05-17%20Inga%20K_hn%20mit%20Felix%20Lee_47026.jpg.3831302.jpg' />
+			<enclosure length='53122989' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/05/250516_phx_persoenlich/1/250516_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sun, 18 May 2025 12:15:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4906197</guid>
+			<title><![CDATA[Johannes Vogel (Botaniker) zu Gast bei Jörg Thadeusz]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:28:25</itunes:duration>
+			<description><![CDATA[In der Sendung „phoenix persönlich“ spricht Jörg Thadeusz mit Johannes Vogel, dem Generaldirektor des Naturkundemuseums Berlin, über das Verhältnis Mensch-Natur, über Wissenschaftsfeindlichkeit und die Aufgabe von Naturkundemuseen.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/Phoenix%20Pers_nlich%20-%20J_rg%20Thadeusz%20mit%20Joahnnes%20Vogel_42017.jpg.3821957.jpg' />
+			<enclosure length='47744301' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/05/250509_phx_persoenlich/1/250509_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 10 May 2025 22:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4871607</guid>
+			<title><![CDATA[Andreas Reckwitz (Soziologe) zu Gast bei Theo Koll]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:28:38</itunes:duration>
+			<description><![CDATA[12.04.25 In der Sendung „phoenix persönlich“ spricht Theo Koll mit dem Soziologen Andreas Reckwitz über die Verlusterfahrungen unserer Gesellschaft, das Ende der Gewissheiten, den Aufstieg des Populismus und die Gefahren für die Demokratie.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20phx%20pers_nlich%20Koll%20_%20Reckwitz%2011_4__00953.jpg.3798882.jpg' />
+			<enclosure length='48125325' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/04/250411_phx_persoenlich/1/250411_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 12 Apr 2025 07:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4857272</guid>
+			<title><![CDATA[Iran-Experte Ali Fathollah-Nejad]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:11</itunes:duration>
+			<description><![CDATA["Es gibt eine Beschwichtigungspolitik gegenüber der Islamischen Republik", sagt der Politikwissenschaftler Ali Fathollah-Nejad mit Blick auf die deutsche Iran-Politik.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20pers_nlich%202025-03-29%20J_rg%20Thadeusz%20mit%20Ali%20Fathollah-Nejad_13267.jpg.3788037.jpg' />
+			<enclosure length='49047981' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/03/250328_phx_persoenlich/1/250328_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Mon, 31 Mar 2025 10:02:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4844152</guid>
+			<title><![CDATA[Ökonomin Monika Schnitzer bei Theo Koll]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:28:57</itunes:duration>
+			<description><![CDATA[In der Sendung „phoenix persönlich“ spricht Theo Koll mit Prof. Monika Schnitzer, Vorsitzende des Sachverständigenrates zur Begutachtung der gesamtwirtschaftlichen Entwicklung, unter anderem über das Finanzpaket der möglichen schwarz-roten Koalition.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/250321_persoenlich_julia_grimm_42745.jpg.3779907.jpg' />
+			<enclosure length='48639405' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/03/250321_phx_persoenlich/1/250321_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 22 Mar 2025 08:40:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4799412</guid>
+			<title><![CDATA[Cyber-War-Experte Sandro Gaycken]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:05</itunes:duration>
+			<description><![CDATA[phoenix persönlich: Jörg Thadeusz im Gespräch mit dem Cyber-War-Experten Sandro Gaycken]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20pers_nlich%20Sandro%20Gaycken_%2020_02_25_43147.jpg.3747057.jpg' />
+			<enclosure length='48869229' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/02/250221_phx_persoenlich/1/250221_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 22 Feb 2025 08:46:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4790332</guid>
+			<title><![CDATA[Militärhistoriker Sönke Neitzel zu Gast bei Eva Lindenau]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:39</itunes:duration>
+			<description><![CDATA[In der Sendung „phoenix persönlich“ spricht Eva Lindenau mit Sönke Neitzel, Militärhistoriker, über den Bruch Donald Trumps mit der bisherigen Ukraine-Politik, die Rolle der Europäer, Defizite in der Sicherheitspolitik und über die Reform der Bundeswehr.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/A%20pers_nlich%20Neitzel%20%20AGR303711%20%20%2013_63366.jpg.3741182.jpg' />
+			<enclosure length='49824141' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/02/250214_phx_persoenlich/2/250214_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 15 Feb 2025 10:27:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4770022</guid>
+			<title><![CDATA[Berliner Polizeipräsidentin Meisel zu Gast]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:28:35</itunes:duration>
+			<description><![CDATA[Jörg Thadeusz spricht mit der Berliner Polizeipräsidentin Barbara Slowik Meisel über das Sicherheitsgefühl der Bürgerinnen und Bürger, ein Verkaufsverbot von Pyrotechnik und darüber, wie Polizistinnen und Polizisten mit mangelndem Respekt umgehen. ]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20phx%20pers_nlich%20Thadeusz%20_%20Meisel_01104.jpg.3725967.jpg' />
+			<enclosure length='48036621' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/25/01/250131_phx_persoenlich/1/250131_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 01 Feb 2025 09:10:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4719402</guid>
+			<title><![CDATA[NRW-Innenminister Herbert Reul zu Gast bei Theo Koll]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:26:25</itunes:duration>
+			<description><![CDATA[In der Sendung „phoenix persönlich“ spricht Theo Koll mit Herbert Reul, CDU, Innenminister von Nordrhein-Westfalen u.a. über aktuelle Bedrohungen der inneren Sicherheit, über die sogenannte Clankriminalität und seine Erfahrungen mit den Grünen.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/Bildschirmfoto%202024-12-21%20um%2010.51.25.jpg.3693812.jpg' />
+			<enclosure length='44397069' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/24/12/241220_phx_persoenlich/1/241220_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 21 Dec 2024 09:35:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4700552</guid>
+			<title><![CDATA[Matthias Miersch zu Gast]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:46</itunes:duration>
+			<description><![CDATA[In "phoenix persönlich" spricht der designierte SPD-Generalsekretär Matthias Miersch bei Eva Lindenau u.a. über den Ukraine-Kurs von Bundeskanzler Scholz und über die vorgezogene Bundestagswahl 2025.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/phoenix-matthias-miersch-spd-persoenlich.jpg.3681027.jpg' />
+			<enclosure length='50025069' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/24/12/241206_phx_persoenlich/1/241206_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 07 Dec 2024 14:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4691627</guid>
+			<title><![CDATA[Arndt Freytag von Loringhoven zu Gast]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:31:34</itunes:duration>
+			<description><![CDATA[In "phoenix persönlich" spricht Jörg Thadeusz mit dem ehemaligen deutschen Botschafter in Polen, Arndt Freytag von Loringhoven, über sein Interesse an Russland, seine Erfahrungen als Diplomat, Wladimir Putin und Russlands hybriden Krieg.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20phx%20pers_nlich%2030_11_%20Freytag%20von%20Loringhoven_47213.jpg.3674527.jpg' />
+			<enclosure length='53059149' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/24/11/241129_phx_persoenlich/1/241129_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sun, 01 Dec 2024 08:58:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4661062</guid>
+			<title><![CDATA[Prof. Thomas Jäger (Experte für int. Beziehungen) zu Gast bei Inga Kühn]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:55</itunes:duration>
+			<description><![CDATA[Thomas Jäger, Professor für Internationale Politik und Außenpolitik, über die Folgen des Bruchs der Ampelregierung, die Präsidentschaftswahl in den USA und die Pläne Donald Trumps. Moderation: Inga Kühn.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20phoenix%20Pers_nlich%20J_ger%20_%20K_hn_00595%201.jpg.3652537.jpg' />
+			<enclosure length='50283789' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/24/11/241108_phx_persoenlich/1/241108_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 09 Nov 2024 14:11:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4644277</guid>
+			<title><![CDATA[Schriftsteller Peter Prange bei Jörg Thadeusz]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:57</itunes:duration>
+			<description><![CDATA[In der Sendung "phoenix persönlich" spricht Jörg Thadeusz mit dem Bestsellerautor Peter Prange ("Unsere wunderbaren Jahre") über sein Aufwachsen im sauerländischen Altena, darüber, was ihn an Geschichte interessiert und über seine Sorge um Europa.]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/TNs%20Luca%20%28nur%20f%C3%BCr%20und%20von%20Luca%21%29%20%283%29.jpg.3639932.jpg' />
+			<enclosure length='50339565' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/24/10/241025_phx_persoenlich/1/241025_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Fri, 25 Oct 2024 21:30:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4634037</guid>
+			<title><![CDATA[phoenix persönlich mit Bodo Ramelow (Die Linke)]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:31:53</itunes:duration>
+			<description><![CDATA[phoenix persönlich: Bodo Ramelow (DIE LINKE) im Gespräch mit Inga Kühn]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/SF%20Fr%20pers_nlich%20K_hn%20-%20Ramelow%20clip_00007.jpg.3633247.jpg' />
+			<enclosure length='53578605' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/24/10/241018_phx_persoenlich/1/241018_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 19 Oct 2024 17:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">4375277</guid>
+			<title><![CDATA[Norbert Lammert bei Jörg Thadeusz]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:30:03</itunes:duration>
+			<description><![CDATA[Bundestagspräsident a.D. Norbert Lammert über Streit in der Demokratie]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/L%20Pers_nlich%20Lammert%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2014_60460.jpg.3422032.jpg' />
+			<enclosure length='50498829' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/24/03/240315_phx_persoenlich/1/240315_phx_persoenlich_224k_p41v15.mp3' />
+			<pubDate>Sat, 16 Mar 2024 08:06:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">529095</guid>
+			<title><![CDATA[]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:29:42</itunes:duration>
+			<description><![CDATA[]]></description>
+			<itunes:image href='https://www.phoenix.de' />
+			<enclosure length='14260602' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/18/10/181026_phx_persoenlich/1/181026_phx_persoenlich_64k_p21v13.mp3' />
+			<pubDate>Sat, 27 Oct 2018 22:00:00 +0000</pubDate>
+		</item>
+		<item>
+			<guid isPermaLink="false">293727</guid>
+			<title><![CDATA[Die Wackelkanzlerin: Kippt Merkel?]]></title>
+			<itunes:author>phoenix</itunes:author>
+			<itunes:duration>00:30:38</itunes:duration>
+			<description><![CDATA[]]></description>
+			<itunes:image href='https://www.phoenix.de/sixcms/media.php/21/thumbnails/2018_06_24_10_03_24_phoenix_pers%C3%B6nlich_Friedrich_Merz_zu_Gast_bei_Michael_Krons_vom_22.06.18_You_SMUBL.jpg.271032.jpg' />
+			<enclosure length='14710744' type='audio/mp3' url='https://podfileszdf-a.akamaihd.net/podcast/phoenix_podcasts/18/06/180622_phx_persoenlich/1/180622_phx_persoenlich_64k_p21v13.mp3' />
+			<pubDate>Sat, 23 Jun 2018 22:00:00 +0000</pubDate>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,362 @@
+adsblol-point: HTTP 200 30988B 746ms
+proxy-root: HTTP 200 1372B 561ms
+proxy-feed-itamilradar: HTTP 200 57245B 1874ms
+proxy-translate: HTTP 200 132B 226ms
+proxy-photo: HTTP 200 410B 333ms
+proxy-point: HTTP 200 31006B 196ms
+callsigns: MBU1TF,QAJ2,DINNN,DFTCU,SXS3XK,DLH4LM
+adsblol-routeset: HTTP 201 0B 160ms
+adsbdb-callsign: HTTP 200 664B 837ms
+adsbdb-aircraft: HTTP 404 31B 154ms
+planespotters: HTTP 403 203B 568ms
+openfreemap-tilejson: HTTP 200 19254B 24ms
+hexdb-route-EXS95LV: HTTP 200 69B 474ms
+adsbdb-callsign-EXS95LV: HTTP 200 679B 153ms
+hexdb-route-MBU1TF: HTTP 200 68B 411ms
+adsbdb-callsign-MBU1TF: HTTP 200 664B 152ms
+hexdb-route-QAJ2: HTTP 404 43B 431ms
+adsbdb-callsign-QAJ2: HTTP 404 31B 152ms
+hexdb-route-DINNN: HTTP 404 43B 437ms
+adsbdb-callsign-DINNN: HTTP 404 31B 153ms
+hexdb-airport-EGNM: HTTP 200 160B 197ms
+adsbdb-airline-EXS: HTTP 200 126B 153ms
+hexdb-aircraft: HTTP 200 176B 171ms
+adsbdb-aircraft-51116f: HTTP 404 31B 152ms
+adsbdb-aircraft-3cea41: HTTP 200 480B 154ms
+adsbdb-aircraft-3e3afb: HTTP 200 337B 153ms
+iphone selected: CLX352 B748
+iphone: status=LIVE errors=12
+  HTTP 429 https://vectorscope-proxy.vercel.app/v2/mil
+  HTTP 429 https://vectorscope-proxy.vercel.app/v2/point/49.27/11.19/103
+  failed https://api.adsb.lol/v2/mil net::ERR_FAILED
+  HTTP 429 https://vectorscope-proxy.vercel.app/v2/point/49.45/11.08/35
+  failed https://hexdb.io/api/v1/route/icao/CLX352 net::ERR_FAILED
+  failed https://api.allorigins.win/raw?disableCache=true&url=https%3A%2F%2Fapi.adsb.lol%2Fv2%2Fmil%3F_%3D1791635849582 net::ERR_FAILED
+  failed https://api.codetabs.com/v1/proxy/?quest=https%3A%2F%2Fapi.adsb.lol%2Fv2%2Fmil%3F_%3D1791635869631 net::ERR_FAILED
+  HTTP 429 https://vectorscope-proxy.vercel.app/v2/point/49.57/10.23/69
+ipad selected: CLX352 B748
+ipad: errors=2
+  HTTP 429 https://vectorscope-proxy.vercel.app/v2/point/49.45/11.08/35
+  failed https://hexdb.io/api/v1/route/icao/CLX352 net::ERR_FAILED
+intel iphone: items=1991 live=42 strong=0 errors=0
+  source usgs:ok:19
+  source emsc:ok:6
+  source gdacs:ok:9
+  source nws:ok:0
+  source faa:ok:0
+  source favt:ok:20
+  source mchs:ok:15
+  source sledcom:ok:18
+  source gladkov:ok:11
+  source bogomaz:ok:4
+  source gusev:ok:20
+  source razvozhaev:ok:8
+  source opershtab23:ok:20
+  source sobyanin:ok:7
+  source kpszsu:ok:20
+  source idf:ok:19
+  source dod:ok:10
+  source baza:ok:13
+  source mash:ok:12
+  source shot:ok:8
+  source news112:ok:16
+  source astra:ok:14
+  source ostorozhno:ok:13
+  source ostorozhnomsk:ok:17
+  source sirena:ok:15
+  source nexta:ok:20
+  source osintdefender:ok:20
+  source rageintel:ok:19
+  source warmonitors:ok:20
+  source insiderpaper:ok:20
+  source clashreport:ok:20
+  source liveuamap:ok:20
+  source itamilradar:ok:35
+  source bellingcat:ok:32
+  source isw:ok:23
+  source janovsky:ok:19
+  source deepstate:ok:20
+  source netblocks:ok:20
+  source aviationist:ok:40
+  source twz:ok:38
+  source defensenews:ok:50
+  source breakingdefense:ok:40
+  source navalnews:ok:10
+  source usni:ok:30
+  source hartpunkt:ok:34
+  source augengeradeaus:ok:20
+  source esut:ok:6
+  source mediazona:ok:18
+  source agentstvo:ok:12
+  source thebell:ok:20
+  source rybar:ok:11
+  source rybar-en:ok:12
+  source rybar-de:ok:10
+  source rybar-mena:ok:13
+  source rybar-europe:ok:17
+  source rybar-balkans:ok:16
+  source rybar-caucasus:ok:18
+  source rybar-asia:ok:18
+  source rybar-turan:ok:19
+  source rybar-africa:ok:16
+  source rybar-latam:ok:11
+  source rybar-tactical:ok:20
+  source rybar-america:ok:18
+  source wargonzo:ok:14
+  source dvamajora:ok:13
+  source mes:ok:20
+  source abualiexpress:ok:11
+  source tagesschau:ok:67
+  source dlf:ok:42
+  source dw:ok:21
+  source bbc:ok:28
+  source aljazeera:ok:25
+  source meduza:ok:17
+  source currenttime:ok:16
+  source trump:ok:100
+  source whitehouse:ok:30
+  source whitehouseactions:ok:30
+  source bundestag:ok:15
+  source bundestaghib:ok:15
+  source eucommission:ok:10
+  source eucouncil:ok:0
+  source kremlin:ok:20
+  source mid-russia:ok:11
+  source zelensky:ok:10
+  source unpress:ok:10
+  source tagesschauinland:ok:49
+  source spiegel:ok:20
+  source zeit:ok:15
+  source faz:ok:45
+  source handelsblatt:ok:20
+  source politicoeu:ok:10
+  source politicous:ok:30
+  source axios:ok:100
+  source npr:ok:10
+  source bundesregierung:ok:20
+  source bmi:ok:20
+  source bmds:ok:20
+  source bgh:ok:20
+  source bsi:ok:20
+  source zoll:ok:20
+  source bundestagtv:ok:15
+  source dlfinterview:ok:53
+  source phoenixpersoenlich:ok:62
+  source fragdenstaat:ok:20
+  source awvotes:ERR undefined:0
+  source berlinplaybook:ok:1
+  source mdb-ricarda-lang:ERR undefined:0
+  source mdb-heidi-reichinnek:ERR undefined:0
+  source mdb-katharina-droege:ok:1
+  source mdb-norbert-roettgen:ok:2
+  source mdb-britta-hasselmann:ERR undefined:0
+  source mdb-steffi-lemke:ERR undefined:0
+  source mdb-janosch-dahmen:ERR undefined:0
+  source mdb-omid-nouripour:ERR undefined:0
+  source mdb-sara-nanni:ERR undefined:0
+  source mdb-lisa-paus:ERR undefined:0
+  source mdb-janine-wissler:ERR undefined:0
+  source mdb-katrin-goering-eckardt:ERR undefined:0
+  source mdb-anton-hofreiter:ERR undefined:0
+  source mdb-johannes-wagner:ERR undefined:0
+  source mdb-felix-banaszak:ERR undefined:0
+  source mdb-agnieszka-brugger:ERR undefined:0
+  source mdb-sven-lehmann:ERR undefined:0
+  source mdb-jamila-anna-schaefer:ERR undefined:0
+  source mdb-anna-luehrmann:ERR undefined:0
+  source mdb-serap-gueler:ERR undefined:0
+  source mdb-armin-grau:ERR undefined:0
+  source mdb-timon-dzienus:ERR undefined:0
+  source mdb-dietmar-bartsch:ERR undefined:0
+  source mdb-katrin-uhlig:ERR undefined:0
+  source mdb-matthias-gastel:ok:1
+  source mdb-ulle-schauws:ERR undefined:0
+  source mdb-hanna-steinmueller:ERR undefined:0
+  source mdb-kirsten-kappert-gonther:ERR undefined:0
+  source mdb-nicole-gohlke:ERR undefined:0
+  source mdb-carmen-wegge:ERR undefined:0
+  source mdb-pascal-meiser:ok:1
+  source mdb-harald-ebner:ERR undefined:0
+  source mdb-karl-baer:ERR undefined:0
+  source mdb-chantal-kopf:ERR undefined:0
+  source mdb-karoline-otte:ERR undefined:0
+  source mdb-corinna-rueffer:ERR undefined:0
+  source mdb-marcel-emmerich:ERR undefined:0
+  source mdb-dorothee-baer:ERR undefined:0
+  source mdb-julian-joswig:ok:1
+  source mdb-helge-limburg:ERR undefined:0
+  source mdb-victoria-brossart:ERR undefined:0
+  source mdb-luise-amtsberg:ERR undefined:0
+  source mdb-niklas-wagener:ERR undefined:0
+  source mdb-goekay-akbulut:ERR undefined:0
+  source mdb-simone-fischer:ERR undefined:0
+  source mdb-matthias-hauer:ERR undefined:0
+  source mdb-ralf-stegner:ERR undefined:0
+  source mdb-katja-mast:ERR undefined:0
+  source mdb-lars-castellucci:ERR undefined:0
+  source mdb-luke-hoss:ERR undefined:0
+  source mdb-josephine-ortleb:ERR undefined:0
+  source mdb-johann-saathoff:ERR undefined:0
+  source mdb-annika-klose:ERR undefined:0
+  source mdb-ruppert-stuewe:ERR undefined:0
+  source mdb-siemtje-moeller:ERR undefined:0
+  source mdb-ulrich-thoden:ERR undefined:0
+  source mdb-hendrik-streeck:ERR undefined:0
+  source mdb-esra-limbacher:ERR undefined:0
+  source mdb-elisabeth-kaiser:ERR undefined:0
+  source mdb-rebecca-lenhard:ERR undefined:0
+  source mdb-natalie-pawlik:ERR undefined:0
+  source mdb-rita-schwarzeluehr-sutter:ERR undefined:0
+  source mdb-jan-dieren:ERR undefined:0
+  source mdb-lars-rohwer:ERR undefined:0
+  source mdb-michael-thews:ERR undefined:0
+  source mdb-isabel-cademartori:ERR undefined:0
+  source mdb-stefan-schwartze:ERR undefined:0
+  source mdb-jens-peick:ERR undefined:0
+  source mdb-baerbel-kofler:ERR undefined:0
+  source mdb-anja-troff-schaffarzyk:ERR undefined:0
+  source mdb-sebastian-hartmann:ERR undefined:0
+  source mdb-gregor-gysi:ERR undefined:0
+  source mdb-juergen-cosse:ERR undefined:0
+  source mdb-helge-lindh:ERR undefined:0
+  source mdb-stefan-zierke:ERR undefined:0
+  source mdb-julia-schneider:ERR undefined:0
+  source mdb-svenja-schulze:ERR undefined:0
+  source mdb-tamara-mazzi:ERR undefined:0
+  source mdb-stephan-protschka:ERR undefined:0
+  source mdb-vinzenz-glaser:ERR undefined:0
+  source mdb-david-schliesing:ERR undefined:0
+  source mdb-awet-tesfaiesus:ok:1
+  source mdb-maren-kaminski:ERR undefined:0
+  source mdb-jorrit-bosch:ERR undefined:0
+  source mdb-marcel-bauer:ERR undefined:0
+  source mdb-zada-salihovic:ERR undefined:0
+  source mdb-nicole-hoechst:ERR undefined:0
+  source mdb-cansu-oezdemir:ERR undefined:0
+  story reported 2src 2rep "F-15EX May Finally Get Missile Warning System The USAF Originally Skim"
+  story reported 2src 2rep "Ukraine F-16 Update: Jets From Belgium, Maintenance Concerns And Block"
+  story reported 2src 3rep "RAAF F/A-18F Super Hornet Spotted with AIM-260 During Gray Flag Test E"
+  story reported 2src 2rep "U.S. Air Force Looks To Finally Add Missile Warning System To F-15EX E"
+  story reported 2src 2rep "All The Weapons A Single Navy Fighter Squadron Launched During Operati"
+  story reported 2src 2rep "Saudis plan major offensive against the Houthis, but U.S. won't join f"
+  story confirmed 2src 2rep "Fact Sheet: President Donald J. Trump Announces Medicare Improvement F"
+  story reported 2src 2rep "Northrop Grumman’s Talon Blue Collaborative Combat Aircraft Has Flown"
+  story reported 2src 2rep "Yemeni and Saudi forces launch counteroffensive against the Houthis"
+  story reported 2src 2rep "Naval Research Laboratory’s VXS-1 Retires its Last NP-3C Orion"
+  story reported 2src 2rep "The Houthis captured the key supply route between Taiz and Aden cities"
+  story reported 3src 3rep "B-1B Bombers Make Hasty Departure From England"
+  story official 2src 2rep "125 Million People voted today in the first round of India’s President"
+  story confirmed 2src 2rep "Exclusive, President of Cyprus: ‘Sky Is the Limit’ for Bilateral Relat"
+  story confirmed 2src 2rep "Think of it, The New York Times DOCTORED the picture of the beautiful "
+  story official 2src 2rep "Datenschutz = Showstopper bei der Digitalisierung ⁉️ 👉🏻 Wie Bundesdi"
+  story official 2src 2rep "IDF: The Chief of the General Staff at the state ceremony marking thre"
+  story confirmed 2src 2rep "AfD in Magdeburg: Ein Etappensieg für die Rechtsradikalen"
+  story confirmed 2src 2rep "IDF: A short while ago, IDF soldiers were dispatched to the area of Ra"
+  story reported 2src 2rep "Northrop Grumman and SandboxAQ Explain How Lumberjack Is Preparing for"
+  story confirmed 2src 3rep "IDF: A short while ago, IDF soldiers identified two suspects riding a "
+  story confirmed 2src 2rep "What's driving up Gasoline is no longer the Strait of Hormuz, because "
+  story official 2src 2rep "President Trump and Republicans Are Delivering Real Results for Nebras"
+  story official 2src 2rep "The Ohio Arena was already full to the brim, And yet these people were"
+  story emerging 2src 2rep "Coalition Strikes Houthi Naval Assets: Saudi-led coalition naval force"
+  story official 2src 2rep "Air Test, Evaluation Squadron Provides Integral Capabilities During Ex"
+  story reported 2src 2rep "Marine F-35C Also Sports Three Submarine Kill Markings After Operation"
+  story reported 2src 2rep "Boeing nabs potential $14.7 billion PAC-3 seeker contract"
+  story confirmed 2src 2rep "Annie “Trannie” Andrews is running against our wonderful Darline Graha"
+  story confirmed 2src 2rep "If Republicans win the House of Representatives and the Senate in the "
+  story reported 2src 2rep "Houthis Lose Ground Along Strategic Bab Al Mandeb Strait In Saudi-Back"
+  story reported 2src 2rep "First Release Of USAF’s New HACM Hypersonic Cruise Missile Has Happene"
+  story confirmed 2src 2rep "Die Usa und Südamerika: Die USA definieren, was gut ist"
+  story confirmed 2src 2rep "IDF: Last night (Monday), as part of the IDF’s ongoing enforcement of "
+  story reported 2src 2rep "Scoop: Gun safety groups jump into midterms with $10 million assist fo"
+  story confirmed 2src 2rep "Lower Taxes, Safer Streets, Stronger Border: President Trump’s Texas R"
+  story confirmed 2src 2rep "Watchdog concludes Biden risked security by letting millions overstay "
+  story confirmed 2src 3rep "My Rally crowds and enthusiasm are unbelievable! Nobody has ever seen "
+  story reported 3src 3rep "Anduril establishes new shipyard to manufacture components for Virgini"
+  story confirmed 2src 2rep "FoxNews spends more time covering the Jihadist and Dumocrat candidates"
+intel ipad: items=1991 live=42 strong=0 errors=0
+deep link selected: AE57D9
+webkit intel: 83 sources not ok
+  webkit ERR awvotes: undefined
+  webkit ERR mdb-ricarda-lang: undefined
+  webkit ERR mdb-heidi-reichinnek: undefined
+  webkit ERR mdb-britta-hasselmann: undefined
+  webkit ERR mdb-steffi-lemke: undefined
+  webkit ERR mdb-janosch-dahmen: undefined
+  webkit ERR mdb-omid-nouripour: undefined
+  webkit ERR mdb-sara-nanni: undefined
+  webkit ERR mdb-lisa-paus: undefined
+  webkit ERR mdb-janine-wissler: undefined
+  webkit ERR mdb-katrin-goering-eckardt: undefined
+  webkit ERR mdb-anton-hofreiter: undefined
+  webkit ERR mdb-johannes-wagner: undefined
+  webkit ERR mdb-felix-banaszak: undefined
+  webkit ERR mdb-agnieszka-brugger: undefined
+  webkit ERR mdb-sven-lehmann: undefined
+  webkit ERR mdb-jamila-anna-schaefer: undefined
+  webkit ERR mdb-anna-luehrmann: undefined
+  webkit ERR mdb-serap-gueler: undefined
+  webkit ERR mdb-armin-grau: undefined
+  webkit ERR mdb-timon-dzienus: undefined
+  webkit ERR mdb-dietmar-bartsch: undefined
+  webkit ERR mdb-katrin-uhlig: undefined
+  webkit ERR mdb-ulle-schauws: undefined
+  webkit ERR mdb-hanna-steinmueller: undefined
+  webkit ERR mdb-kirsten-kappert-gonther: undefined
+  webkit ERR mdb-nicole-gohlke: undefined
+  webkit ERR mdb-carmen-wegge: undefined
+  webkit ERR mdb-harald-ebner: undefined
+  webkit ERR mdb-karl-baer: undefined
+  webkit ERR mdb-chantal-kopf: undefined
+  webkit ERR mdb-karoline-otte: undefined
+  webkit ERR mdb-corinna-rueffer: undefined
+  webkit ERR mdb-marcel-emmerich: undefined
+  webkit ERR mdb-dorothee-baer: undefined
+  webkit ERR mdb-helge-limburg: undefined
+  webkit ERR mdb-victoria-brossart: undefined
+  webkit ERR mdb-luise-amtsberg: undefined
+  webkit ERR mdb-niklas-wagener: undefined
+  webkit ERR mdb-goekay-akbulut: undefined
+  webkit ERR mdb-simone-fischer: undefined
+  webkit ERR mdb-matthias-hauer: undefined
+  webkit ERR mdb-ralf-stegner: undefined
+  webkit ERR mdb-katja-mast: undefined
+  webkit ERR mdb-lars-castellucci: undefined
+  webkit ERR mdb-luke-hoss: undefined
+  webkit ERR mdb-josephine-ortleb: undefined
+  webkit ERR mdb-johann-saathoff: undefined
+  webkit ERR mdb-annika-klose: undefined
+  webkit ERR mdb-ruppert-stuewe: undefined
+  webkit ERR mdb-siemtje-moeller: undefined
+  webkit ERR mdb-ulrich-thoden: undefined
+  webkit ERR mdb-hendrik-streeck: undefined
+  webkit ERR mdb-esra-limbacher: undefined
+  webkit ERR mdb-elisabeth-kaiser: undefined
+  webkit ERR mdb-rebecca-lenhard: undefined
+  webkit ERR mdb-natalie-pawlik: undefined
+  webkit ERR mdb-rita-schwarzeluehr-sutter: undefined
+  webkit ERR mdb-jan-dieren: undefined
+  webkit ERR mdb-lars-rohwer: undefined
+  webkit ERR mdb-michael-thews: undefined
+  webkit ERR mdb-isabel-cademartori: undefined
+  webkit ERR mdb-stefan-schwartze: undefined
+  webkit ERR mdb-jens-peick: undefined
+  webkit ERR mdb-baerbel-kofler: undefined
+  webkit ERR mdb-anja-troff-schaffarzyk: undefined
+  webkit ERR mdb-sebastian-hartmann: undefined
+  webkit ERR mdb-gregor-gysi: undefined
+  webkit ERR mdb-juergen-cosse: undefined
+  webkit ERR mdb-helge-lindh: undefined
+  webkit ERR mdb-stefan-zierke: undefined
+  webkit ERR mdb-julia-schneider: undefined
+  webkit ERR mdb-svenja-schulze: undefined
+  webkit ERR mdb-tamara-mazzi: undefined
+  webkit ERR mdb-stephan-protschka: undefined
+  webkit ERR mdb-vinzenz-glaser: undefined
+  webkit ERR mdb-david-schliesing: undefined
+  webkit ERR mdb-maren-kaminski: undefined
+  webkit ERR mdb-jorrit-bosch: undefined
+  webkit ERR mdb-marcel-bauer: undefined
+  webkit ERR mdb-zada-salihovic: undefined
+  webkit ERR mdb-nicole-hoechst: undefined
+  webkit ERR mdb-cansu-oezdemir: undefined
+webkit DE: 0/5 headlines changed, 0 still Cyrillic

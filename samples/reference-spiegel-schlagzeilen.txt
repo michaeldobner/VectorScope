@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>DER SPIEGEL - Schlagzeilen</title>
+<link>https://www.spiegel.de/</link>
+<description>Deutschlands führende Nachrichtenseite. Alles Wichtige aus Politik, Wirtschaft, Sport, Kultur, Wissenschaft, Technik und mehr.</description>
+<language>de</language>
+<pubDate>Sat, 10 Oct 2026 14:35:00 +0200</pubDate>
+<lastBuildDate>Sat, 10 Oct 2026 14:35:00 +0200</lastBuildDate>
+<image>
+<title>DER SPIEGEL</title>
+<link>https://www.spiegel.de/</link>
+<url>https://cdn.prod.www.spiegel.de/public/spon/images/logos/der-spiegel-h60.png</url>
+</image>
+<atom:link href="https://www.spiegel.de/schlagzeilen/index.rss" rel="self" type="application/rss+xml"/>
+<item>
+<title>Lombardei-Rundfahrt: Radprofis verzögern den Start und protestieren für mehr Sicherheit</title>
+<link>https://www.spiegel.de/sport/radsport/lombardei-rundfahrt-radprofis-verzoegern-den-start-und-protestieren-fuer-mehr-sicherheit-a-6d4209de-231a-4f15-aaba-f4688b9e736c#ref=rss</link>
+<description>Als es losgehen sollte, stand alles still: Beim Eintagesklassiker in Italien haben die teilnehmenden Radprofis vor dem Start fünf Minuten gestreikt. Dann schnappte sich Remco Evenepoel ein Mikrofon.</description>
+<content:encoded>Als es losgehen sollte, stand alles still: Beim Eintagesklassiker in Italien haben die teilnehmenden Radprofis vor dem Start fünf Minuten gestreikt. Dann schnappte sich Remco Evenepoel ein Mikrofon.</content:encoded>
+<category>Sport</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/cea31074-3d49-4d11-ab69-0215fe2f32fd_w520_r2.08_fpx67.34_fpy55.01.jpg" length="0"/>
+<guid isPermaLink="false">6d4209de-231a-4f15-aaba-f4688b9e736c</guid>
+<pubDate>Sat, 10 Oct 2026 14:35:00 +0200</pubDate>
+</item>
+<item>
+<title>Paula Schwarz: Warum diese Frau durch ihr Millionenerbe unglücklich wurde</title>
+<link>https://www.spiegel.de/wirtschaft/paula-schwarz-warum-diese-frau-durch-ihr-millionenerbe-ungluecklich-wurde-a-5ef0b2a7-e47c-4eba-9fad-70f476f66d93#ref=rss</link>
+<description>Paula Schwarz wurde reich geboren. Sie nahm Drogen und rebellierte öffentlich gegen ihre Familie. Nun versucht sie einen Neustart als Unternehmerin – und Tochter.</description>
+<content:encoded>Paula Schwarz wurde reich geboren. Sie nahm Drogen und rebellierte öffentlich gegen ihre Familie. Nun versucht sie einen Neustart als Unternehmerin – und Tochter.</content:encoded>
+<category>Wirtschaft</category>
+<enclosure type="image/png" url="https://cdn.prod.www.spiegel.de/images/1b3c5628-8c6e-40c7-97e9-ce2bafb36d58_w520_r2.08_fpx50_fpy50.png" length="0"/>
+<guid isPermaLink="false">5ef0b2a7-e47c-4eba-9fad-70f476f66d93</guid>
+<pubDate>Sat, 10 Oct 2026 14:19:00 +0200</pubDate>
+</item>
+<item>
+<title>Jugendwort des Jahres 2026: »Ragebait« setzt sich gegen »Peak« und »Crashout« durch</title>
+<link>https://www.spiegel.de/panorama/gesellschaft/jugendwort-des-jahres-2026-ragebait-setzt-sich-gegen-peak-und-crashout-durch-a-c8c4e883-adc9-4a76-b8d5-1fae20f8bdbe#ref=rss</link>
+<description>In einer Abstimmung des Langenscheidt-Verlags ist der Begriff »Ragebait« zum Jugendwort des Jahres 2026 gekürt worden. Auf den Plätzen zwei und drei: »Peak« und »Crashout«.</description>
+<content:encoded>In einer Abstimmung des Langenscheidt-Verlags ist der Begriff »Ragebait« zum Jugendwort des Jahres 2026 gekürt worden. Auf den Plätzen zwei und drei: »Peak« und »Crashout«.</content:encoded>
+<category>Panorama</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/ce725dd0-bf98-476b-9cc4-b3cbd6d9f4e3_w520_r2.08_fpx28.06_fpy44.99.jpg" length="0"/>
+<guid isPermaLink="false">c8c4e883-adc9-4a76-b8d5-1fae20f8bdbe</guid>
+<pubDate>Sat, 10 Oct 2026 13:59:00 +0200</pubDate>
+</item>
+<item>
+<title>Berngau: Schütze von Berngau war einst bei der Polizei</title>
+<link>https://www.spiegel.de/panorama/justiz/berngau-schuetze-von-berngau-war-einst-bei-der-polizei-a-77b9c790-6eeb-4737-bdff-065f0b8ab31e#ref=rss</link>
+<description>Der 60-Jährige, der in der Oberpfalz zwei Mitarbeiter des Landratsamts erschoss, war Ende der Achtzigerjahre Polizeibeamter in Ausbildung. Warum er entlassen wurde, verraten die Ermittler nicht.</description>
+<content:encoded>Der 60-Jährige, der in der Oberpfalz zwei Mitarbeiter des Landratsamts erschoss, war Ende der Achtzigerjahre Polizeibeamter in Ausbildung. Warum er entlassen wurde, verraten die Ermittler nicht.</content:encoded>
+<category>Panorama</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/84837bf2-d14e-4822-8450-eb307e282c06_w520_r2.08_fpx46.62_fpy49.98.jpg" length="0"/>
+<guid isPermaLink="false">77b9c790-6eeb-4737-bdff-065f0b8ab31e</guid>
+<pubDate>Sat, 10 Oct 2026 13:49:00 +0200</pubDate>
+</item>
+<item>
+<title>Cem Özdemir: »Fünf vor zwölf« – Grünenpolitiker mahnt Regierung zur Einigkeit</title>
+<link>https://www.spiegel.de/politik/deutschland/cem-oezdemir-fuenf-vor-zwoelf-gruenenpolitiker-mahnt-regierung-zur-einigkeit-a-8ab277c6-669a-4175-a7a3-5d2445f134ab#ref=rss</link>
+<description>Baden-Württembergs Ministerpräsident Cem Özdemir erwartet von der Bundesregierung mehr Disziplin und ein Ende des Streits. Kanzler Merz sei schon lange Politiker, aber »jetzt läuft die Sanduhr«.</description>
+<content:encoded>Baden-Württembergs Ministerpräsident Cem Özdemir erwartet von der Bundesregierung mehr Disziplin und ein Ende des Streits. Kanzler Merz sei schon lange Politiker, aber »jetzt läuft die Sanduhr«.</content:encoded>
+<category>Politik</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/31f4735e-2f0d-44ad-964f-05e0a430e1da_w520_r2.08_fpx68.66_fpy45.jpg" length="0"/>
+<guid isPermaLink="false">8ab277c6-669a-4175-a7a3-5d2445f134ab</guid>
+<pubDate>Sat, 10 Oct 2026 13:29:00 +0200</pubDate>
+</item>
+<item>
+<title>Formel-1-Sprint in Singapur: Max Verstappen gewinnt im Regenchaos, George Russell scheidet aus</title>
+<link>https://www.spiegel.de/sport/formel1/formel-1-sprint-in-singapur-max-verstappen-gewinnt-im-regenchaos-george-russell-scheidet-aus-a-37ded3ec-b8b1-434a-b4d9-68f1ae588112#ref=rss</link>
+<description>Der letzte Sprint des Jahres hatte es in sich: Gleich neun Autos fallen auf dem nassen Straßenkurs in Singapur aus – darunter der WM-Zweite. Max Verstappen siegt. Und bei McLaren schlägt man die Hände über dem Kopf zusammen.</description>
+<content:encoded>Der letzte Sprint des Jahres hatte es in sich: Gleich neun Autos fallen auf dem nassen Straßenkurs in Singapur aus – darunter der WM-Zweite. Max Verstappen siegt. Und bei McLaren schlägt man die Hände über dem Kopf zusammen.</content:encoded>
+<category>Sport</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/0ef9e3eb-4001-46a3-aab3-b933eadf9459_w520_r2.08_fpx40.27_fpy50.jpg" length="0"/>
+<guid isPermaLink="false">37ded3ec-b8b1-434a-b4d9-68f1ae588112</guid>
+<pubDate>Sat, 10 Oct 2026 13:16:00 +0200</pubDate>
+</item>
+<item>
+<title>Ukraine wirft Russland Gleitbomben-Angriff auf Wohnhäuser vor</title>
+<link>https://www.spiegel.de/ausland/ukraine-wirft-russland-gleitbomben-angriff-auf-wohnhaeuser-vor-a-577571e4-55bd-4c5f-a5fa-8a125a7c1435#ref=rss</link>
+<description>Im Südosten der Ukraine sind laut ukrainischen Angaben mindestens zwölf Menschen bei Luftschlägen der russischen Armee gestorben. Präsident Selenskyj warnt davor, den Druck auf Russland zu verringern.</description>
+<content:encoded>Im Südosten der Ukraine sind laut ukrainischen Angaben mindestens zwölf Menschen bei Luftschlägen der russischen Armee gestorben. Präsident Selenskyj warnt davor, den Druck auf Russland zu verringern.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/69008572-88c6-4bfc-ac12-41f49519aa09_w520_r2.08_fpx65.34_fpy50.jpg" length="0"/>
+<guid isPermaLink="false">577571e4-55bd-4c5f-a5fa-8a125a7c1435</guid>
+<pubDate>Sat, 10 Oct 2026 13:12:00 +0200</pubDate>
+</item>
+<item>
+<title>Polen: Mehr als 70 Festnahmen nach Messerattacken an Schulen</title>
+<link>https://www.spiegel.de/ausland/polen-mehr-als-70-festnahmen-nach-messerattacken-an-schulen-a-e1b59e5d-a9f4-431a-af48-a168a4324cb3#ref=rss</link>
+<description>Gewalttaten von zwei Jugendlichen an verschiedenen Orten wühlen Polen auf. Eine Frau starb, der Täter wollte seine Aktion offenbar filmen. Um Nachahmer zu stoppen, wurden nun landesweit Schulen kontrolliert.</description>
+<content:encoded>Gewalttaten von zwei Jugendlichen an verschiedenen Orten wühlen Polen auf. Eine Frau starb, der Täter wollte seine Aktion offenbar filmen. Um Nachahmer zu stoppen, wurden nun landesweit Schulen kontrolliert.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/da6c1fd3-e0ec-4152-8bf4-754de3f967f0_w520_r2.08_fpx66.25_fpy50.jpg" length="0"/>
+<guid isPermaLink="false">e1b59e5d-a9f4-431a-af48-a168a4324cb3</guid>
+<pubDate>Sat, 10 Oct 2026 13:08:00 +0200</pubDate>
+</item>
+<item>
+<title>Erbschaftsteuer: Verfassungsrichter prüfen Privilegien für Firmenerben</title>
+<link>https://www.spiegel.de/wirtschaft/erbschaftsteuer-verfassungsrichter-pruefen-privilegien-fuer-firmenerben-a-4511290b-d1c6-4691-bb46-8bab8f3d3682#ref=rss</link>
+<description>Wer eine Firma erbt, zahlt oft wenig oder gar keine Erbschaftsteuer. Das Bundesverfassungsgericht soll nun klären, ob das rechtens ist.</description>
+<content:encoded>Wer eine Firma erbt, zahlt oft wenig oder gar keine Erbschaftsteuer. Das Bundesverfassungsgericht soll nun klären, ob das rechtens ist.</content:encoded>
+<category>Wirtschaft</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/d8a49299-299d-4317-90e4-6ab18cb6e9b9_w520_r2.08_fpx29.88_fpy54.99.jpg" length="0"/>
+<guid isPermaLink="false">4511290b-d1c6-4691-bb46-8bab8f3d3682</guid>
+<pubDate>Sat, 10 Oct 2026 12:57:00 +0200</pubDate>
+</item>
+<item>
+<title>CDU: Mario Voigt, Dennis Radtke und Stefan Evers dringen auf klareres Profil der Partei</title>
+<link>https://www.spiegel.de/politik/deutschland/cdu-mario-voigt-dennis-radtke-und-stefan-evers-dringen-auf-klareres-profil-der-partei-a-82944159-d1c9-49e8-8092-87565d1ad5ad#ref=rss</link>
+<description>Ab Sonntag berät das CDU-Präsidium mit Kanzler Merz über den künftigen Kurs der Partei. Franziska Hoppermann, Mario Voigt, Dennis Radtke und Stefan Evers drängen auf mehr Profil – und einen Fokus auf Alltagsprobleme.</description>
+<content:encoded>Ab Sonntag berät das CDU-Präsidium mit Kanzler Merz über den künftigen Kurs der Partei. Franziska Hoppermann, Mario Voigt, Dennis Radtke und Stefan Evers drängen auf mehr Profil – und einen Fokus auf Alltagsprobleme.</content:encoded>
+<category>Politik</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/c81db32c-514f-45cf-b77d-e16a32225493_w520_r2.08_fpx30.25_fpy44.99.jpg" length="0"/>
+<guid isPermaLink="false">82944159-d1c9-49e8-8092-87565d1ad5ad</guid>
+<pubDate>Sat, 10 Oct 2026 12:45:00 +0200</pubDate>
+</item>
+<item>
+<title>Michael Douglas: FBI warnte ihn vor Angriff mit HIV-Nadel bei den Oscars 1992</title>
+<link>https://www.spiegel.de/panorama/leute/michael-douglas-fbi-warnte-ihn-vor-angriff-mit-hiv-nadel-bei-den-oscars-1992-a-41588324-439a-4005-a705-760edd7384a4#ref=rss</link>
+<description>Michael Douglas hat seine Memoiren veröffentlicht. Darin schildert er, wie ein FBI-Agent ihn 1992 vor der Oscarverleihung warnte: Jemand wolle ihn mit einer HIV-infizierten Nadel stechen.</description>
+<content:encoded>Michael Douglas hat seine Memoiren veröffentlicht. Darin schildert er, wie ein FBI-Agent ihn 1992 vor der Oscarverleihung warnte: Jemand wolle ihn mit einer HIV-infizierten Nadel stechen.</content:encoded>
+<category>Panorama</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/231b12f7-a261-443a-a097-2d3905cae88c_w520_r2.08_fpx59.99_fpy44.99.jpg" length="0"/>
+<guid isPermaLink="false">41588324-439a-4005-a705-760edd7384a4</guid>
+<pubDate>Sat, 10 Oct 2026 12:36:00 +0200</pubDate>
+</item>
+<item>
+<title>Peru: Hitler Mussolini Simeón Flores wird Bürgermeister von Queropalca in den Anden</title>
+<link>https://www.spiegel.de/ausland/peru-hitler-mussolini-simeon-flores-wird-buergermeister-von-queropalca-in-den-anden-a-80b99a02-3510-4ffc-bada-808a2d44cb16#ref=rss</link>
+<description>Hitler und Mussolini in einer Person – und die schlägt die extreme Rechte: Ein peruanischer Lokalpolitiker erregt wegen seiner Vornamen weltweite Aufmerksamkeit. Dabei will er nur bessere Wege durch die Anden.</description>
+<content:encoded>Hitler und Mussolini in einer Person – und die schlägt die extreme Rechte: Ein peruanischer Lokalpolitiker erregt wegen seiner Vornamen weltweite Aufmerksamkeit. Dabei will er nur bessere Wege durch die Anden.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/png" url="https://cdn.prod.www.spiegel.de/images/668abb6c-009e-406c-a185-66b33ab78a26_w520_r2.08_fpx54.97_fpy62.36.png" length="0"/>
+<guid isPermaLink="false">80b99a02-3510-4ffc-bada-808a2d44cb16</guid>
+<pubDate>Sat, 10 Oct 2026 12:32:00 +0200</pubDate>
+</item>
+<item>
+<title>Café Engländer: Der »Rindfleischkönig« kaufte Wiens liebstes Kaffeehaus – jetzt ist es zu</title>
+<link>https://www.spiegel.de/ausland/cafe-englaender-der-rindfleischkoenig-kaufte-wiens-liebstes-kaffeehaus-jetzt-ist-es-zu-a-29c3ff08-a610-442b-9725-a3dd60772718#ref=rss</link>
+<description>Das Wiener Kultkaffeehaus Engländer hatte ein besonderes Publikum: Schriftsteller, Diplomaten, Schauspieler. Nun macht das Lokal überraschend dicht, die Belegschaft wirft hin.</description>
+<content:encoded>Das Wiener Kultkaffeehaus Engländer hatte ein besonderes Publikum: Schriftsteller, Diplomaten, Schauspieler. Nun macht das Lokal überraschend dicht, die Belegschaft wirft hin.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/6d05da33-5f42-422e-a5fc-a9c330de0e83_w520_r2.08_fpx53.32_fpy50.jpg" length="0"/>
+<guid isPermaLink="false">29c3ff08-a610-442b-9725-a3dd60772718</guid>
+<pubDate>Sat, 10 Oct 2026 12:30:00 +0200</pubDate>
+</item>
+<item>
+<title>Klaus Rader: Der Mann, der die Pizza groß machte</title>
+<link>https://www.spiegel.de/wirtschaft/unternehmen/klaus-rader-nachruf-auf-den-losteria-gruender-der-die-pizza-gross-machte-a-623d5f7b-4b8e-468d-a717-079f9be2c090#ref=rss</link>
+<description>Klaus Rader war Zahlenmensch und leidenschaftlicher Gastronom. Mit L’Osteria machte er aus einem kleinen Italiener eine europaweite Restaurantkette. Nun ist er bei einer Rallye tödlich verunglückt.</description>
+<content:encoded>Klaus Rader war Zahlenmensch und leidenschaftlicher Gastronom. Mit L’Osteria machte er aus einem kleinen Italiener eine europaweite Restaurantkette. Nun ist er bei einer Rallye tödlich verunglückt.</content:encoded>
+<category>Wirtschaft</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/cb601d54-7e15-404c-9130-8c08d21346d6_w520_r2.08_fpx50_fpy63.11.jpg" length="0"/>
+<guid isPermaLink="false">623d5f7b-4b8e-468d-a717-079f9be2c090</guid>
+<pubDate>Sat, 10 Oct 2026 12:26:00 +0200</pubDate>
+</item>
+<item>
+<title>Brasilien: Militärpolizei befreit 13 Kinder aus der Gewalt von mutmaßlichem Geiselnehmer</title>
+<link>https://www.spiegel.de/ausland/curitiba-brasilianische-militaerpolizei-befreit-13-kinder-aus-der-gewalt-von-mutmasslichem-geiselnehmer-a-5386e1de-7b94-4e91-8cd0-6eff81c07ad9#ref=rss</link>
+<description>Im Süden Brasiliens ist ein Mann von der Polizei getötet worden, nachdem er sich mit einem Messer bewaffnet in einer Kindertagesstätte verschanzt hatte. Laut Behörden war er psychisch krank.</description>
+<content:encoded>Im Süden Brasiliens ist ein Mann von der Polizei getötet worden, nachdem er sich mit einem Messer bewaffnet in einer Kindertagesstätte verschanzt hatte. Laut Behörden war er psychisch krank.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/cdbc80c0-6860-4e69-a60a-adfef0d73f44_w520_r2.08_fpx29.99_fpy54.99.jpg" length="0"/>
+<guid isPermaLink="false">5386e1de-7b94-4e91-8cd0-6eff81c07ad9</guid>
+<pubDate>Sat, 10 Oct 2026 12:16:00 +0200</pubDate>
+</item>
+<item>
+<title>US-Sanktionen gegen IStGH: Donald Trump gegen das Weltstrafgericht</title>
+<link>https://www.spiegel.de/ausland/us-sanktionen-gegen-istgh-donald-trump-gegen-das-weltstrafgericht-a-818fb932-c878-49c8-ad82-9fd101e3b171#ref=rss</link>
+<description>Die USA verschärfen ihre Sanktionen gegen den Internationalen Strafgerichtshof. Betroffen sollen künftig auch Unternehmen sein, die Geschäftsbeziehungen mit dem Gericht in Den Haag haben. Droht der Institution das Aus?</description>
+<content:encoded>Die USA verschärfen ihre Sanktionen gegen den Internationalen Strafgerichtshof. Betroffen sollen künftig auch Unternehmen sein, die Geschäftsbeziehungen mit dem Gericht in Den Haag haben. Droht der Institution das Aus?</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/1d142056-2ca8-4326-b6b6-b10ac1a256d2_w520_r2.08_fpx35.33_fpy44.98.jpg" length="0"/>
+<guid isPermaLink="false">818fb932-c878-49c8-ad82-9fd101e3b171</guid>
+<pubDate>Sat, 10 Oct 2026 12:02:00 +0200</pubDate>
+</item>
+<item>
+<title>Quiz des Tages beim SPIEGEL: 7 Fragen zum Allgemeinwissen pro Tag</title>
+<link>https://www.spiegel.de/games/taegliches-quiz-beim-spiegel-7-fragen-zum-allgemeinwissen-pro-tag-a-8a9692b2-4462-4192-942c-fd7809c7519c#ref=rss</link>
+<description>Jeden Tag gibt es sieben Fragen zu den wichtigsten Themengebieten des politisch-gesellschaftlichen Geschehens. Testen Sie hier Ihr Wissen!</description>
+<content:encoded>Jeden Tag gibt es sieben Fragen zu den wichtigsten Themengebieten des politisch-gesellschaftlichen Geschehens. Testen Sie hier Ihr Wissen!</content:encoded>
+<category>Games</category>
+<enclosure type="image/png" url="https://cdn.prod.www.spiegel.de/images/4653602c-c8d9-4175-b819-f5739956805c_w520_r2.08_fpx50_fpy50.png" length="0"/>
+<guid isPermaLink="false">8a9692b2-4462-4192-942c-fd7809c7519c</guid>
+<pubDate>Sat, 10 Oct 2026 11:56:00 +0200</pubDate>
+</item>
+<item>
+<title>Mentale Gesundheit: Franca Cerutti über das Prinzip der »innere Oma«</title>
+<link>https://www.spiegel.de/psychologie/mentale-gesundheit-franca-cerutti-ueber-das-prinzip-der-innere-oma-a-2b92726e-bd6a-4994-b00e-e19d086e2829#ref=rss</link>
+<description>Was heute dringend erscheint, wirkt auf lange Sicht oft weniger wichtig. Psychologin Franca Cerutti erklärt, wie die »innere Oma« unseren Blick verändert – und bei Entscheidungen im Alltag helfen kann.</description>
+<content:encoded>Was heute dringend erscheint, wirkt auf lange Sicht oft weniger wichtig. Psychologin Franca Cerutti erklärt, wie die »innere Oma« unseren Blick verändert – und bei Entscheidungen im Alltag helfen kann.</content:encoded>
+<category>Psychologie</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/0b9de84a-c9e1-4d49-8e12-6016fe6752d1_w520_r2.08_fpx53.72_fpy48.94.jpg" length="0"/>
+<guid isPermaLink="false">2b92726e-bd6a-4994-b00e-e19d086e2829</guid>
+<pubDate>Sat, 10 Oct 2026 11:10:00 +0200</pubDate>
+</item>
+<item>
+<title>Ilse Aigner: CSU und SPD wollen sie als erste Frau im höchsten Staatsamt</title>
+<link>https://www.spiegel.de/politik/deutschland/ilse-aigner-csu-und-spd-wollen-sie-als-erste-frau-im-hoechsten-staatsamt-a-7af0f91f-19bd-4d53-85f2-2572aa16aacb#ref=rss</link>
+<description>Bei der Steinmeier-Nachfolge nehmen CSU und SPD den Kanzler in die Zange: Sie wollen die bayerische Landtagspräsidentin Ilse Aigner zur ersten Bundespräsidentin machen. Aber was will Merz?</description>
+<content:encoded>Bei der Steinmeier-Nachfolge nehmen CSU und SPD den Kanzler in die Zange: Sie wollen die bayerische Landtagspräsidentin Ilse Aigner zur ersten Bundespräsidentin machen. Aber was will Merz?</content:encoded>
+<category>Politik</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/4c94e09a-f0db-4ed9-92ba-fcbba2b83fc9_w520_r2.08_fpx52_fpy55.jpg" length="0"/>
+<guid isPermaLink="false">7af0f91f-19bd-4d53-85f2-2572aa16aacb</guid>
+<pubDate>Sat, 10 Oct 2026 10:53:00 +0200</pubDate>
+</item>
+<item>
+<title>Anthropic: Fake-Hinweis von KI-Agent an Polizei in Philadelphia</title>
+<link>https://www.spiegel.de/netzwelt/anthropic-fake-hinweis-von-ki-agent-an-polizei-in-philadelphia-a-5524c5c9-8b21-43c4-a0db-5e8310b854c9#ref=rss</link>
+<description>In den USA lässt die KI-Firma Anthropic ihre Software den Umgang mit Behörden üben. Wegen mehrerer Fehler soll der Agent vorerst offline bleiben.</description>
+<content:encoded>In den USA lässt die KI-Firma Anthropic ihre Software den Umgang mit Behörden üben. Wegen mehrerer Fehler soll der Agent vorerst offline bleiben.</content:encoded>
+<category>Netzwelt</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/3f43e4c4-be11-4097-a3b0-356eff01d6d3_w520_r2.08_fpx43.39_fpy54.99.jpg" length="0"/>
+<guid isPermaLink="false">5524c5c9-8b21-43c4-a0db-5e8310b854c9</guid>
+<pubDate>Sat, 10 Oct 2026 09:58:00 +0200</pubDate>
+</item>
+<item>
+<title>Indien: Polizei nimmt offenbar Anführer der »Kakerlaken«-Bewegung fest</title>
+<link>https://www.spiegel.de/ausland/polizei-in-indien-nimmt-offenbar-anfuehrer-der-kakerlaken-bewegung-fest-a-a04f65db-e3e3-4000-bcc0-cb5d38847934#ref=rss</link>
+<description>Indiens »Kakerlaken-Bewegung« hat zu Massenprotesten in Neu-Delhi aufgerufen. Die Behörden zeigen bereits im Vorfeld der Proteste Härte. 200 Menschen sollen verhaftet worden sein.</description>
+<content:encoded>Indiens »Kakerlaken-Bewegung« hat zu Massenprotesten in Neu-Delhi aufgerufen. Die Behörden zeigen bereits im Vorfeld der Proteste Härte. 200 Menschen sollen verhaftet worden sein.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/16226013-e5ec-465d-8294-32c7dd9776d8_w520_r2.08_fpx33.34_fpy50.jpg" length="0"/>
+<guid isPermaLink="false">a04f65db-e3e3-4000-bcc0-cb5d38847934</guid>
+<pubDate>Sat, 10 Oct 2026 09:50:00 +0200</pubDate>
+</item>
+<item>
+<title>Fort Hood: Donald Trump äußert Verständnis für Liveübertragung von Hinrichtung</title>
+<link>https://www.spiegel.de/ausland/donald-trump-aeussert-verstaendnis-fuer-liveuebertragung-von-hinrichtung-a-19f637ff-4c61-43fe-b9e0-6eda20fba62b#ref=rss</link>
+<description>Die Erschießung des Attentäters von Fort Hood soll gestreamt werden, so hat es das US-Verteidigungsministerium entschieden. Jetzt haben sich der US-Präsident und sein Vize zu dem Fall geäußert.</description>
+<content:encoded>Die Erschießung des Attentäters von Fort Hood soll gestreamt werden, so hat es das US-Verteidigungsministerium entschieden. Jetzt haben sich der US-Präsident und sein Vize zu dem Fall geäußert.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/6bb8e3e8-f171-47e9-b41e-11820ff07b40_w520_r2.08_fpx30_fpy45.jpg" length="0"/>
+<guid isPermaLink="false">19f637ff-4c61-43fe-b9e0-6eda20fba62b</guid>
+<pubDate>Sat, 10 Oct 2026 09:14:00 +0200</pubDate>
+</item>
+<item>
+<title>Tesla: E-Auto-Hersteller legt irreführenden Namen »Full Self-Driving« in Europa ab</title>
+<link>https://www.spiegel.de/mobilitaet/auto/tesla-assistenzsystem-fsd-soll-fuer-europa-anders-heissen-a-a6d2243c-ac12-496e-90ed-824d9366fc4f#ref=rss</link>
+<description>EU-Behörden diskutieren, ob Teslas Software für teilautomatisiertes Fahren reif für Europas Straßen ist. Der Hersteller kommt den Kritikern symbolisch entgegen. Verkehrsminister Bilger zeigt sich schon überzeugt.</description>
+<content:encoded>EU-Behörden diskutieren, ob Teslas Software für teilautomatisiertes Fahren reif für Europas Straßen ist. Der Hersteller kommt den Kritikern symbolisch entgegen. Verkehrsminister Bilger zeigt sich schon überzeugt.</content:encoded>
+<category>Mobilität</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/e6eead0f-02a7-44d0-9979-c8518b272c40_w520_r2.08_fpx33.34_fpy50.jpg" length="0"/>
+<guid isPermaLink="false">a6d2243c-ac12-496e-90ed-824d9366fc4f</guid>
+<pubDate>Sat, 10 Oct 2026 09:07:00 +0200</pubDate>
+</item>
+<item>
+<title>Winfried Kretschmann im Interview: »Meine Sommer sind gezählt«</title>
+<link>https://www.spiegel.de/politik/deutschland/winfried-kretschmann-im-interview-ich-habe-noch-was-zu-sagen-a-4ba7b100-5804-4ad7-842a-1bb0589b747e#ref=rss</link>
+<description>Als Ministerpräsident war Winfried Kretschmann jahrelang einer der wichtigsten Politiker der Grünen. Jetzt spricht der 78-Jährige über die Krise der Demokratie, über das Handwerk des Regierens – und macht sich Gedanken über das Sterben.</description>
+<content:encoded>Als Ministerpräsident war Winfried Kretschmann jahrelang einer der wichtigsten Politiker der Grünen. Jetzt spricht der 78-Jährige über die Krise der Demokratie, über das Handwerk des Regierens – und macht sich Gedanken über das Sterben.</content:encoded>
+<category>Politik</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/4e829a61-3319-427d-919c-caf35288a756_w520_r2.08_fpx49_fpy48.jpg" length="0"/>
+<guid isPermaLink="false">4ba7b100-5804-4ad7-842a-1bb0589b747e</guid>
+<pubDate>Sat, 10 Oct 2026 08:43:00 +0200</pubDate>
+</item>
+<item>
+<title>News: Bewährungsprobe für Friedrich Merz, Jugendwort des Jahres 2026, Millionen-Erbinnen auf Sinnsuche</title>
+<link>https://www.spiegel.de/politik/deutschland/news-bewaehrungsprobe-fuer-friedrich-merz-jugendwort-des-jahres-2026-millionen-erbinnen-auf-sinnsuche-a-6a0dbe17-f4f2-4862-8f8d-f8d965f5baff#ref=rss</link>
+<description>Parteichef Merz muss der CDU-Spitze eine Strategie präsentieren. Das Jugendwort des Jahres 2026 wird präsentiert. Und Donald Trump verkeilt sich mit dem Internationalen Strafgerichtshof in Den Haag. Das ist die Lage am Samstagmorgen.</description>
+<content:encoded>Parteichef Merz muss der CDU-Spitze eine Strategie präsentieren. Das Jugendwort des Jahres 2026 wird präsentiert. Und Donald Trump verkeilt sich mit dem Internationalen Strafgerichtshof in Den Haag. Das ist die Lage am Samstagmorgen.</content:encoded>
+<category>Politik</category>
+<enclosure type="image/png" url="https://cdn.prod.www.spiegel.de/images/dd17189a-707c-4b57-af32-bf59855d3d25_w520_r2.08_fpx28.09_fpy49.93.png" length="0"/>
+<guid isPermaLink="false">6a0dbe17-f4f2-4862-8f8d-f8d965f5baff</guid>
+<pubDate>Sat, 10 Oct 2026 08:32:00 +0200</pubDate>
+</item>
+<item>
+<title>Donald Trump attackiert Friedensnobelpreiskomitee und Norwegen</title>
+<link>https://www.spiegel.de/ausland/donald-trump-attackiert-friedensnobelpreiskomitee-und-norwegen-a-df8e71b4-06a1-440b-bd31-fb21df42340d#ref=rss</link>
+<description>Würde es nach Donald Trump gehen, dann wäre er längst mit dem Friedensnobelpreis geehrt worden. Auf die jüngste Entscheidung des Nobelpreiskomitees reagierte der US-Präsident jetzt mit wüsten Beschimpfungen.</description>
+<content:encoded>Würde es nach Donald Trump gehen, dann wäre er längst mit dem Friedensnobelpreis geehrt worden. Auf die jüngste Entscheidung des Nobelpreiskomitees reagierte der US-Präsident jetzt mit wüsten Beschimpfungen.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/b565c8ed-51e7-461f-90f7-57c17b6d57fc_w520_r2.08_fpx56_fpy58.jpg" length="0"/>
+<guid isPermaLink="false">df8e71b4-06a1-440b-bd31-fb21df42340d</guid>
+<pubDate>Sat, 10 Oct 2026 08:15:00 +0200</pubDate>
+</item>
+<item>
+<title>Florida: Hurrikan »Isaias« sorgt für Stromausfälle in den USA</title>
+<link>https://www.spiegel.de/panorama/florida-tropischer-wirbelsturm-sorgt-fuer-stromausfaelle-an-der-us-golfkueste-a-099a6424-d112-4896-a8bb-b37c08db4f22#ref=rss</link>
+<description>»Der Sturm ist da«: Floridas Gouverneur DeSantis warnt die Bevölkerung, Meteorologen rechnen mit heftigen Regenfällen und Überschwemmungen. Auch die US-Ölindustrie muss ihre Förderung drosseln.</description>
+<content:encoded>»Der Sturm ist da«: Floridas Gouverneur DeSantis warnt die Bevölkerung, Meteorologen rechnen mit heftigen Regenfällen und Überschwemmungen. Auch die US-Ölindustrie muss ihre Förderung drosseln.</content:encoded>
+<category>Panorama</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/7bfb3949-1d6c-4fba-ab89-d8fb658c04fc_w520_r2.08_fpx44.24_fpy49.99.jpg" length="0"/>
+<guid isPermaLink="false">099a6424-d112-4896-a8bb-b37c08db4f22</guid>
+<pubDate>Sat, 10 Oct 2026 07:39:00 +0200</pubDate>
+</item>
+<item>
+<title>Frank-Walter Steinmeier und Emmanuel Macron: Sie wollten Mut machen und verbreiten Wehmut</title>
+<link>https://www.spiegel.de/ausland/frankreich-frank-walter-steinmeier-verabschiedet-sich-von-emmanuel-macron-a-1d1bf67f-3c4f-409f-86d4-25f040108344#ref=rss</link>
+<description>Zwischen Krise und Krawallen verabschiedet sich Frank-Walter Steinmeier von Frankreichs Präsident Emmanuel Macron. Der emotionale Besuch des scheidenden Bundespräsidenten wirkt wie ein Schlusspunkt für die Ära des Europa-Optimismus.</description>
+<content:encoded>Zwischen Krise und Krawallen verabschiedet sich Frank-Walter Steinmeier von Frankreichs Präsident Emmanuel Macron. Der emotionale Besuch des scheidenden Bundespräsidenten wirkt wie ein Schlusspunkt für die Ära des Europa-Optimismus.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/c6fcbf19-782c-4741-a8ef-d1a835bdd462_w520_r2.08_fpx32.27_fpy50.jpg" length="0"/>
+<guid isPermaLink="false">1d1bf67f-3c4f-409f-86d4-25f040108344</guid>
+<pubDate>Sat, 10 Oct 2026 07:11:00 +0200</pubDate>
+</item>
+<item>
+<title>Gaza-Waffenruhe: Warum der Krieg noch nicht zu Ende ist</title>
+<link>https://www.spiegel.de/ausland/gaza-ein-jahr-waffenruhe-warum-der-krieg-noch-nicht-zu-ende-ist-a-414ca4d9-1179-41b6-8f59-ed2f444557a3#ref=rss</link>
+<description>Israels Armee besetzt große Teile von Gaza, tötet fast täglich Palästinenser, Wiederaufbau gibt es nicht. Das nutzt vor allem einem Mann.</description>
+<content:encoded>Israels Armee besetzt große Teile von Gaza, tötet fast täglich Palästinenser, Wiederaufbau gibt es nicht. Das nutzt vor allem einem Mann.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/377339da-0c66-41bd-a260-ca570df170ac_w520_r2.08_fpx65.82_fpy50.jpg" length="0"/>
+<guid isPermaLink="false">414ca4d9-1179-41b6-8f59-ed2f444557a3</guid>
+<pubDate>Sat, 10 Oct 2026 06:55:00 +0200</pubDate>
+</item>
+<item>
+<title>Auto kaufen: Ich teste viele Neuwagen – mein alter Benz wird sie wahrscheinlich alle überleben</title>
+<link>https://www.spiegel.de/mobilitaet/auto/auto-kaufen-ich-teste-viele-neuwagen-mein-alter-benz-wird-sie-wahrscheinlich-alle-ueberleben-a-eb096169-d260-48b1-ace0-9cdebd438b23#ref=rss</link>
+<description>Erratische Technik und digitaler Overkill: Neue Autos bieten viel Hightech, machen Werkstattbesuche aber zum Horrortrip. Mein alter Mercedes zeigt, wie es anders geht.</description>
+<content:encoded>Erratische Technik und digitaler Overkill: Neue Autos bieten viel Hightech, machen Werkstattbesuche aber zum Horrortrip. Mein alter Mercedes zeigt, wie es anders geht.</content:encoded>
+<category>Mobilität</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/c98d2c19-55ea-47cd-8eb5-2bc2fdb735ff_w520_r2.08_fpx37.5_fpy50.jpg" length="0"/>
+<guid isPermaLink="false">eb096169-d260-48b1-ace0-9cdebd438b23</guid>
+<pubDate>Sat, 10 Oct 2026 06:52:00 +0200</pubDate>
+</item>
+</channel>
+</rss>

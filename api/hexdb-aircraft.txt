@@ -1,0 +1,17 @@
+HTTP 200
+access-control-allow-origin: *
+alt-svc: h3=":443"; ma=86400
+cache-control: max-age=14400
+cf-cache-status: EXPIRED
+cf-ray: a485ad2d8b7d3824-SJC
+connection: keep-alive
+content-encoding: br
+content-type: application/json
+date: Sat, 10 Oct 2026 12:37:27 GMT
+last-modified: Sat, 10 Oct 2026 12:37:27 GMT
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=ztZJae6p3hmS30oqtnR0hvcVK9KoHTz9h2QkO5wr9dTNnRYDnGwRMy4FxOtPHmaA6nnLG%2BklP1m99aW2Hoc04oa%2BnhPufSH5DveEHaXxvXlvc4Mnhb7zVyXfRw%3D%3D"}]}
+server: cloudflare
+transfer-encoding: chunked
+
+{"ModeS": "4CA7B5", "Registration": "EI-EFZ", "Manufacturer": "Boeing", "ICAOTypeCode": "B738", "Type": "737NG 8AS/W", "RegisteredOwners": "Ryanair", "OperatorFlagCode": "RYR"}

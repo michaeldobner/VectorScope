@@ -1,0 +1,1319 @@
+{
+  "news" : [ {
+    "sophoraId" : "einkommens-millionaere-trend-100",
+    "externalId" : "1f3ee8c9-a546-4882-91a1-8a1ebeb58a70",
+    "title" : "Zahl der Einkommensmillionäre in Sachsen steigt",
+    "date" : "2026-10-10T14:41:15.784+02:00",
+    "teaserImage" : {
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Globus auf blauem Hintergrund mit tagesschau-Schriftzug",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/einkommens-millionaere-trend-100.json?view=hasChanged&lastKnown=DFF4EA3C51D285127524EA31C8C09D62",
+    "tracking" : [ {
+      "sid" : "app.mdrde.nachrichten.sachsen.einkommens-millionaere-trend-100",
+      "src" : "mdr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1441",
+      "otp" : "meldung",
+      "cid" : "einkommens-millionaere-trend-100",
+      "pti" : "Zahl_der_Einkommensmillionaere_in_Sachsen_steigt",
+      "bcr" : "nein",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Sachsen",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Mitteldeutscher Rundfunk",
+      "copyright" : "MDR",
+      "alttext" : "Logo Mitteldeutscher Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/df8ccca6-d8bb-440e-98fa-addb2fa8dcdc/AAABlxb28lM/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/nachrichten/sachsen/einkommens-millionaere-trend-100.json",
+    "detailsweb" : "https://www.mdr.de/nachrichten/sachsen/mehr-spitzenverdiener,einkommens-millionaere-trend-100.html",
+    "shareURL" : "https://www.mdr.de/nachrichten/sachsen/mehr-spitzenverdiener,einkommens-millionaere-trend-100.html",
+    "geotags" : [ ],
+    "regionId" : 13,
+    "regionIds" : [ 13 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "osterode-120",
+    "externalId" : "30abf134-7d76-4eaa-8f83-56442d47e161",
+    "title" : "Leiche an Weg gefunden: Polizei geht von Gewaltverbrechen aus",
+    "date" : "2026-10-10T14:34:13.218+02:00",
+    "teaserImage" : {
+      "copyright" : "fotolia, VRD",
+      "alttext" : "Flatterband mit der Aufschrift: \"Polizeibasperrung\".",
+      "imageVariants" : {
+        "1x1-144" : "https://images.ndr.de/image/e00c95d3-a69c-4433-863b-3c84eae28222/AAABnYdLHak/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.ndr.de/image/e00c95d3-a69c-4433-863b-3c84eae28222/AAABnYdLHak/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.ndr.de/image/e00c95d3-a69c-4433-863b-3c84eae28222/AAABnYdLHak/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.ndr.de/image/e00c95d3-a69c-4433-863b-3c84eae28222/AAABnYdLHak/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.ndr.de/image/e00c95d3-a69c-4433-863b-3c84eae28222/AAABnYdLHak/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.ndr.de/image/e00c95d3-a69c-4433-863b-3c84eae28222/AAABnYdLHak/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.ndr.de/image/e00c95d3-a69c-4433-863b-3c84eae28222/AAABnYdLHak/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.ndr.de/image/e00c95d3-a69c-4433-863b-3c84eae28222/AAABnYdLHak/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.ndr.de/image/e00c95d3-a69c-4433-863b-3c84eae28222/AAABnYdLHak/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.ndr.de/image/e00c95d3-a69c-4433-863b-3c84eae28222/AAABnYdLHak/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.ndr.de/image/e00c95d3-a69c-4433-863b-3c84eae28222/AAABnYdLHak/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.ndr.de/image/e00c95d3-a69c-4433-863b-3c84eae28222/AAABnYdLHak/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/osterode-120.json?view=hasChanged&lastKnown=EC579A236B7464FFB30D2B731661A856",
+    "tracking" : [ {
+      "sid" : "app.ndrde.nachrichten.niedersachsen.braunschweig_harz_goettingen.osterode-120",
+      "src" : "ndr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1434",
+      "otp" : "meldung",
+      "cid" : "osterode-120",
+      "pti" : "Leiche_in_Osterode_gefunden_Polizei_geht_von_Gewaltverbrechen_aus",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Niedersachsen",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Norddeutscher Rundfunk",
+      "copyright" : "NDR",
+      "alttext" : "Logo Norddeutscher Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/e33737ad-2315-4104-91e5-c515497253df/AAABlaqAfv8/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/nachrichten/niedersachsen/braunschweig_harz_goettingen/osterode-120.json",
+    "detailsweb" : "https://www.ndr.de/nachrichten/niedersachsen/braunschweig_harz_goettingen/leiche-an-weg-gefunden-polizei-geht-von-gewaltverbrechen-aus,osterode-120.html",
+    "shareURL" : "https://www.ndr.de/nachrichten/niedersachsen/braunschweig_harz_goettingen/leiche-an-weg-gefunden-polizei-geht-von-gewaltverbrechen-aus,osterode-120.html",
+    "geotags" : [ ],
+    "regionId" : 9,
+    "regionIds" : [ 9 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "video-1663844",
+    "externalId" : "96c0ad20-52ed-4b30-96c4-29bfba161bc3",
+    "title" : "Nina Amin, ARD Kairo, zu geplantem Terroranschlag in einem Flydubai-Flugzeug",
+    "date" : "2026-10-10T14:31:05.003+02:00",
+    "teaserImage" : {
+      "title" : "Sendungsbild",
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Sendungsbild",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/79a259e9-d5c8-44a6-9013-d48e6d9ebf0d/AAABoSXK0j4/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/79a259e9-d5c8-44a6-9013-d48e6d9ebf0d/AAABoSXK0j4/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/79a259e9-d5c8-44a6-9013-d48e6d9ebf0d/AAABoSXK0j4/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/79a259e9-d5c8-44a6-9013-d48e6d9ebf0d/AAABoSXK0j4/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/79a259e9-d5c8-44a6-9013-d48e6d9ebf0d/AAABoSXK0j4/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/79a259e9-d5c8-44a6-9013-d48e6d9ebf0d/AAABoSXK0j4/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/79a259e9-d5c8-44a6-9013-d48e6d9ebf0d/AAABoSXK0j4/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/79a259e9-d5c8-44a6-9013-d48e6d9ebf0d/AAABoSXK0j4/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/79a259e9-d5c8-44a6-9013-d48e6d9ebf0d/AAABoSXK0j4/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/79a259e9-d5c8-44a6-9013-d48e6d9ebf0d/AAABoSXK0j4/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/79a259e9-d5c8-44a6-9013-d48e6d9ebf0d/AAABoSXK0j4/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/79a259e9-d5c8-44a6-9013-d48e6d9ebf0d/AAABoSXK0j4/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "schnell informiert"
+    }, {
+      "tag" : "Flydubai"
+    }, {
+      "tag" : "Terroranschlag"
+    }, {
+      "tag" : "Pilot"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1663844.json?view=hasChanged&lastKnown=C7BF3324A8DFD1948055F908530BDAEA",
+    "tracking" : [ {
+      "sid" : "app.multimedia.video.video-1663844",
+      "src" : "tagesschau",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261010T1431",
+      "otp" : "video",
+      "cid" : "video-1663844",
+      "pti" : "Nina_Amin_ARD_Kairo_zu_geplantem_Terroranschlag_in_einem_Flydubai-Flugzeug",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false,
+      "av_air_time" : "2026-10-10T13:45:00.000+02:00"
+    }, {
+      "assetid" : "video-1663844",
+      "program" : "tagesschau",
+      "title" : "Nina_Amin_ARD_Kairo_zu_geplantem_Terroranschlag_in_einem_Flydubai-Flugzeug",
+      "length" : "114",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/video/video-1663844.html",
+      "c7" : "p7,video-1663844",
+      "c8" : "p8,114",
+      "c9" : "p9,tagesschau_Nina_Amin_ARD_Kairo_zu_geplantem_Terroranschlag_in_einem_Flydubai-Flugzeug_10.10.2026_1345",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c15" : "p15,brid://publication@ard.de/X005901575",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1425-5000.webs.h264.mp4",
+      "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1425-5000.webm.h264.mp4",
+      "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1425-5000.webxl.h264.mp4",
+      "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1010/TV-20261010-1425-5000.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "Sendungsbild",
+    "type" : "video"
+  }, {
+    "sophoraId" : "swr-62064",
+    "externalId" : "tagesschau_fm-story-swr-c0125d05-9d44-3f93-a54c-d4ffb4eb37b2",
+    "title" : "\"Ragebait\" ist Jugendwort des Jahres 2026",
+    "date" : "2026-10-10T14:24:00.000+02:00",
+    "teaserImage" : {
+      "title" : "Das Jugendwort des Jahres 2026 ist \"Ragebait\", wie der Langenscheidt-Verlag am Samstag bekannt gab.",
+      "copyright" : "dpa Bildfunk, Picture Alliance",
+      "alttext" : "Das Jugendwort des Jahres 2026 ist \"Ragebait\", wie der Langenscheidt-Verlag am Samstag bekannt gab.",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/af1357e8-c3f4-4aa0-9191-7eb4ba752e32/AAABoSXHBIs/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/af1357e8-c3f4-4aa0-9191-7eb4ba752e32/AAABoSXHBIs/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/af1357e8-c3f4-4aa0-9191-7eb4ba752e32/AAABoSXHBIs/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/af1357e8-c3f4-4aa0-9191-7eb4ba752e32/AAABoSXHBIs/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/af1357e8-c3f4-4aa0-9191-7eb4ba752e32/AAABoSXHBIs/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/af1357e8-c3f4-4aa0-9191-7eb4ba752e32/AAABoSXHBIs/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/af1357e8-c3f4-4aa0-9191-7eb4ba752e32/AAABoSXHBIs/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/af1357e8-c3f4-4aa0-9191-7eb4ba752e32/AAABoSXHBIs/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/af1357e8-c3f4-4aa0-9191-7eb4ba752e32/AAABoSXHBIs/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/af1357e8-c3f4-4aa0-9191-7eb4ba752e32/AAABoSXHBIs/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/af1357e8-c3f4-4aa0-9191-7eb4ba752e32/AAABoSXHBIs/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/af1357e8-c3f4-4aa0-9191-7eb4ba752e32/AAABoSXHBIs/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "SWR"
+    }, {
+      "tag" : "Baden-Württemberg"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/swr-62064.json?view=hasChanged&lastKnown=43EFDF1391F58F19C94EC91BBD368E11",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.badenwuerttemberg.swr-62064",
+      "src" : "swr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1426",
+      "otp" : "meldung",
+      "cid" : "swr-62064",
+      "pti" : "Ragebait_ist_Jugendwort_des_Jahres_2026",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Baden-Württemberg",
+    "firstSentence" : "Das Jugendwort des Jahres 2026 heißt \"Ragebait\".",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Südwestrundfunk",
+      "copyright" : "SWR",
+      "alttext" : "Logo Südwestrundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/25ddb5d7-0642-43c2-b5bd-208e8d783190/AAABlaqAk6o/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/inland/regional/badenwuerttemberg/swr-62064.json",
+    "detailsweb" : "https://www.tagesschau.de/inland/regional/badenwuerttemberg/swr-62064.html",
+    "shareURL" : "https://www.swr.de/swraktuell/baden-wuerttemberg/jugendwort-des-jahres-2026-bekanntgabe-100.html",
+    "geotags" : [ ],
+    "regionId" : 1,
+    "regionIds" : [ 1 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "wdr-langenscheidt-verlag-100",
+    "externalId" : "tagesschau_fm-story-WDR-63c908c4-89be-4f80-8254-0f0869f8741d",
+    "title" : "\"Ragebait\" ist Jugendwort des Jahres 2026",
+    "date" : "2026-10-10T14:19:00.000+02:00",
+    "teaserImage" : {
+      "title" : "Jugendwort des Jahres 2026",
+      "copyright" : "picture alliance / Caro Kadatz",
+      "alttext" : "Auf einem Handybildschirm ist das Jugendwort des Jahres 2026\"Ragebait\" zu lesen",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/c264313f-a1bb-420b-9864-980f44e1b28a/AAABoSXI4FU/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/c264313f-a1bb-420b-9864-980f44e1b28a/AAABoSXI4FU/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/c264313f-a1bb-420b-9864-980f44e1b28a/AAABoSXI4FU/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/c264313f-a1bb-420b-9864-980f44e1b28a/AAABoSXI4FU/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/c264313f-a1bb-420b-9864-980f44e1b28a/AAABoSXI4FU/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/c264313f-a1bb-420b-9864-980f44e1b28a/AAABoSXI4FU/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/c264313f-a1bb-420b-9864-980f44e1b28a/AAABoSXI4FU/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/c264313f-a1bb-420b-9864-980f44e1b28a/AAABoSXI4FU/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/c264313f-a1bb-420b-9864-980f44e1b28a/AAABoSXI4FU/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/c264313f-a1bb-420b-9864-980f44e1b28a/AAABoSXI4FU/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/c264313f-a1bb-420b-9864-980f44e1b28a/AAABoSXI4FU/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/c264313f-a1bb-420b-9864-980f44e1b28a/AAABoSXI4FU/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "WDR"
+    }, {
+      "tag" : "Nordrhein-Westfalen"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/wdr-langenscheidt-verlag-100.json?view=hasChanged&lastKnown=66B524D629903CE5282F8651146F6012",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.nordrheinwestfalen.wdr-langenscheidt-verlag-100",
+      "src" : "wdr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1428",
+      "otp" : "meldung",
+      "cid" : "wdr-langenscheidt-verlag-100",
+      "pti" : "Ragebait_ist_Jugendwort_des_Jahres_2026",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Nordrhein-Westfalen",
+    "firstSentence" : "Das Jugendwort des Jahres 2026 steht fest: \"Ragebait\".",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Westdeutscher Rundfunk",
+      "copyright" : "WDR",
+      "alttext" : "Logo Westdeutscher Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/34b7843e-4196-44f3-b3a8-54cbd172e832/AAABlaqAmLc/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/inland/regional/nordrheinwestfalen/wdr-langenscheidt-verlag-100.json",
+    "detailsweb" : "https://www.tagesschau.de/inland/regional/nordrheinwestfalen/wdr-langenscheidt-verlag-100.html",
+    "shareURL" : "https://www1.wdr.de/nrw/ragebait-ist-jugendwort-2026-100.html",
+    "geotags" : [ ],
+    "regionId" : 10,
+    "regionIds" : [ 10 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "video-1663840",
+    "externalId" : "07a4a159-fb4a-4078-ab16-e65010a55782",
+    "title" : "Trump kündigt russische Diesellieferungen an",
+    "date" : "2026-10-10T14:16:09.879+02:00",
+    "teaserImage" : {
+      "copyright" : "REUTERS",
+      "alttext" : "US-Präsident Donald Trump",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "Trump"
+    }, {
+      "tag" : "Russland"
+    }, {
+      "tag" : "Diesel"
+    }, {
+      "tag" : "Ukraine"
+    }, {
+      "tag" : "Putin"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1663840.json?view=hasChanged&lastKnown=1FF7DAEBBFACFEED254CB3D583AECB00",
+    "tracking" : [ {
+      "sid" : "app.multimedia.video.video-1663840",
+      "src" : "tagesschau",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261010T1416",
+      "otp" : "video",
+      "cid" : "video-1663840",
+      "pti" : "Trump_kuendigt_russische_Diesellieferungen_an",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false,
+      "av_air_time" : "2026-10-10T14:00:00.000+02:00"
+    }, {
+      "assetid" : "video-1663840",
+      "program" : "tagesschau24",
+      "title" : "Trump_kuendigt_russische_Diesellieferungen_an",
+      "length" : "400",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/video/video-1663840.html",
+      "c7" : "p7,video-1663840",
+      "c8" : "p8,400",
+      "c9" : "p9,tagesschau24_Trump_kuendigt_russische_Diesellieferungen_an_10.10.2026_1400",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1411-1400.webs.h264.mp4",
+      "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1411-1400.webm.h264.mp4",
+      "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1411-1400.webxl.h264.mp4",
+      "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1010/TV-20261010-1411-1400.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "US-Präsident Donald Trump",
+    "type" : "video"
+  }, {
+    "sophoraId" : "wdr-abkochgebot-bakterien-im-trinkwasser-von-wesseling-und-bornheim-100",
+    "externalId" : "tagesschau_fm-story-WDR-24690cf2-5621-4f06-a4ba-bb96a72a6cb9",
+    "title" : "Trinkwasser von Wesseling und Bornheim abkochen",
+    "date" : "2026-10-10T14:12:00.000+02:00",
+    "teaserImage" : {
+      "title" : "Wasser",
+      "copyright" : "dpa / Monika Skolimowska",
+      "alttext" : "Jemand befüllt ein Glas mit Wasser aus dem Hahn",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/c5dfe498-0151-41bc-b10c-72c1b310c580/AAABoSW95KQ/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/c5dfe498-0151-41bc-b10c-72c1b310c580/AAABoSW95KQ/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/c5dfe498-0151-41bc-b10c-72c1b310c580/AAABoSW95KQ/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/c5dfe498-0151-41bc-b10c-72c1b310c580/AAABoSW95KQ/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/c5dfe498-0151-41bc-b10c-72c1b310c580/AAABoSW95KQ/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/c5dfe498-0151-41bc-b10c-72c1b310c580/AAABoSW95KQ/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/c5dfe498-0151-41bc-b10c-72c1b310c580/AAABoSW95KQ/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/c5dfe498-0151-41bc-b10c-72c1b310c580/AAABoSW95KQ/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/c5dfe498-0151-41bc-b10c-72c1b310c580/AAABoSW95KQ/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/c5dfe498-0151-41bc-b10c-72c1b310c580/AAABoSW95KQ/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/c5dfe498-0151-41bc-b10c-72c1b310c580/AAABoSW95KQ/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/c5dfe498-0151-41bc-b10c-72c1b310c580/AAABoSW95KQ/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "WDR"
+    }, {
+      "tag" : "Nordrhein-Westfalen"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/wdr-abkochgebot-bakterien-im-trinkwasser-von-wesseling-und-bornheim-100.json?view=hasChanged&lastKnown=B516AB2B188875EDC1F24DD9932EEC7A",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.nordrheinwestfalen.wdr-abkochgebot-bakterien-im-trinkwasser-von-wesseling-und-bornheim-100",
+      "src" : "wdr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1416",
+      "otp" : "meldung",
+      "cid" : "wdr-abkochgebot-bakterien-im-trinkwasser-von-wesseling-und-bornheim-100",
+      "pti" : "Trinkwasser_von_Wesseling_und_Bornheim_abkochen",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Nordrhein-Westfalen",
+    "firstSentence" : "In Wesseling sind E.coli-Bakterien im Trinkwasser gefunden worden.",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Westdeutscher Rundfunk",
+      "copyright" : "WDR",
+      "alttext" : "Logo Westdeutscher Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/34b7843e-4196-44f3-b3a8-54cbd172e832/AAABlaqAmLc/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/inland/regional/nordrheinwestfalen/wdr-abkochgebot-bakterien-im-trinkwasser-von-wesseling-und-bornheim-100.json",
+    "detailsweb" : "https://www.tagesschau.de/inland/regional/nordrheinwestfalen/wdr-abkochgebot-bakterien-im-trinkwasser-von-wesseling-und-bornheim-100.html",
+    "shareURL" : "https://www1.wdr.de/nrw/rheinland/ecoli-bakterien-trinkwasser-wesseling-bornheim-100.html",
+    "geotags" : [ ],
+    "regionId" : 10,
+    "regionIds" : [ 10 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "hr-ragebait-ist-jugendwort-des-jahres-2026-bekanntgabe-auf-frankfurter-buchmesse-100",
+    "externalId" : "tagesschau_fm-story-id-4cb3d196-a1fc-4618-9f63-9cf1dc17cb4e",
+    "title" : "\"Ragebait\" ist Jugendwort des Jahres 2026 - Bekanntgabe auf der Frankfurter Buchmesse",
+    "date" : "2026-10-10T14:08:14.994+02:00",
+    "teaserImage" : {
+      "title" : "\"Ragebait\" ist Jugendwort des Jahres 2026.",
+      "copyright" : "IMAGO / Sven Simon",
+      "alttext" : "Auf einem Handydisplay steht \"Ragebait ist Jugendwort des Jahres 2026\"",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/23f1c1e4-6c4d-4ed1-ac4d-c54add66f140/AAABoSXBkcU/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/23f1c1e4-6c4d-4ed1-ac4d-c54add66f140/AAABoSXBkcU/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/23f1c1e4-6c4d-4ed1-ac4d-c54add66f140/AAABoSXBkcU/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/23f1c1e4-6c4d-4ed1-ac4d-c54add66f140/AAABoSXBkcU/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/23f1c1e4-6c4d-4ed1-ac4d-c54add66f140/AAABoSXBkcU/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/23f1c1e4-6c4d-4ed1-ac4d-c54add66f140/AAABoSXBkcU/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/23f1c1e4-6c4d-4ed1-ac4d-c54add66f140/AAABoSXBkcU/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/23f1c1e4-6c4d-4ed1-ac4d-c54add66f140/AAABoSXBkcU/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/23f1c1e4-6c4d-4ed1-ac4d-c54add66f140/AAABoSXBkcU/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/23f1c1e4-6c4d-4ed1-ac4d-c54add66f140/AAABoSXBkcU/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/23f1c1e4-6c4d-4ed1-ac4d-c54add66f140/AAABoSXBkcU/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/23f1c1e4-6c4d-4ed1-ac4d-c54add66f140/AAABoSXBkcU/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "HR"
+    }, {
+      "tag" : "Hessen"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/hr-ragebait-ist-jugendwort-des-jahres-2026-bekanntgabe-auf-frankfurter-buchmesse-100.json?view=hasChanged&lastKnown=99C96E860DC66F5D1221331E98E944BF",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.hessen.hr-ragebait-ist-jugendwort-des-jahres-2026-bekanntgabe-auf-frankfurter-buchmesse-100",
+      "src" : "hr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1420",
+      "otp" : "meldung",
+      "cid" : "hr-ragebait-ist-jugendwort-des-jahres-2026-bekanntgabe-auf-frankfurter-buchmesse-100",
+      "pti" : "Ragebait_ist_Jugendwort_des_Jahres_2026_-_Bekanntgabe_auf_der_Frankfurter_Buchmesse",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Hessen",
+    "firstSentence" : "Der Pons Langenscheidt Verlag hat auf der Frankfurter Buchmesse das Jugendwort des Jahres bekanntgegeben.",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Hessischer Rundfunk",
+      "copyright" : "hessenschau",
+      "alttext" : "Logo Hessischer Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/10b182d2-ee50-42e2-9d87-309731667be5/AAABlaqAdVE/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/inland/regional/hessen/hr-ragebait-ist-jugendwort-des-jahres-2026-bekanntgabe-auf-frankfurter-buchmesse-100.json",
+    "detailsweb" : "https://www.tagesschau.de/inland/regional/hessen/hr-ragebait-ist-jugendwort-des-jahres-2026-bekanntgabe-auf-frankfurter-buchmesse-100.html",
+    "shareURL" : "https://www.hessenschau.de/kultur/buchmesse/ragebait-ist-jugendwort-des-jahres-2026---bekanntgabe-auf-der-frankfurter-buchmesse-v1,jugendwort-2026-100.html",
+    "geotags" : [ ],
+    "regionId" : 7,
+    "regionIds" : [ 7 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "video-1663834",
+    "externalId" : "1637bfdc-4e29-424f-927d-fdc6f321873a",
+    "title" : "Flydubai-Co-Pilot plante Selbstmordanschlag",
+    "date" : "2026-10-10T14:06:24.650+02:00",
+    "teaserImage" : {
+      "copyright" : "REUTERS",
+      "alttext" : "Ein Flugzeug der Fluggesellschaft Flydubai ist am Himmel zu sehen.",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/9dcae517-638d-49de-874d-468158dfb685/AAABoPvg3cc/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/9dcae517-638d-49de-874d-468158dfb685/AAABoPvg3cc/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/9dcae517-638d-49de-874d-468158dfb685/AAABoPvg3cc/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/9dcae517-638d-49de-874d-468158dfb685/AAABoPvg3cc/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/9dcae517-638d-49de-874d-468158dfb685/AAABoPvg3cc/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/9dcae517-638d-49de-874d-468158dfb685/AAABoPvg3cc/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/9dcae517-638d-49de-874d-468158dfb685/AAABoPvg3cc/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/9dcae517-638d-49de-874d-468158dfb685/AAABoPvg3cc/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/9dcae517-638d-49de-874d-468158dfb685/AAABoPvg3cc/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/9dcae517-638d-49de-874d-468158dfb685/AAABoPvg3cc/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/9dcae517-638d-49de-874d-468158dfb685/AAABoPvg3cc/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/9dcae517-638d-49de-874d-468158dfb685/AAABoPvg3cc/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "Flydubai"
+    }, {
+      "tag" : "Anschlagspläne"
+    }, {
+      "tag" : "Flugzeug"
+    }, {
+      "tag" : "Copilot"
+    }, {
+      "tag" : "Absturz"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1663834.json?view=hasChanged&lastKnown=057A1D621BB54979069CFAB2CCA53E11",
+    "tracking" : [ {
+      "sid" : "app.multimedia.video.video-1663834",
+      "src" : "tagesschau",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261010T1406",
+      "otp" : "video",
+      "cid" : "video-1663834",
+      "pti" : "Flydubai-Co-Pilot_plante_Selbstmordanschlag",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false,
+      "av_air_time" : "2026-10-10T13:00:00.000+02:00"
+    }, {
+      "assetid" : "video-1663834",
+      "program" : "tagesschau24",
+      "title" : "Flydubai-Co-Pilot_plante_Selbstmordanschlag",
+      "length" : "122",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/video/video-1663834.html",
+      "c7" : "p7,video-1663834",
+      "c8" : "p8,122",
+      "c9" : "p9,tagesschau24_Flydubai-Co-Pilot_plante_Selbstmordanschlag_10.10.2026_1300",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1402-2600.webs.h264.mp4",
+      "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1402-2600.webm.h264.mp4",
+      "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1402-2600.webxl.h264.mp4",
+      "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1010/TV-20261010-1402-2600.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "Ein Flugzeug der Fluggesellschaft Flydubai ist am Himmel zu sehen.",
+    "type" : "video"
+  }, {
+    "sophoraId" : "unfall-fahrzeuggespann-salzenforst-100",
+    "externalId" : "a42b9765-b1a1-4f6f-90b0-dca8d2faec55",
+    "title" : "Gestohlenes Fahrzeuggespann auf A4 bei Salzenforst verunglückt",
+    "date" : "2026-10-10T14:05:34.714+02:00",
+    "teaserImage" : {
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Globus auf blauem Hintergrund mit tagesschau-Schriftzug",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/ea0e597a-8e66-48b4-a2cf-6e1dbb4b6f88/AAABmYUrPXM/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/unfall-fahrzeuggespann-salzenforst-100.json?view=hasChanged&lastKnown=6587B2E9AB08E550C785FEF9B20D0E39",
+    "tracking" : [ {
+      "sid" : "app.mdrde.nachrichten.sachsen.bautzen.bautzen-hoyerswerda-kamenz.unfall-fahrzeuggespann-salzenforst-100",
+      "src" : "mdr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1405",
+      "otp" : "meldung",
+      "cid" : "unfall-fahrzeuggespann-salzenforst-100",
+      "pti" : "Unfallflucht_auf_A4_bei_Salzenforst_nach_Crash_mit_gestohlenem_Gespann",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Sachsen",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Mitteldeutscher Rundfunk",
+      "copyright" : "MDR",
+      "alttext" : "Logo Mitteldeutscher Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/df8ccca6-d8bb-440e-98fa-addb2fa8dcdc/AAABlxb28lM/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/nachrichten/sachsen/bautzen/bautzen-hoyerswerda-kamenz/unfall-fahrzeuggespann-salzenforst-100.json",
+    "detailsweb" : "https://www.mdr.de/nachrichten/sachsen/bautzen/bautzen-hoyerswerda-kamenz/diebstahl-fahrerflucht-polizei,unfall-fahrzeuggespann-salzenforst-100.html",
+    "shareURL" : "https://www.mdr.de/nachrichten/sachsen/bautzen/bautzen-hoyerswerda-kamenz/diebstahl-fahrerflucht-polizei,unfall-fahrzeuggespann-salzenforst-100.html",
+    "geotags" : [ ],
+    "regionId" : 13,
+    "regionIds" : [ 13 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "demo-782",
+    "externalId" : "d90659e3-4b54-4829-be29-d98c42e6f7ff",
+    "title" : "PRÜF-Demo in Hamburg: Tausende in der City erwartet",
+    "date" : "2026-10-10T14:04:43.221+02:00",
+    "teaserImage" : {
+      "copyright" : "NDR, Elias Bartl",
+      "alttext" : "PRÜF-Demo in der Hamburger Innenstadt.",
+      "imageVariants" : {
+        "1x1-144" : "https://images.ndr.de/image/9b972377-2bac-4341-951d-a81252e6af1d/AAABoSW7gYU/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.ndr.de/image/9b972377-2bac-4341-951d-a81252e6af1d/AAABoSW7gYU/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.ndr.de/image/9b972377-2bac-4341-951d-a81252e6af1d/AAABoSW7gYU/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.ndr.de/image/9b972377-2bac-4341-951d-a81252e6af1d/AAABoSW7gYU/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.ndr.de/image/9b972377-2bac-4341-951d-a81252e6af1d/AAABoSW7gYU/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.ndr.de/image/9b972377-2bac-4341-951d-a81252e6af1d/AAABoSW7gYU/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.ndr.de/image/9b972377-2bac-4341-951d-a81252e6af1d/AAABoSW7gYU/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.ndr.de/image/9b972377-2bac-4341-951d-a81252e6af1d/AAABoSW7gYU/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.ndr.de/image/9b972377-2bac-4341-951d-a81252e6af1d/AAABoSW7gYU/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.ndr.de/image/9b972377-2bac-4341-951d-a81252e6af1d/AAABoSW7gYU/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.ndr.de/image/9b972377-2bac-4341-951d-a81252e6af1d/AAABoSW7gYU/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.ndr.de/image/9b972377-2bac-4341-951d-a81252e6af1d/AAABoSW7gYU/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/demo-782.json?view=hasChanged&lastKnown=8921EA06CFF5EE2B9F1B2B5BAEE00716",
+    "tracking" : [ {
+      "sid" : "app.ndrde.nachrichten.hamburg.demo-782",
+      "src" : "ndr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1413",
+      "otp" : "meldung",
+      "cid" : "demo-782",
+      "pti" : "PRUeF-Demo_in_Hamburg_Tausende_in_der_City_erwartet",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Hamburg",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Norddeutscher Rundfunk",
+      "copyright" : "NDR",
+      "alttext" : "Logo Norddeutscher Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/e33737ad-2315-4104-91e5-c515497253df/AAABlaqAfv8/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/nachrichten/hamburg/demo-782.json",
+    "detailsweb" : "https://www.ndr.de/nachrichten/hamburg/pruef-demo-in-hamburg-tausende-in-der-city-erwartet,demo-782.html",
+    "shareURL" : "https://www.ndr.de/nachrichten/hamburg/pruef-demo-in-hamburg-tausende-in-der-city-erwartet,demo-782.html",
+    "geotags" : [ ],
+    "regionId" : 6,
+    "regionIds" : [ 6 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "trump-diesel-oelpreis-reaktionen-deutschland-100",
+    "externalId" : "ef565e76-0136-43aa-88ee-e98296307e11",
+    "title" : "Deutschland bleibt beim Nein zu russischem Öl",
+    "date" : "2026-10-10T14:04:32.914+02:00",
+    "teaserImage" : {
+      "copyright" : "picture alliance/dpa/TASS",
+      "alttext" : "Ölpumpen auf einem russischen Ölfeld in Yamashneft.",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/7ea0b310-a819-4141-90b2-91f86593c155/AAABmaUGf_k/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/7ea0b310-a819-4141-90b2-91f86593c155/AAABmaUGf_k/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/7ea0b310-a819-4141-90b2-91f86593c155/AAABmaUGf_k/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/7ea0b310-a819-4141-90b2-91f86593c155/AAABmaUGf_k/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/7ea0b310-a819-4141-90b2-91f86593c155/AAABmaUGf_k/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/7ea0b310-a819-4141-90b2-91f86593c155/AAABmaUGf_k/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/7ea0b310-a819-4141-90b2-91f86593c155/AAABmaUGf_k/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/7ea0b310-a819-4141-90b2-91f86593c155/AAABmaUGf_k/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/7ea0b310-a819-4141-90b2-91f86593c155/AAABmaUGf_k/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/7ea0b310-a819-4141-90b2-91f86593c155/AAABmaUGf_k/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/7ea0b310-a819-4141-90b2-91f86593c155/AAABmaUGf_k/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/7ea0b310-a819-4141-90b2-91f86593c155/AAABmaUGf_k/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "Trump"
+    }, {
+      "tag" : "Ölpreis"
+    }, {
+      "tag" : "Diesel"
+    }, {
+      "tag" : "Russland"
+    }, {
+      "tag" : "Ukraine"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/trump-diesel-oelpreis-reaktionen-deutschland-100.json?view=hasChanged&lastKnown=03BD45EA00CB368787F09122946D3544",
+    "tracking" : [ {
+      "sid" : "app.wirtschaft.energie.trump-diesel-oelpreis-reaktionen-deutschland-100",
+      "src" : "tagesschau",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1404",
+      "otp" : "meldung",
+      "cid" : "trump-diesel-oelpreis-reaktionen-deutschland-100",
+      "pti" : "Deutschland_bleibt_beim_Nein_zu_russischem_Oel",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "US-Dieseldeal mit dem Kreml",
+    "firstSentence" : "Auch nach Trumps Dieseldeal mit Putin will die Bundesregierung auf russisches Öl verzichten.",
+    "images" : [ ],
+    "details" : "https://www.tagesschau.de/api2u/wirtschaft/energie/trump-diesel-oelpreis-reaktionen-deutschland-100.json",
+    "detailsweb" : "https://www.tagesschau.de/wirtschaft/energie/trump-diesel-oelpreis-reaktionen-deutschland-100.html",
+    "shareURL" : "https://www.tagesschau.de/wirtschaft/energie/trump-diesel-oelpreis-reaktionen-deutschland-100.html",
+    "geotags" : [ ],
+    "regionId" : 0,
+    "regionIds" : [ ],
+    "ressort" : "wirtschaft",
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "jugendwort-des-jahres-ragebait-102",
+    "externalId" : "4553314e-e361-484e-8f04-3df28e7e0103",
+    "title" : "\"Ragebait\" ist Jugendwort des Jahres 2026",
+    "date" : "2026-10-10T14:00:48.286+02:00",
+    "teaserImage" : {
+      "copyright" : "Marcus Brandt/dpa",
+      "alttext" : "Auf einem Smartphone steht: \"Das ist ein typischer Ragebait-Post\"",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/e090f6b5-4eda-456f-8bcf-815be4f28154/AAABoSWv6h0/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/e090f6b5-4eda-456f-8bcf-815be4f28154/AAABoSWv6h0/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/e090f6b5-4eda-456f-8bcf-815be4f28154/AAABoSWv6h0/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/e090f6b5-4eda-456f-8bcf-815be4f28154/AAABoSWv6h0/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/e090f6b5-4eda-456f-8bcf-815be4f28154/AAABoSWv6h0/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/e090f6b5-4eda-456f-8bcf-815be4f28154/AAABoSWv6h0/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/e090f6b5-4eda-456f-8bcf-815be4f28154/AAABoSWv6h0/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/e090f6b5-4eda-456f-8bcf-815be4f28154/AAABoSWv6h0/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/e090f6b5-4eda-456f-8bcf-815be4f28154/AAABoSWv6h0/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/e090f6b5-4eda-456f-8bcf-815be4f28154/AAABoSWv6h0/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/e090f6b5-4eda-456f-8bcf-815be4f28154/AAABoSWv6h0/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/e090f6b5-4eda-456f-8bcf-815be4f28154/AAABoSWv6h0/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "Jugendwort"
+    }, {
+      "tag" : "Langenscheid-Verlag"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/jugendwort-des-jahres-ragebait-102.json?view=hasChanged&lastKnown=081CFA96DDB47427D63C2E64F22715D8",
+    "tracking" : [ {
+      "sid" : "app.kultur.jugendwort-des-jahres-ragebait-102",
+      "src" : "tagesschau",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1400",
+      "otp" : "meldung",
+      "cid" : "jugendwort-des-jahres-ragebait-102",
+      "pti" : "Ragebait_ist_Jugendwort_des_Jahres_2026",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Knappes Abstimmungsergebnis",
+    "firstSentence" : "\"Ragebait\", auf deutsch etwa: \"Wutköder\", ist das Jugendwort des Jahres.",
+    "images" : [ ],
+    "details" : "https://www.tagesschau.de/api2u/kultur/jugendwort-des-jahres-ragebait-102.json",
+    "detailsweb" : "https://www.tagesschau.de/kultur/jugendwort-des-jahres-ragebait-102.html",
+    "shareURL" : "https://www.tagesschau.de/kultur/jugendwort-des-jahres-ragebait-102.html",
+    "geotags" : [ ],
+    "regionId" : 0,
+    "regionIds" : [ ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "wdr-jugendwort-des-jahres-warum-jugendliche-eine-eigene-sprache-brauchen-100",
+    "externalId" : "tagesschau_fm-story-WDR-bfc6791f-8336-477c-abdf-0c84a2a55db4",
+    "title" : "Warum Jugendliche eine eigene Sprache brauchen",
+    "date" : "2026-10-10T13:59:00.000+02:00",
+    "teaserImage" : {
+      "title" : "Jugendwort des Jahres 2026",
+      "copyright" : "IMAGO/Frank Hoermann / SVEN SIMON",
+      "alttext" : "AI-Overview von den Top 3 Vorschlägen für das Jugendwort des Jahres 2026 (Crashout, Ragebait, Peak) mit passender Erklärung zu den Worten",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/fff7889d-97b4-4c04-8c6f-774c2e1d1f0a/AAABoSXQKgA/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/fff7889d-97b4-4c04-8c6f-774c2e1d1f0a/AAABoSXQKgA/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/fff7889d-97b4-4c04-8c6f-774c2e1d1f0a/AAABoSXQKgA/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/fff7889d-97b4-4c04-8c6f-774c2e1d1f0a/AAABoSXQKgA/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/fff7889d-97b4-4c04-8c6f-774c2e1d1f0a/AAABoSXQKgA/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/fff7889d-97b4-4c04-8c6f-774c2e1d1f0a/AAABoSXQKgA/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/fff7889d-97b4-4c04-8c6f-774c2e1d1f0a/AAABoSXQKgA/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/fff7889d-97b4-4c04-8c6f-774c2e1d1f0a/AAABoSXQKgA/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/fff7889d-97b4-4c04-8c6f-774c2e1d1f0a/AAABoSXQKgA/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/fff7889d-97b4-4c04-8c6f-774c2e1d1f0a/AAABoSXQKgA/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/fff7889d-97b4-4c04-8c6f-774c2e1d1f0a/AAABoSXQKgA/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/fff7889d-97b4-4c04-8c6f-774c2e1d1f0a/AAABoSXQKgA/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "WDR"
+    }, {
+      "tag" : "Nordrhein-Westfalen"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/wdr-jugendwort-des-jahres-warum-jugendliche-eine-eigene-sprache-brauchen-100.json?view=hasChanged&lastKnown=C7CAB0D21FDF60A304BCE1D5D5DADB2C",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.nordrheinwestfalen.wdr-jugendwort-des-jahres-warum-jugendliche-eine-eigene-sprache-brauchen-100",
+      "src" : "wdr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1404",
+      "otp" : "meldung",
+      "cid" : "wdr-jugendwort-des-jahres-warum-jugendliche-eine-eigene-sprache-brauchen-100",
+      "pti" : "Warum_Jugendliche_eine_eigene_Sprache_brauchen",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Nordrhein-Westfalen",
+    "firstSentence" : "Gönn dir, Digger!",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Westdeutscher Rundfunk",
+      "copyright" : "WDR",
+      "alttext" : "Logo Westdeutscher Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/34b7843e-4196-44f3-b3a8-54cbd172e832/AAABlaqAmLc/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/inland/regional/nordrheinwestfalen/wdr-jugendwort-des-jahres-warum-jugendliche-eine-eigene-sprache-brauchen-100.json",
+    "detailsweb" : "https://www.tagesschau.de/inland/regional/nordrheinwestfalen/wdr-jugendwort-des-jahres-warum-jugendliche-eine-eigene-sprache-brauchen-100.html",
+    "shareURL" : "https://www1.wdr.de/kultur/jugendwort-2026-jugendsprache-langenscheidt-1-100.html",
+    "geotags" : [ ],
+    "regionId" : 10,
+    "regionIds" : [ 10 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "johanna-rettungsschwimmerin-100",
+    "externalId" : "eb6e5190-150b-48e6-bf47-525bbe379c49",
+    "title" : "Nach Bodensee-Überquerung: Ausnahmeschwimmerin aus Weimar will Afrika erreichen",
+    "date" : "2026-10-10T13:58:50.628+02:00",
+    "teaserImage" : {
+      "title" : "Im Wasser fühlt sich Johanna Hörsch am wohlsten.",
+      "copyright" : "MDR/Conny Mauroner",
+      "alttext" : "Schwimmerin Johanna Hörsch im Schwimmbecken",
+      "imageVariants" : {
+        "1x1-144" : "https://images.mdr.de/image/50b3b130-95b0-4515-a0ce-70396219d2c7/AAABoSVlCIU/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.mdr.de/image/50b3b130-95b0-4515-a0ce-70396219d2c7/AAABoSVlCIU/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.mdr.de/image/50b3b130-95b0-4515-a0ce-70396219d2c7/AAABoSVlCIU/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.mdr.de/image/50b3b130-95b0-4515-a0ce-70396219d2c7/AAABoSVlCIU/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.mdr.de/image/50b3b130-95b0-4515-a0ce-70396219d2c7/AAABoSVlCIU/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.mdr.de/image/50b3b130-95b0-4515-a0ce-70396219d2c7/AAABoSVlCIU/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.mdr.de/image/50b3b130-95b0-4515-a0ce-70396219d2c7/AAABoSVlCIU/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.mdr.de/image/50b3b130-95b0-4515-a0ce-70396219d2c7/AAABoSVlCIU/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.mdr.de/image/50b3b130-95b0-4515-a0ce-70396219d2c7/AAABoSVlCIU/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.mdr.de/image/50b3b130-95b0-4515-a0ce-70396219d2c7/AAABoSVlCIU/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.mdr.de/image/50b3b130-95b0-4515-a0ce-70396219d2c7/AAABoSVlCIU/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.mdr.de/image/50b3b130-95b0-4515-a0ce-70396219d2c7/AAABoSVlCIU/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/johanna-rettungsschwimmerin-100.json?view=hasChanged&lastKnown=417399D421662DB9C34EC879761B3885",
+    "tracking" : [ {
+      "sid" : "app.mdrde.nachrichten.thueringen.mitte-thueringen.weimar.johanna-rettungsschwimmerin-100",
+      "src" : "mdr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1406",
+      "otp" : "meldung",
+      "cid" : "johanna-rettungsschwimmerin-100",
+      "pti" : "Nach_Bodensee-Erfolg_Weimarer_Schwimmerin_plant_Gibraltar-Ueberquerung",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Thüringen",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Mitteldeutscher Rundfunk",
+      "copyright" : "MDR",
+      "alttext" : "Logo Mitteldeutscher Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/df8ccca6-d8bb-440e-98fa-addb2fa8dcdc/AAABlxb28lM/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/nachrichten/thueringen/mitte-thueringen/weimar/johanna-rettungsschwimmerin-100.json",
+    "detailsweb" : "https://www.mdr.de/nachrichten/thueringen/mitte-thueringen/weimar/dlrg-schwimmerin,johanna-rettungsschwimmerin-100.html",
+    "shareURL" : "https://www.mdr.de/nachrichten/thueringen/mitte-thueringen/weimar/dlrg-schwimmerin,johanna-rettungsschwimmerin-100.html",
+    "geotags" : [ ],
+    "regionId" : 16,
+    "regionIds" : [ 16 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "rosenthal-havarie-102",
+    "externalId" : "c1106172-bd1b-4392-b647-44c9a9abc762",
+    "title" : "Nach Havarie: Papierhersteller leitet wieder geklärtes Abwasser in Saale ab",
+    "date" : "2026-10-10T13:37:44.888+02:00",
+    "teaserImage" : {
+      "copyright" : "IMAGO / imagebroker",
+      "alttext" : "Talsperre Bleiloch bei Saalburg",
+      "imageVariants" : {
+        "1x1-144" : "https://images.mdr.de/image/38c9e7fc-0648-460e-ab02-0c069aa25f5d/AAABnoOK8hE/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.mdr.de/image/38c9e7fc-0648-460e-ab02-0c069aa25f5d/AAABnoOK8hE/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.mdr.de/image/38c9e7fc-0648-460e-ab02-0c069aa25f5d/AAABnoOK8hE/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.mdr.de/image/38c9e7fc-0648-460e-ab02-0c069aa25f5d/AAABnoOK8hE/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.mdr.de/image/38c9e7fc-0648-460e-ab02-0c069aa25f5d/AAABnoOK8hE/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.mdr.de/image/38c9e7fc-0648-460e-ab02-0c069aa25f5d/AAABnoOK8hE/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.mdr.de/image/38c9e7fc-0648-460e-ab02-0c069aa25f5d/AAABnoOK8hE/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.mdr.de/image/38c9e7fc-0648-460e-ab02-0c069aa25f5d/AAABnoOK8hE/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.mdr.de/image/38c9e7fc-0648-460e-ab02-0c069aa25f5d/AAABnoOK8hE/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.mdr.de/image/38c9e7fc-0648-460e-ab02-0c069aa25f5d/AAABnoOK8hE/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.mdr.de/image/38c9e7fc-0648-460e-ab02-0c069aa25f5d/AAABnoOK8hE/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.mdr.de/image/38c9e7fc-0648-460e-ab02-0c069aa25f5d/AAABnoOK8hE/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/rosenthal-havarie-102.json?view=hasChanged&lastKnown=BEE22F4799BD6B484DF942D3DBBEDE27",
+    "tracking" : [ {
+      "sid" : "app.mdrde.nachrichten.thueringen.ost-thueringen.saale-orla.rosenthal-havarie-102",
+      "src" : "mdr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1337",
+      "otp" : "meldung",
+      "cid" : "rosenthal-havarie-102",
+      "pti" : "Nach_Havarie_Papierhersteller_leitet_wieder_geklaertes_Abwasser_in_Saale_ab",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Thüringen",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Mitteldeutscher Rundfunk",
+      "copyright" : "MDR",
+      "alttext" : "Logo Mitteldeutscher Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/df8ccca6-d8bb-440e-98fa-addb2fa8dcdc/AAABlxb28lM/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/nachrichten/thueringen/ost-thueringen/saale-orla/rosenthal-havarie-102.json",
+    "detailsweb" : "https://www.mdr.de/nachrichten/thueringen/ost-thueringen/saale-orla/saale-abwasser-mercer,rosenthal-havarie-102.html",
+    "shareURL" : "https://www.mdr.de/nachrichten/thueringen/ost-thueringen/saale-orla/saale-abwasser-mercer,rosenthal-havarie-102.html",
+    "geotags" : [ ],
+    "regionId" : 16,
+    "regionIds" : [ 16 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "hr-das-sollten-sie-am-samstag-auf-der-buchmesse-nicht-verpassen-100",
+    "externalId" : "tagesschau_fm-story-id-c57e3fcd-49ad-41e3-a2e5-36a583b8dd97",
+    "title" : "Das sollten Sie am Samstag auf der Buchmesse nicht verpassen",
+    "date" : "2026-10-10T13:29:33.119+02:00",
+    "teaserImage" : {
+      "title" : "Werden unter anderem am Samstag auf der Buchmesse 2026 erwartet: Comedian Otto, Autorin Lilly Lucas, Entertainer Riccardo Simonetti und Rechtswissenschaftlerin Frauke Brosius-Gersdorf.",
+      "copyright" : "picture alliance/dpa/APA | Hans Klaus Techt; IMAGO / Zoonar; picture alliance/dpa | Rolf Vennenbernd; IMAGO / Sven Simon; Frankfurter Buchmesse / Gian-Luca Heiser; Collage: hessenschau.de",
+      "alttext" : "Collage: Vier Portraits vor einem rötlich-pinkfarbenen Hintergrund angeordnet, wo eine Ansicht des Messegeländes und Buchmesse-Logos durchschein durscheinen.",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/d16ef5b3-8b02-4d8e-bf56-8b1e1f729791/AAABoSWTvRk/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/d16ef5b3-8b02-4d8e-bf56-8b1e1f729791/AAABoSWTvRk/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/d16ef5b3-8b02-4d8e-bf56-8b1e1f729791/AAABoSWTvRk/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/d16ef5b3-8b02-4d8e-bf56-8b1e1f729791/AAABoSWTvRk/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/d16ef5b3-8b02-4d8e-bf56-8b1e1f729791/AAABoSWTvRk/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/d16ef5b3-8b02-4d8e-bf56-8b1e1f729791/AAABoSWTvRk/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/d16ef5b3-8b02-4d8e-bf56-8b1e1f729791/AAABoSWTvRk/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/d16ef5b3-8b02-4d8e-bf56-8b1e1f729791/AAABoSWTvRk/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/d16ef5b3-8b02-4d8e-bf56-8b1e1f729791/AAABoSWTvRk/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/d16ef5b3-8b02-4d8e-bf56-8b1e1f729791/AAABoSWTvRk/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/d16ef5b3-8b02-4d8e-bf56-8b1e1f729791/AAABoSWTvRk/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/d16ef5b3-8b02-4d8e-bf56-8b1e1f729791/AAABoSWTvRk/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "HR"
+    }, {
+      "tag" : "Hessen"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/hr-das-sollten-sie-am-samstag-auf-der-buchmesse-nicht-verpassen-100.json?view=hasChanged&lastKnown=1F0305A77F2476BBB5062FA85124CE17",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.hessen.hr-das-sollten-sie-am-samstag-auf-der-buchmesse-nicht-verpassen-100",
+      "src" : "hr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1330",
+      "otp" : "meldung",
+      "cid" : "hr-das-sollten-sie-am-samstag-auf-der-buchmesse-nicht-verpassen-100",
+      "pti" : "Das_sollten_Sie_am_Samstag_auf_der_Buchmesse_nicht_verpassen",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Hessen",
+    "firstSentence" : "Wenn Frauke Brosius-Gersdorf, Otto Waalkes und Riccardo Simonetti sich am gleichen Ort herumtreiben, kann das nur eines heißen: Es ist Buchmesse!",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Hessischer Rundfunk",
+      "copyright" : "hessenschau",
+      "alttext" : "Logo Hessischer Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/10b182d2-ee50-42e2-9d87-309731667be5/AAABlaqAdVE/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/inland/regional/hessen/hr-das-sollten-sie-am-samstag-auf-der-buchmesse-nicht-verpassen-100.json",
+    "detailsweb" : "https://www.tagesschau.de/inland/regional/hessen/hr-das-sollten-sie-am-samstag-auf-der-buchmesse-nicht-verpassen-100.html",
+    "shareURL" : "https://www.hessenschau.de/kultur/buchmesse/das-sollten-sie-am-samstag-auf-der-buchmesse-nicht-verpassen-v3,tipps-buchmesse-samstag-2026-100.html",
+    "geotags" : [ ],
+    "regionId" : 7,
+    "regionIds" : [ 7 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "video-1663832",
+    "externalId" : "4e9375f1-5f64-4331-834c-ac078418d82c",
+    "title" : "Susanne Petersohn, ARD Kiew, zu Reaktionen nach Trumps Diesel-Deal mit Russland",
+    "date" : "2026-10-10T13:28:26.359+02:00",
+    "teaserImage" : {
+      "title" : "Sendungsbild",
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Sendungsbild",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/7305c762-3586-4c46-9d1a-fbe6053dac3c/AAABoSWSMpY/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "schnell informiert"
+    }, {
+      "tag" : "Trump"
+    }, {
+      "tag" : "Putin"
+    }, {
+      "tag" : "Diesel"
+    }, {
+      "tag" : "Russland"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1663832.json?view=hasChanged&lastKnown=815699EB185566046C0F6B37C06AD8C7",
+    "tracking" : [ {
+      "sid" : "app.multimedia.video.video-1663832",
+      "src" : "tagesschau",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261010T1328",
+      "otp" : "video",
+      "cid" : "video-1663832",
+      "pti" : "Susanne_Petersohn_ARD_Kiew_zu_Reaktionen_nach_Trumps_Diesel-Deal_mit_Russland",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    }, {
+      "assetid" : "video-1663832",
+      "program" : "tagesschau24",
+      "title" : "Susanne_Petersohn_ARD_Kiew_zu_Reaktionen_nach_Trumps_Diesel-Deal_mit_Russland",
+      "length" : "291",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/video/video-1663832.html",
+      "c7" : "p7,video-1663832",
+      "c8" : "p8,291",
+      "c9" : "p9,tagesschau24_Susanne_Petersohn_ARD_Kiew_zu_Reaktionen_nach_Trumps_Diesel-Deal_mit_Russland_10.10.2026_1328",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1322-4600.webs.h264.mp4",
+      "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1322-4600.webm.h264.mp4",
+      "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-1322-4600.webxl.h264.mp4",
+      "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1010/TV-20261010-1322-4600.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "Sendungsbild",
+    "type" : "video"
+  }, {
+    "sophoraId" : "spd-800",
+    "externalId" : "b8fd990a-681e-4e7f-91eb-4a881130504c",
+    "title" : "Landtagswahl 2027: SPD sucht Ideen für Wahlprogramm",
+    "date" : "2026-10-10T13:25:35.431+02:00",
+    "teaserImage" : {
+      "copyright" : "Friso Gentsch/dpa",
+      "alttext" : "Ein Mikrofon steht in einem Raum der Fraktion der SPD.",
+      "imageVariants" : {
+        "1x1-144" : "https://images.ndr.de/image/dff1a489-afaa-4f44-a641-49c23c365cd2/AAABoR-IWKk/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.ndr.de/image/dff1a489-afaa-4f44-a641-49c23c365cd2/AAABoR-IWKk/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.ndr.de/image/dff1a489-afaa-4f44-a641-49c23c365cd2/AAABoR-IWKk/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.ndr.de/image/dff1a489-afaa-4f44-a641-49c23c365cd2/AAABoR-IWKk/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.ndr.de/image/dff1a489-afaa-4f44-a641-49c23c365cd2/AAABoR-IWKk/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.ndr.de/image/dff1a489-afaa-4f44-a641-49c23c365cd2/AAABoR-IWKk/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.ndr.de/image/dff1a489-afaa-4f44-a641-49c23c365cd2/AAABoR-IWKk/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.ndr.de/image/dff1a489-afaa-4f44-a641-49c23c365cd2/AAABoR-IWKk/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.ndr.de/image/dff1a489-afaa-4f44-a641-49c23c365cd2/AAABoR-IWKk/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.ndr.de/image/dff1a489-afaa-4f44-a641-49c23c365cd2/AAABoR-IWKk/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.ndr.de/image/dff1a489-afaa-4f44-a641-49c23c365cd2/AAABoR-IWKk/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.ndr.de/image/dff1a489-afaa-4f44-a641-49c23c365cd2/AAABoR-IWKk/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "SPD"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/spd-800.json?view=hasChanged&lastKnown=B9E219131B3DE4D2D51EAF16F9BD6E31",
+    "tracking" : [ {
+      "sid" : "app.ndrde.nachrichten.niedersachsen.spd-800",
+      "src" : "ndr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1407",
+      "otp" : "meldung",
+      "cid" : "spd-800",
+      "pti" : "Landtagswahl_2027_SPD_sucht_Ideen_fuer_Wahlprogramm",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Niedersachsen",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Norddeutscher Rundfunk",
+      "copyright" : "NDR",
+      "alttext" : "Logo Norddeutscher Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/e33737ad-2315-4104-91e5-c515497253df/AAABlaqAfv8/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/nachrichten/niedersachsen/spd-800.json",
+    "detailsweb" : "https://www.ndr.de/nachrichten/niedersachsen/landtagswahl-2027-spd-sucht-ideen-fuer-wahlprogramm,spd-800.html",
+    "shareURL" : "https://www.ndr.de/nachrichten/niedersachsen/landtagswahl-2027-spd-sucht-ideen-fuer-wahlprogramm,spd-800.html",
+    "geotags" : [ ],
+    "regionId" : 9,
+    "regionIds" : [ 9 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "hr-frankfurt-feuer-auf-schulgelaende-vermutlich-anschlag-auf-ukraine-hilfe-100",
+    "externalId" : "tagesschau_fm-story-id-0bf1a455-dcc8-4c53-a82d-f7ca9c2b6fd4",
+    "title" : "Frankfurt: Feuer auf Schulgelände vermutlich Anschlag auf Ukraine-Hilfe",
+    "date" : "2026-10-10T13:24:37.957+02:00",
+    "teaserImage" : {
+      "title" : "Einsatzkräfte von Feuerwehr und THW am Freitag mit schwerem Gerät vor dem in Brand gesetzten Gebäude in Frankfurt.",
+      "copyright" : "hr",
+      "alttext" : "Einsatzkräfte von Feuerwehr und THW mit schwerem Gerät vor Schule",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/8038bd62-99e7-44dd-8238-b2090745611d/AAABoSWQFhI/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/8038bd62-99e7-44dd-8238-b2090745611d/AAABoSWQFhI/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/8038bd62-99e7-44dd-8238-b2090745611d/AAABoSWQFhI/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/8038bd62-99e7-44dd-8238-b2090745611d/AAABoSWQFhI/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/8038bd62-99e7-44dd-8238-b2090745611d/AAABoSWQFhI/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/8038bd62-99e7-44dd-8238-b2090745611d/AAABoSWQFhI/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/8038bd62-99e7-44dd-8238-b2090745611d/AAABoSWQFhI/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/8038bd62-99e7-44dd-8238-b2090745611d/AAABoSWQFhI/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/8038bd62-99e7-44dd-8238-b2090745611d/AAABoSWQFhI/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/8038bd62-99e7-44dd-8238-b2090745611d/AAABoSWQFhI/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/8038bd62-99e7-44dd-8238-b2090745611d/AAABoSWQFhI/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/8038bd62-99e7-44dd-8238-b2090745611d/AAABoSWQFhI/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "HR"
+    }, {
+      "tag" : "Hessen"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/hr-frankfurt-feuer-auf-schulgelaende-vermutlich-anschlag-auf-ukraine-hilfe-100.json?view=hasChanged&lastKnown=3CADD5B61C932A2E9DFA7298793145F3",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.hessen.hr-frankfurt-feuer-auf-schulgelaende-vermutlich-anschlag-auf-ukraine-hilfe-100",
+      "src" : "hr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1326",
+      "otp" : "meldung",
+      "cid" : "hr-frankfurt-feuer-auf-schulgelaende-vermutlich-anschlag-auf-ukraine-hilfe-100",
+      "pti" : "Frankfurt_Feuer_auf_Schulgelaende_vermutlich_Anschlag_auf_Ukraine-Hilfe",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Hessen",
+    "firstSentence" : "Bei einem Feuer in Frankfurt sind große Mengen an Spenden für die Ukraine verbrannt.",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Hessischer Rundfunk",
+      "copyright" : "hessenschau",
+      "alttext" : "Logo Hessischer Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/10b182d2-ee50-42e2-9d87-309731667be5/AAABlaqAdVE/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/inland/regional/hessen/hr-frankfurt-feuer-auf-schulgelaende-vermutlich-anschlag-auf-ukraine-hilfe-100.json",
+    "detailsweb" : "https://www.tagesschau.de/inland/regional/hessen/hr-frankfurt-feuer-auf-schulgelaende-vermutlich-anschlag-auf-ukraine-hilfe-100.html",
+    "shareURL" : "https://www.hessenschau.de/panorama/frankfurt-feuer-auf-schulgelaende-vermutlich-anschlag-auf-ukraine-hilfe-v2,brand-schule-ukraine-100.html",
+    "geotags" : [ ],
+    "regionId" : 7,
+    "regionIds" : [ 7 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "wdr-bahnstrecke-im-ruhrgebiet-fuer-drei-wochen-gesperrt--wdr-aktuell-100",
+    "externalId" : "tagesschau_fm-videoobject-WDR-07093e18-c205-47ff-95ed-5c74166bc2e1",
+    "title" : "Bahnstrecke im Ruhrgebiet für drei Wochen gesperrt | WDR Aktuell",
+    "date" : "2026-10-10T13:21:27.000+02:00",
+    "teaserImage" : {
+      "title" : "Die Baustelle am Kreuz Kaiserberg sorgt bald wieder für viele Staus und Zugausfälle",
+      "copyright" : "WDR/Christian Zens",
+      "alttext" : "Das Kreuz Kaiserberg aus der Luft, am linken Bildrand erstreckt sich die A3, mittig die A40, quer durch das Bild führt die Bahntrasse",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/b4513581-dc48-4e5d-8c40-80ae27205b17/AAABoSWeveI/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/b4513581-dc48-4e5d-8c40-80ae27205b17/AAABoSWeveI/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/b4513581-dc48-4e5d-8c40-80ae27205b17/AAABoSWeveI/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/b4513581-dc48-4e5d-8c40-80ae27205b17/AAABoSWeveI/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/b4513581-dc48-4e5d-8c40-80ae27205b17/AAABoSWeveI/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/b4513581-dc48-4e5d-8c40-80ae27205b17/AAABoSWeveI/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/b4513581-dc48-4e5d-8c40-80ae27205b17/AAABoSWeveI/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/b4513581-dc48-4e5d-8c40-80ae27205b17/AAABoSWeveI/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/b4513581-dc48-4e5d-8c40-80ae27205b17/AAABoSWeveI/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/b4513581-dc48-4e5d-8c40-80ae27205b17/AAABoSWeveI/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/b4513581-dc48-4e5d-8c40-80ae27205b17/AAABoSWeveI/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/b4513581-dc48-4e5d-8c40-80ae27205b17/AAABoSWeveI/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/wdr-bahnstrecke-im-ruhrgebiet-fuer-drei-wochen-gesperrt--wdr-aktuell-100.json?view=hasChanged&lastKnown=5F7A8D2D577619DA47DDB5493E368C69",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.nordrheinwestfalen.wdr-bahnstrecke-im-ruhrgebiet-fuer-drei-wochen-gesperrt--wdr-aktuell-100",
+      "src" : "wdr",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261010T1342",
+      "otp" : "video",
+      "cid" : "wdr-bahnstrecke-im-ruhrgebiet-fuer-drei-wochen-gesperrt--wdr-aktuell-100",
+      "pti" : "Bahnstrecke_im_Ruhrgebiet_fuer_drei_Wochen_gesperrt__WDR_Aktuell",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    }, {
+      "assetid" : "wdr-bahnstrecke-im-ruhrgebiet-fuer-drei-wochen-gesperrt--wdr-aktuell-100",
+      "program" : "Tagesschau",
+      "title" : "Bahnstrecke_im_Ruhrgebiet_fuer_drei_Wochen_gesperrt__WDR_Aktuell",
+      "length" : "82",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/inland/regional/nordrheinwestfalen/wdr-bahnstrecke-im-ruhrgebiet-fuer-drei-wochen-gesperrt--wdr-aktuell-100.html",
+      "c7" : "p7,wdr-bahnstrecke-im-ruhrgebiet-fuer-drei-wochen-gesperrt--wdr-aktuell-100",
+      "c8" : "p8,82",
+      "c9" : "p9,Tagesschau_Bahnstrecke_im_Ruhrgebiet_fuer_drei_Wochen_gesperrt__WDR_Aktuell_10.10.2026_1342",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "adaptivestreaming" : "https://wdradaptiv-vh.akamaihd.net/i/media/p/public/weltweit/2026/10/10/6af5e7a1-d949-4e66-b4ef-a52d1d57e901/6af5e7a1-d949-4e66-b4ef-a52d1d57e901_AVC-,270,360,540,720,1080,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "Das Kreuz Kaiserberg aus der Luft, am linken Bildrand erstreckt sich die A3, mittig die A40, quer durch das Bild führt die Bahntrasse",
+    "type" : "video"
+  }, {
+    "sophoraId" : "linkeparteitag-102",
+    "externalId" : "743001c4-e1fa-4305-a686-7aee316cd2e3",
+    "title" : "Landesparteitag: Hamburger Linke will \"Umverteilung und Demokratisierung\"",
+    "date" : "2026-10-10T13:18:23.560+02:00",
+    "teaserImage" : {
+      "copyright" : "NDR / Frauke Reinig",
+      "alttext" : "Mitglieder der Hamburger Linken sitzen bei ihrem Parteitag zusammen.",
+      "imageVariants" : {
+        "1x1-144" : "https://images.ndr.de/image/922d8707-65d2-408d-8854-f7d253a0ee8d/AAABoSUbcBA/AAABn

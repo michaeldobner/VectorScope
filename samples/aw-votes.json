@@ -1,0 +1,161 @@
+{
+ "meta": {
+  "abgeordnetenwatch_api": {
+   "version": "2.9.0",
+   "changelog": "https://www.abgeordnetenwatch.de/api/version-changelog/aktuell",
+   "licence": "CC0 1.0",
+   "licence_link": "https://creativecommons.org/publicdomain/zero/1.0/deed.de",
+   "documentation": "https://www.abgeordnetenwatch.de/api/entitaeten/vote"
+  },
+  "status": "ok",
+  "status_message": "",
+  "result": {
+   "count": 630,
+   "total": 630,
+   "range_start": 0,
+   "range_end": 1000
+  }
+ },
+ "data": [
+  {
+   "id": 678549,
+   "entity_type": "vote",
+   "label": "Katrin Zschau - Zweiter Gesetzentwurf: Steuerfreiheit beim Verkauf vermieteter Immobilien nach zehn Jahren abschaffen",
+   "api_url": "https://www.abgeordnetenwatch.de/api/v2/votes/678549",
+   "mandate": {
+    "id": 70826,
+    "entity_type": "candidacy_mandate",
+    "label": "Katrin Zschau (Bundestag 2025 - 2029)",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/candidacies-mandates/70826"
+   },
+   "poll": {
+    "id": 6723,
+    "entity_type": "node",
+    "label": "Zweiter Gesetzentwurf: Steuerfreiheit beim Verkauf vermieteter Immobilien nach zehn Jahren abschaffen",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/polls/6723",
+    "abgeordnetenwatch_url": "https://www.abgeordnetenwatch.de/bundestag/21/abstimmungen/zweiter-gesetzentwurf-steuerfreiheit-beim-verkauf-vermieteter-immobilien-nach-zehn-jahren-abschaffen"
+   },
+   "vote": "no",
+   "reason_no_show": null,
+   "reason_no_show_other": null,
+   "fraction": {
+    "id": 425,
+    "entity_type": "fraction",
+    "label": "SPD (Bundestag 2025 - 2029)",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/fractions/425"
+   }
+  },
+  {
+   "id": 678548,
+   "entity_type": "vote",
+   "label": "Armand Zorn - Zweiter Gesetzentwurf: Steuerfreiheit beim Verkauf vermieteter Immobilien nach zehn Jahren abschaffen",
+   "api_url": "https://www.abgeordnetenwatch.de/api/v2/votes/678548",
+   "mandate": {
+    "id": 69002,
+    "entity_type": "candidacy_mandate",
+    "label": "Armand Zorn (Bundestag 2025 - 2029)",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/candidacies-mandates/69002"
+   },
+   "poll": {
+    "id": 6723,
+    "entity_type": "node",
+    "label": "Zweiter Gesetzentwurf: Steuerfreiheit beim Verkauf vermieteter Immobilien nach zehn Jahren abschaffen",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/polls/6723",
+    "abgeordnetenwatch_url": "https://www.abgeordnetenwatch.de/bundestag/21/abstimmungen/zweiter-gesetzentwurf-steuerfreiheit-beim-verkauf-vermieteter-immobilien-nach-zehn-jahren-abschaffen"
+   },
+   "vote": "no",
+   "reason_no_show": null,
+   "reason_no_show_other": null,
+   "fraction": {
+    "id": 425,
+    "entity_type": "fraction",
+    "label": "SPD (Bundestag 2025 - 2029)",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/fractions/425"
+   }
+  },
+  {
+   "id": 678547,
+   "entity_type": "vote",
+   "label": "Vanessa-Kim Zobel - Zweiter Gesetzentwurf: Steuerfreiheit beim Verkauf vermieteter Immobilien nach zehn Jahren abschaffen",
+   "api_url": "https://www.abgeordnetenwatch.de/api/v2/votes/678547",
+   "mandate": {
+    "id": 69000,
+    "entity_type": "candidacy_mandate",
+    "label": "Vanessa-Kim Zobel (Bundestag 2025 - 2029)",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/candidacies-mandates/69000"
+   },
+   "poll": {
+    "id": 6723,
+    "entity_type": "node",
+    "label": "Zweiter Gesetzentwurf: Steuerfreiheit beim Verkauf vermieteter Immobilien nach zehn Jahren abschaffen",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/polls/6723",
+    "abgeordnetenwatch_url": "https://www.abgeordnetenwatch.de/bundestag/21/abstimmungen/zweiter-gesetzentwurf-steuerfreiheit-beim-verkauf-vermieteter-immobilien-nach-zehn-jahren-abschaffen"
+   },
+   "vote": "no",
+   "reason_no_show": null,
+   "reason_no_show_other": null,
+   "fraction": {
+    "id": 421,
+    "entity_type": "fraction",
+    "label": "CDU/CSU (Bundestag 2025 - 2029)",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/fractions/421"
+   }
+  },
+  {
+   "id": 678546,
+   "entity_type": "vote",
+   "label": "Jörg Zirwes - Zweiter Gesetzentwurf: Steuerfreiheit beim Verkauf vermieteter Immobilien nach zehn Jahren abschaffen",
+   "api_url": "https://www.abgeordnetenwatch.de/api/v2/votes/678546",
+   "mandate": {
+    "id": 68999,
+    "entity_type": "candidacy_mandate",
+    "label": "Jörg Zirwes (Bundestag 2025 - 2029)",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/candidacies-mandates/68999"
+   },
+   "poll": {
+    "id": 6723,
+    "entity_type": "node",
+    "label": "Zweiter Gesetzentwurf: Steuerfreiheit beim Verkauf vermieteter Immobilien nach zehn Jahren abschaffen",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/polls/6723",
+    "abgeordnetenwatch_url": "https://www.abgeordnetenwatch.de/bundestag/21/abstimmungen/zweiter-gesetzentwurf-steuerfreiheit-beim-verkauf-vermieteter-immobilien-nach-zehn-jahren-abschaffen"
+   },
+   "vote": "no",
+   "reason_no_show": null,
+   "reason_no_show_other": null,
+   "fraction": {
+    "id": 419,
+    "entity_type": "fraction",
+    "label": "AfD (Bundestag 2025 - 2029)",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/fractions/419"
+   }
+  },
+  {
+   "id": 678545,
+   "entity_type": "vote",
+   "label": "Nicolas Zippelius - Zweiter Gesetzentwurf: Steuerfreiheit beim Verkauf vermieteter Immobilien nach zehn Jahren abschaffen",
+   "api_url": "https://www.abgeordnetenwatch.de/api/v2/votes/678545",
+   "mandate": {
+    "id": 68998,
+    "entity_type": "candidacy_mandate",
+    "label": "Nicolas Zippelius (Bundestag 2025 - 2029)",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/candidacies-mandates/68998"
+   },
+   "poll": {
+    "id": 6723,
+    "entity_type": "node",
+    "label": "Zweiter Gesetzentwurf: Steuerfreiheit beim Verkauf vermieteter Immobilien nach zehn Jahren abschaffen",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/polls/6723",
+    "abgeordnetenwatch_url": "https://www.abgeordnetenwatch.de/bundestag/21/abstimmungen/zweiter-gesetzentwurf-steuerfreiheit-beim-verkauf-vermieteter-immobilien-nach-zehn-jahren-abschaffen"
+   },
+   "vote": "no",
+   "reason_no_show": null,
+   "reason_no_show_other": null,
+   "fraction": {
+    "id": 421,
+    "entity_type": "fraction",
+    "label": "CDU/CSU (Bundestag 2025 - 2029)",
+    "api_url": "https://www.abgeordnetenwatch.de/api/v2/fractions/421"
+   }
+  }
+ ]
+}

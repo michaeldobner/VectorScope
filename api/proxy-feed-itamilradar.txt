@@ -1,0 +1,280 @@
+HTTP 200
+access-control-allow-headers: Content-Type, X-VS-Token, Accept
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-origin: *
+access-control-max-age: 86400
+age: 0
+cache-control: public
+content-encoding: br
+content-type: application/xml; charset=utf-8
+date: Sat, 10 Oct 2026 12:37:21 GMT
+etag: W/"e078-bEbNY63win0GxNJLVaERc55JXQc"
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+transfer-encoding: chunked
+vary: Origin
+x-vercel-cache: MISS
+x-vercel-id: sfo1::fra1::twqq4-1791635840204-df3221ebb55b
+
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>itamilradar</title>
+	<atom:link href="https://www.itamilradar.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://www.itamilradar.com</link>
+	<description>Beyond the track</description>
+	<lastBuildDate>Sat, 10 Oct 2026 08:30:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1.3</generator>
+
+<image>
+	<url>https://i0.wp.com/www.itamilradar.com/wp-content/uploads/2021/10/cropped-icon.png?fit=32%2C32&#038;ssl=1</url>
+	<title>itamilradar</title>
+	<link>https://www.itamilradar.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">162046488</site>	<item>
+		<title>Swedish S102B Korpen Conducts Repeated Black Sea Missions this week</title>
+		<link>https://www.itamilradar.com/2026/10/10/swedish-s102b-korpen-conducts-repeated-black-sea-missions-this-week/</link>
+					<comments>https://www.itamilradar.com/2026/10/10/swedish-s102b-korpen-conducts-repeated-black-sea-missions-this-week/#respond</comments>
+		
+		<dc:creator><![CDATA[itamilradar]]></dc:creator>
+		<pubDate>Sat, 10 Oct 2026 08:30:32 +0000</pubDate>
+				<category><![CDATA[Swedish AF]]></category>
+		<guid isPermaLink="false">https://www.itamilradar.com/?p=27190</guid>
+
+					<description><![CDATA[The Swedish Air Force has conducted a series of missions over the Black Sea in recent days, with its Gulfstream S102B Korpen operating from Bucharest, Romania, between 5 and 9 October 2026. The flights included repeated sorties over the Black Sea before the aircraft returned to Sweden on 9 October, highlighting the continued use of [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">The Swedish Air Force has conducted a series of missions over the Black Sea in recent days, with its Gulfstream S102B Korpen operating from Bucharest, Romania, between 5 and 9 October 2026. The flights included repeated sorties over the Black Sea before the aircraft returned to Sweden on 9 October, highlighting the continued use of Swedish signals intelligence capabilities on NATO’s eastern flank.</p>
+
+
+
+<h2 class="wp-block-heading">From Linköping to the Black Sea</h2>
+
+
+
+<p class="wp-block-paragraph">Flight-tracking data show that the aircraft, a Swedish Air Force Gulfstream S102B Korpen (reg. 102003 – c/s SVF680), departed Linköping in Sweden on 5 October and flew to Bucharest Henri Coandă Airport (OTP), establishing a forward operating point for the subsequent missions.</p>
+
+
+
+<p class="wp-block-paragraph">The aircraft then remained in Romania while conducting repeated flights. On 6, 7 and 8 October, the Korpen returned to the air, with its tracked routes showing extended activity over the Black Sea. It finally departed Bucharest for Linköping on 9 October, completing the deployment documented in the available flight history.</p>
+
+
+
+<p class="wp-block-paragraph">The pattern is significant: rather than making a single long-range sortie directly from Sweden, the aircraft used Romania as a staging point, allowing repeated access to the Black Sea region.</p>
+
+
+
+<figure class="wp-block-image size-large"><img fetchpriority='high' data-recalc-dims="1" width="1024" height="683" src="https://i0.wp.com/www.itamilradar.com/wp-content/uploads/2026/10/image.png?resize=1024%2C683&#038;ssl=1" alt="" class="wp-image-27192" srcset="https://i0.wp.com/www.itamilradar.com/wp-content/uploads/2026/10/image.png?resize=1024%2C683&amp;ssl=1 1024w, https://i0.wp.com/www.itamilradar.com/wp-content/uploads/2026/10/image.png?resize=300%2C200&amp;ssl=1 300w, https://i0.wp.com/www.itamilradar.com/wp-content/uploads/2026/10/image.png?resize=200%2C133&amp;ssl=1 200w, https://i0.wp.com/www.itamilradar.com/wp-content/uploads/2026/10/image.png?resize=768%2C512&amp;ssl=1 768w, https://i0.wp.com/www.itamilradar.com/wp-content/uploads/2026/10/image.png?resize=20%2C13&amp;ssl=1 20w, https://i0.wp.com/www.itamilradar.com/wp-content/uploads/2026/10/image.png?resize=680%2C453&amp;ssl=1 680w, https://i0.wp.com/www.itamilradar.com/wp-content/uploads/2026/10/image.png?resize=1100%2C733&amp;ssl=1 1100w, https://i0.wp.com/www.itamilradar.com/wp-content/uploads/2026/10/image.png?w=1200&amp;ssl=1 1200w" data-sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<h2 class="wp-block-heading">An electronic intelligence platform on NATO’s eastern flank</h2>
+
+
+
+<p class="wp-block-paragraph">The S102B Korpen is a signals intelligence (SIGINT) aircraft based on the Gulfstream IV airframe. Its mission is to collect electronic emissions and communications, helping build a picture of military activity without requiring the aircraft to enter the airspace of the country being monitored.</p>
+
+
+
+<p class="wp-block-paragraph">The aircraft&#8217;s operating area is particularly relevant because the Black Sea remains a major theatre of military activity, with Russian forces operating around occupied Crimea and NATO members Romania, Bulgaria and Turkey bordering the basin.</p>
+
+
+
+<p class="wp-block-paragraph">The Korpen&#8217;s repeated east-west flight patterns over international waters are consistent with a surveillance mission designed to collect information across a broad area. However, publicly available flight tracks cannot establish precisely which emitters were monitored or what intelligence was obtained.</p>
+
+
+
+<p class="wp-block-paragraph">The Swedish deployment also fits into a wider pattern of allied surveillance activity. On 7 October, the Swedish Korpen operated over the Black Sea alongside a US-operated Bombardier Artemis II, which flew from Constanța, Romania. The simultaneous presence of two specialised intelligence aircraft demonstrated how different allied platforms can operate over the same theatre.</p>
+
+
+
+<p class="wp-block-paragraph">For Sweden, which joined NATO in 2024, the ability to deploy a national intelligence aircraft to the alliance&#8217;s southeastern flank adds another geographically distinct capability to the broader surveillance effort. The Romanian staging point also reduces the need to repeat the long transit from Sweden for every mission.</p>
+
+
+
+<p class="wp-block-paragraph">The documented sequence ended with SVF680 returning to Linköping on 9 October. The flights therefore provide a clear example of a temporary Swedish intelligence deployment to the Black Sea, combining a forward operating location with repeated surveillance sorties.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.itamilradar.com/2026/10/10/swedish-s102b-korpen-conducts-repeated-black-sea-missions-this-week/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">27190</post-id>	</item>
+		<item>
+		<title>US RC-135 Rotation and TC-135 Arrival at Souda Bay Highlight Continued Middle East ISR Operations</title>
+		<link>https://www.itamilradar.com/2026/10/09/us-rc-135-rotation-and-tc-135-arrival-at-souda-bay-highlight-continued-middle-east-isr-operations/</link>
+					<comments>https://www.itamilradar.com/2026/10/09/us-rc-135-rotation-and-tc-135-arrival-at-souda-bay-highlight-continued-middle-east-isr-operations/#respond</comments>
+		
+		<dc:creator><![CDATA[itamilradar]]></dc:creator>
+		<pubDate>Fri, 09 Oct 2026 09:51:04 +0000</pubDate>
+				<category><![CDATA[USAF]]></category>
+		<guid isPermaLink="false">https://www.itamilradar.com/?p=27187</guid>
+
+					<description><![CDATA[Three US Air Force reconnaissance and support aircraft are visible in a new movement pattern between RAF Mildenhall, Souda Bay Air Base in Crete and the United States. The activity points to a rotation of RC-135 assets used for intelligence-gathering missions across the Middle East and Gulf, alongside the arrival of a TC-135 training aircraft. [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">Three US Air Force reconnaissance and support aircraft are visible in a new movement pattern between RAF Mildenhall, Souda Bay Air Base in Crete and the United States. The activity points to a rotation of RC-135 assets used for intelligence-gathering missions across the Middle East and Gulf, alongside the arrival of a TC-135 training aircraft. The distinction between the operational reconnaissance platforms and their training counterpart is important for understanding the US Air Force&#8217;s intelligence, surveillance and reconnaissance (ISR) activity in the region.</p>
+
+
+
+<h2 class="wp-block-heading">RC-135 Rivet Joint: a rotation between Europe and the Middle East</h2>
+
+
+
+<p class="wp-block-paragraph">The aircraft visible on the map include two operational reconnaissance platforms: a <strong>Boeing RC-135V Rivet Joint (reg. 64-14848 – c/s OLIVE48)</strong> and a <strong>Boeing RC-135W Rivet Joint (reg. 62-4130 – c/s OLIVE30)</strong>. Their movements connect RAF Mildenhall in the United Kingdom and Souda Bay in Crete, two locations relevant to US military operations across the wider region.</p>
+
+
+
+<p class="wp-block-paragraph">The Rivet Joint is designed to collect and analyse electronic signals, including emissions associated with radar and communications systems. Its sensors can detect, identify and geolocate signals across the electromagnetic spectrum, providing intelligence to operational commanders and national-level agencies. This makes the aircraft particularly valuable for monitoring military activity in the Middle East and the Persian Gulf.</p>
+
+
+
+<p class="wp-block-paragraph">The movements observed today are consistent with an aircraft rotation, although the available tracking data alone cannot establish the precise handover arrangements or confirm that one aircraft is directly replacing another.</p>
+
+
+
+<h2 class="wp-block-heading">What is the TC-135W doing at Souda Bay?</h2>
+
+
+
+<p class="wp-block-paragraph">A third aircraft in the picture is particularly interesting: the<strong> TC-135W Stratolifter (reg. 62-4127 &#8211; c/s OLIVE27)</strong>.</p>
+
+
+
+<p class="wp-block-paragraph">Unlike the RC-135V/W, the TC-135W is a training aircraft. It is used to support the training and qualification of aircrews associated with the RC-135 reconnaissance fleet. Its role is therefore to help maintain the specialist skills required to operate these complex intelligence platforms, rather than to conduct the same operational signals-intelligence mission as a Rivet Joint. The US Air Force&#8217;s training regulations explicitly cover the TC-135 alongside the RC-135 family.</p>
+
+
+
+<p class="wp-block-paragraph">Its presence in the Souda Bay operating pattern adds a training and crew-support dimension to the activity. However, tracking data cannot establish whether the aircraft is carrying trainees, instructors or other personnel on this particular flight.</p>
+
+
+
+<h2 class="wp-block-heading">The significance of limited tracking visibility</h2>
+
+
+
+<p class="wp-block-paragraph">One notable feature of these operations is that the RC-135 aircraft used for missions over the Middle East and Gulf are often difficult to follow continuously through publicly available flight-tracking services. Their transponder signals may be unavailable for extended periods, leaving gaps in the recorded routes.</p>
+
+
+
+<p class="wp-block-paragraph">This complicates efforts to reconstruct complete mission profiles, identify operating areas and distinguish transit flights from intelligence-gathering sorties. A missing track does not, by itself, prove that an aircraft is conducting a particular mission or that its transponder has deliberately been switched off.</p>
+
+
+
+<p class="wp-block-paragraph">The broader operational significance is nevertheless clear: the US Air Force maintains a network of specialist aircraft and forward operating locations that allows intelligence collection to be sustained across a strategically important region. The combination of RC-135 movements and a TC-135 training platform illustrates the supporting infrastructure behind those missions, beyond the reconnaissance flights themselves.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.itamilradar.com/2026/10/09/us-rc-135-rotation-and-tc-135-arrival-at-souda-bay-highlight-continued-middle-east-isr-operations/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">27187</post-id>	</item>
+		<item>
+		<title>USAF EA-37B moves from Ramstein to Souda Bay as Washington weighs new Iran strike options</title>
+		<link>https://www.itamilradar.com/2026/10/08/usaf-ea-37b-moves-from-ramstein-to-souda-bay-as-washington-weighs-new-iran-strike-options/</link>
+					<comments>https://www.itamilradar.com/2026/10/08/usaf-ea-37b-moves-from-ramstein-to-souda-bay-as-washington-weighs-new-iran-strike-options/#respond</comments>
+		
+		<dc:creator><![CDATA[itamilradar]]></dc:creator>
+		<pubDate>Thu, 08 Oct 2026 12:35:40 +0000</pubDate>
+				<category><![CDATA[USAF]]></category>
+		<guid isPermaLink="false">https://www.itamilradar.com/?p=27183</guid>
+
+					<description><![CDATA[A U.S. Air Force EA-37B Compass Call (reg. 19-1587 &#8211; c/s FAZE21) has been tracked this night flying from Ramstein Air Base to Souda Bay, Crete, adding a specialised electronic-warfare asset to the eastern Mediterranean. The move comes just hours after reports that the White House has asked the Pentagon to prepare options for possible [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">A <strong>U.S. Air Force EA-37B Compass Call  (reg. 19-1587 &#8211; c/s FAZE21)</strong> has been tracked this night flying from Ramstein Air Base to Souda Bay, Crete, adding a specialised electronic-warfare asset to the eastern Mediterranean. The move comes just hours after <a href="https://www.axios.com/2026/10/07/trump-us-central-command-iran-israel-war-elections?utm_source=chatgpt.com">reports that the White House has asked the Pentagon to prepare options for possible strikes against Iran before the November 3 midterm elections</a>. </p>
+
+
+
+<p class="wp-block-paragraph">The aircraft followed a south-easterly route across Central and Southeastern Europe before heading towards Crete. Its destination is significant: Souda Bay is one of the main U.S. military hubs in the eastern Mediterranean and provides access to the Middle East and the wider region.</p>
+
+
+
+<h3 class="wp-block-heading">An electronic-warfare asset moves east</h3>
+
+
+
+<p class="wp-block-paragraph">The EA-37B is the U.S. Air Force&#8217;s newest dedicated electronic-attack aircraft, designed to disrupt and degrade enemy communications, navigation systems, radars and other electromagnetic capabilities.</p>
+
+
+
+<p class="wp-block-paragraph">Its movement does not indicate that an operation against Iran has been authorised. However, the timing is notable.</p>
+
+
+
+<p class="wp-block-paragraph">According to reporting by The Atlantic and other U.S. media, the Pentagon and U.S. Central Command have been preparing military options for renewed major operations against Iran. No decision has been made on whether to conduct such strikes, but the options reportedly include operations that could be launched before the November elections. </p>
+
+
+
+<p class="wp-block-paragraph">In this context, moving an electronic-warfare aircraft from Ramstein to Souda Bay has an obvious operational value. An EA-37B positioned in Crete would be considerably closer to the potential theatre of operations and could support missions aimed at degrading Iranian air-defence and communications networks.</p>
+
+
+
+<p class="wp-block-paragraph">The aircraft would not necessarily have to enter Iranian airspace to contribute to such an operation. Electronic-attack missions can be conducted as part of a wider package involving strike aircraft, tankers, intelligence platforms and command-and-control assets.</p>
+
+
+
+<h3 class="wp-block-heading">Timing adds significance</h3>
+
+
+
+<p class="wp-block-paragraph">The movement is particularly interesting because it follows a period in which U.S. military activity against Iran has reportedly been more limited. At the same time, Washington is increasing pressure on Tehran and maintaining a substantial military presence around the Middle East. The U.S. has also recently moved additional naval forces and personnel into the region. </p>
+
+
+
+<p class="wp-block-paragraph">For ItamilRadar, the significance of today&#8217;s flight therefore lies less in the individual aircraft than in the combination of asset, destination and timing.</p>
+
+
+
+<p class="wp-block-paragraph">The arrival of 19-1587 at Souda Bay does not prove that strikes are imminent. It does, however, place a highly specialised electronic-warfare capability at a strategically important location while U.S. planners are actively developing new military options against Iran.</p>
+
+
+
+<p class="wp-block-paragraph">Further movements of specialised ISR, electronic-warfare, tanker and strike-support aircraft will therefore be particularly relevant in the coming days, as the U.S. posture in the eastern Mediterranean continues to evolve.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://www.itamilradar.com/2026/10/08/usaf-ea-37b-moves-from-ramstein-to-souda-bay-as-washington-weighs-new-iran-strike-options/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">27183</post-id>	</item>
+		<item>
+		<title>Turkish E-7 Takes Unusual Western Route, Pointing to a Broader Mediterranean Mission</title>
+		<link>https://www.itamilradar.com/2026/10/07/turkish-e-7a-takes-unusual-western-route-pointing-to-a-broader-mediterranean-mission/</link>
+					<comments>https://www.itamilradar.com/2026/10/07/turkish-e-7a-takes-unusual-western-route-pointing-to-a-broader-mediterranean-mission/#respond</comments>
+		
+		<dc:creator><![CDATA[itamilradar]]></dc:creator>
+		<pubDate>Wed, 07 Oct 2026 15:14:55 +0000</pubDate>
+				<category><![CDATA[Turkish AF]]></category>
+		<guid isPermaLink="false">https://www.itamilradar.com/?p=27177</guid>
+
+					<description><![CDATA[A Turkish Air Force Boeing E-7T Wedgetail (reg. 13-004) followed an unusual route yesterday, reaching the Ionian Sea after crossing the Balkans rather than using the more typical eastern Mediterranean corridor. The aircraft&#8217;s track then disappeared for around four hours before reappearing over the Ionian Sea, leaving the actual mission area unconfirmed but suggesting a [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p class="wp-block-paragraph">A <strong>Turkish Air Force Boeing E-7T Wedgetail (reg. 13-004) </strong>followed an unusual route yesterday, reaching the Ionian Sea after crossing the Balkans rather than using the more typical eastern Mediterranean corridor. The aircraft&#8217;s track then disappeared for around four hours before reappearing over the Ionian Sea, leaving the actual mission area unconfirmed but suggesting a much longer western deployment.</p>
+
+
+
+<h2 class="wp-block-heading">An unusual way into the Mediterranean</h2>
+
+
+
+<p class="wp-block-paragraph">The interesting aspect of yesterday&#8217;s mission is not necessarily where the E-7T operated, which cannot be established from the available tracking data, but how it appears to have reached the Mediterranean.</p>
+
+
+
+<p class="wp-block-paragraph">After departing Konya, 13-004 headed west and crossed the Balkans. Its publicly visible track then stops, with the aircraft reappearing roughly four hours later over the Ionian Sea.</p>
+
+
+
+<p class="wp-block-paragraph">This is notably different 

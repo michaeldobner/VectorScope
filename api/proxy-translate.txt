@@ -1,0 +1,17 @@
+HTTP 200
+access-control-allow-headers: Content-Type, X-VS-Token, Accept
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-origin: *
+access-control-max-age: 86400
+cache-control: no-store
+content-length: 135
+content-type: application/json; charset=utf-8
+date: Sat, 10 Oct 2026 12:37:22 GMT
+etag: W/"87-jwR2HunheC0XYoR1YsAIAagpbkU"
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+vary: Origin
+x-vercel-cache: MISS
+x-vercel-id: sfo1::fra1::twqq4-1791635842079-705236c367a8
+
+{"translations":["B-1B-Bomber verlassen England überstürzt","Am Morgen des 5. Oktober stürzten russische Drohnen in Moldawien ab."]}

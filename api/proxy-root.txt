@@ -1,0 +1,19 @@
+HTTP 200
+access-control-allow-headers: Content-Type, X-VS-Token, Accept
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-origin: *
+access-control-max-age: 86400
+age: 0
+cache-control: public, max-age=0, must-revalidate
+content-encoding: br
+content-type: application/json; charset=utf-8
+date: Sat, 10 Oct 2026 12:37:20 GMT
+etag: W/"55c-WEmtAgNJcSQgB++w7bi9zJfF0Cs"
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+transfer-encoding: chunked
+vary: Origin
+x-vercel-cache: MISS
+x-vercel-id: sfo1::fra1::twqq4-1791635839664-825116f3e5f7
+
+{"ok":true,"service":"VectorScope proxy","upstream":"https://api.adsb.lol","test":"/v2/mil","feeds":["itamilradar","aviationist","twz","bellingcat","defensenews","breakingdefense","navalnews","usni","hartpunkt","augengeradeaus","esut","dod","tagesschau","dlf","dw","bbc","aljazeera","trump","whitehouse","whitehouseactions","bundestag","bundestaghib","eucommission","eucouncil","kremlin","unpress","tagesschauinland","spiegel","zeit","faz","handelsblatt","politicoeu","politicous","axios","npr","bundesregierung","bmi","bmds","bgh","bsi","zoll","bundestagtv","dlfinterview","phoenixpersoenlich","berlinplaybook","fragdenstaat","gdacs","faa"],"telegram":["MID_Russia","V_Zelenskiy_official","favt_info","mchs_official","sledcom_press","vvgladkov","AVBogomaz","gusev_36","razvozhaev","opershtab23","mos_sobyanin","kpszsu","idfofficial","bazabazon","mash","shot_shot","ENews112","astrapress","ostorozhno_novosti","ostorozhno_moskva","news_sirena","nexta_tv","osintdefender","rageintel","warmonitors","insiderpaper","ClashReport","liveuamap","DeepStateUA","netblocks","mediazzzona","agentstvonews","thebell_io","rybar","rybar_in_english","rybarde","rybar_mena","evropar","balkanar","caucasar","rybar_pacific","rybar_stan","rybar_africa","rybar_latam","rybar_tactical","rybar_america","wargonzo","dva_majors","Middle_East_Spectator","abualiexpress","meduzalive","currenttime"]}

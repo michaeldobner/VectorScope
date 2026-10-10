@@ -1,0 +1,3681 @@
+{
+  "rounds": {
+    "usgs": [
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 67
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 15
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 5
+      }
+    ],
+    "nws": [
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 160
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 156
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 8
+      }
+    ],
+    "faa": [
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 361
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 10
+      }
+    ],
+    "favt": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 313
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 17
+      }
+    ],
+    "mchs": [
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 285
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 13
+      }
+    ],
+    "gdacs": [
+      {
+        "ok": true,
+        "count": 9,
+        "ms": 702
+      },
+      {
+        "ok": true,
+        "count": 9,
+        "ms": 18
+      },
+      {
+        "ok": true,
+        "count": 9,
+        "ms": 20
+      }
+    ],
+    "emsc": [
+      {
+        "ok": true,
+        "count": 6,
+        "ms": 772
+      },
+      {
+        "ok": true,
+        "count": 6,
+        "ms": 1042
+      },
+      {
+        "ok": true,
+        "count": 6,
+        "ms": 159
+      }
+    ],
+    "sledcom": [
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 335
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 24
+      }
+    ],
+    "bogomaz": [
+      {
+        "ok": true,
+        "count": 4,
+        "ms": 277
+      },
+      {
+        "ok": true,
+        "count": 4,
+        "ms": 19
+      },
+      {
+        "ok": true,
+        "count": 4,
+        "ms": 18
+      }
+    ],
+    "gladkov": [
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 301
+      },
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 10
+      }
+    ],
+    "gusev": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 274
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 12
+      }
+    ],
+    "razvozhaev": [
+      {
+        "ok": true,
+        "count": 8,
+        "ms": 348
+      },
+      {
+        "ok": true,
+        "count": 8,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 8,
+        "ms": 10
+      }
+    ],
+    "opershtab23": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 232
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 17
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 11
+      }
+    ],
+    "sobyanin": [
+      {
+        "ok": true,
+        "count": 7,
+        "ms": 268
+      },
+      {
+        "ok": true,
+        "count": 7,
+        "ms": 15
+      },
+      {
+        "ok": true,
+        "count": 7,
+        "ms": 16
+      }
+    ],
+    "kpszsu": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 248
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 11
+      }
+    ],
+    "idf": [
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 295
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 16
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 12
+      }
+    ],
+    "mash": [
+      {
+        "ok": true,
+        "count": 12,
+        "ms": 306
+      },
+      {
+        "ok": true,
+        "count": 12,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 12,
+        "ms": 12
+      }
+    ],
+    "dod": [
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 502
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 9
+      }
+    ],
+    "baza": [
+      {
+        "ok": true,
+        "count": 13,
+        "ms": 465
+      },
+      {
+        "ok": true,
+        "count": 13,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 13,
+        "ms": 10
+      }
+    ],
+    "shot": [
+      {
+        "ok": true,
+        "count": 8,
+        "ms": 381
+      },
+      {
+        "ok": true,
+        "count": 8,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 8,
+        "ms": 10
+      }
+    ],
+    "news112": [
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 442
+      },
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 13
+      }
+    ],
+    "astra": [
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 441
+      },
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 18
+      },
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 17
+      }
+    ],
+    "ostorozhno": [
+      {
+        "ok": true,
+        "count": 13,
+        "ms": 442
+      },
+      {
+        "ok": true,
+        "count": 13,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 13,
+        "ms": 11
+      }
+    ],
+    "ostorozhnomsk": [
+      {
+        "ok": true,
+        "count": 17,
+        "ms": 446
+      },
+      {
+        "ok": true,
+        "count": 17,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 17,
+        "ms": 11
+      }
+    ],
+    "sirena": [
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 350
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 12
+      }
+    ],
+    "osintdefender": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 251
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 13
+      }
+    ],
+    "nexta": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 262
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 23
+      }
+    ],
+    "rageintel": [
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 260
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 13
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 12
+      }
+    ],
+    "insiderpaper": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 274
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 9
+      }
+    ],
+    "clashreport": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 275
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 13
+      }
+    ],
+    "warmonitors": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 338
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 11
+      }
+    ],
+    "itamilradar": [
+      {
+        "ok": true,
+        "count": 35,
+        "ms": 118
+      },
+      {
+        "ok": true,
+        "count": 35,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 35,
+        "ms": 16
+      }
+    ],
+    "isw": [
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 109
+      },
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 7
+      },
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 8
+      }
+    ],
+    "janovsky": [
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 50
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 15
+      }
+    ],
+    "liveuamap": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 325
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 12
+      }
+    ],
+    "bellingcat": [
+      {
+        "ok": true,
+        "count": 32,
+        "ms": 290
+      },
+      {
+        "ok": true,
+        "count": 32,
+        "ms": 16
+      },
+      {
+        "ok": true,
+        "count": 32,
+        "ms": 34
+      }
+    ],
+    "netblocks": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 278
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 15
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 12
+      }
+    ],
+    "deepstate": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 338
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 13
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 36
+      }
+    ],
+    "breakingdefense": [
+      {
+        "ok": true,
+        "count": 40,
+        "ms": 238
+      },
+      {
+        "ok": true,
+        "count": 40,
+        "ms": 13
+      },
+      {
+        "ok": true,
+        "count": 40,
+        "ms": 25
+      }
+    ],
+    "defensenews": [
+      {
+        "ok": true,
+        "count": 50,
+        "ms": 385
+      },
+      {
+        "ok": true,
+        "count": 50,
+        "ms": 13
+      },
+      {
+        "ok": true,
+        "count": 50,
+        "ms": 19
+      }
+    ],
+    "usni": [
+      {
+        "ok": true,
+        "count": 30,
+        "ms": 240
+      },
+      {
+        "ok": true,
+        "count": 30,
+        "ms": 18
+      },
+      {
+        "ok": true,
+        "count": 30,
+        "ms": 15
+      }
+    ],
+    "twz": [
+      {
+        "ok": true,
+        "count": 38,
+        "ms": 987
+      },
+      {
+        "ok": true,
+        "count": 38,
+        "ms": 34
+      },
+      {
+        "ok": true,
+        "count": 38,
+        "ms": 27
+      }
+    ],
+    "hartpunkt": [
+      {
+        "ok": true,
+        "count": 34,
+        "ms": 346
+      },
+      {
+        "ok": true,
+        "count": 34,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 34,
+        "ms": 13
+      }
+    ],
+    "navalnews": [
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 757
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 25
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 10
+      }
+    ],
+    "augengeradeaus": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 252
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 12
+      }
+    ],
+    "mediazona": [
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 292
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 13
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 28
+      }
+    ],
+    "aviationist": [
+      {
+        "ok": true,
+        "count": 40,
+        "ms": 1882
+      },
+      {
+        "ok": true,
+        "count": 40,
+        "ms": 16
+      },
+      {
+        "ok": true,
+        "count": 40,
+        "ms": 42
+      }
+    ],
+    "thebell": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 295
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 15
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 20
+      }
+    ],
+    "agentstvo": [
+      {
+        "ok": true,
+        "count": 12,
+        "ms": 764
+      },
+      {
+        "ok": true,
+        "count": 12,
+        "ms": 15
+      },
+      {
+        "ok": true,
+        "count": 12,
+        "ms": 18
+      }
+    ],
+    "rybar": [
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 389
+      },
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 23
+      },
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 25
+      }
+    ],
+    "rybar-en": [
+      {
+        "ok": true,
+        "count": 12,
+        "ms": 387
+      },
+      {
+        "ok": true,
+        "count": 12,
+        "ms": 21
+      },
+      {
+        "ok": true,
+        "count": 12,
+        "ms": 29
+      }
+    ],
+    "esut": [
+      {
+        "ok": true,
+        "count": 6,
+        "ms": 1058
+      },
+      {
+        "ok": true,
+        "count": 6,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 6,
+        "ms": 10
+      }
+    ],
+    "rybar-de": [
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 356
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 16
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 13
+      }
+    ],
+    "rybar-balkans": [
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 343
+      },
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 13
+      },
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 15
+      }
+    ],
+    "rybar-europe": [
+      {
+        "ok": true,
+        "count": 17,
+        "ms": 519
+      },
+      {
+        "ok": true,
+        "count": 17,
+        "ms": 45
+      },
+      {
+        "ok": true,
+        "count": 17,
+        "ms": 15
+      }
+    ],
+    "rybar-mena": [
+      {
+        "ok": true,
+        "count": 13,
+        "ms": 538
+      },
+      {
+        "ok": true,
+        "count": 13,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 13,
+        "ms": 14
+      }
+    ],
+    "rybar-caucasus": [
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 350
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 13
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 18
+      }
+    ],
+    "rybar-asia": [
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 340
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 13
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 19
+      }
+    ],
+    "rybar-latam": [
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 337
+      },
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 16
+      },
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 17
+      }
+    ],
+    "rybar-africa": [
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 362
+      },
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 16
+      }
+    ],
+    "rybar-tactical": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 295
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 15
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 17
+      }
+    ],
+    "rybar-turan": [
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 517
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 14
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 23
+      }
+    ],
+    "dvamajora": [
+      {
+        "ok": true,
+        "count": 13,
+        "ms": 357
+      },
+      {
+        "ok": true,
+        "count": 13,
+        "ms": 14
+      },
+      {
+        "ok": true,
+        "count": 13,
+        "ms": 27
+      }
+    ],
+    "wargonzo": [
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 460
+      },
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 13
+      },
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 15
+      }
+    ],
+    "mes": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 322
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 10
+      }
+    ],
+    "rybar-america": [
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 646
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 15
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 17
+      }
+    ],
+    "tagesschau": [
+      {
+        "ok": true,
+        "count": 67,
+        "ms": 225
+      },
+      {
+        "ok": true,
+        "count": 67,
+        "ms": 14
+      },
+      {
+        "ok": true,
+        "count": 67,
+        "ms": 14
+      }
+    ],
+    "dlf": [
+      {
+        "ok": true,
+        "count": 42,
+        "ms": 360
+      },
+      {
+        "ok": true,
+        "count": 42,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 42,
+        "ms": 11
+      }
+    ],
+    "abualiexpress": [
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 384
+      },
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 20
+      },
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 32
+      }
+    ],
+    "dw": [
+      {
+        "ok": true,
+        "count": 21,
+        "ms": 239
+      },
+      {
+        "ok": true,
+        "count": 21,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 21,
+        "ms": 11
+      }
+    ],
+    "bbc": [
+      {
+        "ok": true,
+        "count": 28,
+        "ms": 253
+      },
+      {
+        "ok": true,
+        "count": 28,
+        "ms": 17
+      },
+      {
+        "ok": true,
+        "count": 28,
+        "ms": 25
+      }
+    ],
+    "aljazeera": [
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 211
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 21
+      }
+    ],
+    "meduza": [
+      {
+        "ok": true,
+        "count": 17,
+        "ms": 310
+      },
+      {
+        "ok": true,
+        "count": 17,
+        "ms": 18
+      },
+      {
+        "ok": true,
+        "count": 17,
+        "ms": 11
+      }
+    ],
+    "currenttime": [
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 334
+      },
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 16
+      },
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 26
+      }
+    ],
+    "trump": [
+      {
+        "ok": true,
+        "count": 100,
+        "ms": 396
+      },
+      {
+        "ok": true,
+        "count": 100,
+        "ms": 18
+      },
+      {
+        "ok": true,
+        "count": 100,
+        "ms": 14
+      }
+    ],
+    "bundestag": [
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 211
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 17
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 17
+      }
+    ],
+    "whitehouse": [
+      {
+        "ok": true,
+        "count": 30,
+        "ms": 392
+      },
+      {
+        "ok": true,
+        "count": 30,
+        "ms": 28
+      },
+      {
+        "ok": true,
+        "count": 30,
+        "ms": 26
+      }
+    ],
+    "whitehouseactions": [
+      {
+        "ok": true,
+        "count": 30,
+        "ms": 339
+      },
+      {
+        "ok": true,
+        "count": 30,
+        "ms": 17
+      },
+      {
+        "ok": true,
+        "count": 30,
+        "ms": 20
+      }
+    ],
+    "bundestaghib": [
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 192
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 13
+      }
+    ],
+    "eucouncil": [
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 213
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 8
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 8
+      }
+    ],
+    "mid-russia": [
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 323
+      },
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 13
+      }
+    ],
+    "zelensky": [
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 432
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 13
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 13
+      }
+    ],
+    "eucommission": [
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 673
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 11
+      }
+    ],
+    "unpress": [
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 268
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 41
+      }
+    ],
+    "kremlin": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 732
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 11
+      }
+    ],
+    "tagesschauinland": [
+      {
+        "ok": true,
+        "count": 49,
+        "ms": 192
+      },
+      {
+        "ok": true,
+        "count": 49,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 49,
+        "ms": 19
+      }
+    ],
+    "zeit": [
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 181
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 8
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 15
+      }
+    ],
+    "spiegel": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 204
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 17
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 9
+      }
+    ],
+    "faz": [
+      {
+        "ok": true,
+        "count": 45,
+        "ms": 235
+      },
+      {
+        "ok": true,
+        "count": 45,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 45,
+        "ms": 13
+      }
+    ],
+    "handelsblatt": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 215
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 15
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 9
+      }
+    ],
+    "politicoeu": [
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 356
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 26
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 9
+      }
+    ],
+    "npr": [
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 296
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 9
+      }
+    ],
+    "politicous": [
+      {
+        "ok": true,
+        "count": 30,
+        "ms": 543
+      },
+      {
+        "ok": true,
+        "count": 30,
+        "ms": 18
+      },
+      {
+        "ok": true,
+        "count": 30,
+        "ms": 19
+      }
+    ],
+    "axios": [
+      {
+        "ok": true,
+        "count": 100,
+        "ms": 484
+      },
+      {
+        "ok": true,
+        "count": 100,
+        "ms": 51
+      },
+      {
+        "ok": true,
+        "count": 100,
+        "ms": 64
+      }
+    ],
+    "bundesregierung": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 297
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 39
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 12
+      }
+    ],
+    "bmi": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 234
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 39
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 11
+      }
+    ],
+    "bmds": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 250
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 10
+      }
+    ],
+    "bgh": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 269
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 16
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 11
+      }
+    ],
+    "zoll": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 243
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 42
+      }
+    ],
+    "bsi": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 416
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 10
+      }
+    ],
+    "bundestagtv": [
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 194
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 13
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 36
+      }
+    ],
+    "dlfinterview": [
+      {
+        "ok": true,
+        "count": 53,
+        "ms": 257
+      },
+      {
+        "ok": true,
+        "count": 53,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 53,
+        "ms": 11
+      }
+    ],
+    "phoenixpersoenlich": [
+      {
+        "ok": true,
+        "count": 62,
+        "ms": 236
+      },
+      {
+        "ok": true,
+        "count": 62,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 62,
+        "ms": 11
+      }
+    ],
+    "mdb-ricarda-lang": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 80
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 6
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 4
+      }
+    ],
+    "mdb-heidi-reichinnek": [
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 68
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 5
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 6
+      }
+    ],
+    "mdb-katharina-droege": [
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 102
+      },
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 5
+      },
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 16
+      }
+    ],
+    "mdb-norbert-roettgen": [
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 56
+      },
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 4
+      },
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 5
+      }
+    ],
+    "mdb-britta-hasselmann": [
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 67
+      },
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 7
+      }
+    ],
+    "awvotes": [
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 993
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 1007
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 675
+      }
+    ],
+    "mdb-steffi-lemke": [
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 146
+      },
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 101
+      },
+      {
+        "ok": true,
+        "count": 16,
+        "ms": 9
+      }
+    ],
+    "mdb-janosch-dahmen": [
+      {
+        "ok": true,
+        "count": 21,
+        "ms": 59
+      },
+      {
+        "ok": true,
+        "count": 21,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 21,
+        "ms": 9
+      }
+    ],
+    "mdb-omid-nouripour": [
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 77
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 4
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 102
+      }
+    ],
+    "mdb-sara-nanni": [
+      {
+        "ok": true,
+        "count": 6,
+        "ms": 80
+      },
+      {
+        "ok": true,
+        "count": 6,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 6,
+        "ms": 98
+      }
+    ],
+    "fragdenstaat": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 747
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 39
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 27
+      }
+    ],
+    "mdb-lisa-paus": [
+      {
+        "ok": true,
+        "count": 9,
+        "ms": 79
+      },
+      {
+        "ok": true,
+        "count": 9,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 9,
+        "ms": 6
+      }
+    ],
+    "mdb-janine-wissler": [
+      {
+        "ok": true,
+        "count": 21,
+        "ms": 59
+      },
+      {
+        "ok": true,
+        "count": 21,
+        "ms": 8
+      },
+      {
+        "ok": true,
+        "count": 21,
+        "ms": 7
+      }
+    ],
+    "mdb-katrin-goering-eckardt": [
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 117
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 12
+      }
+    ],
+    "mdb-anton-hofreiter": [
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 99
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 13
+      }
+    ],
+    "mdb-johannes-wagner": [
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 96
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 13
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 16
+      }
+    ],
+    "berlinplaybook": [
+      {
+        "ok": true,
+        "count": 764,
+        "ms": 1110
+      },
+      {
+        "ok": true,
+        "count": 764,
+        "ms": 167
+      },
+      {
+        "ok": true,
+        "count": 764,
+        "ms": 147
+      }
+    ],
+    "mdb-sven-lehmann": [
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 141
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 14
+      }
+    ],
+    "mdb-felix-banaszak": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 146
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 16
+      }
+    ],
+    "mdb-agnieszka-brugger": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 150
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 8
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 17
+      }
+    ],
+    "mdb-serap-gueler": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 60
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 16
+      }
+    ],
+    "mdb-armin-grau": [
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 73
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 13
+      }
+    ],
+    "mdb-anna-luehrmann": [
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 82
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 20
+      }
+    ],
+    "mdb-jamila-anna-schaefer": [
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 136
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 15
+      }
+    ],
+    "mdb-dietmar-bartsch": [
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 67
+      },
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 14
+      }
+    ],
+    "mdb-timon-dzienus": [
+      {
+        "ok": true,
+        "count": 22,
+        "ms": 100
+      },
+      {
+        "ok": true,
+        "count": 22,
+        "ms": 17
+      },
+      {
+        "ok": true,
+        "count": 22,
+        "ms": 9
+      }
+    ],
+    "mdb-matthias-gastel": [
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 66
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 16
+      }
+    ],
+    "mdb-ulle-schauws": [
+      {
+        "ok": true,
+        "count": 4,
+        "ms": 76
+      },
+      {
+        "ok": true,
+        "count": 4,
+        "ms": 18
+      },
+      {
+        "ok": true,
+        "count": 4,
+        "ms": 14
+      }
+    ],
+    "mdb-katrin-uhlig": [
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 158
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 5
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 16
+      }
+    ],
+    "mdb-kirsten-kappert-gonther": [
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 55
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 4
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 14
+      }
+    ],
+    "mdb-nicole-gohlke": [
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 50
+      },
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 8
+      },
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 15
+      }
+    ],
+    "mdb-carmen-wegge": [
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 59
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 15
+      }
+    ],
+    "mdb-harald-ebner": [
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 56
+      },
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 15
+      }
+    ],
+    "mdb-pascal-meiser": [
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 84
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 15
+      }
+    ],
+    "mdb-karl-baer": [
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 52
+      },
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 14,
+        "ms": 16
+      }
+    ],
+    "mdb-hanna-steinmueller": [
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 213
+      },
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 14
+      }
+    ],
+    "mdb-karoline-otte": [
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 52
+      },
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 15
+      }
+    ],
+    "mdb-corinna-rueffer": [
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 49
+      },
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 18
+      }
+    ],
+    "mdb-chantal-kopf": [
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 78
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 15
+      }
+    ],
+    "mdb-marcel-emmerich": [
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 48
+      },
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 16
+      }
+    ],
+    "mdb-dorothee-baer": [
+      {
+        "ok": true,
+        "count": 2,
+        "ms": 45
+      },
+      {
+        "ok": true,
+        "count": 2,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 2,
+        "ms": 15
+      }
+    ],
+    "mdb-julian-joswig": [
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 52
+      },
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 16
+      },
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 16
+      }
+    ],
+    "mdb-helge-limburg": [
+      {
+        "ok": true,
+        "count": 17,
+        "ms": 54
+      },
+      {
+        "ok": true,
+        "count": 17,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 17,
+        "ms": 11
+      }
+    ],
+    "mdb-luise-amtsberg": [
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 54
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 19,
+        "ms": 15
+      }
+    ],
+    "mdb-goekay-akbulut": [
+      {
+        "ok": true,
+        "count": 4,
+        "ms": 45
+      },
+      {
+        "ok": true,
+        "count": 4,
+        "ms": 8
+      },
+      {
+        "ok": true,
+        "count": 4,
+        "ms": 15
+      }
+    ],
+    "mdb-victoria-brossart": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 85
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 4
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 15
+      }
+    ],
+    "mdb-niklas-wagener": [
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 71
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 19
+      }
+    ],
+    "mdb-simone-fischer": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 55
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 14
+      }
+    ],
+    "mdb-matthias-hauer": [
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 49
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 11
+      }
+    ],
+    "mdb-ralf-stegner": [
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 51
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 8
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 21
+      }
+    ],
+    "mdb-katja-mast": [
+      {
+        "ok": true,
+        "count": 12,
+        "ms": 46
+      },
+      {
+        "ok": true,
+        "count": 12,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 12,
+        "ms": 11
+      }
+    ],
+    "mdb-lars-castellucci": [
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 49
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 15
+      }
+    ],
+    "mdb-johann-saathoff": [
+      {
+        "ok": true,
+        "count": 6,
+        "ms": 47
+      },
+      {
+        "ok": true,
+        "count": 6,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 6,
+        "ms": 17
+      }
+    ],
+    "mdb-annika-klose": [
+      {
+        "ok": true,
+        "count": 2,
+        "ms": 47
+      },
+      {
+        "ok": true,
+        "count": 2,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 2,
+        "ms": 13
+      }
+    ],
+    "mdb-luke-hoss": [
+      {
+        "ok": true,
+        "count": 7,
+        "ms": 88
+      },
+      {
+        "ok": true,
+        "count": 7,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 7,
+        "ms": 14
+      }
+    ],
+    "mdb-josephine-ortleb": [
+      {
+        "ok": true,
+        "count": 3,
+        "ms": 93
+      },
+      {
+        "ok": true,
+        "count": 3,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 3,
+        "ms": 15
+      }
+    ],
+    "mdb-ruppert-stuewe": [
+      {
+        "ok": true,
+        "count": 22,
+        "ms": 63
+      },
+      {
+        "ok": true,
+        "count": 22,
+        "ms": 15
+      },
+      {
+        "ok": true,
+        "count": 22,
+        "ms": 14
+      }
+    ],
+    "mdb-siemtje-moeller": [
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 44
+      },
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 12
+      }
+    ],
+    "mdb-ulrich-thoden": [
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 56
+      },
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 6
+      },
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 16
+      }
+    ],
+    "mdb-hendrik-streeck": [
+      {
+        "ok": true,
+        "count": 4,
+        "ms": 52
+      },
+      {
+        "ok": true,
+        "count": 4,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 4,
+        "ms": 14
+      }
+    ],
+    "mdb-esra-limbacher": [
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 46
+      },
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 13
+      },
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 15
+      }
+    ],
+    "mdb-elisabeth-kaiser": [
+      {
+        "ok": true,
+        "count": 22,
+        "ms": 58
+      },
+      {
+        "ok": true,
+        "count": 22,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 22,
+        "ms": 15
+      }
+    ],
+    "mdb-natalie-pawlik": [
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 54
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 8
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 15
+      }
+    ],
+    "mdb-rebecca-lenhard": [
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 86
+      },
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 7
+      },
+      {
+        "ok": true,
+        "count": 23,
+        "ms": 17
+      }
+    ],
+    "mdb-lars-rohwer": [
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 54
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 16
+      }
+    ],
+    "mdb-jan-dieren": [
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 86
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 13
+      }
+    ],
+    "mdb-michael-thews": [
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 48
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 56
+      },
+      {
+        "ok": true,
+        "count": 20,
+        "ms": 15
+      }
+    ],
+    "mdb-rita-schwarzeluehr-sutter": [
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 109
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 15,
+        "ms": 15
+      }
+    ],
+    "mdb-isabel-cademartori": [
+      {
+        "ok": true,
+        "count": 7,
+        "ms": 52
+      },
+      {
+        "ok": true,
+        "count": 7,
+        "ms": 8
+      },
+      {
+        "ok": true,
+        "count": 7,
+        "ms": 16
+      }
+    ],
+    "mdb-stefan-schwartze": [
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 45
+      },
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 1,
+        "ms": 17
+      }
+    ],
+    "mdb-jens-peick": [
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 43
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 4
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 14
+      }
+    ],
+    "mdb-baerbel-kofler": [
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 45
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 6
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 17
+      }
+    ],
+    "mdb-sebastian-hartmann": [
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 43
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 8
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 15
+      }
+    ],
+    "mdb-anja-troff-schaffarzyk": [
+      {
+        "ok": true,
+        "count": 8,
+        "ms": 50
+      },
+      {
+        "ok": true,
+        "count": 8,
+        "ms": 5
+      },
+      {
+        "ok": true,
+        "count": 8,
+        "ms": 13
+      }
+    ],
+    "mdb-gregor-gysi": [
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 47
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 14
+      }
+    ],
+    "mdb-helge-lindh": [
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 39
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 10
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 15
+      }
+    ],
+    "mdb-stefan-zierke": [
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 50
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 9
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 14
+      }
+    ],
+    "mdb-julia-schneider": [
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 45
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 13
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 12
+      }
+    ],
+    "mdb-juergen-cosse": [
+      {
+        "ok": true,
+        "count": 22,
+        "ms": 91
+      },
+      {
+        "ok": true,
+        "count": 22,
+        "ms": 11
+      },
+      {
+        "ok": true,
+        "count": 22,
+        "ms": 18
+      }
+    ],
+    "mdb-svenja-schulze": [
+      {
+        "ok": true,
+        "count": 9,
+        "ms": 57
+      },
+      {
+        "ok": true,
+        "count": 9,
+        "ms": 16
+      },
+      {
+        "ok": true,
+        "count": 9,
+        "ms": 16
+      }
+    ],
+    "mdb-tamara-mazzi": [
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 49
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 17
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 19
+      }
+    ],
+    "mdb-stephan-protschka": [
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 86
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 16
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 16
+      }
+    ],
+    "mdb-awet-tesfaiesus": [
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 58
+      },
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 17
+      },
+      {
+        "ok": true,
+        "count": 24,
+        "ms": 15
+      }
+    ],
+    "mdb-david-schliesing": [
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 66
+      },
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 14
+      },
+      {
+        "ok": true,
+        "count": 11,
+        "ms": 22
+      }
+    ],
+    "mdb-vinzenz-glaser": [
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 114
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 14
+      },
+      {
+        "ok": true,
+        "count": 10,
+        "ms": 16
+      }
+    ],
+    "mdb-jorrit-bosch": [
+      {
+        "ok": true,
+        "count": 3,
+        "ms": 47
+      },
+      {
+        "ok": true,
+        "count": 3,
+        "ms": 14
+      },
+      {
+        "ok": true,
+        "count": 3,
+        "ms": 9
+      }
+    ],
+    "mdb-zada-salihovic": [
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 40
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 14
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 13
+      }
+    ],
+    "mdb-maren-kaminski": [
+      {
+        "ok": true,
+        "count": 8,
+        "ms": 85
+      },
+      {
+        "ok": true,
+        "count": 8,
+        "ms": 15
+      },
+      {
+        "ok": true,
+        "count": 8,
+        "ms": 14
+      }
+    ],
+    "mdb-marcel-bauer": [
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 72
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 12
+      },
+      {
+        "ok": true,
+        "count": 0,
+        "ms": 9
+      }
+    ],
+    "mdb-nicole-hoechst": [
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 51
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 16
+      },
+      {
+        "ok": true,
+        "count": 25,
+        "ms": 15
+      }
+    ],
+    "mdb-cansu-oezdemir": [
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 49
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 15
+      },
+      {
+        "ok": true,
+        "count": 18,
+        "ms": 18
+      }
+    ]
+  },
+  "burst": [
+    {
+      "channel": "abualiexpress",
+      "status": 200,
+      "ms": 737,
+      "posts": 11
+    },
+    {
+      "channel": "agentstvonews",
+      "status": 200,
+      "ms": 1367,
+      "posts": 12
+    },
+    {
+      "channel": "astrapress",
+      "status": 200,
+      "ms": 349,
+      "posts": 14
+    },
+    {
+      "channel": "AVBogomaz",
+      "status": 200,
+      "ms": 591,
+      "posts": 4
+    },
+    {
+      "channel": "balkanar",
+      "status": 200,
+      "ms": 569,
+      "posts": 16
+    },
+    {
+      "channel": "bazabazon",
+      "status": 200,
+      "ms": 408,
+      "posts": 13
+    },
+    {
+      "channel": "caucasar",
+      "status": 200,
+      "ms": 1216,
+      "posts": 18
+    },
+    {
+      "channel": "ClashReport",
+      "status": 200,
+      "ms": 343,
+      "posts": 20
+    },
+    {
+      "channel": "currenttime",
+      "status": 200,
+      "ms": 1036,
+      "posts": 16
+    },
+    {
+      "channel": "DeepStateUA",
+      "status": 200,
+      "ms": 561,
+      "posts": 20
+    },
+    {
+      "channel": "dva_majors",
+      "status": 200,
+      "ms": 1137,
+      "posts": 13
+    },
+    {
+      "channel": "ENews112",
+      "status": 200,
+      "ms": 417,
+      "posts": 16
+    },
+    {
+      "channel": "evropar",
+      "status": 200,
+      "ms": 1127,
+      "posts": 17
+    },
+    {
+      "channel": "favt_info",
+      "status": 200,
+      "ms": 316,
+      "posts": 20
+    },
+    {
+      "channel": "gusev_36",
+      "status": 200,
+      "ms": 696,
+      "posts": 20
+    },
+    {
+      "channel": "idfofficial",
+      "status": 200,
+      "ms": 916,
+      "posts": 20
+    },
+    {
+      "channel": "insiderpaper",
+      "status": 200,
+      "ms": 494,
+      "posts": 20
+    },
+    {
+      "channel": "kpszsu",
+      "status": 200,
+      "ms": 753,
+      "posts": 20
+    },
+    {
+      "channel": "liveuamap",
+      "status": 200,
+      "ms": 356,
+      "posts": 20
+    },
+    {
+      "channel": "mash",
+      "status": 200,
+      "ms": 381,
+      "posts": 12
+    },
+    {
+      "channel": "mchs_official",
+      "status": 200,
+      "ms": 498,
+      "posts": 15
+    },
+    {
+      "channel": "mediazzzona",
+      "status": 200,
+      "ms": 964,
+      "posts": 18
+    },
+    {
+      "channel": "meduzalive",
+      "status": 200,
+      "ms": 400,
+      "posts": 17
+    },
+    {
+      "channel": "MID_Russia",
+      "status": 200,
+      "ms": 104,
+      "posts": 11
+    },
+    {
+      "channel": "Middle_East_Spectator",
+      "status": 200,
+      "ms": 716,
+      "posts": 20
+    },
+    {
+      "channel": "mos_sobyanin",
+      "status": 200,
+      "ms": 935,
+      "posts": 7
+    },
+    {
+      "channel": "netblocks",
+      "status": 200,
+      "ms": 989,
+      "posts": 20
+    },
+    {
+      "channel": "news_sirena",
+      "status": 200,
+      "ms": 1049,
+      "posts": 15
+    },
+    {
+      "channel": "nexta_tv",
+      "status": 200,
+      "ms": 335,
+      "posts": 20
+    },
+    {
+      "channel": "opershtab23",
+      "status": 200,
+      "ms": 896,
+      "posts": 20
+    },
+    {
+      "channel": "osintdefender",
+      "status": 200,
+      "ms": 759,
+      "posts": 20
+    },
+    {
+      "channel": "ostorozhno_moskva",
+      "status": 200,
+      "ms": 991,
+      "posts": 17
+    },
+    {
+      "channel": "ostorozhno_novosti",
+      "status": 200,
+      "ms": 958,
+      "posts": 13
+    },
+    {
+      "channel": "rageintel",
+      "status": 200,
+      "ms": 825,
+      "posts": 20
+    },
+    {
+      "channel": "razvozhaev",
+      "status": 200,
+      "ms": 384,
+      "posts": 8
+    },
+    {
+      "channel": "rybar",
+      "status": 200,
+      "ms": 935,
+      "posts": 13
+    },
+    {
+      "channel": "rybar_africa",
+      "status": 200,
+      "ms": 597,
+      "posts": 16
+    },
+    {
+      "channel": "rybar_america",
+      "status": 200,
+      "ms": 563,
+      "posts": 18
+    },
+    {
+      "channel": "rybar_in_english",
+      "status": 200,
+      "ms": 1126,
+      "posts": 13
+    },
+    {
+      "channel": "rybar_latam",
+      "status": 200,
+      "ms": 614,
+      "posts": 11
+    },
+    {
+      "channel": "rybar_mena",
+      "status": 200,
+      "ms": 1193,
+      "posts": 13
+    },
+    {
+      "channel": "rybar_pacific",
+      "status": 200,
+      "ms": 1191,
+      "posts": 18
+    },
+    {
+      "channel": "rybar_stan",
+      "status": 200,
+      "ms": 464,
+      "posts": 19
+    },
+    {
+      "channel": "rybar_tactical",
+      "status": 200,
+      "ms": 1038,
+      "posts": 20
+    },
+    {
+      "channel": "rybarde",
+      "status": 200,
+      "ms": 872,
+      "posts": 10
+    },
+    {
+      "channel": "shot_shot",
+      "status": 200,
+      "ms": 433,
+      "posts": 8
+    },
+    {
+      "channel": "sledcom_press",
+      "status": 200,
+      "ms": 496,
+      "posts": 18
+    },
+    {
+      "channel": "thebell_io",
+      "status": 200,
+      "ms": 1156,
+      "posts": 20
+    },
+    {
+      "channel": "V_Zelenskiy_official",
+      "status": 200,
+      "ms": 110,
+      "posts": 10
+    },
+    {
+      "channel": "vvgladkov",
+      "status": 200,
+      "ms": 489,
+      "posts": 11
+    },
+    {
+      "channel": "wargonzo",
+      "status": 200,
+      "ms": 1017,
+      "posts": 14
+    },
+    {
+      "channel": "warmonitors",
+      "status": 200,
+      "ms": 498,
+      "posts": 20
+    }
+  ],
+  "translation": [
+    {
+      "batch": 0,
+      "status": 200,
+      "ms": 2262,
+      "sent": 60,
+      "translated": 60,
+      "untouched": 0
+    },
+    {
+      "batch": 1,
+      "status": 200,
+      "ms": 2100,
+      "sent": 60,
+      "translated": 60,
+      "untouched": 0
+    },
+    {
+      "batch": 2,
+      "status": 200,
+      "ms": 6304,
+      "sent": 60,
+      "translated": 60,
+      "untouched": 0
+    },
+    {
+      "batch": 3,
+      "status": 200,
+      "ms": 5783,
+      "sent": 60,
+      "translated": 60,
+      "untouched": 0
+    },
+    {
+      "batch": 4,
+      "status": 200,
+      "ms": 3116,
+      "sent": 60,
+      "translated": 60,
+      "untouched": 0
+    }
+  ],
+  "googleDirect": {
+    "status": 200,
+    "cors": "*",
+    "body": "[[[\"Explosion in Woronesch\",\"Взрыв в Воронеже\",null,null,3,null,null,[[],[]],[[[\"e38d47a4f17c466dfca5ed67f09b5027\",\"ru_e"
+  },
+  "volume": [
+    {
+      "target": "en",
+      "texts": 1527,
+      "chars": 200969
+    },
+    {
+      "target": "de",
+      "texts": 1900,
+      "chars": 236234
+    }
+  ],
+  "trRound": {
+    "translated": 172,
+    "refused": 128,
+    "chars": 43267,
+    "waiting": 3127
+  }
+}
