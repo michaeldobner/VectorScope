@@ -1,0 +1,180 @@
+// Test lab: candidate feeds for the news module. Per feed: reachable, format, items, freshness, images, teasers, CORS.
+// Writes lab-out/news-feeds.md, lab-out/news-feeds.json and samples.
+import fs from 'node:fs';
+
+const OUT = 'lab-out';
+fs.mkdirSync(`${OUT}/samples/news`, { recursive: true });
+const UA = {
+  'User-Agent': 'VectorScope-lab/0.1 (github.com/michaeldobner/VectorScope)',
+};
+const cell = (v) =>
+  String(v ?? '')
+    .replace(/\|/g, '/')
+    .replace(/\s+/g, ' ')
+    .slice(0, 200);
+
+// Region, name, URL. Several URLs for one outlet where the right address is not certain.
+const FEEDS = [
+  ['DE', 'Tagesschau', 'https://www.tagesschau.de/index~rss2.xml'],
+  ['DE', 'Tagesschau API', 'https://www.tagesschau.de/api2u/news/'],
+  ['DE', 'ZDFheute', 'https://www.zdf.de/rss/zdf/nachrichten'],
+  ['DE', 'Spiegel', 'https://www.spiegel.de/schlagzeilen/index.rss'],
+  ['DE', 'Deutschlandfunk', 'https://www.deutschlandfunk.de/nachrichten-100.rss'],
+  ['DE', 'DW Deutsch', 'https://rss.dw.com/xml/rss-de-all'],
+  ['DE', 'Heise', 'https://www.heise.de/rss/heise-atom.xml'],
+  ['DE', 'Golem', 'https://rss.golem.de/rss.php?feed=RSS2.0'],
+  ['CH', 'SRF Neueste', 'https://www.srf.ch/news/bnf/rss/1646'],
+  ['CH', 'SRF International', 'https://www.srf.ch/news/bnf/rss/1922'],
+  ['CH', 'SRF Schweiz', 'https://www.srf.ch/news/bnf/rss/1890'],
+  ['CH', 'SRF Wirtschaft', 'https://www.srf.ch/news/bnf/rss/1926'],
+  ['CH', 'NZZ Neueste', 'https://www.nzz.ch/recent.rss'],
+  ['CH', 'NZZ International', 'https://www.nzz.ch/international.rss'],
+  ['CH', 'NZZ Schweiz', 'https://www.nzz.ch/schweiz.rss'],
+  ['CH', 'swissinfo DE a', 'https://www.swissinfo.ch/ger/rss/alle-news'],
+  ['CH', 'swissinfo DE b', 'https://www.swissinfo.ch/ger/rss'],
+  ['CH', 'swissinfo EN', 'https://www.swissinfo.ch/eng/rss'],
+  ['CH', 'RTS Info a', 'https://www.rts.ch/info/?format=rss/news'],
+  ['CH', 'RTS Info b', 'https://www.rts.ch/info/rss'],
+  ['CH', 'RSI Info', 'https://www.rsi.ch/info/?f=rss'],
+  ['CH', 'watson', 'https://www.watson.ch/api/1.0/rss/index.xml'],
+  ['CH', '20 Minuten', 'https://partner-feeds.20min.ch/rss/20minuten'],
+  ['CH', 'Tages-Anzeiger', 'https://www.tagesanzeiger.ch/rss.xml'],
+  ['CH', 'Blick', 'https://www.blick.ch/rss.xml'],
+  ['AT', 'ORF', 'https://rss.orf.at/news.xml'],
+  ['AT', 'Der Standard', 'https://www.derstandard.at/rss'],
+  ['AT', 'Die Presse', 'https://www.diepresse.com/rss'],
+  ['INT', 'BBC World', 'https://feeds.bbci.co.uk/news/world/rss.xml'],
+  ['INT', 'BBC Africa', 'https://feeds.bbci.co.uk/news/world/africa/rss.xml'],
+  ['INT', 'Al Jazeera', 'https://www.aljazeera.com/xml/rss/all.xml'],
+  ['INT', 'NPR World', 'https://feeds.npr.org/1004/rss.xml'],
+  ['INT', 'Guardian World', 'https://www.theguardian.com/world/rss'],
+  ['INT', 'DW English', 'https://rss.dw.com/xml/rss-en-all'],
+  ['INT', 'France 24', 'https://www.france24.com/en/rss'],
+  ['INT', 'Euronews', 'https://www.euronews.com/rss'],
+  ['INT', 'CBC World', 'https://www.cbc.ca/webfeed/rss/rss-world'],
+  ['INT', 'ABC Australia', 'https://www.abc.net.au/news/feed/51120/rss.xml'],
+  ['INT', 'CNA', 'https://www.channelnewsasia.com/rssfeeds/8395884'],
+  ['INT', 'SCMP World', 'https://www.scmp.com/rss/91/feed'],
+  ['INT', 'Times of India', 'https://timesofindia.indiatimes.com/rssfeedstopstories.cms'],
+];
+
+async function get(url) {
+  const t = Date.now();
+  try {
+    const r = await fetch(url, {
+      headers: UA,
+      redirect: 'follow',
+      signal: AbortSignal.timeout(25000),
+    });
+    return {
+      status: r.status,
+      body: await r.text(),
+      ms: Date.now() - t,
+      type: r.headers.get('content-type'),
+      cors: r.headers.get('access-control-allow-origin'),
+      final: r.url,
+    };
+  } catch (e) {
+    return {
+      status: 0,
+      body: '',
+      error: String(e.cause?.code ?? e.message ?? e),
+      ms: Date.now() - t,
+    };
+  }
+}
+
+const text = (s) =>
+  (s ?? '')
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&[a-z#0-9]+;/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+const tag = (block, names) => {
+  for (const n of names) {
+    const m = block.match(new RegExp(`<${n}(?:\\s[^>]*)?>([\\s\\S]*?)</${n}>`, 'i'));
+    if (m) return m[1];
+  }
+  return undefined;
+};
+const IMAGE =
+  /<media:(content|thumbnail)[^>]*url=|<enclosure[^>]*type="image|<enclosure[^>]*url="[^"]+\.(jpe?g|png|webp)|&lt;img|<img|<image>/i;
+
+function parseFeed(body) {
+  try {
+    const j = JSON.parse(body);
+    const list = j.news ?? j.items ?? [];
+    return {
+      format: 'json',
+      items: list.map((n) => ({
+        title: n.title,
+        date: n.date,
+        image: Boolean(n.teaserImage),
+        teaser: (n.firstSentence ?? n.content?.[0]?.value ?? '').length > 40,
+      })),
+    };
+  } catch {}
+  const atom = /<feed[\s>]/.test(body) && !/<rss[\s>]/.test(body);
+  const blocks = [...body.matchAll(atom ? /<entry[\s>][\s\S]*?<\/entry>/g : /<item[\s>][\s\S]*?<\/item>/g)].map((m) => m[0]);
+  if (!blocks.length && !/<rss|<feed|<rdf/i.test(body)) return { format: 'none', items: [] };
+  const lang = body.match(/<language>([^<]+)<\/language>/i)?.[1] ?? body.match(/xml:lang="([^"]+)"/i)?.[1];
+  return {
+    format: atom ? 'atom' : 'rss',
+    lang,
+    items: blocks.map((b) => ({
+      title: text(tag(b, ['title'])),
+      date: text(tag(b, ['pubDate', 'updated', 'published', 'dc:date'])),
+      image: IMAGE.test(b),
+      teaser: text(tag(b, ['description', 'summary', 'content'])).length > 40,
+    })),
+  };
+}
+
+const results = [];
+for (const [region, name, url] of FEEDS) {
+  const r = await get(url);
+  const p = r.status === 200 ? parseFeed(r.body) : { format: '', items: [] };
+  const dates = p.items.map((i) => Date.parse(i.date)).filter(Number.isFinite);
+  const newest = dates.length ? Math.max(...dates) : undefined;
+  const share = (k) => (p.items.length ? Math.round((100 * p.items.filter((i) => i[k]).length) / p.items.length) : 0);
+  const res = {
+    region,
+    name,
+    url,
+    status: r.status || r.error,
+    ms: r.ms,
+    type: r.type,
+    cors: r.cors ?? '',
+    redirected: r.final && r.final !== url ? r.final : '',
+    format: p.format,
+    lang: p.lang ?? '',
+    items: p.items.length,
+    newestAgeH: newest ? Math.round(((Date.now() - newest) / 36e5) * 10) / 10 : null,
+    last24h: dates.filter((d) => Date.now() - d < 864e5).length,
+    imagesPct: share('image'),
+    teasersPct: share('teaser'),
+    titles: p.items.slice(0, 3).map((i) => i.title),
+  };
+  results.push(res);
+  if (r.status === 200) fs.writeFileSync(`${OUT}/samples/news/${name.replace(/\W+/g, '-')}.txt`, r.body.slice(0, 60000));
+  console.log(`${res.status} ${res.format} ${res.items} items ${name}`);
+}
+
+const usable = (r) => r.status === 200 && r.items >= 5 && r.newestAgeH !== null && r.newestAgeH < 48;
+const md = [
+  `# News feeds ${new Date().toISOString()}`,
+  '',
+  `${results.filter(usable).length} of ${results.length} usable: HTTP 200, at least 5 items, newest under 48 hours.`,
+  '',
+  '| Region | Feed | OK | HTTP | ms | Format | Lang | Items | Newest h | 24h | Images % | Teasers % | CORS | First titles |',
+  '|---|---|---|---|---|---|---|---|---|---|---|---|---|---|',
+  ...results.map(
+    (r) =>
+      `| ${r.region} | [${cell(r.name)}](${r.url}) | ${usable(r) ? 'yes' : 'no'} | ${cell(r.status)} | ${r.ms} | ${r.format} | ${cell(r.lang)} | ${r.items} | ${r.newestAgeH ?? ''} | ${r.last24h} | ${r.imagesPct} | ${r.teasersPct} | ${cell(r.cors)} | ${cell(r.titles.join(' / '))} |`,
+  ),
+  '',
+];
+fs.writeFileSync(`${OUT}/news-feeds.md`, md.join('\n'));
+fs.writeFileSync(`${OUT}/news-feeds.json`, JSON.stringify(results, null, 2));
+console.log('News feeds written');
