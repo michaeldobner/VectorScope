@@ -4,6 +4,13 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.21.1 (2026-10-11)
+
+### Behoben
+* Der GitHub-Actions-Speicher (0,5 GB frei) war voll: E2E-Screenshots werden nur noch hochgeladen, wenn eine Prüfung scheitert, und 3 Tage behalten, das Pages-Paket 1 Tag, und der neue Workflow `cleanup.yml` löscht jede Nacht Artefakte, die älter als zwei Tage sind.
+* Die E2E-Prüfung auf seitliches Scrollen misst an der Gerätebreite: Chromium hat das Handy-Layout verbreitert und den Überstand versteckt. Die Kopfleiste von INTEL passt wieder auf ein iPhone SE.
+* Modul INTEL 0.15.1.
+
 ## 0.21.0 (2026-10-09)
 
 ### Neu

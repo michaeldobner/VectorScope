@@ -1,259 +1,584 @@
-import { describe, expect, it } from 'vitest';
-import { DECISION, capitalsOf, findActors, isPoliticsRelated } from './actors';
-import { extractEntities } from './entities';
-import { lensesOf } from './lens';
-import type { Item } from './types';
+import { describe, expect, it } from "vitest";
+import { DECISION, capitalsOf, findActors, isPoliticsRelated } from "./actors";
+import { extractEntities } from "./entities";
+import { lensesOf } from "./lens";
+import type { Item } from "./types";
 
-describe('actors', () => {
-  it('recognises actors in English, German, Russian and Ukrainian', () => {
-    expect(findActors('Trump says the Strait of Hormuz belongs to the US Navy')).toEqual(['trump']);
-    expect(findActors('Дональд Трамп планирует позвонить Владимиру Путину')).toEqual(['trump', 'putin']);
-    expect(findActors('Bundeskanzler Merz spricht im Bundestag')).toEqual(['merz', 'bundesregierung', 'bundestag']);
-    expect(findActors('Зеленський зустрівся з фон дер Ляйен')).toEqual(['vonderleyen', 'zelensky']);
-    expect(findActors('Der Kreml weist die Vorwürfe zurück, sagt Peskow')).toEqual(['kremlin']);
+describe("actors", () => {
+  it("recognises actors in English, German, Russian and Ukrainian", () => {
+    expect(
+      findActors("Trump says the Strait of Hormuz belongs to the US Navy"),
+    ).toEqual(["trump"]);
+    expect(
+      findActors("Дональд Трамп планирует позвонить Владимиру Путину"),
+    ).toEqual(["trump", "putin"]);
+    expect(findActors("Bundeskanzler Merz spricht im Bundestag")).toEqual([
+      "merz",
+      "bundesregierung",
+      "bundestag",
+    ]);
+    expect(findActors("Зеленський зустрівся з фон дер Ляйен")).toEqual([
+      "vonderleyen",
+      "zelensky",
+    ]);
+    expect(
+      findActors("Der Kreml weist die Vorwürfe zurück, sagt Peskow"),
+    ).toEqual(["kremlin"]);
   });
 
-  it('does not read actors into other words', () => {
-    expect(findActors('Im März wurde gewählt')).toEqual([]);
-    expect(findActors('The museum reopened')).toEqual([]);
-    expect(findActors('Trumpet concert in Vienna')).toEqual(['trump']);
+  it("does not read actors into other words", () => {
+    expect(findActors("Im März wurde gewählt")).toEqual([]);
+    expect(findActors("The museum reopened")).toEqual([]);
+    expect(findActors("Trumpet concert in Vienna")).toEqual(["trump"]);
   });
 
-  it('places actors at their capitals', () => {
-    expect(capitalsOf(['trump', 'putin', 'whitehouse'])).toEqual(['washington', 'moscow']);
-    expect(capitalsOf(['eucommission', 'nato'])).toEqual(['brussels']);
+  it("places actors at their capitals", () => {
+    expect(capitalsOf(["trump", "putin", "whitehouse"])).toEqual([
+      "washington",
+      "moscow",
+    ]);
+    expect(capitalsOf(["eucommission", "nato"])).toEqual(["brussels"]);
   });
 
-  it('knows political vocabulary and decisions', () => {
-    expect(isPoliticsRelated('Koalition streitet über den Haushalt', [])).toBe(true);
-    expect(isPoliticsRelated('Госдума приняла закон', [])).toBe(true);
-    expect(isPoliticsRelated('Lawrence wins the cup final', [])).toBe(false);
-    expect(DECISION.test('Bundestag debattiert das Wehrdienstgesetz')).toBe(false);
-    expect(DECISION.test('Bundestag beschließt Wehrdienstgesetz')).toBe(true);
-    expect(DECISION.test('Bundestag hat das Gesetz beschlossen')).toBe(true);
-    expect(DECISION.test('Trump signs executive order on tariffs')).toBe(true);
-  });
-});
-
-describe('lenses', () => {
-  const item = (sourceId: string, title: string): Item => ({ id: title, sourceId, channel: 'rss', title, text: '', url: 'https://x.org', time: 0 });
-  const lens = (sourceId: string, title: string) => lensesOf(item(sourceId, title), title, extractEntities(title));
-
-  it('puts a report into security, politics or both', () => {
-    expect(lens('tagesschau', 'Drohnenangriff auf Raffinerie in Woronesch')).toEqual({ security: true });
-    expect(lens('tagesschau', 'Bundestag debattiert über den Haushalt')).toEqual({ politics: true });
-    expect(lens('tagesschau', 'EU beschließt Sanktionen wegen Angriffen auf Schiffe')).toEqual({ security: true, politics: true });
-    expect(lens('tagesschau', 'Pokal: Bayern gewinnt in Mainz')).toEqual({});
-  });
-
-  it('keeps security sources in security and adds politics only with political content', () => {
-    expect(lens('osintdefender', 'B-1 bombers leave RAF Fairford')).toEqual({ security: true });
-    expect(lens('osintdefender', 'Trump: we will talk to Putin today')).toEqual({ security: true, politics: true });
-  });
-});
-
-describe('Russian political vocabulary', () => {
-  it('needs the start of a word', () => {
-    expect(isPoliticsRelated('Администрация района сообщила о пожаре', [])).toBe(false);
-    expect(isPoliticsRelated('Незаконную стоянку закрыли', [])).toBe(false);
-    expect(isPoliticsRelated('Он указал на ошибку', [])).toBe(false);
-    expect(isPoliticsRelated('Министр обороны прибыл в Минск', [])).toBe(true);
-    expect(isPoliticsRelated('Президент подписал указ о мобилизации', [])).toBe(true);
+  it("knows political vocabulary and decisions", () => {
+    expect(isPoliticsRelated("Koalition streitet über den Haushalt", [])).toBe(
+      true,
+    );
+    expect(isPoliticsRelated("Госдума приняла закон", [])).toBe(true);
+    expect(isPoliticsRelated("Lawrence wins the cup final", [])).toBe(false);
+    expect(DECISION.test("Bundestag debattiert das Wehrdienstgesetz")).toBe(
+      false,
+    );
+    expect(DECISION.test("Bundestag beschließt Wehrdienstgesetz")).toBe(true);
+    expect(DECISION.test("Bundestag hat das Gesetz beschlossen")).toBe(true);
+    expect(DECISION.test("Trump signs executive order on tariffs")).toBe(true);
   });
 });
 
-describe('stories in lenses', () => {
-  it('needs half of the reports for politics, one for security', async () => {
-    const { storyInLens } = await import('./lens');
-    const s = [{ lens: { security: true as const } }, { lens: { security: true as const } }, { lens: { security: true as const, politics: true as const } }];
-    expect(storyInLens(s, 'security')).toBe(true);
-    expect(storyInLens(s, 'politics')).toBe(false);
-    expect(storyInLens([...s, { lens: { politics: true as const } }], 'politics')).toBe(true);
+describe("lenses", () => {
+  const item = (sourceId: string, title: string): Item => ({
+    id: title,
+    sourceId,
+    channel: "rss",
+    title,
+    text: "",
+    url: "https://x.org",
+    time: 0,
+  });
+  const lens = (sourceId: string, title: string) =>
+    lensesOf(item(sourceId, title), title, extractEntities(title));
+
+  it("puts a report into security, politics or both", () => {
+    expect(
+      lens("tagesschau", "Drohnenangriff auf Raffinerie in Woronesch"),
+    ).toEqual({ security: true });
+    expect(
+      lens("tagesschau", "Bundestag debattiert über den Haushalt"),
+    ).toEqual({ politics: true });
+    expect(
+      lens(
+        "tagesschau",
+        "EU beschließt Sanktionen wegen Angriffen auf Schiffe",
+      ),
+    ).toEqual({ security: true, politics: true });
+    expect(lens("tagesschau", "Pokal: Bayern gewinnt in Mainz")).toEqual({});
+  });
+
+  it("keeps security sources in security and adds politics only with political content", () => {
+    expect(lens("osintdefender", "B-1 bombers leave RAF Fairford")).toEqual({
+      security: true,
+    });
+    expect(lens("osintdefender", "Trump: we will talk to Putin today")).toEqual(
+      { security: true, politics: true },
+    );
   });
 });
 
-describe('weak actors', () => {
-  it('NATO alone does not make a military report political', () => {
-    expect(isPoliticsRelated('NATO AWACS and tanker active over the Baltic Sea', findActors('NATO AWACS and tanker active over the Baltic Sea'))).toBe(false);
-    expect(isPoliticsRelated('NATO summit agrees on new spending target', findActors('NATO summit agrees on new spending target'))).toBe(true);
+describe("Russian political vocabulary", () => {
+  it("needs the start of a word", () => {
+    expect(
+      isPoliticsRelated("Администрация района сообщила о пожаре", []),
+    ).toBe(false);
+    expect(isPoliticsRelated("Незаконную стоянку закрыли", [])).toBe(false);
+    expect(isPoliticsRelated("Он указал на ошибку", [])).toBe(false);
+    expect(isPoliticsRelated("Министр обороны прибыл в Минск", [])).toBe(true);
+    expect(isPoliticsRelated("Президент подписал указ о мобилизации", [])).toBe(
+      true,
+    );
   });
 });
 
-describe('bridges', () => {
-  it('links a story to a story of the other lens with the same actor or city on the same day', async () => {
-    const { bridgesFor } = await import('./bridges');
-    const { buildStories } = await import('./stories');
-    const now = Date.parse('2026-10-08T12:00:00Z');
-    const mk = (id: string, sourceId: string, title: string, lens: 'security' | 'politics', h: number) => ({
-      id, sourceId, channel: 'rss' as const, title, text: '', url: `https://x.org/${id}`, time: now - h * 3600_000, entities: extractEntities(title), matches: [], lens: { [lens]: true as const },
+describe("stories in lenses", () => {
+  const sec = { lens: { security: true as const } };
+  const pol = { lens: { politics: true as const } };
+  const both = (title: string) => ({
+    lens: { security: true as const, politics: true as const },
+    title,
+  });
+  it("go to the lens most reports count for, to the other only with more than a third", async () => {
+    const { storyInLens } = await import("./lens");
+    const s = [
+      sec,
+      sec,
+      both("Trump says it is time for Ukraine to elect a new president"),
+    ];
+    expect(storyInLens(s, "security")).toBe(true);
+    expect(storyInLens(s, "politics")).toBe(false);
+    expect(storyInLens([...s, pol], "politics")).toBe(true);
+    expect(storyInLens([...s, pol], "security")).toBe(true);
+  });
+  it("one report on the war does not make a quarrel about a prize security", async () => {
+    const { storyInLens } = await import("./lens");
+    const prize = [
+      pol,
+      pol,
+      pol,
+      pol,
+      pol,
+      pol,
+      pol,
+      both("Trump attacks Norway over the Nobel prize, war in Ukraine"),
+    ];
+    expect(storyInLens(prize, "politics")).toBe(true);
+    expect(storyInLens(prize, "security")).toBe(false);
+  });
+  it("a report in both lenses counts for security only with an event", async () => {
+    const { mainLens } = await import("./lens");
+    expect(
+      mainLens(both("Trump: time for Ukraine to elect a new president")),
+    ).toBe("politics");
+    expect(
+      mainLens(both("Selenskyj nach Drohnenangriff auf Kiew: zwei Tote")),
+    ).toBe("security");
+    expect(mainLens(both("Песков прокомментировал обстрел Белгорода"))).toBe(
+      "security",
+    );
+  });
+});
+
+describe("weak actors", () => {
+  it("NATO alone does not make a military report political", () => {
+    expect(
+      isPoliticsRelated(
+        "NATO AWACS and tanker active over the Baltic Sea",
+        findActors("NATO AWACS and tanker active over the Baltic Sea"),
+      ),
+    ).toBe(false);
+    expect(
+      isPoliticsRelated(
+        "NATO summit agrees on new spending target",
+        findActors("NATO summit agrees on new spending target"),
+      ),
+    ).toBe(true);
+  });
+});
+
+describe("bridges", () => {
+  it("links a story to a story of the other lens with the same actor or city on the same day", async () => {
+    const { bridgesFor } = await import("./bridges");
+    const { buildStories } = await import("./stories");
+    const now = Date.parse("2026-10-08T12:00:00Z");
+    const mk = (
+      id: string,
+      sourceId: string,
+      title: string,
+      lens: "security" | "politics",
+      h: number,
+    ) => ({
+      id,
+      sourceId,
+      channel: "rss" as const,
+      title,
+      text: "",
+      url: `https://x.org/${id}`,
+      time: now - h * 3600_000,
+      entities: extractEntities(title),
+      matches: [],
+      lens: { [lens]: true as const },
     });
     const stories = buildStories([
-      mk('a', 'bbc', 'Drone attack on tanker off Sochi', 'security', 2),
-      mk('b', 'aljazeera', 'Tanker hit by drones off Sochi, fire on board', 'security', 1.5),
-      mk('c', 'politicoeu', 'Kremlin blames Kyiv for Sochi tanker attack, talks in doubt', 'politics', 1),
-      mk('d', 'faz', 'Kreml macht Kiew für Angriff auf Tanker bei Sotschi verantwortlich', 'politics', 0.5),
-      mk('e', 'spiegel', 'Bundestag debattiert über Rente', 'politics', 1),
+      mk("a", "bbc", "Drone attack on tanker off Sochi", "security", 2),
+      mk(
+        "b",
+        "aljazeera",
+        "Tanker hit by drones off Sochi, fire on board",
+        "security",
+        1.5,
+      ),
+      mk(
+        "c",
+        "politicoeu",
+        "Kremlin blames Kyiv for Sochi tanker attack, talks in doubt",
+        "politics",
+        1,
+      ),
+      mk(
+        "d",
+        "faz",
+        "Kreml macht Kiew für Angriff auf Tanker bei Sotschi verantwortlich",
+        "politics",
+        0.5,
+      ),
+      mk("e", "spiegel", "Bundestag debattiert über Rente", "politics", 1),
     ]);
-    const security = stories.filter((s) => s.items.some((i) => i.lens?.security));
-    const bridges = bridgesFor(security, stories, 'security');
+    const security = stories.filter((s) =>
+      s.items.some((i) => i.lens?.security),
+    );
+    const bridges = bridgesFor(security, stories, "security");
     const linked = [...bridges.values()].flat();
     expect(linked).toHaveLength(1);
-    expect(['p:Sochi', 'a:kremlin']).toContain(linked[0].key);
+    expect(["p:Sochi", "a:kremlin"]).toContain(linked[0].key);
     expect(linked[0].story.lead.title).toMatch(/Kremlin|Kreml/);
   });
 
-  it('does not link by an actor or city that many stories name that day', async () => {
-    const { bridgesFor } = await import('./bridges');
-    const { buildStories } = await import('./stories');
-    const now = Date.parse('2026-10-08T12:00:00Z');
-    const mk = (id: string, sourceId: string, title: string, lens: 'security' | 'politics', h: number) => ({
-      id, sourceId, channel: 'rss' as const, title, text: '', url: `https://x.org/${id}`, time: now - h * 3600_000, entities: extractEntities(title), matches: [], lens: { [lens]: true as const },
+  it("does not link by an actor or city that many stories name that day", async () => {
+    const { bridgesFor } = await import("./bridges");
+    const { buildStories } = await import("./stories");
+    const now = Date.parse("2026-10-08T12:00:00Z");
+    const mk = (
+      id: string,
+      sourceId: string,
+      title: string,
+      lens: "security" | "politics",
+      h: number,
+    ) => ({
+      id,
+      sourceId,
+      channel: "rss" as const,
+      title,
+      text: "",
+      url: `https://x.org/${id}`,
+      time: now - h * 3600_000,
+      entities: extractEntities(title),
+      matches: [],
+      lens: { [lens]: true as const },
     });
     const stories = buildStories([
-      mk('a', 'bbc', 'Trump approves firing squad execution for soldier', 'security', 2),
-      mk('b', 'aljazeera', 'Trump signs firing squad execution order, first since WWII', 'security', 1.5),
-      mk('c', 'politicous', 'Trump says senate candidate Talarico is missing', 'politics', 1),
-      mk('d', 'npr', 'Trump attacks Talarico campaign in Texas senate race', 'politics', 0.8),
-      mk('e', 'axios', 'Trump tariffs on steel rise again next month', 'politics', 0.6),
-      mk('f', 'politicoeu', 'Trump tariffs: EU prepares answer on steel', 'politics', 0.5),
-      mk('g', 'whitehouse', 'Trump hosts Japanese prime minister at the White House', 'politics', 0.4),
-      mk('h', 'npr', 'Trump meets Japanese prime minister, trade deal in reach', 'politics', 0.3),
+      mk(
+        "a",
+        "bbc",
+        "Trump approves firing squad execution for soldier",
+        "security",
+        2,
+      ),
+      mk(
+        "b",
+        "aljazeera",
+        "Trump signs firing squad execution order, first since WWII",
+        "security",
+        1.5,
+      ),
+      mk(
+        "c",
+        "politicous",
+        "Trump says senate candidate Talarico is missing",
+        "politics",
+        1,
+      ),
+      mk(
+        "d",
+        "npr",
+        "Trump attacks Talarico campaign in Texas senate race",
+        "politics",
+        0.8,
+      ),
+      mk(
+        "e",
+        "axios",
+        "Trump tariffs on steel rise again next month",
+        "politics",
+        0.6,
+      ),
+      mk(
+        "f",
+        "politicoeu",
+        "Trump tariffs: EU prepares answer on steel",
+        "politics",
+        0.5,
+      ),
+      mk(
+        "g",
+        "whitehouse",
+        "Trump hosts Japanese prime minister at the White House",
+        "politics",
+        0.4,
+      ),
+      mk(
+        "h",
+        "npr",
+        "Trump meets Japanese prime minister, trade deal in reach",
+        "politics",
+        0.3,
+      ),
     ]);
-    const security = stories.filter((s) => s.items.some((i) => i.lens?.security));
-    expect([...bridgesFor(security, stories, 'security').values()].flat()).toHaveLength(0);
+    const security = stories.filter((s) =>
+      s.items.some((i) => i.lens?.security),
+    );
+    expect(
+      [...bridgesFor(security, stories, "security").values()].flat(),
+    ).toHaveLength(0);
   });
 });
 
-describe('now', () => {
-  it('puts confirmed, severe and original stories on top and fast single channels in the ticker', async () => {
-    const { headlines, earlyReports } = await import('./headlines');
-    const { buildStories } = await import('./stories');
-    const { lensesOf } = await import('./lens');
-    const { demoItems } = await import('./demo');
-    const now = Date.parse('2026-10-08T12:00:00Z');
+describe("now", () => {
+  it("puts confirmed, severe and original stories on top and fast single channels in the ticker", async () => {
+    const { headlines, earlyReports } = await import("./headlines");
+    const { buildStories } = await import("./stories");
+    const { lensesOf } = await import("./lens");
+    const { demoItems } = await import("./demo");
+    const now = Date.parse("2026-10-08T12:00:00Z");
     const items = demoItems(now).map((i) => {
       const entities = extractEntities(`${i.title}\n${i.text}`);
-      return { ...i, entities, matches: [], lens: lensesOf(i, `${i.title}\n${i.text}`, entities) };
+      return {
+        ...i,
+        entities,
+        matches: [],
+        lens: lensesOf(i, `${i.title}\n${i.text}`, entities),
+      };
     });
     const stories = buildStories(items);
     const top = headlines(stories, now);
     expect(top).toHaveLength(5);
     expect(top[0].story.lead.title).toMatch(/Voronezh/);
-    expect(top[0].why).toContain('severe');
-    expect(top.some((h) => h.why.some((w) => w.endsWith('in the original')))).toBe(true);
-    expect(top.every((h) => h.story.status !== 'signal')).toBe(true);
-    const early = earlyReports(stories, now, new Set(top.map((h) => h.story.id)));
-    expect(early.map((e) => e.story.lead.title).join(' | ')).toMatch(/Odesa/);
-    expect(early.find((e) => /Rzesz/.test(e.story.lead.title))?.why).toBe('2 channels within 15 min');
+    expect(top[0].why).toContain("severe");
+    expect(
+      top.some((h) => h.why.some((w) => w.endsWith("in the original"))),
+    ).toBe(true);
+    expect(top.every((h) => h.story.status !== "signal")).toBe(true);
+    const early = earlyReports(
+      stories,
+      now,
+      new Set(top.map((h) => h.story.id)),
+    );
+    expect(early.map((e) => e.story.lead.title).join(" | ")).toMatch(/Odesa/);
+    expect(early.find((e) => /Rzesz/.test(e.story.lead.title))?.why).toBe(
+      "2 channels within 15 min",
+    );
   });
 
-  it('lets a story fade: the same story three hours later weighs half', async () => {
-    const { weigh } = await import('./headlines');
-    const { buildStories } = await import('./stories');
-    const { demoItems } = await import('./demo');
-    const now = Date.parse('2026-10-08T12:00:00Z');
-    const items = demoItems(now).map((i) => ({ ...i, entities: extractEntities(`${i.title}\n${i.text}`), matches: [], lens: { security: true as const } }));
+  it("lets a story fade: the same story three hours later weighs half", async () => {
+    const { weigh } = await import("./headlines");
+    const { buildStories } = await import("./stories");
+    const { demoItems } = await import("./demo");
+    const now = Date.parse("2026-10-08T12:00:00Z");
+    const items = demoItems(now).map((i) => ({
+      ...i,
+      entities: extractEntities(`${i.title}\n${i.text}`),
+      matches: [],
+      lens: { security: true as const },
+    }));
     const s = buildStories(items).find((x) => /Voronezh/.test(x.lead.title))!;
     // Growth counts reports of the last hour, so compare two moments when it no longer grows.
     const later = s.last + 2 * 3600_000;
-    expect(weigh(s, later + 3 * 3600_000).score / weigh(s, later).score).toBeCloseTo(0.5, 5);
+    expect(
+      weigh(s, later + 3 * 3600_000).score / weigh(s, later).score,
+    ).toBeCloseTo(0.5, 5);
     expect(weigh(s, s.last + 25 * 3600_000).score).toBe(0);
   });
 });
 
-describe('now, cases of the review of 9 October 2026', () => {
-  const at = Date.parse('2026-10-09T01:00:00Z');
+describe("now, cases of the review of 9 October 2026", () => {
+  const at = Date.parse("2026-10-09T01:00:00Z");
   const mk = (id: string, sourceId: string, title: string, minAgo: number) => {
     const entities = extractEntities(title);
-    return { id, sourceId, channel: 'telegram' as const, title, text: '', url: `https://x.org/${id}`, time: at - minAgo * 60_000, entities, matches: [], lens: { security: true as const } };
+    return {
+      id,
+      sourceId,
+      channel: "telegram" as const,
+      title,
+      text: "",
+      url: `https://x.org/${id}`,
+      time: at - minAgo * 60_000,
+      entities,
+      matches: [],
+      lens: { security: true as const },
+    };
   };
 
-  it('a single authority is official, not confirmed', async () => {
-    const { buildStories } = await import('./stories');
-    expect(buildStories([mk('a', 'gusev', 'Губернатор: в Воронеже отражена атака БПЛА', 5)])[0].status).toBe('official');
-    const both = buildStories([mk('a', 'gusev', 'Атака БПЛА на Воронеж отражена, губернатор', 30), mk('b', 'bbc', 'Drone attack on Voronezh repelled, governor says', 5)]);
-    expect(both[0].status).toBe('confirmed');
+  it("a single authority is official, not confirmed", async () => {
+    const { buildStories } = await import("./stories");
+    expect(
+      buildStories([
+        mk("a", "gusev", "Губернатор: в Воронеже отражена атака БПЛА", 5),
+      ])[0].status,
+    ).toBe("official");
+    const both = buildStories([
+      mk("a", "gusev", "Атака БПЛА на Воронеж отражена, губернатор", 30),
+      mk("b", "bbc", "Drone attack on Voronezh repelled, governor says", 5),
+    ]);
+    expect(both[0].status).toBe("confirmed");
   });
 
-  it('keeps all-clears, warnings and drone tracks out of the main stories and the ticker', async () => {
-    const { buildStories } = await import('./stories');
-    const { headlines, earlyReports, airSituation } = await import('./headlines');
+  it("keeps all-clears, warnings and drone tracks out of the main stories and the ticker", async () => {
+    const { buildStories } = await import("./stories");
+    const { headlines, earlyReports, airSituation } =
+      await import("./headlines");
     const stories = buildStories([
-      mk('a', 'gusev', 'Отмена опасности атаки БПЛА в Воронеже', 10),
-      mk('b', 'gusev', 'Внимание! Угроза атаки БПЛА в Воронеже', 40),
-      mk('c', 'kpszsu', 'Реактивний БпЛА повз Тальне на Черкащині у північному напрямку', 5),
+      mk("a", "gusev", "Отмена опасности атаки БПЛА в Воронеже", 10),
+      mk("b", "gusev", "Внимание! Угроза атаки БПЛА в Воронеже", 40),
+      mk(
+        "c",
+        "kpszsu",
+        "Реактивний БпЛА повз Тальне на Черкащині у північному напрямку",
+        5,
+      ),
     ]);
     expect(headlines(stories, at)).toHaveLength(0);
     expect(earlyReports(stories, at, new Set())).toHaveLength(0);
     const items = stories.flatMap((s) => s.items);
-    expect(airSituation(items, items.filter((i) => i.sourceId === 'kpszsu'), at)).toEqual({ tracks: 1, warnings: 2 });
+    expect(
+      airSituation(
+        items,
+        items.filter((i) => i.sourceId === "kpszsu"),
+        at,
+      ),
+    ).toEqual({ tracks: 1, warnings: 2 });
   });
 
   it('does not take a war of aggression or "no injuries" for a severe event', async () => {
-    const { weigh } = await import('./headlines');
-    const { buildStories } = await import('./stories');
-    const talks = buildStories([mk('a', 'tagesschau', 'Ukraine-Delegation führt in Washington Gespräche über den russischen Angriffskrieg', 10)])[0];
-    expect(weigh(talks, at).why).not.toContain('severe');
-    const calm = buildStories([mk('a', 'tagesschau', 'Brand in Odesa gelöscht, keine Verletzten', 10)])[0];
-    const hurt = buildStories([mk('a', 'tagesschau', 'Explosion in Odesa, mehrere Verletzte', 10)])[0];
-    expect(weigh(hurt, at).why).toContain('severe');
+    const { weigh } = await import("./headlines");
+    const { buildStories } = await import("./stories");
+    const talks = buildStories([
+      mk(
+        "a",
+        "tagesschau",
+        "Ukraine-Delegation führt in Washington Gespräche über den russischen Angriffskrieg",
+        10,
+      ),
+    ])[0];
+    expect(weigh(talks, at).why).not.toContain("severe");
+    const calm = buildStories([
+      mk("a", "tagesschau", "Brand in Odesa gelöscht, keine Verletzten", 10),
+    ])[0];
+    const hurt = buildStories([
+      mk("a", "tagesschau", "Explosion in Odesa, mehrere Verletzte", 10),
+    ])[0];
+    expect(weigh(hurt, at).why).toContain("severe");
     // "Brand" still counts, "keine Verletzten" alone would not.
-    expect(weigh(calm, at).why).toContain('severe');
+    expect(weigh(calm, at).why).toContain("severe");
   });
 });
 
-describe('now, after the benchmark of 9 October 2026', () => {
-  const at = Date.parse('2026-10-09T15:00:00Z');
-  const mk = (id: string, sourceId: string, title: string, minAgo: number, de?: string) => {
+describe("now, after the benchmark of 9 October 2026", () => {
+  const at = Date.parse("2026-10-09T15:00:00Z");
+  const mk = (
+    id: string,
+    sourceId: string,
+    title: string,
+    minAgo: number,
+    de?: string,
+  ) => {
     const entities = extractEntities(title);
-    return { id, sourceId, channel: 'rss' as const, title, text: '', url: `https://x.org/${id}`, time: at - minAgo * 60_000, entities, matches: [], lens: { security: true as const }, ...(de ? { tr: { de: { title: de } } } : {}) };
+    return {
+      id,
+      sourceId,
+      channel: "rss" as const,
+      title,
+      text: "",
+      url: `https://x.org/${id}`,
+      time: at - minAgo * 60_000,
+      entities,
+      matches: [],
+      lens: { security: true as const },
+      ...(de ? { tr: { de: { title: de } } } : {}),
+    };
   };
 
-  it('gives one place per topic, the others become related', async () => {
-    const { headlines } = await import('./headlines');
-    const { buildStories } = await import('./stories');
+  it("gives one place per topic, the others become related", async () => {
+    const { headlines } = await import("./headlines");
+    const { buildStories } = await import("./stories");
     const stories = buildStories([
-      mk('a', 'baza', 'Основатель Рыбаря задержан в Черногории', 50, 'Gründer von Rybar in Montenegro festgenommen'),
-      mk('b', 'mash', 'Создатель Рыбаря Михаил Звинчук задержан в Черногории', 45, 'Rybar-Gründer Michail Swintschuk in Montenegro festgenommen'),
-      mk('c', 'spiegel', 'Rybar-Chef in Montenegro festgenommen', 40),
-      mk('d', 'tagesschau', 'Rybar-Gründer in Montenegro festgenommen, Moskau protestiert', 30),
-      mk('e', 'bbc', 'Strike on Zaporizhzhia kills one, eight injured', 20),
-      mk('f', 'dw', 'Russian strike on Zaporizhzhia kills one', 10),
+      mk(
+        "a",
+        "baza",
+        "Основатель Рыбаря задержан в Черногории",
+        50,
+        "Gründer von Rybar in Montenegro festgenommen",
+      ),
+      mk(
+        "b",
+        "mash",
+        "Создатель Рыбаря Михаил Звинчук задержан в Черногории",
+        45,
+        "Rybar-Gründer Michail Swintschuk in Montenegro festgenommen",
+      ),
+      mk("c", "spiegel", "Rybar-Chef in Montenegro festgenommen", 40),
+      mk(
+        "d",
+        "tagesschau",
+        "Rybar-Gründer in Montenegro festgenommen, Moskau protestiert",
+        30,
+      ),
+      mk("e", "bbc", "Strike on Zaporizhzhia kills one, eight injured", 20),
+      mk("f", "dw", "Russian strike on Zaporizhzhia kills one", 10),
     ]);
     const top = headlines(stories, at);
-    const rybar = top.filter((h) => /Rybar|Рыбар/i.test(h.story.items.map((i) => i.title).join(' ')));
+    const rybar = top.filter((h) =>
+      /Rybar|Рыбар/i.test(h.story.items.map((i) => i.title).join(" ")),
+    );
     expect(rybar).toHaveLength(1);
   });
 
-  it('leaves digests, live blogs and programme notes out', async () => {
-    const { headlines } = await import('./headlines');
-    const { buildStories } = await import('./stories');
+  it("leaves digests, live blogs and programme notes out", async () => {
+    const { headlines } = await import("./headlines");
+    const { buildStories } = await import("./stories");
     const stories = buildStories([
-      mk('a', 'dlf', 'Das Wichtigste zum 8. Oktober: Angriffe auf Kramatorsk', 30),
-      mk('b', 'tagesschau', 'Liveblog Ukrainekrieg: Verhandler in den USA', 20),
-      mk('c', 'currenttime', 'Sehen Sie sich in wenigen Minuten die Sendung Morning live an', 10),
+      mk(
+        "a",
+        "dlf",
+        "Das Wichtigste zum 8. Oktober: Angriffe auf Kramatorsk",
+        30,
+      ),
+      mk("b", "tagesschau", "Liveblog Ukrainekrieg: Verhandler in den USA", 20),
+      mk(
+        "c",
+        "currenttime",
+        "Sehen Sie sich in wenigen Minuten die Sendung Morning live an",
+        10,
+      ),
     ]);
     expect(headlines(stories, at)).toHaveLength(0);
   });
 
-  it('weighs breadth across Russia, Ukraine, German and international media over the number of channels', async () => {
-    const { weigh } = await import('./headlines');
-    const { buildStories } = await import('./stories');
+  it("weighs breadth across Russia, Ukraine, German and international media over the number of channels", async () => {
+    const { weigh } = await import("./headlines");
+    const { buildStories } = await import("./stories");
     // Two stories with the same status, one carried by six Russian channels, one by three spaces.
-    const base = buildStories([mk('x', 'baza', 'Взрыв на складе в Брянске', 30)])[0];
-    const story = (items: ReturnType<typeof mk>[]) => ({ ...base, items, independent: items.length, status: 'confirmed' as const, echoItems: [], last: at - 10 * 60_000 });
-    const ru = story(['baza', 'mash', 'shot', 'astra', 'news112', 'sirena'].map((s, i) => mk(`r${i}`, s, 'Взрыв на складе в Брянске', 30 - i)));
-    const wide = story([mk('w1', 'baza', 'Взрыв на складе в Брянске', 30), mk('w2', 'bbc', 'Explosion at depot in Bryansk', 20), mk('w3', 'tagesschau', 'Explosion in Depot in Brjansk', 10)]);
+    const base = buildStories([
+      mk("x", "baza", "Взрыв на складе в Брянске", 30),
+    ])[0];
+    const story = (items: ReturnType<typeof mk>[]) => ({
+      ...base,
+      items,
+      independent: items.length,
+      status: "confirmed" as const,
+      echoItems: [],
+      last: at - 10 * 60_000,
+    });
+    const ru = story(
+      ["baza", "mash", "shot", "astra", "news112", "sirena"].map((s, i) =>
+        mk(`r${i}`, s, "Взрыв на складе в Брянске", 30 - i),
+      ),
+    );
+    const wide = story([
+      mk("w1", "baza", "Взрыв на складе в Брянске", 30),
+      mk("w2", "bbc", "Explosion at depot in Bryansk", 20),
+      mk("w3", "tagesschau", "Explosion in Depot in Brjansk", 10),
+    ]);
     expect(weigh(wide, at).score).toBeGreaterThan(weigh(ru, at).score);
   });
 
-  it('keeps an evening story longer at night', async () => {
-    const { weigh } = await import('./headlines');
-    const { buildStories } = await import('./stories');
-    const s = buildStories([mk('a', 'bbc', 'Strike on Zaporizhzhia kills one', 0), mk('b', 'dw', 'Russian strike on Zaporizhzhia kills one', 0)])[0];
-    const night = Date.parse('2026-10-10T02:00:00Z');
-    const day = Date.parse('2026-10-10T14:00:00Z');
-    const fade = (now: number) => weigh({ ...s, last: now - 4 * 3600_000 }, now).score;
+  it("keeps an evening story longer at night", async () => {
+    const { weigh } = await import("./headlines");
+    const { buildStories } = await import("./stories");
+    const s = buildStories([
+      mk("a", "bbc", "Strike on Zaporizhzhia kills one", 0),
+      mk("b", "dw", "Russian strike on Zaporizhzhia kills one", 0),
+    ])[0];
+    const night = Date.parse("2026-10-10T02:00:00Z");
+    const day = Date.parse("2026-10-10T14:00:00Z");
+    const fade = (now: number) =>
+      weigh({ ...s, last: now - 4 * 3600_000 }, now).score;
     expect(fade(night)).toBeGreaterThan(fade(day));
   });
 });
