@@ -1,0 +1,550 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>tagesschau.de - die erste Adresse für Nachrichten und Information</title>
+    <link>https://www.tagesschau.de/</link>
+    <description>Die aktuellen Beiträge der Seite https://www.tagesschau.de/</description>
+    <language>de</language>
+    <copyright>ARD-aktuell / tagesschau.de</copyright>
+    <lastBuildDate>Sun, 11 Oct 2026 02:48:25 +0200</lastBuildDate>
+    <pubDate>Sun, 11 Oct 2026 02:48:25 +0200</pubDate>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <ttl>90</ttl>
+    <dc:publisher>tagesschau.de</dc:publisher>
+    <dc:language>de</dc:language>
+    <dc:rights>ARD-aktuell / tagesschau.de</dc:rights>
+    <dc:date>2026-10-10T23:16:12Z</dc:date>
+    <dc:source>tagesschau.de</dc:source>
+    <item>
+      <title>Trump fordert nach Dieseldeal mit Putin Selenskyjs Ablösung</title>
+      <link>https://www.tagesschau.de/ausland/amerika/trump-selenskyj-diesel-russland-100.html</link>
+      <description>Am Freitag hatte US-Präsident Trump einen Dieseldeal mit Russland angekündigt. Die Ukraine reagierte empört, nun fordert Trump eine Ablösung des ukrainischen Staatschefs Selenskyj. Er habe die Schuld an den hohen Energiepreisen.</description>
+      <pubDate>Sat, 10 Oct 2026 20:26:35 +0200</pubDate>
+      <guid>f29def3a-adb9-44cf-b1fa-7287c3cc3617</guid>
+      <dc:date>2026-10-10T18:26:35Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/ausland/amerika/trump-selenskyj-diesel-russland-100.html"><img src="https://images.tagesschau.de/image/b780b014-d654-44f9-ae2e-ab85a7928960/AAABoSbjyVc/AAABnSSvrFg/16x9-big/trump-5328.jpg?width=1920" alt="US-Präsident Trump äußert sich gegenüber Reportern | AP Photo/Nathan Howard" /></a> <br/> <br/>Am Freitag hatte US-Präsident Trump einen Dieseldeal mit Russland angekündigt. Die Ukraine reagierte empört, nun fordert Trump eine Ablösung des ukrainischen Staatschefs Selenskyj. Er habe die Schuld an den hohen Energiepreisen.[<a href="https://www.tagesschau.de/ausland/amerika/trump-selenskyj-diesel-russland-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Deutschland bleibt beim Nein zu russischem Öl</title>
+      <link>https://www.tagesschau.de/wirtschaft/energie/trump-diesel-oelpreis-reaktionen-deutschland-100.html</link>
+      <description>Auch nach Trumps Dieseldeal mit Putin will die Bundesregierung auf russisches Öl verzichten. Die Grünen werfen der US-Regierung Skrupellosigkeit vor. Die Spritpreise in Deutschland reagierten nicht.</description>
+      <pubDate>Sat, 10 Oct 2026 14:04:32 +0200</pubDate>
+      <guid>ef565e76-0136-43aa-88ee-e98296307e11</guid>
+      <dc:date>2026-10-10T12:04:32Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/wirtschaft/energie/trump-diesel-oelpreis-reaktionen-deutschland-100.html"><img src="https://images.tagesschau.de/image/7ea0b310-a819-4141-90b2-91f86593c155/AAABmaUGf_k/AAABnSSvrFg/16x9-big/russland-oel-114.jpg?width=1920" alt="Ölpumpen auf einem russischen Ölfeld in Yamashneft. | picture alliance/dpa/TASS" /></a> <br/> <br/>Auch nach Trumps Dieseldeal mit Putin will die Bundesregierung auf russisches Öl verzichten. Die Grünen werfen der US-Regierung Skrupellosigkeit vor. Die Spritpreise in Deutschland reagierten nicht.[<a href="https://www.tagesschau.de/wirtschaft/energie/trump-diesel-oelpreis-reaktionen-deutschland-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>tagesschau 20:00 Uhr</title>
+      <link>https://www.tagesschau.de/tagesschau_20_uhr/video-1664090.html</link>
+      <description>Diesel-Deal von Trump und Putin, Viele Tote bei russischen Angriffen in der Ukraine, Trotz Waffenruhe gehen Angriffe in Gaza weiter, Kunstausstellung "Nie wieder! Gegen das Vergessen der NS-Verbrechen", Gabriele Stötzer mit Goslarer Kaiserring geehrt, "Ragebait" ist Jugendwort des Jahres 2026, 5. Spieltag Fußball-Bundesliga, Das Wetter Hinweis: Die Beiträge zur "Fußball-Bundesliga" dürfen aus rechtlichen Gründen nicht auf tagesschau.de gezeigt werden.</description>
+      <pubDate>Sat, 10 Oct 2026 20:36:07 +0200</pubDate>
+      <guid>9d2bc3b2-063f-4fd9-8145-7b5904e5c4a4-SENDUNGSVIDEO</guid>
+      <dc:date>2026-10-10T18:36:07Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/tagesschau_20_uhr/video-1664090.html"><img src="https://images.tagesschau.de/image/818e7e82-7545-4c75-a90d-d7e203a0f354/AAABoScQnyM/AAABnSSvrFg/16x9-big/sendungsbild-1809572.jpg?width=1920" alt="Sendungsbild | ARD-aktuell" /></a> <br/> <br/>tagesschau 20:00 Uhr[<a href="https://www.tagesschau.de/tagesschau_20_uhr/video-1664090.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>US-Präsident Trump kündigt russische Diesellieferungen an: Was bedeutet das für die Ukraine?</title>
+      <link>https://www.tagesschau.de/tagesthemen/video-1664138.html</link>
+      <description>US-Präsident Trump kündigt russische Diesellieferungen an: Was bedeutet das für die Ukraine?</description>
+      <pubDate>Sat, 10 Oct 2026 23:56:29 +0200</pubDate>
+      <guid>ae2ace32-c35a-4eec-b9aa-c5332391f69b</guid>
+      <dc:date>2026-10-10T21:56:29Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/tagesthemen/video-1664138.html"><img src="https://images.tagesschau.de/image/879ccbf1-f169-4bf1-84f4-64096532a279/AAABoSfRN5A/AAABnSSvrFg/16x9-big/sendungsbild-1809620.jpg?width=1920" alt="Sendungsbild | ARD-aktuell" /></a> <br/> <br/>[<a href="https://www.tagesschau.de/tagesthemen/video-1664138.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Tag gegen Todesstrafe: USA debattiert über Hinrichtungen</title>
+      <link>https://www.tagesschau.de/tagesthemen/video-1664140.html</link>
+      <description>Tag gegen Todesstrafe: USA debattiert über Hinrichtungen</description>
+      <pubDate>Sun, 11 Oct 2026 00:06:17 +0200</pubDate>
+      <guid>498ca8d2-90ad-4860-a885-b50f46dd4b8d</guid>
+      <dc:date>2026-10-10T22:06:17Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/tagesthemen/video-1664140.html"><img src="https://images.tagesschau.de/image/ce4503f2-64ca-4b14-8e6a-69b9a352e2f8/AAABoSfaJR0/AAABnSSvrFg/16x9-big/sendungsbild-1809624.jpg?width=1920" alt="Sendungsbild | ARD-aktuell" /></a> <br/> <br/>[<a href="https://www.tagesschau.de/tagesthemen/video-1664140.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Drei Jahre Krieg im Gazastreifen und erster Jahrestag der Waffenruhe: Wie geht es den Menschen vor Ort?</title>
+      <link>https://www.tagesschau.de/tagesthemen/video-1664142.html</link>
+      <description>Drei Jahre Krieg im Gazastreifen und erster Jahrestag der Waffenruhe: Wie geht es den Menschen vor Ort?</description>
+      <pubDate>Sun, 11 Oct 2026 00:08:15 +0200</pubDate>
+      <guid>686f6278-08a2-4bee-ac00-d9e3fa514a90</guid>
+      <dc:date>2026-10-10T22:08:15Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/tagesthemen/video-1664142.html"><img src="https://images.tagesschau.de/image/47aa7f38-3c7a-4b07-87ac-afa0649be8ac/AAABoSfbv8Q/AAABnSSvrFg/16x9-big/sendungsbild-1809626.jpg?width=1920" alt="Sendungsbild | ARD-aktuell" /></a> <br/> <br/>[<a href="https://www.tagesschau.de/tagesthemen/video-1664142.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Tröten im Trend: Jagdhornblasen für Anfänger</title>
+      <link>https://www.tagesschau.de/tagesthemen/video-1664144.html</link>
+      <description>Tröten im Trend: Jagdhornblasen für Anfänger</description>
+      <pubDate>Sun, 11 Oct 2026 00:10:17 +0200</pubDate>
+      <guid>f1119368-407c-4dc9-9b19-883ca2c29e6d</guid>
+      <dc:date>2026-10-10T22:10:17Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/tagesthemen/video-1664144.html"><img src="https://images.tagesschau.de/image/c895424f-0b57-466b-b511-48fdb3382d51/AAABoSfd0uc/AAABnSSvrFg/16x9-big/sendungsbild-1809628.jpg?width=1920" alt="Sendungsbild | ARD-aktuell" /></a> <br/> <br/>[<a href="https://www.tagesschau.de/tagesthemen/video-1664144.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Ukrainischer Präsident Selenskyj kritisiert US-Deal zu den russischen Diesellieferungen</title>
+      <link>https://www.tagesschau.de/tagesschau_20_uhr/video-1664080.html</link>
+      <description>Ukrainischer Präsident Selenskyj kritisiert US-Deal zu den russischen Diesellieferungen</description>
+      <pubDate>Sat, 10 Oct 2026 20:21:51 +0200</pubDate>
+      <guid>54a46cda-42d2-4818-b696-820463c0c851</guid>
+      <dc:date>2026-10-10T18:21:51Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/tagesschau_20_uhr/video-1664080.html"><img src="https://images.tagesschau.de/image/cd6aa7e6-cd43-49c6-b67d-3170ac25eead/AAABoScMn3w/AAABnSSvrFg/16x9-big/sendungsbild-1809564.jpg?width=1920" alt="Sendungsbild | ARD-aktuell" /></a> <br/> <br/>[<a href="https://www.tagesschau.de/tagesschau_20_uhr/video-1664080.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Erste ostdeutsche Künstlerin Gabriele Stötzer erhält weltweit anerkannte Auszeichnung für Moderne Kunst</title>
+      <link>https://www.tagesschau.de/tagesschau_20_uhr/video-1664086.html</link>
+      <description>Erste ostdeutsche Künstlerin Gabriele Stötzer erhält weltweit anerkannte Auszeichnung für Moderne Kunst</description>
+      <pubDate>Sat, 10 Oct 2026 20:17:29 +0200</pubDate>
+      <guid>2f92c91d-7eab-4a00-97ef-27d92438b12e</guid>
+      <dc:date>2026-10-10T18:17:29Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/tagesschau_20_uhr/video-1664086.html"><img src="https://images.tagesschau.de/image/74382322-67d0-467b-931a-a7715ab0722b/AAABoScHevU/AAABnSSvrFg/16x9-big/sendungsbild-1809558.jpg?width=1920" alt="Sendungsbild | ARD-aktuell" /></a> <br/> <br/>[<a href="https://www.tagesschau.de/tagesschau_20_uhr/video-1664086.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Bundeskunsthalle Bonn zeigt Ausstellung "Nie wieder! Gegen das Vergessen der NS-Verbrechen"</title>
+      <link>https://www.tagesschau.de/tagesschau_20_uhr/video-1664084.html</link>
+      <description>Bundeskunsthalle Bonn zeigt Ausstellung "Nie wieder! Gegen das Vergessen der NS-Verbrechen"</description>
+      <pubDate>Sat, 10 Oct 2026 20:27:19 +0200</pubDate>
+      <guid>6dc68b14-1c96-4b9c-9836-c1cdb367ddd1</guid>
+      <dc:date>2026-10-10T18:27:19Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/tagesschau_20_uhr/video-1664084.html"><img src="https://images.tagesschau.de/image/0b6bf6b9-c464-4ff5-b9ec-4f4dc327cd49/AAABoScRC1M/AAABnSSvrFg/16x9-big/sendungsbild-1809574.jpg?width=1920" alt="Sendungsbild | ARD-aktuell" /></a> <br/> <br/>[<a href="https://www.tagesschau.de/tagesschau_20_uhr/video-1664084.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Saudi-Arabien: Viele Tote bei Angriff auf Flughafen in Riad</title>
+      <link>https://www.tagesschau.de/ausland/asien/angriff-riad-flughafen-100.html</link>
+      <description>Etwa 40 Millionen Passagiere nutzen den Flughafen in der saudischen Hauptstadt Riad jedes Jahr. Zuletzt wurde er mehrfach angegriffen. Nun gab es wieder eine Attacke - mindestens zwölf Menschen starben. Diplomaten vermuten die Huthi-Miliz hinter dem Angriff.</description>
+      <pubDate>Sun, 11 Oct 2026 01:56:54 +0200</pubDate>
+      <guid>2fcff9a9-48ba-4892-9e64-243d6157a3a6</guid>
+      <dc:date>2026-10-10T23:56:54Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/ausland/asien/angriff-riad-flughafen-100.html"><img src="https://images.tagesschau.de/image/7fe37f68-085a-4fe4-a697-d96c3dd3b092/AAABoSgZKIk/AAABnSSvrFg/16x9-big/riad-airport-101.jpg?width=1920" alt="Ein Mann am Flughafen in Riad | REUTERS" /></a> <br/> <br/>Etwa 40 Millionen Passagiere nutzen den Flughafen in der saudischen Hauptstadt Riad jedes Jahr. Zuletzt wurde er mehrfach angegriffen. Nun gab es wieder eine Attacke - mindestens zwölf Menschen starben. Diplomaten vermuten die Huthi-Miliz hinter dem Angriff.[<a href="https://www.tagesschau.de/ausland/asien/angriff-riad-flughafen-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Mehrere Tote und etliche ohne Strom durch Sturm "Isaias"</title>
+      <link>https://www.tagesschau.de/ausland/amerika/usa-hurrikan-isaias-tote-100.html</link>
+      <description>Mit "Isaias" ist der erste Hurrikan der Saison auf die US-Küste getroffen. Er brachte heftige Regenfälle mit sich, in Hunderttausenden Haushalten fiel der Strom aus. Inzwischen hat sich der Sturm aber deutlich abgeschwächt.</description>
+      <pubDate>Sat, 10 Oct 2026 22:44:04 +0200</pubDate>
+      <guid>46180c2a-77fd-4e38-91e5-133d02ae6c01</guid>
+      <dc:date>2026-10-10T20:44:04Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/ausland/amerika/usa-hurrikan-isaias-tote-100.html"><img src="https://images.tagesschau.de/image/7370d223-ada8-4767-b5db-1cd5156f78c6/AAABoSeO-94/AAABnSSvrFg/16x9-big/isaias-102.jpg?width=1920" alt="Ein abdecktes Haus in Florida  | Getty Images via AFP" /></a> <br/> <br/>Mit "Isaias" ist der erste Hurrikan der Saison auf die US-Küste getroffen. Er brachte heftige Regenfälle mit sich, in Hunderttausenden Haushalten fiel der Strom aus. Inzwischen hat sich der Sturm aber deutlich abgeschwächt.[<a href="https://www.tagesschau.de/ausland/amerika/usa-hurrikan-isaias-tote-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>CDU diskutiert über Umgang mit der AfD</title>
+      <link>https://www.tagesschau.de/inland/innenpolitik/cdu-afd-brandmauer-klausur-100.html</link>
+      <description>Zwei Tage lang will das CDU-Präsidium in Klausur gehen, um über Konsequenzen aus den jüngsten Wahlschlappen zu beraten. Dabei rückt eine Frage immer mehr in den Mittelpunkt: Soll der Umgang mit der AfD neu definiert werden?</description>
+      <pubDate>Sat, 10 Oct 2026 17:34:39 +0200</pubDate>
+      <guid>ec795b0c-f120-49d5-b218-00907fca70f2</guid>
+      <dc:date>2026-10-10T15:34:39Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/inland/innenpolitik/cdu-afd-brandmauer-klausur-100.html"><img src="https://images.tagesschau.de/image/da89450b-0ca5-4236-85fb-627e6f2e0cd8/AAABoSZzs0I/AAABnSSvrFg/16x9-big/cdu-parteizentrale-106.jpg?width=1920" alt="CDU-Logo am Konrad Adenauer Haus in Berlin  | EPA" /></a> <br/> <br/>Zwei Tage lang will das CDU-Präsidium in Klausur gehen, um über Konsequenzen aus den jüngsten Wahlschlappen zu beraten. Dabei rückt eine Frage immer mehr in den Mittelpunkt: Soll der Umgang mit der AfD neu definiert werden? [<a href="https://www.tagesschau.de/inland/innenpolitik/cdu-afd-brandmauer-klausur-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Serie von Messerattacken an Schulen in Polen</title>
+      <link>https://www.tagesschau.de/ausland/europa/polen-messer-attacken-schulen-100.html</link>
+      <description>In Polen sorgt eine Serie von Messerattacken an Schulen für Entsetzen. Am Donnerstag starben zwei Menschen nach einem Angriff auf eine Grundschule. Nun wurden bei einem weiteren Angriff drei Frauen verletzt.</description>
+      <pubDate>Sat, 10 Oct 2026 18:33:42 +0200</pubDate>
+      <guid>92652e0a-cbe3-4b2d-9f3f-c22abccad1b7</guid>
+      <dc:date>2026-10-10T16:33:42Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/ausland/europa/polen-messer-attacken-schulen-100.html"><img src="https://images.tagesschau.de/image/22cc46c6-e54b-42ed-a764-134b56ac31e0/AAABoSapwzg/AAABnSSvrFg/16x9-big/polen-564.jpg?width=1920" alt="Feuerwehr und Krankenwagen vor einer Schule in Polen | Agencja Wyborcza.pl via REUTERS" /></a> <br/> <br/>In Polen sorgt eine Serie von Messerattacken an Schulen für Entsetzen. Am Donnerstag starben zwei Menschen nach einem Angriff auf eine Grundschule. Nun wurden bei einem weiteren Angriff drei Frauen verletzt.[<a href="https://www.tagesschau.de/ausland/europa/polen-messer-attacken-schulen-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Nationalfeiertag in Taiwan: "Wir werden unsere Freiheit nicht aufgeben"</title>
+      <link>https://www.tagesschau.de/ausland/asien/taiwan-nationalfeiertag-104.html</link>
+      <description>Zum Nationalfeiertag appelliert Taiwan an die Länder im Indopazifik, sich für Frieden und Stabilität in der Region einzusetzen. Doch China gebärdet sich zunehmend aggressiv. Von Christoph Kober.</description>
+      <pubDate>Sat, 10 Oct 2026 16:22:48 +0200</pubDate>
+      <guid>046f417f-5622-42c9-9bf3-e778bf41a03c</guid>
+      <dc:date>2026-10-10T14:22:48Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/ausland/asien/taiwan-nationalfeiertag-104.html"><img src="https://images.tagesschau.de/image/c08a56fa-bdf5-436c-ba5d-130b9e7162b0/AAABoSYUqnI/AAABnSSvrFg/16x9-big/taiwan-lai-nationalfeiertag-100.jpg?width=1920" alt="Feiern zum Nationalfeiertag in Taiwan | REUTERS" /></a> <br/> <br/>Zum Nationalfeiertag appelliert Taiwan an die Länder im Indopazifik, sich für Frieden und Stabilität in der Region einzusetzen. Doch China gebärdet sich zunehmend aggressiv. <em>Von Christoph Kober.</em>[<a href="https://www.tagesschau.de/ausland/asien/taiwan-nationalfeiertag-104.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Weniger Hybridfahrzeug-Exporte: EU und China wenden Eskalation vorerst ab</title>
+      <link>https://www.tagesschau.de/wirtschaft/weltwirtschaft/china-eu-hybridautos-100.html</link>
+      <description>China akzeptiert EU-Handelsbeschränkungen für Hybridfahrzeuge. Doch wie nachhaltig wirkt dieses Zugeständnis? Und wie geht es in anderen Wirtschaftsbereichen weiter? Von Christoph Kober.</description>
+      <pubDate>Sat, 10 Oct 2026 12:15:19 +0200</pubDate>
+      <guid>36dcbc67-9e42-4f29-8483-30de5efe7f07</guid>
+      <dc:date>2026-10-10T10:15:19Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/wirtschaft/weltwirtschaft/china-eu-hybridautos-100.html"><img src="https://images.tagesschau.de/image/4efef81a-c289-4d21-acb7-0b1247de7efa/AAABoSVee28/AAABnSSvrFg/16x9-big/china-export-118.jpg?width=1920" alt="Chinesische Autos stehen im Hafen Yantai in der Provinz zum Export bereit | picture alliance / CFOTO" /></a> <br/> <br/>China akzeptiert EU-Handelsbeschränkungen für Hybridfahrzeuge. Doch wie nachhaltig wirkt dieses Zugeständnis? Und wie geht es in anderen Wirtschaftsbereichen weiter? <em>Von Christoph Kober.</em>[<a href="https://www.tagesschau.de/wirtschaft/weltwirtschaft/china-eu-hybridautos-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Merz sieht bei irischem Vorschlag für EU-Haushalt "keine Grundlage für Einigung"</title>
+      <link>https://www.tagesschau.de/ausland/europa/eu-haushalt-irischer-vorschlag-100.html</link>
+      <description>Die irische EU-Ratspräsidentschaft hat einen neuen Vorschlag für den nächsten EU-Haushalt vorgelegt. Die Reaktion aus Deutschland darauf ist verhalten. Kanzler Merz sieht keine Grundlage für eine Einigung. Von Kathrin Schmid.</description>
+      <pubDate>Sat, 10 Oct 2026 16:33:27 +0200</pubDate>
+      <guid>a60adeb3-c1b3-462a-88d9-4615705fe054</guid>
+      <dc:date>2026-10-10T14:33:27Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/ausland/europa/eu-haushalt-irischer-vorschlag-100.html"><img src="https://images.tagesschau.de/image/0547709e-409f-4c49-8208-5c3f57ada4dd/AAABoSYj32M/AAABnSSvrFg/16x9-big/flaggen-eu-kommission-100.jpg?width=1920" alt="EU-Fahnen wehen vor dem Gebäude EU-Kommission in Brüssel. | Michael Kappeler/dpa" /></a> <br/> <br/>Die irische EU-Ratspräsidentschaft hat einen neuen Vorschlag für den nächsten EU-Haushalt vorgelegt. Die Reaktion aus Deutschland darauf ist verhalten. Kanzler Merz sieht keine Grundlage für eine Einigung. <em>Von Kathrin Schmid.</em>[<a href="https://www.tagesschau.de/ausland/europa/eu-haushalt-irischer-vorschlag-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Grippe- und Erkältungssaison 2026/27: Was Deutschland erwartet</title>
+      <link>https://www.tagesschau.de/wissen/gesundheit/grippewelle-herbst-100.html</link>
+      <description>Die Grippewelle könnte dieses Jahr früher kommen als vermutet. Im Abwasser steigt die Menge an SARS-CoV-2. Und viele Risikogruppen haben keinen ausreichenden Schutz. Fachleute erklären, wie man sich jetzt schützen kann. Von Frank Bäumer.</description>
+      <pubDate>Sat, 10 Oct 2026 16:08:35 +0200</pubDate>
+      <guid>651f5c76-8c2b-4790-ab2f-4ef0f1e0cb6a</guid>
+      <dc:date>2026-10-10T14:08:35Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/wissen/gesundheit/grippewelle-herbst-100.html"><img src="https://images.tagesschau.de/image/7bc930e2-3f81-4085-911a-dc3730922c7f/AAABm6MI21A/AAABnSSvrFg/16x9-big/taschentuch-tee-fieberthermometer-100.jpg?width=1920" alt="Eine Hand mit einem Taschentuch ist vor einem Tisch mit Tee, Fieberthermometer und Medikamenten zu sehen. | dpa" /></a> <br/> <br/>Die Grippewelle könnte dieses Jahr früher kommen als vermutet. Im Abwasser steigt die Menge an SARS-CoV-2. Und viele Risikogruppen haben keinen ausreichenden Schutz. Fachleute erklären, wie man sich jetzt schützen kann. <em>Von Frank Bäumer.</em>[<a href="https://www.tagesschau.de/wissen/gesundheit/grippewelle-herbst-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Weg frei für Koalitionsverhandlungen in Schwerin</title>
+      <link>https://www.ndr.de/nachrichten/mecklenburg-vorpommern/landtagswahl/gruene-in-mv-stimmen-fuer-koalitionsverhandlungen-mit-spd-und-linke,mvwahl-494.html</link>
+      <description>Nach SPD und Linken haben in Mecklenburg-Vorpommern auch die Grünen für Koalitionsverhandlungen zur Bildung einer rot-rot-grünen Landesregierung gestimmt. Die Koalitionsgespräche sollen am Montag beginnen.</description>
+      <pubDate>Sat, 10 Oct 2026 20:28:58 +0200</pubDate>
+      <guid>0d33b6a1-2d6d-4300-a630-a0dfed81c262</guid>
+      <dc:date>2026-10-10T18:28:58Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.ndr.de/nachrichten/mecklenburg-vorpommern/landtagswahl/gruene-in-mv-stimmen-fuer-koalitionsverhandlungen-mit-spd-und-linke,mvwahl-494.html"><img src="https://images.tagesschau.de/image/19ca8211-6052-4ac1-8fb3-9112aa4ecf3c/AAABoLAQlbo/AAABnSSvrFg/16x9-big/schloss-schwerin-110.jpg?width=1920" alt="Blick auf das Schweriner Schloss | Jens Büttner/dpa" /></a> <br/> <br/>Nach SPD und Linken haben in Mecklenburg-Vorpommern auch die Grünen für Koalitionsverhandlungen zur Bildung einer rot-rot-grünen Landesregierung gestimmt. Die Koalitionsgespräche sollen am Montag beginnen.[<a href="https://www.ndr.de/nachrichten/mecklenburg-vorpommern/landtagswahl/gruene-in-mv-stimmen-fuer-koalitionsverhandlungen-mit-spd-und-linke,mvwahl-494.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Wie Start-ups in Deutschland trotz Hürden Erfolg haben können</title>
+      <link>https://www.tagesschau.de/wirtschaft/unternehmen/startup-einhorn-deutschland-100.html</link>
+      <description>Ein Berliner KI-Start-up zeigt, wie deutsche Gründer es auf die Weltbühne schaffen. Doch viele aufstrebende Unternehmen werden in ihrem Potenzial immer noch ausgebremst. Dabei gebe es viel Talent, sagt ein Gründer. Von A. Kartschall.</description>
+      <pubDate>Sat, 10 Oct 2026 15:07:24 +0200</pubDate>
+      <guid>a491e29b-0fe0-47da-9f39-b53df5698b7a</guid>
+      <dc:date>2026-10-10T13:07:24Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/wirtschaft/unternehmen/startup-einhorn-deutschland-100.html"><img src="https://images.tagesschau.de/image/2a0a3a95-82b5-4b24-bcea-cf2a341aa8a2/AAABlETincI/AAABnSSvrFg/16x9-big/startup-110.jpg?width=1920" alt="Zwei Personen an Laptop und Tablet in einem Büro. | picture alliance / Zoonar" /></a> <br/> <br/>Ein Berliner KI-Start-up zeigt, wie deutsche Gründer es auf die Weltbühne schaffen. Doch viele aufstrebende Unternehmen werden in ihrem Potenzial immer noch ausgebremst. Dabei gebe es viel Talent, sagt ein Gründer. <em>Von A. Kartschall.</em>[<a href="https://www.tagesschau.de/wirtschaft/unternehmen/startup-einhorn-deutschland-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>"Ragebait" ist Jugendwort des Jahres 2026</title>
+      <link>https://www.tagesschau.de/kultur/jugendwort-des-jahres-ragebait-102.html</link>
+      <description>Wenn provokante Inhalte in den Sozialen Medien eine Empörungswelle auslösen, dann heißt das bei Jugendlichen "Ragebait", auf Deutsch etwa: "Wutköder". Der Begriff ist das Jugendwort des Jahres 2026.</description>
+      <pubDate>Sat, 10 Oct 2026 14:00:48 +0200</pubDate>
+      <guid>4553314e-e361-484e-8f04-3df28e7e0103</guid>
+      <dc:date>2026-10-10T12:00:48Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/kultur/jugendwort-des-jahres-ragebait-102.html"><img src="https://images.tagesschau.de/image/e090f6b5-4eda-456f-8bcf-815be4f28154/AAABoSWv6h0/AAABnSSvrFg/16x9-big/ragebait-jugendwort-100.jpg?width=1920" alt="Auf einem Smartphone steht: "Das ist ein typischer Ragebait-Post" | Marcus Brandt/dpa" /></a> <br/> <br/>Wenn provokante Inhalte in den Sozialen Medien eine Empörungswelle auslösen, dann heißt das bei Jugendlichen "Ragebait", auf Deutsch etwa: "Wutköder". Der Begriff ist das Jugendwort des Jahres 2026.[<a href="https://www.tagesschau.de/kultur/jugendwort-des-jahres-ragebait-102.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Nkunkus Hattrick düpiert ganz schwache Eintracht</title>
+      <link>https://www.sportschau.de/fussball/bundesliga/nkunkus-hattrick-duepiert-eine-ganz-schwache-eintracht,spielbericht-rb-leipzig-eintracht-frankfurt-106.html</link>
+      <description>RB Leipzig hat Eintracht Frankfurt im Abendspiel der Bundesliga deutlich mit 6:0 geschlagen. Christopher Nkunku sorgte mit einem Hattrick schon vor der Pause für klare Verhältnisse.</description>
+      <pubDate>Sat, 10 Oct 2026 21:55:46 +0200</pubDate>
+      <guid>17b2832b-7f0b-4e8a-8fd3-8e3919469661</guid>
+      <dc:date>2026-10-10T19:55:46Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.sportschau.de/fussball/bundesliga/nkunkus-hattrick-duepiert-eine-ganz-schwache-eintracht,spielbericht-rb-leipzig-eintracht-frankfurt-106.html"><img src="https://images.sportschau.de/image/919ef26d-e311-4901-841c-15694248a2fc/AAABoSbpQuc/AAABnSSvrFg/16x9-big/nkunku-jubel-spielbericht-100.jpg?width=1920" alt="Torjubel von Christopher Nkunku  | IMAGO/Lobeca" /></a> <br/> <br/>RB Leipzig hat Eintracht Frankfurt im Abendspiel der Bundesliga deutlich mit 6:0 geschlagen. Christopher Nkunku sorgte mit einem Hattrick schon vor der Pause für klare Verhältnisse.[<a href="https://www.sportschau.de/fussball/bundesliga/nkunkus-hattrick-duepiert-eine-ganz-schwache-eintracht,spielbericht-rb-leipzig-eintracht-frankfurt-106.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Neuer kassiert schnellstes Tor der Bundesliga-Geschichte</title>
+      <link>https://www.sportschau.de/regional/br/br-nach-neuer-klops-fc-bayern-patzt-erneut-gegen-angstgegner-fca-102.html</link>
+      <description>Nach der Länderspielpause patzt der FC Bayern München im bayerischen Bundesliga-Duell beim Angstgegner FC Augsburg. Im Mittelpunkt: Manuel Neuer und Robin Fellhauers Bundesliga-Rekord.</description>
+      <pubDate>Sat, 10 Oct 2026 17:53:09 +0200</pubDate>
+      <guid>sportschau_fm-story-br24-VXe4V4o</guid>
+      <dc:date>2026-10-10T15:53:09Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.sportschau.de/regional/br/br-nach-neuer-klops-fc-bayern-patzt-erneut-gegen-angstgegner-fca-102.html"><img src="https://images.sportschau.de/image/a12ce478-7eaf-4c70-b08f-c21742a8c4d9/AAABoSaK_T0/AAABnSSvrFg/16x9-big/br-fcb-torwart-manuel-neuer-patzte-beim-0-100.jpg?width=1920" alt="FCB-Torwart Manuel Neuer patzte beim 0:1 | picture-alliance/dpa" /></a> <br/> <br/>Nach der Länderspielpause patzt der FC Bayern München im bayerischen Bundesliga-Duell beim Angstgegner FC Augsburg. Im Mittelpunkt: Manuel Neuer und Robin Fellhauers Bundesliga-Rekord.[<a href="https://www.sportschau.de/regional/br/br-nach-neuer-klops-fc-bayern-patzt-erneut-gegen-angstgegner-fca-102.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Muheims Traumtor gegen Hoffenheim lässt Hamburg eskalieren</title>
+      <link>https://www.sportschau.de/fussball/bundesliga/903-traumtor-laesst-hamburg-eskalieren,spielbericht-tsg-hoffenheim-hamburger-sv-102.html</link>
+      <description>Mehrere zurückgenommene Treffer, ein Platzverweis, eine Verletzung und ein spätes Traumtor zum Sieg - die Partie zwischen Hoffenheim und Hamburg hatte wirklich alles.</description>
+      <pubDate>Sat, 10 Oct 2026 17:49:44 +0200</pubDate>
+      <guid>22780e00-e48e-4809-b0f3-034147dda630</guid>
+      <dc:date>2026-10-10T15:49:44Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.sportschau.de/fussball/bundesliga/903-traumtor-laesst-hamburg-eskalieren,spielbericht-tsg-hoffenheim-hamburger-sv-102.html"><img src="https://images.sportschau.de/image/a205bb46-adbb-4891-abb4-7514e2e118af/AAABoSZ3WSI/AAABnSSvrFg/16x9-big/tsg-hsv-106.jpg?width=1920" alt="Miro Muheim jubelt | WITTERS/JoergHalisch" /></a> <br/> <br/>Mehrere zurückgenommene Treffer, ein Platzverweis, eine Verletzung und ein spätes Traumtor zum Sieg - die Partie zwischen Hoffenheim und Hamburg hatte wirklich alles.[<a href="https://www.sportschau.de/fussball/bundesliga/903-traumtor-laesst-hamburg-eskalieren,spielbericht-tsg-hoffenheim-hamburger-sv-102.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Wende bei Ronaldo? Präsident überrascht mit Aussage</title>
+      <link>https://www.sportschau.de/fussball/portugals-verband-suspendiert-ronaldo-vorlaeufig,portugal-suspendirt-ronaldo-vorlaeufig-100.html</link>
+      <description>Der portugiesische Fußball-Verband FPF hat ein Disziplinarverfahren gegen Cristiano Ronaldo eröffnet und den Superstar vorläufig suspendiert. Doch kurz danach schlug der Verbandspräsident versöhnliche Töne an.</description>
+      <pubDate>Sat, 10 Oct 2026 17:58:49 +0200</pubDate>
+      <guid>2cb10024-1597-403d-8dff-391e41e4155d</guid>
+      <dc:date>2026-10-10T15:58:49Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.sportschau.de/fussball/portugals-verband-suspendiert-ronaldo-vorlaeufig,portugal-suspendirt-ronaldo-vorlaeufig-100.html"><img src="https://images.sportschau.de/image/3c4b1d96-14e7-4815-a705-00694ea1ad5e/AAABoSYRNbA/AAABnSSvrFg/16x9-big/ronaldo-portugal-104.jpg?width=1920" alt="Cristiano Ronaldo | AFP" /></a> <br/> <br/>Der portugiesische Fußball-Verband FPF hat ein Disziplinarverfahren gegen Cristiano Ronaldo eröffnet und den Superstar vorläufig suspendiert. Doch kurz danach schlug der Verbandspräsident versöhnliche Töne an.[<a href="https://www.sportschau.de/fussball/portugals-verband-suspendiert-ronaldo-vorlaeufig,portugal-suspendirt-ronaldo-vorlaeufig-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Wellen in Kalifornien, Smog in Singapur, Nebel in Hessen</title>
+      <link>https://www.tagesschau.de/multimedia/bilder/blickpunkte-10496.html</link>
+      <description>Wellen in Kalifornien, Smog in Singapur, Nebel in Hessen</description>
+      <pubDate>Sat, 10 Oct 2026 10:59:24 +0200</pubDate>
+      <guid>e81d86b9-738a-479d-a43d-320cc58514ca</guid>
+      <dc:date>2026-10-10T08:59:24Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/multimedia/bilder/blickpunkte-10496.html"><img src="https://images.tagesschau.de/image/9c16e31a-8332-40ac-b869-5a289be7803a/AAABoSTDJhc/AAABnSSvrFg/16x9-big/wellen-haeuser-100.jpg?width=1920" alt="Zwei Personen stehen auf dem Balkon eines Hauses und beobachten, wie eine große Welle gegen eine Ufermauer prallt. | Getty Images via AFP" /></a> <br/> <br/>[<a href="https://www.tagesschau.de/multimedia/bilder/blickpunkte-10496.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>tagesthemen</title>
+      <link>https://www.tagesschau.de/tagesthemen/tt-12908.html</link>
+      <description>tagesthemen</description>
+      <pubDate>Sun, 11 Oct 2026 00:00:37 +0200</pubDate>
+      <guid>503c20b1-8cd1-4deb-b0d1-0151c4c21709</guid>
+      <dc:date>2026-10-10T22:00:37Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/tagesthemen/tt-12908.html"></a> <br/> <br/>[<a href="https://www.tagesschau.de/tagesthemen/tt-12908.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>tagesschau in 100 Sekunden</title>
+      <link>https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1664164.html</link>
+      <description>tagesschau in 100 Sekunden</description>
+      <pubDate>Sun, 11 Oct 2026 02:48:25 +0200</pubDate>
+      <guid>4b66bb7a-0a17-4852-89c3-33825e23493b</guid>
+      <dc:date>2026-10-11T00:48:25Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1664164.html"><img src="https://images.tagesschau.de/image/70db4687-bd12-4d5b-beff-42a7b4ffedae/AAABoShtLfQ/AAABnSSvrFg/16x9-big/sendungsbild-1809646.jpg?width=1920" alt="Sendungsbild | ARD-aktuell" /></a> <br/> <br/>tagesschau in 100 Sekunden[<a href="https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1664164.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>tagesschau</title>
+      <link>https://www.tagesschau.de/tagesschau_20_uhr/ts-81370.html</link>
+      <description>tagesschau</description>
+      <pubDate>Sat, 10 Oct 2026 20:16:35 +0200</pubDate>
+      <guid>9d2bc3b2-063f-4fd9-8145-7b5904e5c4a4</guid>
+      <dc:date>2026-10-10T18:16:35Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/tagesschau_20_uhr/ts-81370.html"></a> <br/> <br/>[<a href="https://www.tagesschau.de/tagesschau_20_uhr/ts-81370.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>tagesschau</title>
+      <link>https://www.tagesschau.de/tagesschau/ts-81372.html</link>
+      <description>tagesschau</description>
+      <pubDate>Sat, 10 Oct 2026 17:59:11 +0200</pubDate>
+      <guid>95acbbf0-3085-4d6a-b86a-1e7e4da7e245</guid>
+      <dc:date>2026-10-10T15:59:11Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/tagesschau/ts-81372.html"></a> <br/> <br/>[<a href="https://www.tagesschau.de/tagesschau/ts-81372.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>tagesschau in Einfacher Sprache</title>
+      <link>https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1462.html</link>
+      <description>tagesschau in Einfacher Sprache</description>
+      <pubDate>Sat, 03 Oct 2026 06:00:23 +0200</pubDate>
+      <guid>7a5a08b8-1e05-4455-83a4-e4117f796928</guid>
+      <dc:date>2026-10-03T04:00:23Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1462.html"></a> <br/> <br/>[<a href="https://www.tagesschau.de/tagesschau_in_einfacher_sprache/tse-1462.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>tagesschau mit Gebärdensprache</title>
+      <link>https://www.tagesschau.de/tagesschau_mit_gebaerdensprache/tsg-12300.html</link>
+      <description>tagesschau mit Gebärdensprache</description>
+      <pubDate>Sat, 03 Oct 2026 06:13:04 +0200</pubDate>
+      <guid>9df9790b-d5d9-4108-a257-33181f6553d0</guid>
+      <dc:date>2026-10-03T04:13:04Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/tagesschau_mit_gebaerdensprache/tsg-12300.html"></a> <br/> <br/>[<a href="https://www.tagesschau.de/tagesschau_mit_gebaerdensprache/tsg-12300.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Vor Klausur des Präsidiums: CDU sucht den Weg aus der Krise</title>
+      <link>https://www.tagesschau.de/inland/innenpolitik/cdu-klausur-krise-100.html</link>
+      <description>Dass es gerade schwierig ist, da ist sich die CDU einig. Vor allem die Wahlniederlagen im September schmerzen noch immer. Die Partei will raus aus dem Tief und dafür - so ein Vorschlag - wieder näher an den Alltag der Menschen heranrücken.</description>
+      <pubDate>Sat, 10 Oct 2026 11:04:58 +0200</pubDate>
+      <guid>3f689331-2d74-47b5-b4bf-20691714bba5</guid>
+      <dc:date>2026-10-10T09:04:58Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/inland/innenpolitik/cdu-klausur-krise-100.html"><img src="https://images.tagesschau.de/image/d81470ee-c74e-496e-8f12-5cb55662fe34/AAABoSUO66A/AAABnSSvrFg/16x9-big/cdu-symbolbild-logo-100.jpg?width=1920" alt="Eine Person in Mantel läuft an einem CDU-Logo vorbei. | EPA" /></a> <br/> <br/>Dass es gerade schwierig ist, da ist sich die CDU einig. Vor allem die Wahlniederlagen im September schmerzen noch immer. Die Partei will raus aus dem Tief und dafür - so ein Vorschlag - wieder näher an den Alltag der Menschen heranrücken.[<a href="https://www.tagesschau.de/inland/innenpolitik/cdu-klausur-krise-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Gleichzeitig Landtagspräsident und AfD-Generalsekretär - Darf Tobias Rausch das?</title>
+      <link>https://www.mdr.de/nachrichten/sachsen-anhalt/landespolitik/politikwissenschaftler-kritisiert,rausch-doppelfunktion-100.html</link>
+      <description>Sachsen-Anhalts neuer AfD-Landtagspräsident Tobias Rausch will gleichzeitig Generalsekretär seiner Partei bleiben. Obwohl sein neues Amt eigentlich Neutralität fordert. Darf er das dann?</description>
+      <pubDate>Sat, 10 Oct 2026 16:49:16 +0200</pubDate>
+      <guid>211e1ad8-e97d-44ea-aa90-46e8f5c73b88</guid>
+      <dc:date>2026-10-10T14:49:16Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.mdr.de/nachrichten/sachsen-anhalt/landespolitik/politikwissenschaftler-kritisiert,rausch-doppelfunktion-100.html"><img src="https://images.mdr.de/image/58ead424-15fa-4250-835d-178239bbf87d/AAABoRye880/AAABnSSvrFg/16x9-big/landtag-rausch-landtagspraesident-100.jpg?width=1920" alt="Der neue Landtagspräsident von Sachsen-Anhalt Tobias Rausch sitzt im Landtag und läutet eine Glocke. | picture alliance/dpa/dpa pool | Jan Woitas" /></a> <br/> <br/>Sachsen-Anhalts neuer AfD-Landtagspräsident Tobias Rausch will gleichzeitig Generalsekretär seiner Partei bleiben. Obwohl sein neues Amt eigentlich Neutralität fordert. Darf er das dann?[<a href="https://www.mdr.de/nachrichten/sachsen-anhalt/landespolitik/politikwissenschaftler-kritisiert,rausch-doppelfunktion-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Aktuelle Stunde: Streit im Bundestag nach Wahl von AfD-Landtagspräsident</title>
+      <link>https://www.tagesschau.de/inland/innenpolitik/aktuelle-stunde-sachsen-anhalt-100.html</link>
+      <description>Die Linksfraktion hatte im Bundestag eine Aktuelle Stunde beantragt. Um den Umgang mit der AfD in Sachsen-Anhalt sollte es gehen. Es wurde eine von starken Emotionen und Zwischenrufen geprägte Debatte. Von D. Pepping.</description>
+      <pubDate>Fri, 09 Oct 2026 18:59:58 +0200</pubDate>
+      <guid>ad5c597a-9682-4d9b-9850-037967d49f06</guid>
+      <dc:date>2026-10-09T16:59:58Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/inland/innenpolitik/aktuelle-stunde-sachsen-anhalt-100.html"><img src="https://images.tagesschau.de/image/a17c1ca1-d77b-46a6-a7b5-9cbd11106c98/AAABoSF3cnU/AAABnSSvrFg/16x9-big/reichinnek-140.jpg?width=1920" alt="Heidi Reichinnek | Michael Brandt/dpa" /></a> <br/> <br/>Die Linksfraktion hatte im Bundestag eine Aktuelle Stunde beantragt. Um den Umgang mit der AfD in Sachsen-Anhalt sollte es gehen. Es wurde eine von starken Emotionen und Zwischenrufen geprägte Debatte. <em>Von D. Pepping.</em>[<a href="https://www.tagesschau.de/inland/innenpolitik/aktuelle-stunde-sachsen-anhalt-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Altkanzler Schröder bei Putins Geburtstag: Kopfschütteln, Wut, Empörung</title>
+      <link>https://www.tagesschau.de/inland/innenpolitik/russland-altkanzler-schroeder-putin-geburtstag-kritik-100.html</link>
+      <description>Kopfschütteln, Wut, Empörung: Der Besuch von Altkanzler Schröder bei Putins Geburtstag in Moskau stößt in Berlin auf Unverständnis. Zum wiederholten Mal irritiert der 82-Jährige mit seiner Nähe zum Kremlchef. Von Georg Schwarte.</description>
+      <pubDate>Fri, 09 Oct 2026 17:12:24 +0200</pubDate>
+      <guid>d8e633a8-d136-4ae4-b784-bc542627e77d</guid>
+      <dc:date>2026-10-09T15:12:24Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/inland/innenpolitik/russland-altkanzler-schroeder-putin-geburtstag-kritik-100.html"><img src="https://images.tagesschau.de/image/e4009594-a546-4422-a5e1-05a9365ec49e/AAABoSBoICY/AAABnSSvrFg/16x9-big/schroeder-putin-122.jpg?width=1920" alt="Gerhard Schröder und Wladimir Putin  | AFP PHOTO / Russian presidential press office" /></a> <br/> <br/>Kopfschütteln, Wut, Empörung: Der Besuch von Altkanzler Schröder bei Putins Geburtstag in Moskau stößt in Berlin auf Unverständnis. Zum wiederholten Mal irritiert der 82-Jährige mit seiner Nähe zum Kremlchef. <em>Von Georg Schwarte.</em>[<a href="https://www.tagesschau.de/inland/innenpolitik/russland-altkanzler-schroeder-putin-geburtstag-kritik-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Ministerin zu Kita-Gesetz: "Bildungschancen sollten von Talenten bestimmt sein"</title>
+      <link>https://www.tagesschau.de/inland/innenpolitik/kita-chancen-gesetz-bundestag-100.html</link>
+      <description>Familienministerin Prien hat im Bundestag ihr geplantes Gesetz für mehr Qualität in Kitas verteidigt. Gezielte frühkindliche Bildung führe zu mehr Chancengerechtigkeit. Aus der Opposition kam Kritik an der Finanzierung.</description>
+      <pubDate>Fri, 09 Oct 2026 19:50:26 +0200</pubDate>
+      <guid>42ba8fb9-2833-49da-a3ba-21a3c0f4a6dc</guid>
+      <dc:date>2026-10-09T17:50:26Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/inland/innenpolitik/kita-chancen-gesetz-bundestag-100.html"><img src="https://images.tagesschau.de/image/b57dc483-b518-4359-a1d9-59f8af800652/AAABoSDbrtU/AAABnSSvrFg/16x9-big/prien-156.jpg?width=1920" alt="Karin Prien | Michael Brandt/dpa" /></a> <br/> <br/>Familienministerin Prien hat im Bundestag ihr geplantes Gesetz für mehr Qualität in Kitas verteidigt. Gezielte frühkindliche Bildung führe zu mehr Chancengerechtigkeit. Aus der Opposition kam Kritik an der Finanzierung.[<a href="https://www.tagesschau.de/inland/innenpolitik/kita-chancen-gesetz-bundestag-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Trump kündigt russische Diesellieferungen an</title>
+      <link>https://www.tagesschau.de/ausland/amerika/trump-diesellieferungen-russland-100.html</link>
+      <description>Wegen der hohen Spritpreise steht Trump innenpolitisch unter wachsendem Druck. Nun verkündet der US-Präsident einen Deal mit Russland, der die Lieferung von zunächst 300.000 Tonnen Diesel für die USA und den Weltmarkt umfasst. Kiew ist empört.</description>
+      <pubDate>Sat, 10 Oct 2026 04:43:04 +0200</pubDate>
+      <guid>237c93a2-7d5a-4666-85c2-10bd88f62056</guid>
+      <dc:date>2026-10-10T02:43:04Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/ausland/amerika/trump-diesellieferungen-russland-100.html"><img src="https://images.tagesschau.de/image/c49f24bf-a6e7-43b3-bd27-2a24aade3ba4/AAABoSKxMR8/AAABnSSvrFg/16x9-big/trump-5322.jpg?width=1920" alt="US-Präsident Donald Trump | REUTERS" /></a> <br/> <br/>Wegen der hohen Spritpreise steht Trump innenpolitisch unter wachsendem Druck. Nun verkündet der US-Präsident einen Deal mit Russland, der die Lieferung von zunächst 300.000 Tonnen Diesel für die USA und den Weltmarkt umfasst. Kiew ist empört.[<a href="https://www.tagesschau.de/ausland/amerika/trump-diesellieferungen-russland-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Auch Republikaner über geplante Live-Hinrichtung entsetzt</title>
+      <link>https://www.tagesschau.de/ausland/amerika/usa-todesstrafe-106.html</link>
+      <description>Eine Militärhinrichtung im Livestream: In den USA wird kontrovers über die Ankündigung des Verteidigungsministers diskutiert. Die Rede ist von Methoden wie bei der IS-Miliz. Auch Vizepräsident Vance geht auf Distanz. Von Nina Barth.</description>
+      <pubDate>Sat, 10 Oct 2026 05:56:30 +0200</pubDate>
+      <guid>ade38547-ac01-4f74-82e1-b4d7aa88f37d</guid>
+      <dc:date>2026-10-10T03:56:30Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/ausland/amerika/usa-todesstrafe-106.html"><img src="https://images.tagesschau.de/image/79e223bb-bb7a-4185-b69e-5f9a68efaf90/AAABoSP0iHg/AAABnSSvrFg/16x9-big/proteste-todesstrafe-100.jpg?width=1920" alt="Gegner der Todesstrafe demonstrieren in Nashville, Tennessee, mit einem Plakat.  | AP Photo/George Walker IV" /></a> <br/> <br/>Eine Militärhinrichtung im Livestream: In den USA wird kontrovers über die Ankündigung des Verteidigungsministers diskutiert. Die Rede ist von Methoden wie bei der IS-Miliz. Auch Vizepräsident Vance geht auf Distanz. <em>Von Nina Barth.</em>[<a href="https://www.tagesschau.de/ausland/amerika/usa-todesstrafe-106.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Mehrere Tote durch russische Angriffe auf Saporischschja</title>
+      <link>https://www.tagesschau.de/ausland/europa/ukraine-russland-angriffe-saporischschja-104.html</link>
+      <description>Während in Miami über Hilfe für die Ukraine und Wege hin zu einem Ende des russischen Angriffskrieges beraten wird, setzt Moskau seine Attacken fort. In der Region Saporischschja gab es mehrere Todesopfer. Auch Kiew wurde erneut attackiert.</description>
+      <pubDate>Sat, 10 Oct 2026 18:05:24 +0200</pubDate>
+      <guid>a13619e9-db33-47c4-93b6-f4aa6b713fe3</guid>
+      <dc:date>2026-10-10T16:05:24Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/ausland/europa/ukraine-russland-angriffe-saporischschja-104.html"><img src="https://images.tagesschau.de/image/53230fcf-9628-494b-898b-63cf1a3e8352/AAABoSVy9Do/AAABnSSvrFg/16x9-big/ukraine-saporischschja-angriffe-100.jpg?width=1920" alt="Rettungskräfte durchsuchen ein stark zerstörtes Gebäude in Saporischschja. | EPA" /></a> <br/> <br/>Während in Miami über Hilfe für die Ukraine und Wege hin zu einem Ende des russischen Angriffskrieges beraten wird, setzt Moskau seine Attacken fort. In der Region Saporischschja gab es mehrere Todesopfer. Auch Kiew wurde erneut attackiert.[<a href="https://www.tagesschau.de/ausland/europa/ukraine-russland-angriffe-saporischschja-104.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Hurrikan "Isaias" trifft auf US-Golfküste</title>
+      <link>https://www.tagesschau.de/ausland/amerika/usa-hurrikan-isaias-102.html</link>
+      <description>Mit "Isaias" ist der erste Hurrikan der Saison auf die US-Küste getroffen. Er brachte heftige Regenfälle mit sich, in Hunderttausenden Haushalten fiel der Strom aus. Inzwischen hat sich der Sturm aber deutlich abgeschwächt.</description>
+      <pubDate>Sat, 10 Oct 2026 14:44:57 +0200</pubDate>
+      <guid>867bb2fd-92b1-42c0-b6a4-d9e00483992a</guid>
+      <dc:date>2026-10-10T12:44:57Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/ausland/amerika/usa-hurrikan-isaias-102.html"><img src="https://images.tagesschau.de/image/f58f69cc-3816-42c6-89e6-0513df9fee77/AAABoSSq4iU/AAABnSSvrFg/16x9-big/usa-hurrikan-isaias-106.jpg?width=1920" alt="Ein Mann schiebt ein Auto auf einer von Regen überfluteten Straße. | via REUTERS" /></a> <br/> <br/>Mit "Isaias" ist der erste Hurrikan der Saison auf die US-Küste getroffen. Er brachte heftige Regenfälle mit sich, in Hunderttausenden Haushalten fiel der Strom aus. Inzwischen hat sich der Sturm aber deutlich abgeschwächt.[<a href="https://www.tagesschau.de/ausland/amerika/usa-hurrikan-isaias-102.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Gründer der indischen "Kakerlaken"-Bewegung festgenommen</title>
+      <link>https://www.tagesschau.de/ausland/asien/indien-festnahme-gruender-kakerlaken-bewegung-100.html</link>
+      <description>In Indien sind Tausende, meist jugendliche Anhänger der "Kakerlaken"-Bewegung festgenommen worden. Im ganzen Land gab es Proteste gegen die Wahlkommission. Bereits im Vorfeld war der Gründer der Bewegung festgesetzt worden.</description>
+      <pubDate>Sat, 10 Oct 2026 13:08:42 +0200</pubDate>
+      <guid>1fb7708b-11d6-43c9-ba56-4a3d71988d09</guid>
+      <dc:date>2026-10-10T11:08:42Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/ausland/asien/indien-festnahme-gruender-kakerlaken-bewegung-100.html"><img src="https://images.tagesschau.de/image/322cbdbe-fffc-4a1d-8e06-04fc29f03829/AAABoSTfTe8/AAABnSSvrFg/16x9-big/abhijeet-dipke-kakerlaken-100.jpg?width=1920" alt="Abhijeet Dipke | EPA" /></a> <br/> <br/>In Indien sind Tausende, meist jugendliche Anhänger der "Kakerlaken"-Bewegung festgenommen worden. Im ganzen Land gab es Proteste gegen die Wahlkommission. Bereits im Vorfeld war der Gründer der Bewegung festgesetzt worden.[<a href="https://www.tagesschau.de/ausland/asien/indien-festnahme-gruender-kakerlaken-bewegung-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Nord-Stream-Anschlag: Diese Indizien belasten den mutmaßlichen Saboteur</title>
+      <link>https://www.tagesschau.de/investigativ/ndr-wdr/nordstream-anschlag-prozess-olg-hamburg-100.html</link>
+      <description>In wenigen Tagen steht der mutmaßliche Anführer des Sabotage-Kommandos vor dem Hamburger Oberlandesgericht. Welche Indizien sprechen dafür, dass er mit seinem Team die Nord-Stream-Gasröhren in der Ostsee gesprengt hat?</description>
+      <pubDate>Thu, 08 Oct 2026 09:01:10 +0200</pubDate>
+      <guid>3ddba279-14c8-4586-aac0-7bf76d511bc1</guid>
+      <dc:date>2026-10-08T07:01:10Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/investigativ/ndr-wdr/nordstream-anschlag-prozess-olg-hamburg-100.html"><img src="https://images.tagesschau.de/image/ae626660-fa62-428e-8c94-caaee223b3b8/AAABoRaI6b0/AAABnSSvrFg/16x9-big/nord-stream-sabotage-103.jpg?width=1920" alt="Wellen im Wasser über dem Gasleck der Nord-Stream-Pipeline in der Ostsee, Archivbild | AP" /></a> <br/> <br/>In wenigen Tagen steht der mutmaßliche Anführer des Sabotage-Kommandos vor dem Hamburger Oberlandesgericht. Welche Indizien sprechen dafür, dass er mit seinem Team die Nord-Stream-Gasröhren in der Ostsee gesprengt hat?[<a href="https://www.tagesschau.de/investigativ/ndr-wdr/nordstream-anschlag-prozess-olg-hamburg-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>BR-Recherche zu Pestiziden - Mehr als 50 Wirkstoffe scheitern an EU-Prüfung</title>
+      <link>https://www.tagesschau.de/investigativ/br-recherche/eu-neuregelung-pestizid-zulassung-100.html</link>
+      <description>Mehr als 50 Pestizid-Wirkstoffe sind seit 2011 bei der Wiederzulassung in der EU durchgefallen, zeigt eine Analyse von BR Data. Genau diese Überprüfung will die EU-Kommission abschaffen. Wissenschaftler befürchten Risiken für Mensch und Umwelt.</description>
+      <pubDate>Wed, 07 Oct 2026 06:00:21 +0200</pubDate>
+      <guid>03d09f07-fd95-4b6e-a8bc-def2c44eb457</guid>
+      <dc:date>2026-10-07T04:00:21Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/investigativ/br-recherche/eu-neuregelung-pestizid-zulassung-100.html"><img src="https://images.tagesschau.de/image/3ee9a1bd-d33e-4a36-a7e7-749bc2160f20/AAABoRCQVcs/AAABnSSvrFg/16x9-big/traktor-aussaat-100.jpg?width=1920" alt="Ein Traktor zieht eine Egge über ein Feld und bereitet den Boden auf die Aussaat vor. | dpa" /></a> <br/> <br/>Mehr als 50 Pestizid-Wirkstoffe sind seit 2011 bei der Wiederzulassung in der EU durchgefallen, zeigt eine Analyse von <em>BR Data</em>. Genau diese Überprüfung will die EU-Kommission abschaffen. Wissenschaftler befürchten Risiken für Mensch und Umwelt.[<a href="https://www.tagesschau.de/investigativ/br-recherche/eu-neuregelung-pestizid-zulassung-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Fake-Videos aus Russland sollen Vertrauen in Wahlen erschüttern</title>
+      <link>https://www.tagesschau.de/faktenfinder/fakes-wahlen-mecklenburg-vorpommern-berlin-100.html</link>
+      <description>Zu den Wahlen in Mecklenburg-Vorpommern und Berlin verbreiten sich Videos, die angebliche Wahlmanipulation zeigen. Vieles deutet auf eine russische Einflusskampagne hin, die Zweifel säen soll. Von C. Reveland und P. Siggelkow.</description>
+      <pubDate>Mon, 21 Sep 2026 14:40:45 +0200</pubDate>
+      <guid>d01ffa27-f2e4-4b81-a1cb-4a972df6bf91</guid>
+      <dc:date>2026-09-21T12:40:45Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/faktenfinder/fakes-wahlen-mecklenburg-vorpommern-berlin-100.html"><img src="https://images.tagesschau.de/image/9563963b-b53f-448a-a844-63ac600ee9a5/AAABoL8zju0/AAABnSSvrFg/16x9-big/wahlhelfer-briefwahl-berlin-100.jpg?width=1920" alt="Ein Wahlhelfer bereitet im Velodrom Wahlbriefe für die Auszählung der Briefwahl vor.  | Katharina Kausche/dpa" /></a> <br/> <br/>Zu den Wahlen in Mecklenburg-Vorpommern und Berlin verbreiten sich Videos, die angebliche Wahlmanipulation zeigen. Vieles deutet auf eine russische Einflusskampagne hin, die Zweifel säen soll. <em>Von C. Reveland und P. Siggelkow.</em>[<a href="https://www.tagesschau.de/faktenfinder/fakes-wahlen-mecklenburg-vorpommern-berlin-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Umweltschutz: Tierbestände nehmen laut WWF stark ab</title>
+      <link>https://www.tagesschau.de/wissen/tiere/wwf-wildtierbestand-100.html</link>
+      <description>Viele Wildtierbestände nehmen einem WWF-Bericht zufolge dramatisch ab. Doch es gibt auch positive Nachrichten: Einzelne Bestände konnten sich durch Fangquoten oder gezielten Artenschutz erholen.</description>
+      <pubDate>Thu, 08 Oct 2026 08:41:25 +0200</pubDate>
+      <guid>c6503dc0-ad74-4a5c-8dac-092effd313b3</guid>
+      <dc:date>2026-10-08T06:41:25Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/wissen/tiere/wwf-wildtierbestand-100.html"><img src="https://images.tagesschau.de/image/0c4e0904-90c5-4b65-82bf-982560de7ed8/AAABnd0fG8k/AAABnSSvrFg/16x9-big/thunfisch-120.jpg?width=1920" alt="Ein Thunfisch springt aus dem Wasser. | Kasper Nyberg, Öresund Aquarium" /></a> <br/> <br/>Viele Wildtierbestände nehmen einem WWF-Bericht zufolge dramatisch ab. Doch es gibt auch positive Nachrichten: Einzelne Bestände konnten sich durch Fangquoten oder gezielten Artenschutz erholen.[<a href="https://www.tagesschau.de/wissen/tiere/wwf-wildtierbestand-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Immobilienmarkt: Steigende Preise trotz sinkender Nachfrage</title>
+      <link>https://www.tagesschau.de/wirtschaft/verbraucher/hauskauf-wohnungskauf-kaufkraft-100.html</link>
+      <description>Die Preise für Wohnimmobilien legen weiter zu - obwohl Baukredite sehr teuer geworden sind und sich weniger Menschen eine Eigentumswohnung oder ein Haus leisten können. Wie passt das zusammen? Von Heidi Radvilas</description>
+      <pubDate>Sat, 10 Oct 2026 08:32:43 +0200</pubDate>
+      <guid>e53abee8-2acf-4c94-a651-b44fc59d1825</guid>
+      <dc:date>2026-10-10T06:32:43Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/wirtschaft/verbraucher/hauskauf-wohnungskauf-kaufkraft-100.html"><img src="https://images.tagesschau.de/image/040b7883-fb47-4188-802b-7d0feb5ee3b5/AAABoRZv2sY/AAABnSSvrFg/16x9-big/immobilien-266.jpg?width=1920" alt="Neubauwohnungen, Insel Eiswerder. | picture alliance / imageBROKER" /></a> <br/> <br/>Die Preise für Wohnimmobilien legen weiter zu - obwohl Baukredite sehr teuer geworden sind und sich weniger Menschen eine Eigentumswohnung oder ein Haus leisten können. Wie passt das zusammen? <em>Von Heidi Radvilas</em>[<a href="https://www.tagesschau.de/wirtschaft/verbraucher/hauskauf-wohnungskauf-kaufkraft-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Bahn will bis 2031 weniger wichtige Strecken sanieren bisher geplant</title>
+      <link>https://www.tagesschau.de/wirtschaft/unternehmen/bahn-saniert-weniger-wichtige-strecken-100.html</link>
+      <description>Die Deutsche Bahn kommt bei ihrer Generalsanierung langsamer voran als gedacht. In den kommenden fünf Jahren sollen erheblich weniger Hauptstrecken saniert werden als bisher geplant.</description>
+      <pubDate>Fri, 09 Oct 2026 14:34:02 +0200</pubDate>
+      <guid>a009da98-1525-45a6-be83-c83e6e92415e</guid>
+      <dc:date>2026-10-09T12:34:02Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/wirtschaft/unternehmen/bahn-saniert-weniger-wichtige-strecken-100.html"><img src="https://images.tagesschau.de/image/c728a3c8-8196-4280-8024-6efe9fe96649/AAABn9Y3WjY/AAABnSSvrFg/16x9-big/swr-58836.jpg?width=1920" alt="Generalsanierung auf der rechten Rheinseite | SWR" /></a> <br/> <br/>Die Deutsche Bahn kommt bei ihrer Generalsanierung langsamer voran als gedacht. In den kommenden fünf Jahren sollen erheblich weniger Hauptstrecken saniert werden als bisher geplant.[<a href="https://www.tagesschau.de/wirtschaft/unternehmen/bahn-saniert-weniger-wichtige-strecken-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Ist die Deutsche Bahn unter Konzernchefin Palla auf dem richtigen Weg?</title>
+      <link>https://www.tagesschau.de/wirtschaft/unternehmen/bahn-palla-bilanz-100.html</link>
+      <description>Seit gut einem Jahr ist Evelyn Palla Chefin der Deutschen Bahn. Die Managerin hat eine Bahn versprochen, die "stolz macht". Wie weit ist sie dabei schon gekommen? Von M. Schuster und J. Thürmer.</description>
+      <pubDate>Fri, 09 Oct 2026 16:17:27 +0200</pubDate>
+      <guid>0b7efd2f-21fe-4648-a4a9-0ab22d6eee4c</guid>
+      <dc:date>2026-10-09T14:17:27Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/wirtschaft/unternehmen/bahn-palla-bilanz-100.html"><img src="https://images.tagesschau.de/image/13fb0efd-04b3-4cf7-a6a1-11982d757699/AAABoSBdrKg/AAABnSSvrFg/16x9-big/palla-110.jpg?width=1920" alt="Evelyn Palla | picture alliance / Ipon" /></a> <br/> <br/>Seit gut einem Jahr ist Evelyn Palla Chefin der Deutschen Bahn. Die Managerin hat eine Bahn versprochen, die "stolz macht". Wie weit ist sie dabei schon gekommen? <em>Von M. Schuster und J. Thürmer.</em>[<a href="https://www.tagesschau.de/wirtschaft/unternehmen/bahn-palla-bilanz-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Warum Deutschland bei Betriebsrenten Nachholbedarf hat</title>
+      <link>https://www.tagesschau.de/wirtschaft/finanzen/betriebsrente-deutschland-100.html</link>
+      <description>Betriebsrenten sind in anderen Ländern viel stärker verbreitet als in Deutschland. Für Arbeitgeber werden sie angesichts des Fachkräftemangels immer wichtiger, um Mitarbeiter zu gewinnen. Von Claudia Wehrle.</description>
+      <pubDate>Fri, 09 Oct 2026 08:43:59 +0200</pubDate>
+      <guid>6c06f936-222d-405a-8ae2-6ffc5f169206</guid>
+      <dc:date>2026-10-09T06:43:59Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/wirtschaft/finanzen/betriebsrente-deutschland-100.html"><img src="https://images.tagesschau.de/image/33d5a64f-15e5-4dc6-a8ab-90120c08cf9c/AAABoRW3FJU/AAABnSSvrFg/16x9-big/betriebsrente-120.jpg?width=1920" alt="Ein Mitarbeiter überprüft ein Digitalradio nach der Montage. | picture alliance/dpa" /></a> <br/> <br/>Betriebsrenten sind in anderen Ländern viel stärker verbreitet als in Deutschland. Für Arbeitgeber werden sie angesichts des Fachkräftemangels immer wichtiger, um Mitarbeiter zu gewinnen. <em>Von Claudia Wehrle.</em>[<a href="https://www.tagesschau.de/wirtschaft/finanzen/betriebsrente-deutschland-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Spritpreis-Entlastung: Was bringt der "Tankrabatt" den Autofahrern?</title>
+      <link>https://www.tagesschau.de/wirtschaft/energie/tankrabatt-spritpreise-entlastung-autofahrer-100.html</link>
+      <description>Seit einer Woche gibt es den neuen "Tankrabatt". Experten zufolge kommt die Entlastung zwar nicht vollständig bei Autofahrern an - aber größtenteils. Und doch hält sich die Begeisterung an den Zapfsäulen in Grenzen. Von T. Denzel.</description>
+      <pubDate>Fri, 09 Oct 2026 15:29:55 +0200</pubDate>
+      <guid>e69dc039-7e5e-4490-818e-477b35006b4b</guid>
+      <dc:date>2026-10-09T13:29:55Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/wirtschaft/energie/tankrabatt-spritpreise-entlastung-autofahrer-100.html"><img src="https://images.tagesschau.de/image/0777210b-ae6f-4526-b578-eff7eb0e530f/AAABoSA9wgg/AAABnSSvrFg/16x9-big/tankstelle-388.jpg?width=1920" alt="Eine Hand greift zu den Zapfsäulen an einer Tankstelle. | REUTERS" /></a> <br/> <br/>Seit einer Woche gibt es den neuen "Tankrabatt". Experten zufolge kommt die Entlastung zwar nicht vollständig bei Autofahrern an - aber größtenteils. Und doch hält sich die Begeisterung an den Zapfsäulen in Grenzen. <em>Von T. Denzel.</em>  [<a href="https://www.tagesschau.de/wirtschaft/energie/tankrabatt-spritpreise-entlastung-autofahrer-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Marktbericht: Ölpreis sinkt - DAX steigt über 25.000 Punkte</title>
+      <link>https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/marktbericht-dax-dow-geldanlage-166.html</link>
+      <description>Ende einer turbulenten Woche: Der DAX profitierte von einer Beruhigung am Ölmarkt und stieg wieder über die Marke von 25.000 Punkten. Lange Gesichter gab es aber bei den Telekom-Aktionären.</description>
+      <pubDate>Fri, 09 Oct 2026 18:10:17 +0200</pubDate>
+      <guid>d07dc871-2e81-44fc-91b6-4c667c32ce74</guid>
+      <dc:date>2026-10-09T16:10:17Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/marktbericht-dax-dow-geldanlage-166.html"><img src="https://images.tagesschau.de/image/e80f126f-3b3e-46e7-8e6c-c4ef677c80e3/AAABn8aD4T8/AAABnSSvrFg/16x9-big/boerse-354.jpg?width=1920" alt="Steigender Dax-Kurs auf einer Anzeigetafel im Handelssaal der Frankfurter Börse. | picture alliance/dpa" /></a> <br/> <br/>Ende einer turbulenten Woche: Der DAX profitierte von einer Beruhigung am Ölmarkt und stieg wieder über die Marke von 25.000 Punkten. Lange Gesichter gab es aber bei den Telekom-Aktionären.[<a href="https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/marktbericht-dax-dow-geldanlage-166.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Fußball-Bundesliga: Werder Bremen punktet dank Füllkrug bei Borussia Dortmund</title>
+      <link>https://www.sportschau.de/fussball/bundesliga/fuellkrug-schockiert-seinen-ex-verein-in-der-nachspielzeit,spielbericht-borussia-dortmund-werder-bremen-104.html</link>
+      <description>Ausgerechnet Niclas Füllkrug hat Borussia Dortmund nach der langen Länderspielpause den ersten Rückschlag beschert. Der Ex-Dortmunder erzielte in der Nachspielzeit den 2:2-Ausgleich für Werder, nachdem der BVB bereits mit 2:0 geführt hatte.</description>
+      <pubDate>Fri, 09 Oct 2026 23:17:49 +0200</pubDate>
+      <guid>fb7de056-b329-498c-828f-e9d2624f7e68</guid>
+      <dc:date>2026-10-09T21:17:49Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.sportschau.de/fussball/bundesliga/fuellkrug-schockiert-seinen-ex-verein-in-der-nachspielzeit,spielbericht-borussia-dortmund-werder-bremen-104.html"><img src="https://images.sportschau.de/image/185a0442-d6a5-4425-9574-6edc5b501c1c/AAABoSKHh3c/AAABnSSvrFg/16x9-big/dortmund-bremen-136.jpg?width=1920" alt="Niclas Füllkrug bejubelt 2:2 | IMAGO/Noah Wedel" /></a> <br/> <br/>Ausgerechnet Niclas Füllkrug hat Borussia Dortmund nach der langen Länderspielpause den ersten Rückschlag beschert. Der Ex-Dortmunder erzielte in der Nachspielzeit den 2:2-Ausgleich für Werder, nachdem der BVB bereits mit 2:0 geführt hatte.[<a href="https://www.sportschau.de/fussball/bundesliga/fuellkrug-schockiert-seinen-ex-verein-in-der-nachspielzeit,spielbericht-borussia-dortmund-werder-bremen-104.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Formel 1: Sprint-Sieg für Verstappen - weil Russell spektakulär patzt</title>
+      <link>https://www.sportschau.de/motorsport/formel1/sprint-sieg-fuer-verstappen-weil-russell-spektakulaer-patzt,sprint-singapur-102.html</link>
+      <description>Nach 38 Minuten Verzögerung wegen Starkregens hat sich Max Verstappen im Red Bull den Sprint-Sieg in Singapur gesichert. George Russell patzte spektakulär. Nico Hülkenberg holte überraschend Punkte.</description>
+      <pubDate>Sat, 10 Oct 2026 12:52:06 +0200</pubDate>
+      <guid>5d0b1918-4b14-4457-b7dd-562777147e43</guid>
+      <dc:date>2026-10-10T10:52:06Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.sportschau.de/motorsport/formel1/sprint-sieg-fuer-verstappen-weil-russell-spektakulaer-patzt,sprint-singapur-102.html"><img src="https://images.sportschau.de/image/c8b26823-8f2e-49de-bd8d-907eb359e56c/AAABoSVDFeY/AAABnSSvrFg/16x9-big/rennen-formel-1-100.jpg?width=1920" alt="Max Verstappen im Red Bull | picture alliance/dpa/AP | Vincent Thian" /></a> <br/> <br/>Nach 38 Minuten Verzögerung wegen Starkregens hat sich Max Verstappen im Red Bull den Sprint-Sieg in Singapur gesichert. George Russell patzte spektakulär. Nico Hülkenberg holte überraschend Punkte.[<a href="https://www.sportschau.de/motorsport/formel1/sprint-sieg-fuer-verstappen-weil-russell-spektakulaer-patzt,sprint-singapur-102.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>So fordert die Verleihung des Literaturnobelpreises die Buchbranche</title>
+      <link>https://www.tagesschau.de/kultur/literatur-nobelpreis-effekt-100.html</link>
+      <description>Ist der Literaturnobelpreis verliehen, steigt die Nachfrage nach den Büchern. Der sogenannte Nobelpreis-Effekt stellt Buchhandlungen regelmäßig vor Herausforderungen. Doch nicht alle Preisträger profitieren gleich viel. Von V. Kleber und F. Walser</description>
+      <pubDate>Fri, 09 Oct 2026 13:37:15 +0200</pubDate>
+      <guid>d36687d4-2ae5-4351-b568-dfaececfb01e</guid>
+      <dc:date>2026-10-09T11:37:15Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/kultur/literatur-nobelpreis-effekt-100.html"><img src="https://images.tagesschau.de/image/67c046b5-37ad-429c-8b8a-17cc7abaa068/AAABoR_-2zk/AAABnSSvrFg/16x9-big/carson-buch-100.jpg?width=1920" alt="Ein Mann hält ein Buch von Anne Carson in der Hand. | picture alliance/dpa" /></a> <br/> <br/>Ist der Literaturnobelpreis verliehen, steigt die Nachfrage nach den Büchern. Der sogenannte Nobelpreis-Effekt stellt Buchhandlungen regelmäßig vor Herausforderungen. Doch nicht alle Preisträger profitieren gleich viel.<em> Von V. Kleber und F. Walser</em>[<a href="https://www.tagesschau.de/kultur/literatur-nobelpreis-effekt-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Anne Carson: Die Punk-Philosophin unter den Nobelpreisträgern</title>
+      <link>https://www.tagesschau.de/kultur/literaturnobelpreis-2026-anne-carson-100.html</link>
+      <description>Wer Anne Carson einmal live erlebt hat, weiß: Ihre Auftritte sind ein Ereignis. Die frisch gekürte Literaturnobelpreisträgerin begeistert mit Wissen, Witz und unbändiger Erzählfreude. Von Jan Ehlert.</description>
+      <pubDate>Thu, 08 Oct 2026 18:35:05 +0200</pubDate>
+      <guid>77d5dd88-5f8c-456b-89a1-0a3a40da23fb</guid>
+      <dc:date>2026-10-08T16:35:05Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/kultur/literaturnobelpreis-2026-anne-carson-100.html"><img src="https://images.tagesschau.de/image/d783c56b-e4a1-4265-be8d-280e627b010c/AAABoRs6948/AAABnSSvrFg/16x9-big/buecher-208.jpg?width=1920" alt="Bücher von Anne Carson liegen auf einem Tisch. | REUTERS" /></a> <br/> <br/>Wer Anne Carson einmal live erlebt hat, weiß: Ihre Auftritte sind ein Ereignis. Die frisch gekürte Literaturnobelpreisträgerin begeistert mit Wissen, Witz und unbändiger Erzählfreude.<strong> </strong><em>Von Jan Ehlert.</em>[<a href="https://www.tagesschau.de/kultur/literaturnobelpreis-2026-anne-carson-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Wetter Deutschland: Wolken, Temperaturen, Wind und Aussichten</title>
+      <link>https://www.tagesschau.de/wetter/deutschland/wettervorhersage-deutschland-100.html</link>
+      <description>Am Sonntag tagsüber Sonne und Wolken. Im Norden wieder einige Schauer und Gewitter. Richtung Süden öfter trocken und Lichtblicke.</description>
+      <pubDate>Sat, 10 Oct 2026 19:28:41 +0200</pubDate>
+      <guid>48b3998c-6036-46af-937d-9cf4ea1829cf</guid>
+      <dc:date>2026-10-10T17:28:41Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/wetter/deutschland/wettervorhersage-deutschland-100.html"><img src="https://images.tagesschau.de/image/e7904a01-0786-494a-996d-b1dfd43b3049/AAABoSbGIa4/AAABnSSvrFg/16x9-big/teaserbild-124.jpg?width=1920" alt="teaserbild | hr" /></a> <br/> <br/>Am Sonntag tagsüber Sonne und Wolken. Im Norden wieder einige Schauer und Gewitter. Richtung Süden öfter trocken und Lichtblicke. [<a href="https://www.tagesschau.de/wetter/deutschland/wettervorhersage-deutschland-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Regenradar Deutschland: Aktueller Niederschlag</title>
+      <link>https://www.tagesschau.de/wetter/regenradar-deutschland</link>
+      <description>Das Regenradar für Deutschland von tagesschau.de: Live-Werte zum Niederschlag und Prognose für die nächsten zwei Stunden.</description>
+      <pubDate>Sat, 06 Jun 2026 17:23:12 +0200</pubDate>
+      <guid>b782647e-0ee8-4ba0-8791-e947272f5f9a</guid>
+      <dc:date>2026-06-06T15:23:12Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/wetter/regenradar-deutschland"><img src="https://images.tagesschau.de/image/1911f86f-1f5e-4de3-8f0a-8c5017842fe8/AAABn1q5B1s/AAABnSSvrFg/16x9-big/regenradar-devtest-104.jpg?width=1920" alt="Regenradar | tagesschau.de" /></a> <br/> <br/>Das Regenradar für Deutschland von <em>tagesschau.de</em>: Live-Werte zum Niederschlag und Prognose für die nächsten zwei Stunden. [<a href="https://www.tagesschau.de/wetter/regenradar-deutschland">mehr</a>]</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Podcast 15 Minuten: Audi und die Rüstung, Abstandskontrolle, Pilz-Apps</title>
+      <link>https://www.tagesschau.de/multimedia/podcast/15-minuten/15-minuten-audi-drohnen-pilz-100.html</link>
+      <description>Panzer statt Auto: Audi will Mitarbeiter an Rüstungsfirmen "verleihen". Die Polizei kontrolliert Sicherheitsabstand auf der Autobahn testweise per Drohne. Pilze sammeln im Wald - wie gut sind Pilz-Apps? Das sind die Themen im Podcast 15 Minuten.</description>
+      <pubDate>Fri, 09 Oct 2026 07:05:37 +0200</pubDate>
+      <guid>9183cd58-f910-4bc3-8732-7d00efb1568e</guid>
+      <dc:date>2026-10-09T05:05:37Z</dc:date>
+      <content:encoded><![CDATA[<p> <a href="https://www.tagesschau.de/multimedia/podcast/15-minuten/15-minuten-audi-drohnen-pilz-100.html"><img src="https://images.tagesschau.de/image/5eb354fe-6af8-421f-8fa7-9d3672600d2e/AAABmwHhz-w/AAABnSSvrFg/16x9-big/podcast-15-minuten-cover-100.jpg?width=1920" alt="15 Minuten. Der tagesschau-Podcast am Morgen | ARD-aktuell" /></a> <br/> <br/>Panzer statt Auto: Audi will Mitarbeiter an Rüstungsfirmen "verleihen". Die Polizei kontrolliert Sicherheitsabstand auf der Autobahn testweise per Drohne. Pilze sammeln im Wald - wie gut sind Pilz-Apps? Das sind die Themen im Podcast <em>15 Minuten</em>.[<a href="https://www.tagesschau.de/multimedia/podcast/15-minuten/15-minuten-audi-drohnen-pilz-100.html">mehr</a>]</p>]]></content:encoded>
+    </item>
+  </channel>
+</rss>

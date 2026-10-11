@@ -1,0 +1,18 @@
+HTTP 200
+access-control-allow-origin: *
+connection: keep-alive
+content-encoding: br
+content-security-policy: base-uri 'self'; default-src 'self' ;connect-src 'self';img-src data: https://adsbdb.com https://www.adsbdb.com
+content-type: application/json
+date: Sun, 11 Oct 2026 01:09:29 GMT
+permissions-policy: geolocation=(),midi=(),sync-xhr=(),microphone=(),camera=(),magnetometer=(),gyroscope=(),fullscreen=(self),payment=()
+referrer-policy: same-origin
+server: api.adsbdb.com v1.0.0
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+transfer-encoding: chunked
+vary: Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+
+{"response":{"flightroute":{"callsign":"EXS406","callsign_icao":"EXS406","callsign_iata":"LS406","airline":{"name":"Jet2.com","icao":"EXS","iata":"LS","country":"United Kingdom","country_iso":"GB","callsign":"CHANNEX"},"origin":{"country_iso_name":"CY","country_name":"Cyprus","elevation":41,"iata_code":"PFO","icao_code":"LCPH","latitude":34.717999,"longitude":32.485699,"municipality":"Paphos","name":"Paphos International Airport"},"destination":{"country_iso_name":"GB","country_name":"United Kingdom","elevation":681,"iata_code":"LBA","icao_code":"EGNM","latitude":53.865898,"longitude":-1.66057,"municipality":"Leeds","name":"Leeds Bradford Airport"}}}}

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Deutschlandfunk - Fortlaufende Nachrichten vom 11. Oktober 2026</title>
+    <link>https://www.deutschlandfunk.de/nachrichten-index-40316.html</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://www.deutschlandfunk.de/nachrichten-index-40316.rss" />
+    <description>></description>
+    <category>Info</category>
+    <copyright>Deutschlandradio - deutschlandradio.de</copyright>
+    <ttl>60</ttl>
+    <language>de-DE</language>
+    <pubDate>Sun, 11 Oct 2026 03:13:35 +0200</pubDate>
+    <lastBuildDate>Sun, 11 Oct 2026 03:13:35 +0200</lastBuildDate>
+    <image>
+      <url>https://bilder.deutschlandfunk.de/FI/LE/_c/d7/FILE_cd7fe2b3d944a65650ee9b89d0df82ea/dlf-die-nachrichten-cover-100-1920x1920.jpg</url>
+      <title>Deutschlandfunk - Fortlaufende Nachrichten vom 11. Oktober 2026</title>
+      <link>https://www.deutschlandfunk.de/nachrichten-index-40316.html</link>
+    </image> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791658174026-781262%22%7D%7D-->
+    <item>
+  <title>Offenbar erneuter Huthi-Angriff - Saudi-Arabien: Mindestens zwölf Tote bei Attacke auf Flughafen von Riad</title>
+  <link>https://www.deutschlandfunk.de/saudi-arabien-mindestens-zwoelf-tote-bei-attacke-auf-flughafen-von-riad-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/19/d5/4d/58/19d54d58-a0c5-4908-9cbd-17d8cc2293fb/riad-flughafen-saudi-arabien-angriff-100-768x768.jpg" alt="Dieses Bild aus einem Video, das von AP beschafft und überprüft wurde, zeigt dichten schwarzen Rauch und Flammen, die bei einem Brand am King-Khalid-Flughafen in Riad aufsteigen. " title="Dieses Bild aus einem Video, das von AP beschafft und überprüft wurde, zeigt dichten schwarzen Rauch und Flammen, die bei einem Brand am King-Khalid-Flughafen in Riad aufsteigen. " width="768" height="768" border="0" align="left" hspace="4" vspace="4"/>In Saudi-Arabien ist der internationale Flughafen in Riad erneut angegriffen worden. Wie die Luftfahrtbehörde mitteilte, wurden mindestens zwölf Menschen getötet und mehr als 300 weitere Personen verletzt.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">saudi-arabien-mindestens-zwoelf-tote-bei-attacke-auf-flughafen-von-riad-100</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791675496594-797688%22%7D%7D-->
+    <item>
+  <title>Meerenge - Behörde: Erneut Tanker in Straße von Hormus angegriffen</title>
+  <link>https://www.deutschlandfunk.de/behoerde-erneut-tanker-in-strasse-von-hormus-angegriffen-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/4f/df/bd/71/4fdfbd71-2d9d-432d-a3b8-07ac58473ee5/strasse-von-hormus-130-1920x1920.jpg" alt="Vor Sonnenaufgang liegen Frachtschiffe in der Straße von Hormus vor Bandar Abbas vor Anker. " title="Vor Sonnenaufgang liegen Frachtschiffe in der Straße von Hormus vor Bandar Abbas vor Anker. " width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>In der Straße von Hormus ist erneut ein Tanker angegriffen worden.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">behoerde-erneut-tanker-in-strasse-von-hormus-angegriffen-100</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791658174027-505229%22%7D%7D-->
+    <item>
+  <title>USA-Russland-Dieselgeschäft - US-Abkommen mit Moskau löst Zerwürfnis zwischen Trump und Selenskyj aus</title>
+  <link>https://www.deutschlandfunk.de/us-abkommen-mit-moskau-loest-zerwuerfnis-zwischen-trump-und-selenskyj-aus-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/fd/a3/26/0c/fda3260c-e45b-463e-a59f-b4223f97b8a9/symbolbild-usa-ukraine-russland-100-1920x1920.jpg" alt="Fotomontage der beteiligten Parteien für die Friedensverhandlungen: US-Präsident Donald Trump (l.), Ukraines Präsident Wolodymyr Selenskyj (M.) und Russlands Präsident Wladimir Putin." title="Fotomontage der beteiligten Parteien für die Friedensverhandlungen: US-Präsident Donald Trump (l.), Ukraines Präsident Wolodymyr Selenskyj (M.) und Russlands Präsident Wladimir Putin." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Der ukrainische Präsident Selenskyj hat die Vereinbarung zwischen den USA und Russland über Diesel-Lieferungen kritisiert und sie als Investition in die russische Kriegskasse bezeichnet. US-Präsident Trump konterte umgehend und forderte die Ablösung Selenskyjs.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">us-abkommen-mit-moskau-loest-zerwuerfnis-zwischen-trump-und-selenskyj-aus-102</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791674847609-437140%22%7D%7D-->
+    <item>
+  <title>Nach Besuch bei Putin - SPD diskutiert erneut über Parteiausschluss Schröders</title>
+  <link>https://www.deutschlandfunk.de/spd-diskutiert-erneut-ueber-parteiausschluss-schroeders-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/bc/89/ba/9d/bc89ba9d-2f1a-4fdf-9d83-f90ce25083bf/putin-schroeder-moskau-100-1280x1280.jpg" alt="Zwei Männer stehen vor einem Kamin und schütteln sich herzlich die Hände" title="Zwei Männer stehen vor einem Kamin und schütteln sich herzlich die Hände" width="1280" height="1280" border="0" align="left" hspace="4" vspace="4"/>Nach dem Besuch von Altkanzler Schröder bei der Geburtstagfeier des russischen Präsidenten Putin wird in der SPD erneut über einen Parteiausschluss diskutiert.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">spd-diskutiert-erneut-ueber-parteiausschluss-schroeders-102</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791660725896-110601%22%7D%7D-->
+    <item>
+  <title>Beratung über Konsequenzen - CDU will auf Führungsklausur nach Auswegen aus Parteikrise suchen</title>
+  <link>https://www.deutschlandfunk.de/cdu-will-auf-fuehrungsklausur-nach-auswegen-aus-parteikrise-suchen-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/2f/67/e0/d2/2f67e0d2-0952-4a58-ad1d-12b3237a3963/konrad-adenauer-haus-cdu-parteizentrale-100-1920x1920.jpg" alt="CDU-Parteizentrale - Konrad-Adenauer-Haus in Berlin." title="CDU-Parteizentrale - Konrad-Adenauer-Haus in Berlin." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Die Führungsspitze der CDU kommt in Berlin zu einer Klausursitzung zusammen, um über die jüngsten Entwicklungen der Partei zu beraten.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">cdu-will-auf-fuehrungsklausur-nach-auswegen-aus-parteikrise-suchen-100</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791665039167-976561%22%7D%7D-->
+    <item>
+  <title>Tschechien - Achtungserfolg für Opposition bei Senatswahl</title>
+  <link>https://www.deutschlandfunk.de/achtungserfolg-fuer-opposition-bei-senatswahl-104.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/28/b8/93/d6/28b893d6-ddea-4b47-a3aa-ae603b1be94a/bitcoin-prag-100-1920x1920.jpg" alt="Die Karlsbrücke in Prag bei Nacht, viele Menschen sind unterwegs, einige schauen auf das Display ihres Mobiltelefons." title="Die Karlsbrücke in Prag bei Nacht, viele Menschen sind unterwegs, einige schauen auf das Display ihres Mobiltelefons." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Bei der Wahl in Tschechien hat die Opposition ihre Mehrheit im Senat verteidigt.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">achtungserfolg-fuer-opposition-bei-senatswahl-104</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791659902064-980608%22%7D%7D-->
+    <item>
+  <title>Regierungsviertel in Berlin - Propalästinensische Demonstration sowie Gegendemonstrationen in der Hauptstadt</title>
+  <link>https://www.deutschlandfunk.de/propalaestinensische-demonstration-sowie-gegendemonstrationen-in-der-hauptstadt-106.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/c5/c6/cc/7c/c5c6cc7c-018c-4058-ba2e-01b314427ce8/berlin-israel-palaestina-100-1920x1920.jpg" alt="Teilnehmer einer Demonstration halten Palästinenserflaggen, während die Demonstration im Regierungsviertel stattfindet." title="Teilnehmer einer Demonstration halten Palästinenserflaggen, während die Demonstration im Regierungsviertel stattfindet." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>In Berlin haben sich mehrere tausend Menschen an einer propalästinensischen Demonstration beteiligt.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">propalaestinensische-demonstration-sowie-gegendemonstrationen-in-der-hauptstadt-106</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791659906128-747540%22%7D%7D-->
+    <item>
+  <title>Neu Delhi - Indische Regierung verbittet sich Kritik von Menschenrechtlern an Vorgehen gegen Demonstranten</title>
+  <link>https://www.deutschlandfunk.de/indische-regierung-verbittet-sich-kritik-von-menschenrechtlern-an-vorgehen-gegen-demonstranten-104.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/86/76/74/b0/867674b0-c6c5-4b26-9056-59d25f991798/neu-delhi-proteste-kakerlaken-cjp-100-1920x1920.jpg" alt="Polizeikräfte nehmen in Neu-Delhi eine Anhängerin der „Cockroach Janata Party“ (CJP) fest. Die Demonstrantin wird von mehreren uniformierten Polizistinnen getragen." title="Polizeikräfte nehmen in Neu-Delhi eine Anhängerin der „Cockroach Janata Party“ (CJP) fest. Die Demonstrantin wird von mehreren uniformierten Polizistinnen getragen." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Die indische Regierung verwahrt sich gegen Kritik von Menschenrechtlern an ihrem Vorgehen gegen die Massendemonstrationen in Neu-Delhi.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">indische-regierung-verbittet-sich-kritik-von-menschenrechtlern-an-vorgehen-gegen-demonstranten-104</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791671701414-476358%22%7D%7D-->
+    <item>
+  <title>USA - Sturm &quot;Isaias&quot; in Florida und Alabama: vier Tote und Hunderttausende ohne Strom - Mexiko bereitet sich auf Hurrikan &quot;Simon vor&quot;</title>
+  <link>https://www.deutschlandfunk.de/sturm-isaias-in-florida-und-alabama-vier-tote-und-hunderttausende-ohne-strom-mexiko-bereitet-sich-au-100.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/81/90/ca/55/8190ca55-711c-4d73-a8b5-e1878510c92e/usa-sturm-isaias-100-1920x1920.jpg" alt="Durch Sturm &quot;Isaias&quot; ist im US-Bundesstaat Florida ein Baum auf ein Haus gefallen." title="Durch Sturm &quot;Isaias&quot; ist im US-Bundesstaat Florida ein Baum auf ein Haus gefallen." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>In den USA sind im Zusammenhang mit Wirbelsturm "Isaias" mindestens vier Menschen ums Leben gekommen.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">sturm-isaias-in-florida-und-alabama-vier-tote-und-hunderttausende-ohne-strom-mexiko-bereitet-sich-au-100</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791658174025-260008%22%7D%7D-->
+    <item>
+  <title>EU - Merz: Irischer Vorschlag für Haushaltsentwurf &quot;keine Grundlage für Einigung&quot;</title>
+  <link>https://www.deutschlandfunk.de/merz-irischer-vorschlag-fuer-haushaltsentwurf-keine-grundlage-fuer-einigung-106.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/a2/68/4a/d9/a2684ad9-ac2e-40bd-8e48-b8806faada6a/bundeskanzler-merz-berlin-104-1920x1920.jpg" alt="Bundeskanzler Friedrich Merz (CDU) gibt nach der Landtagswahl in Mecklenburg-Vorpommern und der Abgeordnetenhauswahl in Berlin eine Pressekonferenz. " title="Bundeskanzler Friedrich Merz (CDU) gibt nach der Landtagswahl in Mecklenburg-Vorpommern und der Abgeordnetenhauswahl in Berlin eine Pressekonferenz. " width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Bundeskanzler Merz lehnt den Vorschlag der irischen Ratspräsidentschaft für den nächsten EU-Haushalt ab. Dieser sei keinerlei Grundlage für eine Einigung, sagte Merz in Berlin.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">merz-irischer-vorschlag-fuer-haushaltsentwurf-keine-grundlage-fuer-einigung-106</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791658174024-402779%22%7D%7D-->
+    <item>
+  <title>Mecklenburg-Vorpommern - Weg frei für Koalitionsverhandlungen von SPD, Linken und Grünen</title>
+  <link>https://www.deutschlandfunk.de/weg-frei-fuer-koalitionsverhandlungen-von-spd-linken-und-gruenen-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/36/b2/a3/26/36b2a326-ce91-4775-ba44-b7a2a9f3493e/manuela-schwesig-118-1920x1920.jpg" alt="Manuela Schwesig (SPD), die Ministerpräsidentin und SPD-Parteivorsitzende von Mecklenburg-Vorpommern" title="Manuela Schwesig (SPD), die Ministerpräsidentin und SPD-Parteivorsitzende von Mecklenburg-Vorpommern" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>In Mecklenburg-Vorpommern ist der Weg frei für Koalitionsverhandlungen zur Bildung einer rot-rot-grünen Landesregierung. Auch die Grünen haben sich dafür ausgesprochen. Die Delegierten fassten den Beschluss auf einem Kleinen Parteitag in Rostock. Zuvor hatte nach der SPD bereits die Linkspartei für Koalitionsverhandlungen gestimmt.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">weg-frei-fuer-koalitionsverhandlungen-von-spd-linken-und-gruenen-102</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791658174022-148569%22%7D%7D-->
+    <item>
+  <title>Nach Abgeordnetenhauswahl - Kulturstaatsminister Weimer appelliert an SPD-Vorsitz, Rot-Grün-Rot in Berlin zu verhindern</title>
+  <link>https://www.deutschlandfunk.de/kulturstaatsminister-weimer-appelliert-an-spd-vorsitz-rot-gruen-rot-in-berlin-zu-verhindern-110.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/ec/f4/17/d2/ecf417d2-9175-48a2-a38a-b6eff30e027e/wolfram-weimer-kulturstaatsminister-104-1920x1920.jpg" alt="Kulturstaatsminister Wolfram Weimer (parteilos) ist seitlich im Bild zu sehen während er spricht und mit seiner linken Hand gestekuliert" title="Kulturstaatsminister Wolfram Weimer (parteilos) ist seitlich im Bild zu sehen während er spricht und mit seiner linken Hand gestekuliert" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Kulturstaatsminister Weimer hat an die SPD-Bundesvorsitzenden Klingbeil und Bas appelliert, ein rot-grün-rotes Bündnis auf Landesebene in Berlin zu verhindern.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">kulturstaatsminister-weimer-appelliert-an-spd-vorsitz-rot-gruen-rot-in-berlin-zu-verhindern-110</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791665202934-554976%22%7D%7D-->
+    <item>
+  <title>Frankfurter Buchmesse - Friedenspreis des Deutschen Buchhandels wird an Philippe Sands übergeben</title>
+  <link>https://www.deutschlandfunk.de/friedenspreis-des-deutschen-buchhandels-wird-an-philippe-sands-uebergeben-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/5e/c2/9f/62/5ec29f62-e4a2-4eba-8bed-535a6210cb2d/philippe-sands-jurist-autor-friedenspreis-deutscher-buchhandel-100-1920x1920.jpg" alt="Der französisch-britische Jurist und Autor Philippe Sands im Porträt" title="Der französisch-britische Jurist und Autor Philippe Sands im Porträt" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Zum Abschluss der Frankfurter Buchmesse wird der Friedenspreis des Deutschen Buchhandels überreicht.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">friedenspreis-des-deutschen-buchhandels-wird-an-philippe-sands-uebergeben-102</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791658174023-102497%22%7D%7D-->
+    <item>
+  <title>Fußball-Bundesliga - Leipzig schlägt Frankfurt im Abendspiel - Neuer-Patzer sorgt im Bayern-Spiel für frühestes Tor der Bundesliga-Geschichte</title>
+  <link>https://www.deutschlandfunk.de/leipzig-schlaegt-frankfurt-im-abendspiel-neuer-patzer-sorgt-im-bayern-spiel-fuer-fruehestes-tor-der--106.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/8a/b5/56/ea/8ab556ea-87a7-4c8a-b2fe-a036406a6ecd/624306349-100-1920x1920.jpg" alt="Der Leipziger Christopher Nkunku setzt sich gegen Lilian Brassier und Torwart Noah Atubolu von Eintracht Frankfurt durch und trifft zum 4:0 ein." title="Der Leipziger Christopher Nkunku setzt sich gegen Lilian Brassier und Torwart Noah Atubolu von Eintracht Frankfurt durch und trifft zum 4:0 ein." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>RB Leipzig hat mit einem 6:0 gegen Eintracht Frankfurt den bislang höchsten Sieg des 5. Spieltags in der Fußball-Bundesliga eingefahren. Nach ihrem schwachen Saisonstart kletterten die Sachsen damit auf Platz fünf in der Tabelle.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">leipzig-schlaegt-frankfurt-im-abendspiel-neuer-patzer-sorgt-im-bayern-spiel-fuer-fruehestes-tor-der--106</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791674940070-455907%22%7D%7D-->
+    <item>
+  <title>Fußball - Portugals Verband suspendiert Ronaldo vorläufig</title>
+  <link>https://www.deutschlandfunk.de/portugals-verband-suspendiert-ronaldo-vorlaeufig-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/d3/ed/5a/a0/d3ed5aa0-6f4e-4f0c-ba7d-962d43de8001/cristiano-ronaldo-portugal-fussball-100-1920x1920.jpg" alt="Fußball-Star Cristiano Ronaldo vor einem Spiel der portugiesischen Nationalmannschaft. " title="Fußball-Star Cristiano Ronaldo vor einem Spiel der portugiesischen Nationalmannschaft. " width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Der portugiesische Fußball-Verband hat ein Disziplinarverfahren gegen Stürmer Cristiano Ronaldo eröffnet.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">portugals-verband-suspendiert-ronaldo-vorlaeufig-102</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791658174020-241095%22%7D%7D-->
+    <item>
+  <title>Palästinensergebiete - Präsident Abbas verschiebt Parlaments- und Präsidentenwahl</title>
+  <link>https://www.deutschlandfunk.de/praesident-abbas-verschiebt-parlaments-und-praesidentenwahl-106.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/77/84/0f/fb/77840ffb-71de-4ab0-a32a-f0b7007c80a2/mahmud-abbas-102-1920x1920.jpg" alt="Der Präsident der Palästinensischen Autonomiebehörde, Mahmud Abbas, bei einer Veranstaltung in Rom 2025. Er ist im Porträt gezeigt." title="Der Präsident der Palästinensischen Autonomiebehörde, Mahmud Abbas, bei einer Veranstaltung in Rom 2025. Er ist im Porträt gezeigt." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Der palästinensische Präsident Abbas hat die für Ende November geplante Parlamentswahl in den Palästinensergebieten vertagt.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">praesident-abbas-verschiebt-parlaments-und-praesidentenwahl-106</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791658199760-734387%22%7D%7D-->
+    <item>
+  <title>Mittelamerika - Verletzte und beschädigte Infrastruktur nach schweren Erdbeben in Panama</title>
+  <link>https://www.deutschlandfunk.de/verletzte-und-beschaedigte-infrastruktur-nach-schweren-erdbeben-in-panama-102.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/74/4b/16/df/744b16df-9e18-4e16-a5c0-8ab4280feaa2/panamaerdbeben-100-1920x1920.jpg" alt="Das Santo-Tomas-Krankenhauses in Panama-Stadt." title="Das Santo-Tomas-Krankenhauses in Panama-Stadt." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>In Panama haben mehrere Erdbeben Schäden angerichtet und Panik ausgelöst.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">verletzte-und-beschaedigte-infrastruktur-nach-schweren-erdbeben-in-panama-102</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791658174018-573925%22%7D%7D-->
+    <item>
+  <title>DJV - Journalisten-Verband verurteilt AfD-Drohung gegen ZDF-Reporter Köster</title>
+  <link>https://www.deutschlandfunk.de/journalisten-verband-verurteilt-afd-drohung-gegen-zdf-reporter-koester-110.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/9d/0b/90/8c/9d0b908c-ffce-45a1-9207-3c78517d486a/deutscher-journalisten-verband-logo-100-1920x1920.jpg" alt="Schild des Deutschen Journalisten-Verbandes an der Bundesgeschäftsstelle in Berlin. " title="Schild des Deutschen Journalisten-Verbandes an der Bundesgeschäftsstelle in Berlin. " width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Der Deutsche Journalisten-Verband hat die Drohung des AfD-Politikers Siegmund gegen den ZDF-Reporter Fabian Köster im Landtag von Sachsen-Anhalt verurteilt. Erst kritische Journalisten unter Druck zu setzen, dann Sender abwickeln zu wollen, sei kein Medienkonzept, sondern pure Einschüchterung, sagte der<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">journalisten-verband-verurteilt-afd-drohung-gegen-zdf-reporter-koester-110</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791658174016-449962%22%7D%7D-->
+    <item>
+  <title>Online-Abstimmung - &quot;Ragebait&quot; ist das Jugendwort des Jahres 2026</title>
+  <link>https://www.deutschlandfunk.de/ragebait-ist-das-jugendwort-des-jahres-120.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/30/ca/b9/cc/30cab9cc-adf6-4d9e-961f-e36068847c2c/jugendwort-des-jahres-112-1920x1920.jpg" alt="&quot;Jugendwort des Jahres&quot; steht in weiß auf bunt gezogenen Linien." title="&quot;Jugendwort des Jahres&quot; steht in weiß auf bunt gezogenen Linien." width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>"Ragebait" ist das Jugendwort des Jahres 2026.<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">ragebait-ist-das-jugendwort-des-jahres-120</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791658174025-930436%22%7D%7D-->
+    <item>
+  <title>Auszeichnung - Finnische Produktion erhält Europäischen Kinderfilmpreis</title>
+  <link>https://www.deutschlandfunk.de/finnische-produktion-erhaelt-europaeischen-kinderfilmpreis-110.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/d5/db/c9/93/d5dbc993-7fa2-4354-8fb2-dfc464dda806/kinderfilmfestival-schlingel-100-1920x1920.jpg" alt="Ein Banner mit dem Logo des Kinderfilmfestivals &quot;Schlingel&quot;" title="Ein Banner mit dem Logo des Kinderfilmfestivals &quot;Schlingel&quot;" width="1920" height="1920" border="0" align="left" hspace="4" vspace="4"/>Beim Internationalen Filmfestival für Kinder und junges Publikum "Schlingel" in Chemnitz hat die finnische Produktion "Winski und der Schatz der Wikinger" den Europäischen Kinderfilmpreis gewonnen. In der Begründung der Jury heißt es, "der Film von Juha Wuolijoki ist eine Story, die uns von Anfang an völlig begeistert und in ihren Bann gezogen hat".<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">finnische-produktion-erhaelt-europaeischen-kinderfilmpreis-110</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item> <!--/esi/rss-feed-index-doc.rss?drsearch%3Aprops=%7B%22itemReference%22%3A%7B%22__typename%22%3A%22SophoraReference%22%2C%22sophoraReferenceId%22%3A%22ncpower_MMT-4-SCRIPT-1791665468607-979855%22%7D%7D-->
+    <item>
+  <title>Wetter - An der Nordsee Schauer und Gewitter, sonst Auflockerungen. 10 bis 4 Grad.</title>
+  <link>https://www.deutschlandfunk.de/an-der-nordsee-schauer-und-gewitter-sonst-auflockerungen-10-bis-4-grad-110.html</link>
+  <description>
+    <![CDATA[<img src="https://bilder.deutschlandfunk.de/e5/f6/55/84/e5f65584-6dc2-4dce-979d-729a024cd599/wetter-grafik-nachrichten-100-768x768.jpg" alt="Eine Grafik in verschiedenen Blautönen zeigt Symbole für Sonne oder Mond sowie für Wolken und Regen. Darunter steht: Das Wetter." title="Eine Grafik in verschiedenen Blautönen zeigt Symbole für Sonne oder Mond sowie für Wolken und Regen. Darunter steht: Das Wetter." width="768" height="768" border="0" align="left" hspace="4" vspace="4"/>Das Wetter:<br clear="all"/><br/><p><br/></p>]]>
+  </description>
+  <guid isPermaLink="false">an-der-nordsee-schauer-und-gewitter-sonst-auflockerungen-10-bis-4-grad-110</guid>
+  <pubDate>Sun, 11 Oct 2026 02:54:18 +0200</pubDate>
+</item>
+  </channel>
+</rss>

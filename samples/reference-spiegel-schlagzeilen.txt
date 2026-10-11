@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>DER SPIEGEL - Schlagzeilen</title>
+<link>https://www.spiegel.de/</link>
+<description>Deutschlands führende Nachrichtenseite. Alles Wichtige aus Politik, Wirtschaft, Sport, Kultur, Wissenschaft, Technik und mehr.</description>
+<language>de</language>
+<pubDate>Sun, 11 Oct 2026 02:09:00 +0200</pubDate>
+<lastBuildDate>Sun, 11 Oct 2026 02:09:00 +0200</lastBuildDate>
+<image>
+<title>DER SPIEGEL</title>
+<link>https://www.spiegel.de/</link>
+<url>https://cdn.prod.www.spiegel.de/public/spon/images/logos/der-spiegel-h60.png</url>
+</image>
+<atom:link href="https://www.spiegel.de/schlagzeilen/index.rss" rel="self" type="application/rss+xml"/>
+<item>
+<title>Straße von Hormus: Geschoss setzt Öltanker in Brand</title>
+<link>https://www.spiegel.de/ausland/strasse-von-hormus-geschoss-setzt-oeltanker-in-brand-a-212cfacf-b76a-4b00-be04-abe68d99d749#ref=rss</link>
+<description>Wieder ist ein Handelsschiff in der Straße von Hormus attackiert worden. Dabei brach Feuer aus, die Crew ist ersten Angaben zufolge aber in Sicherheit.</description>
+<content:encoded>Wieder ist ein Handelsschiff in der Straße von Hormus attackiert worden. Dabei brach Feuer aus, die Crew ist ersten Angaben zufolge aber in Sicherheit.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/34a032e1-8c41-4e66-b6ff-c46e2c54e77a_w520_r2.08_fpx53.46_fpy55.jpg" length="0"/>
+<guid isPermaLink="false">212cfacf-b76a-4b00-be04-abe68d99d749</guid>
+<pubDate>Sun, 11 Oct 2026 02:09:00 +0200</pubDate>
+</item>
+<item>
+<title>USA: Wirbelsturm »Isaias« sorgt für Tote und massive Schäden</title>
+<link>https://www.spiegel.de/panorama/usa-wirbelsturm-isaias-sorgt-fuer-tote-und-massive-schaeden-a-9fea6cae-ef7d-4038-9ff0-a6c48186fcd0#ref=rss</link>
+<description>Ein Hurrikan ist »Isaias« zwar nicht mehr, trotzdem hat das Sturmsystem in Florida und Alabama erhebliche Schäden angerichtet – und Menschenleben gekostet. Ein Mann wurde tot neben einem laufenden Generator gefunden.</description>
+<content:encoded>Ein Hurrikan ist »Isaias« zwar nicht mehr, trotzdem hat das Sturmsystem in Florida und Alabama erhebliche Schäden angerichtet – und Menschenleben gekostet. Ein Mann wurde tot neben einem laufenden Generator gefunden.</content:encoded>
+<category>Panorama</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/df445d69-00a0-4c69-bc51-46f97eb36033_w520_r2.08_fpx61.38_fpy49.99.jpg" length="0"/>
+<guid isPermaLink="false">9fea6cae-ef7d-4038-9ff0-a6c48186fcd0</guid>
+<pubDate>Sun, 11 Oct 2026 00:41:00 +0200</pubDate>
+</item>
+<item>
+<title>Star Wars: Darth Vaders Lichtschwert kommt unter den Hammer</title>
+<link>https://www.spiegel.de/kultur/kino/star-wars-darth-vaders-lichtschwert-kommt-unter-den-hammer-a-90c28c4f-18b9-4258-a1dc-e8a03dfcda79#ref=rss</link>
+<description>»Ich bin dein Vater«: Das Lichtschwert aus Darth Vaders legendärem Duell gegen Luke Skywalker soll versteigert werden. Das Auktionshaus erwartet einen Erlös von vier Millionen Dollar. Und damit nicht genug.</description>
+<content:encoded>»Ich bin dein Vater«: Das Lichtschwert aus Darth Vaders legendärem Duell gegen Luke Skywalker soll versteigert werden. Das Auktionshaus erwartet einen Erlös von vier Millionen Dollar. Und damit nicht genug.</content:encoded>
+<category>Kultur</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/b2f1b4ed-5ef3-4e49-b2a3-7a73c4f5d1f3_w520_r2.08_fpx71_fpy52.jpg" length="0"/>
+<guid isPermaLink="false">90c28c4f-18b9-4258-a1dc-e8a03dfcda79</guid>
+<pubDate>Sun, 11 Oct 2026 00:10:00 +0200</pubDate>
+</item>
+<item>
+<title>USA: Neun Tote nach Schüssen in Pennsylvania</title>
+<link>https://www.spiegel.de/ausland/usa-neun-tote-nach-schuessen-in-pennsylvania-a-1645da9a-48de-45b2-bb49-3098a90c9ec2#ref=rss</link>
+<description>Als die Polizei am Tatort in Erie eintrifft, liegen zwei Opfer auf der Straße. Der Schütze verschanzt sich in einem Haus und nimmt sich offenbar das Leben. Unter den Toten sind zwei Kinder, die Stadt steht unter Schock.</description>
+<content:encoded>Als die Polizei am Tatort in Erie eintrifft, liegen zwei Opfer auf der Straße. Der Schütze verschanzt sich in einem Haus und nimmt sich offenbar das Leben. Unter den Toten sind zwei Kinder, die Stadt steht unter Schock.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/265fff51-f93b-40c5-890e-478b8d467f5f_w520_r2.08_fpx62_fpy55.jpg" length="0"/>
+<guid isPermaLink="false">1645da9a-48de-45b2-bb49-3098a90c9ec2</guid>
+<pubDate>Sat, 10 Oct 2026 22:46:00 +0200</pubDate>
+</item>
+<item>
+<title>Britney Spears veröffentlicht neuen Song »She'll Never Be Me«</title>
+<link>https://www.spiegel.de/panorama/leute/britney-spears-veroeffentlicht-neuen-song-shell-never-be-me-a-06d88c6a-0806-4a22-b93c-8d7b79f1fbaa#ref=rss</link>
+<description>Ursprünglich war das Lied für das 2001er-Album »Britney« vorgesehen. Anlässlich des 25. Jubiläum der Erfolgsplatte holt die strauchelnde Popikone die Veröffentlichung nun nach.</description>
+<content:encoded>Ursprünglich war das Lied für das 2001er-Album »Britney« vorgesehen. Anlässlich des 25. Jubiläum der Erfolgsplatte holt die strauchelnde Popikone die Veröffentlichung nun nach.</content:encoded>
+<category>Panorama</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/9bd605c6-f16d-4987-8109-8034d4f62d48_w520_r2.08_fpx42_fpy36.jpg" length="0"/>
+<guid isPermaLink="false">06d88c6a-0806-4a22-b93c-8d7b79f1fbaa</guid>
+<pubDate>Sat, 10 Oct 2026 22:39:00 +0200</pubDate>
+</item>
+<item>
+<title>Ironman auf Hawaii: Patrick Lange muss mit Krämpfen aufgeben</title>
+<link>https://www.spiegel.de/sport/ironman-auf-hawaii-patrick-lange-muss-mit-kraempfen-aufgeben-a-5c6c30cc-4484-4b2d-9762-a4f1fc4bc436#ref=rss</link>
+<description>Er wollte sich zum deutschen Rekordhalter auf Hawaii krönen, doch sein Körper hat Patrick Lange einen Strich durch die Rechnung gemacht. Auf der Hälfte der Radstrecke war Schluss für den Top-Triathleten.</description>
+<content:encoded>Er wollte sich zum deutschen Rekordhalter auf Hawaii krönen, doch sein Körper hat Patrick Lange einen Strich durch die Rechnung gemacht. Auf der Hälfte der Radstrecke war Schluss für den Top-Triathleten.</content:encoded>
+<category>Sport</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/d2ccf5fa-d6a8-4b27-b9d5-157c5b88a585_w520_r2.08_fpx49_fpy52.jpg" length="0"/>
+<guid isPermaLink="false">5c6c30cc-4484-4b2d-9762-a4f1fc4bc436</guid>
+<pubDate>Sat, 10 Oct 2026 22:28:00 +0200</pubDate>
+</item>
+<item>
+<title>Begleiteter Suizid: Verschiebt sich die Idee davon, was wir als lebenswert empfinden und was nicht?</title>
+<link>https://www.spiegel.de/wissenschaft/mensch/begleiteter-suizid-verschiebt-sich-die-idee-davon-was-wir-als-lebenswert-empfinden-und-was-nicht-a-0270d4f5-0f63-485f-a9a2-79d696dcf524#ref=rss</link>
+<description>Drei bis vier Menschen nehmen sich in Deutschland im Schnitt jeden Tag das Leben, begleitet von Ärzten. Verschiebt sich gerade die Idee davon, was wir als lebenswert empfinden – und was nicht?</description>
+<content:encoded>Drei bis vier Menschen nehmen sich in Deutschland im Schnitt jeden Tag das Leben, begleitet von Ärzten. Verschiebt sich gerade die Idee davon, was wir als lebenswert empfinden – und was nicht?</content:encoded>
+<category>Wissenschaft</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/dd7ed9ac-5ff1-4152-8b3e-a62372f3b4f9_w520_r2.08_fpx48_fpy46.jpg" length="0"/>
+<guid isPermaLink="false">0270d4f5-0f63-485f-a9a2-79d696dcf524</guid>
+<pubDate>Sat, 10 Oct 2026 21:34:00 +0200</pubDate>
+</item>
+<item>
+<title>Yorkshire Wildlife Park: Mann betritt Tiger-Gehege und wird tödlich verletzt</title>
+<link>https://www.spiegel.de/panorama/yorkshire-wildlife-park-mann-betritt-tiger-gehege-und-wird-toedlich-verletzt-a-a3d54403-498b-4a44-92bc-fab3630462f0#ref=rss</link>
+<description>Tragischer Vorfall in einem Wildpark in der nordenglischen Grafschaft South Yorkshire: Ein Mann gelangt in ein Tigergehege, wird angegriffen und getötet.</description>
+<content:encoded>Tragischer Vorfall in einem Wildpark in der nordenglischen Grafschaft South Yorkshire: Ein Mann gelangt in ein Tigergehege, wird angegriffen und getötet.</content:encoded>
+<category>Panorama</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/e2aee1d0-f7ce-4996-aeee-93d2c6dbac4c_w520_r2.08_fpx35_fpy44.jpg" length="0"/>
+<guid isPermaLink="false">a3d54403-498b-4a44-92bc-fab3630462f0</guid>
+<pubDate>Sat, 10 Oct 2026 21:30:00 +0200</pubDate>
+</item>
+<item>
+<title>Russland hebt Verbot von Diesel-Exporten teilweise auf</title>
+<link>https://www.spiegel.de/ausland/russland-hebt-verbot-von-diesel-exporten-teilweise-auf-a-2a2f3424-b3a5-4423-a58a-99ce4ddfaf4f#ref=rss</link>
+<description>Russland hat zugesagt, die USA und die Weltmärkte mit Diesel zu beliefern. Nun lockert der Kreml ein entsprechendes Exportverbot.</description>
+<content:encoded>Russland hat zugesagt, die USA und die Weltmärkte mit Diesel zu beliefern. Nun lockert der Kreml ein entsprechendes Exportverbot.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/7776470b-83fb-43da-b8e6-3ab418532ff2_w520_r2.08_fpx17_fpy75.jpg" length="0"/>
+<guid isPermaLink="false">2a2f3424-b3a5-4423-a58a-99ce4ddfaf4f</guid>
+<pubDate>Sat, 10 Oct 2026 21:10:00 +0200</pubDate>
+</item>
+<item>
+<title>Japan: Mutmaßlicher Mordfall auf Okinawa - Warum jetzt gegen das US-Militär protestiert wird</title>
+<link>https://www.spiegel.de/ausland/japan-mutmasslicher-mordfall-auf-okinawa-warum-jetzt-gegen-das-us-militaer-protestiert-wird-a-fd4f98b1-7350-49fe-a68b-30b5d73c5281#ref=rss</link>
+<description>Auf Okinawa sind rund 30.000 US-Soldaten stationiert – zuletzt begingen Militärangehörige so viele Straftaten wie seit mehr als 20 Jahren nicht mehr. Auf einen mutmaßlichen Mordfall reagiert die Politik jetzt mit großer Schärfe.</description>
+<content:encoded>Auf Okinawa sind rund 30.000 US-Soldaten stationiert – zuletzt begingen Militärangehörige so viele Straftaten wie seit mehr als 20 Jahren nicht mehr. Auf einen mutmaßlichen Mordfall reagiert die Politik jetzt mit großer Schärfe.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/cb391541-93f1-4068-aa0f-ace709819cab_w520_r2.08_fpx37.5_fpy50.jpg" length="0"/>
+<guid isPermaLink="false">fd4f98b1-7350-49fe-a68b-30b5d73c5281</guid>
+<pubDate>Sat, 10 Oct 2026 21:06:00 +0200</pubDate>
+</item>
+<item>
+<title>Fußball-Bundesliga: RB Leipzig demontiert Eintracht Frankfurt dank Christopher Nkunku</title>
+<link>https://www.spiegel.de/sport/fussball/fussball-bundesliga-rb-leipzig-demontiert-eintracht-frankfurt-dank-christopher-nkunku-a-7b071c60-1130-4508-9c11-89c615358310#ref=rss</link>
+<description>Drei Tore von Rückkehrer Christopher Nkunku, Ruhe für Trainer Martin Demichelis: RB Leipzig findet mit einem Kantersieg über Eintracht Frankfurt in die Erfolgsspur zurück.</description>
+<content:encoded>Drei Tore von Rückkehrer Christopher Nkunku, Ruhe für Trainer Martin Demichelis: RB Leipzig findet mit einem Kantersieg über Eintracht Frankfurt in die Erfolgsspur zurück.</content:encoded>
+<category>Sport</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/ccda8e46-419b-4eaa-820f-4effd70d0414_w520_r2.08_fpx52.67_fpy45.jpg" length="0"/>
+<guid isPermaLink="false">7b071c60-1130-4508-9c11-89c615358310</guid>
+<pubDate>Sat, 10 Oct 2026 20:45:00 +0200</pubDate>
+</item>
+<item>
+<title>USA: Kentucky eröffnet Drive-In-Wahllokal aus Sorge vor Einschränkung der Stimmabgabe</title>
+<link>https://www.spiegel.de/ausland/usa-kentucky-eroeffnet-drive-in-wahllokal-aus-sorge-vor-einschraenkung-der-stimmabgabe-a-94323168-002c-4c88-aec3-fbda7e6102e7#ref=rss</link>
+<description>Jefferson County ist eine demokratische Hochburg im ansonsten republikanischen Kentucky. Damit das so bleibt, soll dort jetzt ein Drive-in-Wahllokal eröffnet werden.</description>
+<content:encoded>Jefferson County ist eine demokratische Hochburg im ansonsten republikanischen Kentucky. Damit das so bleibt, soll dort jetzt ein Drive-in-Wahllokal eröffnet werden.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/384d6d24-7ff0-4eab-a747-629b67076761_w520_r2.08_fpx40.52_fpy52.99.jpg" length="0"/>
+<guid isPermaLink="false">94323168-002c-4c88-aec3-fbda7e6102e7</guid>
+<pubDate>Sat, 10 Oct 2026 20:25:00 +0200</pubDate>
+</item>
+<item>
+<title>Father of Peace: Als spielten System of a Down die größten Hits der White Stripes</title>
+<link>https://www.spiegel.de/kultur/father-of-peace-als-spielten-system-of-a-down-die-groessten-hits-der-white-stripes-a-cd87b767-e092-4aa5-a120-606e9ce50c46#ref=rss</link>
+<description>Israelischer Rock? Gab wahrscheinlich schon einfachere Zeiten, ihm Gehör zu verschaffen. Father of Peace schafft es trotzdem. Mit Songs, die keine Sekunde länger dauern, als sie müssten.</description>
+<content:encoded>Israelischer Rock? Gab wahrscheinlich schon einfachere Zeiten, ihm Gehör zu verschaffen. Father of Peace schafft es trotzdem. Mit Songs, die keine Sekunde länger dauern, als sie müssten.</content:encoded>
+<category>Kultur</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/1449d645-4c33-41a2-82cc-4c17e8aab179_w520_r2.08_fpx67_fpy51.jpg" length="0"/>
+<guid isPermaLink="false">cd87b767-e092-4aa5-a120-606e9ce50c46</guid>
+<pubDate>Sat, 10 Oct 2026 19:57:00 +0200</pubDate>
+</item>
+<item>
+<title>Ukraine: Donald Trump fordert Machtwechsel in Kiew nach Diesel-Streit</title>
+<link>https://www.spiegel.de/ausland/ukraine-donald-trump-fordert-machtwechsel-in-kiew-nach-diesel-streit-a-2dfe459e-03eb-4cd9-8b0b-f324edec837f#ref=rss</link>
+<description>US-Präsident Trump reagiert mit scharfen Worten auf Selenskyjs Kritik an seinem Diesel-Deal mit Putin: »Es ist an der Zeit, dass die Ukraine einen neuen Präsidenten bekommt.«</description>
+<content:encoded>US-Präsident Trump reagiert mit scharfen Worten auf Selenskyjs Kritik an seinem Diesel-Deal mit Putin: »Es ist an der Zeit, dass die Ukraine einen neuen Präsidenten bekommt.«</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/8ffb1b82-4664-4f4e-aeb1-31496fc502dd_w520_r2.08_fpx67_fpy60.jpg" length="0"/>
+<guid isPermaLink="false">2dfe459e-03eb-4cd9-8b0b-f324edec837f</guid>
+<pubDate>Sat, 10 Oct 2026 19:43:00 +0200</pubDate>
+</item>
+<item>
+<title>Russland: Kreml bestätigt Tod von Labormitarbeiterin und weist Pestverdacht zurück</title>
+<link>https://www.spiegel.de/ausland/russland-raeumt-tod-von-labormitarbeiterin-ein-weist-aber-pest-verdacht-zurueck-a-2230aaf2-acd9-4645-b1de-43afa36c6aab#ref=rss</link>
+<description>Erst dementiert der Kreml die Berichte über den Todesfall einer Laborangestellten in einer Pestforschungseinrichtung. Jetzt bestätigt Russland den Fall. Um eine Pestinfektion soll es sich aber nicht gehandelt haben.</description>
+<content:encoded>Erst dementiert der Kreml die Berichte über den Todesfall einer Laborangestellten in einer Pestforschungseinrichtung. Jetzt bestätigt Russland den Fall. Um eine Pestinfektion soll es sich aber nicht gehandelt haben.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/74a79928-4e5c-426a-9cf7-4a185ab4aee8_w520_r2.08_fpx54_fpy71.jpg" length="0"/>
+<guid isPermaLink="false">2230aaf2-acd9-4645-b1de-43afa36c6aab</guid>
+<pubDate>Sat, 10 Oct 2026 19:25:00 +0200</pubDate>
+</item>
+<item>
+<title>Saudi-Arabien: Huthis greifen erneut Flughafen in Riad an – zwölf Tote und Hunderte Verletzte</title>
+<link>https://www.spiegel.de/ausland/saudi-arabien-bundesregierung-raet-von-fluegen-ueber-riad-ab-a-9c214d82-2e3e-4b10-8637-4020e9e23dd6#ref=rss</link>
+<description>Die von Iran unterstützte Huthi-Miliz hat Saudi-Arabiens Hauptstadtflughafen mit Raketen angegriffen. Es gab viele Todesopfer und eine erhebliche Zahl an Verletzten. Die Bundesregierung warnt vor Reisen über Riad.</description>
+<content:encoded>Die von Iran unterstützte Huthi-Miliz hat Saudi-Arabiens Hauptstadtflughafen mit Raketen angegriffen. Es gab viele Todesopfer und eine erhebliche Zahl an Verletzten. Die Bundesregierung warnt vor Reisen über Riad.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/ae02bd07-97ad-4bad-80d7-5880530dc5f8_w520_r2.08_fpx64_fpy69.jpg" length="0"/>
+<guid isPermaLink="false">9c214d82-2e3e-4b10-8637-4020e9e23dd6</guid>
+<pubDate>Sat, 10 Oct 2026 18:47:00 +0200</pubDate>
+</item>
+<item>
+<title>Fußball-Bundesliga: Vier Abseitstore, ein Punkt – die Rechnung des FC Bayern geht nicht auf</title>
+<link>https://www.spiegel.de/sport/fussball/fussball-bundesliga-vier-abseitstore-ein-punkt-die-rechnung-des-fc-bayern-geht-nicht-auf-a-9b9458c9-a025-4579-907f-8a339b397296#ref=rss</link>
+<description>Die Bayern ärgern sich in Augsburg über die Abseitslinie und Manuel Neuer. Union Berlin gewinnt erstmals unter Trainer Lustrinelli. Und der HSV muss für seinen Comeback-Sieg in Sinsheim wohl teuer bezahlen.</description>
+<content:encoded>Die Bayern ärgern sich in Augsburg über die Abseitslinie und Manuel Neuer. Union Berlin gewinnt erstmals unter Trainer Lustrinelli. Und der HSV muss für seinen Comeback-Sieg in Sinsheim wohl teuer bezahlen.</content:encoded>
+<category>Sport</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/f3c93dc4-442e-4c8a-886f-66f402d0bf87_w520_r2.08_fpx24.89_fpy48.97.jpg" length="0"/>
+<guid isPermaLink="false">9b9458c9-a025-4579-907f-8a339b397296</guid>
+<pubDate>Sat, 10 Oct 2026 18:46:00 +0200</pubDate>
+</item>
+<item>
+<title>USA: Christa Pike verlässt nach gescheiterter Hinrichtung verlässt Krankenhaus</title>
+<link>https://www.spiegel.de/ausland/christa-pike-verlaesst-nach-gescheiterter-hinrichtung-verlaesst-krankenhaus-a-a4e1bdd6-03c5-4237-a480-40f3661533df#ref=rss</link>
+<description>Christa Pike ist weiter auf dem Weg der Besserung. Laut ihren Anwälten ist sie bereits zurück im Gefängnis – und dankbar für die medizinische Betreuung »unter diesen außergewöhnlichen Umständen«.</description>
+<content:encoded>Christa Pike ist weiter auf dem Weg der Besserung. Laut ihren Anwälten ist sie bereits zurück im Gefängnis – und dankbar für die medizinische Betreuung »unter diesen außergewöhnlichen Umständen«.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/896f2d33-7de3-4bcc-972f-48711282c92a_w520_r2.08_fpx41_fpy56.jpg" length="0"/>
+<guid isPermaLink="false">a4e1bdd6-03c5-4237-a480-40f3661533df</guid>
+<pubDate>Sat, 10 Oct 2026 18:44:00 +0200</pubDate>
+</item>
+<item>
+<title>Donald Trump: Expertin erwartet kaum Preiswirkung nach Diesel-Deal</title>
+<link>https://www.spiegel.de/wirtschaft/donald-trump-expertin-zweifelt-an-sinkenden-spritpreisen-durch-diesel-deal-a-e763aab8-f9c6-4509-a140-832b0d3b4ac1#ref=rss</link>
+<description>Der US-Präsident hat mit dem Kremlchef Diesellieferungen vereinbart. Auf die Preise am Weltmarkt wird das Abkommen laut einer Expertin kaum Auswirkungen haben. Sie ahnt, was Trump stattdessen antreibt.</description>
+<content:encoded>Der US-Präsident hat mit dem Kremlchef Diesellieferungen vereinbart. Auf die Preise am Weltmarkt wird das Abkommen laut einer Expertin kaum Auswirkungen haben. Sie ahnt, was Trump stattdessen antreibt.</content:encoded>
+<category>Wirtschaft</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/7d1ed941-24f0-440d-bfc5-307df3cd00fb_w520_r2.08_fpx61.2_fpy44.98.jpg" length="0"/>
+<guid isPermaLink="false">e763aab8-f9c6-4509-a140-832b0d3b4ac1</guid>
+<pubDate>Sat, 10 Oct 2026 18:07:00 +0200</pubDate>
+</item>
+<item>
+<title>Radsport: Paul Seixas wird jüngster Sieger der Lombardei-Rundfahrt</title>
+<link>https://www.spiegel.de/sport/radsport/radsport-supertalent-paul-seixas-wird-juengster-sieger-der-lombardei-rundfahrt-a-e27165e8-2209-4117-936c-aebc19f5074b#ref=rss</link>
+<description>Er ist die große Nachwuchshoffnung der Franzosen: In Abwesenheit von Dominator Tadej Pogačar hat der 20-jährige Paul Seixas den Eintagesklassiker in Italien für sich entschieden. Lange vor dem Ziel riss er aus.</description>
+<content:encoded>Er ist die große Nachwuchshoffnung der Franzosen: In Abwesenheit von Dominator Tadej Pogačar hat der 20-jährige Paul Seixas den Eintagesklassiker in Italien für sich entschieden. Lange vor dem Ziel riss er aus.</content:encoded>
+<category>Sport</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/17234fd1-ea04-4438-bba0-d71c44851eaf_w520_r2.08_fpx49_fpy48.jpg" length="0"/>
+<guid isPermaLink="false">e27165e8-2209-4117-936c-aebc19f5074b</guid>
+<pubDate>Sat, 10 Oct 2026 18:06:00 +0200</pubDate>
+</item>
+<item>
+<title>Palästina: Mahmoud Abbas verschiebt Wahlen auf 2027</title>
+<link>https://www.spiegel.de/ausland/palaestina-mahmoud-abbas-verschiebt-wahlen-auf-2027-a-27bca8bc-3566-4072-9eda-ae3c126e35e6#ref=rss</link>
+<description>Wegen der schlechten Sicherheitslage hat Präsident Mahmoud Abbas den Urnengang erneut um ein Jahr verschoben. Frankreich drängt auf die Wahl – sie war Bedingung für die Anerkennung eines palästinensischen Staates.</description>
+<content:encoded>Wegen der schlechten Sicherheitslage hat Präsident Mahmoud Abbas den Urnengang erneut um ein Jahr verschoben. Frankreich drängt auf die Wahl – sie war Bedingung für die Anerkennung eines palästinensischen Staates.</content:encoded>
+<category>Ausland</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/e1f0cd35-51e6-4c4b-8e43-1e17bc7a7129_w520_r2.08_fpx64_fpy46.jpg" length="0"/>
+<guid isPermaLink="false">27bca8bc-3566-4072-9eda-ae3c126e35e6</guid>
+<pubDate>Sat, 10 Oct 2026 17:47:00 +0200</pubDate>
+</item>
+<item>
+<title>Berlin: Mutmaßlich antisemitische Jugendliche greifen Ladenbesitzer wiederholt an</title>
+<link>https://www.spiegel.de/panorama/justiz/berlin-ladenbesitzer-nach-aushaengen-zu-hamas-angriff-mehrfach-attackiert-a-5e68a44a-bfea-4d72-a7b9-220e0aa29591#ref=rss</link>
+<description>Ein Geschäftsinhaber in Berlin ist mehrfach von Jugendlichen angegriffen worden. Auslöser waren offenbar Aushänge in seinem Schaufenster, die sich gegen den Überfall der Hamas auf Israel am 7. Oktober 2023 richteten.</description>
+<content:encoded>Ein Geschäftsinhaber in Berlin ist mehrfach von Jugendlichen angegriffen worden. Auslöser waren offenbar Aushänge in seinem Schaufenster, die sich gegen den Überfall der Hamas auf Israel am 7. Oktober 2023 richteten.</content:encoded>
+<category>Panorama</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/9cde872d-08c2-41cd-9370-a5461343b5d1_w520_r2.08_fpx33.94_fpy49.86.jpg" length="0"/>
+<guid isPermaLink="false">5e68a44a-bfea-4d72-a7b9-220e0aa29591</guid>
+<pubDate>Sat, 10 Oct 2026 17:40:00 +0200</pubDate>
+</item>
+<item>
+<title>Katharina die Große: Auf Inspektionsfahrt durch die eroberte Krim</title>
+<link>https://www.spiegel.de/geschichte/katharina-die-grosse-auf-der-krim-kreuzfahrt-ins-ungewisse-a-67a69501-910a-4738-98cd-673b7ab916c9#ref=rss</link>
+<description>Echte Aufbauarbeit und meisterhafte Inszenierung: Auf einer prunkvollen Inspektionsfahrt durch neu eroberte Gebiete ließ sich Katharina die Große 1787 ihr Imperium vorführen.</description>
+<content:encoded>Echte Aufbauarbeit und meisterhafte Inszenierung: Auf einer prunkvollen Inspektionsfahrt durch neu eroberte Gebiete ließ sich Katharina die Große 1787 ihr Imperium vorführen.</content:encoded>
+<category>Geschichte</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/c58bae2f-4bdf-4d8a-a080-f20758df2edb_w520_r2.08_fpx47.86_fpy49.99.jpg" length="0"/>
+<guid isPermaLink="false">67a69501-910a-4738-98cd-673b7ab916c9</guid>
+<pubDate>Sat, 10 Oct 2026 17:34:00 +0200</pubDate>
+</item>
+<item>
+<title>Portugal: Cristiano Ronaldo offenbar vorläufig von Verband gesperrt</title>
+<link>https://www.spiegel.de/sport/fussball/fussball-cristiano-ronaldo-offenbar-vorlaeufig-von-portugals-verband-gesperrt-a-af721271-d062-40bf-86fa-3a1bbe1e35d6#ref=rss</link>
+<description>Der portugiesische Fußballverband hat Medienberichten zufolge ein Disziplinarverfahren gegen Cristiano Ronaldo eröffnet und ihn vorerst suspendiert. Der Altstar war zuvor eigenmächtig von der Nationalelf abgereist.</description>
+<content:encoded>Der portugiesische Fußballverband hat Medienberichten zufolge ein Disziplinarverfahren gegen Cristiano Ronaldo eröffnet und ihn vorerst suspendiert. Der Altstar war zuvor eigenmächtig von der Nationalelf abgereist.</content:encoded>
+<category>Sport</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/27c59448-0c92-465b-a94e-23a06ca530f6_w520_r2.08_fpx16_fpy55.jpg" length="0"/>
+<guid isPermaLink="false">af721271-d062-40bf-86fa-3a1bbe1e35d6</guid>
+<pubDate>Sat, 10 Oct 2026 16:31:00 +0200</pubDate>
+</item>
+<item>
+<title>FC Bayern München: Manuel Neuer verschuldet Rekord-Gegentor gegen FC Augsburg</title>
+<link>https://www.spiegel.de/sport/fussball/fussball-bundesliga-manuel-neuer-verschuldet-rekord-gegentor-gegen-fc-augsburg-a-3254d171-6b97-4fb1-b40f-353bd0b72610#ref=rss</link>
+<description>Eine Torwartlegende menschelt: Gegen Bayerns Angstgegner FC Augsburg unterläuft Manuel Neuer nach Sekunden ein riesiger Fehler. Es ist nicht das erste Blitz-Gegentor seiner Karriere.</description>
+<content:encoded>Eine Torwartlegende menschelt: Gegen Bayerns Angstgegner FC Augsburg unterläuft Manuel Neuer nach Sekunden ein riesiger Fehler. Es ist nicht das erste Blitz-Gegentor seiner Karriere.</content:encoded>
+<category>Sport</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/8bff4dff-cb5d-40bc-bd27-917a1d33a962_w520_r2.08_fpx30_fpy45.jpg" length="0"/>
+<guid isPermaLink="false">3254d171-6b97-4fb1-b40f-353bd0b72610</guid>
+<pubDate>Sat, 10 Oct 2026 16:17:00 +0200</pubDate>
+</item>
+<item>
+<title>Künstlerin Gabriele Stötzer: Die Staatsfeindin, die in der DDR blieb</title>
+<link>https://www.spiegel.de/kultur/kuenstlerin-gabriele-stoetzer-die-staatsfeindin-die-in-der-ddr-blieb-a-08c48c19-9de9-4d22-bc18-4813b8bc8867#ref=rss</link>
+<description>Sie wurde zur Staatsfeindin gemacht und ins Frauengefängnis gesperrt. Dennoch blieb Gabriele Stötzer als Künstlerin in der DDR. Erst jetzt wird ihr Werk richtig gewürdigt. Am Samstag erhält sie den renommierten Kaiserring.</description>
+<content:encoded>Sie wurde zur Staatsfeindin gemacht und ins Frauengefängnis gesperrt. Dennoch blieb Gabriele Stötzer als Künstlerin in der DDR. Erst jetzt wird ihr Werk richtig gewürdigt. Am Samstag erhält sie den renommierten Kaiserring.</content:encoded>
+<category>Kultur</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/1d0f563a-d7ef-4c9d-90e2-46f9c59b6b33_w520_r2.08_fpx57.84_fpy54.98.jpg" length="0"/>
+<guid isPermaLink="false">08c48c19-9de9-4d22-bc18-4813b8bc8867</guid>
+<pubDate>Sat, 10 Oct 2026 16:10:00 +0200</pubDate>
+</item>
+<item>
+<title>Berlin nach der Wahl: Linke-Sieg entfacht Streit über Clans, Judenhass und Armut</title>
+<link>https://www.spiegel.de/panorama/berlin-nach-der-wahl-linke-sieg-entfacht-streit-ueber-clans-judenhass-und-armut-a-422bfeb6-c0ce-4bbf-9f27-8b22f9626c54#ref=rss</link>
+<description>Die Linken gewinnen die Wahl und die Menschen in der Hauptstadt streiten über Clans und Judenhasser, Wohnraum und Armut. Einig sind sich die Berliner immerhin darin: So kann es nicht weitergehen. Aber wie denn dann?</description>
+<content:encoded>Die Linken gewinnen die Wahl und die Menschen in der Hauptstadt streiten über Clans und Judenhasser, Wohnraum und Armut. Einig sind sich die Berliner immerhin darin: So kann es nicht weitergehen. Aber wie denn dann?</content:encoded>
+<category>Panorama</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/85b59e3a-d58b-4db9-8966-627bf52f083b_w520_r2.08_fpx54.99_fpy44.99.jpg" length="0"/>
+<guid isPermaLink="false">422bfeb6-c0ce-4bbf-9f27-8b22f9626c54</guid>
+<pubDate>Sat, 10 Oct 2026 15:58:00 +0200</pubDate>
+</item>
+<item>
+<title>Keegan Allen beim Einkaufen überfallen und geschlagen</title>
+<link>https://www.spiegel.de/panorama/justiz/keegan-allen-beim-einkaufen-ueberfallen-und-geschlagen-a-60698280-ce05-4184-941c-a511b5bb4f6c#ref=rss</link>
+<description>Mit blutüberströmtem Gesicht schildert Keegan Allen den Schockmoment: Zwei maskierte Männer bedrohen ihn mit Messer und Pistole – mitten in West Hollywood. Nun hofft er auf Hilfe von einem umstrittenen System.</description>
+<content:encoded>Mit blutüberströmtem Gesicht schildert Keegan Allen den Schockmoment: Zwei maskierte Männer bedrohen ihn mit Messer und Pistole – mitten in West Hollywood. Nun hofft er auf Hilfe von einem umstrittenen System.</content:encoded>
+<category>Panorama</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/02f42bdb-b717-488d-8984-c2dfde6ba676_w520_r2.08_fpx47.95_fpy49.97.jpg" length="0"/>
+<guid isPermaLink="false">60698280-ce05-4184-941c-a511b5bb4f6c</guid>
+<pubDate>Sat, 10 Oct 2026 15:46:00 +0200</pubDate>
+</item>
+<item>
+<title>Berlin-Wahl: Warum Vergesellschaftung zum Kapitalismus dazugehört</title>
+<link>https://www.spiegel.de/politik/deutschland/berlin-wahl-warum-vergesellschaftung-zum-kapitalismus-dazugehoert-a-178cb9dc-beb4-47c1-9bfa-3d9ef5ef554f#ref=rss</link>
+<description>Die Vergesellschaftungspläne in Berlin lösen auf allen Seiten große Gefühle aus. Dabei gehört so etwas zum real existierenden Kapitalismus dazu. Ein Beruhigungsversuch.</description>
+<content:encoded>Die Vergesellschaftungspläne in Berlin lösen auf allen Seiten große Gefühle aus. Dabei gehört so etwas zum real existierenden Kapitalismus dazu. Ein Beruhigungsversuch.</content:encoded>
+<category>Politik</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/4bae7e53-7376-4452-96cb-0d8201f6df53_w520_r2.08_fpx30_fpy54.99.jpg" length="0"/>
+<guid isPermaLink="false">178cb9dc-beb4-47c1-9bfa-3d9ef5ef554f</guid>
+<pubDate>Sat, 10 Oct 2026 15:43:00 +0200</pubDate>
+</item>
+<item>
+<title>Deutsche Bahn: Intercity 1 mit Sternfahrt nach Wiesbaden verabschiedet</title>
+<link>https://www.spiegel.de/mobilitaet/bus-bahn/deutsche-bahn-intercity-1-mit-sternfahrt-nach-wiesbaden-verabschiedet-a-efd44253-1906-43b0-a560-e5d96fce9da8#ref=rss</link>
+<description>Mit dem IC 1 begann der moderne schnelle Fernzugverkehr auf festen Linien im Takt. Nach 55 Jahren ist Schluss für die Zuggattung. Aus dem regulären Fahrplan verschwand sie schon im September – baustellenbedingt.</description>
+<content:encoded>Mit dem IC 1 begann der moderne schnelle Fernzugverkehr auf festen Linien im Takt. Nach 55 Jahren ist Schluss für die Zuggattung. Aus dem regulären Fahrplan verschwand sie schon im September – baustellenbedingt.</content:encoded>
+<category>Mobilität</category>
+<enclosure type="image/jpeg" url="https://cdn.prod.www.spiegel.de/images/9c24d197-bf9e-4e39-bc43-c98edb987db2_w520_r2.08_fpx68.62_fpy50.jpg" length="0"/>
+<guid isPermaLink="false">efd44253-1906-43b0-a560-e5d96fce9da8</guid>
+<pubDate>Sat, 10 Oct 2026 15:42:00 +0200</pubDate>
+</item>
+</channel>
+</rss>

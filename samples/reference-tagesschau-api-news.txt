@@ -1,0 +1,1314 @@
+{
+  "news" : [ {
+    "sophoraId" : "weimer-kluessendorf-berlin-100",
+    "externalId" : "4ed6bc6d-f148-4e31-aad5-cd7a383c238e",
+    "title" : "Berliner Sondierungen sorgen für Ärger in der Koalition",
+    "date" : "2026-10-11T03:12:51.488+02:00",
+    "teaserImage" : {
+      "copyright" : "picture alliance/dpa",
+      "alttext" : "Das Rote Rauthaus in Berlin.",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/7810bdac-265b-4de9-bbc4-4146dd63c898/AAABoGI9AvQ/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/7810bdac-265b-4de9-bbc4-4146dd63c898/AAABoGI9AvQ/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/7810bdac-265b-4de9-bbc4-4146dd63c898/AAABoGI9AvQ/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/7810bdac-265b-4de9-bbc4-4146dd63c898/AAABoGI9AvQ/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/7810bdac-265b-4de9-bbc4-4146dd63c898/AAABoGI9AvQ/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/7810bdac-265b-4de9-bbc4-4146dd63c898/AAABoGI9AvQ/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/7810bdac-265b-4de9-bbc4-4146dd63c898/AAABoGI9AvQ/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/7810bdac-265b-4de9-bbc4-4146dd63c898/AAABoGI9AvQ/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/7810bdac-265b-4de9-bbc4-4146dd63c898/AAABoGI9AvQ/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/7810bdac-265b-4de9-bbc4-4146dd63c898/AAABoGI9AvQ/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/7810bdac-265b-4de9-bbc4-4146dd63c898/AAABoGI9AvQ/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/7810bdac-265b-4de9-bbc4-4146dd63c898/AAABoGI9AvQ/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "Bundesregierung"
+    }, {
+      "tag" : "SPD"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/weimer-kluessendorf-berlin-100.json?view=hasChanged&lastKnown=D320FF144F48D223961A1A36E1E60A29",
+    "tracking" : [ {
+      "sid" : "app.inland.innenpolitik.weimer-kluessendorf-berlin-100",
+      "src" : "tagesschau",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261011T0312",
+      "otp" : "meldung",
+      "cid" : "weimer-kluessendorf-berlin-100",
+      "pti" : "Berliner_Sondierungen_sorgen_fuer_Aerger_in_der_Koalition",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Weimer fordert Eingreifen der SPD-Spitze",
+    "firstSentence" : "Rot-Grün-Rot in Berlin wird konkreter - das hat auch Auswirkungen auf die Bundespolitik.",
+    "images" : [ ],
+    "details" : "https://www.tagesschau.de/api2u/inland/innenpolitik/weimer-kluessendorf-berlin-100.json",
+    "detailsweb" : "https://www.tagesschau.de/inland/innenpolitik/weimer-kluessendorf-berlin-100.html",
+    "shareURL" : "https://www.tagesschau.de/inland/innenpolitik/weimer-kluessendorf-berlin-100.html",
+    "geotags" : [ ],
+    "regionId" : 0,
+    "regionIds" : [ ],
+    "ressort" : "inland",
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "video-1664164",
+    "externalId" : "4b66bb7a-0a17-4852-89c3-33825e23493b",
+    "title" : "tagesschau in 100 Sekunden",
+    "date" : "2026-10-11T02:48:25.574+02:00",
+    "teaserImage" : {
+      "title" : "Sendungsbild",
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Sendungsbild",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/70db4687-bd12-4d5b-beff-42a7b4ffedae/AAABoShtLfQ/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/70db4687-bd12-4d5b-beff-42a7b4ffedae/AAABoShtLfQ/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/70db4687-bd12-4d5b-beff-42a7b4ffedae/AAABoShtLfQ/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/70db4687-bd12-4d5b-beff-42a7b4ffedae/AAABoShtLfQ/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/70db4687-bd12-4d5b-beff-42a7b4ffedae/AAABoShtLfQ/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/70db4687-bd12-4d5b-beff-42a7b4ffedae/AAABoShtLfQ/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/70db4687-bd12-4d5b-beff-42a7b4ffedae/AAABoShtLfQ/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/70db4687-bd12-4d5b-beff-42a7b4ffedae/AAABoShtLfQ/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/70db4687-bd12-4d5b-beff-42a7b4ffedae/AAABoShtLfQ/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/70db4687-bd12-4d5b-beff-42a7b4ffedae/AAABoShtLfQ/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/70db4687-bd12-4d5b-beff-42a7b4ffedae/AAABoShtLfQ/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/70db4687-bd12-4d5b-beff-42a7b4ffedae/AAABoShtLfQ/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1664164.json?view=hasChanged&lastKnown=D06CDE566F6FC91529100365E14FFE7F",
+    "tracking" : [ {
+      "sid" : "app.multimedia.sendung.tagesschau_in_100_sekunden.video-1664164",
+      "src" : "tagesschau",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261011T0248",
+      "otp" : "video",
+      "cid" : "video-1664164",
+      "pti" : "tagesschau_in_100_Sekunden",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false,
+      "av_air_time" : "2026-10-11T01:50:00.000+02:00"
+    }, {
+      "assetid" : "video-1664164",
+      "program" : "tagesschau_in_100_Sekunden",
+      "title" : "tagesschau_in_100_Sekunden",
+      "length" : "124",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/100sekunden/index.html",
+      "c7" : "p7,video-1664164",
+      "c8" : "p8,124",
+      "c9" : "p9,tagesschau_in_100_Sekunden_tagesschau_in_100_Sekunden_11.10.2026_0150",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1011/TV-20261011-0217-5300.webs.h264.mp4",
+      "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1011/TV-20261011-0217-5300.webm.h264.mp4",
+      "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1011/TV-20261011-0217-5300.webxl.h264.mp4",
+      "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1011/TV-20261011-0217-5300.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "Sendungsbild",
+    "type" : "video"
+  }, {
+    "sophoraId" : "angriff-riad-flughafen-100",
+    "externalId" : "2fcff9a9-48ba-4892-9e64-243d6157a3a6",
+    "title" : "Viele Tote bei Angriff auf Flughafen in Riad",
+    "date" : "2026-10-11T01:56:54.533+02:00",
+    "teaserImage" : {
+      "copyright" : "REUTERS",
+      "alttext" : "Ein Mann am Flughafen in Riad",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/7fe37f68-085a-4fe4-a697-d96c3dd3b092/AAABoSgZKIk/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/7fe37f68-085a-4fe4-a697-d96c3dd3b092/AAABoSgZKIk/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/7fe37f68-085a-4fe4-a697-d96c3dd3b092/AAABoSgZKIk/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/7fe37f68-085a-4fe4-a697-d96c3dd3b092/AAABoSgZKIk/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/7fe37f68-085a-4fe4-a697-d96c3dd3b092/AAABoSgZKIk/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/7fe37f68-085a-4fe4-a697-d96c3dd3b092/AAABoSgZKIk/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/7fe37f68-085a-4fe4-a697-d96c3dd3b092/AAABoSgZKIk/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/7fe37f68-085a-4fe4-a697-d96c3dd3b092/AAABoSgZKIk/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/7fe37f68-085a-4fe4-a697-d96c3dd3b092/AAABoSgZKIk/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/7fe37f68-085a-4fe4-a697-d96c3dd3b092/AAABoSgZKIk/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/7fe37f68-085a-4fe4-a697-d96c3dd3b092/AAABoSgZKIk/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/7fe37f68-085a-4fe4-a697-d96c3dd3b092/AAABoSgZKIk/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "Saudi-Arabien"
+    }, {
+      "tag" : "Huthi"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/angriff-riad-flughafen-100.json?view=hasChanged&lastKnown=B2BC3BE0960BCF8A97FA9D860F8E18AA",
+    "tracking" : [ {
+      "sid" : "app.ausland.asien.angriff-riad-flughafen-100",
+      "src" : "tagesschau",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261011T0112",
+      "otp" : "meldung",
+      "cid" : "angriff-riad-flughafen-100",
+      "pti" : "Saudi-Arabien_Viele_Tote_bei_Angriff_auf_Flughafen_in_Riad",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Saudi-Arabien",
+    "firstSentence" : "Etwa 40 Millionen Passagiere nutzen den Flughafen in der saudischen Hauptstadt Riad jedes Jahr.",
+    "images" : [ ],
+    "details" : "https://www.tagesschau.de/api2u/ausland/asien/angriff-riad-flughafen-100.json",
+    "detailsweb" : "https://www.tagesschau.de/ausland/asien/angriff-riad-flughafen-100.html",
+    "shareURL" : "https://www.tagesschau.de/ausland/asien/angriff-riad-flughafen-100.html",
+    "geotags" : [ ],
+    "regionId" : 0,
+    "regionIds" : [ ],
+    "ressort" : "ausland",
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "video-1664146",
+    "externalId" : "1c6792c5-f67b-4281-b125-2e102cee28cf",
+    "title" : "Die Wetteraussichten",
+    "date" : "2026-10-11T00:11:45.069+02:00",
+    "teaserImage" : {
+      "title" : "Sendungsbild",
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Sendungsbild",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/a7c4669b-e083-420a-bf5a-015f80c35bb9/AAABoSffKwo/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/a7c4669b-e083-420a-bf5a-015f80c35bb9/AAABoSffKwo/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/a7c4669b-e083-420a-bf5a-015f80c35bb9/AAABoSffKwo/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/a7c4669b-e083-420a-bf5a-015f80c35bb9/AAABoSffKwo/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/a7c4669b-e083-420a-bf5a-015f80c35bb9/AAABoSffKwo/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/a7c4669b-e083-420a-bf5a-015f80c35bb9/AAABoSffKwo/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/a7c4669b-e083-420a-bf5a-015f80c35bb9/AAABoSffKwo/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/a7c4669b-e083-420a-bf5a-015f80c35bb9/AAABoSffKwo/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/a7c4669b-e083-420a-bf5a-015f80c35bb9/AAABoSffKwo/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/a7c4669b-e083-420a-bf5a-015f80c35bb9/AAABoSffKwo/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/a7c4669b-e083-420a-bf5a-015f80c35bb9/AAABoSffKwo/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/a7c4669b-e083-420a-bf5a-015f80c35bb9/AAABoSffKwo/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "Wetteraussichten"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1664146.json?view=hasChanged&lastKnown=4EAA3B1E67BE610B964EF5118B46D0A2",
+    "tracking" : [ {
+      "sid" : "app.multimedia.sendung.tagesthemen.video-1664146",
+      "src" : "tagesschau",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261011T0031",
+      "otp" : "video",
+      "cid" : "video-1664146",
+      "pti" : "Die_Wetteraussichten",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false,
+      "av_air_time" : "2026-10-10T23:25:00.000+02:00"
+    }, {
+      "assetid" : "video-1664146",
+      "program" : "tagesthemen",
+      "title" : "Die_Wetteraussichten",
+      "length" : "100",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/tagesthemen/video-1664146.html",
+      "c7" : "p7,video-1664146",
+      "c8" : "p8,100",
+      "c9" : "p9,tagesthemen_Die_Wetteraussichten_10.10.2026_2325",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c15" : "p15,brid://publication@ard.de/X005902259",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2359-4100.webs.h264.mp4",
+      "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2359-4100.webm.h264.mp4",
+      "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2359-4100.webxl.h264.mp4",
+      "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1010/TV-20261010-2359-4100.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "Sendungsbild",
+    "type" : "video"
+  }, {
+    "sophoraId" : "video-1664144",
+    "externalId" : "f1119368-407c-4dc9-9b19-883ca2c29e6d",
+    "title" : "Tröten im Trend: Jagdhornblasen für Anfänger",
+    "date" : "2026-10-11T00:10:17.195+02:00",
+    "teaserImage" : {
+      "title" : "Sendungsbild",
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Sendungsbild",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/c895424f-0b57-466b-b511-48fdb3382d51/AAABoSfd0uc/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/c895424f-0b57-466b-b511-48fdb3382d51/AAABoSfd0uc/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/c895424f-0b57-466b-b511-48fdb3382d51/AAABoSfd0uc/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/c895424f-0b57-466b-b511-48fdb3382d51/AAABoSfd0uc/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/c895424f-0b57-466b-b511-48fdb3382d51/AAABoSfd0uc/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/c895424f-0b57-466b-b511-48fdb3382d51/AAABoSfd0uc/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/c895424f-0b57-466b-b511-48fdb3382d51/AAABoSfd0uc/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/c895424f-0b57-466b-b511-48fdb3382d51/AAABoSfd0uc/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/c895424f-0b57-466b-b511-48fdb3382d51/AAABoSfd0uc/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/c895424f-0b57-466b-b511-48fdb3382d51/AAABoSfd0uc/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/c895424f-0b57-466b-b511-48fdb3382d51/AAABoSfd0uc/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/c895424f-0b57-466b-b511-48fdb3382d51/AAABoSfd0uc/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "schnell informiert"
+    }, {
+      "tag" : "Horn"
+    }, {
+      "tag" : "Musik"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1664144.json?view=hasChanged&lastKnown=216918163455279AF46660E5DFC96D95",
+    "tracking" : [ {
+      "sid" : "app.multimedia.sendung.tagesthemen.video-1664144",
+      "src" : "tagesschau",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261011T0031",
+      "otp" : "video",
+      "cid" : "video-1664144",
+      "pti" : "Troeten_im_Trend_Jagdhornblasen_fuer_Anfaenger",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false,
+      "av_air_time" : "2026-10-10T23:25:00.000+02:00"
+    }, {
+      "assetid" : "video-1664144",
+      "program" : "tagesthemen",
+      "title" : "Troeten_im_Trend_Jagdhornblasen_fuer_Anfaenger",
+      "length" : "177",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/tagesthemen/video-1664144.html",
+      "c7" : "p7,video-1664144",
+      "c8" : "p8,177",
+      "c9" : "p9,tagesthemen_Troeten_im_Trend_Jagdhornblasen_fuer_Anfaenger_10.10.2026_2325",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c15" : "p15,brid://publication@ard.de/X005902259",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2353-4900.webs.h264.mp4",
+      "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2353-4900.webm.h264.mp4",
+      "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2353-4900.webxl.h264.mp4",
+      "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1010/TV-20261010-2353-4900.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "Sendungsbild",
+    "copyright" : "Tino Nowitzki, NDR",
+    "type" : "video"
+  }, {
+    "sophoraId" : "video-1664142",
+    "externalId" : "686f6278-08a2-4bee-ac00-d9e3fa514a90",
+    "title" : "Drei Jahre Krieg im Gazastreifen und erster Jahrestag der Waffenruhe: Wie geht es den Menschen vor Ort?",
+    "date" : "2026-10-11T00:08:15.233+02:00",
+    "teaserImage" : {
+      "title" : "Sendungsbild",
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Sendungsbild",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/47aa7f38-3c7a-4b07-87ac-afa0649be8ac/AAABoSfbv8Q/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/47aa7f38-3c7a-4b07-87ac-afa0649be8ac/AAABoSfbv8Q/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/47aa7f38-3c7a-4b07-87ac-afa0649be8ac/AAABoSfbv8Q/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/47aa7f38-3c7a-4b07-87ac-afa0649be8ac/AAABoSfbv8Q/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/47aa7f38-3c7a-4b07-87ac-afa0649be8ac/AAABoSfbv8Q/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/47aa7f38-3c7a-4b07-87ac-afa0649be8ac/AAABoSfbv8Q/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/47aa7f38-3c7a-4b07-87ac-afa0649be8ac/AAABoSfbv8Q/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/47aa7f38-3c7a-4b07-87ac-afa0649be8ac/AAABoSfbv8Q/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/47aa7f38-3c7a-4b07-87ac-afa0649be8ac/AAABoSfbv8Q/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/47aa7f38-3c7a-4b07-87ac-afa0649be8ac/AAABoSfbv8Q/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/47aa7f38-3c7a-4b07-87ac-afa0649be8ac/AAABoSfbv8Q/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/47aa7f38-3c7a-4b07-87ac-afa0649be8ac/AAABoSfbv8Q/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "schnell informiert"
+    }, {
+      "tag" : "Gaza"
+    }, {
+      "tag" : "Gaza-Krieg"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1664142.json?view=hasChanged&lastKnown=AB9E55741839430AB37F32323B786B2C",
+    "tracking" : [ {
+      "sid" : "app.multimedia.sendung.tagesthemen.video-1664142",
+      "src" : "tagesschau",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261011T0031",
+      "otp" : "video",
+      "cid" : "video-1664142",
+      "pti" : "Drei_Jahre_Krieg_im_Gazastreifen_und_erster_Jahrestag_der_Waffenruhe_Wie_geht_es_den_Menschen_vor_Ort",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false,
+      "av_air_time" : "2026-10-10T23:25:00.000+02:00"
+    }, {
+      "assetid" : "video-1664142",
+      "program" : "tagesthemen",
+      "title" : "Drei_Jahre_Krieg_im_Gazastreifen_und_erster_Jahrestag_der_Waffenruhe_Wie_geht_es_den_Menschen_vor_Ort",
+      "length" : "172",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/tagesthemen/video-1664142.html",
+      "c7" : "p7,video-1664142",
+      "c8" : "p8,172",
+      "c9" : "p9,tagesthemen_Drei_Jahre_Krieg_im_Gazastreifen_und_erster_Jahrestag_der_Waffenruhe_Wie_geht_es_den_Menschen_vor_Ort_10.10.2026_2325",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c15" : "p15,brid://publication@ard.de/X005902259",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2350-1600.webs.h264.mp4",
+      "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2350-1600.webm.h264.mp4",
+      "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2350-1600.webxl.h264.mp4",
+      "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1010/TV-20261010-2350-1600.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "Sendungsbild",
+    "copyright" : "Pia Steckelbach, ARD Tel Aviv",
+    "type" : "video"
+  }, {
+    "sophoraId" : "video-1664140",
+    "externalId" : "498ca8d2-90ad-4860-a885-b50f46dd4b8d",
+    "title" : "Tag gegen Todesstrafe: USA debattiert über Hinrichtungen",
+    "date" : "2026-10-11T00:06:17.047+02:00",
+    "teaserImage" : {
+      "title" : "Sendungsbild",
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Sendungsbild",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/ce4503f2-64ca-4b14-8e6a-69b9a352e2f8/AAABoSfaJR0/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/ce4503f2-64ca-4b14-8e6a-69b9a352e2f8/AAABoSfaJR0/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/ce4503f2-64ca-4b14-8e6a-69b9a352e2f8/AAABoSfaJR0/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/ce4503f2-64ca-4b14-8e6a-69b9a352e2f8/AAABoSfaJR0/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/ce4503f2-64ca-4b14-8e6a-69b9a352e2f8/AAABoSfaJR0/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/ce4503f2-64ca-4b14-8e6a-69b9a352e2f8/AAABoSfaJR0/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/ce4503f2-64ca-4b14-8e6a-69b9a352e2f8/AAABoSfaJR0/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/ce4503f2-64ca-4b14-8e6a-69b9a352e2f8/AAABoSfaJR0/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/ce4503f2-64ca-4b14-8e6a-69b9a352e2f8/AAABoSfaJR0/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/ce4503f2-64ca-4b14-8e6a-69b9a352e2f8/AAABoSfaJR0/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/ce4503f2-64ca-4b14-8e6a-69b9a352e2f8/AAABoSfaJR0/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/ce4503f2-64ca-4b14-8e6a-69b9a352e2f8/AAABoSfaJR0/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "schnell informiert"
+    }, {
+      "tag" : "USA"
+    }, {
+      "tag" : "Todesstrafe"
+    }, {
+      "tag" : "Hinrichtungen"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1664140.json?view=hasChanged&lastKnown=8D9D8F8AF1FE56AD59A3C13B8F6E0B76",
+    "tracking" : [ {
+      "sid" : "app.multimedia.sendung.tagesthemen.video-1664140",
+      "src" : "tagesschau",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261011T0031",
+      "otp" : "video",
+      "cid" : "video-1664140",
+      "pti" : "Tag_gegen_Todesstrafe_USA_debattiert_ueber_Hinrichtungen",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false,
+      "av_air_time" : "2026-10-10T23:25:00.000+02:00"
+    }, {
+      "assetid" : "video-1664140",
+      "program" : "tagesthemen",
+      "title" : "Tag_gegen_Todesstrafe_USA_debattiert_ueber_Hinrichtungen",
+      "length" : "175",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/tagesthemen/video-1664140.html",
+      "c7" : "p7,video-1664140",
+      "c8" : "p8,175",
+      "c9" : "p9,tagesthemen_Tag_gegen_Todesstrafe_USA_debattiert_ueber_Hinrichtungen_10.10.2026_2325",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c15" : "p15,brid://publication@ard.de/X005902259",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2347-0000.webs.h264.mp4",
+      "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2347-0000.webm.h264.mp4",
+      "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2347-0000.webxl.h264.mp4",
+      "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1010/TV-20261010-2347-0000.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "Sendungsbild",
+    "copyright" : "Jan Oppel, ARD Washington",
+    "type" : "video"
+  }, {
+    "sophoraId" : "video-1664138",
+    "externalId" : "ae2ace32-c35a-4eec-b9aa-c5332391f69b",
+    "title" : "US-Präsident Trump kündigt russische Diesellieferungen an: Was bedeutet das für die Ukraine?",
+    "date" : "2026-10-10T23:56:29.588+02:00",
+    "teaserImage" : {
+      "title" : "Sendungsbild",
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Sendungsbild",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/879ccbf1-f169-4bf1-84f4-64096532a279/AAABoSfRN5A/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/879ccbf1-f169-4bf1-84f4-64096532a279/AAABoSfRN5A/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/879ccbf1-f169-4bf1-84f4-64096532a279/AAABoSfRN5A/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/879ccbf1-f169-4bf1-84f4-64096532a279/AAABoSfRN5A/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/879ccbf1-f169-4bf1-84f4-64096532a279/AAABoSfRN5A/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/879ccbf1-f169-4bf1-84f4-64096532a279/AAABoSfRN5A/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/879ccbf1-f169-4bf1-84f4-64096532a279/AAABoSfRN5A/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/879ccbf1-f169-4bf1-84f4-64096532a279/AAABoSfRN5A/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/879ccbf1-f169-4bf1-84f4-64096532a279/AAABoSfRN5A/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/879ccbf1-f169-4bf1-84f4-64096532a279/AAABoSfRN5A/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/879ccbf1-f169-4bf1-84f4-64096532a279/AAABoSfRN5A/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/879ccbf1-f169-4bf1-84f4-64096532a279/AAABoSfRN5A/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "schnell informiert"
+    }, {
+      "tag" : "Diesel"
+    }, {
+      "tag" : "Trump"
+    }, {
+      "tag" : "Putin"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1664138.json?view=hasChanged&lastKnown=637702625206F44937FB349B34E4F4F5",
+    "tracking" : [ {
+      "sid" : "app.multimedia.sendung.tagesthemen.video-1664138",
+      "src" : "tagesschau",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261011T0031",
+      "otp" : "video",
+      "cid" : "video-1664138",
+      "pti" : "US-Praesident_Trump_kuendigt_russische_Diesellieferungen_an_Was_bedeutet_das_fuer_die_Ukraine",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false,
+      "av_air_time" : "2026-10-10T23:25:00.000+02:00"
+    }, {
+      "assetid" : "video-1664138",
+      "program" : "tagesthemen",
+      "title" : "US-Praesident_Trump_kuendigt_russische_Diesellieferungen_an_Was_bedeutet_das_fuer_die_Ukraine",
+      "length" : "297",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/tagesthemen/video-1664138.html",
+      "c7" : "p7,video-1664138",
+      "c8" : "p8,297",
+      "c9" : "p9,tagesthemen_US-Praesident_Trump_kuendigt_russische_Diesellieferungen_an_Was_bedeutet_das_fuer_die_Ukraine_10.10.2026_2325",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c15" : "p15,brid://publication@ard.de/X005902259",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2344-5600.webs.h264.mp4",
+      "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2344-5600.webm.h264.mp4",
+      "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2344-5600.webxl.h264.mp4",
+      "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1010/TV-20261010-2344-5600.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "Sendungsbild",
+    "copyright" : "Susanne Petersohn, ARD Kiew",
+    "type" : "video"
+  }, {
+    "sophoraId" : "wdr-mammutmarsch-laeufer-behindern-rettungseinsatz-in-herdecke-100",
+    "externalId" : "tagesschau_fm-story-WDR-d774812c-cf66-44eb-883e-630dd88315ac",
+    "title" : "Mammutmarsch: Läufer behindern Rettungseinsatz in Herdecke",
+    "date" : "2026-10-10T23:20:00.000+02:00",
+    "teaserImage" : {
+      "title" : "Reanimation beim \"Mammutmarsch\" in Herdecke",
+      "copyright" : "Fernandez / News4 Video-Line TV",
+      "alttext" : "Reanimation beim \"Mammutmarsch\" in Herdecke",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/187e30c7-804d-42fe-a01f-2aef66777af6/AAABoSe1c1E/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/187e30c7-804d-42fe-a01f-2aef66777af6/AAABoSe1c1E/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/187e30c7-804d-42fe-a01f-2aef66777af6/AAABoSe1c1E/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/187e30c7-804d-42fe-a01f-2aef66777af6/AAABoSe1c1E/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/187e30c7-804d-42fe-a01f-2aef66777af6/AAABoSe1c1E/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/187e30c7-804d-42fe-a01f-2aef66777af6/AAABoSe1c1E/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/187e30c7-804d-42fe-a01f-2aef66777af6/AAABoSe1c1E/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/187e30c7-804d-42fe-a01f-2aef66777af6/AAABoSe1c1E/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/187e30c7-804d-42fe-a01f-2aef66777af6/AAABoSe1c1E/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/187e30c7-804d-42fe-a01f-2aef66777af6/AAABoSe1c1E/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/187e30c7-804d-42fe-a01f-2aef66777af6/AAABoSe1c1E/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/187e30c7-804d-42fe-a01f-2aef66777af6/AAABoSe1c1E/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "WDR"
+    }, {
+      "tag" : "Nordrhein-Westfalen"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/wdr-mammutmarsch-laeufer-behindern-rettungseinsatz-in-herdecke-100.json?view=hasChanged&lastKnown=462B30873848B53ACF26A1A1347A023C",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.nordrheinwestfalen.wdr-mammutmarsch-laeufer-behindern-rettungseinsatz-in-herdecke-100",
+      "src" : "wdr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T2326",
+      "otp" : "meldung",
+      "cid" : "wdr-mammutmarsch-laeufer-behindern-rettungseinsatz-in-herdecke-100",
+      "pti" : "Mammutmarsch_Laeufer_behindern_Rettungseinsatz_in_Herdecke",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Nordrhein-Westfalen",
+    "firstSentence" : "Die Feuerwehr musste bei Herdecke einen Teil der Route abschirmen, weil Teilnehmer während der Reanimation vorbei wollten.",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Westdeutscher Rundfunk",
+      "copyright" : "WDR",
+      "alttext" : "Logo Westdeutscher Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/34b7843e-4196-44f3-b3a8-54cbd172e832/AAABlaqAmLc/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/inland/regional/nordrheinwestfalen/wdr-mammutmarsch-laeufer-behindern-rettungseinsatz-in-herdecke-100.json",
+    "detailsweb" : "https://www.tagesschau.de/inland/regional/nordrheinwestfalen/wdr-mammutmarsch-laeufer-behindern-rettungseinsatz-in-herdecke-100.html",
+    "shareURL" : "https://www1.wdr.de/nrw/ruhrgebiet/ennepe-ruhr-kreis/mammutmarsch-reanimation-teilnehmende-diskutieren-100.html",
+    "geotags" : [ ],
+    "regionId" : 10,
+    "regionIds" : [ 10 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "usa-hurrikan-isaias-tote-100",
+    "externalId" : "46180c2a-77fd-4e38-91e5-133d02ae6c01",
+    "title" : "Mehrere Tote und Hunderttausende ohne Strom",
+    "date" : "2026-10-10T22:44:04.567+02:00",
+    "teaserImage" : {
+      "copyright" : "Getty Images via AFP",
+      "alttext" : "Ein abdecktes Haus in Florida ",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/7370d223-ada8-4767-b5db-1cd5156f78c6/AAABoSeO-94/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/7370d223-ada8-4767-b5db-1cd5156f78c6/AAABoSeO-94/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/7370d223-ada8-4767-b5db-1cd5156f78c6/AAABoSeO-94/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/7370d223-ada8-4767-b5db-1cd5156f78c6/AAABoSeO-94/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/7370d223-ada8-4767-b5db-1cd5156f78c6/AAABoSeO-94/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/7370d223-ada8-4767-b5db-1cd5156f78c6/AAABoSeO-94/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/7370d223-ada8-4767-b5db-1cd5156f78c6/AAABoSeO-94/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/7370d223-ada8-4767-b5db-1cd5156f78c6/AAABoSeO-94/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/7370d223-ada8-4767-b5db-1cd5156f78c6/AAABoSeO-94/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/7370d223-ada8-4767-b5db-1cd5156f78c6/AAABoSeO-94/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/7370d223-ada8-4767-b5db-1cd5156f78c6/AAABoSeO-94/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/7370d223-ada8-4767-b5db-1cd5156f78c6/AAABoSeO-94/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "USA"
+    }, {
+      "tag" : "Hurrikan"
+    }, {
+      "tag" : "Wetter"
+    }, {
+      "tag" : "El Niño"
+    }, {
+      "tag" : "El Nino"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/usa-hurrikan-isaias-tote-100.json?view=hasChanged&lastKnown=6AC27BFBF0E76F40550007528283E874",
+    "tracking" : [ {
+      "sid" : "app.ausland.amerika.usa-hurrikan-isaias-tote-100",
+      "src" : "tagesschau",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T2244",
+      "otp" : "meldung",
+      "cid" : "usa-hurrikan-isaias-tote-100",
+      "pti" : "Mehrere_Tote_und_etliche_ohne_Strom_durch_Sturm_Isaias",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Hurrikan \"Isaias\" ",
+    "firstSentence" : "Mit \"Isaias\" ist der erste Hurrikan der Saison auf die US-Küste getroffen.",
+    "images" : [ ],
+    "details" : "https://www.tagesschau.de/api2u/ausland/amerika/usa-hurrikan-isaias-tote-100.json",
+    "detailsweb" : "https://www.tagesschau.de/ausland/amerika/usa-hurrikan-isaias-tote-100.html",
+    "shareURL" : "https://www.tagesschau.de/ausland/amerika/usa-hurrikan-isaias-tote-100.html",
+    "geotags" : [ ],
+    "regionId" : 0,
+    "regionIds" : [ ],
+    "ressort" : "ausland",
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "swr-trier-besiegt-auch-den-deutschen-meister-alba-berlin-102",
+    "externalId" : "tagesschau_fm-story-swr-aca374fe-08f0-3c61-b1b5-895fdee9b826",
+    "title" : "Trier besiegt auch den Deutschen Meister Alba Berlin",
+    "date" : "2026-10-10T22:43:18.000+02:00",
+    "teaserImage" : {
+      "title" : "Eli Brooks (Gladiators Trier) jubelt.",
+      "copyright" : "IMAGO, Eibner",
+      "alttext" : "Eli Brooks (Gladiators Trier) jubelt.",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/fa13a863-c1a1-456b-8d1d-d09e84a038ae/AAABoSeSnPw/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/fa13a863-c1a1-456b-8d1d-d09e84a038ae/AAABoSeSnPw/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/fa13a863-c1a1-456b-8d1d-d09e84a038ae/AAABoSeSnPw/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/fa13a863-c1a1-456b-8d1d-d09e84a038ae/AAABoSeSnPw/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/fa13a863-c1a1-456b-8d1d-d09e84a038ae/AAABoSeSnPw/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/fa13a863-c1a1-456b-8d1d-d09e84a038ae/AAABoSeSnPw/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/fa13a863-c1a1-456b-8d1d-d09e84a038ae/AAABoSeSnPw/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/fa13a863-c1a1-456b-8d1d-d09e84a038ae/AAABoSeSnPw/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/fa13a863-c1a1-456b-8d1d-d09e84a038ae/AAABoSeSnPw/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/fa13a863-c1a1-456b-8d1d-d09e84a038ae/AAABoSeSnPw/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/fa13a863-c1a1-456b-8d1d-d09e84a038ae/AAABoSeSnPw/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/fa13a863-c1a1-456b-8d1d-d09e84a038ae/AAABoSeSnPw/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "SWR"
+    }, {
+      "tag" : "Rheinland-Pfalz"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/swr-trier-besiegt-auch-den-deutschen-meister-alba-berlin-102.json?view=hasChanged&lastKnown=6438DF7D1227F5A4C2E13A4B72761A80",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.rheinlandpfalz.swr-trier-besiegt-auch-den-deutschen-meister-alba-berlin-102",
+      "src" : "swr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T2248",
+      "otp" : "meldung",
+      "cid" : "swr-trier-besiegt-auch-den-deutschen-meister-alba-berlin-102",
+      "pti" : "Trier_besiegt_auch_den_Deutschen_Meister_Alba_Berlin",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Rheinland-Pfalz",
+    "firstSentence" : "Sieg im Kult Duell: Die Gladiators Trier beherrschten souverän den amtierenden Meister Alba Berlin.",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Südwestrundfunk",
+      "copyright" : "SWR",
+      "alttext" : "Logo Südwestrundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/25ddb5d7-0642-43c2-b5bd-208e8d783190/AAABlaqAk6o/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/inland/regional/rheinlandpfalz/swr-trier-besiegt-auch-den-deutschen-meister-alba-berlin-102.json",
+    "detailsweb" : "https://www.tagesschau.de/inland/regional/rheinlandpfalz/swr-trier-besiegt-auch-den-deutschen-meister-alba-berlin-102.html",
+    "shareURL" : "https://www.swr.de/sport/mehr-sport/gladiators-trier-fordern-deutschen-meister-alba-berlin-heraus-100.html",
+    "geotags" : [ ],
+    "regionId" : 11,
+    "regionIds" : [ 11 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "video-1664120",
+    "externalId" : "a5fd3ee3-0868-49e3-afe7-4e6624bc710a",
+    "title" : "Hurrikan \"Isaias\" erreicht USA",
+    "date" : "2026-10-10T22:42:39.629+02:00",
+    "teaserImage" : {
+      "title" : "Sendungsbild",
+      "copyright" : "ARD-aktuell",
+      "alttext" : "Sendungsbild",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/1e2a66f7-a59b-4d23-9558-98553f871577/AAABoSeNmQ0/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/1e2a66f7-a59b-4d23-9558-98553f871577/AAABoSeNmQ0/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/1e2a66f7-a59b-4d23-9558-98553f871577/AAABoSeNmQ0/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/1e2a66f7-a59b-4d23-9558-98553f871577/AAABoSeNmQ0/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/1e2a66f7-a59b-4d23-9558-98553f871577/AAABoSeNmQ0/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/1e2a66f7-a59b-4d23-9558-98553f871577/AAABoSeNmQ0/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/1e2a66f7-a59b-4d23-9558-98553f871577/AAABoSeNmQ0/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/1e2a66f7-a59b-4d23-9558-98553f871577/AAABoSeNmQ0/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/1e2a66f7-a59b-4d23-9558-98553f871577/AAABoSeNmQ0/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/1e2a66f7-a59b-4d23-9558-98553f871577/AAABoSeNmQ0/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/1e2a66f7-a59b-4d23-9558-98553f871577/AAABoSeNmQ0/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/1e2a66f7-a59b-4d23-9558-98553f871577/AAABoSeNmQ0/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/video-1664120.json?view=hasChanged&lastKnown=DCD8895AA8F6D046DC67F7B143A1F41D",
+    "tracking" : [ {
+      "sid" : "app.multimedia.video.video-1664120",
+      "src" : "tagesschau",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261010T2243",
+      "otp" : "video",
+      "cid" : "video-1664120",
+      "pti" : "Hurrikan_Isaias_erreicht_USA",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false,
+      "av_air_time" : "2026-10-10T18:00:00.000+02:00"
+    }, {
+      "assetid" : "video-1664120",
+      "program" : "tagesschau24",
+      "title" : "Hurrikan_Isaias_erreicht_USA",
+      "length" : "111",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/video/video-1664120.html",
+      "c7" : "p7,video-1664120",
+      "c8" : "p8,111",
+      "c9" : "p9,tagesschau24_Hurrikan_Isaias_erreicht_USA_10.10.2026_1800",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "h264s" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2238-1600.webs.h264.mp4",
+      "h264m" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2238-1600.webm.h264.mp4",
+      "h264xl" : "https://tagesschau-progressive.ard-mcdn.de/video/2026/1010/TV-20261010-2238-1600.webxl.h264.mp4",
+      "adaptivestreaming" : "https://adaptive.tagesschau.de/i/video/2026/1010/TV-20261010-2238-1600.,webl.h264,webs.h264,webm.h264,webxl.h264,webxxl.h264,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "Sendungsbild",
+    "type" : "video"
+  }, {
+    "sophoraId" : "hr-unfall-mit-vier-auto-bei-korbach-frau-stirbt-mehrere-schwerverletzte-100",
+    "externalId" : "tagesschau_fm-story-id-b9b1ef51-2d18-49da-8714-24d16047c46c",
+    "title" : "Unfall mit vier Auto bei Korbach: Frau stirbt, mehrere Schwerverletzte",
+    "date" : "2026-10-10T22:13:55.974+02:00",
+    "teaserImage" : {
+      "copyright" : "Adobe Stock",
+      "alttext" : "Rettungswagen, Krankenwagen",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/7603b649-adb2-4c64-a177-feaab2f04b20/AAABoSd1UMw/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/7603b649-adb2-4c64-a177-feaab2f04b20/AAABoSd1UMw/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/7603b649-adb2-4c64-a177-feaab2f04b20/AAABoSd1UMw/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/7603b649-adb2-4c64-a177-feaab2f04b20/AAABoSd1UMw/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/7603b649-adb2-4c64-a177-feaab2f04b20/AAABoSd1UMw/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/7603b649-adb2-4c64-a177-feaab2f04b20/AAABoSd1UMw/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/7603b649-adb2-4c64-a177-feaab2f04b20/AAABoSd1UMw/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/7603b649-adb2-4c64-a177-feaab2f04b20/AAABoSd1UMw/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/7603b649-adb2-4c64-a177-feaab2f04b20/AAABoSd1UMw/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/7603b649-adb2-4c64-a177-feaab2f04b20/AAABoSd1UMw/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/7603b649-adb2-4c64-a177-feaab2f04b20/AAABoSd1UMw/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/7603b649-adb2-4c64-a177-feaab2f04b20/AAABoSd1UMw/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "HR"
+    }, {
+      "tag" : "Hessen"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/hr-unfall-mit-vier-auto-bei-korbach-frau-stirbt-mehrere-schwerverletzte-100.json?view=hasChanged&lastKnown=FEB09301B55714410621D7D6800E93B6",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.hessen.hr-unfall-mit-vier-auto-bei-korbach-frau-stirbt-mehrere-schwerverletzte-100",
+      "src" : "hr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T2216",
+      "otp" : "meldung",
+      "cid" : "hr-unfall-mit-vier-auto-bei-korbach-frau-stirbt-mehrere-schwerverletzte-100",
+      "pti" : "Unfall_mit_vier_Auto_bei_Korbach_Frau_stirbt_mehrere_Schwerverletzte",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Hessen",
+    "firstSentence" : "Bei einem Unfall auf der B252 nahe Korbach ist eine Frau ums Leben gekommen.",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Hessischer Rundfunk",
+      "copyright" : "hessenschau",
+      "alttext" : "Logo Hessischer Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/10b182d2-ee50-42e2-9d87-309731667be5/AAABlaqAdVE/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/inland/regional/hessen/hr-unfall-mit-vier-auto-bei-korbach-frau-stirbt-mehrere-schwerverletzte-100.json",
+    "detailsweb" : "https://www.tagesschau.de/inland/regional/hessen/hr-unfall-mit-vier-auto-bei-korbach-frau-stirbt-mehrere-schwerverletzte-100.html",
+    "shareURL" : "https://www.hessenschau.de/panorama/unfall-mit-vier-auto-bei-korbach-frau-stirbt-mehrere-schwerverletzte-v1,unfall-korbach-114.html",
+    "geotags" : [ ],
+    "regionId" : 7,
+    "regionIds" : [ 7 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "saudi-arabien-angriffe-reisewarnung-100",
+    "externalId" : "2eeff2fc-9620-40d3-9669-18cb9aacf904",
+    "title" : "Schwerer Angriff auf saudischen Flughafen",
+    "date" : "2026-10-10T22:08:55.422+02:00",
+    "teaserImage" : {
+      "copyright" : "Bernd von Jutrczenka/dpa",
+      "alttext" : "Die saudische Hauptstadt Riad",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/5bbfe4e2-86c9-4c3d-bff3-4ba19e164089/AAABoSasmBE/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/5bbfe4e2-86c9-4c3d-bff3-4ba19e164089/AAABoSasmBE/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/5bbfe4e2-86c9-4c3d-bff3-4ba19e164089/AAABoSasmBE/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/5bbfe4e2-86c9-4c3d-bff3-4ba19e164089/AAABoSasmBE/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/5bbfe4e2-86c9-4c3d-bff3-4ba19e164089/AAABoSasmBE/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/5bbfe4e2-86c9-4c3d-bff3-4ba19e164089/AAABoSasmBE/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/5bbfe4e2-86c9-4c3d-bff3-4ba19e164089/AAABoSasmBE/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/5bbfe4e2-86c9-4c3d-bff3-4ba19e164089/AAABoSasmBE/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/5bbfe4e2-86c9-4c3d-bff3-4ba19e164089/AAABoSasmBE/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/5bbfe4e2-86c9-4c3d-bff3-4ba19e164089/AAABoSasmBE/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/5bbfe4e2-86c9-4c3d-bff3-4ba19e164089/AAABoSasmBE/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/5bbfe4e2-86c9-4c3d-bff3-4ba19e164089/AAABoSasmBE/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "Riad"
+    }, {
+      "tag" : "Flughafen"
+    }, {
+      "tag" : "Angriff"
+    }, {
+      "tag" : "Huthi"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/saudi-arabien-angriffe-reisewarnung-100.json?view=hasChanged&lastKnown=B15A286AA6B8FE3DF6E6A238D4EB3567",
+    "tracking" : [ {
+      "sid" : "app.ausland.asien.saudi-arabien-angriffe-reisewarnung-100",
+      "src" : "tagesschau",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T1844",
+      "otp" : "meldung",
+      "cid" : "saudi-arabien-angriffe-reisewarnung-100",
+      "pti" : "Huthi-Miliz_greift_offenbar_Flughafen_in_Riad_an",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Huthi-Miliz im Jemen",
+    "firstSentence" : "Der Flughafen nahe der saudischen Hauptstadt Riad ist erneut Ziel eines schweren Angriffs.",
+    "images" : [ ],
+    "details" : "https://www.tagesschau.de/api2u/ausland/asien/saudi-arabien-angriffe-reisewarnung-100.json",
+    "detailsweb" : "https://www.tagesschau.de/ausland/asien/saudi-arabien-angriffe-reisewarnung-100.html",
+    "shareURL" : "https://www.tagesschau.de/ausland/asien/saudi-arabien-angriffe-reisewarnung-100.html",
+    "geotags" : [ ],
+    "regionId" : 0,
+    "regionIds" : [ ],
+    "ressort" : "ausland",
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "swr-beim-oberrieder-viehabtrieb-sind-zum-ersten-mal-kaum-rinder-dabei-100",
+    "externalId" : "tagesschau_fm-story-swr-c6344a2e-58b2-34b3-a6a5-12e3ccb25b17",
+    "title" : "Beim Oberrieder Viehabtrieb sind zum ersten Mal kaum Rinder dabei",
+    "date" : "2026-10-10T22:08:21.000+02:00",
+    "teaserImage" : {
+      "title" : "Beim 29. Viehabtrieb in Oberried haben die Zuschauer eine abgespeckte Version der Tradition miterlebt. Die eigentlichen Stars des Tages - die Kühe - sind wegen der Dürre im Sommer schon im Tal.",
+      "copyright" : "SWR",
+      "alttext" : "Beim 29. Viehabtrieb in Oberried haben die Zuschauer eine abgespeckte Version der Tradition miterlebt. Die eigentlichen Stars des Tages - die Kühe - sind wegen der Dürre im Sommer schon im Tal.",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/4e318f6c-4ff1-4a51-9726-f7fc4fb5627e/AAABoSdzfEg/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/4e318f6c-4ff1-4a51-9726-f7fc4fb5627e/AAABoSdzfEg/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/4e318f6c-4ff1-4a51-9726-f7fc4fb5627e/AAABoSdzfEg/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/4e318f6c-4ff1-4a51-9726-f7fc4fb5627e/AAABoSdzfEg/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/4e318f6c-4ff1-4a51-9726-f7fc4fb5627e/AAABoSdzfEg/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/4e318f6c-4ff1-4a51-9726-f7fc4fb5627e/AAABoSdzfEg/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/4e318f6c-4ff1-4a51-9726-f7fc4fb5627e/AAABoSdzfEg/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/4e318f6c-4ff1-4a51-9726-f7fc4fb5627e/AAABoSdzfEg/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/4e318f6c-4ff1-4a51-9726-f7fc4fb5627e/AAABoSdzfEg/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/4e318f6c-4ff1-4a51-9726-f7fc4fb5627e/AAABoSdzfEg/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/4e318f6c-4ff1-4a51-9726-f7fc4fb5627e/AAABoSdzfEg/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/4e318f6c-4ff1-4a51-9726-f7fc4fb5627e/AAABoSdzfEg/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "SWR"
+    }, {
+      "tag" : "Baden-Württemberg"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/swr-beim-oberrieder-viehabtrieb-sind-zum-ersten-mal-kaum-rinder-dabei-100.json?view=hasChanged&lastKnown=30B4124486F48432DA16CA427964DCC6",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.badenwuerttemberg.swr-beim-oberrieder-viehabtrieb-sind-zum-ersten-mal-kaum-rinder-dabei-100",
+      "src" : "swr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T2214",
+      "otp" : "meldung",
+      "cid" : "swr-beim-oberrieder-viehabtrieb-sind-zum-ersten-mal-kaum-rinder-dabei-100",
+      "pti" : "Beim_Oberrieder_Viehabtrieb_sind_zum_ersten_Mal_kaum_Rinder_dabei",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Baden-Württemberg",
+    "firstSentence" : "Im Sommer hat es zu wenig geregnet.",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Südwestrundfunk",
+      "copyright" : "SWR",
+      "alttext" : "Logo Südwestrundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/25ddb5d7-0642-43c2-b5bd-208e8d783190/AAABlaqAk6o/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/inland/regional/badenwuerttemberg/swr-beim-oberrieder-viehabtrieb-sind-zum-ersten-mal-kaum-rinder-dabei-100.json",
+    "detailsweb" : "https://www.tagesschau.de/inland/regional/badenwuerttemberg/swr-beim-oberrieder-viehabtrieb-sind-zum-ersten-mal-kaum-rinder-dabei-100.html",
+    "shareURL" : "https://www.swr.de/swraktuell/baden-wuerttemberg/freiburg/kaum-rinder-bei-viehabtrieb-20216-oberried-100.html",
+    "geotags" : [ ],
+    "regionId" : 1,
+    "regionIds" : [ 1 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "swr-viehabtrieb-im-schwarzwald-ohne-kuehe-100",
+    "externalId" : "tagesschau_fm-videoobject-oberrieder-almabtrieb-ohne-kuehe-100",
+    "title" : "Viehabtrieb im Schwarzwald ohne Kühe",
+    "date" : "2026-10-10T22:08:19.000+02:00",
+    "teaserImage" : {
+      "copyright" : "SWR",
+      "alttext" : "Kuh geschmückt zum Almabtrieb und Frau im Dirndel",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/7103cb72-9519-4b85-9432-8de1189112d1/AAABoSdziZc/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/7103cb72-9519-4b85-9432-8de1189112d1/AAABoSdziZc/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/7103cb72-9519-4b85-9432-8de1189112d1/AAABoSdziZc/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/7103cb72-9519-4b85-9432-8de1189112d1/AAABoSdziZc/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/7103cb72-9519-4b85-9432-8de1189112d1/AAABoSdziZc/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/7103cb72-9519-4b85-9432-8de1189112d1/AAABoSdziZc/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/7103cb72-9519-4b85-9432-8de1189112d1/AAABoSdziZc/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/7103cb72-9519-4b85-9432-8de1189112d1/AAABoSdziZc/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/7103cb72-9519-4b85-9432-8de1189112d1/AAABoSdziZc/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/7103cb72-9519-4b85-9432-8de1189112d1/AAABoSdziZc/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/7103cb72-9519-4b85-9432-8de1189112d1/AAABoSdziZc/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/7103cb72-9519-4b85-9432-8de1189112d1/AAABoSdziZc/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/swr-viehabtrieb-im-schwarzwald-ohne-kuehe-100.json?view=hasChanged&lastKnown=6A7BFC8401732B2E8D150696554A811E",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.badenwuerttemberg.swr-viehabtrieb-im-schwarzwald-ohne-kuehe-100",
+      "src" : "swr",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261010T2214",
+      "otp" : "video",
+      "cid" : "swr-viehabtrieb-im-schwarzwald-ohne-kuehe-100",
+      "pti" : "Viehabtrieb_im_Schwarzwald_ohne_Kuehe",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    }, {
+      "assetid" : "swr-viehabtrieb-im-schwarzwald-ohne-kuehe-100",
+      "program" : "Tagesschau",
+      "title" : "Viehabtrieb_im_Schwarzwald_ohne_Kuehe",
+      "length" : "135",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/inland/regional/badenwuerttemberg/swr-viehabtrieb-im-schwarzwald-ohne-kuehe-100.html",
+      "c7" : "p7,swr-viehabtrieb-im-schwarzwald-ohne-kuehe-100",
+      "c8" : "p8,135",
+      "c9" : "p9,Tagesschau_Viehabtrieb_im_Schwarzwald_ohne_Kuehe_10.10.2026_2214",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "h264xl" : "https://swr-pd.ard-mcdn.de/swr/swraktuell/bw/tv/einzelbeitraege/2356600.avc-720.mp4",
+      "adaptivestreaming" : "https://swr-adaptive.ard-mcdn.de/i/swr/swraktuell/bw/tv/einzelbeitraege/2356600,.avc-270,.avc-360,.avc-540,.avc-720,.avc-1080,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "Kuh geschmückt zum Almabtrieb und Frau im Dirndel",
+    "type" : "video"
+  }, {
+    "sophoraId" : "swr-die-deutsch-amerikanische-feuerwehrfamilie-auf-der-air-base-ramstein-100",
+    "externalId" : "tagesschau_fm-story-swr-30ad41ee-36c4-3e5d-9e2b-b370a79ac2e1",
+    "title" : "Die deutsch-amerikanische Feuerwehrfamilie auf der Air Base Ramstein",
+    "date" : "2026-10-10T22:04:22.000+02:00",
+    "teaserImage" : {
+      "title" : "Zusammenarbeit wird bei den Feuerwehren  großgeschrieben. Sprachbarrieren gibt es selten. ",
+      "copyright" : "SWR",
+      "alttext" : "Für die Besucher beim Open House gab es jede Menge Geschenke zum Mitnehmen",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/5bfeacdc-5633-4eb6-adff-224c9459f420/AAABoSd1Yl8/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/5bfeacdc-5633-4eb6-adff-224c9459f420/AAABoSd1Yl8/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/5bfeacdc-5633-4eb6-adff-224c9459f420/AAABoSd1Yl8/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/5bfeacdc-5633-4eb6-adff-224c9459f420/AAABoSd1Yl8/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/5bfeacdc-5633-4eb6-adff-224c9459f420/AAABoSd1Yl8/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/5bfeacdc-5633-4eb6-adff-224c9459f420/AAABoSd1Yl8/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/5bfeacdc-5633-4eb6-adff-224c9459f420/AAABoSd1Yl8/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/5bfeacdc-5633-4eb6-adff-224c9459f420/AAABoSd1Yl8/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/5bfeacdc-5633-4eb6-adff-224c9459f420/AAABoSd1Yl8/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/5bfeacdc-5633-4eb6-adff-224c9459f420/AAABoSd1Yl8/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/5bfeacdc-5633-4eb6-adff-224c9459f420/AAABoSd1Yl8/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/5bfeacdc-5633-4eb6-adff-224c9459f420/AAABoSd1Yl8/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "SWR"
+    }, {
+      "tag" : "Rheinland-Pfalz"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/swr-die-deutsch-amerikanische-feuerwehrfamilie-auf-der-air-base-ramstein-100.json?view=hasChanged&lastKnown=C75AAF0EFD64C625C7F7CFE1340579B2",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.rheinlandpfalz.swr-die-deutsch-amerikanische-feuerwehrfamilie-auf-der-air-base-ramstein-100",
+      "src" : "swr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T2210",
+      "otp" : "meldung",
+      "cid" : "swr-die-deutsch-amerikanische-feuerwehrfamilie-auf-der-air-base-ramstein-100",
+      "pti" : "Die_deutsch-amerikanische_Feuerwehrfamilie_auf_der_Air_Base_Ramstein",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Rheinland-Pfalz",
+    "firstSentence" : "Ein großes Flammenmeer lodert in den Himmel, Rauch steigt auf, ein Flugzeug auf der Air Base in Ramstein brennt, Jetzt zählt jede Sekunde.",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Südwestrundfunk",
+      "copyright" : "SWR",
+      "alttext" : "Logo Südwestrundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/25ddb5d7-0642-43c2-b5bd-208e8d783190/AAABlaqAk6o/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/inland/regional/rheinlandpfalz/swr-die-deutsch-amerikanische-feuerwehrfamilie-auf-der-air-base-ramstein-100.json",
+    "detailsweb" : "https://www.tagesschau.de/inland/regional/rheinlandpfalz/swr-die-deutsch-amerikanische-feuerwehrfamilie-auf-der-air-base-ramstein-100.html",
+    "shareURL" : "https://www.swr.de/swraktuell/rheinland-pfalz/kaiserslautern/air-base-ramstein-tag-der-offenen-tuer-feuerwehren-arbeiten-hand-in-hand-100.html",
+    "geotags" : [ ],
+    "regionId" : 11,
+    "regionIds" : [ 11 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "swr-feuerwehruebungen-auf-der-airbase-ramstein-100",
+    "externalId" : "tagesschau_fm-videoobject-zusammenarbeit-airbase-ramstein-100",
+    "title" : "Feuerwehrübungen auf der Airbase Ramstein",
+    "date" : "2026-10-10T22:04:07.000+02:00",
+    "teaserImage" : {
+      "title" : "In der Brandsimulationsanlage (Aircraft Fire Training Mockup) wird ein Flugzeug wie die Lockheed C-130 Hercules in Brand gesetzt. Hier üben die Feuerwehren gemeinsam mehrmals im Jahr. ",
+      "copyright" : "SWR",
+      "alttext" : "Training on the job: An der Brandsimulationsanlage (Aircraft Fire Training Mockup) wird ein Flugzeug wie die Lockheed C-130 Hercules in Brand gesetzt. ",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/e2b52437-07c2-4a90-8886-b26bc8fc39de/AAABoSd1ayo/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/e2b52437-07c2-4a90-8886-b26bc8fc39de/AAABoSd1ayo/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/e2b52437-07c2-4a90-8886-b26bc8fc39de/AAABoSd1ayo/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/e2b52437-07c2-4a90-8886-b26bc8fc39de/AAABoSd1ayo/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/e2b52437-07c2-4a90-8886-b26bc8fc39de/AAABoSd1ayo/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/e2b52437-07c2-4a90-8886-b26bc8fc39de/AAABoSd1ayo/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/e2b52437-07c2-4a90-8886-b26bc8fc39de/AAABoSd1ayo/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/e2b52437-07c2-4a90-8886-b26bc8fc39de/AAABoSd1ayo/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/e2b52437-07c2-4a90-8886-b26bc8fc39de/AAABoSd1ayo/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/e2b52437-07c2-4a90-8886-b26bc8fc39de/AAABoSd1ayo/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/e2b52437-07c2-4a90-8886-b26bc8fc39de/AAABoSd1ayo/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/e2b52437-07c2-4a90-8886-b26bc8fc39de/AAABoSd1ayo/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/swr-feuerwehruebungen-auf-der-airbase-ramstein-100.json?view=hasChanged&lastKnown=E69FF309F38AC60F26613C72F4CB7CF6",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.rheinlandpfalz.swr-feuerwehruebungen-auf-der-airbase-ramstein-100",
+      "src" : "swr",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261010T2216",
+      "otp" : "video",
+      "cid" : "swr-feuerwehruebungen-auf-der-airbase-ramstein-100",
+      "pti" : "Feuerwehruebungen_auf_der_Airbase_Ramstein",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    }, {
+      "assetid" : "swr-feuerwehruebungen-auf-der-airbase-ramstein-100",
+      "program" : "Tagesschau",
+      "title" : "Feuerwehruebungen_auf_der_Airbase_Ramstein",
+      "length" : "51",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/inland/regional/rheinlandpfalz/swr-feuerwehruebungen-auf-der-airbase-ramstein-100.html",
+      "c7" : "p7,swr-feuerwehruebungen-auf-der-airbase-ramstein-100",
+      "c8" : "p8,51",
+      "c9" : "p9,Tagesschau_Feuerwehruebungen_auf_der_Airbase_Ramstein_10.10.2026_2216",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "h264xl" : "https://swr-pd.ard-mcdn.de/swr/swraktuell/rp/tv/einzelbeitraege/2356608.avc-720.mp4",
+      "adaptivestreaming" : "https://swr-adaptive.ard-mcdn.de/i/swr/swraktuell/rp/tv/einzelbeitraege/2356608,.avc-270,.avc-360,.avc-540,.avc-720,.avc-1080,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "Training on the job: An der Brandsimulationsanlage (Aircraft Fire Training Mockup) wird ein Flugzeug wie die Lockheed C-130 Hercules in Brand gesetzt. ",
+    "type" : "video"
+  }, {
+    "sophoraId" : "sr-trockenheit-im-saarland-beeintraechtigt-obsternte-100",
+    "externalId" : "tagesschau_fm-story-gartenbauvereine_schlechte_obsternte_100",
+    "title" : "Trockenheit im Saarland beeinträchtigt Obsternte ",
+    "date" : "2026-10-10T21:53:00.000+02:00",
+    "teaserImage" : {
+      "title" : "Schlechte Obsternte durch Hitzestress",
+      "copyright" : "IMAGO / Gottfried Czepluch",
+      "alttext" : "Schlechte Obsternte durch Hitzestress",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/ec004f50-abc5-4b28-93c9-8d03eaf97ed7/AAABoSdi_bs/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/ec004f50-abc5-4b28-93c9-8d03eaf97ed7/AAABoSdi_bs/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/ec004f50-abc5-4b28-93c9-8d03eaf97ed7/AAABoSdi_bs/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/ec004f50-abc5-4b28-93c9-8d03eaf97ed7/AAABoSdi_bs/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/ec004f50-abc5-4b28-93c9-8d03eaf97ed7/AAABoSdi_bs/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/ec004f50-abc5-4b28-93c9-8d03eaf97ed7/AAABoSdi_bs/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/ec004f50-abc5-4b28-93c9-8d03eaf97ed7/AAABoSdi_bs/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/ec004f50-abc5-4b28-93c9-8d03eaf97ed7/AAABoSdi_bs/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/ec004f50-abc5-4b28-93c9-8d03eaf97ed7/AAABoSdi_bs/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/ec004f50-abc5-4b28-93c9-8d03eaf97ed7/AAABoSdi_bs/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/ec004f50-abc5-4b28-93c9-8d03eaf97ed7/AAABoSdi_bs/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/ec004f50-abc5-4b28-93c9-8d03eaf97ed7/AAABoSdi_bs/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "SR"
+    }, {
+      "tag" : "Saarland"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/sr-trockenheit-im-saarland-beeintraechtigt-obsternte-100.json?view=hasChanged&lastKnown=5861E17A5892047F5EF06DF1762646BB",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.saarland.sr-trockenheit-im-saarland-beeintraechtigt-obsternte-100",
+      "src" : "sr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T2156",
+      "otp" : "meldung",
+      "cid" : "sr-trockenheit-im-saarland-beeintraechtigt-obsternte-100",
+      "pti" : "Trockenheit_im_Saarland_beeintraechtigt_Obsternte",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    } ],
+    "topline" : "Saarland",
+    "firstSentence" : "Der Sommer war in diesem Jahr nicht nur außergewöhnlich warm, sondern auch sehr trocken.",
+    "images" : [ ],
+    "brandingImage" : {
+      "title" : "Logo Saarländischer Rundfunk",
+      "copyright" : "SR",
+      "alttext" : "Logo Saarländischer Rundfunk",
+      "imageVariants" : {
+        "original" : "https://images.tagesschau.de/image/01792937-4c37-4dba-9b32-eee4e8f2c8cf/AAABlaqAjsA/AAABnR8VW9w/original.png"
+      },
+      "type" : "image"
+    },
+    "details" : "https://www.tagesschau.de/api2u/inland/regional/saarland/sr-trockenheit-im-saarland-beeintraechtigt-obsternte-100.json",
+    "detailsweb" : "https://www.tagesschau.de/inland/regional/saarland/sr-trockenheit-im-saarland-beeintraechtigt-obsternte-100.html",
+    "shareURL" : "https://www.sr.de/sr/home/nachrichten/panorama/gartenbauvereine_schlechte_obsternte_100.html",
+    "geotags" : [ ],
+    "regionId" : 12,
+    "regionIds" : [ 12 ],
+    "breakingNews" : false,
+    "type" : "story"
+  }, {
+    "sophoraId" : "swr-junge-schausteller-auf-dem-lukasmarkt-in-mayen-100",
+    "externalId" : "tagesschau_fm-videoobject-junge-schausteller-auf-dem-lukasmarkt-in-mayen-100",
+    "title" : "Junge Schausteller auf dem Lukasmarkt in Mayen",
+    "date" : "2026-10-10T21:47:29.000+02:00",
+    "teaserImage" : {
+      "title" : "Mario Wingender kümmert sich vor allem um den Breakdancer. Wenn der Lukasmarkt startet, wird man ihn wieder hinter Mikrofon und Kasse sehen. ",
+      "copyright" : "SWR",
+      "alttext" : "Mario Wingender vor seinem Breakdancer auf dem Lukasmarkt",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/b49e1db9-06c1-44b9-a44d-24c58c9494a2/AAABoSdfWkI/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/b49e1db9-06c1-44b9-a44d-24c58c9494a2/AAABoSdfWkI/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/b49e1db9-06c1-44b9-a44d-24c58c9494a2/AAABoSdfWkI/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/b49e1db9-06c1-44b9-a44d-24c58c9494a2/AAABoSdfWkI/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/b49e1db9-06c1-44b9-a44d-24c58c9494a2/AAABoSdfWkI/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/b49e1db9-06c1-44b9-a44d-24c58c9494a2/AAABoSdfWkI/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/b49e1db9-06c1-44b9-a44d-24c58c9494a2/AAABoSdfWkI/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/b49e1db9-06c1-44b9-a44d-24c58c9494a2/AAABoSdfWkI/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/b49e1db9-06c1-44b9-a44d-24c58c9494a2/AAABoSdfWkI/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/b49e1db9-06c1-44b9-a44d-24c58c9494a2/AAABoSdfWkI/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/b49e1db9-06c1-44b9-a44d-24c58c9494a2/AAABoSdfWkI/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/b49e1db9-06c1-44b9-a44d-24c58c9494a2/AAABoSdfWkI/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/swr-junge-schausteller-auf-dem-lukasmarkt-in-mayen-100.json?view=hasChanged&lastKnown=7C543927DB6D37239CD7F7FD201E083C",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.rheinlandpfalz.swr-junge-schausteller-auf-dem-lukasmarkt-in-mayen-100",
+      "src" : "swr",
+      "ctp" : "SEGMENT",
+      "pdt" : "20261010T2152",
+      "otp" : "video",
+      "cid" : "swr-junge-schausteller-auf-dem-lukasmarkt-in-mayen-100",
+      "pti" : "Junge_Schausteller_auf_dem_Lukasmarkt_in_Mayen",
+      "bcr" : "ja",
+      "type" : "generic",
+      "av_full_show" : false
+    }, {
+      "assetid" : "swr-junge-schausteller-auf-dem-lukasmarkt-in-mayen-100",
+      "program" : "Tagesschau",
+      "title" : "Junge_Schausteller_auf_dem_Lukasmarkt_in_Mayen",
+      "length" : "123",
+      "c2" : "p2,N",
+      "c5" : "p5,https://www.tagesschau.de/inland/regional/rheinlandpfalz/swr-junge-schausteller-auf-dem-lukasmarkt-in-mayen-100.html",
+      "c7" : "p7,swr-junge-schausteller-auf-dem-lukasmarkt-in-mayen-100",
+      "c8" : "p8,123",
+      "c9" : "p9,Tagesschau_Junge_Schausteller_auf_dem_Lukasmarkt_in_Mayen_10.10.2026_2152",
+      "c10" : "p10,Das_Erste",
+      "c12" : "p12,content",
+      "c16" : "p16,ARD_Information/ARD_Livestream",
+      "c18" : "p18,N",
+      "type_nielsen" : "content",
+      "type" : "nielsen"
+    } ],
+    "streams" : {
+      "h264xl" : "https://swr-pd.ard-mcdn.de/swr/swraktuell/rp/tv/einzelbeitraege/2356610.avc-720.mp4",
+      "adaptivestreaming" : "https://swr-adaptive.ard-mcdn.de/i/swr/swraktuell/rp/tv/einzelbeitraege/2356610,.avc-270,.avc-360,.avc-540,.avc-720,.avc-1080,.mp4.csmil/master.m3u8"
+    },
+    "alttext" : "Mario Wingender vor seinem Breakdancer auf dem Lukasmarkt",
+    "type" : "video"
+  }, {
+    "sophoraId" : "wdr-usa-kaufen-diesel-in-russland-trumps-deal-laeuft-ins-leere-100",
+    "externalId" : "tagesschau_fm-story-WDR-2ca143a8-16d8-4797-b294-e7cd761a5116",
+    "title" : "USA kaufen Diesel in Russland: \"Trumps Deal läuft ins Leere\"",
+    "date" : "2026-10-10T21:35:00.000+02:00",
+    "teaserImage" : {
+      "title" : "Wladimir Putin und Donald Trump",
+      "copyright" : "Julia Demaree Nikhinson / dpa",
+      "alttext" : "Wladimir Putin und Donald Trump geben sich an einem Flughafen die Hand",
+      "imageVariants" : {
+        "1x1-144" : "https://images.tagesschau.de/image/3b67ef70-c550-4bf3-a37e-5297a828cb3e/AAABoSe1Zns/AAABnSStQvU/1x1-144.jpg",
+        "1x1-256" : "https://images.tagesschau.de/image/3b67ef70-c550-4bf3-a37e-5297a828cb3e/AAABoSe1Zns/AAABnSStSJ8/1x1-256.jpg",
+        "1x1-432" : "https://images.tagesschau.de/image/3b67ef70-c550-4bf3-a37e-5297a828cb3e/AAABoSe1Zns/AAABnSStTkw/1x1-432.jpg",
+        "1x1-640" : "https://images.tagesschau.de/image/3b67ef70-c550-4bf3-a37e-5297a828cb3e/AAABoSe1Zns/AAABnSStU_E/1x1-640.jpg",
+        "1x1-840" : "https://images.tagesschau.de/image/3b67ef70-c550-4bf3-a37e-5297a828cb3e/AAABoSe1Zns/AAABnSStWZo/1x1-840.jpg",
+        "16x9-256" : "https://images.tagesschau.de/image/3b67ef70-c550-4bf3-a37e-5297a828cb3e/AAABoSe1Zns/AAABnSSvh0M/16x9-256.jpg",
+        "16x9-384" : "https://images.tagesschau.de/image/3b67ef70-c550-4bf3-a37e-5297a828cb3e/AAABoSe1Zns/AAABnSSvjXw/16x9-384.jpg",
+        "16x9-512" : "https://images.tagesschau.de/image/3b67ef70-c550-4bf3-a37e-5297a828cb3e/AAABoSe1Zns/AAABnSSvlIQ/16x9-512.jpg",
+        "16x9-640" : "https://images.tagesschau.de/image/3b67ef70-c550-4bf3-a37e-5297a828cb3e/AAABoSe1Zns/AAABnSSvmjA/16x9-640.jpg",
+        "16x9-960" : "https://images.tagesschau.de/image/3b67ef70-c550-4bf3-a37e-5297a828cb3e/AAABoSe1Zns/AAABnSSvpk8/16x9-960.jpg",
+        "16x9-1280" : "https://images.tagesschau.de/image/3b67ef70-c550-4bf3-a37e-5297a828cb3e/AAABoSe1Zns/AAABnSSveow/16x9-1280.jpg",
+        "16x9-1920" : "https://images.tagesschau.de/image/3b67ef70-c550-4bf3-a37e-5297a828cb3e/AAABoSe1Zns/AAABnSSvgNE/16x9-1920.jpg"
+      },
+      "type" : "image"
+    },
+    "tags" : [ {
+      "tag" : "WDR"
+    }, {
+      "tag" : "Nordrhein-Westfalen"
+    } ],
+    "updateCheckUrl" : "https://www.tagesschau.de/api2u/wdr-usa-kaufen-diesel-in-russland-trumps-deal-laeuft-ins-leere-100.json?view=hasChanged&lastKnown=441340FF6AEAB7F116DDA9A2CE8225B2",
+    "tracking" : [ {
+      "sid" : "app.inland.regional.nordrheinwestfalen.wdr-usa-kaufen-diesel-in-russland-trumps-deal-laeuft-ins-leere-100",
+      "src" : "wdr",
+      "ctp" : "nicht-definiert",
+      "pdt" : "20261010T2326",
+      "otp" : "meldung",
+      "cid" : "wdr-usa-kaufen-diesel-in-russland-trumps-deal-laeuft-ins-leere-100",
+      "pti" : "USA_kaufen_Diesel_in_Russland_Trumps_Deal_laeuft_ins_Leere",
+      "bcr" : "ja",
+      "ty

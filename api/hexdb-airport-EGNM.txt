@@ -1,0 +1,17 @@
+HTTP 200
+access-control-allow-origin: *
+alt-svc: h3=":443"; ma=86400
+cache-control: max-age=14400
+cf-cache-status: HIT
+cf-ray: a489fad10f8839f4-YYZ
+connection: keep-alive
+content-encoding: br
+content-type: application/json
+date: Sun, 11 Oct 2026 01:09:30 GMT
+last-modified: Sun, 11 Oct 2026 01:09:30 GMT
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=TPAAEg4HErOFeE4Dkds2WCvTWCUZjJZSxqKlPsq2hqYfswKA3Cfrzdkven4WcJfyHMJZgAtjTtDw2nNLqDtSW1sO4ghzr8HDNVjTaDHJPEapwxOPtIS4HBzl7Q%3D%3D"}]}
+server: cloudflare
+transfer-encoding: chunked
+
+{"country_code": "GB", "region_name": "England", "iata": "LBA", "icao": "EGNM", "airport": "Leeds Bradford Airport", "latitude": 53.8659, "longitude": -1.66057}

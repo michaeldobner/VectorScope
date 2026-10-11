@@ -1,0 +1,17 @@
+HTTP 200
+access-control-allow-headers: Content-Type, X-VS-Token, Accept
+access-control-allow-methods: GET, POST, OPTIONS
+access-control-allow-origin: *
+access-control-max-age: 86400
+cache-control: no-store
+content-length: 28
+content-type: application/json; charset=utf-8
+date: Sun, 11 Oct 2026 01:09:26 GMT
+etag: W/"1c-fYwysAvuVBNOWjNxXuji4Y9HiKc"
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+vary: Origin
+x-vercel-cache: MISS
+x-vercel-id: cle1::fra1::xrplh-1791680965884-8d1eaeff8f36
+
+{"translations":[null,null]}
