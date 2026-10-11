@@ -119,6 +119,18 @@ function metaLine(s: Story, cc = false) {
   if (cc && n > 1) parts.push(ccs(s));
   return `<div class="meta">${parts.join('')}</div>`;
 }
+const SHARE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>';
+/** Picture of a story in a 16:9 frame, never cut, on a blurred copy of itself. */
+function mediaHtml(s: Story, lazy = true) {
+  if (!s.img) return '';
+  const u = esc(s.img.url);
+  return `<div class="media"><div class="bg" style="background-image:url(&quot;${u}&quot;)"></div><img src="${u}" alt="" referrerpolicy="no-referrer" ${lazy ? 'loading="lazy"' : ''} onload="__newsFit(this)" onerror="this.parentNode.remove()"></div>`;
+}
+// A picture smaller than its frame keeps its own size instead of being blown up and blurred.
+(window as unknown as { __newsFit: (img: HTMLImageElement) => void }).__newsFit = (img) => {
+  const box = img.parentElement;
+  if (box && img.naturalWidth && img.naturalWidth < box.clientWidth) box.classList.add('small');
+};
 const img = (s: Story, cls: string, lazy = true) =>
   s.img ? `<img class="${cls}" src="${esc(s.img.url)}" alt="" referrerpolicy="no-referrer" ${lazy ? 'loading="lazy"' : ''} onerror="this.remove()">` : '';
 const headHtml = (s: Story, tag: string) => `<${tag} class="head" lang="${HL(s)}">${esc(H(s))}</${tag}>`;
@@ -154,7 +166,7 @@ function renderList(dir?: number) {
   if (r === 'top') {
     const top = topList();
     const first = top[0];
-    if (first) html += `<button class="story lead" data-id="${esc(first.id)}">${img(first, '', false)}${metaLine(first, true)}${headHtml(first, 'h2')}${sumHtml(first)}${viaHtml(first)}</button>`;
+    if (first) html += `<button class="story lead" data-id="${esc(first.id)}">${mediaHtml(first, false)}${metaLine(first, true)}${headHtml(first, 'h2')}${sumHtml(first)}${viaHtml(first)}</button>`;
     top.slice(1, 3).forEach((s, i) => (html += rowHtml(s, i + 2)));
     const others = otherList();
     if (others.length)
@@ -223,7 +235,8 @@ function detailHtml(s: Story) {
     .map((g) => `<div class="group"><h4>${t().groups[g]}</h4>${byGroup[g].map((x) => `<a href="${esc(x.link)}" target="_blank" rel="noopener"><span class="o">${esc(x.outlet)}</span><span class="x">${esc(ST(x))}${TR(x) ? ` <span class="trl">${t().translated}</span>` : ''}</span><span class="t">${fmtTime(x.time)}</span></a>`).join('')}</div>`)
     .join('');
   const where = s.countries.map((c) => t().country[c] ?? c).join(', ');
-  return `<article class="detail-view">${img(s, 'hero', false)}${s.img ? `<div class="credit">${t().photo}: ${esc(s.img.credit)}</div>` : ''}${metaLine(s)}${headHtml(s, 'h2')}${sumHtml(s)}${viaHtml(s)}
+  return `<article class="detail-view">${mediaHtml(s, false)}${s.img ? `<div class="credit">${t().photo}: ${esc(s.img.credit)}</div>` : ''}${metaLine(s)}${headHtml(s, 'h2')}${sumHtml(s)}${viaHtml(s)}
+    <div class="share-row"><button class="btn" data-act="share" data-id="${esc(s.id)}">${SHARE_ICON}${t().share}</button></div>
     <div class="section-label"><span>${s.sources.length > 1 ? t().report : t().source}</span></div><p class="where">${esc(where)}</p>
     <div class="persp">${persp}</div>
     ${s.sources.length > 2 ? `<div class="section-label"><span>${t().allSources}</span></div><div class="groups">${groups}</div>` : ''}</article>`;
@@ -354,9 +367,14 @@ scrim.addEventListener('click', closeSheet);
 })();
 
 // ---------- Briefing: two minutes, one story per screen ----------
+// Tap right or the button for the next story, left for the previous one, swipe sideways, hold to pause,
+// swipe down to close. The first time a hint says so.
 
+const SLIDE_MS = 11000;
 let bIdx = 0;
 let bTimer: ReturnType<typeof setTimeout> | undefined;
+let bLeft = SLIDE_MS;
+let bSince = 0;
 let bList: Story[] = [];
 function openBrief() {
   if (!state.edition) return;
@@ -367,35 +385,107 @@ function openBrief() {
   document.body.style.overflow = 'hidden';
   renderBrief();
 }
-function renderBrief() {
+function step(by: number) {
+  const next = Math.min(bList.length, Math.max(0, bIdx + by));
+  if (next === bIdx) return;
+  bIdx = next;
+  renderBrief(by);
+}
+function renderBrief(dir = 0) {
   clearTimeout(bTimer);
   const done = bIdx >= bList.length;
   const s = bList[bIdx];
+  const anim = dir > 0 ? ' from-next' : dir < 0 ? ' from-prev' : '';
   const slide = done
-    ? `<div class="slide final"><h2 class="head">${t().upToDate}</h2><p class="sum">${t().briefDone(bList.length, new Set(bList.flatMap((x) => x.sources.map((y) => y.outlet))).size)}</p></div>`
-    : `<div class="slide">${img(s, '', false)}${metaLine(s, true)}${headHtml(s, 'h2')}${sumHtml(s)}</div>`;
+    ? `<div class="slide final${anim}"><h2 class="head">${t().upToDate}</h2><p class="sum">${t().briefDone(bList.length, new Set(bList.flatMap((x) => x.sources.map((y) => y.outlet))).size)}</p></div>`
+    : `<div class="slide${anim}">${mediaHtml(s, false)}<div class="text">${metaLine(s, true)}${headHtml(s, 'h2')}${sumHtml(s)}</div></div>`;
+  const hint = !done && bIdx === 0 && !store.get('briefHint', false) ? `<div class="hint">${t().briefHint}</div>` : '';
+  if (hint) store.set('briefHint', true);
   const bars = bList.map((_, i) => `<i class="${i < bIdx ? 'done' : i === bIdx ? 'cur' : ''}"></i>`).join('');
-  $('#brief').innerHTML = `<div class="brief-stage">${slide}${done ? '' : `<button class="tap prev" data-act="bprev" aria-label="${t().back}"></button><button class="tap next" data-act="bnext" aria-label="${t().fwd}"></button>`}</div>
-    <div class="brief-foot"><div class="bars">${bars}</div><div class="brief-actions"><button class="btn" data-act="bclose">${done ? t().done : t().stop}</button>${done ? '' : `<button class="btn primary" data-act="bopen" data-id="${esc(s.id)}">${t().more}</button>`}</div></div>`;
-  if (!done)
-    bTimer = setTimeout(() => {
-      bIdx++;
-      renderBrief();
-    }, 11000);
+  $('#brief').classList.remove('paused');
+  $('#brief').innerHTML = `<div class="brief-stage" id="briefStage">${slide}${hint}</div>
+    <div class="brief-foot"><div class="bars">${bars}</div>
+      <div class="brief-nav"><button class="nav-btn" data-act="bprev" ${bIdx === 0 ? 'disabled' : ''}>‹ ${t().back}</button><span class="count">${Math.min(bIdx + 1, bList.length)} / ${bList.length}</span><button class="nav-btn next" data-act="bnext" ${done ? 'disabled' : ''}>${t().fwd} ›</button></div>
+      <div class="brief-actions"><button class="btn" data-act="bclose">${done ? t().done : t().stop}</button>${done ? '' : `<button class="btn" data-act="share" data-id="${esc(s.id)}" aria-label="${t().share}">${SHARE_ICON}${t().share}</button><button class="btn primary" data-act="bopen" data-id="${esc(s.id)}">${t().more}</button>`}</div></div>`;
+  bLeft = SLIDE_MS;
+  if (!done) resumeBrief();
+}
+function pauseBrief() {
+  clearTimeout(bTimer);
+  bLeft -= Date.now() - bSince;
+  $('#brief').classList.add('paused');
+}
+function resumeBrief() {
+  bSince = Date.now();
+  $('#brief').classList.remove('paused');
+  bTimer = setTimeout(() => step(1), Math.max(0, bLeft));
 }
 function closeBrief() {
   clearTimeout(bTimer);
   $('#brief').hidden = true;
   document.body.style.overflow = '';
 }
-(function briefSwipe() {
-  let y0: number | null = null;
-  $('#brief').addEventListener('touchstart', (e) => (y0 = e.touches[0].clientY), { passive: true });
-  $('#brief').addEventListener('touchend', (e) => {
-    if (y0 != null && e.changedTouches[0].clientY - y0 > 110) closeBrief();
-    y0 = null;
+(function briefGestures() {
+  let x0 = 0;
+  let y0 = 0;
+  let t0 = 0;
+  let down = false;
+  let held = false;
+  let holdTimer: ReturnType<typeof setTimeout> | undefined;
+  const brief = $('#brief');
+  brief.addEventListener('pointerdown', (e) => {
+    if (!(e.target as HTMLElement).closest('#briefStage') || bIdx >= bList.length) return;
+    [x0, y0, t0, down, held] = [e.clientX, e.clientY, Date.now(), true, false];
+    // Holding pauses, like stories elsewhere.
+    holdTimer = setTimeout(() => {
+      held = true;
+      pauseBrief();
+    }, 260);
+  });
+  brief.addEventListener('pointerup', (e) => {
+    if (!down) return;
+    down = false;
+    clearTimeout(holdTimer);
+    const dx = e.clientX - x0;
+    const dy = e.clientY - y0;
+    if (dy > 110 && Math.abs(dy) > Math.abs(dx)) return closeBrief();
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) return step(dx < 0 ? 1 : -1);
+    if (held) return resumeBrief();
+    if (Date.now() - t0 < 260) step(e.clientX < brief.clientWidth / 3 ? -1 : 1);
+  });
+  brief.addEventListener('pointercancel', () => {
+    down = false;
+    clearTimeout(holdTimer);
+    if (held) resumeBrief();
   });
 })();
+
+// ---------- Sharing: the original article, through the share sheet of the device ----------
+
+function toast(text: string) {
+  const el = document.createElement('div');
+  el.className = 'toast';
+  el.textContent = text;
+  document.body.append(el);
+  setTimeout(() => el.remove(), 2200);
+}
+async function share(id: string) {
+  const s = findStory(id);
+  if (!s) return;
+  const x = s.sources.find((y) => y.outlet === lead(s).outlet) ?? s.sources[0];
+  const wasRunning = !$('#brief').hidden && !$('#brief').classList.contains('paused') && bIdx < bList.length;
+  if (wasRunning) pauseBrief();
+  try {
+    if (navigator.share) await navigator.share({ title: H(s), text: `${H(s)} (${x.outlet})`, url: x.link });
+    else {
+      await navigator.clipboard.writeText(`${H(s)}\n${x.link}`);
+      toast(t().copied);
+    }
+  } catch {
+    // Closed without sharing.
+  }
+  if (wasRunning) resumeBrief();
+}
 
 // ---------- Settings ----------
 
@@ -498,10 +588,8 @@ document.addEventListener('click', (e) => {
   if (act === 'close') closeSheet();
   if (act === 'brief') openBrief();
   if (act === 'settings') openSettings();
-  if (act === 'bnext' || act === 'bprev') {
-    bIdx = act === 'bnext' ? bIdx + 1 : Math.max(0, bIdx - 1);
-    renderBrief();
-  }
+  if (act === 'bnext' || act === 'bprev') step(act === 'bnext' ? 1 : -1);
+  if (act === 'share') share(target.closest<HTMLElement>('[data-id]')!.dataset.id!);
   if (act === 'bclose') closeBrief();
   if (act === 'bopen') {
     const id = target.closest<HTMLElement>('[data-id]')!.dataset.id!;
@@ -523,10 +611,7 @@ $('#setBtn').addEventListener('click', openSettings);
 document.addEventListener('keydown', (e) => {
   const briefOpen = !$('#brief').hidden;
   if (e.key === 'Escape') return briefOpen ? closeBrief() : closeSheet();
-  if (briefOpen && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) {
-    bIdx = e.key === 'ArrowRight' ? bIdx + 1 : Math.max(0, bIdx - 1);
-    renderBrief();
-  }
+  if (briefOpen && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) step(e.key === 'ArrowRight' ? 1 : -1);
 });
 let wasWide = wide();
 addEventListener('resize', () => {
