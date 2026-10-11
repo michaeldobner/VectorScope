@@ -4,7 +4,7 @@
 //
 //   npx tsx collector/news.ts <data folder>
 //
-// Data folder (published on the branch news-data, replaced every round):
+// Runs on the own server after every round of INTEL (server/collector-loop.mjs), the data folder is /data/news/:
 //   news.json               the edition: stories with sources, sections, importance, texts in de, en and original
 //   news-translations.json  cache of every translation, so nothing is asked twice
 //   news-og.json            picture of an article page (og:image) by link, for feeds without pictures
@@ -20,7 +20,7 @@ import { decode, decodeEntities, isNoise, parseFeed } from '../news/src/data/par
 import { buildEdition, findLogos, group, usableReports, type Translate } from '../news/src/data/edition';
 import type { Report } from '../news/src/data/types';
 
-const DIR = process.argv[2] ?? 'news-data';
+const DIR = process.argv[2] ?? 'news-out';
 const now = Date.now();
 const DAY = 24 * 3600_000;
 const UA = { 'User-Agent': 'VectorScope-news/0.1 (github.com/michaeldobner/VectorScope)' };

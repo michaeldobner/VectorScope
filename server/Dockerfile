@@ -1,5 +1,5 @@
 # One image for the web server and the collector of the own server (docker-compose.yaml).
-# Build: npm ci, npm run build (type check, AIR, INTEL, start page). Tests run on GitHub Actions.
+# Build: npm ci, npm run build (type check, AIR, INTEL, NEWS, start page). Tests run on GitHub Actions.
 FROM node:22-bookworm-slim AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
@@ -21,6 +21,7 @@ COPY --from=build /app/server ./server
 COPY --from=build /app/proxy ./proxy
 COPY --from=build /app/collector ./collector
 COPY --from=build /app/intel/src ./intel/src
+COPY --from=build /app/news/src ./news/src
 COPY --from=build /app/air/src ./air/src
 RUN mkdir -p /data && chown node:node /data
 USER node

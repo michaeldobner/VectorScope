@@ -2,10 +2,9 @@ name: Lab news feeds
 
 # Test lab with real internet for the news module: checks the candidate feeds.
 # Results are pushed to the branch "lab-news-results", the main lab's results stay untouched.
+# Only by hand (Actions, Run workflow): checks cost minutes and storage of the GitHub account.
 on:
   workflow_dispatch:
-  push:
-    paths: ['lab/news.mjs', '.github/workflows/lab-news.yml']
 
 permissions:
   contents: write

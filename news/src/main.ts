@@ -12,7 +12,9 @@ import { DACH } from './data/feeds';
 import type { Edition, Lead, MsgLang, Story, StorySource } from './data/types';
 import { RESSORT_IDS, TEXT, type RessortId, type UiLang } from './i18n';
 
-const DATA_URL = 'https://raw.githubusercontent.com/michaeldobner/VectorScope/news-data/news.json';
+// The edition comes from the own server, which collects it (server/collector-loop.mjs). ?data= points elsewhere,
+// for development against a copy.
+const DATA_URL = new URLSearchParams(location.search).get('data') ?? new URL('../data/news.json', location.href).href;
 const TOP_N = 6;
 const REFRESH_MS = 5 * 60_000;
 /** An edition older than this is shown with a notice. */
@@ -424,7 +426,7 @@ function showPill(n: number) {
 }
 async function load() {
   try {
-    const r = await fetch(`${DATA_URL}?t=${Math.floor(Date.now() / 60000)}`, { cache: 'no-store' });
+    const r = await fetch(DATA_URL, { cache: 'no-store' });
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     const next = (await r.json()) as Edition;
     const wasOffline = state.offline;

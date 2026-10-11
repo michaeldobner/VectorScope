@@ -1,4 +1,4 @@
-// The feeds of NEWS. Every one checked in the test lab (lab/news.mjs, branch lab-news-results) on 11 October 2026:
+// The feeds of NEWS. Every one checked in the test lab (lab/news.mjs, workflow lab-news.yml, by hand) on 11 October 2026:
 // reachable, fresh, machine readable. Not here: swissinfo (feed discontinued), Tages-Anzeiger (not reachable),
 // CBC (timeout), CNN (frozen since 2023), Bild (no timestamps, BILDplus), Reuters and AP (no free feeds).
 import type { Feed } from './types';

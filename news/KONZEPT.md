@@ -32,7 +32,7 @@ Sachlich, schnell, mit Ende. Die App ordnet **Geschichten**, nicht Artikel. Ein 
 
 ### Quellen
 
-Alle Quellen sind im Test-Labor geprüft (`lab/news.mjs`, Ergebnis im Branch `lab-news-results`).
+Alle Quellen sind im Test-Labor geprüft (`lab/news.mjs`, Workflow `lab-news.yml` nur von Hand).
 
 | Gruppe | Quellen | Gewicht |
 |---|---|---|

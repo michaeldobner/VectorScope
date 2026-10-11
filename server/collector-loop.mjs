@@ -10,7 +10,9 @@
 // With RAW_PUSH_URL every round file also goes to the branch collector-raw (server/raw-git.mjs):
 // one continuous archive, with a copy off the server. On start the database is filled once from
 // the raw archive (collector/backfill.ts), so it holds the history since 30 September 2026.
-// Env: DATA_DIR (/data), EVERY_MIN (10), SEED_FROM, DATABASE_URL, VECTORSCOPE_PROXY, RAW_PUSH_URL, RAW_SUFFIX.
+// After every round of INTEL one round of NEWS (collector/news.ts) builds the edition of the news module in
+// DATA_DIR/news/, read by the app as /data/news.json. Nothing of it goes to GitHub.
+// Env: DATA_DIR (/data), EVERY_MIN (10), SEED_FROM, DATABASE_URL, VECTORSCOPE_PROXY, RAW_PUSH_URL, RAW_SUFFIX, NEWS (0 turns it off).
 import { spawn } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -54,6 +56,24 @@ function round() {
   });
 }
 
+/** One round of NEWS. Its own process and time limit: a failure never touches the INTEL collector. */
+function newsRound() {
+  if (process.env.NEWS === '0') return Promise.resolve('off');
+  return new Promise((resolve) => {
+    const child = spawn(join(root, 'node_modules/.bin/tsx'), [join(root, 'collector/news.ts'), join(dataDir, 'news')], {
+      cwd: root,
+      stdio: 'inherit',
+      env: { ...process.env, MODEL_DIR: join(dataDir, 'models') },
+    });
+    const timer = setTimeout(() => child.kill('SIGKILL'), 5 * 60_000);
+    child.on('exit', (code) => {
+      clearTimeout(timer);
+      resolve(code ?? 1);
+    });
+  });
+}
+let news = 'not yet';
+
 const pushUrl = process.env.RAW_PUSH_URL;
 let rawPush = pushUrl ? 'not yet' : 'off';
 function pushRound() {
@@ -94,7 +114,7 @@ function writeHeartbeat(exit) {
   } catch {
     // A round that failed before writing leaves the counts at zero, the exit code tells why.
   }
-  writeFileSync(join(dataDir, 'heartbeat.json'), JSON.stringify({ at: Date.now(), exit, ok, total, items, rawPush }));
+  writeFileSync(join(dataDir, 'heartbeat.json'), JSON.stringify({ at: Date.now(), exit, ok, total, items, rawPush, news }));
 }
 
 await seed();
@@ -110,6 +130,9 @@ for (;;) {
   // the status page sees the database itself.
   if (exit === 0 || exit === 2) writeHeartbeat(exit);
   else console.log(`Round failed with exit ${exit}, next round tries again`);
+  const n = await newsRound();
+  news = n === 0 ? 'ok' : n === 'off' ? 'off' : `failed (exit ${n})`;
+  if (n !== 0 && n !== 'off') console.log(`NEWS round failed with exit ${n}, next round tries again`);
   const wait = start + everyMs - Date.now();
   if (wait > 0) await new Promise((r) => setTimeout(r, wait));
 }

@@ -1,4 +1,4 @@
-// App shell cache. The edition (raw.githubusercontent.com) and the pictures of the outlets always go to the network.
+// App shell cache. The edition (/data/news.json) and the pictures of the outlets always go to the network.
 const CACHE = 'vectorscope-news-v1';
 
 self.addEventListener('install', (e) => {
@@ -15,6 +15,8 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET' || url.origin !== self.location.origin) return;
+  // The edition is live data: always from the network, the app keeps the last one itself.
+  if (url.pathname.includes('/data/')) return;
   // HTML: network first so updates arrive; hashed assets: cache first.
   if (e.request.mode === 'navigate') {
     e.respondWith(

@@ -8,7 +8,7 @@
 |---|---|
 | Zweck | Die Nachrichten des Tages als Geschichten, mit den Perspektiven vieler Quellen nebeneinander |
 | Quellen | 35 Feeds von 29 Medien in 12 Ländern, alle im Test-Labor geprüft |
-| Aktualisierung | Der Sammler baut alle 10 Minuten eine neue Ausgabe, die App fragt alle 5 Minuten nach |
+| Aktualisierung | Der Sammler auf dem eigenen Server baut alle 10 Minuten eine neue Ausgabe, die App fragt alle 5 Minuten nach |
 | Sprache | App Deutsch oder Englisch, Meldungen Deutsch, Englisch oder im Original |
 | Adresse | https://michaeldobner.github.io/VectorScope/news/ |
 | Version | 0.1.0 |
@@ -33,7 +33,7 @@
 | Fachmedien | heise, Golem | 0,7 |
 | Tempo | 20 Minuten, Blick, watson | 0,4 |
 
-Geprüft mit `lab/news.mjs` (Workflow `lab-news.yml`, Ergebnis im Branch `lab-news-results`). Nicht dabei: swissinfo (Feed eingestellt), Tages-Anzeiger (nicht erreichbar), CBC (Zeitüberschreitung), CNN (seit 2023 eingefroren), Bild (keine Zeitstempel), Reuters und AP (keine freien Feeds).
+Geprüft mit `lab/news.mjs` (Workflow `lab-news.yml`, nur von Hand gestartet, Ergebnis im Branch `lab-news-results`). Nicht dabei: swissinfo (Feed eingestellt), Tages-Anzeiger (nicht erreichbar), CBC (Zeitüberschreitung), CNN (seit 2023 eingefroren), Bild (keine Zeitstempel), Reuters und AP (keine freien Feeds).
 
 ## Geschichten und Wichtigkeit
 
@@ -51,10 +51,11 @@ Geprüft mit `lab/news.mjs` (Workflow `lab-news.yml`, Ergebnis im Branch `lab-ne
 | Feeds | `news/src/data/feeds.ts` |
 | Lesen der Feeds | `news/src/data/parse.ts` |
 | Geschichten, Ressorts, Wichtigkeit, Texte | `news/src/data/edition.ts`, Tests in `edition.test.ts` |
-| Sammler | `collector/news.ts`, Workflow `.github/workflows/news.yml` |
+| Sammler | `collector/news.ts`, gestartet von `server/collector-loop.mjs` nach jeder Runde von INTEL |
+| Auslieferung | `server/web.mjs`, Route `/data/news.json` |
 | App | `news/src/main.ts`, `news/src/i18n.ts`, `news/src/styles.css` |
 
-Der Sammler legt im Branch `news-data` ab: `news.json` (die Ausgabe), `news-translations.json` (Übersetzungen, 7 Tage), `news-og.json` (Bilder der Artikelseiten, 3 Tage), `news-stats.json` (Zustand jedes Feeds). Übersetzt wird mit DeepL, wenn das Repository das Secret `DEEPL_KEY` hat (DeepL API Free, 500.000 Zeichen im Monat kostenlos). Ohne Schlüssel fragt der Sammler den öffentlichen Google-Übersetzer, direkt und über den Proxy bei Vercel. Google lehnt die Server von GitHub oft ab, dann bleiben Meldungen in ihrer Originalsprache, unmarkiert, und jede Geschichte nimmt ihren Text aus einer Quelle in der gewählten Sprache, wo es eine gibt.
+Der Sammler läuft auf dem eigenen Server und legt in `/data/news/` ab, nichts davon geht zu GitHub: `news.json` (die Ausgabe), `news-translations.json` (Übersetzungen, 7 Tage), `news-og.json` (Bilder der Artikelseiten, 3 Tage), `news-stats.json` (Zustand jedes Feeds). Das Modell für die Bedeutung teilt er mit INTEL in `/data/models`. `NEWS=0` im Container des Sammlers schaltet NEWS ab. Übersetzt wird mit DeepL, wenn auf dem Server `DEEPL_KEY` gesetzt ist (DeepL API Free, 500.000 Zeichen im Monat kostenlos). Ohne Schlüssel fragt der Sammler den öffentlichen Google-Übersetzer, direkt und über den Proxy. Lehnt Google ab, bleiben Meldungen in ihrer Originalsprache, unmarkiert, und jede Geschichte nimmt ihren Text aus einer Quelle in der gewählten Sprache, wo es eine gibt.
 
 ## Recht
 

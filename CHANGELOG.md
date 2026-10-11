@@ -7,8 +7,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), ver
 ## 0.22.0 (2026-10-11)
 
 ### Added
-* Module NEWS 0.1.0: the news of the day from 35 verified feeds in 12 countries, as stories with every perspective. Its own collector `collector/news.ts` with the workflow `news.yml` publishes the edition to the branch `news-data` every 10 minutes.
-* Test lab `lab/news.mjs` with the workflow `lab-news.yml`: checks every candidate feed for reachability, freshness, pictures, teasers and CORS, results on the branch `lab-news-results`.
+* Module NEWS 0.1.0: the news of the day from 35 verified feeds in 12 countries, as stories with every perspective. The collector of the server (`server/collector-loop.mjs`) builds the edition with `collector/news.ts` after every round of INTEL into `/data/news/`, the web server delivers it as `/data/news.json`. GitHub collects and stores none of it.
+* Test lab `lab/news.mjs` with the workflow `lab-news.yml`: checks every candidate feed for reachability, freshness, pictures, teasers and CORS. Runs only by hand, to spare minutes and storage of the GitHub account.
 
 ## 0.21.2 (2026-10-10)
 

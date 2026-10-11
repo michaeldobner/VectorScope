@@ -8,7 +8,7 @@
 |---|---|
 | Purpose | The news of the day as stories, with the perspectives of many outlets side by side |
 | Sources | 35 feeds from 29 outlets in 12 countries, each checked in the test lab |
-| Updates | The collector builds a new edition every 10 minutes, the app asks every 5 minutes |
+| Updates | The collector on the own server builds a new edition every 10 minutes, the app asks every 5 minutes |
 | Language | App in German or English, reports in German, English or the original |
 | Address | https://michaeldobner.github.io/VectorScope/news/ |
 | Version | 0.1.0 |
@@ -33,7 +33,7 @@
 | Tech media | heise, Golem | 0.7 |
 | Fast news | 20 Minuten, Blick, watson | 0.4 |
 
-Checked with `lab/news.mjs` (workflow `lab-news.yml`, results on the branch `lab-news-results`). Not included: swissinfo (feed discontinued), Tages-Anzeiger (not reachable), CBC (timeout), CNN (frozen since 2023), Bild (no timestamps), Reuters and AP (no free feeds).
+Checked with `lab/news.mjs` (workflow `lab-news.yml`, started by hand only, results on the branch `lab-news-results`). Not included: swissinfo (feed discontinued), Tages-Anzeiger (not reachable), CBC (timeout), CNN (frozen since 2023), Bild (no timestamps), Reuters and AP (no free feeds).
 
 ## Stories and importance
 
@@ -51,10 +51,11 @@ Checked with `lab/news.mjs` (workflow `lab-news.yml`, results on the branch `lab
 | Feeds | `news/src/data/feeds.ts` |
 | Reading feeds | `news/src/data/parse.ts` |
 | Stories, sections, importance, texts | `news/src/data/edition.ts`, tests in `edition.test.ts` |
-| Collector | `collector/news.ts`, workflow `.github/workflows/news.yml` |
+| Collector | `collector/news.ts`, started by `server/collector-loop.mjs` after every round of INTEL |
+| Delivery | `server/web.mjs`, route `/data/news.json` |
 | App | `news/src/main.ts`, `news/src/i18n.ts`, `news/src/styles.css` |
 
-The collector writes to the branch `news-data`: `news.json` (the edition), `news-translations.json` (translations, 7 days), `news-og.json` (pictures of article pages, 3 days), `news-stats.json` (state of every feed). Translation uses DeepL when the repository has the secret `DEEPL_KEY` (DeepL API Free, 500,000 characters a month at no cost). Without a key the collector asks the public Google endpoint, directly and through the proxy on Vercel. Google often refuses GitHub's servers, then reports stay in their original language, unmarked, and every story takes its text from an outlet in the chosen language where there is one.
+The collector runs on the own server and writes to `/data/news/`, none of it goes to GitHub: `news.json` (the edition), `news-translations.json` (translations, 7 days), `news-og.json` (pictures of article pages, 3 days), `news-stats.json` (state of every feed). It shares the model for meaning with INTEL in `/data/models`. `NEWS=0` in the collector container turns NEWS off. Translation uses DeepL when `DEEPL_KEY` is set on the server (DeepL API Free, 500,000 characters a month at no cost). Without a key the collector asks the public Google endpoint, directly and through the proxy. When Google refuses, reports stay in their original language, unmarked, and every story takes its text from an outlet in the chosen language where there is one.
 
 ## Legal
 
