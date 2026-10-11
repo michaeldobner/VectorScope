@@ -3,14 +3,8 @@ name: Lab
 # Test lab with real internet: real API responses and screenshots of the app with live data.
 # Results are pushed to the branch "lab-results".
 on:
+  # Only by hand since collection 0.22.1, to spare minutes and storage of the GitHub account.
   workflow_dispatch:
-  # Once a day for the benchmark of Now, so its trend is measured even without a change.
-  schedule:
-    - cron: '17 6 * * *'
-  push:
-    branches: [main]
-    # INTEL's data logic and the collector too: every change to the ranking of Now is measured.
-    paths: ['air/**', 'shared/**', 'lab/**', 'proxy/**', 'intel/src/data/**', 'collector/**', '.github/workflows/lab.yml']
 
 permissions:
   contents: write

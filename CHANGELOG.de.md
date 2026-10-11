@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.22.1 (2026-10-11)
+
+### Geändert
+* GitHub Actions sammeln nicht mehr, das macht der eigene Server. Der Sammler-Workflow `collector.yml` ist abgeschaltet (`PROBE_UNTIL` in der Vergangenheit, kein Zeitplan), das Test-Labor `lab.yml` läuft nur noch von Hand. Das schont Minuten und Speicher des GitHub-Kontos.
+
 ## 0.22.0 (2026-10-11)
 
 ### Neu

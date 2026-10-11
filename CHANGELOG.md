@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.22.1 (2026-10-11)
+
+### Changed
+* GitHub Actions no longer collect: the own server does. The collector workflow `collector.yml` is switched off (`PROBE_UNTIL` in the past, no schedule), the test lab `lab.yml` runs by hand only. This spares minutes and storage of the GitHub account.
+
 ## 0.22.0 (2026-10-11)
 
 ### Added
