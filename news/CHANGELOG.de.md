@@ -4,6 +4,16 @@ Alle wesentlichen Änderungen am Modul NEWS. [English](CHANGELOG.md) · [Changel
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.2.0 (2026-10-11)
+
+### Neu
+* **2-Minuten-Überblick neu:** sichtbare Knöpfe Zurück und Weiter mit „3 / 10“, Wischen zur Seite, gedrückt halten pausiert, beim ersten Öffnen ein Hinweis. Auf dem iPad quer Bild und Text nebeneinander.
+* **Teilen:** im Überblick und in jeder Geschichte, über das Teilen-Menü des Geräts, mit Schlagzeile und Link zum Originalartikel.
+
+### Geändert
+* **Bilder werden nie beschnitten:** ganzes Bild im Rahmen 16:9 auf einer unscharfen Kopie seiner selbst, beim Aufmacher, in der Geschichte und im Überblick. Kleine Bilder werden nicht aufgeblasen.
+* **Bessere Auflösung:** größere Fassungen bei ZDF, DW, SRF, RTS, Spiegel, ntv, ABC und heise, das Bild der Artikelseite bei NZZ, Der Standard, Blick und 20 Minuten, gemessen mit dem neuen `lab/news-images.ts`. The Guardian liefert die größte Fassung aus dem Feed.
+
 ## 0.1.1 (2026-10-11)
 
 ### Geändert

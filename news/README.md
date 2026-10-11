@@ -45,6 +45,6 @@ NEWS runs on the own server, which also collects the news. Open its address with
 
 ## Version
 
-Current version: **0.1.1**. All changes in the [changelog](CHANGELOG.md).
+Current version: **0.2.0**. All changes in the [changelog](CHANGELOG.md).
 
 Headlines, teasers and pictures © their publishers, each linked to the original.

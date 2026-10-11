@@ -17,6 +17,11 @@ export interface Feed {
   url: string;
   /** rss: RSS or Atom. tagesschau: the JSON API. homepage: only the order of a homepage, no reports. */
   kind?: 'rss' | 'tagesschau' | 'homepage';
+  /**
+   * The picture in the feed is too small and its address signed (Der Standard 150 px, NZZ 200 px), or far too
+   * large (20 Minuten up to 5000 px), or smaller than on the article page (Blick): take the article page's.
+   */
+  articleImage?: boolean;
   /** Section of every report of this feed, when the feed is one section. */
   ressort?: Ressort;
 }

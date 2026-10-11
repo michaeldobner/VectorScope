@@ -4,6 +4,16 @@ All notable changes to the module NEWS. [Deutsch](CHANGELOG.de.md) · [Changelog
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.2.0 (2026-10-11)
+
+### Added
+* **2-minute briefing rebuilt:** visible Back and Next buttons with "3 / 10", swiping sideways, touch and hold to pause, a hint on the first opening. On the iPad in landscape picture and text side by side.
+* **Sharing:** in the briefing and in every story, through the share sheet of the device, with headline and link to the original article.
+
+### Changed
+* **Pictures are never cut:** the whole picture in a 16:9 frame on a blurred copy of itself, for the lead story, in the story and in the briefing. Small pictures are not blown up.
+* **Better resolution:** larger variants for ZDF, DW, SRF, RTS, Spiegel, ntv, ABC and heise, the article page's picture for NZZ, Der Standard, Blick and 20 Minuten, measured with the new `lab/news-images.ts`. The Guardian gives its largest variant from the feed.
+
 ## 0.1.1 (2026-10-11)
 
 ### Changed

@@ -72,8 +72,10 @@ Berichtet ein Medium in der gewählten Sprache, kommt der Text von ihm, unverän
 ## Bilder
 
 1. Das Bild der Leitquelle, sonst das erste Bild einer Quelle außerhalb der Tempo-Gruppe, sonst irgendeines.
-2. Hat kein Feed ein Bild, liest der Sammler bis zu 40 Artikelseiten pro Runde und nimmt deren Vorschaubild (`og:image`), drei Tage zwischengespeichert.
-3. Ein Bild, das ein Medium für drei oder mehr verschiedene Artikel nutzt, ist ein Logo und wird verworfen.
+2. Nennt die Adresse die Größe, holt NEWS eine größere Fassung: ZDF, DW, SRF, RTS, Spiegel, ntv, ABC, heise und BBC, jede im Labor geprüft (`lab/news-images.ts`).
+3. Bei NZZ, Der Standard, Blick und 20 Minuten taugt das Feedbild nicht: zu klein mit signierter Adresse, oder bei 20 Minuten bis 5000 Pixel und 1 MB groß. Dort gilt das Bild der Artikelseite.
+4. Hat eine Geschichte so kein Bild, liest der Sammler bis zu 60 Artikelseiten pro Runde und nimmt deren Vorschaubild (`og:image`), drei Tage zwischengespeichert.
+5. Ein Bild, das ein Medium für drei oder mehr verschiedene Artikel nutzt, ist ein Logo und wird verworfen.
 
 Bilder werden nicht kopiert, die App lädt sie direkt vom Medium.
 

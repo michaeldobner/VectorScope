@@ -37,7 +37,26 @@ Ein Tipp öffnet die Geschichte, am iPhone als Blatt halbhoch. Hochziehen zeigt 
 
 ## 2-Minuten-Überblick
 
-**2 Min** unten links zeigt die zehn wichtigsten Geschichten, eine pro Bildschirm, mit Bild, Schlagzeile und Anriss: die sechs der Top-Seite, dazu die erste aus DACH, Welt, Wirtschaft und Tech. Nach 11 Sekunden kommt die nächste, ein Tipp rechts blättert weiter, links zurück. **Mehr dazu** öffnet die Geschichte, Runterwischen oder **Beenden** schließt. Am Ende steht „Du bist auf dem Stand“. Der Fortschritt liegt unten, nicht an der Kamera.
+**2 Min** unten links zeigt die zehn wichtigsten Geschichten, eine pro Bildschirm, mit Bild, Schlagzeile und Anriss: die sechs der Top-Seite, dazu die erste aus DACH, Welt, Wirtschaft und Tech. Auf dem iPad quer stehen Bild und Text nebeneinander.
+
+| Geste oder Knopf | Wirkung |
+|---|---|
+| **Weiter ›**, Tipp rechts, Wischen nach links | Nächste Geschichte |
+| **‹ Zurück**, Tipp im linken Drittel, Wischen nach rechts | Vorige Geschichte |
+| Gedrückt halten | Pause, Loslassen läuft weiter |
+| Runterwischen, **Beenden** | Überblick schließen |
+| **Teilen** | Den Originalartikel weitergeben, siehe [Teilen](#teilen) |
+| **Mehr dazu** | Die Geschichte mit allen Perspektiven öffnen |
+
+Nach 11 Sekunden kommt die nächste Geschichte von selbst, der Balken unten zeigt die Zeit, „3 / 10“ die Stelle. Beim ersten Öffnen erklärt ein Hinweis die Gesten, danach nie wieder. Am Ende steht „Du bist auf dem Stand“. Fortschritt und Knöpfe liegen unten, nicht an der Kamera.
+
+## Bilder
+
+Ein Bild wird nie beschnitten. Es steht vollständig in einem Rahmen im Format 16:9, den freien Rand füllt dasselbe Bild vergrößert und unscharf. Ein Bild, das kleiner ist als sein Rahmen, behält seine Größe, statt aufgeblasen und unscharf zu werden.
+
+## Teilen
+
+**Teilen** im Überblick und in jeder Geschichte öffnet das Teilen-Menü des Geräts, etwa für Nachrichten, WhatsApp oder Mail, mit der Schlagzeile und dem Link zum Originalartikel der Quelle, deren Text oben steht. Ohne Teilen-Menü wird der Link kopiert. Ein Link auf die Geschichte in NEWS selbst gibt es noch nicht.
 
 ## Neues
 

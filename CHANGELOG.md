@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.22.3 (2026-10-11)
+
+### Changed
+* Module NEWS 0.2.0: new 2-minute briefing, sharing, pictures never cut and in better resolution. The lab `lab-news.yml` writes its results only to the log of the run.
+
 ## 0.22.2 (2026-10-11)
 
 ### Changed

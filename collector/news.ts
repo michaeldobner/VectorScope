@@ -189,7 +189,7 @@ const wanted = groups
   .sort((a, b) => b.length - a.length)
   .flatMap((g) => g.slice(0, 2).map((i) => reports[i].link))
   .filter((l) => !og.has(l))
-  .slice(0, 40);
+  .slice(0, 60);
 await pool(wanted, 4, async (link) => {
   try {
     const page = await get(link, 15000);

@@ -9,6 +9,7 @@
 | The edition | The own server, `/data/news.json` | Nothing, the file is the same for everyone |
 | Pictures | The servers of the outlets | The usual request of a browser. The outlet sees the IP address but no referring page, NEWS sends no referrer |
 | Articles | The outlet, when you open an article | Like any visit to a website |
+| Sharing | The app you pick in the share sheet | Headline and link to the original article. NEWS itself sends nothing |
 
 NEWS uses no location, no account, no ads and no analytics.
 

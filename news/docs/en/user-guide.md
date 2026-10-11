@@ -37,7 +37,26 @@ A tap opens the story, on the iPhone as a sheet at half height. Pull up for ever
 
 ## 2-minute briefing
 
-**2 min** at the bottom left shows the ten most important stories, one per screen, with picture, headline and teaser: the six of the Top page plus the first of DE · CH · AT, World, Business and Tech. After 11 seconds the next one follows, a tap on the right goes forward, on the left back. **More on this** opens the story, swiping down or **Stop** closes. At the end: "You're up to date". The progress sits at the bottom, not at the camera.
+**2 min** at the bottom left shows the ten most important stories, one per screen, with picture, headline and teaser: the six of the Top page plus the first of DE · CH · AT, World, Business and Tech. On the iPad in landscape picture and text stand side by side.
+
+| Gesture or button | Effect |
+|---|---|
+| **Next ›**, tap on the right, swipe left | Next story |
+| **‹ Back**, tap in the left third, swipe right | Previous story |
+| Touch and hold | Pause, releasing goes on |
+| Swipe down, **Stop** | Close the briefing |
+| **Share** | Pass on the original article, see [Sharing](#sharing) |
+| **More on this** | Open the story with every perspective |
+
+After 11 seconds the next story comes by itself, the bar at the bottom shows the time, "3 / 10" the place. On the first opening a hint explains the gestures, never again after that. At the end: "You're up to date". Progress and buttons sit at the bottom, not at the camera.
+
+## Pictures
+
+A picture is never cut. It stands whole in a 16:9 frame, the free edge is filled with the same picture enlarged and blurred. A picture smaller than its frame keeps its size instead of being blown up and blurred.
+
+## Sharing
+
+**Share** in the briefing and in every story opens the share sheet of the device, for Messages, WhatsApp or Mail, with the headline and the link to the original article of the outlet whose text is shown. Without a share sheet the link is copied. A link to the story in NEWS itself does not exist yet.
 
 ## What is new
 

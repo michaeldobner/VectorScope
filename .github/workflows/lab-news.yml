@@ -5,10 +5,6 @@ name: Lab news feeds
 # Only by hand (Actions, Run workflow): checks cost minutes and storage of the GitHub account.
 on:
   workflow_dispatch:
-  # TEMPORARY, removed before main: one run for the picture sizes.
-  push:
-    branches: [claude/news-feeds-lab]
-    paths: ['lab/news-images.ts', '.github/workflows/lab-news.yml']
 
 permissions:
   contents: read

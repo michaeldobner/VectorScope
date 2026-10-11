@@ -9,6 +9,7 @@
 | Die Ausgabe | Der eigene Server, `/data/news.json` | Nichts, die Datei ist für alle gleich |
 | Bilder | Die Server der Medien | Die übliche Anfrage eines Browsers. Das Medium sieht die IP-Adresse, aber keine Herkunftsseite, NEWS schickt keinen Referrer |
 | Artikel | Das Medium, wenn du einen Artikel öffnest | Wie jeder Besuch einer Website |
+| Teilen | Die App, die du im Teilen-Menü wählst | Schlagzeile und Link zum Originalartikel. NEWS selbst sendet dabei nichts |
 
 NEWS nutzt keinen Standort, kein Konto, keine Werbung und keine Statistik.
 

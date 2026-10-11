@@ -1,6 +1,6 @@
 {
   "name": "VectorScope",
-  "version": "0.22.2",
+  "version": "0.22.3",
   "shared": {
     "version": "1.1.0"
   },
@@ -34,7 +34,7 @@
       "code": "NEWS",
       "name": "News",
       "status": "live",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "path": "news/",
       "description": {
         "en": "The news of the day from 35 verified feeds in 12 countries, as stories with every perspective, no ads.",

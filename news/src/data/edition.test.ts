@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { buildEdition, classify, findLogos, group, shortTeaser, usableReports } from './edition';
 import { feedById } from './feeds';
-import { cleanTitle, decode, imageOf, isNoise, parseFeed } from './parse';
+import { bigger, cleanTitle, decode, imageOf, isNoise, parseFeed } from './parse';
 import type { Report } from './types';
 
 const NOW = Date.parse('2026-10-11T00:00:00Z');
@@ -32,6 +32,22 @@ describe('parse', () => {
     const api = JSON.stringify({ news: [{ title: 'Viele Tote in Riad', shareURL: 'https://www.tagesschau.de/r', date: '2026-10-11T01:12:39+02:00', firstSentence: 'Etwa 40 Millionen.', teaserImage: { imageVariants: { '16x9-960': 'https://img/1.jpg' } } }] });
     const [t] = parseFeed(api, feedById('tagesschau')!);
     expect([t.title, t.teaser, t.image, t.rank]).toEqual(['Viele Tote in Riad', 'Etwa 40 Millionen.', 'https://img/1.jpg', 0]);
+  });
+
+  it('asks for larger pictures where the address names the size', () => {
+    expect(bigger('https://www.srf.ch/static/cms/images//320ws/cf906b.webp')).toBe('https://www.srf.ch/static/cms/images//960ws/cf906b.webp');
+    expect(bigger('https://static.dw.com/image/74689599_302.jpg')).toBe('https://static.dw.com/image/74689599_605.jpg');
+    expect(bigger('https://www.zdfheute.de/assets/trump-rally-usa-100~384x216?cb=1')).toBe('https://www.zdfheute.de/assets/trump-rally-usa-100~1280x720?cb=1');
+    expect(bigger('https://www.n-tv.de/img/31404053/1791661021/Img_4_3/250/510405839.jpg')).toBe('https://www.n-tv.de/img/31404053/1791661021/Img_16_9/1200/510405839.jpg');
+    expect(bigger('https://img.rts.ch/articles/2026/image/13850ea5-29382137.image?w=320&h=180')).toBe('https://img.rts.ch/articles/2026/image/13850ea5-29382137.image?w=1280&h=720');
+    expect(bigger('https://cdn.prod.www.spiegel.de/images/d0ebcca7_w520_r2.08_fpx41.35_fpy49.99.jpg')).toBe('https://cdn.prod.www.spiegel.de/images/d0ebcca7_w1200_r1.778_fpx41.35_fpy49.99.jpg');
+    expect(bigger('https://www.heise.de/scale/geometry/450/q80//imgs/x.jpg')).toBe('https://www.heise.de/scale/geometry/1200/q80//imgs/x.jpg');
+    expect(bigger('https://i.ds.at/awAi3A/rs:fill:150:0/plain/x.jpg')).toBe('https://i.ds.at/awAi3A/rs:fill:150:0/plain/x.jpg');
+  });
+
+  it('leaves the picture to the article page where the feed picture is not usable', () => {
+    const rss = '<rss><item><title>T</title><link>https://www.nzz.ch/a</link><media:content url="https://img-msp-prod.nzz.ch/x.jpg?width=200&amp;height=200" medium="image"/></item></rss>';
+    expect(parseFeed(rss, feedById('nzz')!)[0].image).toBeUndefined();
   });
 
   it('cleans SRF kickers and labels', () => {

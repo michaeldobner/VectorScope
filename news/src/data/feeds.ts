@@ -19,9 +19,9 @@ export const FEEDS: Feed[] = [
   // Quality press and broadcasters
   { id: 'spiegel', outlet: 'Spiegel', cc: 'DE', group: 'press', lang: 'de', url: 'https://www.spiegel.de/schlagzeilen/index.rss' },
   { id: 'ntv', outlet: 'ntv', cc: 'DE', group: 'press', lang: 'de', url: 'https://www.n-tv.de/rss' },
-  { id: 'nzz', outlet: 'NZZ', cc: 'CH', group: 'press', lang: 'de', url: 'https://www.nzz.ch/recent.rss' },
-  { id: 'nzz-schweiz', outlet: 'NZZ', cc: 'CH', group: 'press', lang: 'de', url: 'https://www.nzz.ch/schweiz.rss', ressort: 'dach' },
-  { id: 'standard', outlet: 'Der Standard', cc: 'AT', group: 'press', lang: 'de', url: 'https://www.derstandard.at/rss' },
+  { id: 'nzz', outlet: 'NZZ', cc: 'CH', group: 'press', lang: 'de', url: 'https://www.nzz.ch/recent.rss', articleImage: true },
+  { id: 'nzz-schweiz', outlet: 'NZZ', cc: 'CH', group: 'press', lang: 'de', url: 'https://www.nzz.ch/schweiz.rss', ressort: 'dach', articleImage: true },
+  { id: 'standard', outlet: 'Der Standard', cc: 'AT', group: 'press', lang: 'de', url: 'https://www.derstandard.at/rss', articleImage: true },
   { id: 'presse', outlet: 'Die Presse', cc: 'AT', group: 'press', lang: 'de', url: 'https://www.diepresse.com/rss' },
   // International
   { id: 'bbc', outlet: 'BBC', cc: 'GB', group: 'intl', lang: 'en', url: 'https://feeds.bbci.co.uk/news/world/rss.xml' },
@@ -41,8 +41,8 @@ export const FEEDS: Feed[] = [
   { id: 'heise', outlet: 'heise', cc: 'DE', group: 'tech', lang: 'de', url: 'https://www.heise.de/rss/heise-atom.xml', ressort: 'tech' },
   { id: 'golem', outlet: 'Golem', cc: 'DE', group: 'tech', lang: 'de', url: 'https://rss.golem.de/rss.php?feed=RSS2.0', ressort: 'tech' },
   // Fast: tempo, but little weight for importance
-  { id: '20min', outlet: '20 Minuten', cc: 'CH', group: 'fast', lang: 'de', url: 'https://partner-feeds.20min.ch/rss/20minuten' },
-  { id: 'blick', outlet: 'Blick', cc: 'CH', group: 'fast', lang: 'de', url: 'https://www.blick.ch/rss.xml' },
+  { id: '20min', outlet: '20 Minuten', cc: 'CH', group: 'fast', lang: 'de', url: 'https://partner-feeds.20min.ch/rss/20minuten', articleImage: true },
+  { id: 'blick', outlet: 'Blick', cc: 'CH', group: 'fast', lang: 'de', url: 'https://www.blick.ch/rss.xml', articleImage: true },
   { id: 'watson', outlet: 'watson', cc: 'CH', group: 'fast', lang: 'de', url: 'https://www.watson.ch/api/1.0/rss/index.xml' },
 ];
 

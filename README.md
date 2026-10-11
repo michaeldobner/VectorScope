@@ -26,7 +26,7 @@ A collection of calm, precise modules under one roof. Each answers one question 
 |---|---|---|---|
 | [**AIR**](air/README.md) · Airspace | What is flying above me right now, what passes over next, what is worth a look? | Live · [open](https://michaeldobner.github.io/VectorScope/air/) | 0.5.1 |
 | [**INTEL**](intel/README.md) · Intelligence feed | What do verified OSINT sources and defence media report, and which aircraft in the air does it concern? | Live · [open](https://michaeldobner.github.io/VectorScope/intel/) | 0.15.2 |
-| [**NEWS**](news/README.md) · News | What is important today, and how does the world see it? | Live · own server | 0.1.1 |
+| [**NEWS**](news/README.md) · News | What is important today, and how does the world see it? | Live · own server | 0.2.0 |
 
 ## Why VectorScope
 
@@ -93,6 +93,6 @@ Traffic data © [adsb.lol](https://adsb.lol) contributors, licensed under ODbL 1
 
 ## Version
 
-Current version: **0.22.2**. See the [changelog](CHANGELOG.md).
+Current version: **0.22.3**. See the [changelog](CHANGELOG.md).
 
 Created by Michael Dobner. Licensed under the [MIT licence](LICENSE).

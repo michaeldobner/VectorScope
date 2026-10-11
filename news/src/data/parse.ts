@@ -60,8 +60,23 @@ export function imageOf(block: string): string | undefined {
   return bigger(decodeEntities(m[1]));
 }
 
-/** Larger variants where the address says the size. */
-export const bigger = (url: string) => url.replace(/(ichef\.bbci\.co\.uk\/ace\/standard\/)\d+\//, '$1976/');
+/**
+ * Larger variants where the address names the size, each checked with lab/news-images.ts on 11 October 2026:
+ * BBC 240 to 976 px, ZDF 384 to 1280, DW 460 to 1199, SRF 320 to 960, RTS 320 to 1280, Spiegel 520 to 1200,
+ * ntv 250 to 1200, ABC 862 to 1200, heise 450 to 1200.
+ */
+const BIGGER: [RegExp, string][] = [
+  [/(ichef\.bbci\.co\.uk\/ace\/standard\/)\d+\//, '976/'],
+  [/(zdfheute\.de\/assets\/[^~?]+)~\d+x\d+/, '~1280x720'],
+  [/(static\.dw\.com\/image\/\d+)_\d+(?=\.(?:jpe?g|png|webp)$)/i, '_605'],
+  [/(srf\.ch\/static\/cms\/images\/+)\d+ws\//, '960ws/'],
+  [/(img\.rts\.ch\/[^?]+\?(?:.*&)?)w=\d+&h=\d+/, 'w=1280&h=720'],
+  [/(cdn\.prod\.www\.spiegel\.de\/images\/[^_]+)_w\d+_r[\d.]+_/, '_w1200_r1.778_'],
+  [/(n-tv\.de\/img\/\d+\/\d+\/)Img_\d+_\d+\/\d+\//, 'Img_16_9/1200/'],
+  [/(abc-cdn\.net\.au\/[^?]+\?(?:.*&)?)width=\d+&height=\d+/, 'width=1200&height=675'],
+  [/(heise\.de\/scale\/geometry\/)\d+\//, '1200/'],
+];
+export const bigger = (url: string) => BIGGER.reduce((u, [re, to]) => u.replace(re, (_, keep: string) => keep + to), url);
 
 /** Title without kickers and labels. SRF: "Kicker – Title", kept as "Kicker: Title" when the title needs it. */
 export function cleanTitle(title: string, feed: Feed): string {
@@ -88,6 +103,7 @@ type TagesschauItem = {
 
 /** Reports of a feed. Homepages give their order only: reports with rank and title, used for importance. */
 export function parseFeed(body: string, feed: Feed): Report[] {
+  const pic = (u?: string) => (feed.articleImage ? undefined : u);
   if (feed.kind === 'tagesschau' || feed.kind === 'homepage') {
     let list: TagesschauItem[] = [];
     try {
@@ -103,7 +119,7 @@ export function parseFeed(body: string, feed: Feed): Report[] {
         teaser: plain(n.firstSentence),
         link: (n.shareURL ?? n.detailsweb)!,
         time: time(n.date),
-        image: n.teaserImage?.imageVariants?.['16x9-960'] ?? n.teaserImage?.imageVariants?.['16x9-640'],
+        image: pic(n.teaserImage?.imageVariants?.['16x9-960'] ?? n.teaserImage?.imageVariants?.['16x9-640']),
         category: n.ressort,
         rank,
       }));
@@ -117,7 +133,7 @@ export function parseFeed(body: string, feed: Feed): Report[] {
       teaser: plain(tag(b, ['description', 'summary', 'content'])).replace(/\s*\(\s*[^()]*,\s*[^()]*\)\s*$/, ''),
       link: plain(tag(b, ['link'])) || b.match(/<link[^>]*href="([^"]+)"/i)?.[1] || '',
       time: time(tag(b, ['pubDate', 'updated', 'published', 'dc:date'])),
-      image: imageOf(b),
+      image: pic(imageOf(b)),
       category: plain(tag(b, ['category'])) || undefined,
       rank,
     }))

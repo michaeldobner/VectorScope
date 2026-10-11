@@ -72,8 +72,10 @@ When an outlet reports in the chosen language, the text comes from it, unchanged
 ## Pictures
 
 1. The picture of the lead outlet, else the first picture of an outlet outside fast news, else any.
-2. When no feed has a picture, the collector reads up to 40 article pages per round and takes their preview picture (`og:image`), kept for three days.
-3. A picture an outlet uses for three or more different articles is a logo and is dropped.
+2. When the address names the size, NEWS asks for a larger variant: ZDF, DW, SRF, RTS, Spiegel, ntv, ABC, heise and BBC, each checked in the lab (`lab/news-images.ts`).
+3. For NZZ, Der Standard, Blick and 20 Minuten the feed picture is not usable: too small with a signed address, or for 20 Minuten up to 5000 pixels and 1 MB. There the picture of the article page counts.
+4. When a story still has no picture, the collector reads up to 60 article pages per round and takes their preview picture (`og:image`), kept for three days.
+5. A picture an outlet uses for three or more different articles is a logo and is dropped.
 
 Pictures are not copied, the app loads them directly from the outlet.
 
