@@ -71,6 +71,12 @@ const homepage = new Map(all.filter((r) => r.feed === 'tagesschau-home').map((r)
 // One report per link: the API and the homepage of Tagesschau, NZZ recent and NZZ Schweiz overlap.
 const seen = new Set<string>();
 const reports = usableReports(all, now, isNoise).filter((r) => !seen.has(r.link) && seen.add(r.link));
+// Without the network or with most feeds down the last good edition stays: an empty page helps nobody.
+if (reports.length < 100) {
+  write('news-stats.json', { at: now, feeds: stats });
+  console.log(`NEWS ${new Date(now).toISOString()}: only ${reports.length} reports, the last edition stays`);
+  process.exit(1);
+}
 
 // 2. Translations of the headlines first: the model compares the English versions, like INTEL does, so a German
 // and an English report on the same event meet. Teasers of the leads follow after the stories are built.
