@@ -4,6 +4,18 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.21.2 (2026-10-10)
+
+### Fixed
+* Module AIR 0.5.1 and INTEL 0.15.2: top bar clear of the blurred strip below the iOS status bar.
+
+## 0.21.1 (2026-10-10)
+
+### Fixed
+* GitHub Actions storage (0.5 GB free) was full: E2E screenshots are uploaded only when a check fails and kept 3 days, the Pages artifact 1 day, and the new workflow `cleanup.yml` deletes artifacts older than two days every night.
+* The E2E side scroll check measures against the device width: Chromium widened the phone layout to fit the overflow and hid it. The INTEL top bar fits an iPhone SE again.
+* Module INTEL 0.15.1.
+
 ## 0.21.0 (2026-10-09)
 
 ### Added

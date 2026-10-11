@@ -4,6 +4,11 @@ All notable changes to module AIR. [Deutsch](CHANGELOG.de.md) · [Changelog of t
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.5.1 (2026-10-10)
+
+### Fixed
+* **Controls clear of the blurred strip on iPhone:** newer iOS draws the strip below the status bar and the Dynamic Island soft and blurred, the top bar sat right below it and its icons looked washed out. On screens with a top inset the bar now keeps a gap of up to 14 px, screens without an inset are unchanged.
+
 ## 0.5.0 (2026-10-09)
 
 ### Added
