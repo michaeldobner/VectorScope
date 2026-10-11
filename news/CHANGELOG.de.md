@@ -4,6 +4,12 @@ Alle wesentlichen Änderungen am Modul NEWS. [English](CHANGELOG.md) · [Changel
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.1.1 (2026-10-11)
+
+### Geändert
+* Dokumentation wie bei den anderen Modulen: Übersicht, Bedienung, Quellen mit jedem Feed, Geschichten und Wichtigkeit, Architektur, Datenschutz und Recht, auf Deutsch und Englisch, mit Screenshots.
+* Einstellungen und Gelesen-Status liegen unter `vectorscope.news.` wie in jedem Modul, statt `vs-news-`. Vorher gewählte Einstellungen werden einmal neu gesetzt.
+
 ## 0.1.0 (2026-10-11)
 
 ### Neu

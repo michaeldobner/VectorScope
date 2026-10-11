@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.22.2 (2026-10-11)
+
+### Geändert
+* Modul NEWS 0.1.1: vollständige Dokumentation, Speicherschlüssel wie in jedem Modul. Die Dokumentation der Sammlung führt NEWS in Aufbau, Build und Adressen.
+
 ## 0.22.1 (2026-10-11)
 
 ### Geändert

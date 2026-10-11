@@ -4,9 +4,11 @@
 
 **The news of the day from 35 verified feeds in 12 countries, as stories with every perspective.** Module NEWS of the [VectorScope collection](../README.md).
 
-<h3><a href="https://michaeldobner.github.io/VectorScope/news/">michaeldobner.github.io/VectorScope/news</a></h3>
+[Deutsch](README.de.md) · [Documentation](docs/en/README.md) · [Changelog](CHANGELOG.md) · [Concept (German)](KONZEPT.md)
 
-[**▶ Open VectorScope News**](https://michaeldobner.github.io/VectorScope/news/) · [Deutsch](README.de.md) · [Documentation](docs/en/README.md) · [Changelog](CHANGELOG.md) · [Concept (German)](KONZEPT.md)
+<img src="docs/images/iphone-top.png" width="230" alt="Top on the iPhone: lead story with 16 sources from 9 countries, places 2 and 3, below the other view">&nbsp;&nbsp;
+<img src="docs/images/iphone-story.png" width="230" alt="A story on the iPhone: the perspectives and every source by group">&nbsp;&nbsp;
+<img src="docs/images/ipad-landscape.png" width="420" alt="iPad landscape: sections, stories and the open story in three columns">
 
 </div>
 
@@ -28,14 +30,21 @@ Every news app shows the world from the view of its own newsroom, plus ads. NEWS
 
 ## Install
 
-Open **https://michaeldobner.github.io/VectorScope/news/** in Safari, tap **Share**, then **Add to Home Screen**.
+NEWS runs on the own server, which also collects the news. Open its address with `/news/` in Safari, tap **Share**, then **Add to Home Screen**.
 
 ## Documentation
 
-[Documentation](docs/en/README.md) with user guide, sources, importance and architecture. The decisions behind it are in the [concept](KONZEPT.md) (German).
+| Document | Content |
+|---|---|
+| [User guide](docs/en/user-guide.md) | Views, sections, stories, perspectives, 2-minute briefing, settings, what is new |
+| [Sources](docs/en/sources.md) | The 35 feeds, groups and weights, the check in the lab, rejected candidates |
+| [Stories and importance](docs/en/stories.md) | Grouping by meaning, sections, the three signals, texts, pictures, translation |
+| [Architecture](docs/en/architecture.md) | Collector on the server, one round, format of the edition, app, tests |
+| [Privacy and legal](docs/en/privacy-and-legal.md) | Requests, storage, third party content, licences |
+| [Concept](KONZEPT.md) (German) | The decisions of the editor in chief and the inventor |
 
 ## Version
 
-Current version: **0.1.0**. All changes in the [changelog](CHANGELOG.md).
+Current version: **0.1.1**. All changes in the [changelog](CHANGELOG.md).
 
 Headlines, teasers and pictures © their publishers, each linked to the original.

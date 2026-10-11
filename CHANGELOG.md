@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.22.2 (2026-10-11)
+
+### Changed
+* Module NEWS 0.1.1: full documentation, storage keys like every module. The collection documentation lists NEWS in structure, build and addresses.
+
 ## 0.22.1 (2026-10-11)
 
 ### Changed

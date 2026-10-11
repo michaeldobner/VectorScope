@@ -4,6 +4,12 @@ All notable changes to the module NEWS. [Deutsch](CHANGELOG.de.md) · [Changelog
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.1.1 (2026-10-11)
+
+### Changed
+* Documentation like the other modules: overview, user guide, sources with every feed, stories and importance, architecture, privacy and legal, in English and German, with screenshots.
+* Settings and read status are stored under `vectorscope.news.` like in every module, instead of `vs-news-`. Settings made before are set once more.
+
 ## 0.1.0 (2026-10-11)
 
 ### Added

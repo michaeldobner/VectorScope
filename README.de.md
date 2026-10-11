@@ -26,7 +26,7 @@ Eine Sammlung ruhiger, präziser Module unter einem Dach. Jedes beantwortet eine
 |---|---|---|---|
 | [**AIR**](air/README.de.md) · Airspace | Was fliegt gerade über mir, was kommt als nächstes, was ist einen Blick wert? | Live · [öffnen](https://michaeldobner.github.io/VectorScope/air/) | 0.5.1 |
 | [**INTEL**](intel/README.de.md) · Intelligence feed | Was melden geprüfte OSINT-Quellen und Fachmedien, und welches Flugzeug in der Luft betrifft es? | Live · [öffnen](https://michaeldobner.github.io/VectorScope/intel/) | 0.15.2 |
-| [**NEWS**](news/README.de.md) · News | Was ist heute wichtig, und wie sieht es die Welt? | Live · [öffnen](https://michaeldobner.github.io/VectorScope/news/) | 0.1.0 |
+| [**NEWS**](news/README.de.md) · News | Was ist heute wichtig, und wie sieht es die Welt? | Live · eigener Server | 0.1.1 |
 
 ## Warum VectorScope
 
@@ -70,7 +70,7 @@ Einzelheiten: [Architektur](docs/de/architektur.md).
 | [Roadmap](docs/de/roadmap.md) | Nächste Schritte, Ideen mit Serverbedarf, zurückgestellte Ideen |
 | [Modul AIR](air/docs/de/README.md) | Bedienung, Berechnungen, Datenquellen, Design, Architektur |
 | [Modul INTEL](intel/docs/de/README.md) | Bedienung, Quellen, Abgleich, Architektur |
-| [Modul NEWS](news/docs/de/README.md) | Bedienung, Quellen, Wichtigkeit, Aufbau |
+| [Modul NEWS](news/docs/de/README.md) | Bedienung, Quellen, Geschichten und Wichtigkeit, Architektur, Datenschutz |
 | [Gemeinsame Hülle](shared/README.de.md) | Tokens und Startseite |
 
 ## Schnellstart für Entwickler
@@ -93,6 +93,6 @@ Verkehrsdaten © Mitwirkende von [adsb.lol](https://adsb.lol), lizenziert unter 
 
 ## Version
 
-Aktuelle Version: **0.22.1**. Siehe [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.22.2**. Siehe [Changelog](CHANGELOG.de.md).
 
 Erstellt von Michael Dobner. Lizenziert unter der [MIT-Lizenz](LICENSE).

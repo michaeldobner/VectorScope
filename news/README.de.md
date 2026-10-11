@@ -4,9 +4,11 @@
 
 **Die Nachrichten des Tages aus 35 geprüften Feeds in 12 Ländern, als Geschichten mit allen Perspektiven.** Modul NEWS der [VectorScope-Sammlung](../README.de.md).
 
-<h3><a href="https://michaeldobner.github.io/VectorScope/news/">michaeldobner.github.io/VectorScope/news</a></h3>
+[English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md) · [Konzept](KONZEPT.md)
 
-[**▶ VectorScope News öffnen**](https://michaeldobner.github.io/VectorScope/news/) · [English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md) · [Konzept](KONZEPT.md)
+<img src="docs/images/iphone-top.png" width="230" alt="Top auf dem iPhone: Aufmacher mit 16 Quellen aus 9 Ländern, Plätze 2 und 3, darunter der andere Blick">&nbsp;&nbsp;
+<img src="docs/images/iphone-story.png" width="230" alt="Eine Geschichte auf dem iPhone: die Perspektivenleiste und alle Quellen nach Gruppen">&nbsp;&nbsp;
+<img src="docs/images/ipad-landscape.png" width="420" alt="iPad quer: Ressorts, Geschichten und die geöffnete Geschichte in drei Spalten">
 
 </div>
 
@@ -28,14 +30,21 @@ Jede Nachrichten-App zeigt die Welt aus der Sicht ihrer eigenen Redaktion, dazu 
 
 ## Installation
 
-**https://michaeldobner.github.io/VectorScope/news/** in Safari öffnen, **Teilen**, dann **Zum Home-Bildschirm**.
+NEWS läuft auf dem eigenen Server, der auch die Nachrichten sammelt. Dessen Adresse mit `/news/` in Safari öffnen, **Teilen**, dann **Zum Home-Bildschirm**.
 
 ## Dokumentation
 
-[Dokumentation](docs/de/README.md) mit Bedienung, Quellen, Wichtigkeit und Aufbau. Die Entscheidungen dahinter stehen im [Konzept](KONZEPT.md).
+| Dokument | Inhalt |
+|---|---|
+| [Bedienung](docs/de/bedienung.md) | Ansichten, Ressorts, Geschichten, Perspektiven, 2-Minuten-Überblick, Einstellungen, Neues |
+| [Quellen](docs/de/quellen.md) | Die 35 Feeds, Gruppen und Gewichte, Prüfung im Labor, verworfene Kandidaten |
+| [Geschichten und Wichtigkeit](docs/de/geschichten.md) | Zusammenführen nach Bedeutung, Ressorts, die drei Signale, Texte, Bilder, Übersetzung |
+| [Architektur](docs/de/architektur.md) | Sammler auf dem Server, Ablauf einer Runde, Format der Ausgabe, App, Tests |
+| [Datenschutz und Recht](docs/de/datenschutz-und-recht.md) | Anfragen, Speicherung, Inhalte Dritter, Lizenzen |
+| [Konzept](KONZEPT.md) | Die Entscheidungen von Chefredakteur und Erfinder |
 
 ## Version
 
-Aktuelle Version: **0.1.0**. Alle Änderungen im [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.1.1**. Alle Änderungen im [Changelog](CHANGELOG.de.md).
 
 Schlagzeilen, Anrisse und Bilder © ihre Verlage, jeweils mit dem Original verlinkt.

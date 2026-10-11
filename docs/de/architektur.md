@@ -23,9 +23,10 @@ VectorScope/
 │  ├─ docs/en, docs/de     Modul-Dokumentation
 │  └─ README, CHANGELOG    eigene Version
 ├─ intel/                  Modul INTEL: geprüfter OSINT-Feed mit Live-Abgleich (React, TypeScript)
+├─ news/                   Modul NEWS: Nachrichten als Geschichten mit allen Perspektiven (TypeScript ohne Framework)
 ├─ proxy/                  CORS-Proxy auf Vercel, für alle Module
 ├─ lab/                    Test-Labor mit echtem Internet (GitHub Actions)
-├─ collector/              Probe-Sammler und Rohdaten-Archiv für INTEL (GitHub Actions, eigener Server)
+├─ collector/              Sammler für INTEL und NEWS mit Rohdaten-Archiv (eigener Server)
 ├─ server/                 Webserver, Sammler-Schleife und Image für den eigenen Server, siehe server.md
 ├─ docker-compose.yaml     der Stack für Coolify
 ├─ scripts/
@@ -45,6 +46,7 @@ VectorScope/
 |---|---|---|---|---|
 | AIR | `air/` | Live | React 18, TypeScript, Vite, MapLibre GL | Was fliegt gerade über mir? |
 | INTEL | `intel/` | Live | React 18, TypeScript, Vite | Was melden geprüfte Quellen, und welches Flugzeug in der Luft betrifft es? |
+| NEWS | `news/` | Live | TypeScript, Vite | Was ist heute wichtig, und wie sieht es die Welt? |
 
 `modules.json` ist die einzige maßgebliche Quelle. Die Startseite verlinkt jedes Modul mit Status `live`, der Build bricht ab, wenn ein solches Modul fehlt, und die Prüfungen des Repositorys vergleichen jede genannte Version mit dem Verzeichnis.
 
@@ -78,6 +80,7 @@ npm run build
  ├─ tsc --noEmit                         Typprüfung des gesamten TypeScript
  ├─ vite build --config air/vite.config.ts   air/ → dist/air/
  ├─ vite build --config intel/vite.config.ts intel/ → dist/intel/
+ ├─ vite build --config news/vite.config.ts  news/ → dist/news/
  └─ node scripts/build.mjs               index.html, Manifest, sw.js, modules.json, shared/ → dist/
 ```
 
@@ -90,6 +93,7 @@ Eine `package.json` im Hauptordner enthält Abhängigkeiten und Skripte aller Mo
 | Startseite | `/VectorScope/` | `/VectorScope/` | `vectorscope-hub-v1` |
 | AIR | `/VectorScope/air/` | `/VectorScope/air/` | `vectorscope-air-v1` |
 | INTEL | `/VectorScope/intel/` | `/VectorScope/intel/` | `vectorscope-intel-v1` |
+| NEWS | `/news/` auf dem eigenen Server | `/news/` | `vectorscope-news-v1` |
 
 Alle Teile teilen sich einen Ursprung (`michaeldobner.github.io`), `localStorage` ist deshalb gemeinsam. Darum trägt jeder Schlüssel das Präfix `vectorscope.` und bei Bedarf den Modulnamen. Der Service Worker der Startseite beantwortet nur Anfragen für die Startseite und `shared/`, alles andere geht ins Netz oder an den Worker des Moduls.
 

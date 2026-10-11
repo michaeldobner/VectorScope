@@ -20,7 +20,7 @@ Diese Dokumentation beschreibt die VectorScope-Sammlung als Ganzes: wie das Repo
 |---|---|
 | AIR · Airspace | [Bedienung](../../air/docs/de/bedienung.md), [Berechnungen](../../air/docs/de/berechnungen.md), [Datenquellen](../../air/docs/de/datenquellen.md), [Design](../../air/docs/de/design.md), [Architektur](../../air/docs/de/architektur.md), [Entwicklung](../../air/docs/de/entwicklung.md), [Datenschutz und Recht](../../air/docs/de/datenschutz-und-recht.md) |
 | INTEL · Intelligence feed | [Bedienung](../../intel/docs/de/bedienung.md), [Quellen](../../intel/docs/de/quellen.md), [Abgleich](../../intel/docs/de/abgleich.md), [Architektur](../../intel/docs/de/architektur.md), [Datenschutz und Recht](../../intel/docs/de/datenschutz-und-recht.md) |
-| NEWS · News | [Dokumentation](../../news/docs/de/README.md), [Konzept](../../news/KONZEPT.md) |
+| NEWS · News | [Bedienung](../../news/docs/de/bedienung.md), [Quellen](../../news/docs/de/quellen.md), [Geschichten und Wichtigkeit](../../news/docs/de/geschichten.md), [Architektur](../../news/docs/de/architektur.md), [Datenschutz und Recht](../../news/docs/de/datenschutz-und-recht.md), [Konzept](../../news/KONZEPT.md) |
 | [Gemeinsame Hülle](../../shared/README.de.md) | Tokens, Stile der Startseite, Icons, Schriften |
 
 ## VectorScope auf einen Blick
@@ -33,4 +33,4 @@ Diese Dokumentation beschreibt die VectorScope-Sammlung als Ganzes: wie das Repo
 | Hosting | GitHub Pages, Proxy auf Vercel |
 | Datenschutz | Kein Konto, keine Speicherung auf Servern, Standort nur auf dem Gerät |
 | Adresse | https://michaeldobner.github.io/VectorScope/ |
-| Version | 0.22.1 |
+| Version | 0.22.2 |
