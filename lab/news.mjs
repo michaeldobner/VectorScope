@@ -17,6 +17,10 @@ const cell = (v) =>
 const FEEDS = [
   ['DE', 'Tagesschau', 'https://www.tagesschau.de/index~rss2.xml'],
   ['DE', 'Tagesschau API', 'https://www.tagesschau.de/api2u/news/'],
+  // The order of the Tagesschau homepage: what an editorial team puts first, a signal for the ranking.
+  ['DE', 'Tagesschau Startseite', 'https://www.tagesschau.de/api2u/homepage/'],
+  ['DE', 'ntv', 'https://www.n-tv.de/rss'],
+  ['DE', 'Bild', 'https://www.bild.de/feed/alles.xml'],
   ['DE', 'ZDFheute', 'https://www.zdf.de/rss/zdf/nachrichten'],
   ['DE', 'Spiegel', 'https://www.spiegel.de/schlagzeilen/index.rss'],
   ['DE', 'Deutschlandfunk', 'https://www.deutschlandfunk.de/nachrichten-100.rss'],
@@ -56,6 +60,10 @@ const FEEDS = [
   ['INT', 'CNA', 'https://www.channelnewsasia.com/rssfeeds/8395884'],
   ['INT', 'SCMP World', 'https://www.scmp.com/rss/91/feed'],
   ['INT', 'Times of India', 'https://timesofindia.indiatimes.com/rssfeedstopstories.cms'],
+  ['INT', 'CNN International', 'http://rss.cnn.com/rss/edition.rss'],
+  ['INT', 'CNN World', 'http://rss.cnn.com/rss/edition_world.rss'],
+  ['INT', 'CNBC Top News', 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114'],
+  ['INT', 'CNBC World', 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100727362'],
 ];
 
 async function get(url) {
