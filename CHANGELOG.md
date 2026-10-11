@@ -1,8 +1,14 @@
 # Changelog · VectorScope
 
-Changes to the collection as a whole: structure, hub, build, checks, workflows. Changes to a module are in its own changelog: [AIR](air/CHANGELOG.md), [INTEL](intel/CHANGELOG.md), [shared shell](shared/CHANGELOG.md). [Deutsch](CHANGELOG.de.md)
+Changes to the collection as a whole: structure, hub, build, checks, workflows. Changes to a module are in its own changelog: [AIR](air/CHANGELOG.md), [INTEL](intel/CHANGELOG.md), [NEWS](news/CHANGELOG.md), [shared shell](shared/CHANGELOG.md). [Deutsch](CHANGELOG.de.md)
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
+
+## 0.22.0 (2026-10-11)
+
+### Added
+* Module NEWS 0.1.0: the news of the day from 35 verified feeds in 12 countries, as stories with every perspective. The collector of the server (`server/collector-loop.mjs`) builds the edition with `collector/news.ts` after every round of INTEL into `/data/news/`, the web server delivers it as `/data/news.json`. GitHub collects and stores none of it.
+* Test lab `lab/news.mjs` with the workflow `lab-news.yml`: checks every candidate feed for reachability, freshness, pictures, teasers and CORS. Runs only by hand, to spare minutes and storage of the GitHub account.
 
 ## 0.21.2 (2026-10-10)
 

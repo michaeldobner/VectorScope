@@ -26,6 +26,7 @@ Eine Sammlung ruhiger, präziser Module unter einem Dach. Jedes beantwortet eine
 |---|---|---|---|
 | [**AIR**](air/README.de.md) · Airspace | Was fliegt gerade über mir, was kommt als nächstes, was ist einen Blick wert? | Live · [öffnen](https://michaeldobner.github.io/VectorScope/air/) | 0.5.1 |
 | [**INTEL**](intel/README.de.md) · Intelligence feed | Was melden geprüfte OSINT-Quellen und Fachmedien, und welches Flugzeug in der Luft betrifft es? | Live · [öffnen](https://michaeldobner.github.io/VectorScope/intel/) | 0.15.2 |
+| [**NEWS**](news/README.de.md) · News | Was ist heute wichtig, und wie sieht es die Welt? | Live · [öffnen](https://michaeldobner.github.io/VectorScope/news/) | 0.1.0 |
 
 ## Warum VectorScope
 
@@ -48,6 +49,7 @@ VectorScope/
 ├─ shared/                 gemeinsame Hülle: Tokens, Stile der Startseite, Icons, Schriften
 ├─ air/                    Modul AIR: Live-Luftlagebild
 ├─ intel/                  Modul INTEL: geprüfter OSINT-Feed mit Live-Abgleich
+├─ news/                  Modul NEWS: Nachrichten-App aus geprüften Feeds, Geschichten mit allen Perspektiven
 ├─ proxy/                  CORS-Proxy auf Vercel, für alle Module
 ├─ lab/                    Test-Labor mit echtem Internet
 ├─ scripts/                Build, lokaler Server, Rauchtest, Release
@@ -68,6 +70,7 @@ Einzelheiten: [Architektur](docs/de/architektur.md).
 | [Roadmap](docs/de/roadmap.md) | Nächste Schritte, Ideen mit Serverbedarf, zurückgestellte Ideen |
 | [Modul AIR](air/docs/de/README.md) | Bedienung, Berechnungen, Datenquellen, Design, Architektur |
 | [Modul INTEL](intel/docs/de/README.md) | Bedienung, Quellen, Abgleich, Architektur |
+| [Modul NEWS](news/docs/de/README.md) | Bedienung, Quellen, Wichtigkeit, Aufbau |
 | [Gemeinsame Hülle](shared/README.de.md) | Tokens und Startseite |
 
 ## Schnellstart für Entwickler
@@ -76,6 +79,7 @@ Einzelheiten: [Architektur](docs/de/architektur.md).
 npm install
 npm run dev        # Modul AIR unter http://localhost:5173/
 npm run dev:intel  # Modul INTEL unter http://localhost:5173/
+npm run dev:news   # Modul NEWS unter http://localhost:5173/
 npm test           # Unit-Tests aller Module und Prüfungen des Repositorys
 npm run build      # Startseite und alle Module nach dist/
 npm run preview    # dist/ wie GitHub Pages unter http://localhost:4173/
@@ -89,6 +93,6 @@ Verkehrsdaten © Mitwirkende von [adsb.lol](https://adsb.lol), lizenziert unter 
 
 ## Version
 
-Aktuelle Version: **0.21.2**. Siehe [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.22.0**. Siehe [Changelog](CHANGELOG.de.md).
 
 Erstellt von Michael Dobner. Lizenziert unter der [MIT-Lizenz](LICENSE).

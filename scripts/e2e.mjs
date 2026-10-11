@@ -45,7 +45,7 @@ for (const [name, device] of DEVICES) {
 
   // Hub
   await page.goto(BASE);
-  for (const id of ['air', 'intel']) check((await page.locator(`a.module[href="./${id}/"]`).count()) === 1, `hub does not link ${id}`);
+  for (const id of ['air', 'intel', 'news']) check((await page.locator(`a.module[href="./${id}/"]`).count()) === 1, `hub does not link ${id}`);
   check(await noSideScroll(page), 'hub scrolls sideways');
   await page.screenshot({ path: `${OUT}/${ENGINE}-${name}-hub.png` });
 

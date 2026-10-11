@@ -49,6 +49,10 @@ services:
       - RAW_PUSH_URL=${RAW_PUSH_URL:-}
       # Topics by meaning (collector/embed.ts): the model is downloaded once into /data/models. EMBED=0 turns it off.
       - EMBED=${EMBED:-1}
+      # NEWS: after every round the edition of the news module into /data/news/. NEWS=0 turns it off.
+      # Optional DEEPL_KEY (DeepL API Free) translates reliably, without it the public Google endpoint is asked.
+      - NEWS=${NEWS:-1}
+      - DEEPL_KEY=${DEEPL_KEY:-}
     volumes:
       - vectorscope-data:/data
     depends_on:

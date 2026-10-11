@@ -241,6 +241,11 @@ createServer(async (req, res) => {
     if (path === '/api/health') return await health(res);
     if (path === '/api/diag') return await diag(res);
     if (path === '/api/reports') return await reports(res, url.searchParams);
+    if (path === '/data/news.json') {
+      const file = join(dataDir, 'news', 'news.json');
+      if (!existsSync(file)) return json(res, 404, { error: 'no NEWS round yet' });
+      return serveFile(res, file, 'no-cache');
+    }
     if (path === '/data/latest.json') {
       const file = join(dataDir, 'latest.json');
       if (!existsSync(file)) return json(res, 404, { error: 'no collector round yet' });

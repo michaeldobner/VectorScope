@@ -1,0 +1,33 @@
+name: Lab news feeds
+
+# Test lab with real internet for the news module: checks the candidate feeds.
+# Results are pushed to the branch "lab-news-results", the main lab's results stay untouched.
+# Only by hand (Actions, Run workflow): checks cost minutes and storage of the GitHub account.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lab-news
+  cancel-in-progress: true
+
+jobs:
+  feeds:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check feeds
+        run: node lab/news.mjs
+      - name: Publish results to branch lab-news-results
+        run: |
+          cd lab-out
+          git init -q
+          git checkout -q -b lab-news-results
+          git add -A
+          git -c user.name=lab -c user.email=lab@users.noreply.github.com commit -q -m "News feeds ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" lab-news-results
