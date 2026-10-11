@@ -49,6 +49,8 @@ jobs:
       - name: Collect and publish every round
         env:
           PUSH_URL: https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git
+          # Optional: a free DeepL API key as repository secret. Without it the public Google endpoint is asked.
+          DEEPL_KEY: ${{ secrets.DEEPL_KEY }}
         run: |
           end=$(( $(date +%s) + RUN_MIN * 60 ))
           while :; do

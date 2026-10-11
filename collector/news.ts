@@ -9,7 +9,8 @@
 //   news-translations.json  cache of every translation, so nothing is asked twice
 //   news-og.json            picture of an article page (og:image) by link, for feeds without pictures
 //   news-stats.json         per feed of the last round: ok, reports, error
-// MODEL_DIR keeps the model between rounds, EMBED=0 groups by words only.
+// MODEL_DIR keeps the model between rounds, EMBED=0 groups by words only. DEEPL_KEY translates with DeepL instead
+// of the public Google endpoint.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { translateAll } from '../proxy/lib/translate.js';
@@ -101,8 +102,23 @@ async function viaProxy(texts: string[], to: 'de' | 'en'): Promise<(string | nul
   if (!r.ok) throw new Error(`proxy ${r.status}`);
   return ((await r.json()) as { translations?: (string | null)[] }).translations ?? texts.map(() => null);
 }
+// DeepL API Free (500,000 characters a month at no cost) when the repository has the secret DEEPL_KEY: reliable,
+// unlike the public Google endpoint, which often refuses GitHub's runners and the proxy.
+const DEEPL_KEY = process.env.DEEPL_KEY;
+async function viaDeepl(texts: string[], to: 'de' | 'en'): Promise<(string | null)[]> {
+  const host = DEEPL_KEY!.endsWith(':fx') ? 'api-free.deepl.com' : 'api.deepl.com';
+  const r = await fetch(`https://${host}/v2/translate`, {
+    method: 'POST',
+    headers: { Authorization: `DeepL-Auth-Key ${DEEPL_KEY}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ text: texts, target_lang: to === 'en' ? 'EN-GB' : 'DE' }),
+    signal: AbortSignal.timeout(30000),
+  });
+  if (!r.ok) throw new Error(`deepl ${r.status}`);
+  return ((await r.json()) as { translations: { text: string }[] }).translations.map((x) => x.text);
+}
 const ask = async (texts: string[], to: 'de' | 'en') => {
   const fail = texts.map(() => null);
+  if (DEEPL_KEY) return viaDeepl(texts, to).catch(() => fail);
   if (!useProxy) {
     const out = await translateAll(texts, to).catch(() => fail);
     if (out.some((x) => x != null)) return out;

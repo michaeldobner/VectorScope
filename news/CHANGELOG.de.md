@@ -14,3 +14,4 @@ Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die V
 * **Einstellungen:** App-Sprache Deutsch oder Englisch, Meldungen Deutsch, Englisch oder Original, Blickwinkel aus DACH oder aus der Welt, Ansicht ruhig oder bildstark. Der erste Start folgt der Sprache des Geräts, Uhrzeiten stehen in der Zeitzone des Geräts.
 * **Neu und gewachsen:** blauer Punkt für neue Geschichten, „+3 Quellen“ für gewachsene, die Linie „Bis hier hattest du gelesen“, neue Geschichten erscheinen erst nach einem Tipp auf den Hinweis unten.
 * **Ohne Verbindung** zeigt NEWS die letzte geladene Ausgabe mit Hinweis.
+* **Übersetzung** mit DeepL, wenn das Secret `DEEPL_KEY` gesetzt ist, sonst über den öffentlichen Google-Übersetzer, direkt oder über den Proxy.

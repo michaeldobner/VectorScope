@@ -54,7 +54,7 @@ Geprüft mit `lab/news.mjs` (Workflow `lab-news.yml`, Ergebnis im Branch `lab-ne
 | Sammler | `collector/news.ts`, Workflow `.github/workflows/news.yml` |
 | App | `news/src/main.ts`, `news/src/i18n.ts`, `news/src/styles.css` |
 
-Der Sammler legt im Branch `news-data` ab: `news.json` (die Ausgabe), `news-translations.json` (Übersetzungen, 7 Tage), `news-og.json` (Bilder der Artikelseiten, 3 Tage), `news-stats.json` (Zustand jedes Feeds). Übersetzt wird über den öffentlichen Google-Übersetzer wie bei INTEL, ohne Schlüssel.
+Der Sammler legt im Branch `news-data` ab: `news.json` (die Ausgabe), `news-translations.json` (Übersetzungen, 7 Tage), `news-og.json` (Bilder der Artikelseiten, 3 Tage), `news-stats.json` (Zustand jedes Feeds). Übersetzt wird mit DeepL, wenn das Repository das Secret `DEEPL_KEY` hat (DeepL API Free, 500.000 Zeichen im Monat kostenlos). Ohne Schlüssel fragt der Sammler den öffentlichen Google-Übersetzer, direkt und über den Proxy bei Vercel. Google lehnt die Server von GitHub oft ab, dann bleiben Meldungen in ihrer Originalsprache, unmarkiert, und jede Geschichte nimmt ihren Text aus einer Quelle in der gewählten Sprache, wo es eine gibt.
 
 ## Recht
 

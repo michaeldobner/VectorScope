@@ -14,3 +14,4 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), ver
 * **Settings:** app language German or English, reports in German, English or the original, perspective German-speaking or global, view calm or pictures. The first start follows the language of the device, times are shown in its time zone.
 * **New and grown:** a blue dot for new stories, "+3 sources" for grown ones, the line "You read up to here", new stories come in only after a tap on the notice at the bottom.
 * **Offline** NEWS shows the last edition loaded, with a notice.
+* **Translation** with DeepL when the secret `DEEPL_KEY` is set, else through the public Google endpoint, directly or through the proxy.

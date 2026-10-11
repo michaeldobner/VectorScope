@@ -54,7 +54,7 @@ Checked with `lab/news.mjs` (workflow `lab-news.yml`, results on the branch `lab
 | Collector | `collector/news.ts`, workflow `.github/workflows/news.yml` |
 | App | `news/src/main.ts`, `news/src/i18n.ts`, `news/src/styles.css` |
 
-The collector writes to the branch `news-data`: `news.json` (the edition), `news-translations.json` (translations, 7 days), `news-og.json` (pictures of article pages, 3 days), `news-stats.json` (state of every feed). Translation uses the public Google endpoint as in INTEL, without a key.
+The collector writes to the branch `news-data`: `news.json` (the edition), `news-translations.json` (translations, 7 days), `news-og.json` (pictures of article pages, 3 days), `news-stats.json` (state of every feed). Translation uses DeepL when the repository has the secret `DEEPL_KEY` (DeepL API Free, 500,000 characters a month at no cost). Without a key the collector asks the public Google endpoint, directly and through the proxy on Vercel. Google often refuses GitHub's servers, then reports stay in their original language, unmarked, and every story takes its text from an outlet in the chosen language where there is one.
 
 ## Legal
 
