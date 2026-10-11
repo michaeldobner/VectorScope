@@ -53,7 +53,18 @@ Nicht verfügbar: swissinfo (Feed eingestellt), Tages-Anzeiger (nicht erreichbar
 
 ### Sprache
 
-Schlagzeilen und Anrisse stehen auf Deutsch, die Originalsprache ist einen Tipp entfernt. Eine Einstellung zeigt auf Wunsch alles im Original. Grund: Der schnelle Überblick und der Vergleich der Perspektiven funktionieren nur in einer Sprache.
+Zwei Einstellungen, unabhängig voneinander:
+
+| Einstellung | Auswahl | Betrifft |
+|---|---|---|
+| **App-Sprache** | Deutsch, Englisch | Bedienung, Ressorts, Hinweise, Datum |
+| **Meldungen** | Deutsch, Englisch, Original | Schlagzeilen, Zusammenfassungen, Titel der Quellen |
+
+- **Deutsch oder Englisch:** Alle Meldungen in dieser Sprache. Übersetzte Quellentitel sind als „übersetzt“ markiert, das Original steht klein darunter.
+- **Original:** Jede Geschichte zeigt Schlagzeile und Anriss ihrer Leitquelle im Wortlaut, darunter „Im Wortlaut von Tagesschau“. Leitquelle ist die erste vorhandene aus Tagesschau, SRF, BBC, ZDF, Deutschlandfunk, ORF, NZZ, Guardian, DW. Die Quellentitel stehen unübersetzt.
+- Die Seite setzt für jeden Text die Sprache (`lang`), damit Silbentrennung und Vorlesen stimmen.
+
+Einwand der Redaktion, bewusst in Kauf genommen: Im Modus Original stehen auf der Top-Seite mehrere Sprachen nebeneinander, der schnelle Überblick leidet. Wer das so will, wählt es aktiv.
 
 ## Bedienung
 
