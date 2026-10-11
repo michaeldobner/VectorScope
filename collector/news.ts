@@ -86,7 +86,31 @@ const tr: Translate = (text, to) => {
   return undefined;
 };
 const MAX = Number(process.env.TRANSLATE_MAX ?? 400);
-const stat = { translated: 0, refused: 0 };
+const stat = { translated: 0, refused: 0, viaProxy: 0 };
+// Google often refuses the addresses of GitHub's runners. The proxy on Vercel (proxy/api/proxy.js, route /translate)
+// asks Google from its own address, the collector switches to it for the rest of the round.
+const PROXY = process.env.VECTORSCOPE_PROXY || 'https://vectorscope-proxy.vercel.app';
+let useProxy = false;
+async function viaProxy(texts: string[], to: 'de' | 'en'): Promise<(string | null)[]> {
+  const r = await fetch(`${PROXY}/translate`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ texts: texts.map((t) => t.slice(0, 600)), to }),
+    signal: AbortSignal.timeout(30000),
+  });
+  if (!r.ok) throw new Error(`proxy ${r.status}`);
+  return ((await r.json()) as { translations?: (string | null)[] }).translations ?? texts.map(() => null);
+}
+const ask = async (texts: string[], to: 'de' | 'en') => {
+  const fail = texts.map(() => null);
+  if (!useProxy) {
+    const out = await translateAll(texts, to).catch(() => fail);
+    if (out.some((x) => x != null)) return out;
+    useProxy = true;
+  }
+  stat.viaProxy += texts.length;
+  return viaProxy(texts, to).catch(() => fail);
+};
 async function translateMissing() {
   for (const to of ['de', 'en'] as const) {
     const texts = [...missing[to]].filter((t) => !cache.get(t)?.[to]).slice(0, MAX);
@@ -94,7 +118,7 @@ async function translateMissing() {
     for (let s = 0; s < texts.length; s += 20) {
       const slice = texts.slice(s, s + 20);
       if (s) await new Promise((r) => setTimeout(r, 1500));
-      const out = await translateAll(slice, to).catch(() => slice.map(() => null));
+      const out = await ask(slice, to);
       // Everything refused: Google blocks this address for now, the next round goes on.
       if (out.every((x) => x == null)) {
         stat.refused += slice.length;
@@ -169,6 +193,6 @@ write('news-stats.json', { at: now, feeds: stats });
 const failed = Object.entries(stats).filter(([, s]) => !s.ok).map(([id]) => id);
 console.log(
   `NEWS ${new Date(now).toISOString()}: ${reports.length} reports, ${edition.stories.length} stories from ${edition.outlets} outlets in ${edition.countries} countries, ` +
-    `grouped by ${vectors ? 'meaning' : 'words'}, ${stat.translated} translated, ${stat.refused} refused, ${wanted.length} pages read for pictures` +
+    `grouped by ${vectors ? 'meaning' : 'words'}, ${stat.translated} translated (${stat.viaProxy} asked via the proxy), ${stat.refused} refused, ${wanted.length} pages read for pictures` +
     (failed.length ? `, failed: ${failed.join(', ')}` : ''),
 );

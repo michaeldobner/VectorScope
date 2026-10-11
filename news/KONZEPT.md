@@ -1,6 +1,6 @@
 # NEWS · Nachrichten: Konzept
 
-Stand: Oktober 2026 · Status: Konzept, klickbarer Prototyp mit echten Schlagzeilen vom 11. Oktober 2026
+Stand: Oktober 2026 · Status: umgesetzt in NEWS 0.1.0, ohne Sprachmodell
 
 Die dritte Komponente von VectorScope ersetzt die klassische Nachrichten-App. Ohne Werbung, ohne Konto, ohne Tracking. Sie beantwortet eine Frage: **Was ist heute wichtig, und wie sieht es die Welt?**
 
