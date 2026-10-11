@@ -39,6 +39,7 @@ describe('parse', () => {
     expect(cleanTitle('Krieg in der Ukraine – Ukraine: Mindestens 20 Tote', feedById('srf')!)).toBe('Ukraine: Mindestens 20 Tote');
     expect(cleanTitle('Saudi-Arabien: Huthis greifen an – zwölf Tote', feedById('spiegel')!)).toBe('Saudi-Arabien: Huthis greifen an, zwölf Tote');
     expect(cleanTitle('LIVE-TICKER - Krieg in der Ukraine', feedById('nzz')!)).toBe('Krieg in der Ukraine');
+    expect(cleanTitle('Palästinensergebiete - Präsident Abbas verschiebt Wahl', feedById('dlf')!)).toBe('Präsident Abbas verschiebt Wahl');
   });
 
   it('knows noise', () => {

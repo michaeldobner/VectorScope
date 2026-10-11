@@ -65,6 +65,8 @@ export function cleanTitle(title: string, feed: Feed): string {
     const body = rest.join(' – ');
     t = body.includes(':') ? body : `${kicker}: ${body}`;
   }
+  // Deutschlandfunk: "Kicker - Title", the kicker is a place or a topic and the title stands on its own.
+  if (feed.outlet === 'Deutschlandfunk') t = t.replace(/^[^-:]{2,60} - (?=\S)/, '');
   return t.replace(/ [–—] /g, ', ').replace(/[–—]/g, '-').trim();
 }
 
