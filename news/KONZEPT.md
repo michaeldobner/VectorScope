@@ -64,6 +64,19 @@ Zwei Einstellungen, unabhängig voneinander:
 - **Original:** Jede Geschichte zeigt Schlagzeile und Anriss ihrer Leitquelle im Wortlaut, darunter „Im Wortlaut von Tagesschau“. Leitquelle ist die erste vorhandene aus Tagesschau, SRF, BBC, ZDF, Deutschlandfunk, ORF, NZZ, Guardian, DW. Die Quellentitel stehen unübersetzt.
 - Die Seite setzt für jeden Text die Sprache (`lang`), damit Silbentrennung und Vorlesen stimmen.
 
+### Nutzbar im Ausland
+
+Die App ist auch für Leser außerhalb von DACH gedacht, zum Beispiel einen Freund im Ausland.
+
+- **Erster Start:** App-Sprache, Meldungen und Blickwinkel folgen der Sprache des Geräts. Ein englisches Gerät bekommt Englisch und den Blickwinkel „Aus der Welt“, ein deutsches Deutsch und „Aus DACH“. Alles bleibt umstellbar.
+- **Blickwinkel** als dritte Einstellung:
+  - **Aus DACH:** Wichtigkeit mit DACH-Bezug. Der andere Blick zeigt, was die Welt bewegt und in DACH fehlt.
+  - **Aus der Welt:** Wichtigkeit nach internationaler Verbreitung, gezählt werden Quellen außerhalb von DACH. Der andere Blick dreht sich um und zeigt, was nur die deutschsprachigen Medien bewegt. Die Geschichten, die sonst im anderen Blick stehen, laufen dann unter Welt.
+- **Uhrzeiten** stehen in der Zeitzone des Geräts.
+- **Ressort DACH** heißt auf Englisch „DE · CH · AT“, weil „DACH“ außerhalb des Sprachraums niemand kennt.
+- **Englische Zusammenfassungen** schreibt der Sammler wo möglich aus den englischen Quellen selbst, nicht als Übersetzung der deutschen Zusammenfassung. So klingen sie nicht übersetzt.
+- **Offen:** Videos von Tagesschau, ZDF und SRF sind im Ausland oft gesperrt. NEWS verlinkt Artikel, keine Videos, das ist deshalb unkritisch.
+
 Einwand der Redaktion, bewusst in Kauf genommen: Im Modus Original stehen auf der Top-Seite mehrere Sprachen nebeneinander, der schnelle Überblick leidet. Wer das so will, wählt es aktiv.
 
 ## Bedienung
