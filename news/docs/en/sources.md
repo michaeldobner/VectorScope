@@ -59,7 +59,7 @@ The weight counts when NEWS computes the importance of a story, see [Stories and
 
 ## Checked in the test lab
 
-Every feed was checked on 11 October 2026 with `lab/news.mjs`, in the workflow `lab-news.yml`, which starts by hand only. Per feed the check measures: answer, format (RSS, Atom, JSON), charset, number of reports, age of the newest, share with picture and with teaser, CORS. A feed is usable with answer 200, at least 5 reports and a newest one under 48 hours.
+Every feed was checked on 11 October 2026 with `lab/news.mjs`, in the workflow `lab-news.yml`, which starts by hand only and writes its result only to the log of the run. `lab/news-images.ts` there also measures the size of the pictures of every feed. Per feed the check measures: answer, format (RSS, Atom, JSON), charset, number of reports, age of the newest, share with picture and with teaser, CORS. A feed is usable with answer 200, at least 5 reports and a newest one under 48 hours.
 
 What the lab taught, and the parser in `news/src/data/parse.ts` follows:
 

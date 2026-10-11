@@ -42,6 +42,12 @@ const tag = (block: string, names: string[]) => {
 /** Picture of an item: media, enclosure or the first img in the description. Counting pixels are no pictures. */
 export function imageOf(block: string): string | undefined {
   const b = decodeEntities(cdata(block));
+  // Several sizes (The Guardian: 140 and 460 px): the widest.
+  const sized = [...b.matchAll(/<media:content[^>]*>/gi)]
+    .map((t) => ({ url: t[0].match(/url="([^"]+)"/i)?.[1], w: Number(t[0].match(/width="(\d+)"/i)?.[1] ?? 0) }))
+    .filter((x) => x.url && x.w)
+    .sort((a, c) => c.w - a.w);
+  if (sized.length > 1) return bigger(decodeEntities(sized[0].url!));
   const m =
     b.match(/<media:content[^>]*url="([^"]+)"[^>]*(?:medium="image"|type="image)/i) ??
     b.match(/<media:content[^>]*(?:medium="image"|type="image)[^>]*url="([^"]+)"/i) ??

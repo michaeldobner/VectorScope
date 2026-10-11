@@ -59,7 +59,7 @@ Das Gewicht zählt, wenn NEWS die Wichtigkeit einer Geschichte berechnet, siehe 
 
 ## Geprüft im Test-Labor
 
-Jeder Feed wurde am 11. Oktober 2026 mit `lab/news.mjs` geprüft, im Workflow `lab-news.yml`, der nur von Hand startet. Die Prüfung misst pro Feed: Antwort, Format (RSS, Atom, JSON), Zeichensatz, Zahl der Meldungen, Alter der neuesten, Anteil mit Bild und mit Anriss, CORS. Brauchbar ist ein Feed mit Antwort 200, mindestens 5 Meldungen und einer neuesten unter 48 Stunden.
+Jeder Feed wurde am 11. Oktober 2026 mit `lab/news.mjs` geprüft, im Workflow `lab-news.yml`, der nur von Hand startet und sein Ergebnis nur ins Protokoll des Laufs schreibt. `lab/news-images.ts` misst dort zusätzlich die Größe der Bilder jedes Feeds. Die Prüfung misst pro Feed: Antwort, Format (RSS, Atom, JSON), Zeichensatz, Zahl der Meldungen, Alter der neuesten, Anteil mit Bild und mit Anriss, CORS. Brauchbar ist ein Feed mit Antwort 200, mindestens 5 Meldungen und einer neuesten unter 48 Stunden.
 
 Was das Labor gelehrt hat und der Parser in `news/src/data/parse.ts` beachtet:
 

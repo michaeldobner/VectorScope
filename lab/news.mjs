@@ -251,5 +251,7 @@ const md = [
   '',
 ];
 fs.writeFileSync(`${OUT}/news-feeds.md`, md.join('\n'));
+console.log(md.join('\n'));
+if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, md.join('\n'));
 fs.writeFileSync(`${OUT}/news-feeds.json`, JSON.stringify(results, null, 2));
 console.log('News feeds written');
