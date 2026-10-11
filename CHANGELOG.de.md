@@ -1,8 +1,14 @@
 # Changelog · VectorScope
 
-Änderungen an der Sammlung als Ganzes: Aufbau, Startseite, Build, Prüfungen, Workflows. Änderungen an einem Modul stehen in dessen eigenem Changelog: [AIR](air/CHANGELOG.de.md), [INTEL](intel/CHANGELOG.de.md), [gemeinsame Hülle](shared/CHANGELOG.de.md). [English](CHANGELOG.md)
+Änderungen an der Sammlung als Ganzes: Aufbau, Startseite, Build, Prüfungen, Workflows. Änderungen an einem Modul stehen in dessen eigenem Changelog: [AIR](air/CHANGELOG.de.md), [INTEL](intel/CHANGELOG.de.md), [NEWS](news/CHANGELOG.de.md), [gemeinsame Hülle](shared/CHANGELOG.de.md). [English](CHANGELOG.md)
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
+
+## 0.22.0 (2026-10-11)
+
+### Neu
+* Modul NEWS 0.1.0: die Nachrichten des Tages aus 35 geprüften Feeds in 12 Ländern, als Geschichten mit allen Perspektiven. Ein eigener Sammler `collector/news.ts` mit dem Workflow `news.yml` legt die Ausgabe alle 10 Minuten im Branch `news-data` ab.
+* Test-Labor `lab/news.mjs` mit dem Workflow `lab-news.yml`: prüft jeden Kandidaten-Feed auf Erreichbarkeit, Aktualität, Bilder, Anrisse und CORS, Ergebnis im Branch `lab-news-results`.
 
 ## 0.21.2 (2026-10-10)
 

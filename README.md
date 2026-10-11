@@ -26,6 +26,7 @@ A collection of calm, precise modules under one roof. Each answers one question 
 |---|---|---|---|
 | [**AIR**](air/README.md) · Airspace | What is flying above me right now, what passes over next, what is worth a look? | Live · [open](https://michaeldobner.github.io/VectorScope/air/) | 0.5.1 |
 | [**INTEL**](intel/README.md) · Intelligence feed | What do verified OSINT sources and defence media report, and which aircraft in the air does it concern? | Live · [open](https://michaeldobner.github.io/VectorScope/intel/) | 0.15.2 |
+| [**NEWS**](news/README.md) · News | What is important today, and how does the world see it? | Live · [open](https://michaeldobner.github.io/VectorScope/news/) | 0.1.0 |
 
 ## Why VectorScope
 
@@ -48,6 +49,7 @@ VectorScope/
 ├─ shared/                 shared shell: tokens, hub styles, icons, fonts
 ├─ air/                    module AIR: live aviation radar
 ├─ intel/                  module INTEL: verified OSINT feed with live match
+├─ news/                   module NEWS: news app from verified feeds, stories with every perspective
 ├─ proxy/                  CORS proxy on Vercel, shared by all modules
 ├─ lab/                    test lab with real internet
 ├─ scripts/                build, local server, smoke test, release
@@ -68,6 +70,7 @@ Details: [Architecture](docs/en/architecture.md).
 | [Roadmap](docs/en/roadmap.md) | Next steps, ideas that need a server, deferred ideas |
 | [Module AIR](air/docs/en/README.md) | User guide, calculations, data sources, design, architecture |
 | [Module INTEL](intel/docs/en/README.md) | User guide, sources, matching, architecture |
+| [Module NEWS](news/docs/en/README.md) | User guide, sources, importance, architecture |
 | [Shared shell](shared/README.md) | Tokens and hub |
 
 ## Quick start for developers
@@ -76,6 +79,7 @@ Details: [Architecture](docs/en/architecture.md).
 npm install
 npm run dev        # module AIR at http://localhost:5173/
 npm run dev:intel  # module INTEL at http://localhost:5173/
+npm run dev:news   # module NEWS at http://localhost:5173/
 npm test           # unit tests of all modules and repository checks
 npm run build      # hub and all modules into dist/
 npm run preview    # dist/ like GitHub Pages at http://localhost:4173/
@@ -89,6 +93,6 @@ Traffic data © [adsb.lol](https://adsb.lol) contributors, licensed under ODbL 1
 
 ## Version
 
-Current version: **0.21.2**. See the [changelog](CHANGELOG.md).
+Current version: **0.22.0**. See the [changelog](CHANGELOG.md).
 
 Created by Michael Dobner. Licensed under the [MIT licence](LICENSE).

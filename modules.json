@@ -1,6 +1,6 @@
 {
   "name": "VectorScope",
-  "version": "0.21.2",
+  "version": "0.22.0",
   "shared": {
     "version": "1.1.0"
   },
@@ -27,6 +27,18 @@
       "description": {
         "en": "Security and politics from 194 verified sources: what happened, who confirms it, who says what, matched to aircraft in the air right now.",
         "de": "Sicherheit und Politik aus 194 geprüften Quellen: was passiert ist, wer es bestätigt, wer was sagt, abgeglichen mit Flugzeugen, die gerade in der Luft sind."
+      }
+    },
+    {
+      "id": "news",
+      "code": "NEWS",
+      "name": "News",
+      "status": "live",
+      "version": "0.1.0",
+      "path": "news/",
+      "description": {
+        "en": "The news of the day from 35 verified feeds in 12 countries, as stories with every perspective, no ads.",
+        "de": "Die Nachrichten des Tages aus 35 geprüften Feeds in 12 Ländern, als Geschichten mit allen Perspektiven, ohne Werbung."
       }
     }
   ]

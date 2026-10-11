@@ -71,7 +71,53 @@ const homepage = new Map(all.filter((r) => r.feed === 'tagesschau-home').map((r)
 const seen = new Set<string>();
 const reports = usableReports(all, now, isNoise).filter((r) => !seen.has(r.link) && seen.add(r.link));
 
-// 2. Stories by meaning
+// 2. Translations of the headlines first: the model compares the English versions, like INTEL does, so a German
+// and an English report on the same event meet. Teasers of the leads follow after the stories are built.
+type Cache = Record<string, { de?: string; en?: string; at: number }>;
+const cache = new Map(Object.entries(read<Cache>('news-translations.json', {})).filter(([, v]) => now - v.at < 7 * DAY));
+const missing = { de: new Set<string>(), en: new Set<string>() };
+const tr: Translate = (text, to) => {
+  const hit = cache.get(text)?.[to];
+  if (hit) {
+    cache.get(text)!.at = now;
+    return hit;
+  }
+  missing[to].add(text);
+  return undefined;
+};
+const MAX = Number(process.env.TRANSLATE_MAX ?? 400);
+const stat = { translated: 0, refused: 0 };
+async function translateMissing() {
+  for (const to of ['de', 'en'] as const) {
+    const texts = [...missing[to]].filter((t) => !cache.get(t)?.[to]).slice(0, MAX);
+    missing[to].clear();
+    for (let s = 0; s < texts.length; s += 20) {
+      const slice = texts.slice(s, s + 20);
+      if (s) await new Promise((r) => setTimeout(r, 1500));
+      const out = await translateAll(slice, to).catch(() => slice.map(() => null));
+      // Everything refused: Google blocks this address for now, the next round goes on.
+      if (out.every((x) => x == null)) {
+        stat.refused += slice.length;
+        break;
+      }
+      slice.forEach((t, i) => {
+        if (!out[i]) return;
+        const entry = cache.get(t) ?? { at: now };
+        entry[to] = out[i]!;
+        cache.set(t, entry);
+        stat.translated++;
+      });
+    }
+  }
+}
+const langOf = (r: Report) => FEEDS.find((f) => f.id === r.feed)!.lang;
+for (const r of [...reports].sort((a, b) => b.time - a.time)) {
+  if (langOf(r) !== 'en') tr(r.title, 'en');
+  if (langOf(r) !== 'de') tr(r.title, 'de');
+}
+await translateMissing();
+
+// 3. Stories by meaning
 let embed: Embed | undefined;
 if (process.env.EMBED !== '0') {
   try {
@@ -81,13 +127,16 @@ if (process.env.EMBED !== '0') {
   }
 }
 let vectors: Float32Array[] | undefined;
+const english = reports.map((r) => (langOf(r) === 'en' ? r.title : cache.get(r.title)?.en));
 if (embed) {
   vectors = [];
-  for (let i = 0; i < reports.length; i += 64) vectors.push(...(await embed(reports.slice(i, i + 64).map((r) => r.title))));
+  const texts = reports.map((r, i) => english[i] ?? r.title);
+  for (let i = 0; i < texts.length; i += 64) vectors.push(...(await embed(texts.slice(i, i + 64))));
 }
-const groups = group(reports, vectors, THRESHOLD);
+// A report without an English version yet is compared in its own language, which needs a lower bar.
+const groups = group(reports, vectors, THRESHOLD, reports.map((r, i) => (english[i] ? 'en' : langOf(r))));
 
-// 3. Pictures of article pages, for stories without a picture in any feed
+// 4. Pictures of article pages, for stories without a picture in any feed
 const og = new Map(Object.entries(read<Record<string, { url?: string; at: number }>>('news-og.json', {})).filter(([, v]) => now - v.at < 3 * DAY));
 const wanted = groups
   .filter((g) => !g.some((i) => reports[i].image))
@@ -107,39 +156,10 @@ await pool(wanted, 4, async (link) => {
 const ogUrls = new Map([...og].filter(([, v]) => v.url).map(([k, v]) => [k, v.url!]));
 const logos = findLogos(reports, ogUrls);
 
-// 4. Translations: build once from the cache, translate what was missing, build again
-type Cache = Record<string, { de?: string; en?: string; at: number }>;
-const cache = new Map(Object.entries(read<Cache>('news-translations.json', {})).filter(([, v]) => now - v.at < 7 * DAY));
-const missing = { de: new Set<string>(), en: new Set<string>() };
-const tr: Translate = (text, to) => {
-  const hit = cache.get(text)?.[to];
-  if (hit) {
-    cache.get(text)!.at = now;
-    return hit;
-  }
-  missing[to].add(text);
-  return undefined;
-};
+// 5. The edition, once more after the teasers of the leads are translated
 const input = { reports, groups, signals: { homepage, now }, tr, ogImage: (l: string) => ogUrls.get(l), logos };
 buildEdition(input);
-const MAX = Number(process.env.TRANSLATE_MAX ?? 400);
-let translated = 0;
-for (const to of ['de', 'en'] as const) {
-  const texts = [...missing[to]].slice(0, MAX);
-  for (let s = 0; s < texts.length; s += 40) {
-    const slice = texts.slice(s, s + 40);
-    const out = await translateAll(slice, to).catch(() => slice.map(() => null));
-    if (out.every((x) => x == null)) break;
-    slice.forEach((t, i) => {
-      if (!out[i]) return;
-      const entry = cache.get(t) ?? { at: now };
-      entry[to] = out[i]!;
-      cache.set(t, entry);
-      translated++;
-    });
-    await new Promise((r) => setTimeout(r, 1200));
-  }
-}
+await translateMissing();
 const edition = buildEdition(input);
 
 write('news.json', edition);
@@ -149,6 +169,6 @@ write('news-stats.json', { at: now, feeds: stats });
 const failed = Object.entries(stats).filter(([, s]) => !s.ok).map(([id]) => id);
 console.log(
   `NEWS ${new Date(now).toISOString()}: ${reports.length} reports, ${edition.stories.length} stories from ${edition.outlets} outlets in ${edition.countries} countries, ` +
-    `grouped by ${vectors ? 'meaning' : 'words'}, ${translated} translated, ${missing.de.size + missing.en.size - translated} waiting, ${wanted.length} pages read for pictures` +
+    `grouped by ${vectors ? 'meaning' : 'words'}, ${stat.translated} translated, ${stat.refused} refused, ${wanted.length} pages read for pictures` +
     (failed.length ? `, failed: ${failed.join(', ')}` : ''),
 );

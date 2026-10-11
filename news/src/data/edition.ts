@@ -19,6 +19,8 @@ const WEIGHT: Record<Group, number> = { pub: 1, press: 1, intl: 1, biz: 0.8, tec
 
 // ---------- Grouping ----------
 
+/** How much lower two reports in different languages may score and still be one story. */
+const CROSS_LANG = 0.08;
 const dot = (a: Float32Array, b: Float32Array) => {
   let s = 0;
   for (let i = 0; i < a.length; i++) s += a[i] * b[i];
@@ -34,10 +36,11 @@ const jaccard = (a: Set<string>, b: Set<string>) => {
 
 /**
  * Groups reports into stories. With vectors of a multilingual model (normalized, so the dot product is the
- * cosine): a report joins the story with the most similar member from `threshold` on, across languages.
+ * cosine): a report joins the story with the most similar member from `threshold` on. The collector embeds the
+ * English version of every headline; `langs` says in which language each vector was made.
  * Without vectors: shared words, which only finds reports in the same language.
  */
-export function group(reports: Report[], vectors?: Float32Array[], threshold = 0.8): number[][] {
+export function group(reports: Report[], vectors?: Float32Array[], threshold = 0.8, langs?: string[]): number[][] {
   const order = reports.map((_, i) => i).sort((a, b) => reports[a].time - reports[b].time);
   const stories: number[][] = [];
   const bags = reports.map((r) => words(r.title));
@@ -47,7 +50,9 @@ export function group(reports: Report[], vectors?: Float32Array[], threshold = 0
     stories.forEach((members, s) => {
       for (const j of members) {
         if (reports[j].feed === reports[i].feed) continue;
-        const sim = vectors ? dot(vectors[i], vectors[j]) : jaccard(bags[i], bags[j]);
+        // Across languages the same meaning scores lower: the bar drops by CROSS_LANG.
+        const bar = vectors && langs && langs[i] !== langs[j] ? CROSS_LANG : 0;
+        const sim = (vectors ? dot(vectors[i], vectors[j]) : jaccard(bags[i], bags[j])) + bar;
         if (sim >= bestSim) {
           bestSim = sim;
           best = s;
