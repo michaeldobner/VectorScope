@@ -12,16 +12,21 @@ Sachlich, schnell, mit Ende. Die App ordnet **Geschichten**, nicht Artikel. Ein 
 
 ### Aufbau der ersten Seite
 
-1. **Aufmacher:** die Geschichte mit den meisten unabhängigen Quellen aus den meisten Ländern. Großes Bild, Schlagzeile, zwei Sätze, darunter zum Beispiel „14 Quellen · 6 Länder“.
-2. **Top 5:** nach derselben Logik.
-3. **Ressorts:** DACH, Welt, Wirtschaft, Tech, Wissenschaft, Kultur, Sport. In den Ressorts stehen nur die Schlagzeilen, also was gerade wirklich Thema ist.
-4. **Der andere Blick:** Geschichten, die international groß sind, in den DACH-Medien aber kaum vorkommen.
-5. **Ende:** „Du bist auf dem Stand.“ Kein endloses Scrollen.
+1. **Aufmacher:** die wichtigste Geschichte nach der Wichtigkeitsregel unten. Großes Bild, Schlagzeile, zwei Sätze, darunter zum Beispiel „14 Quellen · 6 Länder“.
+2. **Plätze 2 und 3.**
+3. **Der andere Blick:** als Leiste zum Wischen direkt nach Platz 3, nicht am Ende. Geschichten, die international groß sind, in den DACH-Medien aber kaum vorkommen. Jede Karte sagt, wie viele DACH-Quellen berichten.
+4. **Plätze 4 bis 6.**
+5. **Ressorts:** DACH, Welt, Wirtschaft, Tech, Wissenschaft, Kultur, Sport. In den Ressorts stehen nur die Schlagzeilen, also was gerade wirklich Thema ist. „Anderer Blick“ steht in der Ressortleiste direkt neben „Top“.
+6. **Ende:** „Du bist auf dem Stand.“ Kein endloses Scrollen.
 
 ### Redaktionsregeln, automatisch angewendet
 
 - Dieselbe Geschichte erscheint nur einmal. Die Hauptschlagzeile kommt von der sachlichsten Quelle (Tagesschau, SRF, BBC), die anderen Titel stehen in der Perspektivenleiste.
-- Wichtigkeit entsteht aus Übereinstimmung: unabhängige Quellen, verschiedene Länder, verschiedene Gruppen.
+- Wichtigkeit entsteht aus drei Signalen:
+  1. **Übereinstimmung:** unabhängige Quellen, verschiedene Länder, verschiedene Gruppen.
+  2. **Startseiten:** was die Leitmedien selbst nach oben stellen. Die Tagesschau-Startseite liefert ihre Reihenfolge als API, ntv und ZDF liefern sie über die Reihenfolge im Feed. INTEL misst dasselbe schon im Benchmark von Now.
+  3. **DACH-Bezug:** Betroffenheit für Leser in Deutschland, der Schweiz und Österreich.
+- Redaktionsprüfung am 11. Oktober, 01:43 Uhr, gegen ntv, Bild, CNN und CNBC: Die reine Übereinstimmung hätte Riad (19 Quellen) zum Aufmacher gemacht. ntv, Tagesschau-Startseite, ZDF und CNBC hatten aber den Diesel-Streit zwischen Trump und Selenskyj oben, nur CNN machte mit Riad auf. Mit Startseiten und DACH-Bezug wird Trump und Selenskyj Aufmacher und Riad Platz 2. Beide Signale sind deshalb Pflicht.
 - Boulevardquellen (Blick, 20 Minuten, watson) bringen Tempo, zählen aber weniger für die Wichtigkeit. Sie bestimmen nie, was oben steht.
 - Gefiltert werden Wetter, Sendungshinweise („tagesschau 20:00 Uhr“), doppelte Liveticker und Fluten von Sportergebnissen.
 
@@ -32,12 +37,19 @@ Alle Quellen sind im Test-Labor geprüft (`lab/news.mjs`, Ergebnis im Branch `la
 | Gruppe | Quellen | Gewicht |
 |---|---|---|
 | Öffentlich-rechtlich DACH | Tagesschau (RSS und API), ZDFheute, Deutschlandfunk, SRF, RTS, RSI, ORF | hoch |
-| Qualitätspresse | Spiegel, NZZ, Der Standard, Die Presse | hoch |
+| Qualitätspresse und Sender | Spiegel, NZZ, Der Standard, Die Presse, ntv | hoch |
 | International | BBC, Guardian, NPR, Al Jazeera, DW, France 24, Euronews, ABC Australia, CNA, SCMP, Times of India | hoch |
+| Wirtschaft | CNBC (ohne Bilder im Feed) | für Wirtschaft |
 | Fach | Heise, Golem | für Tech |
 | Tempo | 20 Minuten, Blick, watson | niedrig |
 
-Nicht verfügbar: swissinfo (Feed eingestellt), Tages-Anzeiger (nicht erreichbar), CBC (Zeitüberschreitung). Reuters und AP bieten keine offiziellen kostenlosen Feeds.
+Nicht verfügbar: swissinfo (Feed eingestellt), Tages-Anzeiger (nicht erreichbar), CBC (Zeitüberschreitung). CNN: Der Feed antwortet, ist aber seit 2023 eingefroren. Bild: Der Feed hat keine Zeitstempel, viele Artikel liegen hinter BILDplus, und der Ton passt nicht zur Blattlinie. Reuters und AP bieten keine offiziellen kostenlosen Feeds.
+
+### Lücken aus der Redaktionsprüfung
+
+- **Reaktionen aus Deutschland** wie die von Strack-Zimmermann auf Trump stehen bei ntv im Liveticker, nicht im Feed. Liveticker brauchen eine eigene Auswertung.
+- **Märkte:** CNBC zeigt oben die Börsen, Wirtschaft in NEWS hat keine. Eine Zeile mit DAX, SMI, ATX, Dow, Öl und Franken braucht eine eigene Datenquelle.
+- **Details** wie „ein Amerikaner unter den Toten“ (CNN) fehlen, wenn die Zusammenfassung nur aus Schlagzeilen und Anrissen entsteht. Der Sammler sollte die Anrisse aller Quellen einer Geschichte zusammenführen.
 
 ### Sprache
 
