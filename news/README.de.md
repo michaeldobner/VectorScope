@@ -2,7 +2,7 @@
 
 # ◇ VectorScope News
 
-**Die Nachrichten des Tages aus 35 geprüften Feeds in 12 Ländern, als Geschichten mit allen Perspektiven.** Modul NEWS der [VectorScope-Sammlung](../README.de.md).
+**Die Nachrichten des Tages aus 36 geprüften Feeds in 12 Ländern, als Geschichten mit allen Perspektiven.** Modul NEWS der [VectorScope-Sammlung](../README.de.md).
 
 [English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md) · [Konzept](KONZEPT.md)
 
@@ -37,7 +37,7 @@ NEWS läuft auf dem eigenen Server, der auch die Nachrichten sammelt. Dessen Adr
 | Dokument | Inhalt |
 |---|---|
 | [Bedienung](docs/de/bedienung.md) | Ansichten, Ressorts, Geschichten, Perspektiven, 2-Minuten-Überblick, Einstellungen, Neues |
-| [Quellen](docs/de/quellen.md) | Die 35 Feeds, Gruppen und Gewichte, Prüfung im Labor, verworfene Kandidaten |
+| [Quellen](docs/de/quellen.md) | Die 36 Feeds, Gruppen und Gewichte, Prüfung im Labor, verworfene Kandidaten |
 | [Geschichten und Wichtigkeit](docs/de/geschichten.md) | Zusammenführen nach Bedeutung, Ressorts, die drei Signale, Texte, Bilder, Übersetzung |
 | [Architektur](docs/de/architektur.md) | Sammler auf dem Server, Ablauf einer Runde, Format der Ausgabe, App, Tests |
 | [Datenschutz und Recht](docs/de/datenschutz-und-recht.md) | Anfragen, Speicherung, Inhalte Dritter, Lizenzen |
@@ -45,6 +45,6 @@ NEWS läuft auf dem eigenen Server, der auch die Nachrichten sammelt. Dessen Adr
 
 ## Version
 
-Aktuelle Version: **0.2.1**. Alle Änderungen im [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.2.2**. Alle Änderungen im [Changelog](CHANGELOG.de.md).
 
 Schlagzeilen, Anrisse und Bilder © ihre Verlage, jeweils mit dem Original verlinkt.

@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.22.8 (2026-10-12)
+
+### Geändert
+* Modul NEWS 0.2.2: CNBC World News als zweiter Feed, der Börsenschluss in New York im Ressort Wirtschaft.
+
 ## 0.22.7 (2026-10-12)
 
 ### Behoben

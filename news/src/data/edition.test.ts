@@ -89,7 +89,10 @@ describe('edition', () => {
     expect(classify(rep('spiegel', 'x', 'https://www.spiegel.de/sport/fussball/x'), feedById('spiegel')!)).toBe('sport');
     expect(classify(rep('zdf', 'CDU diskutiert über die AfD', 'https://www.zdf.de/x'), feedById('zdf')!)).toBe('dach');
     expect(classify(rep('bbc', 'Twelve killed', 'https://www.bbc.co.uk/news/x'), feedById('bbc')!)).toBeNull();
-    expect(classify(rep('cnbc', 'S&P 500 closes near flat', 'https://www.cnbc.com/2026/10/12/stock-market-today.html'), feedById('cnbc')!)).toBe('wirtschaft');
+    const cnbc = (title: string) => classify(rep('cnbc-world', title, 'https://www.cnbc.com/2026/10/12/x.html'), feedById('cnbc-world')!);
+    expect(cnbc('S&P 500 closes near flat, pressured by higher oil prices and memory chip stock losses')).toBe('wirtschaft');
+    expect(cnbc('IonQ to acquire cybersecurity firm Elisity in an all-stock deal')).toBe('wirtschaft');
+    expect(cnbc('FAA warns U.S. airlines of safety risks over Saudi Arabia after attacks')).toBeNull();
   });
 
   it('builds stories with leads per language, importance and pictures', () => {

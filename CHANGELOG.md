@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.22.8 (2026-10-12)
+
+### Changed
+* Module NEWS 0.2.2: CNBC World News as a second feed, the close of Wall Street in the section Business.
+
 ## 0.22.7 (2026-10-12)
 
 ### Fixed

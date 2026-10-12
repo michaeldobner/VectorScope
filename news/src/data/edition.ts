@@ -85,11 +85,15 @@ const BY_CATEGORY: [Ressort, RegExp][] = [
 ];
 const DACH_WORDS =
   /(?<![\p{L}])(Bundestag|Bundesrat|Bundesrätin|Bundesregierung|Bundeskanzler|Kanzler|Merz|CDU|CSU|SPD|AfD|FDP|Grüne|Grünen|BSW|Nationalrat|Ständerat|Ständerätin|Kanton|Kantone|SVP|ÖVP|FPÖ|NEOS|Kickl|Babler|Stocker|Parmelin|Deutschland|Schweiz|Österreich|Wien|Zürich|Bern|Basel|Genf|Lausanne|Berlin|München|Hamburg|Köln|Bayern|Sachsen|SBB|Bundeswehr)(?![\p{L}])/u;
+// Markets and companies in the title of a business feed: Wall Street, rates, oil, earnings, deals.
+const MARKET_WORDS =
+  /(?<![\p{L}])(S&P 500|Dow|Nasdaq|Wall Street|stocks?|shares|futures|earnings|bull market|bear market|investors?|IPO|Fed|interest rates?|inflation|bonds?|Treasury yields?|oil prices?|Brent|crude|acquires?|acquisition|takeover|merger)(?![\p{L}])/iu;
 const SPORT_WORDS = /(?<![\p{L}])(Bundesliga|Champions League|Super League|Formel 1|Tor|Trainer|Ironman|NHL|NBA|WM|EM|Fußball|Fussball|football|goal|match|Premier League)(?![\p{L}])/iu;
 
 /** Section of one report: its feed, its address, its category, words in its title. Null when nothing says. */
 export function classify(r: Report, feed: Feed): Ressort | null {
   if (feed.ressort && feed.ressort !== 'welt') return feed.ressort;
+  if (feed.group === 'biz' && MARKET_WORDS.test(r.title)) return 'wirtschaft';
   let path = '';
   try {
     path = new URL(r.link).pathname;

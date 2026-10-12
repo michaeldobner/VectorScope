@@ -2,7 +2,7 @@
 
 [English version](../en/sources.md) · [Übersicht](README.md)
 
-NEWS liest 35 Feeds von 29 Medien in 12 Ländern. Die Liste steht in `news/src/data/feeds.ts`. Gewählt wurde nach drei Fragen: Liefert die Quelle zuverlässig und frei, ist sie sachlich oder bringt sie Tempo, und erweitert sie den Blick um ein Land oder eine Sprache.
+NEWS liest 36 Feeds von 29 Medien in 12 Ländern. Die Liste steht in `news/src/data/feeds.ts`. Gewählt wurde nach drei Fragen: Liefert die Quelle zuverlässig und frei, ist sie sachlich oder bringt sie Tempo, und erweitert sie den Blick um ein Land oder eine Sprache.
 
 ## Gruppen und Gewichte
 
@@ -50,7 +50,8 @@ Das Gewicht zählt, wenn NEWS die Wichtigkeit einer Geschichte berechnet, siehe 
 | [`cna`](https://www.channelnewsasia.com/rssfeeds/8395884) | CNA | SG | Englisch | International | 1 |  |
 | [`scmp`](https://www.scmp.com/rss/91/feed) | SCMP | HK | Englisch | International | 1 |  |
 | [`toi`](https://timesofindia.indiatimes.com/rssfeedstopstories.cms) | Times of India | IN | Englisch | International | 1 |  |
-| [`cnbc`](https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114) | CNBC | US | Englisch | Wirtschaft | 0,8 | Ressort Wirtschaft |
+| [`cnbc`](https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114) | CNBC | US | Englisch | Wirtschaft | 0,8 | Top News, Börse nach Titel ins Ressort Wirtschaft |
+| [`cnbc-world`](https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100727362) | CNBC | US | Englisch | Wirtschaft | 0,8 | World News, mit dem Börsenschluss in New York, Börse nach Titel ins Ressort Wirtschaft |
 | [`heise`](https://www.heise.de/rss/heise-atom.xml) | heise | DE | Deutsch | Fachmedien | 0,7 | Ressort Tech |
 | [`golem`](https://rss.golem.de/rss.php?feed=RSS2.0) | Golem | DE | Deutsch | Fachmedien | 0,7 | Ressort Tech |
 | [`20min`](https://partner-feeds.20min.ch/rss/20minuten) | 20 Minuten | CH | Deutsch | Tempo | 0,4 |  |

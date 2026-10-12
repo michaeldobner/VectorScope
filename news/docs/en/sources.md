@@ -2,7 +2,7 @@
 
 [Deutsche Version](../de/quellen.md) · [Overview](README.md)
 
-NEWS reads 35 feeds from 29 outlets in 12 countries. The list is in `news/src/data/feeds.ts`. Each was chosen by three questions: does it deliver reliably and freely, is it factual or does it bring speed, and does it widen the view by a country or a language.
+NEWS reads 36 feeds from 29 outlets in 12 countries. The list is in `news/src/data/feeds.ts`. Each was chosen by three questions: does it deliver reliably and freely, is it factual or does it bring speed, and does it widen the view by a country or a language.
 
 ## Groups and weights
 
@@ -50,7 +50,8 @@ The weight counts when NEWS computes the importance of a story, see [Stories and
 | [`cna`](https://www.channelnewsasia.com/rssfeeds/8395884) | CNA | SG | English | International | 1 |  |
 | [`scmp`](https://www.scmp.com/rss/91/feed) | SCMP | HK | English | International | 1 |  |
 | [`toi`](https://timesofindia.indiatimes.com/rssfeedstopstories.cms) | Times of India | IN | English | International | 1 |  |
-| [`cnbc`](https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114) | CNBC | US | English | Business | 0.8 | section Business |
+| [`cnbc`](https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114) | CNBC | US | English | Business | 0.8 | Top News, markets to Business by title |
+| [`cnbc-world`](https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100727362) | CNBC | US | English | Business | 0.8 | World News, with the close of Wall Street, markets to Business by title |
 | [`heise`](https://www.heise.de/rss/heise-atom.xml) | heise | DE | German | Tech media | 0.7 | section Tech |
 | [`golem`](https://rss.golem.de/rss.php?feed=RSS2.0) | Golem | DE | German | Tech media | 0.7 | section Tech |
 | [`20min`](https://partner-feeds.20min.ch/rss/20minuten) | 20 Minuten | CH | German | Fast news | 0.4 |  |

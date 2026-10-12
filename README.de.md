@@ -25,7 +25,7 @@ Eine Sammlung ruhiger, präziser Module unter einem Dach. Jedes beantwortet eine
 |---|---|---|---|
 | [**AIR**](air/README.de.md) · Airspace | Was fliegt gerade über mir, was kommt als nächstes, was ist einen Blick wert? | Live · [öffnen](https://vectorscope.dobner.pro/air/) | 0.5.1 |
 | [**INTEL**](intel/README.de.md) · Intelligence feed | Was melden geprüfte OSINT-Quellen und Fachmedien, und welches Flugzeug in der Luft betrifft es? | Live · [öffnen](https://vectorscope.dobner.pro/intel/) | 0.15.2 |
-| [**NEWS**](news/README.de.md) · News | Was ist heute wichtig, und wie sieht es die Welt? | Live · eigener Server | 0.2.1 |
+| [**NEWS**](news/README.de.md) · News | Was ist heute wichtig, und wie sieht es die Welt? | Live · eigener Server | 0.2.2 |
 
 ## Warum VectorScope
 
@@ -92,6 +92,6 @@ Verkehrsdaten © Mitwirkende von [adsb.lol](https://adsb.lol), lizenziert unter 
 
 ## Version
 
-Aktuelle Version: **0.22.7**. Siehe [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.22.8**. Siehe [Changelog](CHANGELOG.de.md).
 
 Erstellt von Michael Dobner. Lizenziert unter der [MIT-Lizenz](LICENSE).

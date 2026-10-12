@@ -4,6 +4,14 @@ All notable changes to the module NEWS. [Deutsch](CHANGELOG.de.md) · [Changelog
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.2.2 (2026-10-12)
+
+### Added
+* Feed CNBC World News: it carries the close of Wall Street ("S&P 500 closes near flat …"), Top News does not. Checked in the test lab on 12 October 2026, 13 CNBC feeds compared.
+
+### Changed
+* CNBC reports go to the section Business by their title, only when they are about markets and companies (S&P 500, Wall Street, earnings, rates, oil, deals). Since 0.2.1 every CNBC report did, also politics.
+
 ## 0.2.1 (2026-10-12)
 
 ### Fixed

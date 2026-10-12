@@ -4,6 +4,14 @@ Alle wesentlichen Änderungen am Modul NEWS. [English](CHANGELOG.md) · [Changel
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.2.2 (2026-10-12)
+
+### Neu
+* Feed CNBC World News: Er enthält den Börsenschluss in New York („S&P 500 closes near flat …“), Top News nicht. Geprüft im Test-Labor am 12. Oktober 2026, 13 CNBC-Feeds verglichen.
+
+### Geändert
+* CNBC-Meldungen kommen nach ihrem Titel ins Ressort Wirtschaft, nur wenn es um Börse und Unternehmen geht (S&P 500, Wall Street, Quartalszahlen, Zinsen, Öl, Übernahmen). Seit 0.2.1 galt das für jede CNBC-Meldung, auch für Politik.
+
 ## 0.2.1 (2026-10-12)
 
 ### Behoben
