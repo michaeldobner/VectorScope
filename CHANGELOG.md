@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.22.5 (2026-10-12)
+
+### Removed
+* GitHub Pages as address of the app: VectorScope runs only on the own server (`vectorscope.duckdns.org`). The workflow `deploy.yml` no longer builds the app on every push, it publishes once a farewell (`pages-redirect/build.sh`): every old address forwards to the same path on the server, and the old service workers delete their caches and remove themselves, so Home Screen icons keep working. Settings and watchlist of the old address do not move along. Documentation and addresses point at the server.
+
 ## 0.22.4 (2026-10-12)
 
 ### Removed

@@ -35,7 +35,7 @@ Flags can be combined: `?demo&lat=48.35&lon=11.79`.
 | `npm run typecheck` | TypeScript check without output |
 | `npm test` | Unit tests of all modules and the repository checks |
 | `npm run build` | Type check, this module into `dist/air/`, then hub and shared files into `dist/` |
-| `npm run preview` | Serve `dist/` like GitHub Pages at `http://localhost:4173/`, this module under `/air/` |
+| `npm run preview` | Serve `dist/` like the server at `http://localhost:4173/`, this module under `/air/` |
 | `npm run e2e` | Smoke test on iPhone and iPad sizes against the build |
 | `npm run release -- air x.y.z` | Release this module, see [Development of the collection](../../../docs/en/development.md#releases) |
 

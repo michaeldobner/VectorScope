@@ -4,11 +4,11 @@
 
 ## Overview
 
-VectorScope Air is module AIR of the VectorScope collection and a single page application without its own backend. How it fits into the repository (hub, `shared/`, build, service worker scopes) is described in the [architecture of the collection](../../../docs/en/architecture.md). It is built with Vite into static files and served by GitHub Pages. Everything personal stays in the browser. The only optional server component is a small proxy that adds CORS headers to adsb.lol responses.
+VectorScope Air is module AIR of the VectorScope collection and a single page application without its own backend. How it fits into the repository (hub, `shared/`, build, service worker scopes) is described in the [architecture of the collection](../../../docs/en/architecture.md). It is built with Vite into static files and served by the own server. Everything personal stays in the browser. The only optional server component is a small proxy that adds CORS headers to adsb.lol responses.
 
 ```
 iPhone / iPad (Safari, installed web app)
- └─ VectorScope (static files from GitHub Pages)
+ └─ VectorScope (static files from the own server)
      ├─ adsb.lol ............ live positions, military, emergencies, search, routes
      │    └─ optional: Vercel proxy (proxy/) when the browser blocks direct access
      ├─ OpenFreeMap ......... vector tiles and fonts for the basemap

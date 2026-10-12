@@ -2,7 +2,7 @@
 
 [Deutsche Version](../de/server.md) · [Overview](README.md)
 
-Since collection 0.11.0 VectorScope can run on an own server, deployed by [Coolify](https://coolify.io): app, proxy, collector, database and raw archive at one address. GitHub Pages, the proxy on Vercel and the collector on GitHub Actions keep running as before, so nothing breaks while the server is being set up.
+Since collection 0.11.0 VectorScope runs on an own server, deployed by [Coolify](https://coolify.io): app, proxy, collector, database and raw archive at one address. Since 0.22.4 only the server collects, since 0.22.5 it is the only address of the app: GitHub Pages forwards to it (see [Deployment](deployment.md)).
 
 ## What runs
 
@@ -10,7 +10,7 @@ Since collection 0.11.0 VectorScope can run on an own server, deployed by [Cooli
 
 | Service | Job | Healthcheck |
 |---|---|---|
-| `vectorscope-web` | Serves the built app (start page, AIR, INTEL) like GitHub Pages, the proxy under `/proxy`, the collector data under `/data/latest.json` and a small API. Port 8080 inside the stack (`server/web.mjs`) | `/healthz` answers |
+| `vectorscope-web` | Serves the built app (start page, AIR, INTEL) like the server, the proxy under `/proxy`, the collector data under `/data/latest.json` and a small API. Port 8080 inside the stack (`server/web.mjs`) | `/healthz` answers |
 | `vectorscope-collector` | One collector round every 10 minutes (`server/collector-loop.mjs` runs `collector/collect.ts`). Writes the files, the raw archive and the database, pushes the raw archive to GitHub | Last good round younger than 30 minutes (`server/collector-health.mjs`) |
 | `vectorscope-db` | PostgreSQL 16, reachable only inside the stack | `pg_isready` |
 | `vectorscope-backup` | Once a day a dump of the database to `/var/backups/vectorscope` on the host, keeps 7 days. Also copies new files of the raw archive to `/var/backups/vectorscope/raw` | none |
@@ -29,7 +29,7 @@ A container whose healthcheck fails shows on the status page and raises the Tele
 | `/api/diag` | Whether the server reaches the publishers: DNS and one request per host with time. First stop when the app keeps loading |
 | `/healthz` | Liveness for Docker |
 
-The app recognises where it runs: on GitHub Pages (`*.github.io`) and locally it uses the proxy on Vercel and the collector data on GitHub, on every other address its own `/proxy` and `/data`. One build serves both.
+The app recognises where it runs: locally (`localhost`) it uses the proxy on Vercel and the collector data on GitHub, on the server its own `/proxy` and `/data`.
 
 ### `/api/health`
 
@@ -69,7 +69,7 @@ Steps as of Coolify 4. Names of menus can differ slightly between versions.
 
 1. **Run both for one or two weeks.** Compare in `/api/health` and `stats.json` of both: sources ok, new reports per day, gaps. Both write into `collector-raw`. A post that both see is in the archive twice, `collector/parse.ts` counts it once.
 2. **Switch off GitHub Actions.** Done: the workflow `collector.yml` is removed since collection 0.22.4, only the server collects.
-3. **Point GitHub Pages at the server (optional).** `COLLECTOR_URL` in `intel/src/data/feed.ts` and the proxy addresses can point at the server, so the app on GitHub Pages profits as well. The proxy on Vercel can then be removed.
+3. **Retire GitHub Pages.** Done in collection 0.22.5: the old addresses forward to the server.
 4. **Shorter interval (optional).** `EVERY_MIN` in `docker-compose.yaml`, e.g. 2. Whether Telegram accepts this rate for its web preview from a data centre is not tested yet, watch `health.json` the first days.
 
 ## Operations

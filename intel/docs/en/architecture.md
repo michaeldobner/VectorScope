@@ -6,7 +6,7 @@ INTEL is module INTEL of the VectorScope collection: a React single page applica
 
 ```
 iPhone / iPad
- └─ INTEL (static files from GitHub Pages)
+ └─ INTEL (static files from the own server)
      ├─ public.api.bsky.app ......................... Bluesky posts, directly
      ├─ vectorscope-proxy.vercel.app/tg/{channel} ... Telegram channels, cached one minute
      ├─ raw.githubusercontent.com ................... reports of the probe collector, branch collector-data

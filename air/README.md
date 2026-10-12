@@ -6,9 +6,9 @@
 
 Open it and see at once what is flying above you: which aircraft will pass overhead next, where to look, and which of them are worth a second glance.
 
-<h3><a href="https://michaeldobner.github.io/VectorScope/air/">michaeldobner.github.io/VectorScope/air</a></h3>
+<h3><a href="https://vectorscope.duckdns.org/air/">vectorscope.duckdns.org/air</a></h3>
 
-[**▶ Open VectorScope Air**](https://michaeldobner.github.io/VectorScope/air/) · [Deutsch](README.de.md) · [Documentation](docs/en/README.md) · [Changelog](CHANGELOG.md)
+[**▶ Open VectorScope Air**](https://vectorscope.duckdns.org/air/) · [Deutsch](README.de.md) · [Documentation](docs/en/README.md) · [Changelog](CHANGELOG.md)
 
 [![Tests](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml)
 [![Deploy](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml)
@@ -50,7 +50,7 @@ Full guide: [User guide](docs/en/user-guide.md).
 
 ## Install on iPhone or iPad
 
-1. Open **https://michaeldobner.github.io/VectorScope/air/** in **Safari**.
+1. Open **https://vectorscope.duckdns.org/air/** in **Safari**.
 2. Tap **Share**, then **Add to Home Screen**.
 3. Open VectorScope Air from the Home Screen and set your location there. Safari and the installed app keep separate storage.
 4. **Live data** comes through the [proxy of the project](../docs/en/deployment.md#cors-proxy-on-vercel), which is built in. Nothing needs to be set up. **Demo** in Settings shows simulated traffic.
@@ -65,7 +65,7 @@ Full guide: [User guide](docs/en/user-guide.md).
 | [Design](docs/en/design.md) | Design brief, colour tokens, typography, map style, layouts |
 | [Architecture](docs/en/architecture.md) | Modules, data flow, state, rendering |
 | [Development](docs/en/development.md) | Local setup, tests, screenshots, conventions |
-| [Deployment](../docs/en/deployment.md) | GitHub Pages, CORS proxy on Vercel, troubleshooting (shared by all modules) |
+| [Deployment](../docs/en/deployment.md) | Own server, GitHub Pages retired, CORS proxy on Vercel, troubleshooting (shared by all modules) |
 | [Privacy and legal](docs/en/privacy-and-legal.md) | Location handling, licences, attribution, legal notes |
 
 ## Quick start for developers
@@ -77,7 +77,7 @@ npm test           # unit tests of all modules and repository checks
 npm run build      # hub and all modules into dist/, this module into dist/air/
 ```
 
-`?demo` shows synthetic traffic, `?lat=50.11&lon=8.68` fixes the location. Every push to `main` is tested and deployed to GitHub Pages. Details: [Development](docs/en/development.md).
+`?demo` shows synthetic traffic, `?lat=50.11&lon=8.68` fixes the location. Every push to `main` is tested, the own server deploys it with Coolify. Details: [Development](docs/en/development.md).
 
 ## Folder structure
 

@@ -4,15 +4,15 @@
 
 | | |
 |---|---|
-| Hub | **https://michaeldobner.github.io/VectorScope/** |
-| Module AIR | **https://michaeldobner.github.io/VectorScope/air/** |
-| Module INTEL | **https://michaeldobner.github.io/VectorScope/intel/** |
-| Hosting | GitHub Pages, built by GitHub Actions |
-| Trigger | Every push to `main`, or manually under Actions > Deploy to GitHub Pages > Run workflow |
-| Build | `npm ci`, `npm test`, `npm run build`, upload of `dist/` |
+| Hub | **https://vectorscope.duckdns.org/** |
+| Module AIR | **https://vectorscope.duckdns.org/air/** |
+| Module INTEL | **https://vectorscope.duckdns.org/intel/** |
+| Hosting | Own server with Coolify, see [Own server](server.md). GitHub Pages is retired since collection 0.22.5 |
+| Trigger | Deploy in Coolify, it builds `main` |
+| Build | `npm ci`, `npm run build` in the Docker image (`server/Dockerfile`) |
 | Base path | Relative (`base: './'`), so the build works under any repository name |
-| Proxy | `https://vectorscope-proxy.vercel.app`, built into the app |
-| Settings and watchlist | `localStorage` of `michaeldobner.github.io`, shared by all modules of the collection |
+| Proxy | `/proxy` of the server. Locally (`localhost`) the app uses `https://vectorscope-proxy.vercel.app` |
+| Settings and watchlist | `localStorage` of `vectorscope.duckdns.org`, shared by all modules of the collection |
 
 ## What gets published
 
@@ -29,22 +29,18 @@ dist/
 
 `npm run build` first builds each module into its own folder and then adds the hub with `scripts/build.mjs`. The build stops if a module marked `live` in `modules.json` is missing.
 
-## Enabling GitHub Pages (once)
+## GitHub Pages (retired)
 
-1. Repository > **Settings** > **Pages**.
-2. Under **Build and deployment** set **Source** to **GitHub Actions**.
-3. Run the workflow once: **Actions** > **Deploy to GitHub Pages** > **Run workflow**, or push to `main`.
+Up to collection 0.22.4 every push was deployed to `michaeldobner.github.io/VectorScope`. Since 0.22.5 the workflow `deploy.yml` publishes there only a farewell built by `pages-redirect/build.sh`: every old address (hub, `/air/`, `/intel/`, `/news/`) forwards to the same path on `vectorscope.duckdns.org`, query included, and the old service workers delete their caches and remove themselves. So a Home Screen icon of the old address opens the server. Settings and watchlist do not move along: they belong to the old address and have to be set again once on the server.
 
-If the deploy job fails with "Ensure GitHub Pages has been enabled", step 2 is missing.
-
-If the source stays on **Deploy from a branch**, GitHub additionally publishes the unbuilt repository on every push. The deploy workflow waits for that run and always lands last, so the result is correct either way. The hub works even in the unbuilt version, modules show a notice instead of a black screen.
+To switch GitHub Pages off completely: Repository > **Settings** > **Pages** > **Unpublish site**. Then old addresses give a 404 of GitHub.
 
 ## Workflows
 
 | File | Runs on | Steps |
 |---|---|---|
 | `.github/workflows/tests.yml` | Every push and pull request | Type check, unit tests and repository checks, build |
-| `.github/workflows/deploy.yml` | Push to `main`, manual | Tests, build, upload, deploy to Pages |
+| `.github/workflows/deploy.yml` | Changes to itself or `pages-redirect/`, manual | Publishes the farewell forwarding on GitHub Pages, no build of the app |
 | `.github/workflows/e2e.yml` | Every push and pull request | Smoke test on iPhone and iPad sizes in Chromium and WebKit, screenshots as artifact |
 | `.github/workflows/lab.yml` | Push to `main` with changes to modules, lab or proxy, manual | Test lab with real internet: real API responses and screenshots with live data, results on the branch `lab-results` |
 
@@ -75,7 +71,7 @@ Only needed for a fork of the repository.
 Then set the address as `BUILTIN_PROXY` in `air/src/data/feed.ts`, or connect a single device with one tap:
 
 ```
-https://michaeldobner.github.io/VectorScope/air/?proxy=https://your-proxy.vercel.app
+https://vectorscope.duckdns.org/air/?proxy=https://your-proxy.vercel.app
 ```
 
 The module saves the proxy permanently and removes the parameter from the address.
@@ -118,14 +114,12 @@ Up to version 0.2.3 the flights app lived at the root address and used the cache
 
 | Problem | Solution |
 |---|---|
-| Deploy job fails with "Ensure GitHub Pages has been enabled" | Settings > Pages > Source: GitHub Actions, then run the workflow again |
-| A module shows "did not start, this is the unbuilt source code" | The branch build of GitHub Pages landed after the deploy. Run the deploy workflow again, or set Settings > Pages > Source to GitHub Actions |
-| Home Screen icon opens the hub instead of the radar | Since 0.3.0 the address without `/air/` is the hub. Tap AIR, or add `https://michaeldobner.github.io/VectorScope/air/` to the Home Screen |
+| Home Screen icon opens the hub instead of the radar | Since 0.3.0 the address without `/air/` is the hub. Tap AIR, or add `https://vectorscope.duckdns.org/air/` to the Home Screen |
 | Banner "adsb.lol does not allow direct access from browsers (CORS)" | The proxy is unreachable. Open `https://vectorscope-proxy.vercel.app` in Safari, it must show the status page |
 | Banner "adsb.lol is rate limiting requests" | The module slows down by itself. Raise the refresh interval to 10 or 20 s |
 | Status stays CONNECTING | Check the network, check the proxy address under Settings > Data source |
 | Location is not used | Inside the installed app: allow location when asked, or iOS Settings > Privacy > Location Services > Safari Websites. Or set a fixed location in Settings |
 | Map stays dark, aircraft are visible | OpenFreeMap is unreachable. The radar keeps working |
 | No aircraft photo | planespotters.net has no photo for this aircraft, or it is unreachable |
-| Old version after an update | Close the app completely and open it again. If needed: iOS Settings > Apps > Safari > Advanced > Website Data, delete `michaeldobner.github.io` (this also deletes settings and watchlist) |
+| Old version after an update | Close the app completely and open it again. If needed: iOS Settings > Apps > Safari > Advanced > Website Data, delete `vectorscope.duckdns.org` (this also deletes settings and watchlist) |
 | Settings missing in the installed app | Safari and the Home Screen app keep separate storage. Set them inside the installed app |

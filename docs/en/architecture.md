@@ -31,7 +31,7 @@ VectorScope/
 ├─ docker-compose.yaml     the stack for Coolify
 ├─ scripts/
 │  ├─ build.mjs            adds hub and shared files to dist/
-│  ├─ serve.mjs            serves dist/ like GitHub Pages
+│  ├─ serve.mjs            serves dist/ like the server
 │  ├─ e2e.mjs              smoke test on device sizes
 │  ├─ release.mjs          release a module, shared or the collection
 │  └─ versions.mjs         every place that states a version
@@ -95,13 +95,13 @@ One `package.json` in the root holds the dependencies and scripts of all modules
 | INTEL | `/VectorScope/intel/` | `/VectorScope/intel/` | `vectorscope-intel-v1` |
 | NEWS | `/news/` on the own server | `/news/` | `vectorscope-news-v1` |
 
-All parts share one origin (`michaeldobner.github.io`), so `localStorage` is shared. That is why every key carries the prefix `vectorscope.` and a module name where needed. The hub service worker only answers requests for the hub and `shared/`, everything else goes to the network or to the worker of the module.
+All parts share one origin (`vectorscope.duckdns.org`), so `localStorage` is shared. That is why every key carries the prefix `vectorscope.` and a module name where needed. The hub service worker only answers requests for the hub and `shared/`, everything else goes to the network or to the worker of the module.
 
 ## Network
 
 ```
 iPhone / iPad (Safari, installed web app)
- └─ VectorScope (static files from GitHub Pages)
+ └─ VectorScope (static files from the own server)
      ├─ AIR ── vectorscope-proxy.vercel.app ── adsb.lol, planespotters.net
      │    ├─ adsbdb.com, hexdb.io ............. routes, airlines, aircraft data
      │    └─ OpenFreeMap ...................... basemap

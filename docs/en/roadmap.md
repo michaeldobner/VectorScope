@@ -2,7 +2,7 @@
 
 [Deutsche Version](../de/roadmap.md) · [Overview](README.md)
 
-VectorScope grows module by module. Everything runs on GitHub Pages and the existing proxy on Vercel, without an own server. Ideas that need a permanently running server are listed separately.
+VectorScope grows module by module. Everything runs on the own server (Coolify, since collection 0.11.0), GitHub Pages is retired since 0.22.5. Ideas that need a permanently running server are listed separately.
 
 ## Now
 

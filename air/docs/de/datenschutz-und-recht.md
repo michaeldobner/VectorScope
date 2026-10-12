@@ -17,7 +17,7 @@ VectorScope ist so gebaut, dass dein Standort nie auf einem Server gespeichert w
 * Kein Konto, keine Analyse, keine Cookies, keine Werbung.
 * Das Repository ist öffentlich und enthält keine Koordinaten, Schlüssel oder persönlichen Einstellungen.
 * Der optionale Proxy protokolliert und speichert selbst nichts. Vercel führt für die Inhaberin oder den Inhaber des Projekts die üblichen Zugriffsprotokolle.
-* Das Löschen der Websitedaten von `michaeldobner.github.io` in Safari entfernt alles, was VectorScope gespeichert hat.
+* Das Löschen der Websitedaten von `vectorscope.duckdns.org` in Safari entfernt alles, was VectorScope gespeichert hat.
 
 ## Lizenzen und Quellenangaben
 

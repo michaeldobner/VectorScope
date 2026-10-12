@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.22.5 (2026-10-12)
+
+### Entfernt
+* GitHub Pages als Adresse der App: VectorScope läuft nur noch auf dem eigenen Server (`vectorscope.duckdns.org`). Der Workflow `deploy.yml` baut die App nicht mehr bei jedem Push, er veröffentlicht einmal einen Abschied (`pages-redirect/build.sh`): Jede alte Adresse leitet auf denselben Pfad am Server weiter, und die alten Service Worker löschen ihre Caches und entfernen sich selbst, so funktionieren Icons auf dem Home-Bildschirm weiter. Einstellungen und Watchlist der alten Adresse ziehen nicht mit um. Doku und Adressen zeigen auf den Server.
+
 ## 0.22.4 (2026-10-12)
 
 ### Entfernt

@@ -4,9 +4,9 @@
 
 **Geprüfte OSINT- und Verteidigungsnachrichten, abgeglichen mit Flugzeugen, die gerade in der Luft sind.** Modul INTEL der [VectorScope-Sammlung](../README.de.md).
 
-<h3><a href="https://michaeldobner.github.io/VectorScope/intel/">michaeldobner.github.io/VectorScope/intel</a></h3>
+<h3><a href="https://vectorscope.duckdns.org/intel/">vectorscope.duckdns.org/intel</a></h3>
 
-[**▶ VectorScope Intel öffnen**](https://michaeldobner.github.io/VectorScope/intel/) · [English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md)
+[**▶ VectorScope Intel öffnen**](https://vectorscope.duckdns.org/intel/) · [English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md)
 
 <img src="docs/images/iphone-feed.png" width="230" alt="Stories auf dem iPhone: eine Story aus drei Quellen mit Status, Zeitachse, Vorsprung und Live-Treffer">&nbsp;&nbsp;
 <img src="docs/images/ipad-landscape.png" width="480" alt="iPad quer: links die Stories, rechts Live-Treffer, Orte und Quellen">

@@ -10,7 +10,7 @@ This documentation describes the VectorScope collection as a whole: how the repo
 |---|---|---|
 | [Architecture](architecture.md) | Repository structure, module registry, shared shell, build, addresses, service worker scopes, storage | Development |
 | [Development](development.md) | Setup, scripts, unit tests, repository checks, smoke test, test lab, releases, adding a module, conventions | Development |
-| [Deployment](deployment.md) | GitHub Pages, CORS proxy on Vercel, updates on devices, troubleshooting | Operations |
+| [Deployment](deployment.md) | Own server, GitHub Pages retired, CORS proxy on Vercel, updates on devices, troubleshooting | Operations |
 | [Own server](server.md) | App, proxy, collector, database and raw archive on an own server with Coolify, setup, switching over, operations | Operations |
 | [Roadmap](roadmap.md) | What is next, what needs a server, what is deferred | Everyone |
 
@@ -30,7 +30,7 @@ This documentation describes the VectorScope collection as a whole: how the repo
 | Purpose | Personal live situational awareness, one module per question |
 | Modules | AIR live, INTEL live, NEWS live |
 | Platform | Progressive web apps for iPhone and iPad, run in every modern browser |
-| Hosting | GitHub Pages, proxy on Vercel |
+| Hosting | Own server (Coolify), proxy under `/proxy` |
 | Privacy | No account, no server-side storage, location only on the device |
-| Address | https://michaeldobner.github.io/VectorScope/ |
-| Version | 0.22.4 |
+| Address | https://vectorscope.duckdns.org/ |
+| Version | 0.22.5 |

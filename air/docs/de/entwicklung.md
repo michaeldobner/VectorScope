@@ -35,7 +35,7 @@ Parameter lassen sich kombinieren: `?demo&lat=48.35&lon=11.79`.
 | `npm run typecheck` | TypeScript-Prüfung ohne Ausgabe |
 | `npm test` | Unit-Tests aller Module und die Prüfungen des Repositorys |
 | `npm run build` | Typprüfung, dieses Modul nach `dist/air/`, danach Startseite und gemeinsame Dateien nach `dist/` |
-| `npm run preview` | `dist/` wie GitHub Pages unter `http://localhost:4173/` ausliefern, dieses Modul unter `/air/` |
+| `npm run preview` | `dist/` wie der Server unter `http://localhost:4173/` ausliefern, dieses Modul unter `/air/` |
 | `npm run e2e` | Rauchtest in iPhone- und iPad-Größen gegen den Build |
 | `npm run release -- air x.y.z` | Dieses Modul veröffentlichen, siehe [Entwicklung der Sammlung](../../../docs/de/entwicklung.md#releases) |
 

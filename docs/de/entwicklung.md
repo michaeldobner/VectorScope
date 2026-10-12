@@ -25,7 +25,7 @@ npm run dev        # Modul AIR unter http://localhost:5173/
 | `npm run typecheck` | TypeScript-Prüfung aller Module |
 | `npm test` | Unit-Tests aller Module und Prüfungen des Repositorys |
 | `npm run build` | Typprüfung, alle Module, Startseite und gemeinsame Dateien nach `dist/` |
-| `npm run preview` | Liefert `dist/` wie GitHub Pages unter `http://localhost:4173/` aus |
+| `npm run preview` | Liefert `dist/` wie der Server unter `http://localhost:4173/` aus |
 | `npm run e2e` | Rauchtest in Gerätegrößen gegen `npm run preview` |
 | `npm run release -- <Ziel> <x.y.z>` | Ein Modul, `shared` oder `collection` veröffentlichen |
 

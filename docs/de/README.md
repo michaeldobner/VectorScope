@@ -10,7 +10,7 @@ Diese Dokumentation beschreibt die VectorScope-Sammlung als Ganzes: wie das Repo
 |---|---|---|
 | [Architektur](architektur.md) | Aufbau des Repositorys, Modulverzeichnis, gemeinsame Hülle, Build, Adressen, Bereiche der Service Worker, Speicher | Entwicklung |
 | [Entwicklung](entwicklung.md) | Einrichtung, Skripte, Unit-Tests, Prüfungen des Repositorys, Rauchtest, Test-Labor, Releases, Modul hinzufügen, Konventionen | Entwicklung |
-| [Deployment](deployment.md) | GitHub Pages, CORS-Proxy auf Vercel, Updates auf den Geräten, Fehlerbehebung | Betrieb |
+| [Deployment](deployment.md) | Eigener Server, GitHub Pages stillgelegt, CORS-Proxy auf Vercel, Updates auf den Geräten, Fehlerbehebung | Betrieb |
 | [Eigener Server](server.md) | App, Proxy, Sammler, Datenbank und Rohdaten-Archiv auf einem eigenen Server mit Coolify, Einrichtung, Umstieg, Betrieb | Betrieb |
 | [Roadmap](roadmap.md) | Was als Nächstes kommt, was einen Server braucht, was zurückgestellt ist | Alle |
 
@@ -30,7 +30,7 @@ Diese Dokumentation beschreibt die VectorScope-Sammlung als Ganzes: wie das Repo
 | Zweck | Persönliches Live-Lagebild, ein Modul pro Frage |
 | Module | AIR live, INTEL live, NEWS live |
 | Plattform | Progressive Web Apps für iPhone und iPad, laufen in jedem modernen Browser |
-| Hosting | GitHub Pages, Proxy auf Vercel |
+| Hosting | Eigener Server (Coolify), Proxy unter `/proxy` |
 | Datenschutz | Kein Konto, keine Speicherung auf Servern, Standort nur auf dem Gerät |
-| Adresse | https://michaeldobner.github.io/VectorScope/ |
-| Version | 0.22.4 |
+| Adresse | https://vectorscope.duckdns.org/ |
+| Version | 0.22.5 |

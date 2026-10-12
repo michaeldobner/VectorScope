@@ -31,7 +31,7 @@ VectorScope/
 ├─ docker-compose.yaml     der Stack für Coolify
 ├─ scripts/
 │  ├─ build.mjs            ergänzt Startseite und gemeinsame Dateien in dist/
-│  ├─ serve.mjs            liefert dist/ aus wie GitHub Pages
+│  ├─ serve.mjs            liefert dist/ aus wie der Server
 │  ├─ e2e.mjs              Rauchtest in Gerätegrößen
 │  ├─ release.mjs          Modul, shared oder Sammlung veröffentlichen
 │  └─ versions.mjs         alle Stellen, an denen eine Version steht
@@ -95,13 +95,13 @@ Eine `package.json` im Hauptordner enthält Abhängigkeiten und Skripte aller Mo
 | INTEL | `/VectorScope/intel/` | `/VectorScope/intel/` | `vectorscope-intel-v1` |
 | NEWS | `/news/` auf dem eigenen Server | `/news/` | `vectorscope-news-v1` |
 
-Alle Teile teilen sich einen Ursprung (`michaeldobner.github.io`), `localStorage` ist deshalb gemeinsam. Darum trägt jeder Schlüssel das Präfix `vectorscope.` und bei Bedarf den Modulnamen. Der Service Worker der Startseite beantwortet nur Anfragen für die Startseite und `shared/`, alles andere geht ins Netz oder an den Worker des Moduls.
+Alle Teile teilen sich einen Ursprung (`vectorscope.duckdns.org`), `localStorage` ist deshalb gemeinsam. Darum trägt jeder Schlüssel das Präfix `vectorscope.` und bei Bedarf den Modulnamen. Der Service Worker der Startseite beantwortet nur Anfragen für die Startseite und `shared/`, alles andere geht ins Netz oder an den Worker des Moduls.
 
 ## Netzwerk
 
 ```
 iPhone / iPad (Safari, installierte Web-App)
- └─ VectorScope (statische Dateien von GitHub Pages)
+ └─ VectorScope (statische Dateien vom eigenen Server)
      ├─ AIR ── vectorscope-proxy.vercel.app ── adsb.lol, planespotters.net
      │    ├─ adsbdb.com, hexdb.io ............. Routen, Airlines, Flugzeugdaten
      │    └─ OpenFreeMap ...................... Grundkarte

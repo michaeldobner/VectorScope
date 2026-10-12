@@ -6,9 +6,9 @@
 
 Öffnen und sofort sehen, was über dir fliegt: welches Flugzeug als nächstes über dich hinwegzieht, wohin du schauen musst und welche Maschinen einen zweiten Blick wert sind.
 
-<h3><a href="https://michaeldobner.github.io/VectorScope/air/">michaeldobner.github.io/VectorScope/air</a></h3>
+<h3><a href="https://vectorscope.duckdns.org/air/">vectorscope.duckdns.org/air</a></h3>
 
-[**▶ VectorScope Air öffnen**](https://michaeldobner.github.io/VectorScope/air/) · [English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md)
+[**▶ VectorScope Air öffnen**](https://vectorscope.duckdns.org/air/) · [English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md)
 
 [![Tests](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml)
 [![Deploy](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml)
@@ -50,7 +50,7 @@ Ausführliche Anleitung: [Bedienung](docs/de/bedienung.md).
 
 ## Installation auf iPhone oder iPad
 
-1. **https://michaeldobner.github.io/VectorScope/air/** in **Safari** öffnen.
+1. **https://vectorscope.duckdns.org/air/** in **Safari** öffnen.
 2. **Teilen** antippen, dann **Zum Home-Bildschirm**.
 3. VectorScope Air vom Home-Bildschirm aus öffnen und dort den Standort festlegen. Safari und die installierte App haben getrennte Speicher.
 4. **Live-Daten** kommen über den [Proxy des Projekts](../docs/de/deployment.md#cors-proxy-auf-vercel), der fest eingebaut ist. Es muss nichts eingerichtet werden. **Demo** in den Einstellungen zeigt simulierten Verkehr.
@@ -65,7 +65,7 @@ Ausführliche Anleitung: [Bedienung](docs/de/bedienung.md).
 | [Design](docs/de/design.md) | Design-Briefing, Farb-Tokens, Typografie, Kartenstil, Layouts |
 | [Architektur](docs/de/architektur.md) | Module, Datenfluss, Zustand, Darstellung |
 | [Entwicklung](docs/de/entwicklung.md) | Lokale Umgebung, Tests, Screenshots, Konventionen |
-| [Deployment](../docs/de/deployment.md) | GitHub Pages, CORS-Proxy auf Vercel, Fehlerbehebung (für alle Module) |
+| [Deployment](../docs/de/deployment.md) | Eigener Server, GitHub Pages stillgelegt, CORS-Proxy auf Vercel, Fehlerbehebung (für alle Module) |
 | [Datenschutz und Recht](docs/de/datenschutz-und-recht.md) | Umgang mit dem Standort, Lizenzen, Quellenangaben, rechtliche Hinweise |
 
 ## Schnellstart für Entwickler
@@ -77,7 +77,7 @@ npm test           # Unit-Tests aller Module und Prüfungen des Repositorys
 npm run build      # Startseite und alle Module nach dist/, dieses Modul nach dist/air/
 ```
 
-`?demo` zeigt simulierten Verkehr, `?lat=50.11&lon=8.68` legt den Standort fest. Jeder Push auf `main` wird getestet und auf GitHub Pages veröffentlicht. Details: [Entwicklung](docs/de/entwicklung.md).
+`?demo` zeigt simulierten Verkehr, `?lat=50.11&lon=8.68` legt den Standort fest. Jeder Push auf `main` wird getestet, der eigene Server rollt ihn mit Coolify aus. Details: [Entwicklung](docs/de/entwicklung.md).
 
 ## Ordnerstruktur
 

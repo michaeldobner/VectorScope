@@ -4,9 +4,9 @@
 
 **Verified OSINT and defence news, matched to aircraft in the air right now.** Module INTEL of the [VectorScope collection](../README.md).
 
-<h3><a href="https://michaeldobner.github.io/VectorScope/intel/">michaeldobner.github.io/VectorScope/intel</a></h3>
+<h3><a href="https://vectorscope.duckdns.org/intel/">vectorscope.duckdns.org/intel</a></h3>
 
-[**▶ Open VectorScope Intel**](https://michaeldobner.github.io/VectorScope/intel/) · [Deutsch](README.de.md) · [Documentation](docs/en/README.md) · [Changelog](CHANGELOG.md)
+[**▶ Open VectorScope Intel**](https://vectorscope.duckdns.org/intel/) · [Deutsch](README.de.md) · [Documentation](docs/en/README.md) · [Changelog](CHANGELOG.md)
 
 <img src="docs/images/iphone-feed.png" width="230" alt="Stories on iPhone: a story from three sources with status, time axis, lead time and live match">&nbsp;&nbsp;
 <img src="docs/images/ipad-landscape.png" width="480" alt="iPad in landscape: stories on the left, live matches, places and sources on the right">

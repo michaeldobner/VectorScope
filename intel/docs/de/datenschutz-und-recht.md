@@ -16,7 +16,7 @@ INTEL nutzt deinen Standort nicht. Es lädt keine Bilder, Herausgeber sehen also
 
 ## Was auf dem Gerät bleibt
 
-Filter, Ortsfilter, der Zeitpunkt des zuletzt gesehenen Eintrags und die letzten 300 Einträge, im `localStorage` von `michaeldobner.github.io`. Das Löschen der Websitedaten in Safari entfernt alles.
+Filter, Ortsfilter, der Zeitpunkt des zuletzt gesehenen Eintrags und die letzten 300 Einträge, im `localStorage` von `vectorscope.duckdns.org`. Das Löschen der Websitedaten in Safari entfernt alles.
 
 ## Probe-Sammler
 

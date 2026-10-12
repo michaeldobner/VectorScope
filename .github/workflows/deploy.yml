@@ -1,56 +1,35 @@
-name: Deploy to GitHub Pages
+name: Pages farewell
 
+# GitHub Pages is retired: VectorScope runs on the own server (docs/en/server.md). This workflow publishes once
+# a small site that forwards every old address to the same path on the server, and old service workers remove
+# themselves. Runs only when this file or the redirect changes, or by hand. No npm, no build of the app.
 on:
   push:
     branches: [main]
+    paths: ['.github/workflows/deploy.yml', 'pages-redirect/**']
   workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
-  actions: read
 
-# Own queue: GitHub's branch build uses the group "pages", sharing it would make both wait for each other.
 concurrency:
   group: vectorscope-deploy
   cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm test
-      - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-          retention-days: 1
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # If Pages is still set to "Deploy from a branch", GitHub also publishes the unbuilt
-      # source on every push. Wait for that run to finish, so this deploy always lands last.
-      - name: Wait for GitHub's branch build
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          for i in $(seq 1 48); do
-            pending=$(gh api "repos/${{ github.repository }}/actions/runs?per_page=30" \
-              --jq '[.workflow_runs[] | select(.path | startswith("dynamic/pages")) | select(.status != "completed")] | length' || echo 0)
-            if [ "$pending" = "0" ]; then echo "No branch build running"; break; fi
-            echo "Branch build still running or queued, waiting ($i)"; sleep 5
-          done
+      - uses: actions/checkout@v4
+      - run: sh pages-redirect/build.sh pages-out
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: pages-out
+          retention-days: 1
       - id: deployment
         uses: actions/deploy-pages@v4

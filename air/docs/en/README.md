@@ -12,7 +12,7 @@ This documentation describes VectorScope completely: how to use it, how it calcu
 | [Design](design.md) | Design brief, colour tokens, aircraft colours, typography, map style, layouts, motion | Design, development |
 | [Architecture](architecture.md) | Modules, data flow from request to map, state stores, rendering, service worker | Development |
 | [Development](development.md) | Local setup, tests, demo mode, screenshots, conventions, extending the catalogue | Development |
-| [Deployment](../../../docs/en/deployment.md) | GitHub Pages, CORS proxy on Vercel, updates on devices, troubleshooting | Operations |
+| [Deployment](../../../docs/en/deployment.md) | Own server, GitHub Pages retired, CORS proxy on Vercel, updates on devices, troubleshooting | Operations |
 | [Privacy and legal](privacy-and-legal.md) | Location handling, storage, licences, attribution, legal notes | Everyone |
 
 ## VectorScope at a glance
@@ -26,9 +26,9 @@ This documentation describes VectorScope completely: how to use it, how it calcu
 | Language | English interface, German number format, metric units (feet and knots optional) |
 | Data | adsb.lol (ODbL), OpenFreeMap, planespotters.net |
 | Technology | React 18, TypeScript, Vite, MapLibre GL, Vitest |
-| Hosting | GitHub Pages, optional proxy on Vercel |
+| Hosting | Own server (Coolify), proxy under `/proxy` |
 | Privacy | No account, no server-side storage, location only on the device |
-| Address | https://michaeldobner.github.io/VectorScope/air/ |
+| Address | https://vectorscope.duckdns.org/air/ |
 | Version | 0.5.1 |
 
 <p>

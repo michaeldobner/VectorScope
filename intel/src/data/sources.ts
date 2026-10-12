@@ -237,7 +237,7 @@ export const SENSOR_SOURCE: Source = {
   region: 'global',
   lang: 'en',
   trust: 90,
-  site: 'https://michaeldobner.github.io/VectorScope/air/',
+  site: 'https://vectorscope.duckdns.org/air/',
 };
 
 /** Sources of the demo mode, so ?demo shows every status without pretending to quote a real outlet. */
