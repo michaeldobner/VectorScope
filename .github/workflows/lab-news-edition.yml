@@ -14,6 +14,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm ci --omit=optional
-      - run: EMBED=0 npx tsx collector/news.ts news-out
+      - run: npm ci
+      - run: npx tsx collector/news.ts news-out
       - run: npx tsx lab/news-edition.ts news-out/news.json
