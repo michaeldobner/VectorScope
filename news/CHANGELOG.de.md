@@ -4,6 +4,11 @@ Alle wesentlichen Änderungen am Modul NEWS. [English](CHANGELOG.md) · [Changel
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.2.3 (2026-10-12)
+
+### Behoben
+* NEWS aktualisiert sich, während die App offen ist: Eine neue Ausgabe erscheint sofort, wenn du oben in der Liste bist und keine Geschichte offen ist, auch beim Zurückkehren zur App. Vorher wartete jede Ausgabe mit einer neuen Geschichte hinter dem Hinweis „↑ neue Geschichten“, oft verdeckt von einer offenen Geschichte, und die App wirkte eingefroren, bis man sie schloss und neu öffnete. Beim Lesen bleibt der Hinweis, die wartende Ausgabe kommt herein, sobald du wieder oben bist. Zusätzlich prüft die App bei `pageshow` und `focus`, für Home-Bildschirm-Apps, die iOS aus dem Speicher holt.
+
 ## 0.2.2 (2026-10-12)
 
 ### Neu

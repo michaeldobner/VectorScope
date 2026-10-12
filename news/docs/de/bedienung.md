@@ -63,7 +63,8 @@ Ein Bild wird nie beschnitten. Es steht vollständig in einem Rahmen im Format 1
 * **Blauer Punkt:** Die Geschichte ist nach deinem letzten Besuch entstanden und noch nicht geöffnet. Beim allerersten Besuch gilt alles der letzten zwei Stunden als neu.
 * **„+3 Quellen“:** Seit deinem letzten Besuch sind drei Medien dazugekommen.
 * **„Bis hier hattest du gelesen“:** trennt in den Ressorts Neues von Bekanntem, mit der Uhrzeit deines letzten Besuchs.
-* **„↑ 4 neue Geschichten“:** Die App fragt alle 5 Minuten nach einer neuen Ausgabe. Bringt sie neue Geschichten, springt der Inhalt nicht, unten erscheint dieser Hinweis. Ein Tipp holt sie herein.
+* **Neue Ausgaben:** Die App fragt alle 5 Minuten nach einer neuen Ausgabe, und jedes Mal, wenn du zur App zurückkehrst. Bist du oben in der Liste und keine Geschichte ist offen, erscheint die neue Ausgabe sofort.
+* **„↑ 4 neue Geschichten“:** Liest du gerade (Geschichte oder Briefing offen, Liste nach unten gescrollt), springt der Inhalt nicht, unten erscheint dieser Hinweis. Ein Tipp holt die neuen Geschichten herein, sonst kommen sie, sobald du wieder oben bist.
 
 Als Besuch gilt, wenn du die App verlässt oder in den Hintergrund legst.
 

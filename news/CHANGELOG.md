@@ -4,6 +4,11 @@ All notable changes to the module NEWS. [Deutsch](CHANGELOG.de.md) · [Changelog
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.2.3 (2026-10-12)
+
+### Fixed
+* NEWS updates while open: a new edition appears at once when you are at the top of the list and no story is open, also on return to the app. Before, every edition with a new story waited behind the notice "↑ new stories", often hidden under an open story, so the app looked frozen until it was closed and opened again. While you read, the notice stays, and the waiting edition comes in as soon as you are back at the top. Also checks on `pageshow` and `focus`, for Home Screen apps that iOS restores from memory.
+
 ## 0.2.2 (2026-10-12)
 
 ### Added

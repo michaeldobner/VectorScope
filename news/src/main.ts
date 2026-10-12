@@ -514,6 +514,18 @@ function openSettings() {
 function showPill(n: number) {
   $('#pillHost').innerHTML = `<button class="pill" data-act="release">↑ ${t().newStories(n)}</button>`;
 }
+/** Reading: a story or the briefing is open, or the list is scrolled down. Then new stories wait behind the pill. */
+function reading() {
+  const top = wide() ? $('#stream').scrollTop : document.scrollingElement!.scrollTop;
+  return !sheet.hidden || !$('#brief').hidden || top > 120;
+}
+function applyEdition(next: Edition) {
+  state.edition = next;
+  state.pending = null;
+  $('#pillHost').innerHTML = '';
+  renderChips();
+  renderList();
+}
 async function load() {
   try {
     const r = await fetch(DATA_URL, { cache: 'no-store' });
@@ -528,20 +540,20 @@ async function load() {
       return;
     }
     if (next.at <= ed().at) {
-      if (wasOffline) renderList();
+      // A waiting edition comes in as soon as nobody reads: back at the top of the list, story closed.
+      if (state.pending && !reading()) applyEdition(state.pending);
+      else if (wasOffline) renderList();
       return;
     }
     store.set('edition', next);
-    // New stories arrive without pushing the content away: a notice at the bottom, a tap brings them in.
+    // New stories never push away what is being read: then a notice at the bottom, a tap brings them in.
+    // Whoever looks at the top of the list gets them at once, also on return to the app.
     const known = new Set(ed().stories.map((s) => s.id));
     const fresh = next.stories.filter((s) => !known.has(s.id)).length;
-    if (fresh) {
+    if (fresh && reading()) {
       state.pending = next;
       showPill(fresh);
-    } else {
-      state.edition = next;
-      renderList();
-    }
+    } else applyEdition(next);
   } catch {
     state.offline = true;
     if (!state.edition) {
@@ -598,11 +610,7 @@ document.addEventListener('click', (e) => {
   }
   if (act === 'retry') load();
   if (act === 'release' && state.pending) {
-    state.edition = state.pending;
-    state.pending = null;
-    $('#pillHost').innerHTML = '';
-    renderChips();
-    renderList();
+    applyEdition(state.pending);
     (wide() ? $('#stream') : document.scrollingElement!).scrollTo({ top: 0, behavior: 'smooth' });
   }
 });
@@ -623,6 +631,9 @@ addEventListener('resize', () => {
 });
 document.addEventListener('visibilitychange', () => (document.hidden ? saveVisit() : load()));
 addEventListener('pagehide', saveVisit);
+// iOS restores a Home Screen app from memory without a visibility change at times: check on every return.
+addEventListener('pageshow', (e) => e.persisted && load());
+addEventListener('focus', () => load());
 setInterval(load, REFRESH_MS);
 
 document.getElementById('boot')?.remove();

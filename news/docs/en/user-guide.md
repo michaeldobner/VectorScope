@@ -63,7 +63,8 @@ A picture is never cut. It stands whole in a 16:9 frame, the free edge is filled
 * **Blue dot:** the story appeared after your last visit and is not opened yet. On the very first visit everything of the last two hours counts as new.
 * **"+3 sources":** three outlets joined since your last visit.
 * **"You read up to here":** separates new from known in the sections, with the time of your last visit.
-* **"↑ 4 new stories":** the app asks for a new edition every 5 minutes. When it brings new stories, the content does not jump, this notice appears at the bottom. A tap brings them in.
+* **New editions:** the app asks for a new edition every 5 minutes, and each time you return to the app. When you are at the top of the list and no story is open, the new edition appears at once.
+* **"↑ 4 new stories":** while you read (a story or the briefing open, the list scrolled down) the content does not jump, this notice appears at the bottom. A tap brings the new stories in, else they come as soon as you are back at the top.
 
 A visit ends when you leave the app or send it to the background.
 
