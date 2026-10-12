@@ -9,6 +9,6 @@ console.log('stories', ed.stories.length, Object.fromEntries(byRes));
 const title = (s) => s.lead?.en?.head ?? s.lead?.orig?.head ?? s.id;
 const biz = ed.stories.filter((s) => s.ressort === 'wirtschaft').sort((a, b) => b.score - a.score);
 console.log('\nBusiness by score:');
-biz.forEach((s, i) => console.log(` ${i + 1}. ${s.score} ${s.sources.map((x) => x.outlet).join('/')} | ${title(s).slice(0, 90)}`));
+biz.forEach((s, i) => console.log(` ${i + 1}. ${s.score} w${s.worldScore} ${s.sources.map((x) => x.outlet).join('/')} | ${title(s).slice(0, 90)}`));
 console.log('\nStories with CNBC:');
 ed.stories.filter((s) => s.sources.some((x) => x.outlet === "CNBC") || /Wall Street|S&P|Börse|Aktien/.test(title(s))).forEach((s) => console.log(` ${s.ressort} ${s.score} ${s.sources.map((x) => x.outlet).join("/")} | ${title(s).slice(0, 90)}`));
