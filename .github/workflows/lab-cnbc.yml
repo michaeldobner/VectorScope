@@ -1,0 +1,16 @@
+name: Lab CNBC
+# Temporary: one run on the work branch to see which CNBC feeds carry which headlines.
+on:
+  push:
+    branches: [claude/cnbc-lab]
+permissions:
+  contents: read
+jobs:
+  cnbc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node lab/cnbc.mjs
