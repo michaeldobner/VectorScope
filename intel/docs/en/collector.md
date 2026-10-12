@@ -8,7 +8,7 @@ INTEL only loads while it is open, and a Telegram channel shows only its last 20
 
 | | |
 |---|---|
-| Runs | Every 10 minutes on GitHub Actions (`.github/workflows/collector.yml`). GitHub starts scheduled runs on a quiet repository only every few hours, so one run keeps collecting for almost six hours and the hourly schedule queues the next. A change to the collector or the sources replaces the running collection at once |
+| Runs | Every 10 minutes on the own server (`server/collector-loop.mjs`). Up to collection 0.22.0 it also ran on GitHub Actions, the workflow is removed since 0.22.4: it took about 7,200 minutes in five days |
 | Until | 31 January 2027, then the workflow does nothing. `PROBE_UNTIL` in the workflow changes the date |
 | Loads | Every source of INTEL directly from the publishers, no proxy needed on a server |
 | Keeps | Every report of the last 7 days with the time it was first seen, plus the key of every report ever seen, so a report never counts as new twice |

@@ -33,4 +33,4 @@ This documentation describes the VectorScope collection as a whole: how the repo
 | Hosting | GitHub Pages, proxy on Vercel |
 | Privacy | No account, no server-side storage, location only on the device |
 | Address | https://michaeldobner.github.io/VectorScope/ |
-| Version | 0.22.3 |
+| Version | 0.22.4 |

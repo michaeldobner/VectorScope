@@ -1,5 +1,4 @@
-// Collector: one round. Runs every 10 minutes, on the own server (server/collector-loop.mjs) and as a probe
-// on GitHub Actions (workflow collector.yml). Loads every source of INTEL directly, keeps what it has seen
+// Collector: one round. Runs every 10 minutes on the own server (server/collector-loop.mjs). Loads every source of INTEL directly, keeps what it has seen
 // with the time it first saw it. With DATABASE_URL set it also writes the round into PostgreSQL (store.ts).
 //
 //   npx tsx collector/collect.ts <data folder> [raw folder]

@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.22.4 (2026-10-12)
+
+### Entfernt
+* Der Sammler-Workflow `collector.yml`: seit 0.22.1 abgeschaltet, jetzt gelöscht, damit er nie versehentlich wieder startet. In fünf Tagen hat er rund 7.200 Actions-Minuten gebraucht. Es sammelt nur noch der eigene Server.
+
 ## 0.22.3 (2026-10-11)
 
 ### Geändert

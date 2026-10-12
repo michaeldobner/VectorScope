@@ -170,7 +170,7 @@ COPY (SELECT * EXCLUDE (text) FROM read_json_auto('parsed/reports.jsonl.gz')) TO
 
 ### 1. Nach der Probe weitersammeln
 
-Der Workflow endet am `PROBE_UNTIL` (31. Januar 2027, verlängert vom 12. Oktober 2026). Damit das Archiv darüber hinaus wächst, das Datum in `.github/workflows/collector.yml` verschieben. GitHub Actions ist für öffentliche Repositories kostenlos. Die 6-Stunden-Läufe starten stündlich neu per Zeitplan, Lücken zeigt `health.json`.
+Seit Sammlung 0.22.4 gibt es den Workflow auf GitHub Actions nicht mehr: Es sammelt nur noch der eigene Server (`server/collector-loop.mjs`), Lücken zeigt `health.json`.
 
 ### 2. Umzug auf einen Server
 

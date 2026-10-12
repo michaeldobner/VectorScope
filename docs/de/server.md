@@ -68,7 +68,7 @@ Schritte nach Stand Coolify 4. Menünamen können je nach Version leicht abweich
 ## Umstieg von GitHub
 
 1. **Ein bis zwei Wochen beide laufen lassen.** In `/api/health` und `stats.json` beider vergleichen: Quellen ok, neue Meldungen pro Tag, Lücken. Beide schreiben in `collector-raw`. Einen Beitrag, den beide sehen, gibt es im Archiv doppelt, `collector/parse.ts` zählt ihn einmal.
-2. **GitHub Actions abschalten.** `PROBE_UNTIL` in `.github/workflows/collector.yml` auf ein vergangenes Datum setzen oder den Workflow unter Actions > Collector deaktivieren. Ab dann sammelt nur noch der Server.
+2. **GitHub Actions abschalten.** Erledigt: Der Workflow `collector.yml` ist seit Sammlung 0.22.4 entfernt, es sammelt nur noch der Server.
 3. **GitHub Pages auf den Server zeigen lassen (optional).** `COLLECTOR_URL` in `intel/src/data/feed.ts` und die Proxy-Adressen können auf den Server zeigen, dann profitiert auch die App auf GitHub Pages. Der Proxy auf Vercel kann danach weg.
 4. **Kürzerer Takt (optional).** `EVERY_MIN` in `docker-compose.yaml`, z. B. 2. Ob Telegram diesen Takt für seine Webvorschau aus einem Rechenzentrum akzeptiert, ist noch nicht getestet, in den ersten Tagen `health.json` beobachten.
 

@@ -8,7 +8,7 @@ INTEL lädt nur, solange es geöffnet ist, und ein Telegram-Kanal zeigt nur sein
 
 | | |
 |---|---|
-| Läuft | Alle 10 Minuten auf GitHub Actions (`.github/workflows/collector.yml`). GitHub startet zeitgesteuerte Läufe bei einem ruhigen Repository nur alle paar Stunden, deshalb sammelt ein Lauf fast sechs Stunden lang, und der stündliche Zeitplan reiht den nächsten ein. Eine Änderung am Sammler oder an den Quellen ersetzt die laufende Sammlung sofort |
+| Läuft | Alle 10 Minuten auf dem eigenen Server (`server/collector-loop.mjs`). Bis Sammlung 0.22.0 lief er zusätzlich auf GitHub Actions, der Workflow ist seit 0.22.4 entfernt: Er hat rund 7.200 Minuten in fünf Tagen gebraucht |
 | Bis | 31. Januar 2027, danach tut der Workflow nichts mehr. `PROBE_UNTIL` im Workflow ändert das Datum |
 | Lädt | Jede Quelle von INTEL direkt bei den Herausgebern, auf einem Server ist kein Proxy nötig |
 | Behält | Jede Meldung der letzten 7 Tage mit dem Zeitpunkt, an dem er sie zuerst gesehen hat, dazu den Schlüssel jeder je gesehenen Meldung, damit keine Meldung zweimal als neu zählt |

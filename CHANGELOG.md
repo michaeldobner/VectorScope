@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.22.4 (2026-10-12)
+
+### Removed
+* The collector workflow `collector.yml`: switched off since 0.22.1, now gone, so it can never start again by mistake. In five days it took about 7,200 Actions minutes. Only the own server collects.
+
 ## 0.22.3 (2026-10-11)
 
 ### Changed
