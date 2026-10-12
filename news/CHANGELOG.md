@@ -4,6 +4,11 @@ All notable changes to the module NEWS. [Deutsch](CHANGELOG.de.md) · [Changelog
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.2.1 (2026-10-12)
+
+### Fixed
+* CNBC shows up: its reports belong to the section Business. Its links name no section, so a single CNBC report, mostly markets, counted as world news and never ranked high enough to be shown, although the feed was read every round.
+
 ## 0.2.0 (2026-10-11)
 
 ### Added

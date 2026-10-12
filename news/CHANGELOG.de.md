@@ -4,6 +4,11 @@ Alle wesentlichen Änderungen am Modul NEWS. [English](CHANGELOG.md) · [Changel
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.2.1 (2026-10-12)
+
+### Behoben
+* CNBC erscheint: Seine Meldungen gehören zum Ressort Wirtschaft. Seine Links nennen kein Ressort, deshalb zählte eine einzelne CNBC-Meldung, meist Börse, als Weltnachricht und kam nie weit genug nach oben, obwohl der Feed jede Runde gelesen wurde.
+
 ## 0.2.0 (2026-10-11)
 
 ### Neu

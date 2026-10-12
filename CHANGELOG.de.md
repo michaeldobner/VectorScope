@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.22.7 (2026-10-12)
+
+### Behoben
+* Modul NEWS 0.2.1: CNBC im Ressort Wirtschaft.
+
 ## 0.22.6 (2026-10-12)
 
 ### Behoben

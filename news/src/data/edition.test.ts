@@ -89,6 +89,7 @@ describe('edition', () => {
     expect(classify(rep('spiegel', 'x', 'https://www.spiegel.de/sport/fussball/x'), feedById('spiegel')!)).toBe('sport');
     expect(classify(rep('zdf', 'CDU diskutiert über die AfD', 'https://www.zdf.de/x'), feedById('zdf')!)).toBe('dach');
     expect(classify(rep('bbc', 'Twelve killed', 'https://www.bbc.co.uk/news/x'), feedById('bbc')!)).toBeNull();
+    expect(classify(rep('cnbc', 'S&P 500 closes near flat', 'https://www.cnbc.com/2026/10/12/stock-market-today.html'), feedById('cnbc')!)).toBe('wirtschaft');
   });
 
   it('builds stories with leads per language, importance and pictures', () => {

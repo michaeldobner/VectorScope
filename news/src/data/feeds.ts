@@ -37,7 +37,9 @@ export const FEEDS: Feed[] = [
   { id: 'scmp', outlet: 'SCMP', cc: 'HK', group: 'intl', lang: 'en', url: 'https://www.scmp.com/rss/91/feed' },
   { id: 'toi', outlet: 'Times of India', cc: 'IN', group: 'intl', lang: 'en', url: 'https://timesofindia.indiatimes.com/rssfeedstopstories.cms' },
   // Business and tech
-  { id: 'cnbc', outlet: 'CNBC', cc: 'US', group: 'biz', lang: 'en', url: 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114' },
+  // Business section: its links (cnbc.com/2026/10/12/…) name no section, and as world news a single CNBC report,
+  // mostly markets, never ranked high enough to be shown.
+  { id: 'cnbc', outlet: 'CNBC', cc: 'US', group: 'biz', lang: 'en', url: 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114', ressort: 'wirtschaft' },
   { id: 'heise', outlet: 'heise', cc: 'DE', group: 'tech', lang: 'de', url: 'https://www.heise.de/rss/heise-atom.xml', ressort: 'tech' },
   { id: 'golem', outlet: 'Golem', cc: 'DE', group: 'tech', lang: 'de', url: 'https://rss.golem.de/rss.php?feed=RSS2.0', ressort: 'tech' },
   // Fast: tempo, but little weight for importance
