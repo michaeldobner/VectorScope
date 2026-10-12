@@ -13,12 +13,7 @@ const HOUR = 3600_000;
 export const MAX_AGE = 36 * HOUR;
 /** Stories in an edition, and the least per section. */
 const KEEP = 200;
-// Per section at least this many stories by importance. With 12 the close of Wall Street (CNBC, one source) fell out
-// of Business, behind GST news from India (test lab, 12 October 2026). The app shows up to 30 per section.
-const PER_RESSORT = 20;
-/** Per section also the best stories for an international reader: single reports of CNBC, BBC or Al Jazeera, which the
- *  weight of German-language sources would push out. Same idea as the 40 best world stories below. */
-const PER_RESSORT_WORLD = 5;
+const PER_RESSORT = 12;
 
 const WEIGHT: Record<Group, number> = { pub: 1, press: 1, intl: 1, biz: 0.8, tech: 0.7, fast: 0.4 };
 
@@ -191,6 +186,9 @@ function scores(reports: Report[], sig: Signals) {
     const home = sig.homepage.get(r.link);
     if (home != null) editors = Math.max(editors, home < 3 ? 4 : home < 8 ? 2 : home < 15 ? 1 : 0);
     if (r.feed === 'ntv' && r.rank < 3) editors = Math.max(editors, 1.5);
+    // CNBC World is ordered by its editors, not by time: its first five are what CNBC leads with, the close of
+    // Wall Street among them (test lab, 12 October 2026). Without this a single CNBC report never stays in an edition.
+    if (r.feed === 'cnbc-world' && r.rank < 5) editors = Math.max(editors, 1.5);
   }
   const score = sum(all) + 0.5 * countries(all) + editors + 0.4 * dach.length - 0.12 * age;
   const worldScore = sum(intl) + 0.5 * countries(intl) + 0.2 * dach.length - 0.12 * age;
@@ -265,7 +263,6 @@ export function buildEdition({ reports, groups, signals, tr, ogImage, logos }: E
   const world = [...stories].sort((a, b) => b.worldScore - a.worldScore);
   for (const s of world.slice(0, 40)) keep.add(s);
   for (const res of PRIORITY) ranked.filter((s) => s.ressort === res).slice(0, PER_RESSORT).forEach((s) => keep.add(s));
-  for (const res of PRIORITY) world.filter((s) => s.ressort === res).slice(0, PER_RESSORT_WORLD).forEach((s) => keep.add(s));
   const kept = ranked.filter((s) => keep.has(s));
   const all = kept.flatMap((s) => s.sources);
   return { at: signals.now, outlets: new Set(all.map((s) => s.outlet)).size, countries: new Set(all.map((s) => s.cc)).size, stories: kept };
