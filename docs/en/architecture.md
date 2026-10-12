@@ -95,7 +95,7 @@ One `package.json` in the root holds the dependencies and scripts of all modules
 | INTEL | `/VectorScope/intel/` | `/VectorScope/intel/` | `vectorscope-intel-v1` |
 | NEWS | `/news/` on the own server | `/news/` | `vectorscope-news-v1` |
 
-All parts share one origin (`vectorscope.duckdns.org`), so `localStorage` is shared. That is why every key carries the prefix `vectorscope.` and a module name where needed. The hub service worker only answers requests for the hub and `shared/`, everything else goes to the network or to the worker of the module.
+All parts share one origin (`vectorscope.dobner.pro`), so `localStorage` is shared. That is why every key carries the prefix `vectorscope.` and a module name where needed. The hub service worker only answers requests for the hub and `shared/`, everything else goes to the network or to the worker of the module.
 
 ## Network
 

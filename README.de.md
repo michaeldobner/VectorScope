@@ -6,13 +6,12 @@
 
 Eine Sammlung ruhiger, präziser Module unter einem Dach. Jedes beantwortet eine Frage zu dem, was um dich herum passiert, in einer gemeinsamen Designsprache: tiefes Graphit, Ice Blue, Farbe nur dort, wo sie etwas bedeutet.
 
-<h3><a href="https://vectorscope.duckdns.org/">vectorscope.duckdns.org</a></h3>
+<h3><a href="https://vectorscope.dobner.pro/">vectorscope.dobner.pro</a></h3>
 
-[**▶ VectorScope öffnen**](https://vectorscope.duckdns.org/) · [English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md)
+[**▶ VectorScope öffnen**](https://vectorscope.dobner.pro/) · [English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md)
 
 [![Tests](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml)
 [![E2E](https://github.com/michaeldobner/VectorScope/actions/workflows/e2e.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/e2e.yml)
-[![Deploy](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml)
 
 <img src="air/docs/images/iphone-radar.jpg" width="230" alt="Modul AIR: Radaransicht auf dem iPhone mit Distanzringen um den eigenen Standort">&nbsp;&nbsp;
 <img src="air/docs/images/iphone-overhead.jpg" width="230" alt="Modul AIR: Overhead-Liste mit Countdown und Blickrichtung">&nbsp;&nbsp;
@@ -24,8 +23,8 @@ Eine Sammlung ruhiger, präziser Module unter einem Dach. Jedes beantwortet eine
 
 | Modul | Frage | Status | Version |
 |---|---|---|---|
-| [**AIR**](air/README.de.md) · Airspace | Was fliegt gerade über mir, was kommt als nächstes, was ist einen Blick wert? | Live · [öffnen](https://vectorscope.duckdns.org/air/) | 0.5.1 |
-| [**INTEL**](intel/README.de.md) · Intelligence feed | Was melden geprüfte OSINT-Quellen und Fachmedien, und welches Flugzeug in der Luft betrifft es? | Live · [öffnen](https://vectorscope.duckdns.org/intel/) | 0.15.2 |
+| [**AIR**](air/README.de.md) · Airspace | Was fliegt gerade über mir, was kommt als nächstes, was ist einen Blick wert? | Live · [öffnen](https://vectorscope.dobner.pro/air/) | 0.5.1 |
+| [**INTEL**](intel/README.de.md) · Intelligence feed | Was melden geprüfte OSINT-Quellen und Fachmedien, und welches Flugzeug in der Luft betrifft es? | Live · [öffnen](https://vectorscope.dobner.pro/intel/) | 0.15.2 |
 | [**NEWS**](news/README.de.md) · News | Was ist heute wichtig, und wie sieht es die Welt? | Live · eigener Server | 0.2.0 |
 
 ## Warum VectorScope
@@ -34,11 +33,11 @@ Flugtracker und Nachrichten-Apps zeigen alles, bunt und mit Werbung. VectorScope
 
 ## Installation auf iPhone oder iPad
 
-1. **https://vectorscope.duckdns.org/** in **Safari** öffnen.
+1. **https://vectorscope.dobner.pro/** in **Safari** öffnen.
 2. **Teilen** antippen, dann **Zum Home-Bildschirm**.
 3. VectorScope vom Home-Bildschirm aus öffnen und ein Modul wählen.
 
-Um ein Modul direkt zu öffnen, seine eigene Adresse zum Home-Bildschirm hinzufügen: **https://vectorscope.duckdns.org/air/** oder **https://vectorscope.duckdns.org/intel/**. Safari und die installierte App haben getrennte Speicher, den Standort deshalb in der installierten App festlegen.
+Um ein Modul direkt zu öffnen, seine eigene Adresse zum Home-Bildschirm hinzufügen: **https://vectorscope.dobner.pro/air/** oder **https://vectorscope.dobner.pro/intel/**. Safari und die installierte App haben getrennte Speicher, den Standort deshalb in der installierten App festlegen.
 
 ## Aufbau des Repositorys
 
@@ -93,6 +92,6 @@ Verkehrsdaten © Mitwirkende von [adsb.lol](https://adsb.lol), lizenziert unter 
 
 ## Version
 
-Aktuelle Version: **0.22.5**. Siehe [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.22.6**. Siehe [Changelog](CHANGELOG.de.md).
 
 Erstellt von Michael Dobner. Lizenziert unter der [MIT-Lizenz](LICENSE).

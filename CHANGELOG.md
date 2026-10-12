@@ -4,6 +4,14 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.22.6 (2026-10-12)
+
+### Fixed
+* The address of the server is `vectorscope.dobner.pro`, not `vectorscope.duckdns.org` as the documentation of 0.11.0 to 0.22.5 said: documentation, the default `ALLOWED_ORIGIN` in `docker-compose.yaml` and the AIR source link of INTEL corrected.
+
+### Removed
+* The workflow `deploy.yml` and the forwarding `pages-redirect/`: GitHub Pages is switched off.
+
 ## 0.22.5 (2026-10-12)
 
 ### Removed

@@ -32,5 +32,5 @@ Diese Dokumentation beschreibt die VectorScope-Sammlung als Ganzes: wie das Repo
 | Plattform | Progressive Web Apps für iPhone und iPad, laufen in jedem modernen Browser |
 | Hosting | Eigener Server (Coolify), Proxy unter `/proxy` |
 | Datenschutz | Kein Konto, keine Speicherung auf Servern, Standort nur auf dem Gerät |
-| Adresse | https://vectorscope.duckdns.org/ |
-| Version | 0.22.5 |
+| Adresse | https://vectorscope.dobner.pro/ |
+| Version | 0.22.6 |

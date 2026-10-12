@@ -27,5 +27,5 @@ Diese Dokumentation beschreibt das Modul INTEL: die Bedienung, welche Quellen es
 | Live-Daten | Militärflugzeuge von adsb.lol (ODbL), alle zwei Minuten |
 | Aktualisierung | Feed alle fünf Minuten, solange die App geöffnet ist |
 | Sprache | Englische Oberfläche, Meldungen in ihrer Originalsprache oder mit **DE** ins Deutsche übersetzt |
-| Adresse | https://vectorscope.duckdns.org/intel/ |
+| Adresse | https://vectorscope.dobner.pro/intel/ |
 | Version | 0.15.2 |

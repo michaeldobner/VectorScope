@@ -4,6 +4,14 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.22.6 (2026-10-12)
+
+### Behoben
+* Die Adresse des Servers ist `vectorscope.dobner.pro`, nicht `vectorscope.duckdns.org`, wie es die Doku von 0.11.0 bis 0.22.5 sagte: Doku, die Vorgabe für `ALLOWED_ORIGIN` in `docker-compose.yaml` und der AIR-Quellenlink von INTEL korrigiert.
+
+### Entfernt
+* Der Workflow `deploy.yml` und die Weiterleitung `pages-redirect/`: GitHub Pages ist abgeschaltet.
+
 ## 0.22.5 (2026-10-12)
 
 ### Entfernt

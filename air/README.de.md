@@ -6,12 +6,11 @@
 
 Öffnen und sofort sehen, was über dir fliegt: welches Flugzeug als nächstes über dich hinwegzieht, wohin du schauen musst und welche Maschinen einen zweiten Blick wert sind.
 
-<h3><a href="https://vectorscope.duckdns.org/air/">vectorscope.duckdns.org/air</a></h3>
+<h3><a href="https://vectorscope.dobner.pro/air/">vectorscope.dobner.pro/air</a></h3>
 
-[**▶ VectorScope Air öffnen**](https://vectorscope.duckdns.org/air/) · [English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md)
+[**▶ VectorScope Air öffnen**](https://vectorscope.dobner.pro/air/) · [English](README.md) · [Dokumentation](docs/de/README.md) · [Changelog](CHANGELOG.de.md)
 
 [![Tests](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml)
-[![Deploy](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml)
 
 <img src="docs/images/iphone-radar.jpg" width="230" alt="Radaransicht auf dem iPhone mit Distanzringen um den eigenen Standort">&nbsp;&nbsp;
 <img src="docs/images/iphone-overhead.jpg" width="230" alt="Overhead-Liste mit Countdown und Blickrichtung">&nbsp;&nbsp;
@@ -50,7 +49,7 @@ Ausführliche Anleitung: [Bedienung](docs/de/bedienung.md).
 
 ## Installation auf iPhone oder iPad
 
-1. **https://vectorscope.duckdns.org/air/** in **Safari** öffnen.
+1. **https://vectorscope.dobner.pro/air/** in **Safari** öffnen.
 2. **Teilen** antippen, dann **Zum Home-Bildschirm**.
 3. VectorScope Air vom Home-Bildschirm aus öffnen und dort den Standort festlegen. Safari und die installierte App haben getrennte Speicher.
 4. **Live-Daten** kommen über den [Proxy des Projekts](../docs/de/deployment.md#cors-proxy-auf-vercel), der fest eingebaut ist. Es muss nichts eingerichtet werden. **Demo** in den Einstellungen zeigt simulierten Verkehr.

@@ -2,7 +2,7 @@
 
 [English version](../en/server.md) · [Übersicht](README.md)
 
-Seit Sammlung 0.11.0 läuft VectorScope auf einem eigenen Server, ausgerollt mit [Coolify](https://coolify.io): App, Proxy, Sammler, Datenbank und Rohdaten-Archiv unter einer Adresse. Seit 0.22.4 sammelt nur noch der Server, seit 0.22.5 ist er die einzige Adresse der App: GitHub Pages leitet dorthin weiter (siehe [Deployment](deployment.md)).
+Seit Sammlung 0.11.0 läuft VectorScope auf einem eigenen Server, ausgerollt mit [Coolify](https://coolify.io): App, Proxy, Sammler, Datenbank und Rohdaten-Archiv unter einer Adresse. Seit 0.22.4 sammelt nur noch der Server, seit 0.22.5 ist er die einzige Adresse der App: GitHub Pages ist abgeschaltet (siehe [Deployment](deployment.md)).
 
 ## Was läuft
 
@@ -21,7 +21,7 @@ Ein Container mit fehlschlagendem Healthcheck erscheint auf der Statusseite und 
 
 | Adresse | Inhalt |
 |---|---|
-| `https://vectorscope.duckdns.org/` | Startseite, `/air/`, `/intel/` |
+| `https://vectorscope.dobner.pro/` | Startseite, `/air/`, `/intel/` |
 | `/proxy/...` | Dieselben Routen wie der Proxy auf Vercel (adsb.lol, Feeds, Telegram, Übersetzung, Fotos) |
 | `/data/latest.json` | Meldungen der letzten 72 Stunden, gelesen von INTEL unter dieser Adresse |
 | `/api/health` | Zustand für die Statusseite, siehe unten |
@@ -60,16 +60,16 @@ Schritte nach Stand Coolify 4. Menünamen können je nach Version leicht abweich
 
 1. **GitHub-Token für das Rohdaten-Archiv** (optional, empfohlen). Auf GitHub: Settings > Developer settings > Fine-grained personal access tokens > Generate new token. Repository access: nur `michaeldobner/VectorScope`. Permissions: Contents, Read and write. Ablauf: bis nach der Probe, z. B. 1. März 2027. Token kopieren, er wird nur einmal angezeigt.
 2. **Neue Ressource.** Im Coolify-Projekt: New resource > Public repository, `https://github.com/michaeldobner/VectorScope`, Branch `main`. Build pack: Docker Compose, Datei `/docker-compose.yaml`.
-3. **Domain.** Beim Dienst `vectorscope-web`: Domain `https://vectorscope.duckdns.org:8080`. Der Port sagt Coolify, dass der Container auf 8080 lauscht, die Adresse selbst bleibt ohne Port. Die anderen Dienste bekommen keine Domain.
+3. **Domain.** Beim Dienst `vectorscope-web`: Domain `https://vectorscope.dobner.pro:8080`. Der Port sagt Coolify, dass der Container auf 8080 lauscht, die Adresse selbst bleibt ohne Port. Die anderen Dienste bekommen keine Domain.
 4. **Umgebungsvariablen.** `SERVICE_PASSWORD_POSTGRES` erzeugt Coolify selbst. `RAW_PUSH_URL` nur, wenn das Rohdaten-Archiv zusätzlich zu GitHub soll, und dann nur in ein **privates** Repository: `https://x-access-token:<Token>@github.com/<Besitzer>/<privates Repository>.git`. Ohne bleibt das Archiv auf dem Server und in seiner täglichen Sicherung (seit Sammlung 0.18.0, das Repository VectorScope ist öffentlich). Optional: `ALLOWED_ORIGIN`, wenn die Adresse abweicht, `CONTACT` für den User-Agent, `EMBED=0` schaltet die Themen nach Bedeutung ab (standardmäßig an, das Modell mit rund 120 MB wird einmal nach `/data/models` geladen). `NEWS=0` schaltet das Modul NEWS ab, das sonst nach jeder Runde seine Ausgabe in `/data/news/` baut. `DEEPL_KEY` mit einem kostenlosen Schlüssel von DeepL API Free übersetzt die Meldungen von NEWS zuverlässig.
-5. **Deploy.** Der Build dauert einige Minuten (Typprüfung und Build aller Module). Danach `https://vectorscope.duckdns.org/api/health` öffnen.
+5. **Deploy.** Der Build dauert einige Minuten (Typprüfung und Build aller Module). Danach `https://vectorscope.dobner.pro/api/health` öffnen.
 6. **Erste Runde.** Beim ersten Start übernimmt der Sammler `archive.json`, `stats.json` und `raw-state.json` des GitHub-Sammlers, damit keine Meldung zweimal als neu zählt, und checkt den Branch `collector-raw` aus. Nach 10 bis 15 Minuten ist `collector.age_min` klein und `raw_push` meldet `pushed`.
 
 ## Umstieg von GitHub
 
 1. **Ein bis zwei Wochen beide laufen lassen.** In `/api/health` und `stats.json` beider vergleichen: Quellen ok, neue Meldungen pro Tag, Lücken. Beide schreiben in `collector-raw`. Einen Beitrag, den beide sehen, gibt es im Archiv doppelt, `collector/parse.ts` zählt ihn einmal.
 2. **GitHub Actions abschalten.** Erledigt: Der Workflow `collector.yml` ist seit Sammlung 0.22.4 entfernt, es sammelt nur noch der Server.
-3. **GitHub Pages stilllegen.** Erledigt in Sammlung 0.22.5: Die alten Adressen leiten auf den Server weiter.
+3. **GitHub Pages stilllegen.** Erledigt in Sammlung 0.22.5: Pages ist abgeschaltet.
 4. **Kürzerer Takt (optional).** `EVERY_MIN` in `docker-compose.yaml`, z. B. 2. Ob Telegram diesen Takt für seine Webvorschau aus einem Rechenzentrum akzeptiert, ist noch nicht getestet, in den ersten Tagen `health.json` beobachten.
 
 ## Betrieb

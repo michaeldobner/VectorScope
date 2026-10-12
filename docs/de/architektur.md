@@ -95,7 +95,7 @@ Eine `package.json` im Hauptordner enthält Abhängigkeiten und Skripte aller Mo
 | INTEL | `/VectorScope/intel/` | `/VectorScope/intel/` | `vectorscope-intel-v1` |
 | NEWS | `/news/` auf dem eigenen Server | `/news/` | `vectorscope-news-v1` |
 
-Alle Teile teilen sich einen Ursprung (`vectorscope.duckdns.org`), `localStorage` ist deshalb gemeinsam. Darum trägt jeder Schlüssel das Präfix `vectorscope.` und bei Bedarf den Modulnamen. Der Service Worker der Startseite beantwortet nur Anfragen für die Startseite und `shared/`, alles andere geht ins Netz oder an den Worker des Moduls.
+Alle Teile teilen sich einen Ursprung (`vectorscope.dobner.pro`), `localStorage` ist deshalb gemeinsam. Darum trägt jeder Schlüssel das Präfix `vectorscope.` und bei Bedarf den Modulnamen. Der Service Worker der Startseite beantwortet nur Anfragen für die Startseite und `shared/`, alles andere geht ins Netz oder an den Worker des Moduls.
 
 ## Netzwerk
 

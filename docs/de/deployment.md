@@ -4,15 +4,15 @@
 
 | | |
 |---|---|
-| Startseite | **https://vectorscope.duckdns.org/** |
-| Modul AIR | **https://vectorscope.duckdns.org/air/** |
-| Modul INTEL | **https://vectorscope.duckdns.org/intel/** |
+| Startseite | **https://vectorscope.dobner.pro/** |
+| Modul AIR | **https://vectorscope.dobner.pro/air/** |
+| Modul INTEL | **https://vectorscope.dobner.pro/intel/** |
 | Hosting | Eigener Server mit Coolify, siehe [Eigener Server](server.md). GitHub Pages ist seit Sammlung 0.22.5 stillgelegt |
 | Auslöser | Deploy in Coolify, es baut `main` |
 | Build | `npm ci`, `npm run build` im Docker-Image (`server/Dockerfile`) |
 | Basispfad | Relativ (`base: './'`), damit der Build unter jedem Repository-Namen funktioniert |
 | Proxy | `/proxy` des Servers. Lokal (`localhost`) nutzt die App `https://vectorscope-proxy.vercel.app` |
-| Einstellungen und Watchlist | `localStorage` von `vectorscope.duckdns.org`, gemeinsam für alle Module der Sammlung |
+| Einstellungen und Watchlist | `localStorage` von `vectorscope.dobner.pro`, gemeinsam für alle Module der Sammlung |
 
 ## Was veröffentlicht wird
 
@@ -29,18 +29,15 @@ dist/
 
 `npm run build` baut zuerst jedes Modul in seinen eigenen Ordner und ergänzt danach mit `scripts/build.mjs` die Startseite. Der Build bricht ab, wenn ein Modul fehlt, das in `modules.json` als `live` eingetragen ist.
 
-## GitHub Pages (stillgelegt)
+## GitHub Pages (abgeschaltet)
 
-Bis Sammlung 0.22.4 ging jeder Push nach `michaeldobner.github.io/VectorScope`. Seit 0.22.5 veröffentlicht der Workflow `deploy.yml` dort nur noch einen Abschied, gebaut von `pages-redirect/build.sh`: Jede alte Adresse (Startseite, `/air/`, `/intel/`, `/news/`) leitet auf denselben Pfad unter `vectorscope.duckdns.org` weiter, samt Parametern, und die alten Service Worker löschen ihre Caches und entfernen sich selbst. So öffnet ein Home-Bildschirm-Icon der alten Adresse den Server. Einstellungen und Watchlist ziehen nicht mit um: Sie gehören zur alten Adresse und müssen auf dem Server einmal neu gesetzt werden.
-
-GitHub Pages ganz abschalten: Repository > **Settings** > **Pages** > **Unpublish site**. Dann zeigen alte Adressen eine 404-Seite von GitHub.
+Bis Sammlung 0.22.4 ging jeder Push nach `michaeldobner.github.io/VectorScope`. Seit 0.22.5 läuft die App nur noch auf dem eigenen Server, GitHub Pages ist abgeschaltet (Settings > Pages) und der Workflow `deploy.yml` entfernt. Einstellungen und Watchlist der alten Adresse ziehen nicht mit um: auf dem Server einmal neu setzen.
 
 ## Workflows
 
 | Datei | Läuft bei | Schritte |
 |---|---|---|
 | `.github/workflows/tests.yml` | Jedem Push und Pull Request | Typprüfung, Unit-Tests und Prüfungen des Repositorys, Build |
-| `.github/workflows/deploy.yml` | Änderungen an sich selbst oder `pages-redirect/`, von Hand | Veröffentlicht die Abschieds-Weiterleitung auf GitHub Pages, kein Build der App |
 | `.github/workflows/e2e.yml` | Jedem Push und Pull Request | Rauchtest in iPhone- und iPad-Größen mit Chromium und WebKit, Screenshots als Artefakt |
 | `.github/workflows/lab.yml` | Push auf `main` mit Änderungen an Modulen, Labor oder Proxy, von Hand | Test-Labor mit echtem Internet: echte API-Antworten und Screenshots mit Live-Daten, Ergebnisse im Branch `lab-results` |
 
@@ -71,7 +68,7 @@ Nur für eine Kopie (Fork) des Repositorys nötig.
 Danach die Adresse als `BUILTIN_PROXY` in `air/src/data/feed.ts` eintragen oder ein einzelnes Gerät mit einem Tipp verbinden:
 
 ```
-https://vectorscope.duckdns.org/air/?proxy=https://dein-proxy.vercel.app
+https://vectorscope.dobner.pro/air/?proxy=https://dein-proxy.vercel.app
 ```
 
 Das Modul speichert den Proxy dauerhaft und entfernt den Parameter aus der Adresse.
@@ -114,12 +111,12 @@ Bis Version 0.2.3 lag die Flug-App unter der Hauptadresse und nutzte den Speiche
 
 | Problem | Lösung |
 |---|---|
-| Das Icon auf dem Home-Bildschirm öffnet die Startseite statt des Radars | Seit 0.3.0 ist die Adresse ohne `/air/` die Startseite. AIR antippen oder `https://vectorscope.duckdns.org/air/` zum Home-Bildschirm hinzufügen |
+| Das Icon auf dem Home-Bildschirm öffnet die Startseite statt des Radars | Seit 0.3.0 ist die Adresse ohne `/air/` die Startseite. AIR antippen oder `https://vectorscope.dobner.pro/air/` zum Home-Bildschirm hinzufügen |
 | Banner „adsb.lol does not allow direct access from browsers (CORS)“ | Der Proxy ist nicht erreichbar. `https://vectorscope-proxy.vercel.app` in Safari öffnen, dort muss die Statusseite erscheinen |
 | Banner „adsb.lol is rate limiting requests“ | Das Modul verlangsamt sich selbst. Aktualisierungsintervall auf 10 oder 20 s erhöhen |
 | Status bleibt auf CONNECTING | Netz prüfen, Proxy-Adresse unter Einstellungen > Datenquelle prüfen |
 | Standort wird nicht verwendet | In der installierten App den Standort bei der Nachfrage erlauben, oder iOS-Einstellungen > Datenschutz > Ortungsdienste > Safari-Websites. Oder in den Einstellungen einen festen Standort setzen |
 | Karte bleibt dunkel, Flugzeuge sind sichtbar | OpenFreeMap ist nicht erreichbar. Das Radar funktioniert weiter |
 | Kein Flugzeugfoto | planespotters.net hat kein Foto für dieses Flugzeug oder ist nicht erreichbar |
-| Alte Version nach einem Update | App vollständig schließen und neu öffnen. Falls nötig: iOS-Einstellungen > Apps > Safari > Erweitert > Websitedaten, `vectorscope.duckdns.org` löschen (löscht auch Einstellungen und Watchlist) |
+| Alte Version nach einem Update | App vollständig schließen und neu öffnen. Falls nötig: iOS-Einstellungen > Apps > Safari > Erweitert > Websitedaten, `vectorscope.dobner.pro` löschen (löscht auch Einstellungen und Watchlist) |
 | Einstellungen fehlen in der installierten App | Safari und die App auf dem Home-Bildschirm haben getrennte Speicher. In der installierten App einstellen |

@@ -28,7 +28,7 @@ This documentation describes VectorScope completely: how to use it, how it calcu
 | Technology | React 18, TypeScript, Vite, MapLibre GL, Vitest |
 | Hosting | Own server (Coolify), proxy under `/proxy` |
 | Privacy | No account, no server-side storage, location only on the device |
-| Address | https://vectorscope.duckdns.org/air/ |
+| Address | https://vectorscope.dobner.pro/air/ |
 | Version | 0.5.1 |
 
 <p>

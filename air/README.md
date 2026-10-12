@@ -6,12 +6,11 @@
 
 Open it and see at once what is flying above you: which aircraft will pass overhead next, where to look, and which of them are worth a second glance.
 
-<h3><a href="https://vectorscope.duckdns.org/air/">vectorscope.duckdns.org/air</a></h3>
+<h3><a href="https://vectorscope.dobner.pro/air/">vectorscope.dobner.pro/air</a></h3>
 
-[**▶ Open VectorScope Air**](https://vectorscope.duckdns.org/air/) · [Deutsch](README.de.md) · [Documentation](docs/en/README.md) · [Changelog](CHANGELOG.md)
+[**▶ Open VectorScope Air**](https://vectorscope.dobner.pro/air/) · [Deutsch](README.de.md) · [Documentation](docs/en/README.md) · [Changelog](CHANGELOG.md)
 
 [![Tests](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/tests.yml)
-[![Deploy](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml/badge.svg)](https://github.com/michaeldobner/VectorScope/actions/workflows/deploy.yml)
 
 <img src="docs/images/iphone-radar.jpg" width="230" alt="Radar view on iPhone with range rings around your position">&nbsp;&nbsp;
 <img src="docs/images/iphone-overhead.jpg" width="230" alt="Overhead list with countdown and viewing direction">&nbsp;&nbsp;
@@ -50,7 +49,7 @@ Full guide: [User guide](docs/en/user-guide.md).
 
 ## Install on iPhone or iPad
 
-1. Open **https://vectorscope.duckdns.org/air/** in **Safari**.
+1. Open **https://vectorscope.dobner.pro/air/** in **Safari**.
 2. Tap **Share**, then **Add to Home Screen**.
 3. Open VectorScope Air from the Home Screen and set your location there. Safari and the installed app keep separate storage.
 4. **Live data** comes through the [proxy of the project](../docs/en/deployment.md#cors-proxy-on-vercel), which is built in. Nothing needs to be set up. **Demo** in Settings shows simulated traffic.

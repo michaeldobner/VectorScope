@@ -16,7 +16,7 @@ INTEL does not use your location. It loads no images, so publishers only see a r
 
 ## What stays on the device
 
-Filter, place filter, the time of the last seen item and the last 300 items, in the `localStorage` of `vectorscope.duckdns.org`. Deleting the website data in Safari removes everything.
+Filter, place filter, the time of the last seen item and the last 300 items, in the `localStorage` of `vectorscope.dobner.pro`. Deleting the website data in Safari removes everything.
 
 ## Probe collector
 
