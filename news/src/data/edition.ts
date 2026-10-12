@@ -13,7 +13,9 @@ const HOUR = 3600_000;
 export const MAX_AGE = 36 * HOUR;
 /** Stories in an edition, and the least per section. */
 const KEEP = 200;
-const PER_RESSORT = 12;
+// Per section at least this many stories by importance. With 12 the close of Wall Street (CNBC, one source) fell out
+// of Business, behind GST news from India (test lab, 12 October 2026). The app shows up to 30 per section.
+const PER_RESSORT = 20;
 
 const WEIGHT: Record<Group, number> = { pub: 1, press: 1, intl: 1, biz: 0.8, tech: 0.7, fast: 0.4 };
 

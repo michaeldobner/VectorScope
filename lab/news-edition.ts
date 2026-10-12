@@ -11,4 +11,4 @@ const biz = ed.stories.filter((s) => s.ressort === 'wirtschaft').sort((a, b) => 
 console.log('\nBusiness by score:');
 biz.forEach((s, i) => console.log(` ${i + 1}. ${s.score} ${s.sources.map((x) => x.outlet).join('/')} | ${title(s).slice(0, 90)}`));
 console.log('\nStories with CNBC:');
-ed.stories.filter((s) => s.sources.some((x) => x.outlet === 'CNBC')).forEach((s) => console.log(` ${s.ressort} ${s.score} ${s.sources.length} src | ${title(s).slice(0, 90)}`));
+ed.stories.filter((s) => s.sources.some((x) => x.outlet === "CNBC" || /Wall Street|S&P/.test(x.head ?? x.title ?? ""))).forEach((s) => console.log(` ${s.ressort} ${s.score} ${s.sources.length} src | ${title(s).slice(0, 90)}`));
