@@ -40,7 +40,7 @@ Three signals, from the editorial check against ntv, Bild, CNN and CNBC on 11 Oc
 |---|---|
 | Agreement | Sum of the weights of all outlets of the story, see [Sources](sources.md) |
 | Breadth | 0.5 per country |
-| Newsrooms | Tagesschau homepage: places 1 to 3 give 4, to 8 give 2, to 15 give 1. Among the first three reports of ntv: 1.5. The highest counts |
+| Newsrooms | Tagesschau homepage: places 1 to 3 give 4, to 8 give 2, to 15 give 1. Among the first three reports of ntv and the first five of CNBC World (both ordered by their newsroom, not by time): 1.5. The highest counts |
 | DACH relevance | 0.4 per outlet from Germany, Switzerland or Austria (without DW English) |
 | Age | minus 0.12 per hour since the newest report |
 

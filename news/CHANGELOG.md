@@ -4,6 +4,11 @@ All notable changes to the module NEWS. [Deutsch](CHANGELOG.de.md) · [Changelog
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.2.4 (2026-10-12)
+
+### Fixed
+* The close of Wall Street stays in Business: the first five reports of CNBC World count like the first three of ntv (1.5), as both feeds are ordered by their newsroom, not by time. A single CNBC report never stayed in an edition before, not with 20 places per section either: measured in the test lab on 12 October 2026, "S&P 500 closes near flat" is now place 4 of Business.
+
 ## 0.2.3 (2026-10-12)
 
 ### Fixed

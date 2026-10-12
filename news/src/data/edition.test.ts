@@ -111,6 +111,14 @@ describe('edition', () => {
     expect(riad.score).toBeGreaterThan(ed.stories[1].score);
   });
 
+  it('counts the order of the CNBC World newsroom like that of ntv', () => {
+    const s = (rank: number) => {
+      const reports = [rep('cnbc-world', 'S&P 500 closes near flat', `https://www.cnbc.com/${rank}`, { rank })];
+      return buildEdition({ reports, groups: [[0]], signals: { homepage: new Map(), now: NOW }, tr: () => undefined }).stories[0].score;
+    };
+    expect(s(3) - s(12)).toBeCloseTo(1.5);
+  });
+
   it('keeps the original text while a translation is missing', () => {
     const ed = buildEdition({ reports: [reports[5]], groups: [[0]], signals: { homepage: new Map(), now: NOW }, tr: () => undefined });
     expect(ed.stories[0].lead.en).toMatchObject({ head: reports[5].title, translated: false, lang: 'de' });

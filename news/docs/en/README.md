@@ -23,4 +23,4 @@ This documentation describes the module NEWS: how to use it, which sources it re
 | Language | App in German or English, reports in German, English or the original |
 | Perspective | German-speaking or global |
 | Address | The own server, path `/news/` |
-| Version | 0.2.3 |
+| Version | 0.2.4 |

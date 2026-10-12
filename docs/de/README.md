@@ -33,4 +33,4 @@ Diese Dokumentation beschreibt die VectorScope-Sammlung als Ganzes: wie das Repo
 | Hosting | Eigener Server (Coolify), Proxy unter `/proxy` |
 | Datenschutz | Kein Konto, keine Speicherung auf Servern, Standort nur auf dem Gerät |
 | Adresse | https://vectorscope.dobner.pro/ |
-| Version | 0.22.9 |
+| Version | 0.22.10 |

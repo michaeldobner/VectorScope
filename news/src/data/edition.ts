@@ -186,6 +186,9 @@ function scores(reports: Report[], sig: Signals) {
     const home = sig.homepage.get(r.link);
     if (home != null) editors = Math.max(editors, home < 3 ? 4 : home < 8 ? 2 : home < 15 ? 1 : 0);
     if (r.feed === 'ntv' && r.rank < 3) editors = Math.max(editors, 1.5);
+    // CNBC World is ordered by its editors, not by time: its first five are what CNBC leads with, the close of
+    // Wall Street among them (test lab, 12 October 2026). Without this a single CNBC report never stays in an edition.
+    if (r.feed === 'cnbc-world' && r.rank < 5) editors = Math.max(editors, 1.5);
   }
   const score = sum(all) + 0.5 * countries(all) + editors + 0.4 * dach.length - 0.12 * age;
   const worldScore = sum(intl) + 0.5 * countries(intl) + 0.2 * dach.length - 0.12 * age;

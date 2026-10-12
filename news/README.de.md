@@ -45,6 +45,6 @@ NEWS läuft auf dem eigenen Server, der auch die Nachrichten sammelt. Dessen Adr
 
 ## Version
 
-Aktuelle Version: **0.2.3**. Alle Änderungen im [Changelog](CHANGELOG.de.md).
+Aktuelle Version: **0.2.4**. Alle Änderungen im [Changelog](CHANGELOG.de.md).
 
 Schlagzeilen, Anrisse und Bilder © ihre Verlage, jeweils mit dem Original verlinkt.

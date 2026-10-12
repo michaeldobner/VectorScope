@@ -40,7 +40,7 @@ Drei Signale, aus der Redaktionsprüfung gegen ntv, Bild, CNN und CNBC am 11. Ok
 |---|---|
 | Übereinstimmung | Summe der Gewichte aller Medien der Geschichte, siehe [Quellen](quellen.md) |
 | Breite | 0,5 je Land |
-| Redaktionen | Startseite der Tagesschau: Platz 1 bis 3 gibt 4, bis 8 gibt 2, bis 15 gibt 1. Unter den ersten drei Meldungen von ntv: 1,5. Es zählt das höchste |
+| Redaktionen | Startseite der Tagesschau: Platz 1 bis 3 gibt 4, bis 8 gibt 2, bis 15 gibt 1. Unter den ersten drei Meldungen von ntv und den ersten fünf von CNBC World (beide nach Redaktion sortiert, nicht nach Zeit): 1,5. Es zählt das höchste |
 | DACH-Bezug | 0,4 je Medium aus Deutschland, der Schweiz oder Österreich (ohne DW English) |
 | Alter | minus 0,12 je Stunde seit der neuesten Meldung |
 

@@ -4,6 +4,11 @@ Alle wesentlichen Änderungen am Modul NEWS. [English](CHANGELOG.md) · [Changel
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.2.4 (2026-10-12)
+
+### Behoben
+* Der Börsenschluss in New York bleibt in Wirtschaft: Die ersten fünf Meldungen von CNBC World zählen wie die ersten drei von ntv (1,5), denn beide Feeds sind nach Redaktion sortiert, nicht nach Zeit. Eine einzelne CNBC-Meldung blieb vorher nie in einer Ausgabe, auch nicht mit 20 Plätzen pro Ressort: Gemessen im Test-Labor am 12. Oktober 2026 steht „S&P 500 closes near flat“ jetzt auf Platz 4 von Wirtschaft.
+
 ## 0.2.3 (2026-10-12)
 
 ### Behoben
