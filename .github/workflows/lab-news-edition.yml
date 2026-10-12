@@ -1,0 +1,19 @@
+name: Lab NEWS edition
+# Temporary: one real edition on the work branch, to see where CNBC lands.
+on:
+  push:
+    branches: [claude/news-cnbc-lab]
+permissions:
+  contents: read
+jobs:
+  edition:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --omit=optional
+      - run: EMBED=0 npx tsx collector/news.ts news-out
+      - run: npx tsx lab/news-edition.ts news-out/news.json
