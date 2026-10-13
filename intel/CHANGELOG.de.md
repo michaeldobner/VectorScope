@@ -4,6 +4,14 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.15.4 (2026-10-13)
+
+### Behoben
+* **Jeder Telegram-Kanal gegen seinen Betreiber geprüft** im Test-Labor (13. Oktober 2026): Titel, Verifizierungs-Haken, Beschreibung, Links, letzter Beitrag, wo unklar auch die offizielle Webseite.
+  * Gouverneur Belgorod: `t.me/aleksandr_shuvaev` (Alexander Schuwajew), verlinkt von belregion.ru und der Regionalregierung. `vvgladkov` gehört Gladkow, inzwischen Botschafter in Abchasien. Neue Quellen-Kennung `shuvaev`.
+  * Rybar DE (`rybarde`) entfernt: laut eigener Beschreibung eine inoffizielle Übersetzung von Fans. Die Original-Kanäle von Rybar bleiben.
+  * 193 Quellen.
+
 ## 0.15.3 (2026-10-13)
 
 ### Behoben

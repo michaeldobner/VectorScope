@@ -28,4 +28,4 @@ This documentation describes module INTEL: how to use it, which sources it reads
 | Refresh | Feed every five minutes while the app is open |
 | Language | English interface, reports in their original language or translated into German with **DE** |
 | Address | https://vectorscope.dobner.pro/intel/ |
-| Version | 0.15.3 |
+| Version | 0.15.4 |

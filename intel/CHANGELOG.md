@@ -4,6 +4,14 @@ All notable changes to module INTEL. [Deutsch](CHANGELOG.de.md) · [Changelog of
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.15.4 (2026-10-13)
+
+### Fixed
+* **Every Telegram channel checked against its owner** in the test lab (13 October 2026): title, verified badge, description, links, last post, and where unclear the official website.
+  * Governor Belgorod: `t.me/aleksandr_shuvaev` (Alexander Shuvaev), linked by belregion.ru and the regional government. `vvgladkov` belongs to Gladkov, now ambassador to Abkhazia. New source id `shuvaev`.
+  * Removed Rybar DE (`rybarde`): by its own description an unofficial translation by fans. The original Rybar channels stay.
+  * 193 sources.
+
 ## 0.15.3 (2026-10-13)
 
 ### Fixed

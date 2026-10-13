@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.22.12 (2026-10-13)
+
+### Fixed
+* Module INTEL 0.15.4: Telegram channels checked against their owners, governor of Belgorod corrected, unofficial Rybar DE removed. The proxy reads `aleksandr_shuvaev` instead of `vvgladkov` and no longer `rybarde`.
+
 ## 0.22.11 (2026-10-13)
 
 ### Fixed

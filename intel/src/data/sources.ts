@@ -72,7 +72,8 @@ export const SOURCES: Source[] = [
   { id: 'favt', name: 'Rosaviatsiya', tier: 'primary', category: 'aviation', region: 'russia', lang: 'ru', trust: 90, perspective: 'Russian official', ...tg('favt_info') },
   { id: 'mchs', name: 'MChS Russia', tier: 'primary', category: 'disaster', region: 'russia', lang: 'ru', trust: 85, perspective: 'Russian official', ...tg('mchs_official') },
   { id: 'sledcom', name: 'Investigative Committee', tier: 'primary', category: 'general', region: 'russia', lang: 'ru', trust: 75, perspective: 'Russian official', ...tg('sledcom_press') },
-  { id: 'gladkov', name: 'Governor Belgorod', tier: 'primary', category: 'general', region: 'russia', lang: 'ru', trust: 80, perspective: 'Russian official', ...tg('vvgladkov') },
+  // Governor since Gladkov became ambassador to Abkhazia: linked by belregion.ru and the regional government (test lab, 13 October 2026).
+  { id: 'shuvaev', name: 'Governor Belgorod', tier: 'primary', category: 'general', region: 'russia', lang: 'ru', trust: 80, perspective: 'Russian official', ...tg('aleksandr_shuvaev') },
   { id: 'bogomaz', name: 'Governor Bryansk', tier: 'primary', category: 'general', region: 'russia', lang: 'ru', trust: 78, perspective: 'Russian official', ...tg('AVBogomaz') },
   { id: 'gusev', name: 'Governor Voronezh', tier: 'primary', category: 'general', region: 'russia', lang: 'ru', trust: 80, perspective: 'Russian official', ...tg('gusev_36') },
   { id: 'razvozhaev', name: 'Governor Sevastopol', tier: 'primary', category: 'general', region: 'russia', lang: 'ru', trust: 78, perspective: 'Russian official', ...tg('razvozhaev') },
@@ -123,7 +124,6 @@ export const SOURCES: Source[] = [
   // Rybar: one network of channels, counted as one source
   { id: 'rybar', name: 'Rybar', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'russia', lang: 'ru', ...tg('rybar') },
   { id: 'rybar-en', name: 'Rybar in English', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'russia', lang: 'en', ...tg('rybar_in_english') },
-  { id: 'rybar-de', name: 'Rybar DE', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'dach', lang: 'de', ...tg('rybarde') },
   { id: 'rybar-mena', name: 'Rybar Orientar (Middle East)', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'mideast', lang: 'ru', ...tg('rybar_mena') },
   { id: 'rybar-europe', name: 'Rybar Evropar (Europe)', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'europe', lang: 'ru', ...tg('evropar') },
   { id: 'rybar-balkans', name: 'Rybar Balkanar (Balkans)', tier: 'perspective', category: 'military', trust: 45, perspective: 'pro-Russian', network: 'rybar', region: 'europe', lang: 'ru', ...tg('balkanar') },

@@ -2,7 +2,7 @@
 
 [Deutsche Version](../de/quellen.md) · [Overview](README.md)
 
-INTEL reads 194 sources in seven classes, from Russia, Ukraine, the Middle East, Europe, Germany and the USA plus global sensors. Quality over quantity: every source was checked in the test lab with real internet before it was added. The list lives in `src/data/sources.ts`.
+INTEL reads 193 sources in seven classes, from Russia, Ukraine, the Middle East, Europe, Germany and the USA plus global sensors. Quality over quantity: every source was checked in the test lab with real internet before it was added. The list lives in `src/data/sources.ts`.
 
 ## Class and trust
 
@@ -46,7 +46,7 @@ The originator itself: authorities, military, governors, airports.
 | Rosaviatsiya | Russia | Russian | 90 | Russian official | Telegram `favt_info` |
 | MChS Russia | Russia | Russian | 85 | Russian official | Telegram `mchs_official` |
 | Investigative Committee | Russia | Russian | 75 | Russian official | Telegram `sledcom_press` |
-| Governor Belgorod | Russia | Russian | 80 | Russian official | Telegram `vvgladkov` |
+| Governor Belgorod | Russia | Russian | 80 | Russian official | Telegram `aleksandr_shuvaev`, Alexander Shuvaev, linked by belregion.ru |
 | Governor Bryansk | Russia | Russian | 78 | Russian official | Telegram `AVBogomaz` |
 | Governor Voronezh | Russia | Russian | 80 | Russian official | Telegram `gusev_36` |
 | Governor Sevastopol | Russia | Russian | 78 | Russian official | Telegram `razvozhaev` |
@@ -118,7 +118,6 @@ Fast, but clearly partisan. Valuable as an early signal, weak as confirmation.
 |---|---|---|---|---|---|
 | Rybar | Russia | Russian | 45 | pro-Russian | Telegram `rybar` |
 | Rybar in English | Russia | English | 45 | pro-Russian, network Rybar | Telegram `rybar_in_english` |
-| Rybar DE | DACH | German | 45 | pro-Russian, network Rybar | Telegram `rybarde` |
 | Rybar Orientar | Middle East | Russian | 45 | pro-Russian, network Rybar | Telegram `rybar_mena` |
 | Rybar Evropar | Europe | Russian | 45 | pro-Russian, network Rybar | Telegram `evropar` |
 | Rybar Balkanar | Europe | Russian | 45 | pro-Russian, network Rybar | Telegram `balkanar` |

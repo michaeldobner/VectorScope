@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.22.12 (2026-10-13)
+
+### Behoben
+* Modul INTEL 0.15.4: Telegram-Kanäle gegen ihre Betreiber geprüft, Gouverneur Belgorod korrigiert, inoffizielles Rybar DE entfernt. Der Proxy liest `aleksandr_shuvaev` statt `vvgladkov` und nicht mehr `rybarde`.
+
 ## 0.22.11 (2026-10-13)
 
 ### Behoben
