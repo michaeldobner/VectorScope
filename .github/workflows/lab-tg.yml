@@ -13,4 +13,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node lab/tg-check.mjs osintdefender DefenderDome
+      - run: node lab/tg-check.mjs favt_info mchs_official sledcom_press vvgladkov AVBogomaz gusev_36 razvozhaev opershtab23 mos_sobyanin kpszsu idfofficial bazabazon mash shot_shot ENews112 astrapress ostorozhno_novosti ostorozhno_moskva news_sirena nexta_tv DefenderDome rageintel warmonitors insiderpaper ClashReport liveuamap DeepStateUA netblocks mediazzzona agentstvonews thebell_io rybar rybar_in_english rybarde rybar_mena evropar balkanar caucasar rybar_pacific rybar_stan rybar_africa rybar_latam rybar_tactical rybar_america wargonzo dva_majors Middle_East_Spectator abualiexpress meduzalive currenttime MID_Russia V_Zelenskiy_official
