@@ -13,4 +13,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node lab/site-links.mjs https://liveuamap.com/ https://liveuamap.com/about https://belregion.ru/ https://www.rageintel.com/ https://rybar.ru/ && node lab/tg-check.mjs liveuamap_com liveuamap_en belgorod_governor
+      - run: node lab/tg-check.mjs aleksandr_shuvaev belregion_ru
