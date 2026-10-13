@@ -1190,7 +1190,14 @@ function SourcesPanel({ st }: { st: IntelState }) {
   const failing = live.filter((s) => st.sources[s.id] && !st.sources[s.id].ok);
   const ok = live.filter((s) => st.sources[s.id]?.ok).length;
   const q = query.trim().toLowerCase();
-  const found = q ? SOURCES.filter((s) => `${s.name} ${s.id} ${REGION_LABEL[s.region]} ${s.perspective ?? ''} ${s.party ? PARTIES[s.party].label : ''}`.toLowerCase().includes(q)) : [];
+  // Spaces, dots and dashes do not count: "osint defender" finds OSINTdefender, "rybar" finds Rybar.
+  const compact = (t: string) => t.toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
+  const found = q
+    ? SOURCES.filter((s) => {
+        const text = `${s.name} ${s.id} ${REGION_LABEL[s.region]} ${s.perspective ?? ''} ${s.party ? PARTIES[s.party].label : ''}`;
+        return text.toLowerCase().includes(q) || (compact(q).length > 0 && compact(text).includes(compact(q)));
+      })
+    : [];
   const newest = (list: Source[]) => Math.max(0, ...list.map((s) => st.sources[s.id]?.newest ?? 0));
   return (
     <section className="panel">

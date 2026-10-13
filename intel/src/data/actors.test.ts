@@ -85,10 +85,10 @@ describe("lenses", () => {
   });
 
   it("keeps security sources in security and adds politics only with political content", () => {
-    expect(lens("osintdefender", "B-1 bombers leave RAF Fairford")).toEqual({
+    expect(lens("defenderdome", "B-1 bombers leave RAF Fairford")).toEqual({
       security: true,
     });
-    expect(lens("osintdefender", "Trump: we will talk to Putin today")).toEqual(
+    expect(lens("defenderdome", "Trump: we will talk to Putin today")).toEqual(
       { security: true, politics: true },
     );
   });

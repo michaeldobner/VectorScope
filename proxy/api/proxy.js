@@ -95,7 +95,7 @@ const TELEGRAM = [
   'ostorozhno_moskva',
   'news_sirena',
   'nexta_tv',
-  'osintdefender',
+  'DefenderDome',
   'rageintel',
   'warmonitors',
   'insiderpaper',

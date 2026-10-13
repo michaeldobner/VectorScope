@@ -71,7 +71,7 @@ Very fast newsrooms and incident channels, often minutes after an event, without
 | Ostorozhno, Moskva | Russia | Russian | 58 |  | Telegram `ostorozhno_moskva` |
 | Sirena | Russia | Russian | 58 | independent Russian | Telegram `news_sirena` |
 | NEXTA | Europe | Russian | 55 | Belarusian opposition | Telegram `nexta_tv` |
-| OSINTdefender | Global | English | 58 |  | Telegram `osintdefender` |
+| OSINTdefender (The Defender Dome) | Global | English | 58 |  | Telegram `DefenderDome`, the channel of @sentdefender on X. `t.me/osintdefender` is a different channel (read by mistake up to INTEL 0.15.2) |
 | RAGE X | Global | English | 55 |  | Telegram `rageintel` |
 | War Monitor | Global | English | 50 |  | Telegram `warmonitors` |
 | Insider Paper | Global | English | 55 |  | Telegram `insiderpaper` |

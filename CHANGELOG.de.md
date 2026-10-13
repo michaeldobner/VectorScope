@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.22.11 (2026-10-13)
+
+### Behoben
+* Modul INTEL 0.15.3: OSINTdefender aus seinem echten Telegram-Kanal, der Proxy liest `DefenderDome` statt `osintdefender`.
+
 ## 0.22.10 (2026-10-12)
 
 ### Behoben

@@ -91,7 +91,9 @@ export const SOURCES: Source[] = [
   { id: 'ostorozhnomsk', name: 'Ostorozhno, Moskva', tier: 'early', category: 'general', region: 'russia', lang: 'ru', trust: 58, network: 'ostorozhno', ...tg('ostorozhno_moskva') },
   { id: 'sirena', name: 'Sirena', tier: 'early', category: 'general', region: 'russia', lang: 'ru', trust: 58, perspective: 'independent Russian', ...tg('news_sirena') },
   { id: 'nexta', name: 'NEXTA', tier: 'early', category: 'general', region: 'europe', lang: 'ru', trust: 55, perspective: 'Belarusian opposition', ...tg('nexta_tv') },
-  { id: 'osintdefender', name: 'OSINTdefender', tier: 'early', category: 'general', region: 'global', lang: 'en', trust: 58, ...tg('osintdefender') },
+  // The Telegram channel of OSINTdefender (@sentdefender on X) is The Defender Dome: same description, same ko-fi link.
+  // t.me/osintdefender is someone else (defence industry news). Checked in the test lab on 13 October 2026.
+  { id: 'defenderdome', name: 'OSINTdefender (The Defender Dome)', tier: 'early', category: 'general', region: 'global', lang: 'en', trust: 58, ...tg('DefenderDome') },
   { id: 'rageintel', name: 'RAGE X', tier: 'early', category: 'general', region: 'global', lang: 'en', trust: 55, ...tg('rageintel') },
   { id: 'warmonitors', name: 'War Monitor', tier: 'early', category: 'general', region: 'global', lang: 'en', trust: 50, ...tg('warmonitors') },
   { id: 'insiderpaper', name: 'Insider Paper', tier: 'early', category: 'general', region: 'global', lang: 'en', trust: 55, ...tg('insiderpaper') },

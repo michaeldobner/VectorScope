@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.22.11 (2026-10-13)
+
+### Fixed
+* Module INTEL 0.15.3: OSINTdefender from its real Telegram channel, the proxy reads `DefenderDome` instead of `osintdefender`.
+
 ## 0.22.10 (2026-10-12)
 
 ### Fixed

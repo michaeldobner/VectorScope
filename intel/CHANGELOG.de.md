@@ -4,6 +4,12 @@ Alle wesentlichen Änderungen am Modul INTEL. [English](CHANGELOG.md) · [Change
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.15.3 (2026-10-13)
+
+### Behoben
+* **OSINTdefender aus seinem echten Telegram-Kanal:** `t.me/DefenderDome` (The Defender Dome), der Kanal von @sentdefender auf X, gleiche Beschreibung und gleicher ko-fi-Link. Bis 0.15.2 las INTEL `t.me/osintdefender`, einen anderen Kanal mit Rüstungsmeldungen unter demselben Namen. Geprüft im Test-Labor am 13. Oktober 2026. Neue Quellen-Kennung `defenderdome`.
+* Die Quellensuche übergeht Leerzeichen, Punkte und Bindestriche: „osint defender“ findet OSINTdefender.
+
 ## 0.15.2 (2026-10-10)
 
 ### Behoben
