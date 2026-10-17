@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.22.16 (2026-10-17)
+
+### Geändert
+* Modul NEWS 0.3.3: flämische Regionalmeldungen unter Belgien, eine Haushaltsgeschichte statt zwei, VRT-Schlagzeilen zuverlässiger erkannt.
+
 ## 0.22.15 (2026-10-17)
 
 ### Geändert

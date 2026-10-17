@@ -27,7 +27,8 @@ const dot = (a: Float32Array, b: Float32Array) => {
   for (let i = 0; i < a.length; i++) s += a[i] * b[i];
   return s;
 };
-const STOP = new Set('der die das und ein eine einer eines mit von für auf nach bei aus im in am zum zur den dem des ist sind wird werden the a an of to in on for with after from by at as is are was were and or über vor nach gegen'.split(' '));
+const STOP = new Set(('der die das und ein eine einer eines mit von für auf nach bei aus im in am zum zur den dem des ist sind wird werden the a an of to in on for with after from by at as is are was were and or über vor nach gegen ' +
+  'het een van voor met naar bij uit aan over door dat die zijn wordt worden niet ook nog maar').split(' '));
 const words = (s: string) => new Set(s.toLowerCase().replace(/[^\p{L}\p{N} ]/gu, ' ').split(/\s+/).filter((w) => w.length > 2 && !STOP.has(w)));
 /** A long word both titles share, like "meerjarenbegroting" or "schuldenrem": names the same topic. */
 const LONG = 9;
@@ -37,6 +38,8 @@ const sharesLong = (a: Set<string>, b: Set<string>) => {
 };
 /** How much a shared long word in the original titles lowers the bar. */
 const SHARED_WORD = 0.1;
+/** Titles in one language with this share of words in common are one story, whatever the vectors say. */
+const SAME_WORDS = 0.4;
 const jaccard = (a: Set<string>, b: Set<string>) => {
   let n = 0;
   for (const w of a) if (b.has(w)) n++;
@@ -63,7 +66,10 @@ export function group(reports: Report[], vectors?: Float32Array[], threshold = 0
         // A long word in common, in the same language (a budget, a motorway, a club): the bar drops by SHARED_WORD.
         // Flemish live pages and headlines of the same event differ too much for the bar of translated titles.
         const bar = (vectors && langs && langs[i] !== langs[j] ? CROSS_LANG : 0) + (vectors && sharesLong(bags[i], bags[j]) ? SHARED_WORD : 0);
-        const sim = (vectors ? dot(vectors[i], vectors[j]) : jaccard(bags[i], bags[j])) + bar;
+        // Two Flemish outlets, almost the same words ("De Wever haalt schuldenrem voorlopig weer van tafel"): one
+        // story, even when one title is still untranslated and its vector was made in Dutch.
+        const words = jaccard(bags[i], bags[j]);
+        const sim = vectors ? (words >= SAME_WORDS ? Math.max(threshold, dot(vectors[i], vectors[j]) + bar) : dot(vectors[i], vectors[j]) + bar) : words + bar;
         if (sim >= bestSim) {
           bestSim = sim;
           best = s;
@@ -88,6 +94,11 @@ const BY_PATH: [Ressort, RegExp][] = [
 ];
 /** Home news of a Belgian outlet by its address. */
 const BE_PATH = /\/(binnenland|belgie|belgium|belgique|vlaanderen|brussel|brussels|regio|politiek|politics)\b/i;
+/** Categories of Belgian feeds (VRT NWS: Binnenland, Regio, Verkeer, Buitenland, Azië …). */
+const BE_CATEGORY: [Ressort, RegExp][] = [
+  ['welt', /buitenland|europa|azi[eë]|afrika|amerika|midden-oosten|oorlog|wereld|world/i],
+  ['be', /binnenland|regio|verkeer|politiek|belgi|brussel|vlaander|walloni|justitie|onderwijs/i],
+];
 const BY_CATEGORY: [Ressort, RegExp][] = [
   ['sport', /sport|fußball|fussball|football/i],
   ['tech', /digital|technolog|netzwelt|computer/i],
@@ -119,6 +130,8 @@ export function classify(r: Report, feed: Feed): Ressort | null {
   } catch {}
   for (const [res, re] of BY_PATH) if (re.test(path)) return res;
   if (feed.cc === 'BE' && BE_PATH.test(path)) return 'be';
+  if (feed.cc === 'BE' && /\/(buitenland|world|wereld)\b/i.test(path)) return 'welt';
+  if (feed.cc === 'BE' && r.category) for (const [res, re] of BE_CATEGORY) if (re.test(r.category)) return res;
   if (r.category) for (const [res, re] of BY_CATEGORY) if (re.test(r.category)) return res;
   if (SPORT_WORDS.test(r.title) && /\d+:\d+|\d+-\d+/.test(r.title + r.teaser)) return 'sport';
   if (SPORT_EVENTS.test(r.title)) return 'sport';
@@ -135,6 +148,9 @@ function ressortOf(reports: Report[]): Ressort {
     const res = feed && classify(r, feed);
     if (res) votes.set(res, (votes.get(res) ?? 0) + 1);
   }
+  // Nothing says, and only Belgian outlets report: Belgian news, a crash in Langemark, a bus shelter in Wuustwezel.
+  // Their feeds name no section in the address, and village names are in no list.
+  if (!votes.size && reports.every((r) => feedById(r.feed)?.cc === 'BE')) return 'be';
   let best: Ressort = 'welt';
   let n = 0;
   for (const res of PRIORITY) if ((votes.get(res) ?? 0) > n) [best, n] = [res, votes.get(res)!];
@@ -187,9 +203,9 @@ function leadFor(lang: MsgLang, reports: Report[], tr: Translate): Lead {
 // ---------- Importance ----------
 
 export interface Signals {
-  /** Link of a report to its position on the Tagesschau homepage. */
+  /** Link (or title) of a report to its position on the Tagesschau homepage, see placeMap. */
   homepage: Map<string, number>;
-  /** Link of a report to its position in the headlines of VRT NWS. */
+  /** The same for the headlines of VRT NWS. */
   beHomepage?: Map<string, number>;
   now: number;
 }
@@ -208,9 +224,9 @@ function scores(reports: Report[], sig: Signals) {
   let beEditors = 0;
   const places = (n: number) => (n < 3 ? 4 : n < 8 ? 2 : n < 15 ? 1 : 0);
   for (const r of reports) {
-    const vrt = sig.beHomepage?.get(r.link);
+    const vrt = sig.beHomepage && placeOf(sig.beHomepage, r);
     if (vrt != null) beEditors = Math.max(beEditors, places(vrt));
-    const home = sig.homepage.get(r.link);
+    const home = placeOf(sig.homepage, r);
     if (home != null) editors = Math.max(editors, places(home));
     if (r.feed === 'ntv' && r.rank < 3) editors = Math.max(editors, 1.5);
     // CNBC World is ordered by its editors, not by time: its first five are what CNBC leads with, the close of
@@ -303,6 +319,19 @@ export function buildEdition({ reports, groups, signals, tr, ogImage, logos }: E
   const all = kept.flatMap((s) => s.sources);
   return { at: signals.now, outlets: new Set(all.map((s) => s.outlet)).size, countries: new Set(all.map((s) => s.cc)).size, stories: kept };
 }
+
+/** A link without query, anchor and trailing slash: the headline feed and the article feed may write it differently. */
+const bareLink = (l: string) => l.replace(/^http:/, 'https:').replace(/[?#].*$/, '').replace(/\/+$/, '');
+/** Position of every report of a homepage or headline feed, by link and by title. */
+export function placeMap(list: Report[]): Map<string, number> {
+  const m = new Map<string, number>();
+  for (const r of list) {
+    if (!m.has(bareLink(r.link))) m.set(bareLink(r.link), r.rank);
+    if (!m.has(`t:${r.title}`)) m.set(`t:${r.title}`, r.rank);
+  }
+  return m;
+}
+const placeOf = (m: Map<string, number>, r: Report) => m.get(r.link) ?? m.get(bareLink(r.link)) ?? m.get(`t:${r.title}`);
 
 /** Reports that belong into an edition: fresh, real news, no homepage entries. */
 export const usableReports = (reports: Report[], now: number, isNoise: (t: string) => boolean) =>

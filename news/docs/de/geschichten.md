@@ -15,6 +15,7 @@ Jede Schlagzeile wird ein Vektor des mehrsprachigen Modells `paraphrase-multilin
 * Meldungen werden nach Zeit durchgegangen. Eine Meldung schließt sich der Geschichte an, deren ähnlichste Meldung eine Kosinus-Ähnlichkeit von mindestens **0,8** hat.
 * Sind zwei Vektoren in verschiedenen Sprachen entstanden, weil eine Übersetzung fehlt, sinkt die Schwelle um **0,08**. So finden „Viele Tote bei Angriff auf Flughafen in Riad“ und „Twelve killed in attack on Riyadh airport“ zusammen. In der ersten echten Runde wurde Riad so eine Geschichte mit 16 Quellen.
 * Teilen zwei Titel ein langes Wort (ab 9 Buchstaben, etwa „meerjarenbegroting“ oder „schuldenrem“), sinkt die Schwelle um weitere **0,1**. Flämische Liveticker und Schlagzeilen zum selben Ereignis klingen sonst zu verschieden.
+* Zwei Titel mit mindestens 40 % gemeinsamen Wörtern sind eine Geschichte, egal was die Vektoren sagen, etwa zwei flämische Medien mit „De Wever haalt schuldenrem voorlopig weer van tafel“, während ein Titel noch unübersetzt ist.
 * Zwei Meldungen desselben Feeds kommen nie über den Vergleich miteinander in eine Geschichte.
 * Ohne Modell zählen gemeinsame Wörter (Jaccard ab 0,5). Das findet nur Meldungen in derselben Sprache.
 
@@ -27,7 +28,7 @@ Jede Meldung bekommt ein Ressort, wenn etwas es sagt, in dieser Reihenfolge:
 1. Der Feed ist ein Ressort (SRF Schweiz, SRF Wirtschaft, NZZ Schweiz, heise, Golem).
 2. Die Adresse des Artikels: `/sport/`, `/wirtschaft/`, `/wissen/`, `/kultur/`, `/inland/`, `/schweiz/` und ähnliche, auf Deutsch und Englisch.
 3. Die Kategorie im Feed, bei der Tagesschau zum Beispiel „inland“.
-4. Wörter im Titel: Ergebnis mit Sportbegriff wird Sport, Bundestag, Kanton, ÖVP, Merz, Zürich und ähnliche in einem deutschsprachigen Titel werden DACH; Vlaanderen, Wallonien, De Wever, N-VA, De Lijn und ähnliche in jedem Titel werden Belgien, Brüssel allein nicht, im Ausland meint es meist die EU. Belgische Medien auch nach ihrer Adresse (`/binnenland/`, `/belgium/`).
+4. Wörter im Titel: Ergebnis mit Sportbegriff wird Sport, Bundestag, Kanton, ÖVP, Merz, Zürich und ähnliche in einem deutschsprachigen Titel werden DACH; Vlaanderen, Wallonien, De Wever, N-VA, De Lijn und ähnliche in jedem Titel werden Belgien, Brüssel allein nicht, im Ausland meint es meist die EU. Belgische Medien auch nach ihrer Adresse (`/binnenland/`, `/belgium/`) und ihrer Kategorie (VRT NWS: Binnenland, Regio, Verkeer werden Belgien, Buitenland, Azië und ähnliche Welt). Eine Geschichte, über die nur belgische Medien berichten und bei der sonst nichts das Ressort sagt, ist Belgien: ein Unfall in Langemark, ein Bushäuschen in Wuustwezel.
 
 Die Geschichte nimmt das Ressort mit den meisten Stimmen, bei Gleichstand in der Reihenfolge Sport, Tech, Wirtschaft, Wissenschaft, Kultur, DACH, Belgien. **Ein Ressort braucht ein Drittel der Meldungen**, sonst wird es Welt. So macht ein Wirtschaftsfeed unter vier Weltmeldungen keine Wirtschaftsgeschichte.
 

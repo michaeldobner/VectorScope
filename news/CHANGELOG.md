@@ -4,6 +4,13 @@ All notable changes to the module NEWS. [Deutsch](CHANGELOG.de.md) · [Changelog
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.3.3 (2026-10-17)
+
+### Fixed
+* **Regional news from Flanders was missing in Belgium:** VRT NWS names no section in its addresses, so a crash in Langemark landed in World. Now the category of the feed counts (Atom `term`), and a story only Belgian outlets report goes to Belgium when nothing else says.
+* **The same budget story twice:** De Morgen and HLN with almost the same title stayed apart. Titles with 40 % of their words in common are now one story; Dutch filler words no longer count.
+* **The headlines of VRT NWS** are found by link without query and by title, in case the headline feed writes the address differently.
+
 ## 0.3.2 (2026-10-17)
 
 ### Changed

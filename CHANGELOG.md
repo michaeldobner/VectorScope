@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.22.16 (2026-10-17)
+
+### Changed
+* Module NEWS 0.3.3: Flemish regional news in Belgium, one budget story instead of two, VRT headlines found more reliably.
+
 ## 0.22.15 (2026-10-17)
 
 ### Changed

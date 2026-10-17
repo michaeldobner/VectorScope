@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildEdition, classify, findLogos, group, shortTeaser, usableReports } from './edition';
+import { buildEdition, classify, findLogos, group, placeMap, shortTeaser, usableReports } from './edition';
 import { feedById } from './feeds';
 import { bigger, cleanTitle, decode, imageOf, isNoise, parseFeed } from './parse';
 import type { Report } from './types';
@@ -24,6 +24,11 @@ describe('parse', () => {
     expect(r.time).toBe(Date.parse('2026-10-10T18:03:00Z'));
     expect(r.image).toBe('https://ichef.bbci.co.uk/ace/standard/976/x.jpg');
     expect(imageOf('<description>&lt;img src="https://cpx.golem.de/cpx.php?a=1"&gt;</description>')).toBeUndefined();
+  });
+
+  it('reads the category of Atom as attribute', () => {
+    const atom = '<feed><entry><title>T</title><link href="https://www.vrt.be/a"/><updated>2026-10-10T15:58:00+02:00</updated><category term="Binnenland"/></entry></feed>';
+    expect(parseFeed(atom, feedById('vrt')!)[0].category).toBe('Binnenland');
   });
 
   it('reads Atom and the Tagesschau API', () => {
@@ -157,6 +162,27 @@ describe('edition', () => {
     const close = [Float32Array.from([1, 0]), Float32Array.from([0.72, Math.sqrt(1 - 0.72 ** 2)])];
     expect(group(rs, close, 0.8, ['nl', 'nl'])).toHaveLength(1);
     expect(group([rs[0], rep('demorgen', 'Andere zaak in Gent', 'c')], close, 0.8, ['nl', 'nl'])).toHaveLength(2);
+  });
+
+  it('joins Flemish titles with almost the same words, whatever the vectors say', () => {
+    const rs = [rep('demorgen', 'Premier De Wever haalt schuldenrem voorlopig weer van tafel, toch op zoek naar akkoord over meerjarenbegroting', 'a'), rep('hln', 'De Wever haalt schuldenrem voorlopig weer van tafel en gaat toch op zoek naar 10 miljard euro aan besparingen', 'b')];
+    const far = [Float32Array.from([1, 0]), Float32Array.from([0.3, Math.sqrt(1 - 0.09)])];
+    expect(group(rs, far, 0.8, ['en', 'nl'])).toHaveLength(1);
+  });
+
+  it('puts Belgian news without a section into Belgium, and VRT categories decide', () => {
+    const ed = buildEdition({ reports: [rep('vrt', 'Man (22) zit uur gekneld in wrak in Langemark', 'https://www.vrt.be/vrtnws/nl/2026/10/17/langemark/')], groups: [[0]], signals: { homepage: new Map(), now: NOW }, tr });
+    expect(ed.stories[0].ressort).toBe('be');
+    expect(classify(rep('vrt', 'Singapore beschuldigt 7 Indonesische bedrijven', 'https://vrt/x', { category: 'Azië' }), feedById('vrt')!)).toBe('welt');
+    expect(classify(rep('vrt', 'Klanten van Delhaize kunnen weer bestellen', 'https://vrt/y', { category: 'Binnenland' }), feedById('vrt')!)).toBe('be');
+  });
+
+  it('finds the place of a headline by link without query or by title', () => {
+    const m = placeMap([rep('vrt-home', 'E25 versperd in Sprimont', 'https://www.vrt.be/vrtnws/nl/2026/10/17/e25/?utm=x', { rank: 0 })]);
+    const one = (r: Report) => buildEdition({ reports: [r], groups: [[0]], signals: { homepage: new Map(), beHomepage: m, now: NOW }, tr }).stories[0].beScore;
+    const base = one(rep('vrt', 'Iets anders', 'https://other'));
+    expect(one(rep('vrt', 'Iets anders', 'https://www.vrt.be/vrtnws/nl/2026/10/17/e25')) - base).toBeCloseTo(4);
+    expect(one(rep('vrt', 'E25 versperd in Sprimont', 'https://other')) - base).toBeCloseTo(4);
   });
 
   it('keeps the original text while a translation is missing', () => {

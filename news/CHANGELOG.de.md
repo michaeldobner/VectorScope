@@ -4,6 +4,13 @@ Alle wesentlichen Änderungen am Modul NEWS. [English](CHANGELOG.md) · [Changel
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.3.3 (2026-10-17)
+
+### Behoben
+* **Regionale Meldungen aus Flandern fehlten unter Belgien:** VRT NWS nennt in seinen Adressen kein Ressort, ein Unfall in Langemark landete unter Welt. Jetzt zählt die Kategorie des Feeds (Atom `term`), und eine Geschichte nur belgischer Medien kommt nach Belgien, wenn sonst nichts dagegen spricht.
+* **Dieselbe Haushaltsgeschichte doppelt:** De Morgen und HLN mit fast gleichem Titel blieben getrennt. Titel mit 40 % gemeinsamen Wörtern sind jetzt eine Geschichte; niederländische Füllwörter zählen nicht mehr.
+* **Die Schlagzeilen von VRT NWS** werden über den Link ohne Zusatz und über den Titel gefunden, falls der Schlagzeilen-Feed die Adresse anders schreibt.
+
 ## 0.3.2 (2026-10-17)
 
 ### Geändert

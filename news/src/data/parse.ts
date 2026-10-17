@@ -138,7 +138,8 @@ export function parseFeed(body: string, feed: Feed): Report[] {
       link: plain(tag(b, ['link'])) || b.match(/<link[^>]*href="([^"]+)"/i)?.[1] || '',
       time: time(tag(b, ['pubDate', 'updated', 'published', 'dc:date'])),
       image: pic(imageOf(b)),
-      category: plain(tag(b, ['category'])) || undefined,
+      // RSS writes the category as text, Atom (VRT NWS) as attribute term.
+      category: plain(tag(b, ['category'])) || b.match(/<category[^>]*term="([^"]+)"/i)?.[1] || undefined,
       rank,
     }))
     .filter((r) => r.title && r.link);

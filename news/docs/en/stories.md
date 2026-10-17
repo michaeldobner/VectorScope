@@ -15,6 +15,7 @@ Every headline becomes a vector of the multilingual model `paraphrase-multilingu
 * Reports are taken in order of time. A report joins the story whose most similar report has a cosine similarity of at least **0.8**.
 * When two vectors were made in different languages because a translation is missing, the bar drops by **0.08**. So "Viele Tote bei Angriff auf Flughafen in Riad" and "Twelve killed in attack on Riyadh airport" meet. In the first real round Riyadh became one story with 16 sources this way.
 * When two titles share a long word (9 letters or more, like "meerjarenbegroting" or "schuldenrem"), the bar drops by another **0.1**. Flemish live pages and headlines of the same event sound too different otherwise.
+* Two titles with at least 40 % of their words in common are one story whatever the vectors say, for instance two Flemish outlets with "De Wever haalt schuldenrem voorlopig weer van tafel" while one title is still untranslated.
 * Two reports of the same feed are never joined by comparing them with each other.
 * Without the model, shared words count (Jaccard from 0.5). That only finds reports in the same language.
 
@@ -27,7 +28,7 @@ Every report gets a section when something says so, in this order:
 1. The feed is a section (SRF Schweiz, SRF Wirtschaft, NZZ Schweiz, heise, Golem).
 2. The address of the article: `/sport/`, `/wirtschaft/`, `/wissen/`, `/kultur/`, `/inland/`, `/schweiz/` and similar, in German and English.
 3. The category in the feed, for Tagesschau for example "inland".
-4. Words in the title: a result with a sports term becomes Sport, Bundestag, Kanton, ÖVP, Merz, Zürich and similar in a German title become DACH; Vlaanderen, Wallonia, De Wever, N-VA, De Lijn and similar in any title become Belgium, Brussels alone does not, abroad it mostly means the EU. Belgian outlets also by their address (`/binnenland/`, `/belgium/`).
+4. Words in the title: a result with a sports term becomes Sport, Bundestag, Kanton, ÖVP, Merz, Zürich and similar in a German title become DACH; Vlaanderen, Wallonia, De Wever, N-VA, De Lijn and similar in any title become Belgium, Brussels alone does not, abroad it mostly means the EU. Belgian outlets also by their address (`/binnenland/`, `/belgium/`) and by their category (VRT NWS: Binnenland, Regio, Verkeer become Belgium, Buitenland, Azië and the like World). A story only Belgian outlets report, with nothing else to say its section, is Belgium: a crash in Langemark, a bus shelter in Wuustwezel.
 
 The story takes the section with the most votes, on a tie in the order Sport, Tech, Business, Science, Culture, DACH, Belgium. **A section needs a third of the reports**, else it becomes World. So one business feed among four world reports does not make a business story.
 

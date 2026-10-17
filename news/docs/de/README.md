@@ -23,4 +23,4 @@ Diese Dokumentation beschreibt das Modul NEWS: die Bedienung, welche Quellen es 
 | Sprache | App Deutsch oder Englisch, Meldungen Deutsch, Englisch oder im Original |
 | Blickwinkel | Aus DACH, aus Belgien oder aus der Welt |
 | Adresse | Der eigene Server, Pfad `/news/` |
-| Version | 0.3.2 |
+| Version | 0.3.3 |

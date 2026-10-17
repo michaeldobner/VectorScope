@@ -17,7 +17,7 @@ import { translateAll } from '../proxy/lib/translate.js';
 import { loadEmbedder, THRESHOLD, type Embed } from './embed';
 import { FEEDS } from '../news/src/data/feeds';
 import { decode, decodeEntities, isNoise, parseFeed } from '../news/src/data/parse';
-import { buildEdition, findLogos, group, usableReports, type Translate } from '../news/src/data/edition';
+import { buildEdition, findLogos, group, placeMap, usableReports, type Translate } from '../news/src/data/edition';
 import type { Report } from '../news/src/data/types';
 
 const DIR = process.argv[2] ?? 'news-out';
@@ -72,7 +72,7 @@ const all: Report[] = (
     return [];
   })
 ).flat();
-const order = (id: string) => new Map(all.filter((r) => r.feed === id).map((r) => [r.link, r.rank]));
+const order = (id: string) => placeMap(all.filter((r) => r.feed === id));
 const homepage = order('tagesschau-home');
 const beHomepage = order('vrt-home');
 // One report per link: the API and the homepage of Tagesschau, NZZ recent and NZZ Schweiz overlap.
