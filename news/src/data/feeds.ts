@@ -1,6 +1,8 @@
 // The feeds of NEWS. Every one checked in the test lab (lab/news.mjs, workflow lab-news.yml, by hand) on 11 October 2026:
 // reachable, fresh, machine readable. Not here: swissinfo (feed discontinued), Tages-Anzeiger (not reachable),
 // CBC (timeout), CNN (frozen since 2023), Bild (no timestamps, BILDplus), Reuters and AP (no free feeds).
+// The Belgian feeds (17 October 2026) could not be checked from the development machine: the own server checks
+// them in every round, news-stats.json (/data/news-stats.json) says per feed whether it delivers.
 import type { Feed } from './types';
 
 export const FEEDS: Feed[] = [
@@ -47,14 +49,29 @@ export const FEEDS: Feed[] = [
   { id: '20min', outlet: '20 Minuten', cc: 'CH', group: 'fast', lang: 'de', url: 'https://partner-feeds.20min.ch/rss/20minuten', articleImage: true },
   { id: 'blick', outlet: 'Blick', cc: 'CH', group: 'fast', lang: 'de', url: 'https://www.blick.ch/rss.xml', articleImage: true },
   { id: 'watson', outlet: 'watson', cc: 'CH', group: 'fast', lang: 'de', url: 'https://www.watson.ch/api/1.0/rss/index.xml' },
+  // Belgium, Flanders first. VRT NWS also writes in English, as one outlet with the Dutch feed.
+  { id: 'vrt', outlet: 'VRT NWS', cc: 'BE', group: 'pub', lang: 'nl', url: 'https://www.vrt.be/vrtnws/nl.rss.articles.xml' },
+  { id: 'vrt-en', outlet: 'VRT NWS', cc: 'BE', group: 'pub', lang: 'en', url: 'https://www.vrt.be/vrtnws/en.rss.articles.xml' },
+  { id: 'standaard', outlet: 'De Standaard', cc: 'BE', group: 'press', lang: 'nl', url: 'https://www.standaard.be/rss/section/1f2838d4-99ea-49f0-9102-138784c7ea7c', ressort: 'be' },
+  { id: 'demorgen', outlet: 'De Morgen', cc: 'BE', group: 'press', lang: 'nl', url: 'https://www.demorgen.be/in-het-nieuws/rss.xml' },
+  { id: 'tijd', outlet: 'De Tijd', cc: 'BE', group: 'biz', lang: 'nl', url: 'https://www.tijd.be/rss/top_stories.xml' },
+  { id: 'brusselstimes', outlet: 'Brussels Times', cc: 'BE', group: 'press', lang: 'en', url: 'https://www.brusselstimes.com/feed' },
+  { id: 'hln', outlet: 'HLN', cc: 'BE', group: 'fast', lang: 'nl', url: 'https://www.hln.be/home/rss.xml' },
+  { id: 'nieuwsblad', outlet: 'Het Nieuwsblad', cc: 'BE', group: 'fast', lang: 'nl', url: 'https://www.nieuwsblad.be/rss/section/55178e67-15a8-4ddd-a3d8-bfe5708f8932', ressort: 'be' },
 ];
 
 export const feedById = (id: string) => FEEDS.find((f) => f.id === id);
 export const DACH = ['DE', 'CH', 'AT'];
+/** Home regions: a perspective each, with its own importance, section and other view. */
+export type Home = 'dach' | 'be';
+export const HOMES: Record<Home, string[]> = { dach: DACH, be: ['BE'] };
+/** Home region of an outlet. International editions (DW English) count as international. */
+export const homeOf = (f: { cc: string; group: string }): Home | undefined =>
+  f.group === 'intl' ? undefined : (Object.keys(HOMES) as Home[]).find((h) => HOMES[h].includes(f.cc));
 
 /** Order of preference for the text of a story, per language. The most factual outlets first. */
 export const LEAD_ORDER: Record<'de' | 'en' | 'orig', string[]> = {
   de: ['Tagesschau', 'SRF', 'ZDFheute', 'Deutschlandfunk', 'ORF', 'NZZ', 'DW', 'Der Standard', 'Die Presse', 'Spiegel', 'ntv', 'heise', 'Golem'],
-  en: ['BBC', 'The Guardian', 'NPR', 'DW', 'France 24', 'Euronews', 'ABC Australia', 'CNA', 'Al Jazeera', 'SCMP', 'CNBC', 'Times of India'],
-  orig: ['Tagesschau', 'SRF', 'BBC', 'ZDFheute', 'Deutschlandfunk', 'ORF', 'NZZ', 'The Guardian', 'DW', 'Der Standard', 'Spiegel', 'NPR', 'Al Jazeera'],
+  en: ['BBC', 'The Guardian', 'NPR', 'DW', 'France 24', 'Euronews', 'ABC Australia', 'CNA', 'Al Jazeera', 'SCMP', 'CNBC', 'Times of India', 'VRT NWS', 'Brussels Times'],
+  orig: ['Tagesschau', 'SRF', 'BBC', 'ZDFheute', 'Deutschlandfunk', 'ORF', 'NZZ', 'The Guardian', 'DW', 'Der Standard', 'Spiegel', 'NPR', 'Al Jazeera', 'VRT NWS', 'De Standaard', 'De Morgen', 'De Tijd'],
 };

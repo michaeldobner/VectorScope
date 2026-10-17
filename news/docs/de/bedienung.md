@@ -17,8 +17,9 @@
 | Ressort | Inhalt |
 |---|---|
 | **Top** | Der Aufmacher mit großem Bild, die Plätze 2 und 3, der andere Blick als Leiste zum Wischen, die Plätze 4 bis 6 |
-| **Anderer Blick** | Aus DACH: Geschichten ohne DACH-Quelle, aber mit mindestens zwei internationalen. Aus der Welt: Geschichten ohne internationale Quelle, aber mit mindestens zwei aus DACH |
-| **DACH** | Deutschland, Schweiz, Österreich. Auf Englisch heißt es „DE · CH · AT“ |
+| **Anderer Blick** | Aus DACH oder aus Belgien: Geschichten ohne Quelle von dort, aber mit mindestens zwei internationalen. Aus der Welt: Geschichten ohne internationale Quelle, aber mit mindestens zwei aus DACH oder aus Belgien |
+| **DACH** | Deutschland, Schweiz, Österreich. Auf Englisch heißt es „DE · CH · AT“. Nur in den Blickwinkeln aus DACH und aus der Welt |
+| **Belgien** | Flandern, Brüssel, Wallonien. Nur in den Blickwinkeln aus Belgien und aus der Welt, sonst stehen belgische Geschichten unter Welt |
 | **Welt, Wirtschaft, Tech, Wissenschaft, Kultur, Sport** | Je bis zu 30 Geschichten, Neues zuerst, dann nach Wichtigkeit |
 
 Wischen nach links oder rechts auf der Liste blättert zum nächsten Ressort. Ein blauer Punkt an einem Ressort heißt: Dort gibt es Neues. Am Ende jeder Liste steht „Du bist auf dem Stand“ mit einem Knopf zum nächsten Ressort, die Liste ist nicht endlos.
@@ -37,7 +38,7 @@ Ein Tipp öffnet die Geschichte, am iPhone als Blatt halbhoch. Hochziehen zeigt 
 
 ## 2-Minuten-Überblick
 
-**2 Min** unten links zeigt die zehn wichtigsten Geschichten, eine pro Bildschirm, mit Bild, Schlagzeile und Anriss: die sechs der Top-Seite, dazu die erste aus DACH, Welt, Wirtschaft und Tech. Auf dem iPad quer stehen Bild und Text nebeneinander.
+**2 Min** unten links zeigt die zehn wichtigsten Geschichten, eine pro Bildschirm, mit Bild, Schlagzeile und Anriss: die sechs der Top-Seite, dazu die erste aus DACH (aus Belgien: Belgien), Welt, Wirtschaft und Tech. Auf dem iPad quer stehen Bild und Text nebeneinander.
 
 | Geste oder Knopf | Wirkung |
 |---|---|
@@ -76,10 +77,10 @@ Der Regler unten rechts, am iPad quer **Ansicht und Sprache**:
 |---|---|---|
 | App-Sprache | Deutsch, English | Bedienung, Ressorts, Hinweise, Datum |
 | Meldungen | Deutsch, English, Original | Schlagzeilen, Anrisse und Titel der Quellen. Original zeigt jeden Text, wie seine Quelle ihn geschrieben hat, auch Französisch von RTS und Italienisch von RSI |
-| Blickwinkel | Aus DACH, Aus der Welt | Was wichtig ist und was der andere Blick zeigt, siehe [Geschichten und Wichtigkeit](geschichten.md) |
+| Blickwinkel | Aus DACH, Aus Belgien, Aus der Welt | Was wichtig ist und was der andere Blick zeigt, siehe [Geschichten und Wichtigkeit](geschichten.md) |
 | Ansicht | Ruhig, Bildstark | Ruhig: kleine Vorschaubilder. Bildstark: jede Geschichte mit Bild groß |
 
-Beim ersten Start folgen App-Sprache, Meldungen und Blickwinkel der Sprache des Geräts: Deutsch und aus DACH auf einem deutschen Gerät, sonst Englisch und aus der Welt. Uhrzeiten stehen immer in der Zeitzone des Geräts. So kann ein Freund im Ausland NEWS ohne Einstellen nutzen.
+Beim ersten Start folgen App-Sprache, Meldungen und Blickwinkel der Sprache des Geräts: Deutsch und aus DACH auf einem deutschen Gerät, Englisch und aus Belgien auf einem Gerät mit Niederländisch oder Region Belgien, sonst Englisch und aus der Welt. Uhrzeiten stehen immer in der Zeitzone des Geräts. So kann ein Freund im Ausland NEWS ohne Einstellen nutzen.
 
 ## Ohne Verbindung
 

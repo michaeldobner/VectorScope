@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.22.13 (2026-10-17)
+
+### Geändert
+* Modul NEWS 0.3.0: Belgien mit eigenem Blickwinkel. Der Server gibt `/data/news-stats.json` aus, den Stand jedes News-Feeds der letzten Runde.
+
 ## 0.22.12 (2026-10-13)
 
 ### Behoben

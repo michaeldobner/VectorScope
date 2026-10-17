@@ -64,6 +64,14 @@ const FEEDS = [
   ['INT', 'CNN World', 'http://rss.cnn.com/rss/edition_world.rss'],
   ['INT', 'CNBC Top News', 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114'],
   ['INT', 'CNBC World', 'https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100727362'],
+  ['BE', 'VRT NWS', 'https://www.vrt.be/vrtnws/nl.rss.articles.xml'],
+  ['BE', 'VRT NWS English', 'https://www.vrt.be/vrtnws/en.rss.articles.xml'],
+  ['BE', 'De Standaard Binnenland', 'https://www.standaard.be/rss/section/1f2838d4-99ea-49f0-9102-138784c7ea7c'],
+  ['BE', 'De Morgen', 'https://www.demorgen.be/in-het-nieuws/rss.xml'],
+  ['BE', 'De Tijd', 'https://www.tijd.be/rss/top_stories.xml'],
+  ['BE', 'Brussels Times', 'https://www.brusselstimes.com/feed'],
+  ['BE', 'HLN', 'https://www.hln.be/home/rss.xml'],
+  ['BE', 'Het Nieuwsblad Binnenland', 'https://www.nieuwsblad.be/rss/section/55178e67-15a8-4ddd-a3d8-bfe5708f8932'],
 ];
 
 async function get(url) {

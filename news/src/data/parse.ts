@@ -144,6 +144,6 @@ export function parseFeed(body: string, feed: Feed): Report[] {
 const NOISE = [
   /^tagesschau \d/i, /^tagesthemen/i, /wetteraussichten|^wetter\b/i, /^heise-angebot/i, /^anzeige:/i, /^\(g\+\)/, /\[premium\]$/i,
   /^latest news bulletin/i, /^spotlight$/i, /^watch:/i, /^live:/i, /^🔴/, /forum\+?:/i, /^podcast/i, /c’t uplink|c't uplink/i, /^developer-häppchen/i,
-  /bilder der woche/i, /fotonews der woche/i,
+  /bilder der woche/i, /fotonews der woche/i, /^(video|kijk|luister|bekijk)\s*[:|]/i, /^horoscoop/i, /^(het )?weerbericht/i, /^liveblog\b/i,
 ];
 export const isNoise = (title: string) => NOISE.some((re) => re.test(title));

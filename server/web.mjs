@@ -246,6 +246,12 @@ createServer(async (req, res) => {
       if (!existsSync(file)) return json(res, 404, { error: 'no NEWS round yet' });
       return serveFile(res, file, 'no-cache');
     }
+    // Per feed of the last NEWS round: delivers or not, how many reports, which error. For checking new feeds.
+    if (path === '/data/news-stats.json') {
+      const file = join(dataDir, 'news', 'news-stats.json');
+      if (!existsSync(file)) return json(res, 404, { error: 'no NEWS round yet' });
+      return serveFile(res, file, 'no-cache');
+    }
     if (path === '/data/latest.json') {
       const file = join(dataDir, 'latest.json');
       if (!existsSync(file)) return json(res, 404, { error: 'no collector round yet' });

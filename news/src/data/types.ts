@@ -2,8 +2,8 @@
 
 /** Group of an outlet. Decides how much it counts for importance. */
 export type Group = 'pub' | 'press' | 'intl' | 'tech' | 'biz' | 'fast';
-export type Lang = 'de' | 'en' | 'fr' | 'it';
-export type Ressort = 'dach' | 'welt' | 'wirtschaft' | 'tech' | 'wissenschaft' | 'kultur' | 'sport';
+export type Lang = 'de' | 'en' | 'fr' | 'it' | 'nl';
+export type Ressort = 'dach' | 'be' | 'welt' | 'wirtschaft' | 'tech' | 'wissenschaft' | 'kultur' | 'sport';
 /** Language of the reports in the app. 'orig' shows every text as its source wrote it. */
 export type MsgLang = 'de' | 'en' | 'orig';
 
@@ -67,8 +67,9 @@ export interface Story {
   /** Stable across rounds: the link of its first report. */
   id: string;
   ressort: Ressort;
-  /** Importance from the DACH perspective and from the world perspective. */
+  /** Importance from the DACH perspective, from Belgium and from the world perspective. */
   score: number;
+  beScore: number;
   worldScore: number;
   lead: Record<MsgLang, Lead>;
   img?: { url: string; credit: string };

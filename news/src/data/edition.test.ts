@@ -119,6 +119,21 @@ describe('edition', () => {
     expect(s(3) - s(12)).toBeCloseTo(1.5);
   });
 
+  it('ranks a Flemish story high from Belgium, not from DACH or the world', () => {
+    const be = ['vrt', 'standaard', 'demorgen', 'hln'].map((f, i) => rep(f, `De Wever stelt nieuwe Vlaamse regering voor ${i}`, `https://be/${f}`));
+    const de = ['tagesschau', 'zdf', 'srf', 'orf'].map((f, i) => rep(f, `Bundestag beschließt Haushalt ${i}`, `https://de/${f}`));
+    const all = [...be, ...de];
+    const ed = buildEdition({ reports: all, groups: [[0, 1, 2, 3], [4, 5, 6, 7]], signals: { homepage: new Map(), now: NOW }, tr });
+    const flemish = ed.stories.find((s) => s.id.startsWith('https://be/'))!;
+    const german = ed.stories.find((s) => s.id.startsWith('https://de/'))!;
+    expect(flemish.ressort).toBe('be');
+    expect(flemish.beScore).toBeGreaterThan(german.beScore);
+    expect(german.score).toBeGreaterThan(flemish.score);
+    // Belgian outlets count as home outlets, not as international ones.
+    expect(flemish.worldScore).toBeLessThan(2);
+    expect(classify(rep('brusselstimes', 'Strike on De Lijn', 'https://www.brusselstimes.com/belgium/1'), feedById('brusselstimes')!)).toBe('be');
+  });
+
   it('keeps the original text while a translation is missing', () => {
     const ed = buildEdition({ reports: [reports[5]], groups: [[0]], signals: { homepage: new Map(), now: NOW }, tr: () => undefined });
     expect(ed.stories[0].lead.en).toMatchObject({ head: reports[5].title, translated: false, lang: 'de' });

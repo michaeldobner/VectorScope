@@ -2,13 +2,17 @@
 // "Meldungen" (de, en or original), see the edition.
 
 export type UiLang = 'de' | 'en';
-export type RessortId = 'top' | 'anders' | 'dach' | 'welt' | 'wirtschaft' | 'tech' | 'wissenschaft' | 'kultur' | 'sport';
+export type RessortId = 'top' | 'anders' | 'dach' | 'be' | 'welt' | 'wirtschaft' | 'tech' | 'wissenschaft' | 'kultur' | 'sport';
 
 const de = {
   locale: 'de-CH',
-  ressorts: { top: 'Top', anders: 'Anderer Blick', dach: 'DACH', welt: 'Welt', wirtschaft: 'Wirtschaft', tech: 'Tech', wissenschaft: 'Wissenschaft', kultur: 'Kultur', sport: 'Sport' } as Record<RessortId, string>,
-  sub: { top: 'Was die meisten unabhängigen Quellen gerade berichten', dach: 'Deutschland, Schweiz, Österreich', anders: 'Was die Welt bewegt, in den DACH-Medien aber kaum vorkommt' } as Partial<Record<RessortId, string>>,
-  subOtherWorld: 'Was Deutschland, die Schweiz und Österreich bewegt, international aber kaum vorkommt',
+  ressorts: { top: 'Top', anders: 'Anderer Blick', dach: 'DACH', be: 'Belgien', welt: 'Welt', wirtschaft: 'Wirtschaft', tech: 'Tech', wissenschaft: 'Wissenschaft', kultur: 'Kultur', sport: 'Sport' } as Record<RessortId, string>,
+  sub: { top: 'Was die meisten unabhängigen Quellen gerade berichten', dach: 'Deutschland, Schweiz, Österreich', be: 'Flandern, Brüssel, Wallonien' } as Partial<Record<RessortId, string>>,
+  subOther: {
+    dach: 'Was die Welt bewegt, in den DACH-Medien aber kaum vorkommt',
+    be: 'Was die Welt bewegt, in den belgischen Medien aber kaum vorkommt',
+    world: 'Was Deutschland, die Schweiz, Österreich oder Belgien bewegt, international aber kaum vorkommt',
+  } as Record<string, string>,
   stories: (n: number) => `${n} Geschichten`,
   sources: (n: number) => (n === 1 ? '1 Quelle' : `${n} Quellen`),
   countries: (n: number) => (n === 1 ? '1 Land' : `${n} Länder`),
@@ -24,9 +28,12 @@ const de = {
   next: 'Weiter',
   other: 'Der andere Blick',
   otherSub: 'Groß in der Welt, bei uns kaum ein Thema',
-  otherSubWorld: 'Groß in den deutschsprachigen Medien, international kaum ein Thema',
+  otherSubWorld: 'Groß in den Medien zu Hause, international kaum ein Thema',
   all: (n: number) => `Alle ${n}`,
-  dach: (n: number) => (n ? `${n} DACH-Quelle${n > 1 ? 'n' : ''}` : 'Keine DACH-Quelle'),
+  home: {
+    dach: (n: number) => (n ? `${n} DACH-Quelle${n > 1 ? 'n' : ''}` : 'Keine DACH-Quelle'),
+    be: (n: number) => (n ? `${n} belgische Quelle${n > 1 ? 'n' : ''}` : 'Keine belgische Quelle'),
+  },
   intl: (n: number) => (n ? `${n} internationale Quelle${n > 1 ? 'n' : ''}` : 'Keine internationale Quelle'),
   report: 'So berichten',
   source: 'Quelle',
@@ -57,10 +64,12 @@ const de = {
   msgNote: { de: 'Alles auf Deutsch, Übersetzungen sind markiert.', en: 'Alles auf Englisch, Übersetzungen sind markiert.', orig: 'Jede Meldung im Wortlaut ihrer Quelle, ohne Übersetzung.' } as Record<string, string>,
   persp: 'Blickwinkel',
   perspDach: 'Aus DACH',
+  perspBe: 'Aus Belgien',
   perspWorld: 'Aus der Welt',
   perspNote: {
     dach: 'Wichtig ist, was Leser in Deutschland, der Schweiz und Österreich betrifft. Der andere Blick zeigt, was die Welt bewegt und bei uns fehlt.',
-    world: 'Wichtig ist, was international am breitesten berichtet wird. Der andere Blick zeigt, was nur die deutschsprachigen Medien bewegt.',
+    be: 'Wichtig ist, was Leser in Belgien betrifft. Der andere Blick zeigt, was die Welt bewegt und in den belgischen Medien fehlt.',
+    world: 'Wichtig ist, was international am breitesten berichtet wird. Der andere Blick zeigt, was nur die Medien in DACH oder Belgien bewegt.',
   } as Record<string, string>,
   newStories: (n: number) => (n === 1 ? '1 neue Geschichte' : `${n} neue Geschichten`),
   isNew: 'neu',
@@ -75,14 +84,18 @@ const de = {
   empty: 'Hier gibt es gerade nichts.',
   edition: (when: string) => `Ausgabe von ${when}`,
   groups: { pub: 'Öffentlich-rechtlich', press: 'Qualitätspresse', intl: 'International', biz: 'Wirtschaft', tech: 'Fachmedien', fast: 'Tempo' } as Record<string, string>,
-  country: { DE: 'Deutschland', CH: 'Schweiz', AT: 'Österreich', GB: 'Großbritannien', QA: 'Katar', US: 'USA', FR: 'Frankreich', EU: 'Europa', AU: 'Australien', SG: 'Singapur', HK: 'Hongkong', IN: 'Indien' } as Record<string, string>,
+  country: { DE: 'Deutschland', CH: 'Schweiz', AT: 'Österreich', GB: 'Großbritannien', QA: 'Katar', US: 'USA', FR: 'Frankreich', EU: 'Europa', BE: 'Belgien', AU: 'Australien', SG: 'Singapur', HK: 'Hongkong', IN: 'Indien' } as Record<string, string>,
 };
 
 const en: typeof de = {
   locale: 'en-GB',
-  ressorts: { top: 'Top', anders: 'Other view', dach: 'DE · CH · AT', welt: 'World', wirtschaft: 'Business', tech: 'Tech', wissenschaft: 'Science', kultur: 'Culture', sport: 'Sport' },
-  sub: { top: 'What most independent sources are reporting right now', dach: 'Germany, Switzerland, Austria', anders: 'What moves the world, but hardly appears in German-language media' },
-  subOtherWorld: 'What moves Germany, Switzerland and Austria, but hardly appears internationally',
+  ressorts: { top: 'Top', anders: 'Other view', dach: 'DE · CH · AT', be: 'Belgium', welt: 'World', wirtschaft: 'Business', tech: 'Tech', wissenschaft: 'Science', kultur: 'Culture', sport: 'Sport' },
+  sub: { top: 'What most independent sources are reporting right now', dach: 'Germany, Switzerland, Austria', be: 'Flanders, Brussels, Wallonia' },
+  subOther: {
+    dach: 'What moves the world, but hardly appears in German-language media',
+    be: 'What moves the world, but hardly appears in Belgian media',
+    world: 'What moves Germany, Switzerland, Austria or Belgium, but hardly appears internationally',
+  },
   stories: (n) => `${n} stories`,
   sources: (n) => (n === 1 ? '1 source' : `${n} sources`),
   countries: (n) => (n === 1 ? '1 country' : `${n} countries`),
@@ -98,9 +111,12 @@ const en: typeof de = {
   next: 'Next',
   other: 'The other view',
   otherSub: 'Big in the world, barely covered here',
-  otherSubWorld: 'Big in German-language media, barely covered elsewhere',
+  otherSubWorld: 'Big in the media at home, barely covered elsewhere',
   all: (n) => `All ${n}`,
-  dach: (n) => (n ? `${n} DACH source${n > 1 ? 's' : ''}` : 'No DACH source'),
+  home: {
+    dach: (n) => (n ? `${n} DACH source${n > 1 ? 's' : ''}` : 'No DACH source'),
+    be: (n) => (n ? `${n} Belgian source${n > 1 ? 's' : ''}` : 'No Belgian source'),
+  },
   intl: (n) => (n ? `${n} international source${n > 1 ? 's' : ''}` : 'No international source'),
   report: 'How they report it',
   source: 'Source',
@@ -131,10 +147,12 @@ const en: typeof de = {
   msgNote: { de: 'Everything in German, translations are marked.', en: 'Everything in English, translations are marked.', orig: 'Every report in the words of its source, untranslated.' },
   persp: 'Perspective',
   perspDach: 'German-speaking',
+  perspBe: 'Belgium',
   perspWorld: 'Global',
   perspNote: {
     dach: 'Ranked by what matters to readers in Germany, Switzerland and Austria. The other view shows what moves the world but is missing there.',
-    world: 'Ranked by what is reported most widely around the world. The other view shows what only German-language media care about.',
+    be: 'Ranked by what matters to readers in Belgium. The other view shows what moves the world but is missing in Belgian media.',
+    world: 'Ranked by what is reported most widely around the world. The other view shows what only the media in DACH or Belgium care about.',
   },
   newStories: (n) => (n === 1 ? '1 new story' : `${n} new stories`),
   isNew: 'new',
@@ -149,8 +167,8 @@ const en: typeof de = {
   empty: 'Nothing here right now.',
   edition: (when) => `Edition of ${when}`,
   groups: { pub: 'Public broadcasters', press: 'Quality press', intl: 'International', biz: 'Business', tech: 'Tech media', fast: 'Fast news' },
-  country: { DE: 'Germany', CH: 'Switzerland', AT: 'Austria', GB: 'United Kingdom', QA: 'Qatar', US: 'USA', FR: 'France', EU: 'Europe', AU: 'Australia', SG: 'Singapore', HK: 'Hong Kong', IN: 'India' },
+  country: { DE: 'Germany', CH: 'Switzerland', AT: 'Austria', GB: 'United Kingdom', QA: 'Qatar', US: 'USA', FR: 'France', EU: 'Europe', BE: 'Belgium', AU: 'Australia', SG: 'Singapore', HK: 'Hong Kong', IN: 'India' },
 };
 
 export const TEXT: Record<UiLang, typeof de> = { de, en };
-export const RESSORT_IDS: RessortId[] = ['top', 'anders', 'dach', 'welt', 'wirtschaft', 'tech', 'wissenschaft', 'kultur', 'sport'];
+export const RESSORT_IDS: RessortId[] = ['top', 'anders', 'dach', 'be', 'welt', 'wirtschaft', 'tech', 'wissenschaft', 'kultur', 'sport'];

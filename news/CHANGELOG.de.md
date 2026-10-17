@@ -4,6 +4,16 @@ Alle wesentlichen Änderungen am Modul NEWS. [English](CHANGELOG.md) · [Changel
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.3.0 (2026-10-17)
+
+### Neu
+* **Belgien, zuerst Flandern:** VRT NWS (Niederländisch und Englisch), De Standaard, De Morgen, De Tijd, Brussels Times, HLN und Het Nieuwsblad. Auf Probe: Der Entwicklungsrechner erreicht belgische Seiten nicht, der eigene Server prüft die Feeds in jeder Runde.
+* **Blickwinkel Belgien** mit eigener Wichtigkeit (`beScore`), dem Ressort Belgien und einem eigenen anderen Blick. Ein Gerät mit Niederländisch oder Region Belgien startet mit Englisch und Belgien. Die Medien der anderen Heimatregion zählen zusammen wie eines, so drängen flämische Geschichten nicht in die Top-Seite aus DACH und umgekehrt.
+* **`/data/news-stats.json`** auf dem eigenen Server: pro Feed der letzten Runde, ob er liefert, wie viele Meldungen und welcher Fehler.
+
+### Behoben
+* Die Erklärungen unter Meldungen und Blickwinkel in den Einstellungen erschienen als dunkler Kasten mitten im Bild: Der Hinweis des Überblicks trug denselben Namen.
+
 ## 0.2.4 (2026-10-12)
 
 ### Behoben

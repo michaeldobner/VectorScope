@@ -3,9 +3,10 @@
 //
 // Importance has three signals (news/KONZEPT.md): agreement of independent outlets from many countries, what the
 // editors of leading outlets put first (Tagesschau homepage, top of ntv), and relevance for DACH readers.
-// The world perspective counts outlets outside DACH instead. No language model: the text of a story is the
+// Belgium has its own perspective with relevance for Belgian readers, the world perspective counts outlets outside
+// both home regions instead. No language model: the text of a story is the
 // headline and teaser of its most factual outlet, translated where needed.
-import { DACH, feedById, LEAD_ORDER } from './feeds';
+import { feedById, homeOf, LEAD_ORDER, type Home } from './feeds';
 import type { Edition, Feed, Group, Lead, MsgLang, Report, Ressort, Story, StorySource } from './types';
 
 const HOUR = 3600_000;
@@ -75,6 +76,8 @@ const BY_PATH: [Ressort, RegExp][] = [
   ['kultur', /\/(kultur|culture|entertainment|arts|leute|people|music|musik|film|kino|stars|unterhaltung|lifestyle|buecher|literatur)\b/i],
   ['dach', /\/(inland|schweiz|oesterreich|austria|deutschland|regional|bundesland)\b/i],
 ];
+/** Home news of a Belgian outlet by its address. */
+const BE_PATH = /\/(binnenland|belgie|belgium|belgique|vlaanderen|brussel|brussels|regio|politiek|politics)\b/i;
 const BY_CATEGORY: [Ressort, RegExp][] = [
   ['sport', /sport|fußball|fussball|football/i],
   ['tech', /digital|technolog|netzwelt|computer/i],
@@ -88,6 +91,9 @@ const DACH_WORDS =
 // Markets and companies in the title of a business feed: Wall Street, rates, oil, earnings, deals.
 const MARKET_WORDS =
   /(?<![\p{L}])(S&P 500|Dow|Nasdaq|Wall Street|stocks?|shares|futures|earnings|bull market|bear market|investors?|IPO|Fed|interest rates?|inflation|bonds?|Treasury yields?|oil prices?|Brent|crude|acquires?|acquisition|takeover|merger)(?![\p{L}])/iu;
+// Not Brussels alone: in foreign media it mostly stands for the EU.
+const BE_WORDS =
+  /(?<![\p{L}])(België|Belgie|Belgium|Belgian|Belgien|belgische[nr]?|Belgique|Vlaanderen|Vlaamse?|Flanders|Flemish|Flandern|Wallonië|Wallonia|Wallonie|Antwerpen|Antwerp|Gent|Ghent|Leuven|Brugge|Bruges|Mechelen|Hasselt|Charleroi|Luik|Liège|De Wever|N-VA|Vooruit|CD&V|Open VLD|Vlaams Belang|PVDA|NMBS|SNCB|De Lijn|Rode Duivels|Red Devils)(?![\p{L}])/u;
 const SPORT_WORDS = /(?<![\p{L}])(Bundesliga|Champions League|Super League|Formel 1|Tor|Trainer|Ironman|NHL|NBA|WM|EM|Fußball|Fussball|football|goal|match|Premier League)(?![\p{L}])/iu;
 
 /** Section of one report: its feed, its address, its category, words in its title. Null when nothing says. */
@@ -99,13 +105,15 @@ export function classify(r: Report, feed: Feed): Ressort | null {
     path = new URL(r.link).pathname;
   } catch {}
   for (const [res, re] of BY_PATH) if (re.test(path)) return res;
+  if (feed.cc === 'BE' && BE_PATH.test(path)) return 'be';
   if (r.category) for (const [res, re] of BY_CATEGORY) if (re.test(r.category)) return res;
   if (SPORT_WORDS.test(r.title) && /\d+:\d+|\d+-\d+/.test(r.title + r.teaser)) return 'sport';
   if (feed.lang !== 'en' && DACH_WORDS.test(r.title)) return 'dach';
+  if (BE_WORDS.test(r.title)) return 'be';
   return null;
 }
 
-const PRIORITY: Ressort[] = ['sport', 'tech', 'wirtschaft', 'wissenschaft', 'kultur', 'dach', 'welt'];
+const PRIORITY: Ressort[] = ['sport', 'tech', 'wirtschaft', 'wissenschaft', 'kultur', 'dach', 'be', 'welt'];
 function ressortOf(reports: Report[]): Ressort {
   const votes = new Map<Ressort, number>();
   for (const r of reports) {
@@ -175,8 +183,7 @@ function scores(reports: Report[], sig: Signals) {
   const outlets = new Map<string, Feed>();
   feeds.forEach((f) => outlets.set(f.outlet, outlets.get(f.outlet)?.group === 'intl' ? outlets.get(f.outlet)! : f));
   const all = [...outlets.values()];
-  const dach = all.filter((f) => DACH.includes(f.cc) && f.group !== 'intl');
-  const intl = all.filter((f) => !DACH.includes(f.cc) || f.group === 'intl');
+  const intl = all.filter((f) => !homeOf(f));
   const sum = (list: Feed[]) => list.reduce((s, f) => s + WEIGHT[f.group], 0);
   const countries = (list: Feed[]) => new Set(list.map((f) => f.cc)).size;
   const newest = Math.max(...reports.map((r) => r.time));
@@ -190,9 +197,17 @@ function scores(reports: Report[], sig: Signals) {
     // Wall Street among them (test lab, 12 October 2026). Without this a single CNBC report never stays in an edition.
     if (r.feed === 'cnbc-world' && r.rank < 5) editors = Math.max(editors, 1.5);
   }
-  const score = sum(all) + 0.5 * countries(all) + editors + 0.4 * dach.length - 0.12 * age;
-  const worldScore = sum(intl) + 0.5 * countries(intl) + 0.2 * dach.length - 0.12 * age;
-  return { score: Math.round(score * 100) / 100, worldScore: Math.round(worldScore * 100) / 100 };
+  // From a home region: its own outlets count fully and once more for relevance, the outlets of the other home
+  // region together like one: eight Flemish outlets on a Flemish story do not make it big in DACH.
+  const fromHome = (h: Home, bonus: number) => {
+    const own = all.filter((f) => homeOf(f) === h);
+    const other = all.filter((f) => homeOf(f) && homeOf(f) !== h);
+    return sum(own) + sum(intl) + Math.min(1, sum(other)) + 0.5 * countries(all) + bonus + 0.4 * own.length - 0.12 * age;
+  };
+  const worldScore = sum(intl) + 0.5 * countries(intl) + 0.2 * (all.length - intl.length) - 0.12 * age;
+  const round = (x: number) => Math.round(x * 100) / 100;
+  // The editors of Tagesschau and ntv say what matters in Germany, not in Belgium.
+  return { score: round(fromHome('dach', editors)), beScore: round(fromHome('be', 0)), worldScore: round(worldScore) };
 }
 
 // ---------- Edition ----------
@@ -262,6 +277,7 @@ export function buildEdition({ reports, groups, signals, tr, ogImage, logos }: E
   const keep = new Set(ranked.slice(0, KEEP));
   const world = [...stories].sort((a, b) => b.worldScore - a.worldScore);
   for (const s of world.slice(0, 40)) keep.add(s);
+  for (const s of [...stories].sort((a, b) => b.beScore - a.beScore).slice(0, 40)) keep.add(s);
   for (const res of PRIORITY) ranked.filter((s) => s.ressort === res).slice(0, PER_RESSORT).forEach((s) => keep.add(s));
   const kept = ranked.filter((s) => keep.has(s));
   const all = kept.flatMap((s) => s.sources);

@@ -17,8 +17,9 @@
 | Section | Content |
 |---|---|
 | **Top** | The lead story with a large picture, places 2 and 3, the other view as a strip to swipe, places 4 to 6 |
-| **Other view** | German-speaking: stories without a DACH source but with at least two international ones. Global: stories without an international source but with at least two from DACH |
-| **DE · CH · AT** | Germany, Switzerland, Austria. In German it is called "DACH" |
+| **Other view** | German-speaking or Belgium: stories without a source from there but with at least two international ones. Global: stories without an international source but with at least two from DACH or from Belgium |
+| **DE · CH · AT** | Germany, Switzerland, Austria. In German it is called "DACH". Only in the perspectives German-speaking and Global |
+| **Belgium** | Flanders, Brussels, Wallonia. Only in the perspectives Belgium and Global, otherwise Belgian stories are in World |
 | **World, Business, Tech, Science, Culture, Sport** | Up to 30 stories each, new first, then by importance |
 
 Swiping left or right on the list turns to the next section. A blue dot on a section means there is something new. Every list ends with "You're up to date" and a button to the next section, the list is not endless.
@@ -37,7 +38,7 @@ A tap opens the story, on the iPhone as a sheet at half height. Pull up for ever
 
 ## 2-minute briefing
 
-**2 min** at the bottom left shows the ten most important stories, one per screen, with picture, headline and teaser: the six of the Top page plus the first of DE · CH · AT, World, Business and Tech. On the iPad in landscape picture and text stand side by side.
+**2 min** at the bottom left shows the ten most important stories, one per screen, with picture, headline and teaser: the six of the Top page plus the first of DE · CH · AT (from Belgium: Belgium), World, Business and Tech. On the iPad in landscape picture and text stand side by side.
 
 | Gesture or button | Effect |
 |---|---|
@@ -76,10 +77,10 @@ The slider icon at the bottom right, on the iPad in landscape **View and languag
 |---|---|---|
 | App language | Deutsch, English | Controls, sections, notices, dates |
 | Reports | Deutsch, English, Original | Headlines, teasers and titles of the sources. Original shows every text as its source wrote it, also French from RTS and Italian from RSI |
-| Perspective | German-speaking, Global | What is important and what the other view shows, see [Stories and importance](stories.md) |
+| Perspective | German-speaking, Belgium, Global | What is important and what the other view shows, see [Stories and importance](stories.md) |
 | View | Calm, Pictures | Calm: small preview pictures. Pictures: every story with a picture shown large |
 
-On the first start app language, reports and perspective follow the language of the device: German and German-speaking on a German device, else English and global. Times are always shown in the time zone of the device. So a friend abroad can use NEWS without setting anything.
+On the first start app language, reports and perspective follow the language of the device: German and German-speaking on a German device, English and Belgium on a device set to Dutch or to Belgium, else English and global. Times are always shown in the time zone of the device. So a friend abroad can use NEWS without setting anything.
 
 ## Offline
 

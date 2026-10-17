@@ -26,9 +26,9 @@ Every report gets a section when something says so, in this order:
 1. The feed is a section (SRF Schweiz, SRF Wirtschaft, NZZ Schweiz, heise, Golem).
 2. The address of the article: `/sport/`, `/wirtschaft/`, `/wissen/`, `/kultur/`, `/inland/`, `/schweiz/` and similar, in German and English.
 3. The category in the feed, for Tagesschau for example "inland".
-4. Words in the title: a result with a sports term becomes Sport, Bundestag, Kanton, ÖVP, Merz, Zürich and similar in a German title become DACH.
+4. Words in the title: a result with a sports term becomes Sport, Bundestag, Kanton, ÖVP, Merz, Zürich and similar in a German title become DACH; Vlaanderen, Wallonia, De Wever, N-VA, De Lijn and similar in any title become Belgium, Brussels alone does not, abroad it mostly means the EU. Belgian outlets also by their address (`/binnenland/`, `/belgium/`).
 
-The story takes the section with the most votes, on a tie in the order Sport, Tech, Business, Science, Culture, DACH. **A section needs a third of the reports**, else it becomes World. So one business feed among four world reports does not make a business story.
+The story takes the section with the most votes, on a tie in the order Sport, Tech, Business, Science, Culture, DACH, Belgium. **A section needs a third of the reports**, else it becomes World. So one business feed among four world reports does not make a business story.
 
 ## Importance
 
@@ -44,7 +44,9 @@ Three signals, from the editorial check against ntv, Bild, CNN and CNBC on 11 Oc
 | DACH relevance | 0.4 per outlet from Germany, Switzerland or Austria (without DW English) |
 | Age | minus 0.12 per hour since the newest report |
 
-**Global** (`worldScore`): weights and countries of the outlets outside DACH only, DW English counts as international, plus 0.2 per DACH outlet and the same age.
+**Belgium** (`beScore`): the same, with 0.4 per Belgian outlet instead of the DACH relevance and without the newsrooms of Tagesschau and ntv. From each home region the outlets of the other count together like one: eight Flemish outlets on a Flemish story do not make it big in DACH, and the other way round.
+
+**Global** (`worldScore`): weights and countries of the outlets outside DACH and Belgium only, DW English counts as international, plus 0.2 per outlet from DACH or Belgium and the same age.
 
 The Top page shows the six stories with the highest importance in the chosen perspective. The sections do not repeat the Top stories.
 
@@ -53,7 +55,8 @@ The Top page shows the six stories with the highest importance in the chosen per
 | Perspective | The other view shows | Sorted by |
 |---|---|---|
 | German-speaking | Stories without a DACH source with at least two international ones | Number of sources |
-| Global | Stories without an international source with at least two from DACH | Number of sources |
+| Belgium | Stories without a Belgian source with at least two international ones | Number of sources |
+| Global | Stories without an international source with at least two from DACH or from Belgium | Number of sources |
 
 Every card says how many sources of the other side report: "No DACH source" or "No international source".
 

@@ -4,6 +4,11 @@ Changes to the collection as a whole: structure, hub, build, checks, workflows. 
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.22.13 (2026-10-17)
+
+### Changed
+* Module NEWS 0.3.0: Belgium with its own perspective. The server gives `/data/news-stats.json`, the state of every news feed of the last round.
+
 ## 0.22.12 (2026-10-13)
 
 ### Fixed

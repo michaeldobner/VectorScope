@@ -2,7 +2,7 @@
 
 [Deutsche Version](../de/quellen.md) · [Overview](README.md)
 
-NEWS reads 36 feeds from 29 outlets in 12 countries. The list is in `news/src/data/feeds.ts`. Each was chosen by three questions: does it deliver reliably and freely, is it factual or does it bring speed, and does it widen the view by a country or a language.
+NEWS reads 44 feeds from 36 outlets in 13 countries: 36 checked in the test lab, 8 from Belgium on trial. The list is in `news/src/data/feeds.ts`. Each was chosen by three questions: does it deliver reliably and freely, is it factual or does it bring speed, and does it widen the view by a country or a language.
 
 ## Groups and weights
 
@@ -13,7 +13,9 @@ NEWS reads 36 feeds from 29 outlets in 12 countries. The list is in `news/src/da
 | International | 1 | Perspectives from the United Kingdom, the USA, Qatar, France, Europe, Australia, Singapore, Hong Kong and India |
 | Business | 0.8 | CNBC for markets and companies |
 | Tech media | 0.7 | heise and Golem for tech |
-| Fast news | 0.4 | 20 Minuten, Blick, watson: fast, close to tabloid, they never decide what is on top |
+| Fast news | 0.4 | 20 Minuten, Blick, watson, HLN, Het Nieuwsblad: fast, close to tabloid, they never decide what is on top |
+
+Belgium, Flanders first, has its own perspective: VRT NWS, De Standaard, De Morgen, De Tijd, Brussels Times, HLN and Het Nieuwsblad, in the groups above. VRT NWS and Brussels Times also write in English, so Belgian stories often have an English text without translation.
 
 The weight counts when NEWS computes the importance of a story, see [Stories and importance](stories.md). Every outlet counts once, even when it reports with several feeds.
 
@@ -57,6 +59,14 @@ The weight counts when NEWS computes the importance of a story, see [Stories and
 | [`20min`](https://partner-feeds.20min.ch/rss/20minuten) | 20 Minuten | CH | German | Fast news | 0.4 |  |
 | [`blick`](https://www.blick.ch/rss.xml) | Blick | CH | German | Fast news | 0.4 |  |
 | [`watson`](https://www.watson.ch/api/1.0/rss/index.xml) | watson | CH | German | Fast news | 0.4 |  |
+| [`vrt`](https://www.vrt.be/vrtnws/nl.rss.articles.xml) | VRT NWS | BE | Dutch | Public broadcaster | 1 | on trial |
+| [`vrt-en`](https://www.vrt.be/vrtnws/en.rss.articles.xml) | VRT NWS | BE | English | Public broadcaster | 1 | on trial, same outlet as `vrt` |
+| [`standaard`](https://www.standaard.be/rss/section/1f2838d4-99ea-49f0-9102-138784c7ea7c) | De Standaard | BE | Dutch | Quality press and broadcaster | 1 | on trial, section Belgium |
+| [`demorgen`](https://www.demorgen.be/in-het-nieuws/rss.xml) | De Morgen | BE | Dutch | Quality press and broadcaster | 1 | on trial |
+| [`tijd`](https://www.tijd.be/rss/top_stories.xml) | De Tijd | BE | Dutch | Business | 0.8 | on trial |
+| [`brusselstimes`](https://www.brusselstimes.com/feed) | Brussels Times | BE | English | Quality press and broadcaster | 1 | on trial |
+| [`hln`](https://www.hln.be/home/rss.xml) | HLN | BE | Dutch | Fast news | 0.4 | on trial |
+| [`nieuwsblad`](https://www.nieuwsblad.be/rss/section/55178e67-15a8-4ddd-a3d8-bfe5708f8932) | Het Nieuwsblad | BE | Dutch | Fast news | 0.4 | on trial, section Belgium |
 
 ## Checked in the test lab
 
@@ -70,6 +80,10 @@ What the lab taught, and the parser in `news/src/data/parse.ts` follows:
 * BBC delivers pictures 240 pixels wide, the address names the size, NEWS asks for 976 pixels.
 * Al Jazeera, DW English, Euronews, ORF, Die Presse and NPR deliver no picture in the feed. The preview picture of the article page was there for 41 of 47 samples, but NPR and Die Presse only name their logo there.
 * Almost no feed allows reading from the browser (CORS). So the collector on the server reads, not the app.
+
+## The Belgian feeds on trial
+
+The Belgian feeds (17 October 2026) could not be checked from the development machine, whose network does not reach Belgian sites. The own server checks them in every round instead: `/data/news-stats.json` says per feed whether it delivers, how many reports and which error. A feed that does not deliver costs nothing, the others go on. Once a round shows them, the addresses that fail are replaced and "on trial" goes.
 
 ## Not included
 

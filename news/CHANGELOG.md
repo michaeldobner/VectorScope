@@ -4,6 +4,16 @@ All notable changes to the module NEWS. [Deutsch](CHANGELOG.de.md) · [Changelog
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.3.0 (2026-10-17)
+
+### Added
+* **Belgium, Flanders first:** VRT NWS (Dutch and English), De Standaard, De Morgen, De Tijd, Brussels Times, HLN and Het Nieuwsblad. On trial: the development machine cannot reach Belgian sites, the own server checks the feeds in every round.
+* **Perspective Belgium** with its own importance (`beScore`), the section Belgium and its own other view. A device set to Dutch or to Belgium starts with English and Belgium. The outlets of the other home region count together like one, so Flemish stories do not crowd the German-speaking Top and the other way round.
+* **`/data/news-stats.json`** on the own server: per feed of the last round whether it delivers, how many reports and which error.
+
+### Fixed
+* The explanations under Reports and Perspective in the settings showed as a dark box in the middle of the screen: the hint of the briefing used the same name.
+
 ## 0.2.4 (2026-10-12)
 
 ### Fixed

@@ -26,9 +26,9 @@ Jede Meldung bekommt ein Ressort, wenn etwas es sagt, in dieser Reihenfolge:
 1. Der Feed ist ein Ressort (SRF Schweiz, SRF Wirtschaft, NZZ Schweiz, heise, Golem).
 2. Die Adresse des Artikels: `/sport/`, `/wirtschaft/`, `/wissen/`, `/kultur/`, `/inland/`, `/schweiz/` und ähnliche, auf Deutsch und Englisch.
 3. Die Kategorie im Feed, bei der Tagesschau zum Beispiel „inland“.
-4. Wörter im Titel: Ergebnis mit Sportbegriff wird Sport, Bundestag, Kanton, ÖVP, Merz, Zürich und ähnliche in einem deutschsprachigen Titel werden DACH.
+4. Wörter im Titel: Ergebnis mit Sportbegriff wird Sport, Bundestag, Kanton, ÖVP, Merz, Zürich und ähnliche in einem deutschsprachigen Titel werden DACH; Vlaanderen, Wallonien, De Wever, N-VA, De Lijn und ähnliche in jedem Titel werden Belgien, Brüssel allein nicht, im Ausland meint es meist die EU. Belgische Medien auch nach ihrer Adresse (`/binnenland/`, `/belgium/`).
 
-Die Geschichte nimmt das Ressort mit den meisten Stimmen, bei Gleichstand in der Reihenfolge Sport, Tech, Wirtschaft, Wissenschaft, Kultur, DACH. **Ein Ressort braucht ein Drittel der Meldungen**, sonst wird es Welt. So macht ein Wirtschaftsfeed unter vier Weltmeldungen keine Wirtschaftsgeschichte.
+Die Geschichte nimmt das Ressort mit den meisten Stimmen, bei Gleichstand in der Reihenfolge Sport, Tech, Wirtschaft, Wissenschaft, Kultur, DACH, Belgien. **Ein Ressort braucht ein Drittel der Meldungen**, sonst wird es Welt. So macht ein Wirtschaftsfeed unter vier Weltmeldungen keine Wirtschaftsgeschichte.
 
 ## Wichtigkeit
 
@@ -44,7 +44,9 @@ Drei Signale, aus der Redaktionsprüfung gegen ntv, Bild, CNN und CNBC am 11. Ok
 | DACH-Bezug | 0,4 je Medium aus Deutschland, der Schweiz oder Österreich (ohne DW English) |
 | Alter | minus 0,12 je Stunde seit der neuesten Meldung |
 
-**Aus der Welt** (`worldScore`): Gewichte und Länder nur der Medien außerhalb von DACH, DW English zählt international, dazu 0,2 je DACH-Medium und dasselbe Alter.
+**Aus Belgien** (`beScore`): dasselbe, mit 0,4 je belgischem Medium statt des DACH-Bezugs und ohne die Redaktionen von Tagesschau und ntv. Aus jeder Heimatregion zählen die Medien der anderen zusammen wie eines: Acht flämische Medien zu einer flämischen Geschichte machen sie in DACH nicht groß, und umgekehrt.
+
+**Aus der Welt** (`worldScore`): Gewichte und Länder nur der Medien außerhalb von DACH und Belgien, DW English zählt international, dazu 0,2 je Medium aus DACH oder Belgien und dasselbe Alter.
 
 Die Top-Seite zeigt die sechs Geschichten mit der höchsten Wichtigkeit im gewählten Blickwinkel. In den Ressorts stehen die Top-Geschichten nicht noch einmal.
 
@@ -53,7 +55,8 @@ Die Top-Seite zeigt die sechs Geschichten mit der höchsten Wichtigkeit im gewä
 | Blickwinkel | Der andere Blick zeigt | Sortiert nach |
 |---|---|---|
 | Aus DACH | Geschichten ohne DACH-Quelle mit mindestens zwei internationalen | Zahl der Quellen |
-| Aus der Welt | Geschichten ohne internationale Quelle mit mindestens zwei aus DACH | Zahl der Quellen |
+| Aus Belgien | Geschichten ohne belgische Quelle mit mindestens zwei internationalen | Zahl der Quellen |
+| Aus der Welt | Geschichten ohne internationale Quelle mit mindestens zwei aus DACH oder aus Belgien | Zahl der Quellen |
 
 Jede Karte sagt, wie viele Quellen der anderen Seite berichten: „Keine DACH-Quelle“ oder „Keine internationale Quelle“.
 

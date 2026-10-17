@@ -8,9 +8,9 @@ import '@fontsource/newsreader/500.css';
 import '@fontsource/newsreader/600.css';
 import '../../shared/tokens.css';
 import './styles.css';
-import { DACH } from './data/feeds';
+import { homeOf } from './data/feeds';
 import type { Edition, Lead, MsgLang, Story, StorySource } from './data/types';
-import { RESSORT_IDS, TEXT, type RessortId, type UiLang } from './i18n';
+import { RESSORT_IDS as ALL_RESSORTS, TEXT, type RessortId, type UiLang } from './i18n';
 
 // The edition comes from the own server, which collects it (server/collector-loop.mjs). ?data= points elsewhere,
 // for development against a copy.
@@ -21,7 +21,7 @@ const REFRESH_MS = 5 * 60_000;
 const STALE_MS = 45 * 60_000;
 
 type View = 'calm' | 'pics';
-type Persp = 'dach' | 'world';
+type Persp = 'dach' | 'be' | 'world';
 
 const store = {
   get<T>(k: string, d: T): T {
@@ -39,14 +39,16 @@ const store = {
   },
 };
 
-// First visit: follow the device language. A friend abroad gets English and the world perspective.
+// First visit: follow the device language. A friend abroad gets English and the world perspective, in Belgium
+// (Dutch, or any language set for Belgium) the Belgian one.
 const DEVICE_DE = /^de\b/i.test(navigator.language || 'de');
+const DEVICE_BE = /^nl\b|-BE$/i.test(navigator.language || '');
 const state = {
   ressort: 'top' as RessortId,
   view: store.get<View>('view', 'calm'),
   ui: store.get<UiLang>('ui', DEVICE_DE ? 'de' : 'en'),
   msg: store.get<MsgLang>('msg', DEVICE_DE ? 'de' : 'en'),
-  persp: store.get<Persp>('persp', DEVICE_DE ? 'dach' : 'world'),
+  persp: store.get<Persp>('persp', DEVICE_BE ? 'be' : DEVICE_DE ? 'dach' : 'world'),
   seen: new Set(store.get<string[]>('seen', [])),
   selected: null as string | null,
   edition: null as Edition | null,
@@ -80,9 +82,12 @@ const S = (s: Story) => lead(s).sum;
 const HL = (s: Story) => lead(s).lang;
 const ST = (x: StorySource) => (state.msg === 'orig' ? x.orig : x[state.msg] || x.orig);
 const TR = (x: StorySource) => state.msg !== 'orig' && x.lang !== state.msg && !!x[state.msg];
-const dachCount = (s: Story) => s.sources.filter((x) => DACH.includes(x.cc) && x.group !== 'intl').length;
-const intlCount = (s: Story) => s.sources.length - dachCount(s);
-const scoreOf = (s: Story) => (state.persp === 'dach' ? s.score : s.worldScore);
+/** Sources from a home region, and international ones: outside both home regions or an international edition. */
+const homeCount = (s: Story, h: 'dach' | 'be') => s.sources.filter((x) => homeOf(x) === h).length;
+const intlCount = (s: Story) => s.sources.filter((x) => !homeOf(x)).length;
+const scoreOf = (s: Story) => (state.persp === 'dach' ? s.score : state.persp === 'be' ? (s.beScore ?? s.score) : s.worldScore);
+/** Sections of the perspective: each home region shows its own, the world both. */
+const ressortIds = () => ALL_RESSORTS.filter((r) => !(state.persp === 'dach' && r === 'be') && !(state.persp === 'be' && r === 'dach'));
 const isNew = (s: Story) => s.first > (LAST_VISIT || Date.now() - 2 * 3600_000) && !state.seen.has(s.id);
 const grew = (s: Story) => (COUNTS[s.id] && !state.seen.has(s.id) ? Math.max(0, s.sources.length - COUNTS[s.id]) : 0);
 const order = (list: Story[]) => [...list].sort((a, b) => Number(isNew(b)) - Number(isNew(a)) || scoreOf(b) - scoreOf(a));
@@ -90,18 +95,21 @@ const order = (list: Story[]) => [...list].sort((a, b) => Number(isNew(b)) - Num
 function topList() {
   return [...ed().stories].sort((a, b) => scoreOf(b) - scoreOf(a)).slice(0, TOP_N);
 }
-/** From DACH: big in the world, no DACH source. From the world: big in DACH, no international source. */
+/** From a home region: big in the world, no source from there. From the world: big at home, no international source. */
 function otherList() {
   const top = new Set(topList());
   return ed()
-    .stories.filter((s) => !top.has(s) && (state.persp === 'dach' ? dachCount(s) === 0 && intlCount(s) >= 2 : intlCount(s) === 0 && dachCount(s) >= 2))
+    .stories.filter((s) => !top.has(s) && (state.persp === 'world' ? intlCount(s) === 0 && (homeCount(s, 'dach') >= 2 || homeCount(s, 'be') >= 2) : homeCount(s, state.persp) === 0 && intlCount(s) >= 2))
     .sort((a, b) => b.sources.length - a.sources.length || b.time - a.time)
     .slice(0, 20);
 }
 function inRessort(r: RessortId): Story[] {
   if (r === 'anders') return otherList();
   const top = new Set(topList());
-  return order(ed().stories.filter((s) => s.ressort === r && !top.has(s))).slice(0, 30);
+  // The other home region has no section of its own here: its stories are world news.
+  const away = state.persp === 'dach' ? 'be' : state.persp === 'be' ? 'dach' : null;
+  const of = (s: Story) => (s.ressort === away ? 'welt' : s.ressort);
+  return order(ed().stories.filter((s) => of(s) === r && !top.has(s))).slice(0, 30);
 }
 const findStory = (id: string) => ed().stories.find((s) => s.id === id);
 
@@ -142,7 +150,7 @@ function rowHtml(s: Story, rank?: number) {
 }
 function scardHtml(s: Story) {
   const outlets = [...new Set(s.sources.map((x) => x.outlet))].slice(0, 3).join(', ');
-  const badge = state.persp === 'world' ? t().intl(intlCount(s)) : t().dach(dachCount(s));
+  const badge = state.persp === 'world' ? t().intl(intlCount(s)) : t().home[state.persp](homeCount(s, state.persp));
   return `<button class="scard story" data-id="${esc(s.id)}">${s.img ? img(s, '') : '<div class="noimg"></div>'}<div class="sbody"><div class="meta">${isNew(s) ? '<span class="dot"></span>' : ''}<span>${esc(outlets)}</span></div>${headHtml(s, 'h3')}<div class="dach">${badge}</div></div></button>`;
 }
 
@@ -160,7 +168,7 @@ function renderList(dir?: number) {
   let html = `<div class="masthead"><b>NEWS</b><span class="when">${stamp} · ${t().sources(ed().outlets)} · ${t().countries(ed().countries)}</span></div>`;
   if (state.offline || Date.now() - ed().at > STALE_MS) html += `<p class="stale">${state.offline ? t().offline : t().edition(ago(ed().at))}</p>`;
   const items = inRessort(r);
-  const sub = r === 'anders' && state.persp === 'world' ? t().subOtherWorld : (t().sub[r] ?? t().stories(items.length));
+  const sub = r === 'anders' ? t().subOther[state.persp] : (t().sub[r] ?? t().stories(items.length));
   html += `<h1 class="ressort-title">${label}</h1><p class="ressort-sub">${sub}</p>`;
 
   if (r === 'top') {
@@ -181,8 +189,8 @@ function renderList(dir?: number) {
       html += rowHtml(s);
     });
   }
-  const idx = RESSORT_IDS.indexOf(r);
-  const next = RESSORT_IDS[(idx + 1) % RESSORT_IDS.length];
+  const ids = ressortIds();
+  const next = ids[(ids.indexOf(r) + 1) % ids.length];
   html += `<div class="end"><h3 class="head">${t().upToDate}</h3><p>${r === 'top' ? t().endTop : t().endRes(label)}</p><button class="btn primary" data-go="${next}">${t().next}: ${t().ressorts[next]}</button></div>`;
   list.innerHTML = html;
   list.classList.remove('slide-l', 'slide-r');
@@ -199,8 +207,8 @@ function renderChips() {
     const hasNew = r !== 'top' && !!state.edition && inRessort(r).some(isNew);
     return `<button class="chip${state.ressort === r ? ' on' : ''}" role="tab" aria-selected="${state.ressort === r}" data-go="${r}">${t().ressorts[r]}${hasNew ? `<span class="n" aria-label="${t().isNew}"></span>` : ''}</button>`;
   };
-  $('#chips').innerHTML = RESSORT_IDS.map(chip).join('');
-  $('#navSide').innerHTML = `<div class="brand">NEWS</div>${RESSORT_IDS.map(chip).join('')}<div class="grow"></div><div class="side-btns"><button class="btn primary" data-act="brief">${t().brief}</button><button class="btn" data-act="settings">${t().settings}</button></div>`;
+  $('#chips').innerHTML = ressortIds().map(chip).join('');
+  $('#navSide').innerHTML = `<div class="brand">NEWS</div>${ressortIds().map(chip).join('')}<div class="grow"></div><div class="side-btns"><button class="btn primary" data-act="brief">${t().brief}</button><button class="btn" data-act="settings">${t().settings}</button></div>`;
   document.documentElement.lang = state.ui;
   $('#briefLabel').textContent = t().briefShort;
   $('#briefBtn').setAttribute('aria-label', t().brief);
@@ -210,8 +218,8 @@ function renderChips() {
 
 function go(r: RessortId, dir?: number) {
   if (r === state.ressort || !state.edition) return;
-  const a = RESSORT_IDS.indexOf(state.ressort);
-  const b = RESSORT_IDS.indexOf(r);
+  const a = ressortIds().indexOf(state.ressort);
+  const b = ressortIds().indexOf(r);
   state.ressort = r;
   renderChips();
   renderList(dir ?? (b > a ? 1 : -1));
@@ -359,9 +367,10 @@ scrim.addEventListener('click', closeSheet);
     x0 = null;
     if ((e.target as HTMLElement).closest('.strip')) return;
     if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.6 && Date.now() - t0 < 700) {
-      const i = RESSORT_IDS.indexOf(state.ressort);
-      const j = dx < 0 ? Math.min(i + 1, RESSORT_IDS.length - 1) : Math.max(i - 1, 0);
-      if (j !== i) go(RESSORT_IDS[j], dx < 0 ? 1 : -1);
+      const ids = ressortIds();
+      const i = ids.indexOf(state.ressort);
+      const j = dx < 0 ? Math.min(i + 1, ids.length - 1) : Math.max(i - 1, 0);
+      if (j !== i) go(ids[j], dx < 0 ? 1 : -1);
     }
   });
 })();
@@ -379,7 +388,7 @@ let bList: Story[] = [];
 function openBrief() {
   if (!state.edition) return;
   closeSheet();
-  bList = [...topList(), ...(['dach', 'welt', 'wirtschaft', 'tech'] as RessortId[]).map((r) => inRessort(r)[0])].filter(Boolean).slice(0, 10);
+  bList = [...topList(), ...([state.persp === 'be' ? 'be' : 'dach', 'welt', 'wirtschaft', 'tech'] as RessortId[]).map((r) => inRessort(r)[0])].filter(Boolean).slice(0, 10);
   bIdx = 0;
   $('#brief').hidden = false;
   document.body.style.overflow = 'hidden';
@@ -399,7 +408,7 @@ function renderBrief(dir = 0) {
   const slide = done
     ? `<div class="slide final${anim}"><h2 class="head">${t().upToDate}</h2><p class="sum">${t().briefDone(bList.length, new Set(bList.flatMap((x) => x.sources.map((y) => y.outlet))).size)}</p></div>`
     : `<div class="slide${anim}">${mediaHtml(s, false)}<div class="text">${metaLine(s, true)}${headHtml(s, 'h2')}${sumHtml(s)}</div></div>`;
-  const hint = !done && bIdx === 0 && !store.get('briefHint', false) ? `<div class="hint">${t().briefHint}</div>` : '';
+  const hint = !done && bIdx === 0 && !store.get('briefHint', false) ? `<div class="brief-hint">${t().briefHint}</div>` : '';
   if (hint) store.set('briefHint', true);
   const bars = bList.map((_, i) => `<i class="${i < bIdx ? 'done' : i === bIdx ? 'cur' : ''}"></i>`).join('');
   $('#brief').classList.remove('paused');
@@ -495,7 +504,7 @@ function openSettings() {
   const html = `<div class="set"><h2 class="head" style="font-size:24px">${t().settings}</h2>
     <div><label>${t().ui}</label>${seg('ui', [['de', 'Deutsch'], ['en', 'English']])}</div>
     <div><label>${t().msg}</label>${seg('msg', [['de', 'Deutsch'], ['en', 'English'], ['orig', t().orig]])}<p class="hint">${t().msgNote[state.msg]}</p></div>
-    <div><label>${t().persp}</label>${seg('persp', [['dach', t().perspDach], ['world', t().perspWorld]])}<p class="hint">${t().perspNote[state.persp]}</p></div>
+    <div><label>${t().persp}</label>${seg('persp', [['dach', t().perspDach], ['be', t().perspBe], ['world', t().perspWorld]])}<p class="hint">${t().perspNote[state.persp]}</p></div>
     <div><label>${t().view}</label>${seg('view', [['calm', t().calm], ['pics', t().pics]])}</div>
     <div class="note">${t().about(state.edition?.outlets ?? 0, state.edition?.countries ?? 0, __APP_VERSION__).map((p) => `<p>${p}</p>`).join('')}</div></div>`;
   if (wide()) {
@@ -591,6 +600,8 @@ document.addEventListener('click', (e) => {
     const k = set.dataset.set as 'ui' | 'msg' | 'persp' | 'view';
     (state as Record<string, unknown>)[k] = set.dataset.v;
     store.set(k, set.dataset.v);
+    // The section of the other home region is gone in this perspective.
+    if (!ressortIds().includes(state.ressort)) state.ressort = 'top';
     renderChips();
     renderList();
     openSettings();

@@ -7,7 +7,7 @@ This documentation describes the module NEWS: how to use it, which sources it re
 | Document | Content | Audience |
 |---|---|---|
 | [User guide](user-guide.md) | Views, sections, stories, perspectives, 2-minute briefing, settings, what is new | Everyone |
-| [Sources](sources.md) | The 36 feeds, groups and weights, the check in the lab, rejected candidates | Everyone |
+| [Sources](sources.md) | The 44 feeds, groups and weights, the check in the lab, rejected candidates | Everyone |
 | [Stories and importance](stories.md) | Grouping by meaning, sections, the three signals of importance, texts, pictures, translation | Everyone, development |
 | [Architecture](architecture.md) | Collector on the server, one round, format of the edition, app, tests | Development |
 | [Privacy and legal](privacy-and-legal.md) | Requests, storage, third party content, licences | Everyone |
@@ -17,10 +17,10 @@ This documentation describes the module NEWS: how to use it, which sources it re
 | | |
 |---|---|
 | Purpose | The news of the day as stories, with the perspectives of many outlets side by side |
-| Sources | 36 feeds from 29 outlets in 12 countries, each checked in the test lab |
-| Views | Top, Other view, DE · CH · AT, World, Business, Tech, Science, Culture, Sport, 2-minute briefing |
+| Sources | 44 feeds from 36 outlets in 13 countries, 36 checked in the test lab, 8 from Belgium on trial |
+| Views | Top, Other view, DE · CH · AT, Belgium, World, Business, Tech, Science, Culture, Sport, 2-minute briefing |
 | Updates | The collector on the own server builds a new edition every 10 minutes, the app asks every 5 minutes |
 | Language | App in German or English, reports in German, English or the original |
-| Perspective | German-speaking or global |
+| Perspective | German-speaking, Belgium or global |
 | Address | The own server, path `/news/` |
-| Version | 0.2.4 |
+| Version | 0.3.0 |
