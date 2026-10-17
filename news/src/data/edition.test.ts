@@ -140,7 +140,7 @@ describe('edition', () => {
     expect(german.score).toBeGreaterThan(flemish.score);
     // Belgian outlets count as home outlets, not as international ones.
     expect(flemish.worldScore).toBeLessThan(2);
-    expect(classify(rep('brusselstimes', 'Strike on De Lijn', 'https://www.brusselstimes.com/belgium/1'), feedById('brusselstimes')!)).toBe('be');
+    expect(classify(rep('vrt-en', 'Strike on De Lijn', 'https://www.vrt.be/vrtnws/en/2026/10/17/strike'), feedById('vrt-en')!)).toBe('be');
   });
 
   it('counts the headlines of VRT NWS for Belgium only, and sends Flemish sport to Sport', () => {

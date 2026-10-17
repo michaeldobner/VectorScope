@@ -4,6 +4,11 @@ Alle wesentlichen Änderungen am Modul NEWS. [English](CHANGELOG.md) · [Changel
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.3.2 (2026-10-17)
+
+### Geändert
+* **Belgische Feeds nach der zweiten Runde auf dem Server:** De Tijd liefert aus `rss/nieuws.xml`, die Schlagzeilen von VRT NWS liefern. Brussels Times hat keinen Feed, jede Adresse antwortet mit der Web-App: raus. Alle belgischen Feeds sind jetzt geprüft, keiner mehr auf Probe.
+
 ## 0.3.1 (2026-10-17)
 
 ### Geändert

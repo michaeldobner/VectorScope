@@ -4,7 +4,8 @@
 // The Belgian feeds (17 October 2026) could not be checked from the development machine: the own server checks
 // them in every round, news-stats.json (/data/news-stats.json) says per feed whether it delivers. Its first round:
 // De Standaard and Het Nieuwsblad (Mediahuis) refuse the server (403), De Tijd 404, Brussels Times without reports.
-// De Tijd and Brussels Times try further addresses (alt).
+// The second round: De Tijd delivers from rss/nieuws.xml, Brussels Times has no feed (its addresses answer with
+// the web app) and is out, the headlines of VRT NWS deliver.
 import type { Feed } from './types';
 
 export const FEEDS: Feed[] = [
@@ -57,8 +58,7 @@ export const FEEDS: Feed[] = [
   { id: 'vrt-home', outlet: 'VRT NWS', cc: 'BE', group: 'pub', lang: 'nl', url: 'https://www.vrt.be/vrtnws/nl.rss.headlines.xml', kind: 'homepage' },
   { id: 'vrt-en', outlet: 'VRT NWS', cc: 'BE', group: 'pub', lang: 'en', url: 'https://www.vrt.be/vrtnws/en.rss.articles.xml' },
   { id: 'demorgen', outlet: 'De Morgen', cc: 'BE', group: 'press', lang: 'nl', url: 'https://www.demorgen.be/in-het-nieuws/rss.xml' },
-  { id: 'tijd', outlet: 'De Tijd', cc: 'BE', group: 'biz', lang: 'nl', url: 'https://www.tijd.be/rss/nieuws.xml', alt: ['https://www.tijd.be/rss/politiek_economie.xml', 'https://www.tijd.be/rss/ondernemen.xml', 'https://www.tijd.be/rss/top_stories.xml'] },
-  { id: 'brusselstimes', outlet: 'Brussels Times', cc: 'BE', group: 'press', lang: 'en', url: 'https://www.brusselstimes.com/rss', alt: ['https://www.brusselstimes.com/feed/', 'https://www.brusselstimes.com/belgium/feed', 'https://www.brusselstimes.com/feed'] },
+  { id: 'tijd', outlet: 'De Tijd', cc: 'BE', group: 'biz', lang: 'nl', url: 'https://www.tijd.be/rss/nieuws.xml' },
   { id: 'hln', outlet: 'HLN', cc: 'BE', group: 'fast', lang: 'nl', url: 'https://www.hln.be/home/rss.xml' },
 ];
 
@@ -74,6 +74,6 @@ export const homeOf = (f: { cc: string; group: string }): Home | undefined =>
 /** Order of preference for the text of a story, per language. The most factual outlets first. */
 export const LEAD_ORDER: Record<'de' | 'en' | 'orig', string[]> = {
   de: ['Tagesschau', 'SRF', 'ZDFheute', 'Deutschlandfunk', 'ORF', 'NZZ', 'DW', 'Der Standard', 'Die Presse', 'Spiegel', 'ntv', 'heise', 'Golem'],
-  en: ['BBC', 'The Guardian', 'NPR', 'DW', 'France 24', 'Euronews', 'ABC Australia', 'CNA', 'Al Jazeera', 'SCMP', 'CNBC', 'Times of India', 'VRT NWS', 'Brussels Times'],
+  en: ['BBC', 'The Guardian', 'NPR', 'DW', 'France 24', 'Euronews', 'ABC Australia', 'CNA', 'Al Jazeera', 'SCMP', 'CNBC', 'Times of India', 'VRT NWS'],
   orig: ['Tagesschau', 'SRF', 'BBC', 'ZDFheute', 'Deutschlandfunk', 'ORF', 'NZZ', 'The Guardian', 'DW', 'Der Standard', 'Spiegel', 'NPR', 'Al Jazeera', 'VRT NWS', 'De Morgen', 'De Tijd'],
 };

@@ -69,7 +69,6 @@ const FEEDS = [
   ['BE', 'VRT NWS English', 'https://www.vrt.be/vrtnws/en.rss.articles.xml'],
   ['BE', 'De Morgen', 'https://www.demorgen.be/in-het-nieuws/rss.xml'],
   ['BE', 'De Tijd', 'https://www.tijd.be/rss/nieuws.xml'],
-  ['BE', 'Brussels Times', 'https://www.brusselstimes.com/rss'],
   ['BE', 'HLN', 'https://www.hln.be/home/rss.xml'],
 ];
 

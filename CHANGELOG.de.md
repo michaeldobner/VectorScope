@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.22.15 (2026-10-17)
+
+### Geändert
+* Modul NEWS 0.3.2: alle belgischen Feeds auf dem Server geprüft, Brussels Times raus.
+
 ## 0.22.14 (2026-10-17)
 
 ### Geändert
