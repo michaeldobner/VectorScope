@@ -20,7 +20,7 @@
 | **Other view** | German-speaking or Belgium: stories without a source from there but with at least two international ones. Global: stories without an international source but with at least two from DACH or from Belgium |
 | **DE · CH · AT** | Germany, Switzerland, Austria. In German it is called "DACH". Only in the perspectives German-speaking and Global |
 | **Belgium** | Flanders, Brussels, Wallonia. Only in the perspectives Belgium and Global, otherwise Belgian stories are in World |
-| **World, Business, Tech, Science, Culture, Sport** | Up to 30 stories each, new first, then by importance |
+| **World, Business, Tech, Science, Culture, Sport** | Up to 30 stories each, new first, then by importance. A single report of a fast outlet (Blick, HLN) does not move up for being new |
 
 Swiping left or right on the list turns to the next section. A blue dot on a section means there is something new. Every list ends with "You're up to date" and a button to the next section, the list is not endless.
 

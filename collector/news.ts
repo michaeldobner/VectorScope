@@ -54,20 +54,27 @@ async function get(url: string, ms = 25000) {
 }
 
 // 1. Feeds
-const stats: Record<string, { ok: boolean; reports: number; error?: string }> = {};
+// Per feed: whether it delivers, from which address, and when it delivers nothing the start of the answer, so a
+// wrong address shows in news-stats.json.
+const stats: Record<string, { ok: boolean; reports: number; url?: string; error?: string; head?: string }> = {};
 const all: Report[] = (
   await pool(FEEDS, 6, async (feed) => {
-    try {
-      const reports = parseFeed(await get(feed.url), feed);
-      stats[feed.id] = { ok: reports.length > 0, reports: reports.length };
-      return reports;
-    } catch (e) {
-      stats[feed.id] = { ok: false, reports: 0, error: String((e as Error).message ?? e) };
-      return [];
+    for (const url of [feed.url, ...(feed.alt ?? [])]) {
+      try {
+        const body = await get(url);
+        const reports = parseFeed(body, feed);
+        stats[feed.id] = { ok: reports.length > 0, reports: reports.length, url, ...(reports.length ? {} : { head: body.slice(0, 160) }) };
+        if (reports.length) return reports;
+      } catch (e) {
+        stats[feed.id] = { ok: false, reports: 0, url, error: String((e as Error).message ?? e) };
+      }
     }
+    return [];
   })
 ).flat();
-const homepage = new Map(all.filter((r) => r.feed === 'tagesschau-home').map((r) => [r.link, r.rank]));
+const order = (id: string) => new Map(all.filter((r) => r.feed === id).map((r) => [r.link, r.rank]));
+const homepage = order('tagesschau-home');
+const beHomepage = order('vrt-home');
 // One report per link: the API and the homepage of Tagesschau, NZZ recent and NZZ Schweiz overlap.
 const seen = new Set<string>();
 const reports = usableReports(all, now, isNoise).filter((r) => !seen.has(r.link) && seen.add(r.link));
@@ -203,7 +210,7 @@ const ogUrls = new Map([...og].filter(([, v]) => v.url).map(([k, v]) => [k, v.ur
 const logos = findLogos(reports, ogUrls);
 
 // 5. The edition, once more after the teasers of the leads are translated
-const input = { reports, groups, signals: { homepage, now }, tr, ogImage: (l: string) => ogUrls.get(l), logos };
+const input = { reports, groups, signals: { homepage, beHomepage, now }, tr, ogImage: (l: string) => ogUrls.get(l), logos };
 buildEdition(input);
 await translateMissing();
 const edition = buildEdition(input);

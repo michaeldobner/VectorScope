@@ -58,6 +58,15 @@ describe('parse', () => {
     expect(cleanTitle('Palästinensergebiete - Präsident Abbas verschiebt Wahl', feedById('dlf')!)).toBe('Präsident Abbas verschiebt Wahl');
   });
 
+  it('cleans Flemish labels', () => {
+    expect(cleanTitle('LIVEBLOG Federale topministers verlaten piste', feedById('vrt')!)).toBe('Federale topministers verlaten piste');
+    expect(cleanTitle('LIVESTREAM WK baanwielrennen: ontgoocheling', feedById('vrt')!)).toBe('WK baanwielrennen: ontgoocheling');
+    expect(cleanTitle('Live – Premier De Wever haalt schuldenrem van tafel', feedById('demorgen')!)).toBe('Premier De Wever haalt schuldenrem van tafel');
+    expect(cleanTitle('EXCLUSIEF. Broer van Dina Tersago', feedById('hln')!)).toBe('Broer van Dina Tersago');
+    expect(cleanTitle('Live - Politie zet traangas in • Ook in Parijs traangas', feedById('hln')!)).toBe('Politie zet traangas in');
+    expect(cleanTitle('Livestock prices fall', feedById('bbc')!)).toBe('Livestock prices fall');
+  });
+
   it('knows noise', () => {
     expect(['tagesschau 20:00 Uhr', 'Die Wetteraussichten', 'Anzeige: TV günstig', 'Latest news bulletin | October 10th'].every(isNoise)).toBe(true);
     expect(isNoise('Zwölf Tote in Riad')).toBe(false);
@@ -120,7 +129,7 @@ describe('edition', () => {
   });
 
   it('ranks a Flemish story high from Belgium, not from DACH or the world', () => {
-    const be = ['vrt', 'standaard', 'demorgen', 'hln'].map((f, i) => rep(f, `De Wever stelt nieuwe Vlaamse regering voor ${i}`, `https://be/${f}`));
+    const be = ['vrt', 'demorgen', 'tijd', 'hln'].map((f, i) => rep(f, `De Wever stelt nieuwe Vlaamse regering voor ${i}`, `https://be/${f}`));
     const de = ['tagesschau', 'zdf', 'srf', 'orf'].map((f, i) => rep(f, `Bundestag beschließt Haushalt ${i}`, `https://de/${f}`));
     const all = [...be, ...de];
     const ed = buildEdition({ reports: all, groups: [[0, 1, 2, 3], [4, 5, 6, 7]], signals: { homepage: new Map(), now: NOW }, tr });
@@ -132,6 +141,22 @@ describe('edition', () => {
     // Belgian outlets count as home outlets, not as international ones.
     expect(flemish.worldScore).toBeLessThan(2);
     expect(classify(rep('brusselstimes', 'Strike on De Lijn', 'https://www.brusselstimes.com/belgium/1'), feedById('brusselstimes')!)).toBe('be');
+  });
+
+  it('counts the headlines of VRT NWS for Belgium only, and sends Flemish sport to Sport', () => {
+    const one = (home: Map<string, number>) =>
+      buildEdition({ reports: [rep('vrt', 'Federale topministers verlaten piste van schuldenrem', 'https://vrt/1')], groups: [[0]], signals: { homepage: new Map(), beHomepage: home, now: NOW }, tr }).stories[0];
+    expect(one(new Map([['https://vrt/1', 0]])).beScore - one(new Map()).beScore).toBeCloseTo(4);
+    expect(one(new Map([['https://vrt/1', 0]])).score).toBe(one(new Map()).score);
+    expect(classify(rep('hln', 'Ploegkoers op WK baanwielrennen: België wordt maar zevende', 'https://www.hln.be/x'), feedById('hln')!)).toBe('sport');
+    expect(classify(rep('hln', 'Kopecky ontgoocheld', 'https://www.hln.be/wielrennen/x'), feedById('hln')!)).toBe('sport');
+  });
+
+  it('joins Flemish headlines of one event by a long word they share', () => {
+    const rs = [rep('vrt', 'Topministers verlaten piste van schuldenrem, morgen verder over meerjarenbegroting', 'a'), rep('demorgen', 'De Wever haalt schuldenrem van tafel en zoekt akkoord over meerjarenbegroting', 'b')];
+    const close = [Float32Array.from([1, 0]), Float32Array.from([0.72, Math.sqrt(1 - 0.72 ** 2)])];
+    expect(group(rs, close, 0.8, ['nl', 'nl'])).toHaveLength(1);
+    expect(group([rs[0], rep('demorgen', 'Andere zaak in Gent', 'c')], close, 0.8, ['nl', 'nl'])).toHaveLength(2);
   });
 
   it('keeps the original text while a translation is missing', () => {

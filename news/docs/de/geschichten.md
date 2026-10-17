@@ -14,6 +14,7 @@ Jede Schlagzeile wird ein Vektor des mehrsprachigen Modells `paraphrase-multilin
 
 * Meldungen werden nach Zeit durchgegangen. Eine Meldung schließt sich der Geschichte an, deren ähnlichste Meldung eine Kosinus-Ähnlichkeit von mindestens **0,8** hat.
 * Sind zwei Vektoren in verschiedenen Sprachen entstanden, weil eine Übersetzung fehlt, sinkt die Schwelle um **0,08**. So finden „Viele Tote bei Angriff auf Flughafen in Riad“ und „Twelve killed in attack on Riyadh airport“ zusammen. In der ersten echten Runde wurde Riad so eine Geschichte mit 16 Quellen.
+* Teilen zwei Titel ein langes Wort (ab 9 Buchstaben, etwa „meerjarenbegroting“ oder „schuldenrem“), sinkt die Schwelle um weitere **0,1**. Flämische Liveticker und Schlagzeilen zum selben Ereignis klingen sonst zu verschieden.
 * Zwei Meldungen desselben Feeds kommen nie über den Vergleich miteinander in eine Geschichte.
 * Ohne Modell zählen gemeinsame Wörter (Jaccard ab 0,5). Das findet nur Meldungen in derselben Sprache.
 
@@ -44,7 +45,7 @@ Drei Signale, aus der Redaktionsprüfung gegen ntv, Bild, CNN und CNBC am 11. Ok
 | DACH-Bezug | 0,4 je Medium aus Deutschland, der Schweiz oder Österreich (ohne DW English) |
 | Alter | minus 0,12 je Stunde seit der neuesten Meldung |
 
-**Aus Belgien** (`beScore`): dasselbe, mit 0,4 je belgischem Medium statt des DACH-Bezugs und ohne die Redaktionen von Tagesschau und ntv. Aus jeder Heimatregion zählen die Medien der anderen zusammen wie eines: Acht flämische Medien zu einer flämischen Geschichte machen sie in DACH nicht groß, und umgekehrt.
+**Aus Belgien** (`beScore`): dasselbe, mit 0,4 je belgischem Medium statt des DACH-Bezugs und mit den Schlagzeilen von VRT NWS (Hoofdpunten) als Redaktion statt Tagesschau, ntv und CNBC, mit denselben Punkten je Platz. Aus jeder Heimatregion zählen die Medien der anderen zusammen wie eines: Acht flämische Medien zu einer flämischen Geschichte machen sie in DACH nicht groß, und umgekehrt.
 
 **Aus der Welt** (`worldScore`): Gewichte und Länder nur der Medien außerhalb von DACH und Belgien, DW English zählt international, dazu 0,2 je Medium aus DACH oder Belgien und dasselbe Alter.
 

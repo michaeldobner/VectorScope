@@ -4,6 +4,11 @@
 
 Das Format folgt [Keep a Changelog](https://keepachangelog.com/de/1.1.0/), die Versionen folgen [Semantic Versioning](https://semver.org/lang/de/).
 
+## 0.22.14 (2026-10-17)
+
+### Geändert
+* Modul NEWS 0.3.1: Belgische Feeds nach der ersten Runde auf dem Server korrigiert, VRT-Schlagzeilen für die belgische Wichtigkeit, bessere Gruppierung und Ressorts für flämische Nachrichten.
+
 ## 0.22.13 (2026-10-17)
 
 ### Geändert

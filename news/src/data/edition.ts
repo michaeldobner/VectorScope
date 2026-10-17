@@ -29,6 +29,14 @@ const dot = (a: Float32Array, b: Float32Array) => {
 };
 const STOP = new Set('der die das und ein eine einer eines mit von für auf nach bei aus im in am zum zur den dem des ist sind wird werden the a an of to in on for with after from by at as is are was were and or über vor nach gegen'.split(' '));
 const words = (s: string) => new Set(s.toLowerCase().replace(/[^\p{L}\p{N} ]/gu, ' ').split(/\s+/).filter((w) => w.length > 2 && !STOP.has(w)));
+/** A long word both titles share, like "meerjarenbegroting" or "schuldenrem": names the same topic. */
+const LONG = 9;
+const sharesLong = (a: Set<string>, b: Set<string>) => {
+  for (const w of a) if (w.length >= LONG && b.has(w)) return true;
+  return false;
+};
+/** How much a shared long word in the original titles lowers the bar. */
+const SHARED_WORD = 0.1;
 const jaccard = (a: Set<string>, b: Set<string>) => {
   let n = 0;
   for (const w of a) if (b.has(w)) n++;
@@ -52,7 +60,9 @@ export function group(reports: Report[], vectors?: Float32Array[], threshold = 0
       for (const j of members) {
         if (reports[j].feed === reports[i].feed) continue;
         // Across languages the same meaning scores lower: the bar drops by CROSS_LANG.
-        const bar = vectors && langs && langs[i] !== langs[j] ? CROSS_LANG : 0;
+        // A long word in common, in the same language (a budget, a motorway, a club): the bar drops by SHARED_WORD.
+        // Flemish live pages and headlines of the same event differ too much for the bar of translated titles.
+        const bar = (vectors && langs && langs[i] !== langs[j] ? CROSS_LANG : 0) + (vectors && sharesLong(bags[i], bags[j]) ? SHARED_WORD : 0);
         const sim = (vectors ? dot(vectors[i], vectors[j]) : jaccard(bags[i], bags[j])) + bar;
         if (sim >= bestSim) {
           bestSim = sim;
@@ -69,11 +79,11 @@ export function group(reports: Report[], vectors?: Float32Array[], threshold = 0
 // ---------- Sections ----------
 
 const BY_PATH: [Ressort, RegExp][] = [
-  ['sport', /\/(sport|sports|fussball|football|soccer|tennis|formel-?1|ski)\b/i],
+  ['sport', /\/(sport|sports|fussball|football|soccer|tennis|formel-?1|ski|wielrennen|wielersport|voetbal|formule-?1)\b/i],
   ['tech', /\/(digital|netzwelt|technology|tech|technik|computer|web|ki)\b/i],
-  ['wirtschaft', /\/(wirtschaft|business|economy|finanzen|boerse|markets|money|geld|unternehmen)\b/i],
+  ['wirtschaft', /\/(wirtschaft|business|economy|economie|finanzen|boerse|markets|money|geld|unternehmen)\b/i],
   ['wissenschaft', /\/(wissen|science|wissenschaft|klima|climate|environment|umwelt|gesundheit|health|forschung)\b/i],
-  ['kultur', /\/(kultur|culture|entertainment|arts|leute|people|music|musik|film|kino|stars|unterhaltung|lifestyle|buecher|literatur)\b/i],
+  ['kultur', /\/(kultur|culture|cultuur|entertainment|arts|leute|people|music|musik|film|kino|stars|unterhaltung|lifestyle|buecher|literatur)\b/i],
   ['dach', /\/(inland|schweiz|oesterreich|austria|deutschland|regional|bundesland)\b/i],
 ];
 /** Home news of a Belgian outlet by its address. */
@@ -93,7 +103,10 @@ const MARKET_WORDS =
   /(?<![\p{L}])(S&P 500|Dow|Nasdaq|Wall Street|stocks?|shares|futures|earnings|bull market|bear market|investors?|IPO|Fed|interest rates?|inflation|bonds?|Treasury yields?|oil prices?|Brent|crude|acquires?|acquisition|takeover|merger)(?![\p{L}])/iu;
 // Not Brussels alone: in foreign media it mostly stands for the EU.
 const BE_WORDS =
-  /(?<![\p{L}])(België|Belgie|Belgium|Belgian|Belgien|belgische[nr]?|Belgique|Vlaanderen|Vlaamse?|Flanders|Flemish|Flandern|Wallonië|Wallonia|Wallonie|Antwerpen|Antwerp|Gent|Ghent|Leuven|Brugge|Bruges|Mechelen|Hasselt|Charleroi|Luik|Liège|De Wever|N-VA|Vooruit|CD&V|Open VLD|Vlaams Belang|PVDA|NMBS|SNCB|De Lijn|Rode Duivels|Red Devils)(?![\p{L}])/u;
+  /(?<![\p{L}])(België|Belgie|Belgium|Belgian|Belgien|belgische[nr]?|Belgique|Vlaanderen|Vlaamse?|Flanders|Flemish|Flandern|Wallonië|Wallonia|Wallonie|Antwerpen|Antwerp|Gent|Ghent|Leuven|Brugge|Bruges|Mechelen|Hasselt|Charleroi|Luik|Liège|De Wever|N-VA|Vooruit|CD&V|Open VLD|Vlaams Belang|PVDA|NMBS|SNCB|De Lijn)(?![\p{L}])/u;
+/** Sport without a result in the title: competitions and teams that are never anything else. */
+const SPORT_EVENTS =
+  /(?<![\p{L}])(baanwielrennen|wielrennen|veldrijden|Tour de France|Ronde van Vlaanderen|Rode Duivels|Red Devils|Red Flames|Pro League|Jupiler|Formule 1|Formel 1|Formula 1|Champions League|Europa League|Bundesliga|Super League|Premier League|Grand Slam|Wimbledon|Roland Garros)(?![\p{L}])/iu;
 const SPORT_WORDS = /(?<![\p{L}])(Bundesliga|Champions League|Super League|Formel 1|Tor|Trainer|Ironman|NHL|NBA|WM|EM|Fußball|Fussball|football|goal|match|Premier League)(?![\p{L}])/iu;
 
 /** Section of one report: its feed, its address, its category, words in its title. Null when nothing says. */
@@ -108,6 +121,7 @@ export function classify(r: Report, feed: Feed): Ressort | null {
   if (feed.cc === 'BE' && BE_PATH.test(path)) return 'be';
   if (r.category) for (const [res, re] of BY_CATEGORY) if (re.test(r.category)) return res;
   if (SPORT_WORDS.test(r.title) && /\d+:\d+|\d+-\d+/.test(r.title + r.teaser)) return 'sport';
+  if (SPORT_EVENTS.test(r.title)) return 'sport';
   if (feed.lang !== 'en' && DACH_WORDS.test(r.title)) return 'dach';
   if (BE_WORDS.test(r.title)) return 'be';
   return null;
@@ -175,6 +189,8 @@ function leadFor(lang: MsgLang, reports: Report[], tr: Translate): Lead {
 export interface Signals {
   /** Link of a report to its position on the Tagesschau homepage. */
   homepage: Map<string, number>;
+  /** Link of a report to its position in the headlines of VRT NWS. */
+  beHomepage?: Map<string, number>;
   now: number;
 }
 
@@ -189,9 +205,13 @@ function scores(reports: Report[], sig: Signals) {
   const newest = Math.max(...reports.map((r) => r.time));
   const age = Math.max(0, (sig.now - newest) / HOUR);
   let editors = 0;
+  let beEditors = 0;
+  const places = (n: number) => (n < 3 ? 4 : n < 8 ? 2 : n < 15 ? 1 : 0);
   for (const r of reports) {
+    const vrt = sig.beHomepage?.get(r.link);
+    if (vrt != null) beEditors = Math.max(beEditors, places(vrt));
     const home = sig.homepage.get(r.link);
-    if (home != null) editors = Math.max(editors, home < 3 ? 4 : home < 8 ? 2 : home < 15 ? 1 : 0);
+    if (home != null) editors = Math.max(editors, places(home));
     if (r.feed === 'ntv' && r.rank < 3) editors = Math.max(editors, 1.5);
     // CNBC World is ordered by its editors, not by time: its first five are what CNBC leads with, the close of
     // Wall Street among them (test lab, 12 October 2026). Without this a single CNBC report never stays in an edition.
@@ -206,8 +226,8 @@ function scores(reports: Report[], sig: Signals) {
   };
   const worldScore = sum(intl) + 0.5 * countries(intl) + 0.2 * (all.length - intl.length) - 0.12 * age;
   const round = (x: number) => Math.round(x * 100) / 100;
-  // The editors of Tagesschau and ntv say what matters in Germany, not in Belgium.
-  return { score: round(fromHome('dach', editors)), beScore: round(fromHome('be', 0)), worldScore: round(worldScore) };
+  // The editors of Tagesschau and ntv say what matters in Germany, those of VRT NWS what matters in Belgium.
+  return { score: round(fromHome('dach', editors)), beScore: round(fromHome('be', beEditors)), worldScore: round(worldScore) };
 }
 
 // ---------- Edition ----------

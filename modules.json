@@ -1,6 +1,6 @@
 {
   "name": "VectorScope",
-  "version": "0.22.13",
+  "version": "0.22.14",
   "shared": {
     "version": "1.1.0"
   },
@@ -34,11 +34,11 @@
       "code": "NEWS",
       "name": "News",
       "status": "live",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "path": "news/",
       "description": {
-        "en": "The news of the day from 44 feeds in 13 countries, as stories with every perspective, no ads.",
-        "de": "Die Nachrichten des Tages aus 44 Feeds in 13 Ländern, als Geschichten mit allen Perspektiven, ohne Werbung."
+        "en": "The news of the day from 43 feeds in 13 countries, as stories with every perspective, no ads.",
+        "de": "Die Nachrichten des Tages aus 43 Feeds in 13 Ländern, als Geschichten mit allen Perspektiven, ohne Werbung."
       }
     }
   ]

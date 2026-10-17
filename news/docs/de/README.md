@@ -7,7 +7,7 @@ Diese Dokumentation beschreibt das Modul NEWS: die Bedienung, welche Quellen es 
 | Dokument | Inhalt | Zielgruppe |
 |---|---|---|
 | [Bedienung](bedienung.md) | Ansichten, Ressorts, Geschichten, Perspektiven, 2-Minuten-Überblick, Einstellungen, Neues | Alle |
-| [Quellen](quellen.md) | Die 44 Feeds, Gruppen und Gewichte, die Prüfung im Labor, verworfene Kandidaten | Alle |
+| [Quellen](quellen.md) | Die 43 Feeds, Gruppen und Gewichte, die Prüfung im Labor, verworfene Kandidaten | Alle |
 | [Geschichten und Wichtigkeit](geschichten.md) | Zusammenführen nach Bedeutung, Ressorts, die drei Signale der Wichtigkeit, Texte, Bilder, Übersetzung | Alle, Entwicklung |
 | [Architektur](architektur.md) | Sammler auf dem Server, Ablauf einer Runde, Format der Ausgabe, App, Tests | Entwicklung |
 | [Datenschutz und Recht](datenschutz-und-recht.md) | Anfragen, Speicherung, Inhalte Dritter, Lizenzen | Alle |
@@ -17,10 +17,10 @@ Diese Dokumentation beschreibt das Modul NEWS: die Bedienung, welche Quellen es 
 | | |
 |---|---|
 | Zweck | Die Nachrichten des Tages als Geschichten, mit den Perspektiven vieler Quellen nebeneinander |
-| Quellen | 44 Feeds von 36 Medien in 13 Ländern, 36 im Test-Labor geprüft, 8 aus Belgien auf Probe |
+| Quellen | 43 Feeds von 34 Medien in 13 Ländern, 36 im Test-Labor geprüft, 4 aus Belgien vom Server geprüft, 3 auf Probe |
 | Ansichten | Top, Anderer Blick, DACH, Belgien, Welt, Wirtschaft, Tech, Wissenschaft, Kultur, Sport, 2-Minuten-Überblick |
 | Aktualisierung | Der Sammler auf dem eigenen Server baut alle 10 Minuten eine neue Ausgabe, die App fragt alle 5 Minuten nach |
 | Sprache | App Deutsch oder Englisch, Meldungen Deutsch, Englisch oder im Original |
 | Blickwinkel | Aus DACH, aus Belgien oder aus der Welt |
 | Adresse | Der eigene Server, Pfad `/news/` |
-| Version | 0.3.0 |
+| Version | 0.3.1 |

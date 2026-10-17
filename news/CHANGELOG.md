@@ -4,6 +4,15 @@ All notable changes to the module NEWS. [Deutsch](CHANGELOG.de.md) · [Changelog
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
+## 0.3.1 (2026-10-17)
+
+### Changed
+* **Belgian feeds after the first round on the server:** VRT NWS, De Morgen and HLN deliver. De Standaard and Het Nieuwsblad refuse the server (403) and are out. De Tijd and Brussels Times try several addresses in turn; `news-stats.json` names the address that delivers and, when none does, the start of the answer.
+* **The headlines of VRT NWS** count for the Belgian importance like the Tagesschau homepage for DACH.
+* **Grouping:** two titles sharing a long word (budget, motorway) join more easily, so Flemish live pages and headlines of one event become one story.
+* **Sections:** Flemish sport (`wielrennen`, `voetbal`, track cycling, Red Devils) goes to Sport instead of Belgium; Dutch addresses for culture and economy count too. A single report of a fast outlet is no longer pulled up for being new.
+* **Titles:** "Live -", "LIVEBLOG", "LIVESTREAM", "EXCLUSIEF" are removed, of two headlines joined by "•" the first stays.
+
 ## 0.3.0 (2026-10-17)
 
 ### Added

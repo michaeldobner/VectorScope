@@ -15,13 +15,15 @@ export interface Feed {
   group: Group;
   lang: Lang;
   url: string;
-  /** rss: RSS or Atom. tagesschau: the JSON API. homepage: only the order of a homepage, no reports. */
+  /** rss: RSS or Atom. tagesschau: the JSON API. homepage: only the order of a homepage (Tagesschau JSON or RSS), no reports. */
   kind?: 'rss' | 'tagesschau' | 'homepage';
   /**
    * The picture in the feed is too small and its address signed (Der Standard 150 px, NZZ 200 px), or far too
    * large (20 Minuten up to 5000 px), or smaller than on the article page (Blick): take the article page's.
    */
   articleImage?: boolean;
+  /** Further addresses, tried in order when the one before answers with an error or without reports. */
+  alt?: string[];
   /** Section of every report of this feed, when the feed is one section. */
   ressort?: Ressort;
 }

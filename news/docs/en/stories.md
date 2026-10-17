@@ -14,6 +14,7 @@ Every headline becomes a vector of the multilingual model `paraphrase-multilingu
 
 * Reports are taken in order of time. A report joins the story whose most similar report has a cosine similarity of at least **0.8**.
 * When two vectors were made in different languages because a translation is missing, the bar drops by **0.08**. So "Viele Tote bei Angriff auf Flughafen in Riad" and "Twelve killed in attack on Riyadh airport" meet. In the first real round Riyadh became one story with 16 sources this way.
+* When two titles share a long word (9 letters or more, like "meerjarenbegroting" or "schuldenrem"), the bar drops by another **0.1**. Flemish live pages and headlines of the same event sound too different otherwise.
 * Two reports of the same feed are never joined by comparing them with each other.
 * Without the model, shared words count (Jaccard from 0.5). That only finds reports in the same language.
 
@@ -44,7 +45,7 @@ Three signals, from the editorial check against ntv, Bild, CNN and CNBC on 11 Oc
 | DACH relevance | 0.4 per outlet from Germany, Switzerland or Austria (without DW English) |
 | Age | minus 0.12 per hour since the newest report |
 
-**Belgium** (`beScore`): the same, with 0.4 per Belgian outlet instead of the DACH relevance and without the newsrooms of Tagesschau and ntv. From each home region the outlets of the other count together like one: eight Flemish outlets on a Flemish story do not make it big in DACH, and the other way round.
+**Belgium** (`beScore`): the same, with 0.4 per Belgian outlet instead of the DACH relevance and with the headlines of VRT NWS (Hoofdpunten) as newsroom instead of Tagesschau, ntv and CNBC, with the same points per place. From each home region the outlets of the other count together like one: eight Flemish outlets on a Flemish story do not make it big in DACH, and the other way round.
 
 **Global** (`worldScore`): weights and countries of the outlets outside DACH and Belgium only, DW English counts as international, plus 0.2 per outlet from DACH or Belgium and the same age.
 

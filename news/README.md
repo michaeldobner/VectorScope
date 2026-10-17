@@ -2,7 +2,7 @@
 
 # ◇ VectorScope News
 
-**The news of the day from 44 feeds in 13 countries, as stories with every perspective.** Module NEWS of the [VectorScope collection](../README.md).
+**The news of the day from 43 feeds in 13 countries, as stories with every perspective.** Module NEWS of the [VectorScope collection](../README.md).
 
 [Deutsch](README.de.md) · [Documentation](docs/en/README.md) · [Changelog](CHANGELOG.md) · [Concept (German)](KONZEPT.md)
 
@@ -37,7 +37,7 @@ NEWS runs on the own server, which also collects the news. Open its address with
 | Document | Content |
 |---|---|
 | [User guide](docs/en/user-guide.md) | Views, sections, stories, perspectives, 2-minute briefing, settings, what is new |
-| [Sources](docs/en/sources.md) | The 44 feeds, groups and weights, the check in the lab, rejected candidates |
+| [Sources](docs/en/sources.md) | The 43 feeds, groups and weights, the check in the lab, rejected candidates |
 | [Stories and importance](docs/en/stories.md) | Grouping by meaning, sections, the three signals, texts, pictures, translation |
 | [Architecture](docs/en/architecture.md) | Collector on the server, one round, format of the edition, app, tests |
 | [Privacy and legal](docs/en/privacy-and-legal.md) | Requests, storage, third party content, licences |
@@ -45,6 +45,6 @@ NEWS runs on the own server, which also collects the news. Open its address with
 
 ## Version
 
-Current version: **0.3.0**. All changes in the [changelog](CHANGELOG.md).
+Current version: **0.3.1**. All changes in the [changelog](CHANGELOG.md).
 
 Headlines, teasers and pictures © their publishers, each linked to the original.

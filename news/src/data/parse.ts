@@ -81,6 +81,10 @@ export const bigger = (url: string) => BIGGER.reduce((u, [re, to]) => u.replace(
 /** Title without kickers and labels. SRF: "Kicker – Title", kept as "Kicker: Title" when the title needs it. */
 export function cleanTitle(title: string, feed: Feed): string {
   let t = title.replace(/^(LIVE-TICKER|ERKLÄRT|DATENANALYSE|DIE NEUESTEN ENTWICKLUNGEN|MELDUNGEN SCHWEIZ|INTERVIEW|KOMMENTAR|ANALYSE) - /, '');
+  // Flemish labels: "Live - ", "LIVEBLOG ", "LIVESTREAM ", "EXCLUSIEF. ", "VIDEO: ". HLN joins two headlines of a
+  // live page with " • ": the first is the story.
+  t = t.replace(/^(LIVEBLOG|LIVESTREAM|EXCLUSIEF|EXCLUSIVE)\b[.:\s|\-–]*/i, '').replace(/^(Live|VIDEO|KIJK|LUISTER)\s*[-–:|]\s*/i, '');
+  t = t.split(' • ')[0];
   if (feed.outlet === 'SRF' && t.includes(' – ')) {
     const [kicker, ...rest] = t.split(' – ');
     const body = rest.join(' – ');
@@ -104,7 +108,7 @@ type TagesschauItem = {
 /** Reports of a feed. Homepages give their order only: reports with rank and title, used for importance. */
 export function parseFeed(body: string, feed: Feed): Report[] {
   const pic = (u?: string) => (feed.articleImage ? undefined : u);
-  if (feed.kind === 'tagesschau' || feed.kind === 'homepage') {
+  if (feed.kind === 'tagesschau' || (feed.kind === 'homepage' && body.trimStart().startsWith('{'))) {
     let list: TagesschauItem[] = [];
     try {
       list = (JSON.parse(body) as { news?: TagesschauItem[] }).news ?? [];

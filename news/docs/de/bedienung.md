@@ -20,7 +20,7 @@
 | **Anderer Blick** | Aus DACH oder aus Belgien: Geschichten ohne Quelle von dort, aber mit mindestens zwei internationalen. Aus der Welt: Geschichten ohne internationale Quelle, aber mit mindestens zwei aus DACH oder aus Belgien |
 | **DACH** | Deutschland, Schweiz, Österreich. Auf Englisch heißt es „DE · CH · AT“. Nur in den Blickwinkeln aus DACH und aus der Welt |
 | **Belgien** | Flandern, Brüssel, Wallonien. Nur in den Blickwinkeln aus Belgien und aus der Welt, sonst stehen belgische Geschichten unter Welt |
-| **Welt, Wirtschaft, Tech, Wissenschaft, Kultur, Sport** | Je bis zu 30 Geschichten, Neues zuerst, dann nach Wichtigkeit |
+| **Welt, Wirtschaft, Tech, Wissenschaft, Kultur, Sport** | Je bis zu 30 Geschichten, Neues zuerst, dann nach Wichtigkeit. Eine einzelne Meldung eines Tempo-Mediums (Blick, HLN) rückt nicht vor, nur weil sie neu ist |
 
 Wischen nach links oder rechts auf der Liste blättert zum nächsten Ressort. Ein blauer Punkt an einem Ressort heißt: Dort gibt es Neues. Am Ende jeder Liste steht „Du bist auf dem Stand“ mit einem Knopf zum nächsten Ressort, die Liste ist nicht endlos.
 

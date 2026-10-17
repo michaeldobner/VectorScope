@@ -90,7 +90,10 @@ const scoreOf = (s: Story) => (state.persp === 'dach' ? s.score : state.persp ==
 const ressortIds = () => ALL_RESSORTS.filter((r) => !(state.persp === 'dach' && r === 'be') && !(state.persp === 'be' && r === 'dach'));
 const isNew = (s: Story) => s.first > (LAST_VISIT || Date.now() - 2 * 3600_000) && !state.seen.has(s.id);
 const grew = (s: Story) => (COUNTS[s.id] && !state.seen.has(s.id) ? Math.max(0, s.sources.length - COUNTS[s.id]) : 0);
-const order = (list: Story[]) => [...list].sort((a, b) => Number(isNew(b)) - Number(isNew(a)) || scoreOf(b) - scoreOf(a));
+/** New first, then by importance. A single report of a fast outlet (HLN, Blick) is not pulled up for being new. */
+const lone = (s: Story) => s.sources.length === 1 && s.sources[0].group === 'fast';
+const fresh = (s: Story) => isNew(s) && !lone(s);
+const order = (list: Story[]) => [...list].sort((a, b) => Number(fresh(b)) - Number(fresh(a)) || scoreOf(b) - scoreOf(a));
 
 function topList() {
   return [...ed().stories].sort((a, b) => scoreOf(b) - scoreOf(a)).slice(0, TOP_N);

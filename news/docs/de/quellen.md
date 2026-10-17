@@ -2,7 +2,7 @@
 
 [English version](../en/sources.md) · [Übersicht](README.md)
 
-NEWS liest 44 Feeds von 36 Medien in 13 Ländern: 36 im Test-Labor geprüft, 8 aus Belgien auf Probe. Die Liste steht in `news/src/data/feeds.ts`. Gewählt wurde nach drei Fragen: Liefert die Quelle zuverlässig und frei, ist sie sachlich oder bringt sie Tempo, und erweitert sie den Blick um ein Land oder eine Sprache.
+NEWS liest 43 Feeds von 34 Medien in 13 Ländern: 36 im Test-Labor geprüft, 4 aus Belgien vom eigenen Server geprüft, 3 auf Probe. Die Liste steht in `news/src/data/feeds.ts`. Gewählt wurde nach drei Fragen: Liefert die Quelle zuverlässig und frei, ist sie sachlich oder bringt sie Tempo, und erweitert sie den Blick um ein Land oder eine Sprache.
 
 ## Gruppen und Gewichte
 
@@ -13,9 +13,9 @@ NEWS liest 44 Feeds von 36 Medien in 13 Ländern: 36 im Test-Labor geprüft, 8 a
 | International | 1 | Perspektiven aus Großbritannien, USA, Katar, Frankreich, Europa, Australien, Singapur, Hongkong und Indien |
 | Wirtschaft | 0,8 | CNBC für Märkte und Unternehmen |
 | Fachmedien | 0,7 | heise und Golem für Tech |
-| Tempo | 0,4 | 20 Minuten, Blick, watson, HLN, Het Nieuwsblad: schnell, boulevardnah, sie bestimmen nie, was oben steht |
+| Tempo | 0,4 | 20 Minuten, Blick, watson, HLN: schnell, boulevardnah, sie bestimmen nie, was oben steht, und eine einzelne Meldung von ihnen rückt in einem Ressort nicht nach oben, nur weil sie neu ist |
 
-Belgien, zuerst Flandern, hat einen eigenen Blickwinkel: VRT NWS, De Standaard, De Morgen, De Tijd, Brussels Times, HLN und Het Nieuwsblad, in den Gruppen oben. VRT NWS und Brussels Times schreiben auch auf Englisch, belgische Geschichten haben deshalb oft einen englischen Text ohne Übersetzung.
+Belgien, zuerst Flandern, hat einen eigenen Blickwinkel: VRT NWS, De Morgen, De Tijd, Brussels Times und HLN, in den Gruppen oben. Die Schlagzeilen von VRT NWS (Hoofdpunten) zählen wie die Tagesschau-Startseite, nur für Belgien. VRT NWS und Brussels Times schreiben auch auf Englisch, belgische Geschichten haben deshalb oft einen englischen Text ohne Übersetzung.
 
 Das Gewicht zählt, wenn NEWS die Wichtigkeit einer Geschichte berechnet, siehe [Geschichten und Wichtigkeit](geschichten.md). Jedes Medium zählt einmal, auch wenn es mit mehreren Feeds berichtet.
 
@@ -59,14 +59,13 @@ Das Gewicht zählt, wenn NEWS die Wichtigkeit einer Geschichte berechnet, siehe 
 | [`20min`](https://partner-feeds.20min.ch/rss/20minuten) | 20 Minuten | CH | Deutsch | Tempo | 0,4 |  |
 | [`blick`](https://www.blick.ch/rss.xml) | Blick | CH | Deutsch | Tempo | 0,4 |  |
 | [`watson`](https://www.watson.ch/api/1.0/rss/index.xml) | watson | CH | Deutsch | Tempo | 0,4 |  |
-| [`vrt`](https://www.vrt.be/vrtnws/nl.rss.articles.xml) | VRT NWS | BE | Niederländisch | Öffentlich-rechtlich | 1 | auf Probe |
-| [`vrt-en`](https://www.vrt.be/vrtnws/en.rss.articles.xml) | VRT NWS | BE | Englisch | Öffentlich-rechtlich | 1 | auf Probe, dasselbe Medium wie `vrt` |
-| [`standaard`](https://www.standaard.be/rss/section/1f2838d4-99ea-49f0-9102-138784c7ea7c) | De Standaard | BE | Niederländisch | Qualitätspresse und Sender | 1 | auf Probe, Ressort Belgien |
-| [`demorgen`](https://www.demorgen.be/in-het-nieuws/rss.xml) | De Morgen | BE | Niederländisch | Qualitätspresse und Sender | 1 | auf Probe |
-| [`tijd`](https://www.tijd.be/rss/top_stories.xml) | De Tijd | BE | Niederländisch | Wirtschaft | 0,8 | auf Probe |
-| [`brusselstimes`](https://www.brusselstimes.com/feed) | Brussels Times | BE | Englisch | Qualitätspresse und Sender | 1 | auf Probe |
-| [`hln`](https://www.hln.be/home/rss.xml) | HLN | BE | Niederländisch | Tempo | 0,4 | auf Probe |
-| [`nieuwsblad`](https://www.nieuwsblad.be/rss/section/55178e67-15a8-4ddd-a3d8-bfe5708f8932) | Het Nieuwsblad | BE | Niederländisch | Tempo | 0,4 | auf Probe, Ressort Belgien |
+| [`vrt`](https://www.vrt.be/vrtnws/nl.rss.articles.xml) | VRT NWS | BE | Niederländisch | Öffentlich-rechtlich | 1 |  |
+| [`vrt-home`](https://www.vrt.be/vrtnws/nl.rss.headlines.xml) | VRT NWS | BE | Niederländisch | Öffentlich-rechtlich | 1 | auf Probe, nur die Reihenfolge der Schlagzeilen |
+| [`vrt-en`](https://www.vrt.be/vrtnws/en.rss.articles.xml) | VRT NWS | BE | Englisch | Öffentlich-rechtlich | 1 | dasselbe Medium wie `vrt` |
+| [`demorgen`](https://www.demorgen.be/in-het-nieuws/rss.xml) | De Morgen | BE | Niederländisch | Qualitätspresse und Sender | 1 |  |
+| [`tijd`](https://www.tijd.be/rss/nieuws.xml) | De Tijd | BE | Niederländisch | Wirtschaft | 0,8 | auf Probe, drei weitere Adressen |
+| [`brusselstimes`](https://www.brusselstimes.com/rss) | Brussels Times | BE | Englisch | Qualitätspresse und Sender | 1 | auf Probe, drei weitere Adressen |
+| [`hln`](https://www.hln.be/home/rss.xml) | HLN | BE | Niederländisch | Tempo | 0,4 |  |
 
 ## Geprüft im Test-Labor
 
@@ -81,9 +80,9 @@ Was das Labor gelehrt hat und der Parser in `news/src/data/parse.ts` beachtet:
 * Al Jazeera, DW English, Euronews, ORF, Die Presse und NPR liefern im Feed kein Bild. Das Vorschaubild der Artikelseite gab es bei 41 von 47 Proben, NPR und Die Presse nennen dort aber nur ihr Logo.
 * Fast kein Feed erlaubt den Abruf aus dem Browser (CORS). Deshalb liest der Sammler auf dem Server, nicht die App.
 
-## Die belgischen Feeds auf Probe
+## Die belgischen Feeds
 
-Die belgischen Feeds (17. Oktober 2026) ließen sich vom Entwicklungsrechner aus nicht prüfen, sein Netz erreicht belgische Seiten nicht. Stattdessen prüft der eigene Server sie in jeder Runde: `/data/news-stats.json` sagt pro Feed, ob er liefert, wie viele Meldungen und welchen Fehler. Ein Feed, der nicht liefert, kostet nichts, die anderen laufen weiter. Sobald eine Runde sie zeigt, werden Adressen ersetzt, die nicht liefern, und „auf Probe“ entfällt.
+Die belgischen Feeds (17. Oktober 2026) ließen sich vom Entwicklungsrechner aus nicht prüfen, sein Netz erreicht belgische Seiten nicht. Stattdessen prüft der eigene Server sie in jeder Runde: `/data/news-stats.json` sagt pro Feed, ob er liefert, wie viele Meldungen und welchen Fehler. Ein Feed, der nicht liefert, kostet nichts, die anderen laufen weiter. Die erste Runde am 17. Oktober 2026: VRT NWS (Niederländisch und Englisch), De Morgen und HLN liefern. De Standaard und Het Nieuwsblad (beide Mediahuis) weisen den Server mit 403 ab und sind raus. De Tijd antwortete mit 404, Brussels Times ohne Meldungen: Beide probieren jetzt mehrere Adressen nacheinander (`alt` in `feeds.ts`), `news-stats.json` nennt die Adresse, die liefert, und wenn keine liefert, den Anfang der Antwort.
 
 ## Nicht dabei
 
@@ -93,6 +92,7 @@ Die belgischen Feeds (17. Oktober 2026) ließen sich vom Entwicklungsrechner aus
 | Tages-Anzeiger | nicht erreichbar |
 | CBC | Zeitüberschreitung |
 | CNN | antwortet, aber seit 2023 eingefroren |
+| De Standaard, Het Nieuwsblad | weisen den eigenen Server ab (403, Mediahuis) |
 | Bild | keine Zeitstempel, viel hinter BILDplus, Ton passt nicht zur Blattlinie |
 | Reuters, AP | keine offiziellen freien Feeds |
 
